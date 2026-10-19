@@ -1,0 +1,32 @@
+{
+  "errors": [],
+  "paper_rows": 29,
+  "adopted": 28,
+  "withheld_candidate": "R0027",
+  "sources": 58,
+  "claims": 86,
+  "summary_length_all_100_200": true,
+  "fulltext_rows": 7,
+  "categories": {
+    "Domain Adaptation": 2,
+    "時系列": 4,
+    "Transformer/ViT": 5,
+    "特徴量ML": 7,
+    "センサ解析": 1,
+    "融合": 2,
+    "自己教師": 3,
+    "転移": 1,
+    "Few/Zero-shot": 1,
+    "物理AI": 2
+  },
+  "countries": {
+    "中国": 13,
+    "中国;英国": 1,
+    "米国": 1,
+    "未確認": 9,
+    "カナダ": 1,
+    "ドイツ": 1,
+    "リトアニア;ポーランド": 1,
+    "スペイン": 1
+  }
+}

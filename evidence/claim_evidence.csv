@@ -1,0 +1,578 @@
+﻿claim_id,source_id,locator,quote,verification
+CJP001,SJP001,特長・FAQ「ツールコラージュのみの購入」,単体での購入は可能,公式製品ページ確認
+CJP002,SJP001,FAQ「欠け・摩耗検出が可能な工具」,,公式製品ページ確認
+CJP003,SJP004,実施形態1 図5A–D、図7。Web本文L109、L123,例えばＥｆｆｉｃｉｅｎｔＤｅｔ,本文該当箇所確認
+CJP004,SJP004,実施形態1、Web本文L109,,本文該当箇所確認
+CJP005,SJP030,実施形態2 図9–10B、Web本文L310,ツールコラージュ,本文該当箇所確認
+CJP006,SJP005,§2.2、§2.2.1、§2.2.3,,本文該当箇所確認
+CJP007,SJP001,特長「工具のコンディションを把握」,,公式製品ページ確認
+CJP008,SJP002,PDF p.2、p.5,,本文該当箇所確認
+CJP009,SJP002,PDF p.4 成果,,本文該当箇所確認
+CJP010,SJP002,PDF p.4 成果,,本文該当箇所確認
+CJP011,SJP003,具体的な成果 推進2,,検索結果抽出本文のみ確認（openエラー）
+CJP012,SJP002,PDF p.2 背景、p.4 成果,,本文該当箇所確認
+CJP013,SJP007,特長と実現技術、注3,RAPID機械学習技術,本文該当箇所確認
+CJP014,SJP007,特長と実現技術(1)–(3),,本文該当箇所確認
+CJP015,SJP007,特長と実現技術(2),,本文該当箇所確認
+CJP016,SJP006,自社工場での活用事例,,公式製品ページ確認
+CJP017,SJP008,Tool wear detection,,公式製品ページ確認
+CJP018,SJP008,Use Case Machining an artificial joint,,公式製品ページ確認
+CJP019,SJP008,Tool wear detection 注記,,公式製品ページ確認
+CJP020,SJP012,p.63 分析・診断手法,,検索結果抽出本文確認（PDF openエラー）
+CJP021,SJP011,製品紹介 iQ Monozukuri,,検索結果抽出本文確認
+CJP022,SJP025,裏表紙奥付,,検索結果抜粋のみ（発行奥付）
+CJP023,SJP014,冒頭、プラン概要,,検索結果抽出本文確認
+CJP024,SJP014,1.AIによる加工異常の自動検知,,検索結果抽出本文確認
+CJP025,SJP013,SPEC,,公式製品ページ確認
+CJP026,SJP015,ABOUT／STRUCTURE,,公式製品ページ確認
+CJP027,SJP015,ADVANTAGES POINT01／運用負荷,,公式製品ページ確認
+CJP028,SJP016,ページ冒頭販売終了注記,,公式製品ページ確認
+CJP029,SJP016,独自AIによる振動データのスコア化,,公式製品ページ確認
+CJP030,SJP017,お取引先の声,,公式製品ページ確認
+CJP031,SJP018,事例3,,公式製品ページ確認
+CJP032,SJP017,お取引先の声,,公式製品ページ確認
+CJP033,SJP019,操作性／予防保全,,検索結果抽出本文確認（openエラー）
+CJP034,SJP026,印刷p.38 §4、p.39 §6,,本文該当箇所確認
+CJP035,SJP026,印刷pp.35–37、§2.2、§3.3–3.5,,本文該当箇所確認
+CJP036,SJP026,印刷p.39 §5、図17–18,,本文該当箇所確認
+CJP037,SJP027,Function／Purchase options,,本文該当箇所確認
+CG001,SG001,About this app; Updated on,compare it with wear types in a repository of images,公式製品ページ確認
+CG002,SG001,About this app; Updated on,,公式製品ページ確認
+CG003,SG001,About this app; Updated on,,公式製品ページ確認
+CG004,SG001,About this app; Updated on,,公式製品ページ確認
+CG005,SG001,About this app; Updated on,,公式製品ページ確認
+CG006,SG001,About this app; Updated on,,公式製品ページ確認
+CG008,SG002,カタログp.4–8,Tool wear detection analyses the sensor input data over time,公式カタログWeb本文確認
+CG009,SG002,カタログp.4–8,,公式カタログWeb本文確認
+CG010,SG002,カタログp.4–8,,公式カタログWeb本文確認
+CG011,SG003,Real time monitoring; Benefits weigh in,a solution for real time tool monitoring,公式製品ページ確認
+CG012,SG003,Real time monitoring; Benefits weigh in,,公式製品ページ確認
+CG013,SG002,カタログp.4–8,,公式カタログWeb本文確認
+CG014,SG003,Real time monitoring; Benefits weigh in,,公式製品ページ確認
+CG015,SG003,Real time monitoring; Benefits weigh in,,公式製品ページ確認
+CG016,SG004,Highlights; BLUM standard measuring cycles; Technical data,Recognition of changes in geometry such as tool cutting edge wear,公式製品ページ確認
+CG017,SG004,Highlights; BLUM standard measuring cycles; Technical data,,公式製品ページ確認
+CG018,SG004,Highlights; BLUM standard measuring cycles; Technical data,,公式製品ページ確認
+CG019,SG004,Highlights; BLUM standard measuring cycles; Technical data,,公式製品ページ確認
+CG020,SG004,Highlights; BLUM standard measuring cycles; Technical data,,公式製品ページ確認
+CG021,SG004,Highlights; BLUM standard measuring cycles; Technical data,,公式製品ページ確認
+CG022,SG004,Highlights; BLUM standard measuring cycles; Technical data,,公式製品ページ確認
+CG023,SG004,Highlights; BLUM standard measuring cycles; Technical data,,公式製品ページ確認
+CG024,SG004,Highlights; BLUM standard measuring cycles; Technical data,,公式製品ページ確認
+CG025,SG025,"PDF p.3, 2017 unveil",The LC50-DIGILOG laser system was unveiled in 2017.,PDF本文確認
+CG025,SG026,The birth of the solution（2018 revealed）,"in 2018, the latest development of the laser was revealed.",PDF本文確認
+CG026,SG005,Monitoring strategy; Trend display of mean height; Special sensors,Trend display of the mean height (tool wear),公式製品ページ確認
+CG027,SG005,Monitoring strategy; Trend display of mean height; Special sensors,,公式製品ページ確認
+CG028,SG005,Monitoring strategy; Trend display of mean height; Special sensors,,公式製品ページ確認
+CG029,SG005,Monitoring strategy; Trend display of mean height; Special sensors,,公式製品ページ確認
+CG030,SG005,Monitoring strategy; Trend display of mean height; Special sensors,,公式製品ページ確認
+CG031,SG005,Monitoring strategy; Trend display of mean height; Special sensors,,公式製品ページ確認
+CG032,SG005,Monitoring strategy; Trend display of mean height; Special sensors,,公式製品ページ確認
+CG033,SG005,Monitoring strategy; Trend display of mean height; Special sensors,,公式製品ページ確認
+CG034,SG006,Components; FAQ – How exactly; Do I need to teach,compares current process data with previously determined reference values,公式製品ページ確認
+CG035,SG006,Components; FAQ – How exactly; Do I need to teach,,公式製品ページ確認
+CG036,SG006,Components; FAQ – How exactly; Do I need to teach,,公式製品ページ確認
+CG037,SG006,Components; FAQ – How exactly; Do I need to teach,,公式製品ページ確認
+CG038,SG006,Components; FAQ – How exactly; Do I need to teach,,公式製品ページ確認
+CG039,SG006,Components; FAQ – How exactly; Do I need to teach,,公式製品ページ確認
+CG040,SG006,Components; FAQ – How exactly; Do I need to teach,,公式製品ページ確認
+CG041,SG006,Components; FAQ – How exactly; Do I need to teach,,公式製品ページ確認
+CG042,SG006,Components; FAQ – How exactly; Do I need to teach,,公式製品ページ確認
+CG043,SG007,PDF p.19–20（誌面38–41）edgeControl,3D Sensor with CNC Axes and Image Processing,PDF本文確認
+CG044,SG007,PDF p.19–20（誌面38–41）edgeControl,,PDF本文確認
+CG045,SG007,PDF p.19–20（誌面38–41）edgeControl,,PDF本文確認
+CG046,SG007,PDF p.19–20（誌面38–41）edgeControl,,PDF本文確認
+CG047,SG007,PDF p.19–20（誌面38–41）edgeControl,,PDF本文確認
+CG048,SG008,PDF p.1–2 PTS / maXYmos,measures cutting force during turning,PDF本文確認
+CG049,SG008,PDF p.1–2 PTS / maXYmos,,PDF本文確認
+CG050,SG008,PDF p.1–2 PTS / maXYmos,,PDF本文確認
+CG051,SG008,PDF p.1–2 PTS / maXYmos,,PDF本文確認
+CG052,SG008,PDF p.1–2 PTS / maXYmos,,PDF本文確認
+CG053,SG008,PDF p.1–2 PTS / maXYmos,,PDF本文確認
+CG054,SG008,PDF p.1–2 PTS / maXYmos,,PDF本文確認
+CG055,SG008,PDF p.1–2 PTS / maXYmos,,PDF本文確認
+CG056,SG009,PDF p.4 TMAC + AI; p.1–3,using historical process data and machine learning,PDF本文確認
+CG057,SG009,PDF p.4 TMAC + AI; p.1–3,,PDF本文確認
+CG058,SG009,PDF p.4 TMAC + AI; p.1–3,,PDF本文確認
+CG059,SG009,PDF p.4 TMAC + AI; p.1–3,,PDF本文確認
+CG060,SG009,PDF p.4 TMAC + AI; p.1–3,,PDF本文確認
+CG061,SG009,PDF p.4 TMAC + AI; p.1–3,,PDF本文確認
+CG062,SG009,PDF p.4 TMAC + AI; p.1–3,,PDF本文確認
+CG063,SG010,FAQ: How does; data; wear trends,rules or limit values can be defined,公式製品ページ確認
+CG064,SG010,FAQ: How does; data; wear trends,,公式製品ページ確認
+CG065,SG011,PROCESS INSIGHTS PRO; PROCESS AUTOMATION; Required Equipment,Remaining Useful Life (RUL) Calculator,公式製品ページ確認
+CG066,SG010,FAQ: How does; data; wear trends,,公式製品ページ確認
+CG069,SG013,誌面p.7 Our service / Full process control with ToolScope,,検索結果抜粋のみ
+CG070,SG014,スライド30 TS-WEAR,Monitoring of average process force,検索結果抜粋のみ
+CG071,SG013,誌面p.7 Our service / Full process control with ToolScope,,検索結果抜粋のみ
+CG072,SG013,誌面p.7 Our service / Full process control with ToolScope,,検索結果抜粋のみ
+CG073,SG013,誌面p.7 Our service / Full process control with ToolScope,,検索結果抜粋のみ
+CG074,SG013,誌面p.7 Our service / Full process control with ToolScope,,検索結果抜粋のみ
+CG075,SG013,誌面p.7 Our service / Full process control with ToolScope,,検索結果抜粋のみ
+CG076,SG015,PDF p.1,The power signal is sampled at 50 kHz,PDF本文確認
+CG078,SG015,PDF p.1,,PDF本文確認
+CG080,SG015,PDF p.1,,PDF本文確認
+CG081,SG015,PDF p.1,,PDF本文確認
+CG082,SG015,PDF p.1,,PDF本文確認
+CG084,SG017,Product advantages; Tool wear monitoring; Tool break monitoring,a combination of numerical and statistical methods,公式製品ページ確認
+CG085,SG017,Product advantages; Tool wear monitoring; Tool break monitoring,,公式製品ページ確認
+CG086,SG017,Product advantages; Tool wear monitoring; Tool break monitoring,,公式製品ページ確認
+CG087,SG017,Product advantages; Tool wear monitoring; Tool break monitoring,,公式製品ページ確認
+CG088,SG017,Product advantages; Tool wear monitoring; Tool break monitoring,,公式製品ページ確認
+CG089,SG017,Product advantages; Tool wear monitoring; Tool break monitoring,,公式製品ページ確認
+CG090,SG018,NC4+ Blue; Tool setting made easy,Measure tool length and diameter,公式製品ページ確認
+CG091,SG018,NC4+ Blue; Tool setting made easy,,公式製品ページ確認
+CG092,SG018,NC4+ Blue; Tool setting made easy,,公式製品ページ確認
+CG093,SG018,NC4+ Blue; Tool setting made easy,,公式製品ページ確認
+CG094,SG018,NC4+ Blue; Tool setting made easy,,公式製品ページ確認
+CG095,SG018,NC4+ Blue; Tool setting made easy,,公式製品ページ確認
+CG096,SG019,Wear Measurement; Technical specifications,based on Focus-Variation,公式製品ページ確認
+CG097,SG019,Wear Measurement; Technical specifications,,公式製品ページ確認
+CG098,SG019,Wear Measurement; Technical specifications,,公式製品ページ確認
+CG099,SG019,Wear Measurement; Technical specifications,,公式製品ページ確認
+CG100,SG019,Wear Measurement; Technical specifications,,公式製品ページ確認
+CG101,SG019,Wear Measurement; Technical specifications,,公式製品ページ確認
+CG102,SG019,Wear Measurement; Technical specifications,,公式製品ページ確認
+CG103,SG020,iTENDO2 discussion,"sensors measure, for example, high frequency vibrations or accelerations",公式製品ページ確認
+CG104,SG020,iTENDO2 discussion,,公式製品ページ確認
+CG105,SG020,iTENDO2 discussion,,公式製品ページ確認
+CG106,SG020,iTENDO2 discussion,,公式製品ページ確認
+CG107,SG020,iTENDO2 discussion,,公式製品ページ確認
+CG108,SG020,iTENDO2 discussion,,公式製品ページ確認
+CG109,SG021,Description; Benefits; Tech Specs,multi-criteria monitoring strategy adapts automatically to machining processes,公式製品ページ確認
+CG110,SG021,Description; Benefits; Tech Specs,,公式製品ページ確認
+CG111,SG021,Description; Benefits; Tech Specs,,公式製品ページ確認
+CG112,SG021,Description; Benefits; Tech Specs,,公式製品ページ確認
+CG113,SG021,Description; Benefits; Tech Specs,,公式製品ページ確認
+CG115,SG021,Description; Benefits; Tech Specs,,公式製品ページ確認
+CG116,SG021,Description; Benefits; Tech Specs,,公式製品ページ確認
+CG117,SG022,Description; Benefits; teach-in; dx/dt,fixed or dynamic alarm limits,公式製品ページ確認
+CG118,SG022,Description; Benefits; teach-in; dx/dt,,公式製品ページ確認
+CG119,SG022,Description; Benefits; teach-in; dx/dt,,公式製品ページ確認
+CG120,SG022,Description; Benefits; teach-in; dx/dt,,公式製品ページ確認
+CG121,SG022,Description; Benefits; teach-in; dx/dt,,公式製品ページ確認
+CG122,SG022,Description; Benefits; teach-in; dx/dt,,公式製品ページ確認
+CG123,SG022,Description; Benefits; teach-in; dx/dt,,公式製品ページ確認
+CG124,SG022,Description; Benefits; teach-in; dx/dt,,公式製品ページ確認
+CG125,SG023,Introduction; Symptom Table; Rev D 09/2026,detects the length & captures an image,検索結果抜粋のみ（後続open失敗）
+CG126,SG023,Introduction; Symptom Table; Rev D 09/2026,,検索結果抜粋のみ（後続open失敗）
+CG127,SG023,Introduction; Symptom Table; Rev D 09/2026,,検索結果抜粋のみ（後続open失敗）
+CG128,SG023,Introduction; Symptom Table; Rev D 09/2026,,検索結果抜粋のみ（後続open失敗）
+CG129,SG023,Introduction; Symptom Table; Rev D 09/2026,,検索結果抜粋のみ（後続open失敗）
+CG067,SG012,Technology/assistline/automation,,検索結果抜粋のみ
+CG068,SG012,Technology/assistline/automation,,検索結果抜粋のみ
+CG079,SG015,PDF p.1,,PDF本文確認
+CG079,SG016,WattPilote Single; Transfer; multi-channel; Milling,"Power, derivative, energy control Simultaneous",公式製品ページ確認
+CG077,SG015,PDF p.1,,PDF本文確認
+CG077,SG016,WattPilote Single; Transfer; multi-channel; Milling,,公式製品ページ確認
+CG083,SG015,PDF p.1,,PDF本文確認
+CG083,SG016,WattPilote Single; Transfer; multi-channel; Milling,,公式製品ページ確認
+CG114,SG027,Description; signal limits; WEAR option,,公式製品ページ確認
+CG007,SG002,カタログp.4–8,,公式カタログWeb本文確認
+CG007,SG003,Real time monitoring; Benefits weigh in,,公式製品ページ確認
+CG130,SG030,本文VTC1.6; panoramic image; per-flute max/average,automated and AI-supported flank-wear measurement,公式製品ページ確認
+CG131,SG031,PDF p.5 対応工具/分解能; p.7 AI学習・精度・速度,測定精度は標準で±20 µmです。,PDF本文確認
+CG132,SG031,PDF p.5 対応工具/分解能; p.7 AI学習・精度・速度,,PDF本文確認
+CG133,SG030,本文VTC1.6; panoramic image; per-flute max/average,,公式製品ページ確認
+CG134,SG030,本文VTC1.6; panoramic image; per-flute max/average,,公式製品ページ確認
+CG135,SG030,本文VTC1.6; panoramic image; per-flute max/average,,公式製品ページ確認
+CG136,SG031,PDF p.5 対応工具/分解能; p.7 AI学習・精度・速度,,PDF本文確認
+CG137,SG031,PDF p.5 対応工具/分解能; p.7 AI学習・精度・速度,,PDF本文確認
+CG138,SG031,PDF p.5 対応工具/分解能; p.7 AI学習・精度・速度,,PDF本文確認
+CG139,SG031,PDF p.5 対応工具/分解能; p.7 AI学習・精度・速度,,PDF本文確認
+CG140,SG032,発行日11.09.2025,11.09.2025,Web本文確認
+CG141,SG033,技术原理/多参数融合监测; 公司所在地,多参数融合监测,公式製品ページ確認
+CG142,SG033,技术原理/多参数融合监测; 公司所在地,,公式製品ページ確認
+CG143,SG033,技术原理/多参数融合监测; 公司所在地,,公式製品ページ確認
+CG144,SG033,技术原理/多参数融合监测; 公司所在地,,公式製品ページ確認
+CG145,SG033,技术原理/多参数融合监测; 公司所在地,,公式製品ページ確認
+CG146,SG033,技术原理/多参数融合监测; 公司所在地,,公式製品ページ確認
+CG147,SG034,產品簡介; 刀具狀態數位化監測,無需外加感測器,公式製品ページ確認
+CG148,SG034,產品簡介; 刀具狀態數位化監測,,公式製品ページ確認
+CG149,SG034,產品簡介; 刀具狀態數位化監測,,公式製品ページ確認
+CG150,SG034,產品簡介; 刀具狀態數位化監測,,公式製品ページ確認
+CG151,SG034,產品簡介; 刀具狀態數位化監測,,公式製品ページ確認
+CG152,SG034,產品簡介; 刀具狀態數位化監測,,公式製品ページ確認
+CG153,SG035,Golden Curve self-learning; features; patent pending,Learns only NORMAL-state data,Web本文確認
+CG154,SG035,Golden Curve self-learning; features; patent pending,,Web本文確認
+CG155,SG035,Golden Curve self-learning; features; patent pending,,Web本文確認
+CG156,SG035,Golden Curve self-learning; features; patent pending,,Web本文確認
+CG157,SG035,Golden Curve self-learning; features; patent pending,,Web本文確認
+CG158,SG035,Golden Curve self-learning; features; patent pending,,Web本文確認
+CG159,SG035,Golden Curve self-learning; features; patent pending,,Web本文確認
+CG160,SG035,Golden Curve self-learning; features; patent pending,,Web本文確認
+CG161,SG035,Golden Curve self-learning; features; patent pending,,Web本文確認
+CIM001_01,SIM001M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM001_02,SIM001,"PDF pp.4–5, §§4–5, pp.15–17",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM001_03,SIM001,"PDF pp.4–5, §§4–5, pp.15–17",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM001_04,SIM001,"PDF pp.4–5, §§4–5, pp.15–17",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM001_05,SIM001,"PDF pp.4–5, §§4–5, pp.15–17",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM001_06,SIM001,"PDF pp.4–5, §§4–5, pp.15–17",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM001_07,SIM001,"PDF pp.4–5, §§4–5, pp.15–17",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM001_08,SIM001,"PDF pp.4–5, §§4–5, pp.15–17",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM001_09,SIM001,"PDF pp.4–5, §§4–5, pp.15–17",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM001_10,SIM001,"PDF pp.4–5, §§4–5, pp.15–17",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM001_11,SIM001,"PDF pp.4–5, §§4–5, pp.15–17",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_01,SIM002M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_02,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_03,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_04,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_05,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_06,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_07,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_08,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_09,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_10,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_11,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_12,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM002_13,SIM002,"PDF pp.7–15, Table 4/5/7, §4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM003_01,SIM003M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM003_02,SIM003,"PDF §§2–5, Figs.10–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM003_03,SIM003,"PDF §§2–5, Figs.10–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM003_04,SIM003,"PDF §§2–5, Figs.10–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM003_05,SIM003,"PDF §§2–5, Figs.10–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM003_06,SIM003,"PDF §§2–5, Figs.10–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM003_07,SIM003,"PDF §§2–5, Figs.10–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM003_08,SIM003,"PDF §§2–5, Figs.10–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM003_09,SIM003,"PDF §§2–5, Figs.10–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_01,SIM004M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_02,SIM004,"PDF §§2–4, Fig.9–10, Table2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_03,SIM004,"PDF §§2–4, Fig.9–10, Table2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_04,SIM004,"PDF §§2–4, Fig.9–10, Table2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_05,SIM004,"PDF §§2–4, Fig.9–10, Table2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_06,SIM004,"PDF §§2–4, Fig.9–10, Table2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_07,SIM004,"PDF §§2–4, Fig.9–10, Table2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_08,SIM004,"PDF §§2–4, Fig.9–10, Table2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_09,SIM004,"PDF §§2–4, Fig.9–10, Table2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_10,SIM004,"PDF §§2–4, Fig.9–10, Table2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_11,SIM004,"PDF §§2–4, Fig.9–10, Table2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM004_12,SIM004,"PDF §§2–4, Fig.9–10, Table2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_01,SIM005M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_02,SIM005,"PDF §5, Table1, pp.12–14",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_03,SIM005,"PDF §5, Table1, pp.12–14",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_04,SIM005,"PDF §5, Table1, pp.12–14",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_05,SIM005,"PDF §5, Table1, pp.12–14",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_06,SIM005,"PDF §5, Table1, pp.12–14",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_07,SIM005,"PDF §5, Table1, pp.12–14",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_08,SIM005,"PDF §5, Table1, pp.12–14",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_09,SIM005,"PDF §5, Table1, pp.12–14",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_10,SIM005,"PDF §5, Table1, pp.12–14",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_11,SIM005,"PDF §5, Table1, pp.12–14",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM005_12,SIM005,"PDF §5, Table1, pp.12–14",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_01,SIM006M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_02,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_03,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_04,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_05,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_06,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_07,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_08,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_09,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_10,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",test accuracy of 97.50%,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_11,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_12,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_13,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM006_14,SIM006,"PDF §§2–3, Tables1–4, pp.5–12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_01,SIM007M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_02,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_03,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_04,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_05,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_06,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_07,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_08,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_09,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_10,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_11,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_12,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM007_13,SIM007,"PDF §§2–4, Table5–6, pp.7–11",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_01,SIM008M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_02,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_03,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_04,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_05,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_06,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_07,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_08,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_09,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_10,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_11,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_12,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM008_13,SIM008,"PDF §§2–3, Table1, pp.20–25",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_01,SIM009M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_02,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_03,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_04,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_05,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_06,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_07,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_08,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_09,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",977 microscopic images,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_10,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_11,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_12,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM009_13,SIM009,"Procedia CIRP pp.707–710, Eq3, Table1–2",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_01,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_02,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_03,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_04,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_05,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",U-Net as an automated prompt generator,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_06,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_07,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_08,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_09,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_10,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_11,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_12,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM010_13,SIM010,"§§2–4, Tables1–3, Eq1, Fig12",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM011_01,SIM011M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM011_02,SIM011,NTU Abstract / IEEE TIM74 pp.1–8,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM011_03,SIM011,NTU Abstract / IEEE TIM74 pp.1–8,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM011_04,SIM011,NTU Abstract / IEEE TIM74 pp.1–8,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM011_05,SIM011,NTU Abstract / IEEE TIM74 pp.1–8,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM011_06,SIM011,NTU Abstract / IEEE TIM74 pp.1–8,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM011_07,SIM011,NTU Abstract / IEEE TIM74 pp.1–8,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM011_08,SIM011,NTU Abstract / IEEE TIM74 pp.1–8,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM012_01,SIM012M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM012_02,SIM012,Abstract / Highlights,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM012_03,SIM012,Abstract / Highlights,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM012_04,SIM012,Abstract / Highlights,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM012_05,SIM012,Abstract / Highlights,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM012_06,SIM012,Abstract / Highlights,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM012_07,SIM012,Abstract / Highlights,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM012_08,SIM012,Abstract / Highlights,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM012_09,SIM012,Abstract / Highlights,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM012_10,SIM012,Abstract / Highlights,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM013_01,SIM013M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM013_02,SIM013,Abstract / Highlights / DOI登録,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM013_03,SIM013,Abstract / Highlights / DOI登録,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM013_04,SIM013,Abstract / Highlights / DOI登録,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM013_05,SIM013,Abstract / Highlights / DOI登録,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM013_06,SIM013,Abstract / Highlights / DOI登録,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM013_07,SIM013,Abstract / Highlights / DOI登録,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM013_08,SIM013,Abstract / Highlights / DOI登録,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM013_09,SIM013,Abstract / Highlights / DOI登録,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_01,SIM014M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_02,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_03,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_04,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_05,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_06,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_07,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_08,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_09,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_10,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_11,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_12,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM014_13,SIM014,"§§5–7, Figs5–9",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM015_01,SIM015M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM015_02,SIM015,"PDF §§2–6, pp.5–14、結言",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM015_03,SIM015,"PDF §§2–6, pp.5–14、結言",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM015_04,SIM015,"PDF §§2–6, pp.5–14、結言",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM015_05,SIM015,"PDF §§2–6, pp.5–14、結言",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM015_06,SIM015,"PDF §§2–6, pp.5–14、結言",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM015_07,SIM015,"PDF §§2–6, pp.5–14、結言",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM015_08,SIM015,"PDF §§2–6, pp.5–14、結言",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM015_09,SIM015,"PDF §§2–6, pp.5–14、結言",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM015_10,SIM015,"PDF §§2–6, pp.5–14、結言",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM016_01,SIM016M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM016_02,SIM016,Abstract、2026年9月号,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM016_03,SIM016,Abstract、2026年9月号,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM016_04,SIM016,Abstract、2026年9月号,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM016_05,SIM016,Abstract、2026年9月号,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM016_06,SIM016,Abstract、2026年9月号,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM017_01,SIM017M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM017_02,SIM017,"§§2–4, Tables1–4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM017_03,SIM017,"§§2–4, Tables1–4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM017_04,SIM017,"§§2–4, Tables1–4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM017_05,SIM017,"§§2–4, Tables1–4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM017_06,SIM017,"§§2–4, Tables1–4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM017_07,SIM017,"§§2–4, Tables1–4",24 microscopy images,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM017_08,SIM017,"§§2–4, Tables1–4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM017_09,SIM017,"§§2–4, Tables1–4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM017_10,SIM017,"§§2–4, Tables1–4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM017_11,SIM017,"§§2–4, Tables1–4",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM018_01,SIM018M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM018_02,SIM018,Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM018_03,SIM018,Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM018_04,SIM018,Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM018_05,SIM018,Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM018_06,SIM018,Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM018_07,SIM018,Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM019_01,SIM019M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM019_02,SIM019,Methods / Semi-supervised data split / Table4,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM019_03,SIM019,Methods / Semi-supervised data split / Table4,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM019_04,SIM019,Methods / Semi-supervised data split / Table4,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM019_05,SIM019,Methods / Semi-supervised data split / Table4,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM019_06,SIM019,Methods / Semi-supervised data split / Table4,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM019_07,SIM019,Methods / Semi-supervised data split / Table4,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM019_08,SIM019,Methods / Semi-supervised data split / Table4,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM019_09,SIM019,Methods / Semi-supervised data split / Table4,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM019_10,SIM019,Methods / Semi-supervised data split / Table4,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM019_11,SIM019,Methods / Semi-supervised data split / Table4,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_01,SIM020M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_02,SIM020,"PDF §§2–4, pp.17–24",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_03,SIM020,"PDF §§2–4, pp.17–24",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_04,SIM020,"PDF §§2–4, pp.17–24",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_05,SIM020,"PDF §§2–4, pp.17–24",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_06,SIM020,"PDF §§2–4, pp.17–24",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_07,SIM020,"PDF §§2–4, pp.17–24",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_08,SIM020,"PDF §§2–4, pp.17–24",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_09,SIM020,"PDF §§2–4, pp.17–24",The relative error for flank wear measurements was 3.81%,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_10,SIM020,"PDF §§2–4, pp.17–24",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_11,SIM020,"PDF §§2–4, pp.17–24",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM020_12,SIM020,"PDF §§2–4, pp.17–24",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM021_01,SIM021M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM021_02,SIM021,Abstract（PDF公開先d-nb.info/1229969632/34）,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM021_03,SIM021,Abstract（PDF公開先d-nb.info/1229969632/34）,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM021_04,SIM021,Abstract（PDF公開先d-nb.info/1229969632/34）,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM021_05,SIM021,Abstract（PDF公開先d-nb.info/1229969632/34）,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM021_06,SIM021,Abstract（PDF公開先d-nb.info/1229969632/34）,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM021_07,SIM021,Abstract（PDF公開先d-nb.info/1229969632/34）,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM021_08,SIM021,Abstract（PDF公開先d-nb.info/1229969632/34）,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM021_09,SIM021,Abstract（PDF公開先d-nb.info/1229969632/34）,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_01,SIM022M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_02,SIM022,Methods / Experiments / Tables4–5,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_03,SIM022,Methods / Experiments / Tables4–5,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_04,SIM022,Methods / Experiments / Tables4–5,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_05,SIM022,Methods / Experiments / Tables4–5,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_06,SIM022,Methods / Experiments / Tables4–5,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_07,SIM022,Methods / Experiments / Tables4–5,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_08,SIM022,Methods / Experiments / Tables4–5,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_09,SIM022,Methods / Experiments / Tables4–5,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_10,SIM022,Methods / Experiments / Tables4–5,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_11,SIM022,Methods / Experiments / Tables4–5,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM022_12,SIM022,Methods / Experiments / Tables4–5,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM023_01,SIM023,WCMNM2022 Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM023_02,SIM023,WCMNM2022 Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM023_03,SIM023,WCMNM2022 Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM023_04,SIM023,WCMNM2022 Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM023_05,SIM023,WCMNM2022 Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM023_06,SIM023,WCMNM2022 Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM023_07,SIM023,WCMNM2022 Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM023_08,SIM023,WCMNM2022 Abstract,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM024_01,SIM024M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM024_02,SIM024,Abstract / Author information / publication dates,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM024_03,SIM024,Abstract / Author information / publication dates,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM024_04,SIM024,Abstract / Author information / publication dates,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM024_05,SIM024,Abstract / Author information / publication dates,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM024_06,SIM024,Abstract / Author information / publication dates,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM024_07,SIM024,Abstract / Author information / publication dates,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM024_08,SIM024,Abstract / Author information / publication dates,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM024_09,SIM024,Abstract / Author information / publication dates,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM025_01,SIM025M,DOI登録書誌,,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM025_02,SIM025,"IFAC pp.534–539, §3, Conclusion, Fig13",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM025_03,SIM025,"IFAC pp.534–539, §3, Conclusion, Fig13",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM025_04,SIM025,"IFAC pp.534–539, §3, Conclusion, Fig13",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM025_05,SIM025,"IFAC pp.534–539, §3, Conclusion, Fig13",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM025_06,SIM025,"IFAC pp.534–539, §3, Conclusion, Fig13",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM025_07,SIM025,"IFAC pp.534–539, §3, Conclusion, Fig13",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM025_08,SIM025,"IFAC pp.534–539, §3, Conclusion, Fig13",Dice = 0.85,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM025_09,SIM025,"IFAC pp.534–539, §3, Conclusion, Fig13",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CIM025_10,SIM025,"IFAC pp.534–539, §3, Conclusion, Fig13",,原資料の当該記述を要約。限界のうち一般化不足は調査者評価。
+CS001,SSM001,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS002,SS001,§2;§3.1–3.2;§4.1;Table A1,non-stationary Transformer encoders,全文確認（Web本文）
+CS003,SS001,§2;§3.1–3.2;§4.1;Table A1,,全文確認（Web本文）
+CS004,SS001,§2;§3.1–3.2;§4.1;Table A1,,全文確認（Web本文）
+CS005,SSM002,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS006,SS002,Abstract,manifold regularization,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS007,SS002,Abstract,,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS008,SSM003,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS009,SS003,Abstract,convolutional neural network (CNN) and a bidirectional long short-term memory,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS010,SSM004,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS011,SS004,Abstract;§4.1–4.3;Table 2–3,Markov transition field (MTF),全文確認（Web本文）
+CS012,SS004,Abstract;§4.1–4.3;Table 2–3,,全文確認（Web本文）
+CS013,SS004,Abstract;§4.1–4.3;Table 2–3,,全文確認（Web本文）
+CS014,SSM005,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS015,SS005,Abstract;§3（出版社索引）,IE-Bi-LSTM,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS016,SSM006,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS017,SS006,Abstract;§2.3（出版社索引）,Denoising Autoencoder–Support Vector Regression,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS018,SS006,Abstract;§2.3（出版社索引）,,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS019,SSM007,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS020,SS007,Abstract;Crossref metadata,315 milling tests,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS021,SSM008,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS022,SS008,Highlights;Introduction（出版社索引）,Fuzzy Inference System (FIS),抄録・本文抜粋確認（出版社索引/公開抄録）
+CS023,SSM009,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS024,SS009,Highlights,spindle power data with NN,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS025,SS009,Highlights,,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS026,SSM010,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS027,SS010,Abstract;§2;§6.1（出版社索引）,improved artificial bee colony (IABC-BPNN),抄録のみ確認（出版社登録Crossref＋Web補足）
+CS028,SSM011,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS029,SS011,Abstract（出版社索引）,physics-informed self-supervised learning (PISSL),抄録・本文抜粋確認（出版社索引/公開抄録）
+CS030,SS011,Abstract（出版社索引）,,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS031,SSM012,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS032,SS012,Datasets;Table1;Table3;Method validation/Table5;Data availability,Autoencoder-LSTM (AE_LSTM) and Encoder-Decoder LSTM,全文確認（Web本文）
+CS033,SS012,Datasets;Table1;Table3;Method validation/Table5;Data availability,,全文確認（Web本文）
+CS034,SS012,Datasets;Table1;Table3;Method validation/Table5;Data availability,,全文確認（Web本文）
+CS035,SSM013,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS036,SS013,Experimental setup/Table1;Results/Table7;Conclusions,eight cutter records are used as training sets,全文確認（Web本文）
+CS037,SS013,Experimental setup/Table1;Results/Table7;Conclusions,,全文確認（Web本文）
+CS038,SS013,Experimental setup/Table1;Results/Table7;Conclusions,,全文確認（Web本文）
+CS039,SSM014,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS040,SS014,Publisher Abstract;author GitHub README,PR-AUC) score of 0.45,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS041,SS014,Publisher Abstract;author GitHub README,,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS042,SS014,Publisher Abstract;author GitHub README,,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS043,SSM015,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS044,SS015,Method contributions;§4 outline（出版社索引）,Informer encoder and stacked BiGRU,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS045,SSM016,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS046,SS016,§2;§3.1–3.2/Table3–4;§4;§5,monotonicity loss,全文確認（Web本文）
+CS047,SS016,§2;§3.1–3.2/Table3–4;§4;§5,,全文確認（Web本文）
+CS048,SS016,§2;§3.1–3.2/Table3–4;§4;§5,,全文確認（Web本文）
+CS049,SSM017,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS050,SS017,Publisher Abstract;Data Availability;Additional Table10,ConvNeXt achieved 99.1% classification accuracy,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS051,SS017,Publisher Abstract;Data Availability;Additional Table10,,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS052,SS017,Publisher Abstract;Data Availability;Additional Table10,,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS053,SSM018,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS054,SS018,Abstract;§3.1（出版社索引）,one to five samples,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS055,SS018,Abstract;§3.1（出版社索引）,,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS056,SSM019,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS057,SS019,Publisher Abstract;early-access notice,wear coefficient k,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS058,SS019,Publisher Abstract;early-access notice,,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS059,SS019,Publisher Abstract;early-access notice,,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS060,SSM020,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS061,SS020,Highlights;Conclusion;RUL subsection（出版社索引）,"data loss, monotonicity loss, and physical loss",抄録・本文抜粋確認（出版社索引/公開抄録）
+CS062,SSM021,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS063,SS021,Abstract;§4.1.1/Table1–2;§4.1.4;§4.2.4/Table6,global maximum values extracted within the full life cycle,全文確認（Web本文）
+CS064,SS021,Abstract;§4.1.1/Table1–2;§4.1.4;§4.2.4/Table6,,全文確認（Web本文）
+CS065,SS021,Abstract;§4.1.1/Table1–2;§4.1.4;§4.2.4/Table6,,全文確認（Web本文）
+CS066,SSM022,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS067,SS022,Abstract,continuous wavelet transform and an improved MobileViT,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS068,SS022,Abstract,,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS069,SSM023,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS070,SS023,Abstract,transformer encoder and customized gate control (TECGC),抄録のみ確認（出版社登録Crossref＋Web補足）
+CS071,SSM024,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS072,SS024,Abstract;§4.3/Fig21/Table3（出版社索引）,ResNet-LSTM,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS073,SS024,Abstract;§4.3/Fig21/Table3（出版社索引）,,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS074,SSM025,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS075,SS025,Publisher Abstract（索引表示）,power signals and XGBoost,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS076,SS025,Publisher Abstract（索引表示）,,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS077,SSM026,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS078,SS026,Publisher Abstract;pp41–44（書誌）,principalcomponent analysis,抄録・本文抜粋確認（出版社索引/公開抄録）
+CS079,SSM027,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS080,SS027,OpenAIRE Abstract;Crossref metadata,要約・書誌抽出（原文引用なし）,二次情報のみ
+CS081,SSM028,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS082,SS028,Abstract,self-powering wireless sensor node,抄録のみ確認（出版社登録Crossref＋Web補足）
+CS083,SSM029,Crossref message.title/author/published/DOI,要約・書誌抽出（原文引用なし）,出版社登録書誌を照合
+CS084,SS029,§3.1–3.6;§4.4–4.5/Table9–13;Eq3;Supplementary information,more than 7000 threads produced with 36 different tapping tools,全文確認（Web本文）
+CS085,SS029,§3.1–3.6;§4.4–4.5/Table9–13;Eq3;Supplementary information,,全文確認（Web本文）
+CS086,SS029,§3.1–3.6;§4.4–4.5/Table9–13;Eq3;Supplementary information,,全文確認（Web本文）
+CJS001,SJSM001,Crossref message,要約・書誌抽出（原文引用なし）,抄録のみ確認（出版社登録Crossref＋J-STAGE索引表示）
+CJS002,SJS001,Abstract;Author information;Publication details,The electrical resistance decreases with an increase in contact area,抄録のみ確認（出版社登録Crossref＋J-STAGE索引表示）
+CJS003,SJS001,Abstract;Author information;Publication details,,抄録のみ確認（出版社登録Crossref＋J-STAGE索引表示）
+CJS004,SJSM002,Crossref message,要約・書誌抽出（原文引用なし）,抄録のみ確認（出版社登録Crossref、PDF表紙索引で著者補足）
+CJS005,SJS002,Abstract（Crossref出版社登録）;J-STAGE公開PDF表紙の著者・所属,solid and throw away coated square end mills,抄録のみ確認（出版社登録Crossref、PDF表紙索引で著者補足）
+CJS006,SJS002,Abstract（Crossref出版社登録）;J-STAGE公開PDF表紙の著者・所属,,抄録のみ確認（出版社登録Crossref、PDF表紙索引で著者補足）
+CJS007,SJSM003,Crossref message,要約・書誌抽出（原文引用なし）,抄録のみ確認（J-STAGE公式ページ）
+CJS008,SJS003,Abstract;Details（刊行・先行公開）,200 % increase of the average cutting torque,抄録のみ確認（J-STAGE公式ページ）
+CJS009,SJS003,Abstract;Details（刊行・先行公開）,,抄録のみ確認（J-STAGE公式ページ）
+CJS010,SJS003,Abstract;Details（刊行・先行公開）,,抄録のみ確認（J-STAGE公式ページ）
+CJS011,SJSM004,Crossref message,要約・書誌抽出（原文引用なし）,抄録のみ確認（著者所属機関の公開抄録索引表示）
+CJS012,SJS004,岡山大学機関公開抄録;Crossref書誌,continuously updating the parameters of a cutting force model,抄録のみ確認（著者所属機関の公開抄録索引表示）
+CJS013,SJS004,岡山大学機関公開抄録;Crossref書誌,,抄録のみ確認（著者所属機関の公開抄録索引表示）
+CJS014,SJSM005,Crossref message,要約・書誌抽出（原文引用なし）,全文確認（NCBI公式OA BioC本文の該当節）
+CJS015,SJS005,§2.1/Table1;§2.2;Fig3/Table2;§3/Table4–5;Conclusions,Tool type Corner Radius End Mill,全文確認（NCBI公式OA BioC本文の該当節）
+CJS016,SJS005,§2.1/Table1;§2.2;Fig3/Table2;§3/Table4–5;Conclusions,,全文確認（NCBI公式OA BioC本文の該当節）
+CJS017,SJS005,§2.1/Table1;§2.2;Fig3/Table2;§3/Table4–5;Conclusions,,全文確認（NCBI公式OA BioC本文の該当節）
+CJS018,SJSM006,Crossref message,要約・書誌抽出（原文引用なし）,抄録のみ確認（出版社登録Crossref＋出版社索引表示）
+CJS019,SJS006,Publisher Abstract;Info;公開PDF表紙の著者所属,"linear, polynomial, and support vector regression",抄録のみ確認（出版社登録Crossref＋出版社索引表示）
+CJS020,SJS006,Publisher Abstract;Info;公開PDF表紙の著者所属,,抄録のみ確認（出版社登録Crossref＋出版社索引表示）

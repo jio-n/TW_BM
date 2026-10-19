@@ -1,0 +1,10 @@
+node_modules/
+__pycache__/
+*.py[cod]
+~$*
+
+# Downloaded third-party sources are retained locally; use source URLs online.
+evidence/raw/
+
+# Large intermediate workbook inspection dumps are local QA artifacts.
+evidence/workbook_qa/*.inspect.ndjson

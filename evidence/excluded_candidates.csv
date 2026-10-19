@@ -1,0 +1,32 @@
+﻿candidate_id,name,company,reason,status,source_id,type,url,title
+XJP001,AIツールソムリエ,モリマシナリー,TOOL SOMMELIER由来の実証機/AI機能名称。独立販売SKUを未確認、P0002へ統合,重複・呼称統合,SJP002;SJP003,,,
+XJP002,DIASCOPE 工具摩耗診断機能,三菱重工工作機械,2019技報がAI診断機能をテスト運用・今後市場投入と記載。販売版への実装と現状未確認,研究/PoC・追加確認,SJP020,,,
+XJP003,MPC,DMG森精機,確認した公式版は主軸異常振動・折損/軸受保護中心。摩耗幅・摩耗量測定の直接証拠なし。イージーツールモニタリングは別採用,境界製品・採用保留,https://www.dmgmori.co.jp/products/machine/id%3D1605,,,
+XJP004,SPEEDIO 加工負荷監視,ブラザー,主軸負荷上下限アラームを確認、独立工具摩耗推定機能としての評価未確認。ATC工具監視は工具有無・キー乗上げ検知で別機能,境界機能・採用保留,SJP022,,,
+XJP005,リアルタイム工具摩耗検知AI,川崎製作所,自社研究・特許・コンサル展開構想段階。顧客向け商用製品として提供確認できず,研究/PoC,SJP021,,,
+XJP006,切削シミュレーションを用いたリアルタイム工具摩耗監視技術,マツモトセイコー,2025公的認証で実在確認、顧客向け製品名・提供条件・方式詳細未確認,要追加調査,SJP023,,,
+XJP007,MAS-NX,牧野フライス製作所,工具摩耗等リスクを予測した生産スケジューリング。摩耗判定器そのもののモデル・入出力が確認できず,関連機能,SJP024,,,
+XJP008,IoTソリューション 工具摩耗補正値監視,ニデック,入力済み工具摩耗補正値の履歴と限界通知。実測摩耗/自動推定器と区別して採用保留,関連機能,https://www.nidec.com/jp/products/machine-tools/solution-service/iot-solution/NTKS-iot/,,,
+XG001,ANCA LaserUltra,,工具製造中の外径/輪郭補正と砥石摩耗が主体。切削使用後工具摩耗の専用判定機能を原資料で確認できず主表除外,関連計測機器,SCAND188,製品候補,https://machines.anca.com/Anca.CNC/media/Images/Brochures/ANCA_IMTEX_Highlights_Brochure_2022.pdf,
+XG002,Walter HELICHECK,,学術実験で摩耗計測利用例はあるが、今回メーカー一次資料で摩耗専用機能を確認できず詳細比較保留,要追加調査,SCAND189,製品候補,https://link.springer.com/article/10.1007/s11740-021-01089-5,
+XG003,Prometec PROMOS（歴史的工具監視候補）,,現行同名公式サイトではレーザ材料加工PM7000/PD2000を表示。歴史製品と現行法人/提供主体の継続性を確認できず除外,現行提供未確認,SCAND190,製品候補,https://www.prometec.com/produkte/,
+XG004,QASS Optimizer4D（取得した射出成形摩耗ページ）,,取得資料の摩耗対象は射出成形金型。切削工具直接適用と混在させない,対象外資料,SCAND191,製品候補,https://www.qass.net/en/kunststoff-spritzguss,
+XG005,CoroPlus Tool Guide / ToolLibrary,,工具選択/工具データ管理。摩耗判定製品としての直接機能未確認で主表に含めない,関連領域,SCAND192,製品候補,https://www.sandvik.coromant.com/,
+XG006,Electronic Wear Analyzer（EWA、レビュー記載）,,レビューに名称があってもメーカー製品を一次資料で同定できないため採用しない,実在/製品同定未確認,SCAND193,製品候補,https://www.mdpi.com/2224-2708/13/5/53/xml,
+XG007,神通資訊/MiTAC 刀具磨耗监控平台,,公式本文でAI交換時期予測を確認。有望候補として詳細化保留（追加採用は4製品上限の指定）。低関連として除外したものではない,要追加調査・主表未採用,SG036,追加製品候補,https://www.mitac.com.tw/zh-hans/portfolio-item/%E5%88%80%E5%85%B7%E7%A3%A8%E8%80%97%E7%9B%A3%E6%8E%A7%E5%B9%B3%E5%8F%B0/,
+XG008,EDIM smart cutting monitoring,,出展者提供プロフィールは摩耗/折損監視を記載するがサイトヘッダがSIMTOS2028、掲載時点と製品呼称・メーカー原資料を確認できず保留,要追加調査・主表未採用,SG037,追加製品候補,https://simtos.org/eng/bizmatching/exhibitor_Company_detail.do?GotoPage=33&SearchData=&SearchType=&bidx=503,
+XG009,ITRI 刀具磨耗監測與補正技術,,公的研究機関の技術合作/移転情報であり、独立メーカー販売製品と区別。モデル方式・85%指標条件も本文追加確認必要,関連研究/技術移転・主表未採用,SG038,技術移転候補,https://www.itri.org.tw/ListStyle.aspx?DisplayStyle=13_content&MmmID=1036233405427625204&SiteID=1&Trt_idx=8533,
+XG010,助成國際 CNCAE,,公式検索抜粋にAE/振動融合・RUL記述。詳細仕様と開発主体/導入例を未確認のため候補保留,要追加調査・主表未採用,SG039,追加製品候補,https://quan.com.tw/CNCAE.html,
+XIM001,A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support,,Crossref巻号2027-01。基準日以前のonline公開日を一次記録で確定できず、主表から保留。Qwen3-VL-8B直接候補を発見した事実は関連台帳に残す,要追加調査,SCAND194,,https://doi.org/10.1016/j.ress.2026.113287,A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support
+XIM002,LUWA Dataset: Learning Lithic Use-Wear Analysis on Microscopic Images,,考古石器の使用痕解析。DINOv2を使うが機械加工の切削工具摩耗とは異なる,関連研究,SCAND195,,https://arxiv.org/abs/2403.13171,LUWA Dataset: Learning Lithic Use-Wear Analysis on Microscopic Images
+XIM003,Tool Wear Segmentation in Blanking Processes with Fully Convolutional Networks based Digital Image Processing,,打抜き工具。切削工具の主表とは別の関連研究として保持,関連研究,SCAND196,,https://arxiv.org/abs/2311.12841,Tool Wear Segmentation in Blanking Processes with Fully Convolutional Networks based Digital Image Processing
+XIM004,Detection and Segmentation of Surface Corrosion in Steel-Based Hand Tools Using You Only Look Once Version 8,,手工具の腐食。切削時工具摩耗ではない,除外,SCAND197,,https://www.mdpi.com/2673-4591/134/1/56,Detection and Segmentation of Surface Corrosion in Steel-Based Hand Tools Using You Only Look Once Version 8
+XIM005,The Target Detection of Wear Particles in Ferrographic Images Based on the Improved YOLOv8,,油中摩耗粒子。切削工具への直接適用ではない,関連研究,SCAND198,,https://www.mdpi.com/2075-4442/12/8/280,The Target Detection of Wear Particles in Ferrographic Images Based on the Improved YOLOv8
+XIM006,Tool Wear Classification and Measurement Using Mask R-CNN,,2022学位論文実在確認。2027-06-20まで公開猶予、本文の対象・実験未確認のため主表に採用せず候補に保持,候補・本文未取得,SCAND199,,https://thesis.lib.ncku.edu.tw/thesis/detail/ecada7d010d06525454c0c7895d0ff75/,Tool Wear Classification and Measurement Using Mask R-CNN
+XIM007,HCFNet: A SAM2-Based Hierarchical Cross-Branch Frequency-Aware Network for Industrial Surface Defect Segmentation,,一般工業表面欠陥。引用文献の工具摩耗SAM適用を自手法の直接適用と混同しない,関連研究,SCAND200,,https://www.mdpi.com/1424-8220/26/14/4597,HCFNet: A SAM2-Based Hierarchical Cross-Branch Frequency-Aware Network for Industrial Surface Defect Segmentation
+XIM008,Intelligent Recognition of Tool Wear with Artificial Intelligence Agent,,レビュー・AI agentの方向性論考。VLM直接実験論文として数えない,レビュー,SCAND201,,https://www.mdpi.com/2079-6412/14/7/827,Intelligent Recognition of Tool Wear with Artificial Intelligence Agent
+XIM009,Hybrid AI Systems for Tool Wear Monitoring in Manufacturing: A Systematic Review,,レビューとして探索用。詳細原著数から除外,レビュー,SCAND202,,https://www.mdpi.com/2076-3417/16/1/208,Hybrid AI Systems for Tool Wear Monitoring in Manufacturing: A Systematic Review
+XIM010,Deep learning method for wear assessment and regeneration support in gear hobbing tools,,追加検索で新規候補発見。書誌/本文抽出未完、飽和未達の根拠として保持,候補・未精査,SCAND203,,https://doi.org/10.1007/s10845-026-02944-x,Deep learning method for wear assessment and regeneration support in gear hobbing tools
+XS001,Masked Self-Supervision for Remaining Useful Lifetime Prediction in Machine Tools,,実験はC-MAPSSターボファンのみ。工具摩耗直接実験ではない。関連手法として保持。,関連研究/主比較除外,SCAND204,,https://arxiv.org/abs/2207.01219,
+XS002,Data-driven tool wear prediction ... arXiv:2412.19950,,R0017の2026出版版と同一研究。重複排除。,重複除外,SCAND205,,https://arxiv.org/abs/2412.19950,
+XS003,A data-driven model for milling tool remaining useful life prediction with convolutional and stacked LSTM network,,R0027。書誌一致だが技術抄録を二次再掲のみで確認。追加一次確認まで採用数から除外。,候補留保,SCAND206,,https://doi.org/10.1016/j.measurement.2019.107461,

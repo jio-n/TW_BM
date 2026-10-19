@@ -1,0 +1,573 @@
+﻿claim_id,entity_id,field,claim,status
+CJP001,P0001,提供・機能,TOOL COLLAGEは単体購入可能で、欠け・摩耗を自動検出する,確認済み
+CJP002,P0001,対象工具・径,エンドミル、ドリル、チップ等。φ2mm以上は変位量によって検出可能,確認済み
+CJP003,P0001,関連特許のモデル,共同特許実施例にEfficientDet、方向別M1–M4とTTAを記載。販売版実装の証明ではない,確認済み（関連特許）
+CJP004,P0001,関連特許の候補方式,特許はYOLO/R-CNN/SSD、U-Net/FCN/SegNetも代替例として列挙する。実装確認済みリストとしない,確認済み（特許の選択肢）
+CJP005,P0001,特許との製品関連,共同特許実施形態2では撮像装置としてTOOL COLLAGEを明示する,確認済み
+CJP006,P0001,大学研究の関係,岡山大学論文はTOOL COLLAGEで撮像しYOLOで切出し、PatchCoreとEfficientNetを研究。商用判定モデル採用は未確認,確認済み（関連研究）
+CJP007,P0002,AI実装範囲,現行公式ページはAI機能とユーザー毎の学習による欠け摩耗検出基準を説明する,確認済み
+CJP008,P0002,販売開始年,2023共同発表に2018年より開発・販売と2019年から提供が併存する,資料間で矛盾あり
+CJP009,P0002,研究精度,2023実証成果は欠陥検出正答率85%以上、摩耗予測70%以上。商用保証値・同一課題の精度ではない,確認済み（研究実証）
+CJP010,P0002,分散学習研究,同共同発表は分散学習を従来の1/8の時間で実行できる研究成果を記すが条件詳細は未確認,確認済み（研究実証）
+CJP011,P0002,摩耗予測研究,Go-Tech紹介は消費電流の特徴量、勾配ブースティングと時系列データマイニングの組合せを記す,検索結果抽出本文のみ確認
+CJP012,P0002,AI名称の扱い,AIツールソムリエは既存ツールソムリエを基にした実証機名称。独立販売SKUは未確認のため別行で加算しない,確認済み（統合判断）
+CJP013,P0003,実装技法,2018共同発表はOSP上でRAPID機械学習技術を使用しDeep Learningで加工診断すると明示,確認済み
+CJP014,P0003,対象・リアルタイム性,ドリル加工の異常検知、摩耗可視化、損傷前停止・退避を行う,確認済み
+CJP015,P0003,効果,工具寿命が1.4倍に延長可能な場合があるというメーカー例であり、判定Accuracyではない,確認済み（効果例）
+CJP016,P0003,導入事例,Dream Site2、φ8.2ガンドリル（L/D48）、MA-600HII事例,確認済み
+CJP017,P0004,学習と予測,各軸特徴量と工具使用回数から摩耗特徴を自動選択し工程ごとに工具寿命を学習する,確認済み
+CJP018,P0004,適用例,Co-Cr合金の人工関節の旋盤加工における摩耗診断例を公開,確認済み
+CJP019,P0004,警報動作,工具摩耗注意・警告では加工サイクルを停止しない,確認済み
+CJP020,P0005,統計方式,公式比較表は重回帰分析とσ逸脱、特徴量に基づくトレンド監視を記載する,検索結果抽出本文のみ確認
+CJP021,P0005,寿命出力,工具寿命を残回数で確認する製品として公式解説に記載,検索結果抽出本文のみ確認
+CJP022,P0005,カタログ年代,L16070-Aは2020年3月作成の製品カタログ。発売開始日そのものは未確認,検索結果抜粋のみ
+CJP023,P0006,提供開始,AIモニタリングプランは2026年5月26日開始、販売買い切り・個別見積,検索結果抽出本文のみ確認
+CJP024,P0006,原理,正常加工パターン学習から振動データを摩耗進行スコアへ変換し設定閾値でアラート,検索結果抽出本文のみ確認
+CJP025,P0006,センサ仕様,第2世代は3軸加速度、22.0kHz、IP67。判定精度の数値とは別,確認済み
+CJP026,P0007,原理,クランプ式電流センサでスピンドル/サーボ電流を取得し独自アルゴリズムで特徴抽出・異常有無/摩耗値を推定,確認済み
+CJP027,P0007,運用,ユーザーの閾値設定不要と公式説明。検知器内部に閾値が存在しないことまでは意味しない,確認済み
+CJP028,P0008,販売終了,AP-10F/AP-SH05は2024年10月31日に販売終了,確認済み
+CJP029,P0008,原理,正常状態をAIで学習し振動パワー変化をスコア化、閾値で通知する,確認済み
+CJP030,P0009,温度方式,導入例は摩耗レベルと温度の関係を利用して一定温度で交換する運用を示す,確認済み（事例）
+CJP031,P0009,信号解析,b-seriesの小径ドリル例はFFT帯域フィルタとRMS評価による振動変化を使用,確認済み（事例）
+CJP032,P0009,効果,匿名顧客の工具費約15%削減事例。一般精度値ではない,確認済み（事例）
+CJP033,P0010,判定原理,正常テスト加工の主軸電流を基準に警告・緊急停止の2段階閾値で摩耗/破損を監視する,検索結果抽出本文のみ確認
+CJP034,P0011,対象工具と制約,技報専用アプリは鉄/鋳物量産ドリル・リーマ工程。タップ・フライスは当時今後の展開,確認済み
+CJP035,P0011,方式,NC・アナログを1ms周期取得、クレンジングと統計/周波数等の特徴量を計算して閾値判断,確認済み
+CJP036,P0011,顧客効果,リーマ工具使用回数を従来比最大76%延長した顧客例。判定精度の指標ではない,確認済み
+CJP037,P0011,商用提供,現行公式製品ページが摩耗診断、チッピング診断等と購入問い合わせを掲示,確認済み
+CG001,P0101,ツール・ソリューション概要,スマートフォンで撮影した工具画像を画像庫と比較し、摩耗を計測・保存・共有する支援アプリ。,確認済み
+CG002,P0101,判定技術の基本原理,画像庫との目視比較および計測支援。自動AI判定は確認できない,確認済み
+CG003,P0101,判定可能な状態・指標,摩耗計測、画像比較、保存・共有,確認済み
+CG004,P0101,使用データ,工具写真・参照摩耗画像庫,確認済み
+CG005,P0101,対象工具,切削工具（個別形状未確認）,確認済み
+CG006,P0101,学習データの必要性,非該当（画像庫利用）,確認済み
+CG007,P0102,ツール・ソリューション概要,切削中のセンサ信号から摩耗・欠損・衝突等を検知し、機械停止等を実行する監視システム。,確認済み
+CG008,P0102,判定技術の基本原理,センサ入力を経時解析し摩耗を検知,確認済み
+CG009,P0102,判定可能な状態・指標,摩耗検知・欠損検知・機械停止/工具交換,確認済み
+CG010,P0102,使用データ,加工力・振動・電力・トルク・駆動データ,確認済み
+CG011,P0102,対象工具,旋削インサート/突切り工具（事例）；他形状未確認,確認済み
+CG012,P0102,対象加工法,旋削（事例）,確認済み
+CG013,P0102,処理時間・リアルタイム性,リアルタイム監視。カタログにミリ秒動作記述,確認済み
+CG014,P0102,発表年,2018以前に導入事例確認,確認済み
+CG015,P0102,導入実績・販売実績,Harsha Engineers（2018年公式年報）。サイクル43%減は加工改善全体の事例で摩耗判定精度ではない,確認済み
+CG016,P0103,ツール・ソリューション概要,機内レーザ遮光測定で工具形状・刃先状態を評価。ソフトで摩耗を可視化。,確認済み
+CG017,P0103,判定技術の基本原理,レーザ遮光を連続測定し工具輪郭変化を計測,確認済み
+CG018,P0103,判定可能な状態・指標,長さ・半径・輪郭変化、摩耗補正,確認済み
+CG019,P0103,使用データ,レーザ遮光量の連続測定値,確認済み
+CG020,P0103,対象工具,ドリル、フライス工具、タップ、リーマ（形状別詳細未確認）,確認済み
+CG021,P0103,対象加工法,フライス加工・穴あけ・ねじ切り,確認済み
+CG022,P0103,判定精度・性能,150 mm仕様の繰返し性0.2 μm 2σ。摩耗分類正解率ではない,確認済み
+CG023,P0103,処理時間・リアルタイム性,毎秒数千測定値（工具監視所要時間とは異なる）,確認済み
+CG024,P0103,学習データの必要性,非該当（NC計測サイクル設定）,確認済み
+CG025,P0103,発表年,資料間で矛盾あり：公式2018ニュースは2017披露、2019白書は2018公開と記す,確認済み
+CG026,P0104,ツール・ソリューション概要,NC駆動信号やAE・力などの測定曲線を監視する工具状態監視。,確認済み
+CG027,P0104,判定技術の基本原理,閾値・包絡線・移動包絡線・動的成分・平均高さ傾向,確認済み
+CG028,P0104,判定可能な状態・指標,平均信号高さの摩耗トレンド、閾値越え,確認済み
+CG029,P0104,使用データ,電流/電力/トルク・力・AE等,確認済み
+CG030,P0104,対象工具,ドリル、旋削バイト、フライス工具,確認済み
+CG031,P0104,対象加工法,旋削・穴あけ・フライス加工,確認済み
+CG032,P0104,処理時間・リアルタイム性,加工中監視（数値遅延未確認）,確認済み
+CG033,P0104,学習データの必要性,加工基準信号と閾値設定,確認済み
+CG034,P0105,ツール・ソリューション概要,電力・振動・力の基準比較から摩耗を早期監視。,確認済み
+CG035,P0105,判定技術の基本原理,工程データと取得済み基準値を比較,確認済み
+CG036,P0105,判定可能な状態・指標,基準逸脱、警報/停止,確認済み
+CG037,P0105,使用データ,電力・三軸振動・切削力,確認済み
+CG038,P0105,対象工具,フライス工具、旋削工具（個別形状未確認）,確認済み
+CG039,P0105,対象加工法,旋削・フライス加工,確認済み
+CG040,P0105,判定精度・性能,摩耗判定精度未確認（センサ精度と区別）,確認済み
+CG041,P0105,処理時間・リアルタイム性,リアルタイム（数値遅延未確認）,確認済み
+CG042,P0105,学習データの必要性,メーカーFAQは2–3個の加工部品を基準に記録,確認済み
+CG043,P0106,ツール・ソリューション概要,3DセンサとCNC軸で刃先を走査し、摩耗/欠損を自動計測する工具検査装置。,確認済み
+CG044,P0106,判定技術の基本原理,3D刃先デジタイズとpilot 4.0自動解析,確認済み
+CG045,P0106,判定可能な状態・指標,3D摩耗位置と量・欠損測定,確認済み
+CG046,P0106,使用データ,工具刃先3D画像,確認済み
+CG047,P0106,対象工具,切削工具（エンドミル形状別対応未確認）,確認済み
+CG048,P0107,ツール・ソリューション概要,旋削工具ホルダ内の圧電センサを工程監視装置に接続し、小さい切削力変化を検出。,確認済み
+CG049,P0107,判定技術の基本原理,工具近傍で圧電力計測しmaXYmosで工程評価,確認済み
+CG050,P0107,判定可能な状態・指標,切削力変動・摩耗兆候,確認済み
+CG051,P0107,使用データ,切削力,確認済み
+CG052,P0107,対象工具,旋削工具,確認済み
+CG053,P0107,対象加工法,旋削,確認済み
+CG054,P0107,処理時間・リアルタイム性,連続/リアルタイム監視（数値遅延未確認）,確認済み
+CG055,P0107,発表年,2023年展示資料確認（初出年未確認）,確認済み
+CG056,P0108,ツール・ソリューション概要,加工センサから摩耗・欠損を監視し送りを適応制御。2026資料にAI追加モジュール。,確認済み
+CG057,P0108,判定技術の基本原理,負荷/信号の安全限界比較、AIモジュールは過去データから監視限界値を自動設定/改善,確認済み
+CG058,P0108,判定可能な状態・指標,警報/停止・監視限界値調整,確認済み
+CG059,P0108,使用データ,工具負荷、振動、ひずみ、流量/圧力等,確認済み
+CG060,P0108,対象工具,切削工具（個別形状未確認）,確認済み
+CG061,P0108,処理時間・リアルタイム性,リアルタイム監視/ミリ秒単位の送り最適化をカタログ記載,確認済み
+CG062,P0108,学習データの必要性,AIモジュールは履歴工程データ、必要量未確認,確認済み
+CG063,P0109,ツール・ソリューション概要,工具ホルダ力信号と機械データをfusionで統合し、摩耗トレンドを監視。,確認済み
+CG064,P0109,判定技術の基本原理,fusionで工程変数にルール/限界値を設定して異常時に機械応答,確認済み
+CG065,P0109,判定可能な状態・指標,Wear Trend Detection；INSIGHTS PROにTHI/RUL Calculator（精度未確認）,確認済み
+CG066,P0109,使用データ,力/曲げモーメント・NC/機械データ・外部データ,確認済み
+CG067,P0109,対象工具,フライス工具、ドリル、リーマ（資料例）,検索結果抜粋のみ
+CG068,P0109,対象加工法,フライス加工・穴あけ・旋削・ねじ切り等（技術資料）,検索結果抜粋のみ
+CG069,P0110,ツール・ソリューション概要,機械信号から加工工程を監視するモジュール型支援システム。,検索結果抜粋のみ
+CG070,P0110,判定技術の基本原理,平均工程力を監視し、摩耗痕を考慮して限界値設定,検索結果抜粋のみ
+CG071,P0110,判定可能な状態・指標,平均工程力と摩耗限界値,検索結果抜粋のみ
+CG072,P0110,使用データ,機械信号/工程力,検索結果抜粋のみ
+CG073,P0110,対象工具,バーピーリング工具（公式技術資料）、他形状未確認,検索結果抜粋のみ
+CG074,P0110,対象加工法,旋削/バーピーリング（他加工対応詳細未確認）,検索結果抜粋のみ
+CG075,P0110,発表年,2018年資料にTS-WEAR（初出未確認）,検索結果抜粋のみ
+CG076,P0111,ツール・ソリューション概要,主軸・軸モータの電力、エネルギーや変化率から摩耗・欠損を監視。,確認済み
+CG077,P0111,判定技術の基本原理,電力・微分・エネルギー監視,確認済み
+CG078,P0111,判定可能な状態・指標,電力/エネルギー/変化率、摩耗傾向,確認済み
+CG079,P0111,使用データ,モータ電力、Milling仕様は三軸加速度も併用,確認済み
+CG080,P0111,対象工具,ドリル（0.15 mm例）、その他形状未確認,確認済み
+CG081,P0111,対象加工法,穴あけ・旋削・フライス加工（仕様別）,確認済み
+CG082,P0111,判定精度・性能,Automotive資料は電力測定0.005–0.1 W。摩耗判定正解率ではない,確認済み
+CG083,P0111,処理時間・リアルタイム性,上記資料50 kHzサンプリング・ミリ秒応答；現行カタログ反応0.005秒（仕様別）,確認済み
+CG084,P0112,ツール・ソリューション概要,NC内の軸/主軸駆動データを使う追加センサ不要の工程監視。,確認済み
+CG085,P0112,判定技術の基本原理,数値・統計手法と多変量信号評価、限界値自動設定,確認済み
+CG086,P0112,判定可能な状態・指標,工具別/加工別の摩耗データ・異常,確認済み
+CG087,P0112,使用データ,軸/主軸トルク・送り力,確認済み
+CG088,P0112,対象工具,切削工具（個別形状未確認）,確認済み
+CG089,P0112,処理時間・リアルタイム性,加工サイクル並行監視,確認済み
+CG090,P0113,ツール・ソリューション概要,機内レーザで工具寸法と欠損を測定する非接触ツールセッタ。,確認済み
+CG091,P0113,判定技術の基本原理,レーザ遮光とNC計測サイクル,確認済み
+CG092,P0113,判定可能な状態・指標,長さ・直径・半径・振れ・欠損,確認済み
+CG093,P0113,使用データ,レーザ光学計測,確認済み
+CG094,P0113,対象工具,ボール/ラジアス端工具、その他工具（形状別詳細未確認）,確認済み
+CG095,P0113,判定精度・性能,製品ページ上の繰返し性最良0.1 μm 2σ級（仕様依存）。分類正解率ではない,確認済み
+CG096,P0114,ツール・ソリューション概要,3D光学計測で切れ刃と摩耗量を自動測定する工具計測装置。,確認済み
+CG097,P0114,判定技術の基本原理,Focus-Variationで3D形状取得し、WearMeasurementModuleで摩耗量評価,確認済み
+CG098,P0114,判定可能な状態・指標,ISO 8688の摩耗パラメータ/差分パラメータ,確認済み
+CG099,P0114,使用データ,3D光学形状・表面データ,確認済み
+CG100,P0114,対象工具,切削工具（HOBはシリーズ別。工具形状別詳細未確認）,確認済み
+CG101,P0114,対象加工法,フライス加工（ISO 8688対応計測）,確認済み
+CG102,P0114,学習データの必要性,計測プログラム教示,確認済み
+CG103,P0115,ツール・ソリューション概要,センサ内蔵工具ホルダから加工振動を取得し、デジタルサービスで摩耗兆候を検討。,確認済み
+CG104,P0115,判定技術の基本原理,振動/加速度の工程フィードバック。摩耗判定アルゴリズム未確認,確認済み
+CG105,P0115,判定可能な状態・指標,振動/加速度変動から摩耗予兆,確認済み
+CG106,P0115,使用データ,高周波振動・加速度,確認済み
+CG107,P0115,対象工具,工具ホルダに装着する工具（具体的形状未確認）,確認済み
+CG108,P0115,処理時間・リアルタイム性,工程フィードバック、数値未確認,確認済み
+CG109,P0116,ツール・ソリューション概要,NC信号と追加センサの多基準監視から工具状態を評価するモジュール型システム。,確認済み
+CG110,P0116,判定技術の基本原理,multi-criteria評価と自動適応アラーム限界、WEARオプション,確認済み
+CG111,P0116,判定可能な状態・指標,摩耗閾値越え・トレンド,確認済み
+CG112,P0116,使用データ,NC駆動値、電力・振動・力・AE等の選択センサ,確認済み
+CG113,P0116,対象工具,切削工具（個別形状未確認）,確認済み
+CG114,P0116,対象加工法,フライス加工（MC用途）,確認済み
+CG115,P0116,判定精度・性能,摩耗正解率未確認（16信号/10NCチャネルは処理容量）,確認済み
+CG116,P0116,処理時間・リアルタイム性,リアルタイム,確認済み
+CG117,P0117,ツール・ソリューション概要,NC/外部センサ信号の固定/動的限界と参照曲線を比較する工程監視。,確認済み
+CG118,P0117,判定技術の基本原理,teach-in曲線と現在値比較、固定/動的警報限界、dx/dt,確認済み
+CG119,P0117,判定可能な状態・指標,摩耗限界、異常、工具交換,確認済み
+CG120,P0117,使用データ,送り力・主軸トルク・センサ信号,確認済み
+CG121,P0117,対象工具,歯切りフライス/ホブ（専用戦略）,確認済み
+CG122,P0117,対象加工法,フライス加工・歯切り,確認済み
+CG123,P0117,処理時間・リアルタイム性,加工並行リアルタイム、追加サイクルなしというメーカー記載,確認済み
+CG124,P0117,学習データの必要性,参照加工サイクルと限界設定,確認済み
+CG125,P0118,ツール・ソリューション概要,工具使用前後のカメラ画像から長さの変化を検知する工具折損監視。,検索結果抜粋のみ
+CG126,P0118,判定技術の基本原理,前後画像の工具長差を検知,検索結果抜粋のみ
+CG127,P0118,判定可能な状態・指標,折損アラーム9300,検索結果抜粋のみ
+CG128,P0118,使用データ,工具使用前後の画像/工具長,検索結果抜粋のみ
+CG129,P0118,対象工具,Haas機内工具（形状別対応未確認）,検索結果抜粋のみ
+CG130,P0119,ツール・ソリューション概要,機内カメラの工具パノラマ画像からAIでエンドミル逃げ面摩耗を自動測定。,確認済み
+CG131,P0119,対象工具,エンドミル（自動VB明示）。ドリルは摩耗測定対応表あり、自動化範囲未確認。ボール/トロイドは画像・工具測定のみ表記,確認済み
+CG132,P0119,対象加工法,エンドミル加工（摩耗測定）、他は撮影/寸法測定対応と区別,確認済み
+CG133,P0119,判定可能な状態・指標,逃げ面摩耗幅平均/最大、経時摩耗、警告/使用停止閾値、CSV出力,確認済み
+CG134,P0119,使用データ,工具全周パノラマ画像・刃先画像,確認済み
+CG135,P0119,判定技術の基本原理,パノラマ撮影→学習済みAIで逃げ面摩耗評価→刃別平均/最大幅計算。切屑・液滴を評価から除外,確認済み
+CG136,P0119,学習方式,社内の大量画像で事前学習（教師付け詳細未確認）,確認済み
+CG137,P0119,判定精度・性能,AI摩耗測定の標準精度±20 µm；摩耗測定分解能5 µmは別指標,確認済み
+CG138,P0119,評価指標と評価条件,2025日本語公式製品情報p.7標準測定精度。比較対象・試験工具/分割は未記載。p.5は分解能で精度と異なる,確認済み
+CG139,P0119,処理時間・リアルタイム性,撮影から数秒（メーカー記載、ハード/評価条件未記載）,確認済み
+CG140,P0119,発表年,2025-09-11（独語公式発表日。VTC1.6追加機能）,確認済み
+CG141,P0120,ツール・ソリューション概要,複数センサとエッジ処理を用いる工具摩耗・折損監視ソリューション。,確認済み
+CG142,P0120,対象工具,切削工具（個別形状未確認）,確認済み
+CG143,P0120,判定可能な状態・指標,摩耗限界到達前警告、状態履歴,確認済み
+CG144,P0120,使用データ,切削力・振動・音・電流,確認済み
+CG145,P0120,判定技術の基本原理,力/振動/音/電流を融合しエッジで解析。具体判定モデル未確認,確認済み
+CG146,P0120,処理時間・リアルタイム性,ミリ秒級というメーカー記載。計測条件・遅延分布未確認,確認済み
+CG147,P0121,ツール・ソリューション概要,主軸と送り軸の負荷変化・履歴トレンドを使う追加センサ不要の工具監視。,確認済み
+CG148,P0121,対象工具,切削工具（個別形状未確認）,確認済み
+CG149,P0121,判定可能な状態・指標,負荷信号曲線・歴史トレンド・異常警告,確認済み
+CG150,P0121,使用データ,主軸負荷・送り軸負荷・履歴,確認済み
+CG151,P0121,判定技術の基本原理,負荷曲線変化と履歴傾向の解析,確認済み
+CG152,P0121,処理時間・リアルタイム性,リアルタイム（数値未確認）,確認済み
+CG153,P0122,ツール・ソリューション概要,FANUC FOCAS2の機械情報と正常状態のGolden Curve学習で摩耗・寿命・補正を管理するPCソフト。,確認済み
+CG154,P0122,対象工具,旋削/マシニングセンタ用工具（個別形状未確認）,確認済み
+CG155,P0122,対象加工法,旋削・フライス加工（メーカーのLathe/MCT記載）,確認済み
+CG156,P0122,判定可能な状態・指標,四状態分類、偏差傾向、寿命/交換記録、警告,確認済み
+CG157,P0122,使用データ,NC主軸速度/負荷、工具使用回数・切削時間・偏差率,確認済み
+CG158,P0122,判定技術の基本原理,正常状態のみGolden Curveへ学習し摩耗/折損検知時に学習停止。偏差傾向と工程別限界値を監視,確認済み
+CG159,P0122,学習方式,正常データのみ学習、摩耗/折損時に基準更新停止,確認済み
+CG160,P0122,処理時間・リアルタイム性,リアルタイム（メーカー、数値遅延未確認）,確認済み
+CG161,P0122,関連特許・共同研究,公式は韓国出願10-2026-0088313、2026-05-15と記載。KIPO原簿は未確認,確認済み（メーカー記述、特許原簿未照合）
+CIM001_01,R0101,書誌,Tool-Wear Analysis Using Image Processing of the Tool Flank / Ovidiu Moldovan; Simona Dzitac; Ioan Moga; Tiberiu Vesselenyi; Ioan Dzitac / 2017 / 10.3390/sym9120296,確認済み
+CIM001_02,R0101,対象工具,エンドミル（HSS、φ14mm、2枚刃、形状区分未確認）,確認済み
+CIM001_03,R0101,対象加工法,エンドミル加工,確認済み
+CIM001_04,R0101,判定対象の摩耗種類・指標,逃げ面摩耗の有無、正常/摩耗2分類,確認済み
+CIM001_05,R0101,具体的なモデル・手法,Otsu、Sobel、Hough、形態処理＋ANN; 生画像ANN; 2隠れ層autoencoder,確認済み
+CIM001_06,R0101,モデルアーキテクチャ,特徴EN/NSP＋1隠れ層ANNと画像直接入力ANNを比較,確認済み
+CIM001_07,R0101,学習方式,教師あり分類、autoencoderによる特徴表現,確認済み
+CIM001_08,R0101,データ規模,連続摩耗21画像,確認済み
+CIM001_09,R0101,判定精度・性能,著者はautoencoder分類100%成功を報告。21画像由来の小規模実験で独立工場性能ではない,確認済み
+CIM001_10,R0101,学習・検証・テストの分割方法,同一摩耗系列の21画像から学習/テストを選択（§4、Tables 1–3）。独立工具単位分割は未確認,確認済み
+CIM001_11,R0101,技術的な限界,1工具・1材料・21画像、手調整特徴と照明への依存。100%を汎用精度と解釈不可,確認済み
+CIM002_01,R0102,書誌,Automatic Identification of Tool Wear Based on Convolutional Neural Network in Face Milling Process / Xuefeng Wu; Yahui Liu; Xianliang Zhou; Aolei Mou / 2019 / 10.3390/s19183817,確認済み
+CIM002_02,R0102,対象工具,フェイスミルのインサート,確認済み
+CIM002_03,R0102,対象加工法,フライス加工,確認済み
+CIM002_04,R0102,判定対象の摩耗種類・指標,逃げ面/すくい面/凝着/欠損の4種類分類、VB測定,確認済み
+CIM002_05,R0102,具体的なモデル・手法,ToolWearnet（CNN）＋ATWVD、watershed、Roberts、画像位置合わせ、最小外接矩形,確認済み
+CIM002_06,R0102,モデルアーキテクチャ,11畳み込み＋pooling＋FC4出力、224×224 RGB入力,確認済み
+CIM002_07,R0102,学習方式,CAE事前学習＋教師ありSGD微調整,確認済み
+CIM002_08,R0102,転移学習・事前学習の使用,convolutional autoencoder事前学習,確認済み
+CIM002_09,R0102,データ規模,画像拡張5倍。具体枚数はTable5参照,確認済み
+CIM002_10,R0102,判定精度・性能,平均認識precision 96.20%; VB MAPE約5%,確認済み
+CIM002_11,R0102,学習・検証・テストの分割方法,70/15/15、条件別の完全寿命画像系列をテスト/検証に各12組,確認済み
+CIM002_12,R0102,未知の工具・加工条件での評価有無,2切削パラメータの系列分割あり。未知形状/工場は未確認,確認済み
+CIM002_13,R0102,技術的な限界,凝着物の除去と輪郭処理に依存。原文の層数表記に揺れがあるため構造はTable4準拠,確認済み
+CIM003_01,R0103,書誌,Wear and Breakage Detection of Integral Spiral End Milling Cutters Based on Machine Vision / Wenming Wei; Jia Yin; Jun Zhang; Huijie Zhang; Zhuangzhuang Lu / 2021 / 10.3390/ma14195690,確認済み
+CIM003_02,R0103,対象工具,一体型ねじれエンドミル,確認済み
+CIM003_03,R0103,対象加工法,エンドミル加工,確認済み
+CIM003_04,R0103,判定対象の摩耗種類・指標,逃げ面/すくい面/先端の摩耗・欠損領域、交換閾値,確認済み
+CIM003_05,R0103,具体的なモデル・手法,Otsu閾値、Markov Random Field、ノイズ除去・コントラスト強調,確認済み
+CIM003_06,R0103,モデルアーキテクチャ,撮像部位別に二値化またはMRF分割し領域画素数を求める,確認済み
+CIM003_07,R0103,学習方式,画像処理・領域モデル。深層学習は使用確認なし,確認済み
+CIM003_08,R0103,判定精度・性能,摩耗進行に伴う領域画素数増加を実験確認。Accuracy/IoUの共通性能値は未確認,確認済み
+CIM003_09,R0103,技術的な限界,交換閾値は工具径・材料・精度要求に依存し、普遍的VB校正値ではない,確認済み
+CIM004_01,R0104,書誌,Tool-Wear-Estimation System in Milling Using Multi-View CNN Based on Reflected Infrared Images / Woong-Ki Jang; Dong-Wook Kim; Young-Ho Seo; Byeong-Hee Kim / 2023 / 10.3390/s23031208,確認済み
+CIM004_02,R0104,対象工具,TH308インサートを用いるエンドミル,確認済み
+CIM004_03,R0104,対象加工法,エンドミル加工,確認済み
+CIM004_04,R0104,判定対象の摩耗種類・指標,平均逃げ面摩耗幅（µm）,確認済み
+CIM004_05,R0104,具体的なモデル・手法,Mertens露光融合＋multi-view CNN、VAEで前処理を比較,確認済み
+CIM004_06,R0104,モデルアーキテクチャ,3視点を3channel入力、4畳み込みブロック＋FC回帰,確認済み
+CIM004_07,R0104,学習方式,摩耗実測値による教師あり回帰,確認済み
+CIM004_08,R0104,データ規模,10工具、各4800データ,確認済み
+CIM004_09,R0104,判定精度・性能,無偏光平均31.10µm、偏光平均16.84µm（個別9.50–23.67µm）,確認済み
+CIM004_10,R0104,学習・検証・テストの分割方法,5工具群ごとleave-one-tool-out、残り4工具データ20%を検証,確認済み
+CIM004_11,R0104,未知の工具・加工条件での評価有無,同種工具の個体holdoutあり。異工具形状は未確認,確認済み
+CIM004_12,R0104,技術的な限界,専用IR光学と偏光、乾式条件。画像枚数は独立工具数と区別が必要,確認済み
+CIM005_01,R0105,書誌,Defect Inspection Using Modified YoloV4 on a Stitched Image of a Spinning Tool / Bor-Haur Lin; Ju-Chin Chen; Jenn-Jier James Lien / 2023 / 10.3390/s23094476,確認済み
+CIM005_02,R0105,対象工具,回転切削工具（個別形状は未確認）,確認済み
+CIM005_03,R0105,対象加工法,未確認（工具表面検査）,確認済み
+CIM005_04,R0105,判定対象の摩耗種類・指標,工具表面小欠陥の位置検出。VB回帰とは別機能,確認済み
+CIM005_05,R0105,具体的なモデル・手法,SIFT、RANSAC、改良YOLOv4、ASPP、4検出head,確認済み
+CIM005_06,R0105,モデルアーキテクチャ,高解像度特徴を追加した4head YOLOv4,確認済み
+CIM005_07,R0105,学習方式,教師ありbbox検出,確認済み
+CIM005_08,R0105,データ規模,train10417/validation5924/inference4808 patches,確認済み
+CIM005_09,R0105,判定精度・性能,Recall98.7%、Precision97.3%、合成画像1枚の検出7.6秒,確認済み
+CIM005_10,R0105,学習・検証・テストの分割方法,patch単位train/validation/inference枚数を記載。元工具独立性は未確認,確認済み
+CIM005_11,R0105,推論時間・計算環境,検出7.6秒/合成画像、撮像から13–15秒,確認済み
+CIM005_12,R0105,技術的な限界,高い検出率は摩耗幅精度ではない。原文Table1の分数/丸めとF1表記の整合は要確認,確認済み
+CIM006_01,R0106,書誌,Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718 / Garvit Singh; Ankit Agarwal; Kaushal A. Desai; Laine Mears / 2026 / 10.3390/machines14060589,確認済み
+CIM006_02,R0106,対象工具,インデキサブル2枚刃エンドミル,確認済み
+CIM006_03,R0106,対象加工法,エンドミル加工,確認済み
+CIM006_04,R0106,判定対象の摩耗種類・指標,逃げ面、逃げ面+正面、逃げ面+BUE、チッピング4分類,確認済み
+CIM006_05,R0106,具体的なモデル・手法,ViT-Large、16×16patch、24encoder、16heads,確認済み
+CIM006_06,R0106,モデルアーキテクチャ,224×224入力、196patch、hidden1024、分類token＋MLP,確認済み
+CIM006_07,R0106,学習方式,教師あり分類,確認済み
+CIM006_08,R0106,転移学習・事前学習の使用,事前学習済みViT-Large使用,確認済み
+CIM006_09,R0106,データ規模,元200枚、train160→28000拡張、test40、別照明80,確認済み
+CIM006_10,R0106,判定精度・性能,通常40枚97.50%（39/40）、別照明80枚96.25%（77/80）,確認済み
+CIM006_11,R0106,学習・検証・テストの分割方法,元200を160/40に分割後学習側を拡張。別照明は独立insert,確認済み
+CIM006_12,R0106,未知の工具・加工条件での評価有無,独立insertと照明変化あり。未知工具形状・湿式は未検証,確認済み
+CIM006_13,R0106,推論時間・計算環境,学習ViT約150分/4epochs、同環境CNN約539分/20epochs。推論時間は未確認,確認済み
+CIM006_14,R0106,技術的な限界,元画像数が少なく、BUE微小特徴で誤分類。冷却液・付着・カメラずれは今後の課題,確認済み
+CIM007_01,R0107,書誌,Automatic Assessment of Tool Wear Condition During Milling of Laminated MDF Board Using the EVA-02 Classifier / Jarosław Górski; Katarzyna Śmietańska; Marcin Bator; Krzysztof Gajowniczek; Robert Budzyński / 2026 / 10.3390/f17070778,確認済み
+CIM007_02,R0107,対象工具,MDFフライス工具（形状区分未確認）,確認済み
+CIM007_03,R0107,対象加工法,フライス加工,確認済み
+CIM007_04,R0107,判定対象の摩耗種類・指標,VBに対応する4摩耗状態,確認済み
+CIM007_05,R0107,具体的なモデル・手法,EVA-02 Vision Transformer、window投票集約,確認済み
+CIM007_06,R0107,モデルアーキテクチャ,224×224 RGB入力、4クラスhead,確認済み
+CIM007_07,R0107,学習方式,教師あり、ランダム初期化から学習,確認済み
+CIM007_08,R0107,転移学習・事前学習の使用,pretrained=False、事前学習なし,確認済み
+CIM007_09,R0107,データ規模,37000超window、workpiece毎84window,確認済み
+CIM007_10,R0107,判定精度・性能,最良の集約条件で全体Accuracy79%、重摩耗class recall93%,確認済み
+CIM007_11,R0107,学習・検証・テストの分割方法,workpiece単位50/10/40、10分割×5初期seed=50学習,確認済み
+CIM007_12,R0107,未知の工具・加工条件での評価有無,加工物単位holdout。工具/材料/工場横断は未確認,確認済み
+CIM007_13,R0107,技術的な限界,加工面からの間接分類。EVA-02採用だけで汎用Foundation Modelの転移効果を主張できない,確認済み
+CIM008_01,R0108,書誌,A Tool Wear Prediction Network Fusing Visual-Acoustic Cross-Attention and Interval Guidance / Xilu Zhang; Ruying Pang; Ruikun Zhou; Zhiping Wang / 2026 / 10.3390/machines14070826,確認済み
+CIM008_02,R0108,対象工具,超硬ミリング工具,確認済み
+CIM008_03,R0108,対象加工法,フライス加工,確認済み
+CIM008_04,R0108,判定対象の摩耗種類・指標,逃げ面摩耗幅回帰、4劣化段階分類,確認済み
+CIM008_05,R0108,具体的なモデル・手法,EfficientNetV2＋SensorCNN＋Bidirectional Cross-Attention＋interval-guided multi-task,確認済み
+CIM008_06,R0108,モデルアーキテクチャ,384×384画像と128×128GAFを256次元に整列、global/interval回帰head,確認済み
+CIM008_07,R0108,学習方式,教師あり多タスク、Stable Kendall Loss,確認済み
+CIM008_08,R0108,データ規模,本文1663整列sample・17工具寿命と記載,確認済み
+CIM008_09,R0108,判定精度・性能,MAE最小6.6183µm、Accuracy94.58%（MATWI subset）,確認済み
+CIM008_10,R0108,学習・検証・テストの分割方法,"tool-level。学習1,2,5,7,8,10,11/検証3,6,12/test4,9,13（13個列挙）",確認済み
+CIM008_11,R0108,未知の工具・加工条件での評価有無,工具個体holdoutを主張。未知工場/湿式は未確認,確認済み
+CIM008_12,R0108,推論時間・計算環境,Intel i5-12600KF、RTX4070Super、PyTorch2.4.0,確認済み
+CIM008_13,R0108,技術的な限界,本文17工具と列挙13工具が不整合、使用subsetの確定が必要。音響/AEの扱いと原MATWI整合も要確認,確認済み
+CIM009_01,R0109,書誌,Enhancing Tool Wear Segmentation with LoRA-SAM and Point Prompts / Zongshuo Li; Ding Huo; Markus Meurer; Miguel Panesso; Welf-Guntram Drossel; Thomas Bergs / 2025 / 10.1016/j.procir.2025.02.184,確認済み
+CIM009_02,R0109,対象工具,エンドミル4種、旋削insert7種、ミリングinsert1種,確認済み
+CIM009_03,R0109,対象加工法,旋削/エンドミル加工/フライス加工,確認済み
+CIM009_04,R0109,判定対象の摩耗種類・指標,逃げ面摩耗領域セグメンテーション,確認済み
+CIM009_05,R0109,具体的なモデル・手法,ViT-L SAM、LoRA rank4、MoE-LoRA 3expert,確認済み
+CIM009_06,R0109,モデルアーキテクチャ,"SAM image encoderのQ,Vを低rank適応、prompt/mask decoderは原設定",確認済み
+CIM009_07,R0109,学習方式,教師ありparameter-efficient fine-tuning、点promptあり,確認済み
+CIM009_08,R0109,転移学習・事前学習の使用,SAM事前学習＋LoRA。画像言語モデルではなく分割Foundation Model,確認済み
+CIM009_09,R0109,データ規模,977画像、12tool types,確認済み
+CIM009_10,R0109,判定精度・性能,Table2: C+M1+M2点でLoRA/MoE-LoRAとも著者表記IoU0.914。標準IoUとして横比較不可,確認済み
+CIM009_11,R0109,学習・検証・テストの分割方法,各tool type内で約80/20、wear分布を考慮。未知type holdoutではない,確認済み
+CIM009_12,R0109,未知の工具・加工条件での評価有無,既知12type混合の画像分割。完全未知工具評価は未確認,確認済み
+CIM009_13,R0109,技術的な限界,点promptの品質に依存。Eq3は2|交差|/(|予測|+|GT|)。本文U-Net0.849とTable2 0.839の矛盾もある,確認済み
+CIM010_01,R0110,書誌,Efficient Cutting Tool Wear Segmentation Based on Segment Anything Model / Zongshuo Li; Ding Huo; Markus Meurer; Thomas Bergs / 2024 / 未確認（arXiv:2407.01211）,確認済み
+CIM010_02,R0110,対象工具,3エンドミル＋3insert,確認済み
+CIM010_03,R0110,対象加工法,エンドミル加工/旋削等（tool別詳細未確認）,確認済み
+CIM010_04,R0110,判定対象の摩耗種類・指標,逃げ面摩耗領域分割,確認済み
+CIM010_05,R0110,具体的なモデル・手法,U-Net→PoI(MS/CoGA/RCoGA)→ViT-L SAM,確認済み
+CIM010_06,R0110,モデルアーキテクチャ,U-Net粗maskから正負点とmask prompt、SAMを再学習せず後処理,確認済み
+CIM010_07,R0110,学習方式,U-Net教師あり、SAM重み固定,確認済み
+CIM010_08,R0110,転移学習・事前学習の使用,事前学習SAM。全系としてzero-shotではない,確認済み
+CIM010_09,R0110,データ規模,Table1 train912/test190=1102画像,確認済み
+CIM010_10,R0110,判定精度・性能,全train100epochs条件の著者表記IoU約0.87。標準IoUとして横比較不可,確認済み
+CIM010_11,R0110,学習・検証・テストの分割方法,各6工具dataset内80/20と記載、Table1実数は912/190,確認済み
+CIM010_12,R0110,未知の工具・加工条件での評価有無,未知tool形状を丸ごと除外した評価は未確認,確認済み
+CIM010_13,R0110,技術的な限界,U-Net学習と画素ラベルは必要。SAM単体では適切promptがなく精度低下。数式と指標名不整合,確認済み
+CIM011_01,R0111,書誌,Development of SAM-Augmented U-Net Model With Transfer Learning for Multiple Tool Wear Detection / Yu-Sheng Lin; Meng-Shiun Tsai / 2025 / 10.1109/tim.2025.3527601,抄録のみ確認
+CIM011_02,R0111,対象工具,複数工具（個別形状は抄録未確認）,抄録のみ確認
+CIM011_03,R0111,判定対象の摩耗種類・指標,工具摩耗領域,抄録のみ確認
+CIM011_04,R0111,具体的なモデル・手法,SAM pseudo-label＋U-Net＋transfer learning,抄録のみ確認
+CIM011_05,R0111,モデルアーキテクチャ,新工具画像のSAM擬似maskをU-Net学習に使用,抄録のみ確認
+CIM011_06,R0111,学習方式,擬似ラベル、転移学習,抄録のみ確認
+CIM011_07,R0111,転移学習・事前学習の使用,あり,抄録のみ確認
+CIM011_08,R0111,技術的な限界,擬似ラベルが真の摩耗境界を保証しない。詳細性能・分割は本文未取得,抄録のみ確認
+CIM012_01,R0112,書誌,CNN-based in situ tool wear detection: A study on model training and data augmentation in turning inserts / Alberto García-Pérez; Amina Ziegenbein; Eric Schmidt; Faranak Shamsafar; Asier Fernández-Valdivielso; Raúl Llorente-Rodríguez; Matthias Weigold / 2023 / 10.1016/j.jmsy.2023.03.005,抄録のみ確認
+CIM012_02,R0112,対象工具,丸形/ひし形の4種旋削insert,抄録のみ確認
+CIM012_03,R0112,対象加工法,旋削,抄録のみ確認
+CIM012_04,R0112,判定対象の摩耗種類・指標,OK/NOK二値状態,抄録のみ確認
+CIM012_05,R0112,具体的なモデル・手法,CNN、特定工具/汎用の2構成、augmentation、class weighting,抄録のみ確認
+CIM012_06,R0112,学習方式,教師あり分類,抄録のみ確認
+CIM012_07,R0112,データ規模,4insert種類、許容精度には最低2000画像との著者主張,抄録のみ確認
+CIM012_08,R0112,判定精度・性能,最大Accuracy97.8%、MCC0.955,抄録のみ確認
+CIM012_09,R0112,未知の工具・加工条件での評価有無,丸形で良好、ひし形への適用で失敗と抄録に明記,抄録のみ確認
+CIM012_10,R0112,技術的な限界,同一高精度が他形状に移らない。EfficientNet-b4は他論文の記述のみのため実装名は未確定,抄録のみ確認
+CIM013_01,R0113,書誌,Predicting tool life in turning operations using neural networks and image processing / T. Mikołajczyk; K. Nowicki; A. Bustillo; D. Yu Pimenov / 2018 / 10.1016/j.ymssp.2017.11.022,抄録のみ確認
+CIM013_02,R0113,対象工具,旋削切れ刃,抄録のみ確認
+CIM013_03,R0113,対象加工法,旋削,抄録のみ確認
+CIM013_04,R0113,判定対象の摩耗種類・指標,VB測定、残存工具寿命,抄録のみ確認
+CIM013_05,R0113,具体的なモデル・手法,Neural Wear画像認識＋ANN,抄録のみ確認
+CIM013_06,R0113,モデルアーキテクチャ,実測/画像VBと切れ刃番号を入力し残寿命を出力,抄録のみ確認
+CIM013_07,R0113,学習方式,教師あり回帰,抄録のみ確認
+CIM013_08,R0113,判定精度・性能,抄録に産業パラメータと同程度の予測と記載。数値は未確認,抄録のみ確認
+CIM013_09,R0113,技術的な限界,画像VB計測精度と寿命予測精度を区別する必要。外部検証は未確認,抄録のみ確認
+CIM014_01,R0114,書誌,Quantification of wear on gear cutting tools using computer vision methods / Melina Kamratowski; Christopher Janßen; Mareike Davidovic; Thomas Bergs / 2025 / 10.1007/s10010-025-00864-5,確認済み
+CIM014_02,R0114,対象工具,歯切りstick blade、hob/fly-cutter,確認済み
+CIM014_03,R0114,対象加工法,その他（歯切り/ホブ/face hobbing）,確認済み
+CIM014_04,R0114,判定対象の摩耗種類・指標,VBm、VBmax、VBarea,確認済み
+CIM014_05,R0114,具体的なモデル・手法,U-Net＋EfficientNet、二値化、k-means、凸包、dilation,確認済み
+CIM014_06,R0114,モデルアーキテクチャ,領域分割→輪郭後処理→pixel校正→VB値,確認済み
+CIM014_07,R0114,学習方式,教師あり分割,確認済み
+CIM014_08,R0114,転移学習・事前学習の使用,事前学習CNN,確認済み
+CIM014_09,R0114,データ規模,独立定量比較:bevel126枚/hobbing101枚,確認済み
+CIM014_10,R0114,判定精度・性能,validation IoU0.64、例示摩耗曲線の平均絶対差7.99µm/bevel、19.95µm/hobbing,確認済み
+CIM014_11,R0114,未知の工具・加工条件での評価有無,歯切り2方式、工場横断は未確認,確認済み
+CIM014_12,R0114,推論時間・計算環境,CNN読込後約2秒/画像、i9-10900K、64GB RAM,確認済み
+CIM014_13,R0114,技術的な限界,欠損内部の未検出でVBmax過小。撮像位置決め/洗浄の工程時間は未解決,確認済み
+CIM015_01,R0115,書誌,Development of ball end-mill wear condition judgment system aided by abnormality detection and image classification / Hiroyuki KODAMA; Soto KOGUE; Takahiro NISHI; Kazuhito OHASHI / 2024 / 10.1299/transjsme.24-00127,確認済み
+CIM015_02,R0115,対象工具,φ8/φ10ボールエンドミル、2枚刃,確認済み
+CIM015_03,R0115,対象加工法,エンドミル加工,確認済み
+CIM015_04,R0115,判定対象の摩耗種類・指標,工具寿命OK/NG、4摩耗状態,確認済み
+CIM015_05,R0115,具体的なモデル・手法,YOLO切出し、PatchCore、recurrence plot、EfficientNet,確認済み
+CIM015_06,R0115,モデルアーキテクチャ,外観正常画像異常検知と電流画像分類の判定を併用,確認済み
+CIM015_07,R0115,学習方式,外観は正常のみ、電流画像は教師あり分類,確認済み
+CIM015_08,R0115,判定精度・性能,外観AUC0.92（側面/45°）、併用で全体約90%と寿命工具真陰性率98%,確認済み
+CIM015_09,R0115,未知の工具・加工条件での評価有無,工具径2種と加工条件・傾斜を変化、完全未知工場は未確認,確認済み
+CIM015_10,R0115,技術的な限界,工具単位ラベルを2枚の刃先画像に付与し片刃の誤ラベルが生じる。商用AI搭載の根拠にはしない,確認済み
+CIM016_01,R0116,書誌,Generative image augmentation for few-shot tool wear detection using mask latent space enhancement diffusion model / Yu-Sheng Lin; Jian-Ping Jhuang; Meng-Shiun Tsai / 2026 / 10.1016/j.jmapro.2026.06.072,抄録のみ確認
+CIM016_02,R0116,対象工具,切削工具（形状詳細は未確認）,抄録のみ確認
+CIM016_03,R0116,判定対象の摩耗種類・指標,摩耗パターン検出用の画像・ラベル生成,抄録のみ確認
+CIM016_04,R0116,具体的なモデル・手法,mask latent space enhancement diffusion model,抄録のみ確認
+CIM016_05,R0116,学習方式,生成画像拡張＋下流検出器学習,抄録のみ確認
+CIM016_06,R0116,技術的な限界,合成画像の物理妥当性・未知工具への効果・実験条件は本文未取得,抄録のみ確認
+CIM017_01,R0117,書誌,Evaluation of data augmentation and loss functions in semantic image segmentation for drilling tool wear detection / Elke Schlager; Andreas Windisch; Lukas Hanna; Thomas Klünsner; Elias Jan Hagendorfer; Tamara Feil / 2024 / 10.1007/s10845-023-02313-y,確認済み
+CIM017_02,R0117,対象工具,Ceratizit MaxiDrill900交換insert XOMT060304SN,確認済み
+CIM017_03,R0117,対象加工法,穴あけ,確認済み
+CIM017_04,R0117,判定対象の摩耗種類・指標,abrasive wear/transfer material領域（2/多クラス）,確認済み
+CIM017_05,R0117,具体的なモデル・手法,U-Net、batch normalization、CE/Focal CE/IoU loss、augmentation,確認済み
+CIM017_06,R0117,学習方式,教師ありsemantic segmentation,確認済み
+CIM017_07,R0117,データ規模,24元画像、test4、train20をtile化,確認済み
+CIM017_08,R0117,判定精度・性能,binary適度拡張IoU loss:512tile IoU0.886、256tile IoU0.904（Table4）,確認済み
+CIM017_09,R0117,学習・検証・テストの分割方法,元画像4枚を先にholdout、20枚内cross-validation、最終train90%/earlystop10%,確認済み
+CIM017_10,R0117,未知の工具・加工条件での評価有無,切削速度/送り変化。工具type/材料横断は未確認,確認済み
+CIM017_11,R0117,技術的な限界,24元画像に依存、tile数は独立画像数でない。強反射・合成顕微鏡境界に偽陽性,確認済み
+CIM018_01,R0118,書誌,High-accuracy tool wear monitoring for micro-milling method based on improved Pyramid Vision Transformer / Gang Zheng; Minshu Chen; Qiong Zhou / 2025 / 10.1007/s11227-025-07650-8,抄録のみ確認
+CIM018_02,R0118,対象工具,micro-milling tools,抄録のみ確認
+CIM018_03,R0118,対象加工法,エンドミル加工,抄録のみ確認
+CIM018_04,R0118,判定対象の摩耗種類・指標,摩耗状態分類,抄録のみ確認
+CIM018_05,R0118,具体的なモデル・手法,GPVT、GAP-MHSA、KAN linear＋MLP、CCAM,抄録のみ確認
+CIM018_06,R0118,モデルアーキテクチャ,Pyramid Transformerにglobal average pooling attentionとchannel convolution attention,抄録のみ確認
+CIM018_07,R0118,技術的な限界,リアルタイム性は著者要旨の主張。数値・計算条件・分割・未知工具は未確認,抄録のみ確認
+CIM019_01,R0119,書誌,Advanced fault diagnosis in milling cutting tools using vision transformers with semi-supervised learning and uncertainty quantification / Muhammad Farooq Siddique; Muhammad Umar; Wasim Ahmad; Jong-Myon Kim / 2025 / 10.1038/s41598-025-26550-8,確認済み
+CIM019_02,R0119,対象工具,carbide milling cutter、bearings/gearsも同時分類,確認済み
+CIM019_03,R0119,対象加工法,フライス加工,確認済み
+CIM019_04,R0119,判定対象の摩耗種類・指標,0.3mm人工逃げ面摩耗を含む7設備/工具故障クラス,確認済み
+CIM019_05,R0119,具体的なモデル・手法,ViT teacher/student、pseudo-label、uncertainty、DeiT-tiny（記述矛盾あり）,確認済み
+CIM019_06,R0119,学習方式,半教師あり、labelled30%/unlabelled70%,確認済み
+CIM019_07,R0119,転移学習・事前学習の使用,事前学習ViT,確認済み
+CIM019_08,R0119,判定精度・性能,著者報告99.68%。自然摩耗量回帰の精度ではない,確認済み
+CIM019_09,R0119,学習・検証・テストの分割方法,信号70/15/15、labelled30%/unlabelled70%。独立工具/運転単位の完全分離は要確認,確認済み
+CIM019_10,R0119,未知の工具・加工条件での評価有無,未知工場・自然摩耗進展は未確認,確認済み
+CIM019_11,R0119,技術的な限界,概要DeiT-tiny蒸留/本文split節ViT-Base同士hard pseudo-labelと不整合。7故障分類を摩耗種類精度に転用不可,確認済み
+CIM020_01,R0120,書誌,Application of Pretrained Model for Zero Shot Tool Wear Monitoring with High Fidelity / Sakib Ul Islam; Hari krishna Kandasamy; Nelson Santos; Siyu Tu; Mohammed Tauhiduzzaman / 2025 / 10.21203/rs.3.rs-6975138/v1,確認済み
+CIM020_02,R0120,対象工具,2インサート式ミリング工具,確認済み
+CIM020_03,R0120,対象加工法,フライス加工（乾式）,確認済み
+CIM020_04,R0120,判定対象の摩耗種類・指標,ノーズ摩耗面積/逃げ面VB,確認済み
+CIM020_05,R0120,具体的なモデル・手法,SAM、HQ-SAM、倍率校正・mask alignment・差分,確認済み
+CIM020_06,R0120,モデルアーキテクチャ,事前学習分割→位置合わせ→摩耗領域差分/幅計測,確認済み
+CIM020_07,R0120,学習方式,工具専用再学習なし（prompt/後処理は必要）,確認済み
+CIM020_08,R0120,転移学習・事前学習の使用,SAM/HQ-SAM事前学習重み,確認済み
+CIM020_09,R0120,判定精度・性能,漸進逃げ面摩耗相対誤差3.81%、照明変更CV約10%、0.572秒/画像,確認済み
+CIM020_10,R0120,未知の工具・加工条件での評価有無,zero-shot画像、乾式限定。湿式・旋削/穴あけは今後課題,確認済み
+CIM020_11,R0120,推論時間・計算環境,0.572秒/画像（計算機条件は未転記）,確認済み
+CIM020_12,R0120,技術的な限界,未査読、少数実験。SAMは凝着物で過分割しHQ-SAMで補う。専用校正・基準mask必要,確認済み
+CIM021_01,R0121,書誌,Digital image processing with deep learning for automated cutting tool wear detection / Thomas Bergs; Carsten Holst; Pranjul Gupta; Thorsten Augspurger / 2020 / 10.1016/j.promfg.2020.05.134,抄録のみ確認
+CIM021_02,R0121,対象工具,ボールエンドミル/エンドミル/ドリル/insert,抄録のみ確認
+CIM021_03,R0121,対象加工法,エンドミル加工/穴あけ/旋削等,抄録のみ確認
+CIM021_04,R0121,判定対象の摩耗種類・指標,工具種類分類、摩耗領域分割,抄録のみ確認
+CIM021_05,R0121,具体的なモデル・手法,CNN tool type classifier＋FCN segmentation,抄録のみ確認
+CIM021_06,R0121,学習方式,教師あり分類とsemantic segmentation,抄録のみ確認
+CIM021_07,R0121,判定精度・性能,工具種類Accuracy95.6%、領域IoU約0.7（抄録）,抄録のみ確認
+CIM021_08,R0121,未知の工具・加工条件での評価有無,tool type別/混合学習。完全未知type評価は未確認,抄録のみ確認
+CIM021_09,R0121,技術的な限界,95.6%は摩耗状態分類の値ではない。本文の実験分割未転記,抄録のみ確認
+CIM022_01,R0122,書誌,Integrating object detection and image segmentation for detecting the tool wear area on stitched image / Wan-Ju Lin; Jian-Wen Chen; Jian-Ping Jhuang; Meng-Shiun Tsai; Che-Lun Hung; Kuan-Ming Li; Hong-Tsu Young / 2021 / 10.1038/s41598-021-97610-y,確認済み
+CIM022_02,R0122,対象工具,ねじれエンドミル,確認済み
+CIM022_03,R0122,対象加工法,エンドミル加工,確認済み
+CIM022_04,R0122,判定対象の摩耗種類・指標,逃げ面摩耗領域,確認済み
+CIM022_05,R0122,具体的なモデル・手法,template matching/stitching→YOLOv4→U-Net,確認済み
+CIM022_06,R0122,モデルアーキテクチャ,工具展開panoramaから刃先bboxを切出しpixel分割,確認済み
+CIM022_07,R0122,学習方式,教師あり検出/分割,確認済み
+CIM022_08,R0122,データ規模,U-Net学習約200刃先画像、Table5 FPSは70frames,確認済み
+CIM022_09,R0122,判定精度・性能,U-Net mean IoU0.47、Dice0.65、19FPS（Table5）,確認済み
+CIM022_10,R0122,学習・検証・テストの分割方法,training約200画像。元工具単位の独立性未確認,確認済み
+CIM022_11,R0122,推論時間・計算環境,分割19FPS、全工程の速度とは区別,確認済み
+CIM022_12,R0122,技術的な限界,平均IoUは0.47。局所的な高Diceだけを引用しない。工具単位独立性は未確認,確認済み
+CIM023_01,R0123,書誌,The Automatic Tool Wear Monitoring System for Micro-Milling Application with Image-Based Wear Detection / Muhammad Naufal Pratama; Christiand; Gandjar Kiswanto; Adinda Rahmah Shalihah / 2022 / 10.3850/978-981-18-5180-3_RP19-0022,抄録のみ確認
+CIM023_02,R0123,対象工具,micro-milling tool,抄録のみ確認
+CIM023_03,R0123,対象加工法,エンドミル加工,抄録のみ確認
+CIM023_04,R0123,判定対象の摩耗種類・指標,工具種類識別と摩耗領域分割,抄録のみ確認
+CIM023_05,R0123,具体的なモデル・手法,CNN tool classifier、U-Net,抄録のみ確認
+CIM023_06,R0123,学習方式,教師あり,抄録のみ確認
+CIM023_07,R0123,判定精度・性能,工具種類識別87.6% success、領域分割最大78.1% success。標準IoUとは未確認,抄録のみ確認
+CIM023_08,R0123,技術的な限界,成功率の定義、データ規模、分割、未知条件は本文未確認,抄録のみ確認
+CIM024_01,R0124,書誌,A computer vision approach to analyze and classify tool wear level in milling processes using shape descriptors and machine learning techniques / María Teresa García-Ordás; Enrique Alegre; Víctor González-Castro; Rocío Alaiz-Rodríguez / 2016 / 10.1007/s00170-016-9541-0,抄録のみ確認
+CIM024_02,R0124,対象工具,edge-profile milling headのinsert,抄録のみ確認
+CIM024_03,R0124,対象加工法,フライス加工,抄録のみ確認
+CIM024_04,R0124,判定対象の摩耗種類・指標,低/高2クラス、低/中/高3クラス,抄録のみ確認
+CIM024_05,R0124,具体的なモデル・手法,B-ORCHIZ shape descriptor＋SVM,抄録のみ確認
+CIM024_06,R0124,学習方式,教師あり分類,抄録のみ確認
+CIM024_07,R0124,データ規模,212画像（Insert-C/Insert-I）,抄録のみ確認
+CIM024_08,R0124,判定精度・性能,シナリオにより80.24–88.46%,抄録のみ確認
+CIM024_09,R0124,技術的な限界,摩耗領域抽出と形状記述子に依存。未知工具・外部工場は未確認,抄録のみ確認
+CIM025_01,R0125,書誌,Deep learning and rule-based image processing pipeline for automated metal cutting tool wear detection and measurement / Carsten Holst; Taha Berk Yavuz; Pranjul Gupta; Philipp Ganser; Thomas Bergs / 2022 / 10.1016/j.ifacol.2022.04.249,確認済み
+CIM025_02,R0125,対象工具,ボールエンドミル,確認済み
+CIM025_03,R0125,対象加工法,エンドミル加工,確認済み
+CIM025_04,R0125,判定対象の摩耗種類・指標,工具存在検出、摩耗領域、VBmax/VBmean/面積,確認済み
+CIM025_05,R0125,具体的なモデル・手法,CNN tool detection、adapted U-Net、rule-based metric measurement,確認済み
+CIM025_06,R0125,モデルアーキテクチャ,工具有無分類→摩耗分割→刃先に沿う幾何寸法算出,確認済み
+CIM025_07,R0125,学習方式,教師あり分類/分割＋ルール後処理,確認済み
+CIM025_08,R0125,判定精度・性能,工具存在Accuracy100%、摩耗Dice0.85、手動寸法とのR²0.99（別タスクの指標）,確認済み
+CIM025_09,R0125,推論時間・計算環境,学習NVIDIA QuadroP4000、機上edge computer/USB microscope,確認済み
+CIM025_10,R0125,技術的な限界,100%は工具存在検出、R²0.99は相関でありµmの絶対誤差や寿命精度ではない,確認済み
+CS001,R0001,書誌情報,Tool Wear State Identification Method with Variable Cutting Parameters Based on Multi-Source Unsupervised Domain Adaptation / 2025 / Zhigang Cai; Wangyang Li; Jianxin Song; Hongyu Jin; Hongya Fu / 10.3390/s25061742,確認済み
+CS002,R0001,モデル・手法,11種統計特徴→NSTE共通特徴→各source-target固有分布整合→分類器出力整合→3状態,確認済み
+CS003,R0001,性能・条件,27課題平均93.22%、範囲86.01–98.45%。条件：3状態（VB≤85 μm、85<VB≤165 μm、VB>165 μm）、9条件の27課題,確認済み
+CS004,R0001,評価上の制約,びびり混入と大切込みで正常→重度誤分類。未見工場・材種・工具形状へ一般化は未検証。,原資料に基づく調査者評価（推論を含む）
+CS005,R0002,書誌情報,A Novel Tool Wear Identification Method Based on a Semi-Supervised LSTM / 2025 / Xin He; Meipeng Zhong; Chengcheng He; Jinhao Wu; Haiyang Yang; Zhigao Zhao; Wei Yang; Cong Jing; Yanlin Li; Chen Gao / 10.3390/lubricants13020072,確認済み
+CS006,R0002,モデル・手法,少数ラベルLSTM回帰→多様体正則化で疑似ラベル生成→反復再学習,抄録/本文抜粋で確認
+CS007,R0002,性能・条件,平均R²>0.95（抄録）。条件：ミリング工具実験、分割・尺度詳細未確認,抄録/本文抜粋で確認
+CS008,R0003,書誌情報,Research on a Real-Time Monitoring Method for the Wear State of a Tool Based on a Convolutional Bidirectional LSTM Model / 2019 / Qipeng Chen; Qingsheng Xie; Qingni Yuan; Haisong Huang; Yiting Li / 10.3390/sym11101233,確認済み
+CS009,R0003,モデル・手法,振動の生時系列→CNN→BiLSTM→注意重み→Softmax状態分類,抄録/本文抜粋で確認
+CS010,R0004,書誌情報,Markov Transition Field Enhanced Deep Domain Adaptation Network for Milling Tool Condition Monitoring / 2022 / Wei Sun; Jie Zhou; Bintao Sun; Yuqing Zhou; Yongying Jiang / 10.3390/mi13060873,確認済み
+CS011,R0004,モデル・手法,振動→0–1500 Hz抽出→MTF画像224×224→転移ResNet50→MMD整合→状態,確認済み
+CS012,R0004,性能・条件,6転移課題平均83.03%、個別73.33–92.13%。条件：3状態（≤0.8 mm、0.8–1.6 mm、≥1.6 mm）、6課題各5反復平均,確認済み
+CS013,R0004,評価上の制約,工具3本、target信号を適応に使う。ラベルは端面摩耗長で通常VBと同一視不可。,原資料に基づく調査者評価（推論を含む）
+CS014,R0005,書誌情報,Intelligent Tool-Wear Prediction Based on Informer Encoder and Bi-Directional Long Short-Term Memory / 2023 / Xingang Xie; Min Huang; Yue Liu; Qi An / 10.3390/machines11010094,確認済み
+CS015,R0005,モデル・手法,多channel統計特徴→位置符号→Informer→BiLSTM→全結合回帰,抄録/本文抜粋で確認
+CS016,R0006,書誌情報,Tool Condition Monitoring Model Based on DAE–SVR / 2025 / Xiaoning Sun; Zhifeng Yang; Maojin Xia; Min Xia; Changfu Liu; Yang Zhou; Yuquan Guo / 10.3390/machines13020115,確認済み
+CS017,R0006,モデル・手法,力/振動/AE→特徴・DAE圧縮→SVR回帰,抄録/本文抜粋で確認
+CS018,R0006,性能・条件,DAE/SVR比較で最大43.58%改善（抄録、絶対誤差未確認）。条件：複数データ系列、本文条件の詳細未確認,抄録/本文抜粋で確認
+CS019,R0007,書誌情報,A Comparative Study on Machine Learning Algorithms for Smart Manufacturing: Tool Wear Prediction Using Random Forests / 2017 / Dazhong Wu; Connor Jennings; Janis Terpenny; Robert X. Gao; Soundar Kumara / 10.1115/1.4036350,確認済み
+CS020,R0007,モデル・手法,Random Forest regression,抄録/本文抜粋で確認
+CS021,R0008,書誌情報,Fuzzy logic based tool condition monitoring for end-milling / 2017 / Besmir Cuka; Dong-Won Kim / 10.1016/j.rcim.2016.12.009,確認済み
+CS022,R0008,モデル・手法,力・電流・振動・音→信号処理→メンバシップ/ルール→状態・信頼度,抄録/本文抜粋で確認
+CS023,R0009,書誌情報,Study of spindle power data with neural network for predicting real-time tool wear/breakage during inconel drilling / 2017 / Raphael Corne; Chandra Nath; Mohamed El Mansori; Thomas Kurfess / 10.1016/j.jmsy.2017.01.004,確認済み
+CS024,R0009,モデル・手法,Neural Network（具体構造未確認）,抄録/本文抜粋で確認
+CS025,R0009,性能・条件,0.8–18%（出版社Highlights）。条件：Inconel 625穴あけ、誤差定義・サンプル数は未確認,抄録/本文抜粋で確認
+CS026,R0010,書誌情報,Multi-Sensor Data Fusion for Remaining Useful Life Prediction of Machining Tools by IABC-BPNN in Dry Milling Operations / 2020 / Min Liu; Xifan Yao; Jianming Zhang; Wocheng Chen; Xuan Jing; Kesai Wang / 10.3390/s20174657,確認済み
+CS027,R0010,モデル・手法,振動/力→CEEMD→時間/周波数/時間周波数特徴→LightGBM→IABC-BPNN摩耗→多項式RUL,抄録/本文抜粋で確認
+CS028,R0011,書誌情報,Physics-informed self-supervised learning for tool wear monitoring leveraging signal and degradation features under limited labels / 2025 / Zhenchi Wang; Yong Lu; Kenan Deng; Junran Liang; Dong Gao / 10.1016/j.aei.2025.103503,確認済み
+CS029,R0011,モデル・手法,未ラベル信号→拡張・invariance/物理正則化事前学習→少数ラベルで回帰fine-tuning,抄録/本文抜粋で確認
+CS030,R0011,性能・条件,2.996 μm（PHM2010、ラベル5%、抄録）。条件：PHM2010の5%ラベル条件。工具単位分割詳細は本文未取得,抄録/本文抜粋で確認
+CS031,R0012,書誌情報,DeepTool: A deep learning framework for tool wear onset detection and remaining useful life prediction / 2024 / Pooja Kamat; Satish Kumar; Ketan Kotecha / 10.1016/j.mex.2024.102965,確認済み
+CS032,R0012,モデル・手法,2点振動→時間/周波数特徴→AE-LSTM開始検知→ED-LSTM摩耗/RUL; LSTM2層各200units→TimeDistributed Dense100→出力1,確認済み
+CS033,R0012,性能・条件,R²=0.951、RMSE=0.00333（単位未明示）、MAPE=17.0973%、NSE=0.931、KGE=0.90。条件：Table5自収集データ。RMSEをRUL時間誤差と断定しない,確認済み
+CS034,R0012,評価上の制約,"5 minと456,000msに内部不整合。表5の他研究比較条件が統一されているか不明。",原資料に基づく調査者評価（推論を含む）
+CS035,R0013,書誌情報,Local-feature and global-dependency based tool wear prediction using deep learning / 2022 / Changsen Yang; Jingtao Zhou; Enming Li; Mingwei Wang; Ting Jin / 10.1038/s41598-022-18235-3,確認済み
+CS036,R0013,モデル・手法,曲げモーメント/トルク→wavelet scalogram→multi-scale CNN＋手動特徴→2層LSTM→摩耗回帰,確認済み
+CS037,R0013,性能・条件,9条件平均MAE=7.36、RMSE=9.65（摩耗尺度、表7単位未明示）。PHM2010平均MAE=6.65、RMSE=8.42。条件：Table7は9工具leave-one-tool-out。PHM2010の別結果と混ぜない,確認済み
+CS038,R0013,評価上の制約,本文にtest MSEで構造選択と記載、ネストした検証独立性に懸念。sampling変化とPHM2010過学習を著者が指摘。,原資料に基づく調査者評価（推論を含む）
+CS039,R0014,書誌情報,Self-supervised learning for tool wear monitoring with a disentangled-variational-autoencoder / 2021 / Tim Von Hahn; Chris K. Mechefske / 10.1504/ijhm.2021.114174,確認済み
+CS040,R0014,モデル・手法,disentangled β-VAE;Temporal CNN;入力/潜在空間異常検知,抄録/本文抜粋で確認
+CS041,R0014,性能・条件,ミリング全条件0.45、浅切込み最大0.80、実工場最大0.41。条件：全条件と部分集合、工場データで異なる条件。Accuracyとは別指標,抄録/本文抜粋で確認
+CS042,R0014,評価上の制約,実工場の多様な部品へ一般化が低下。最大値を全体値としない。,原資料に基づく調査者評価（推論を含む）
+CS043,R0015,書誌情報,Intelligent tool wear prediction based on Informer encoder and stacked bidirectional gated recurrent unit / 2022 / Wangyang Li; Hongya Fu; Zhenyu Han; Xing Zhang; Hongyu Jin / 10.1016/j.rcim.2022.102368,確認済み
+CS044,R0015,モデル・手法,多センサ長系列→Informer・蒸留→stacked BiGRU→GMP→回帰,抄録/本文抜粋で確認
+CS045,R0016,書誌情報,Unlabeled-Data-Enhanced Tool Remaining Useful Life Prediction Based on Graph Neural Network / 2025 / Dingli Guo; Honggen Zhou; Li Sun; Guochao Li / 10.3390/s25134068,確認済み
+CS046,R0016,モデル・手法,7センサ各30特徴→完全結合graph→未ラベル単調性事前学習→パラメータ転移→RUL回帰,確認済み
+CS047,R0016,性能・条件,PHM2010で最大RMSE50.6%/MAE53.9%/MAPE23.66%低減、JUST_T05で37.3%/29.1%/1.82%。条件：C1+C4 train、C6 validation。最大改善率で絶対残寿命誤差とは別。RUL=閾値到達cut−現在cut,確認済み
+CS048,R0016,評価上の制約,閾値0.16mmに依存し同一加工条件。図だけの絶対誤差は読み取り推定しない。,原資料に基づく調査者評価（推論を含む）
+CS049,R0017,書誌情報,"Data-driven tool wear prediction in milling, based on a process-integrated single-sensor approach / 2026 / Eric Hirsch; Christian Friedrich / 10.1007/s10845-026-02939-8",確認済み
+CS050,R0017,モデル・手法,Random Forest;SVM;Gradient Boosting;EfficientNetV2;LSTM;ConvNeXt,抄録/本文抜粋で確認
+CS051,R0017,性能・条件,ConvNeXt 99.1%、R²0.95、RF分類99.3%（source domain）。条件：4工具寿命訓練のsource評価。別機械転移では低下、絶対値未確認,抄録/本文抜粋で確認
+CS052,R0017,評価上の制約,sourceでの99%台を別機械での性能と混同しない。出版版本文は購読制限、プレプリント同一研究。,原資料に基づく調査者評価（推論を含む）
+CS053,R0018,書誌情報,Tool Wear Prediction Under Varying Cutting Conditions: A Few-Shot Warm-Start Framework Based on Model-Agnostic Meta-Learning / 2026 / Ju Zhou; Lin Wang; Tao Wang / 10.3390/machines14050471,確認済み
+CS054,R0018,モデル・手法,履歴条件でmeta-training→新条件1–5実測点でfine-tuning→摩耗回帰,抄録/本文抜粋で確認
+CS055,R0018,評価上の制約,PHM2010の元データは固定加工条件。条件変化模擬taskの構成妥当性と物理試し切り実証を要確認。,原資料に基づく調査者評価（推論を含む）
+CS056,R0019,書誌情報,A method for predicting tool remaining useful life based on a physics-informed neural network / 2026 / Jinping Chen; Lijuan Shen; Zhisheng Ye; Jing Chen; Kun Luo; Weiwang Chen; Shuai Li; Rui He; Qing Han / 10.1038/s41598-026-72453-7,確認済み
+CS057,R0019,モデル・手法,PINN;Archard wear constraint;LSTM,抄録/本文抜粋で確認
+CS058,R0019,性能・条件,MAE4.25 μm;RMSE4.83 μm;同一条件寿命末期偏差2.46%。条件：PHM2010 test、割当詳細未確認。未ラベル群の真値評価法は要確認,抄録/本文抜粋で確認
+CS059,R0019,評価上の制約,Archard係数k固定。未ラベル群の評価根拠と寿命末期偏差の定義を本文で要確認。2026-10-01先行公開。,原資料に基づく調査者評価（推論を含む）
+CS060,R0020,書誌情報,A physics-informed neural network with adaptive loss weighting for tool wear and remaining useful life prediction in deep hole boring / 2026 / Pengfei Zhang; Hanxiao Zhao; Ang Li; Chao Sun; Hongzhe Zhang; Naohiko Sugita; Liming Shu / 10.1016/j.jmapro.2026.01.047,確認済み
+CS061,R0020,モデル・手法,データ・物理整合・単調性の適応重み損失→摩耗推定→平滑化→ARIMAによるRUL,抄録/本文抜粋で確認
+CS062,R0021,書誌情報,Physics-Driven Deep Feature Fusion: A Lightweight CSAKansformer Architecture for Tool Wear Diagnosis in P25 Turning / 2026 / Shuqiang Wang; Tianyue Zhang; Ximin Liu; Wei Liu; Huanqi Zhang; Feng Chang / 10.3390/s26102937,確認済み
+CS063,R0021,モデル・手法,力・振動・AE等特徴→頑健処理→WGAN-Div→GASF/GADF/外積RGB→SCConv/CSAM/KAN→3状態,確認済み
+CS064,R0021,性能・条件,3fold平均Accuracy93.6%、1step5.90 ms。Tool15 fold94.0%、重度Recall100%（160試料）。条件：LOTO3fold、3状態=工具寿命の最初15%/中70%/最後15%、Tool15 test470試料,確認済み
+CS065,R0021,評価上の制約,PG-MGAFが工具全寿命最大値で正規化(§4.1.4)。将来情報を使わない再評価が必要。クラスはVB固定閾値でなく寿命割合。,原資料に基づく調査者評価（推論を含む）
+CS066,R0022,書誌情報,Deep Learning Tool Wear State Identification Method Based on Cutting Force Signal / 2025 / Shuhang Li; Meiqiu Li; Yingning Gao / 10.3390/s25030662,確認済み
+CS067,R0022,モデル・手法,力信号→CWT時間周波数画像→CoT/GAM付きMobileViT→摩耗状態,抄録/本文抜粋で確認
+CS068,R0022,性能・条件,元MobileViT比+1.58/+1.23/+1.92/+1.57%（相対率かpointか未確認）。条件：絶対性能・class数・分割は未確認,抄録/本文抜粋で確認
+CS069,R0023,書誌情報,A Multi-Task Joint Learning Model Based on Transformer and Customized Gate Control for Predicting Remaining Useful Life and Health Status of Tools / 2024 / Chunming Hou; Liaomo Zheng / 10.3390/s24134117,確認済み
+CS070,R0023,モデル・手法,共有Transformer特徴→CGCでtask固有/共有特徴→RULとwear stageの2出力,抄録/本文抜粋で確認
+CS071,R0024,書誌情報,Machine Tool Wear Prediction Technology Based on Multi-Sensor Information Fusion / 2024 / Kang Wang; Aimin Wang; Long Wu; Guangjun Xie / 10.3390/s24082652,確認済み
+CS072,R0024,モデル・手法,振動/電流/力→特徴・Kalman融合→グレースケール表現→ResNet→2層LSTM→摩耗値,抄録/本文抜粋で確認
+CS073,R0024,性能・条件,test MAE0.0085mm、train0.0021mm、著者accuracy98.25%。条件：§4.3同一工具dataのtrain/test。accuracy定義・独立tool分割未確認,抄録/本文抜粋で確認
+CS074,R0025,書誌情報,"Tool wear monitoring by ensemble learning and sensor fusion using power, sound, vibration, and AE signals / 2021 / Vahid Nasir; Sina Dibaji; Kareem Alaswad; Julie Cool / 10.1016/j.mfglet.2021.10.002",確認済み
+CS075,R0025,モデル・手法,XGBoost;Random Forest;SVM,抄録/本文抜粋で確認
+CS076,R0025,性能・条件,約92%（AE＋電力＋XGBoost）。条件：木材丸鋸、class数・分割・独立工具検証未確認,抄録/本文抜粋で確認
+CS077,R0026,書誌情報,The prediction research of tool VB value based on Principal Component Analysis and SVR / 2015 / Peng Nie; Chao He; Liang Xu; Kai-qi Cui / 10.2991/isrme-15.2015.11,確認済み
+CS078,R0026,モデル・手法,AE/EEMD・電流/WPD→energy＋速度送り切込み→PCA→GA-SVR→VB,抄録/本文抜粋で確認
+CS079,R0027,書誌情報,A data-driven model for milling tool remaining useful life prediction with convolutional and stacked LSTM network / 2020 / Qinglong An; Zhengrui Tao; Xingwei Xu; Mohamed El Mansori; Ming Chen / 10.1016/j.measurement.2019.107461,確認済み
+CS080,R0027,モデル・手法,CNN-SBULSTM,二次情報のみ
+CS081,R0028,書誌情報,A Machine Learning Approach for Wear Monitoring of End Mill by Self-Powering Wireless Sensor Nodes / 2021 / Vytautas Ostasevicius; Paulius Karpavicius; Agne Paulauskaite-Taraseviciene; Vytautas Jurenas; Arkadiusz Mystkowski; Ramunas Cesnavicius; Laura Kizauskiene / 10.3390/s21093137,確認済み
+CS082,R0028,モデル・手法,回転toolholderの振動→エネルギー回収→コンデンサ放電pulse無線送信→SVM摩耗レベル,抄録/本文抜粋で確認
+CS083,R0029,書誌情報,Semi-supervised tapping wear detection in nodular cast iron workpieces under real industrial conditions / 2025 / Jose Alberto Maestro-Prieto; Alain Gil-Del-Val; Andres Bustillo / 10.1007/s00170-025-16491-x,確認済み
+CS084,R0029,モデル・手法,内部torque→A1–A7領域特徴→回帰平滑化＋window11勾配→半教師分類→ねじGo/No-Go,確認済み
+CS085,R0029,性能・条件,§4.5/Table9:50%ラベル98.20%、90%ラベル98.88%。Co-ForestのRecallは30%ラベル94.38%、90%98.34%。条件：2class Go/No-Go。回帰平滑化＋window11勾配の拡張dataset、5×2ランダム分割,確認済み
+CS086,R0029,評価上の制約,出力はねじ合否という摩耗proxy。instance splitと平滑化により工具独立/未来情報の再監査が必要。Eq3のprecision=TN/(TN+FP)は通常positive precisionと異なる。,原資料に基づく調査者評価（推論を含む）
+CJS001,R0030,書誌情報,In-Process Tool Wear Detection of Uncoated Square End Mill Based on Electrical Contact Resistance / 2016 / Amine Gouarir; Syuhei Kurokawa; Takao Sajima; Mitsuaki Murata,確認済み（一次抄録/書誌）
+CJS002,R0030,技術方式,加工中の工具–工作物接触抵抗→逃げ面接触面積との関係→摩耗進行監視,確認済み（一次抄録/書誌）
+CJS003,R0030,公開年月,刊行2016-09-05、J-STAGE収録2019-07-01。収録日を発表年に用いない。,確認済み（一次抄録/書誌）
+CJS004,R0031,書誌情報,Influence of Coating in Square End Mill Using In-Process Tool Wear Detection Based on Electrical Contact Resistance / 2019 / Amine Gouarir; Syuhei Kurokawa; Takao Sajima; Mitsuaki Murata,確認済み（一次抄録/書誌）
+CJS005,R0031,技術方式,接触抵抗→逃げ面接触面積との関係→被覆工具の摩耗進行監視,確認済み（一次抄録/書誌）
+CJS006,R0031,公開年月,刊行2019-01-05。受理2018-09-14は刊行年ではない。,確認済み（一次抄録/書誌）
+CJS007,R0032,書誌情報,Cutting trouble detection system based on quantitative comparison between predicted and measured cutting torques (1st report Cutting trouble detection for tool wear) / 2018 / Isamu NISHIDA; Muneharu TATEKAWA; Ryuta SATO; Keiichi SHIRASE,確認済み（一次抄録/書誌）
+CJS008,R0032,技術方式,工作物voxelから未切削厚さ→基準切削トルク予測→主軸駆動トルクから推定した切削トルクと比較→摩耗閾値判定,確認済み（一次抄録/書誌）
+CJS009,R0032,公開年月,刊行年2018（Vol84 No857）、先行公開2017-12-11、J-STAGE刊行版公開2018-01-25。DOAJのDec2017表記と区別。,確認済み（一次抄録/書誌）
+CJS010,R0032,性能・閾値と実験条件,300 μmの逃げ面摩耗を検知する閾値として平均切削トルクの“200% increase”を設定（抄録） 穴付き工作物を摩耗スクエアエンドミルで加工、定常/過渡の両状態を確認。精度統計ではない。,確認済み（一次抄録/書誌）
+CJS011,R0033,書誌情報,Tool wear detection based on cutting force model parameter identified from spindle motor torque in ball end milling / 2025 / Takanori WAIZUMI; Kazuki KANEKO; Jun SHIMIZU,確認済み（一次抄録/書誌）
+CJS012,R0033,技術方式,主軸モータトルク監視→切削力モデル係数を連続更新→逃げ面摩耗幅推定,確認済み（一次抄録/書誌）
+CJS013,R0033,公開年月,会議論文2025、LEM21 2025（Itoman、日本、2025-12-01〜05）。刊行日詳細は未確認。,確認済み（一次抄録/書誌）
+CJS014,R0034,書誌情報,Deep Anomaly Detection for CNC Machine Cutting Tool Using Spindle Current Signals / 2020 / Guang Li; Yan Fu; Duanbing Chen; Lulu Shi; Junlin Zhou,確認済み（一次抄録/書誌）
+CJS015,R0034,技術方式,Hall主軸電流20kHz→低域フィルタ/4特徴→5層CNN→cross-entropy loss閾値1.0で破損異常,確認済み（一次抄録/書誌）
+CJS016,R0034,公開年月,刊行2020、Crossref/PDF表紙は2020-08-29、出版社version notesには2020-08-28の記載もあり日付不整合（年は一致）。,確認済み（一次抄録/書誌）
+CJS017,R0034,性能・閾値と実験条件,Table4 Accuracy99.12%、Recall100%、F1 99.55%。Table5:正常105/105、破損7/8（87.5%） Table5 test113試料（正常105、破損8）、正常がpositive。6分入力から第7分状態を判定,確認済み（一次抄録/書誌）
+CJS018,R0035,書誌情報,Exploring Artificial Intelligence for Tool Wear Prediction in Turn-Milling / 2026 / Christoph Lerez; Viktor Artiushenko; Matthias Hackert-Oschätzchen,確認済み（一次抄録/書誌）
+CJS019,R0035,技術方式,orthogonal turn-milling実験→回帰3モデル/分類4モデル→k-foldで摩耗・工具状態評価,確認済み（一次抄録/書誌）
+CJS020,R0035,公開年月,刊行2026-04-15、Defect and Diffusion Forum 450 pp1–8。受理2026-02-22。,確認済み（一次抄録/書誌）

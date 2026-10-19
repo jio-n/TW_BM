@@ -1,0 +1,47 @@
+{
+  "commercial_tool_benchmark.xlsx": {
+    "rows": 33,
+    "columns": 49,
+    "main_table_ref": "A1:AW34",
+    "filter_ref": "A1:AW34",
+    "freeze_panes": "D2",
+    "sheets": [
+      "製品比較",
+      "出典",
+      "主張",
+      "根拠対応",
+      "利用ガイド"
+    ],
+    "formulas": 124,
+    "hyperlinks": 124,
+    "zip_crc": "ok",
+    "formula_error_cells": [],
+    "bytes": 72972
+  },
+  "academic_paper_benchmark.xlsx": {
+    "rows": 59,
+    "columns": 48,
+    "main_table_ref": "A1:AV60",
+    "filter_ref": "A1:AV60",
+    "freeze_panes": "C2",
+    "sheets": [
+      "論文比較",
+      "候補保留",
+      "出典",
+      "主張",
+      "根拠対応",
+      "利用ガイド"
+    ],
+    "formulas": 297,
+    "hyperlinks": 297,
+    "zip_crc": "ok",
+    "formula_error_cells": [],
+    "bytes": 136160
+  },
+  "errors": [],
+  "limitations": [
+    "ネイティブExcelアプリの全セル操作検証は未実施",
+    "Webリンク全件の将来の可用性検証ではない",
+    "出典・書誌照合は技術的実験再現の代替ではない"
+  ]
+}
