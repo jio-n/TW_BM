@@ -1,0 +1,5 @@
+verification_id,date,entity_id,source_id,action,url,result
+PV001,2026-11-11,FT001,SF001,出版社URL再取得と保存PDFの照合,https://www.mdpi.com/1424-8220/19/18/3817,Web取得429。既存保存PDFで平均recognition precision 96.20%と種類別報告値を再確認。Accuracyへ読み替えない
+PV002,2026-11-11,MM001,MMS001,出版社本文6.9の再確認,https://www.mdpi.com/2673-2688/7/10/400,2群Recall65.5%・Precision0.962・AUC0.928。元3群70.5%でも凝着20・複合96を全件見逃し
+PV003,2026-11-11,IM001,SIM001,会議原著Table2と4.1の再確認,https://proceedings.iclr.cc/paper_files/paper/2025/file/d91ffbe9c126765755ff52d36b715683-Paper-Conference.pdf,GPT-4o種類Accuracy65.80%。74.92%は全7タスク平均。標準正常参照画像1枚
+PV004,2026-11-11,ALL,既存台帳,53行の既存抽出値と評価条件の再整理,非該当,新規候補探索なし。工具15・工業38を維持し未確認値をゼロにしない

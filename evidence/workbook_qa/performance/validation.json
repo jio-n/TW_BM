@@ -1,0 +1,17 @@
+{
+  "as_of": "2026-11-11",
+  "rows": 53,
+  "sheets": {
+    "工具摩耗": 15,
+    "工業欠陥": 38
+  },
+  "main": 37,
+  "held": 7,
+  "related": 9,
+  "numeric_values": 47,
+  "native_hyperlinks": 53,
+  "error_cells": 0,
+  "missing_values": "6件の代表値は未報告・未抽出・未確認を区別。ゼロ置換なし",
+  "checks": "既存53ID、数値型、百分率/係数、結果文、根拠ID、CSV/XLSX、表・固定ペイン・リンクを照合",
+  "visual_check": "2シート主要範囲を描画確認"
+}

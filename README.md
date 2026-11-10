@@ -4,6 +4,8 @@
 
 ## 成果物と利用方法
 
+**論文ごとの実際の精度を見る場合**は、工具摩耗15本・工業欠陥38本をまとめた [性能値のExcel](outputs/classification_performance_summary.xlsx) / [CSV](outputs/classification_performance_summary.csv) / [数値の読み方と網羅性評価](reports/classification_performance_summary.md) を参照。Accuracy、Precision、Recall、F1等の数値と条件を並べ、保留・関連・数値未確認も残している。主要技術の俯瞰はできるが、論文の完全網羅や探索飽和は未確認。
+
 2026-11-11の拡張調査として、**工業製品・材料の欠陥種類分類を行う視覚Transformer／VLM／MLLM論文**を追加した。主比較28本（視覚Transformer11、VLM系7、MLLM10）、関連5本、保留5本。入力画像、候補ラベル・プロンプト、参照画像を区別し、二値異常検出や種類付き領域検出との違いを記録している。主比較の1本は匿名の欠陥種類IDであり、名称との対応は未確認。
 
 - [工業欠陥種類分類のExcel](outputs/industrial_defect_classification_benchmark.xlsx) / [CSV](outputs/industrial_defect_classification_benchmark.csv) / [モデル系統集計](outputs/industrial_model_family_summary.csv)
