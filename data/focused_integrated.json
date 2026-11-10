@@ -32,7 +32,13 @@
       "source_id": "SF001",
       "saved_path": "evidence/raw/image/cnn2019.pdf",
       "dataset_family": "Wu2019 face-milling",
-      "online_status": "2019出版、既存採用"
+      "online_status": "2019出版、既存採用",
+      "model_family": "CNN系",
+      "model_pipeline": "CNNによる直接分類",
+      "primary_models": "ToolWearnet（CNN、CAE事前学習）",
+      "baseline_families": "CNN系：VGGNet-16",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CF_FT001_model"
     },
     {
       "id": "FT002",
@@ -65,7 +71,13 @@
       "source_id": "SF002",
       "saved_path": "evidence/raw/image/vit2026.pdf",
       "dataset_family": "IN718／Kumar–Singh系列",
-      "online_status": "2026-05-25出版"
+      "online_status": "2026-05-25出版",
+      "model_family": "視覚Transformer系",
+      "model_pipeline": "事前学習ViTを微調整して直接分類",
+      "primary_models": "ViT-Large",
+      "baseline_families": "CNN系：EfficientNet-B0",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CF_FT002_model"
     },
     {
       "id": "FT003",
@@ -98,7 +110,13 @@
       "source_id": "SF003",
       "saved_path": "evidence/raw/focused_root/mamledesai2020.pdf",
       "dataset_family": "Mamledesai／LIMDA。2022論文との画像重複未確認",
-      "online_status": "2020-10-19出版"
+      "online_status": "2020-10-19出版",
+      "model_family": "CNN系",
+      "model_pipeline": "base modelのCNNによる直接分類",
+      "primary_models": "独自4層CNN",
+      "baseline_families": "種類分類サブタスクの別モデル比較は未確認",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CF_FT003_model"
     },
     {
       "id": "FA001",
@@ -131,7 +149,13 @@
       "source_id": "SF004",
       "saved_path": "evidence/raw/focused_root/masklennet2026.pdf",
       "dataset_family": "MaskLenNet industrial54",
-      "online_status": "2026-08-06出版"
+      "online_status": "2026-08-06出版",
+      "model_family": "視覚Transformer系",
+      "model_pipeline": "Swin特徴＋query-basedの種類／mask出力",
+      "primary_models": "MaskLenNet（Swin backbone）",
+      "baseline_families": "本追加分類では比較モデルの全系統を未整理",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CF_FA001_model"
     },
     {
       "id": "FIA01",
@@ -159,7 +183,13 @@
       "locator": "§§2–5; Figs. 10–13; Tables 1–2",
       "verification": "出版社PDF本文確認",
       "source_id": "SFI001",
-      "dataset_family": "本文参照"
+      "dataset_family": "本文参照",
+      "model_family": "非深層学習（画像処理・ルール）",
+      "model_pipeline": "輪郭・ヒストグラム・閾値判定",
+      "primary_models": "従来画像処理＋ルール",
+      "baseline_families": "学習モデル比較は非該当",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CFI003"
     },
     {
       "id": "FIA02",
@@ -187,7 +217,13 @@
       "locator": "§§4.2–4.5, Tables 1–2, Fig. 6",
       "verification": "KIT公開著者本文・会議抄録・DOI書誌確認",
       "source_id": "SFI002; SFI003; SFI004",
-      "dataset_family": "本文参照"
+      "dataset_family": "本文参照",
+      "model_family": "CNN特徴＋従来ML系",
+      "model_pipeline": "固定CNN特徴＋種類別Gradient Boosting",
+      "primary_models": "VGG16＋Gradient Boosting",
+      "baseline_families": "別アーキテクチャの比較は未確認",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CFI008"
     },
     {
       "id": "FIA03",
@@ -215,7 +251,13 @@
       "locator": "§§3.1–3.2、§4、Tables 1・4、Fig. 6–7",
       "verification": "出版社本文確認",
       "source_id": "SFI005",
-      "dataset_family": "本文参照"
+      "dataset_family": "本文参照",
+      "model_family": "CNN系",
+      "model_pipeline": "CNNによる直接分類。後段ファジィ制御は分類器に含めない",
+      "primary_models": "独自CNN（3種類分類）",
+      "baseline_families": "種類分類の別モデル比較は未確認",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CFI013"
     },
     {
       "id": "FIA04",
@@ -243,7 +285,13 @@
       "locator": "Abstract; CNN-based tool wear classification model; Results & discussion",
       "verification": "出版社抄録・章抜粋確認",
       "source_id": "SFI006; SFI007",
-      "dataset_family": "IN718／Kumar–Singh系列"
+      "dataset_family": "IN718／Kumar–Singh系列",
+      "model_family": "CNN系",
+      "model_pipeline": "転移学習CNNによる直接分類",
+      "primary_models": "EfficientNet-B0",
+      "baseline_families": "今回取得した資料では未確認",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CFI018"
     },
     {
       "id": "FIA05",
@@ -271,7 +319,13 @@
       "locator": "出版社検索でAbstract/§4.6/Fig. 10–11説明を確認",
       "verification": "出版社抄録・本文該当箇所の検索抜粋確認",
       "source_id": "SFI008; SFI009",
-      "dataset_family": "本文参照"
+      "dataset_family": "本文参照",
+      "model_family": "CNN系",
+      "model_pipeline": "VGG系CNNの比較",
+      "primary_models": "VGG16／VGG19",
+      "baseline_families": "CNN系内比較：VGG16対VGG19。異なるモデル系統として数えない",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CFI023"
     },
     {
       "id": "FIA06",
@@ -299,7 +353,13 @@
       "locator": "原稿p.1, §§2.5/3.1–3.2, Tables 1–2",
       "verification": "著者公開原稿抄録・方法/結果抜粋確認",
       "source_id": "SFI010; SFI011",
-      "dataset_family": "本文参照"
+      "dataset_family": "本文参照",
+      "model_family": "CNN系",
+      "model_pipeline": "AlexNet派生CNN＋画像前処理比較",
+      "primary_models": "AlexNet派生CNN",
+      "baseline_families": "CNN系内で4前処理を比較",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CFI028"
     },
     {
       "id": "FIA07",
@@ -327,7 +387,13 @@
       "locator": "§3.1.1, Fig. 7, Table 3",
       "verification": "著者本文・出版社版書誌確認",
       "source_id": "SFI012; SFI013",
-      "dataset_family": "KIT213画像系列"
+      "dataset_family": "KIT213画像系列",
+      "model_family": "CNN系",
+      "model_pipeline": "CNN encoder–decoderによる種類付き画素分割",
+      "primary_models": "U-Net",
+      "baseline_families": "本追加分類では比較モデルの全系統を未整理",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CFI033"
     },
     {
       "id": "FIA08",
@@ -355,7 +421,13 @@
       "locator": "§§3–4、Table 1",
       "verification": "KIT公開著者原稿・書誌確認",
       "source_id": "SFI014; SFI015",
-      "dataset_family": "KIT213画像系列"
+      "dataset_family": "KIT213画像系列",
+      "model_family": "CNN系",
+      "model_pipeline": "U-Net分割＋Monte Carlo dropoutによる不確実性評価",
+      "primary_models": "U-Net＋MC dropout",
+      "baseline_families": "U-Net分割と不確実性評価の比較。独立なMLLMなし",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CFI038"
     },
     {
       "id": "FIA09",
@@ -383,7 +455,13 @@
       "locator": "Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract",
       "verification": "出版社本文確認",
       "source_id": "SFI016",
-      "dataset_family": "本文参照"
+      "dataset_family": "本文参照",
+      "model_family": "Attention検出器＋CNN系",
+      "model_pipeline": "種類付きYOLO12s検出＋CNNによる摩耗領域分割",
+      "primary_models": "YOLO12s＋Ghost Slim U-Net",
+      "baseline_families": "本追加分類では比較モデルの全系統を未整理",
+      "language_model": "判定構成に含まれない",
+      "model_family_basis": "CFI043; CFM_YOLO12"
     },
     {
       "id": "MM001",
@@ -412,7 +490,13 @@
       "verification": "全文確認",
       "source_id": "MMS001; MMS004; MMS005; MMS006",
       "dataset_family": "MATWI",
-      "online_status": "2026-10-03"
+      "online_status": "2026-10-03",
+      "model_family": "CNN特徴＋従来ML系",
+      "model_pipeline": "CNN画像特徴＋信号特徴を連結→XGBoost分類",
+      "primary_models": "ResNet18＋XGBoost",
+      "baseline_families": "本追加分類では比較モデルの全系統を未整理",
+      "language_model": "判定構成に含まれない。入力がマルチモーダルでもMLLMではない",
+      "model_family_basis": "MMC001"
     },
     {
       "id": "MM002",
@@ -441,7 +525,75 @@
       "verification": "出版社プレビュー・検索索引の原文確認",
       "source_id": "MMS002; MMS003; MMS004; MMS005; MMS007",
       "dataset_family": "MATWI",
-      "online_status": "2027-01巻号。先行公開日は未確認。2026-11-11時点で出版社プレビューの原文を確認。"
+      "online_status": "2027-01巻号。先行公開日は未確認。2026-11-11時点で出版社プレビューの原文を確認。",
+      "model_family": "VLM／MLLM系",
+      "model_pipeline": "MLLMによる種類判断＋診断文生成。段階学習と補助判定を併用",
+      "primary_models": "Qwen3-VL-8B（MLLM）",
+      "baseline_families": "CNN系：画像単独ResNet18。その他の比較手法は原文参照",
+      "language_model": "あり：Qwen3-VL-8B。VLMのうちLLMを中核に持つMLLMとして整理",
+      "model_family_basis": "MMC006"
+    }
+  ],
+  "model_family_summary": [
+    {
+      "family": "CNN系",
+      "definition": "畳み込みネットワークで種類分類または種類付き分割を行う。CNN特徴と別の従来ML分類器の組合せは次の区分。",
+      "examples": "ToolWearnet、独自CNN、VGG16/19、EfficientNet-B0、AlexNet、U-Net",
+      "image_count": 5,
+      "multimodal_count": 0,
+      "held_count": 1,
+      "related_count": 2,
+      "paper_ids": "FT001; FT003; FIA03; FIA04; FIA05; FIA06; FIA07; FIA08"
+    },
+    {
+      "family": "CNN特徴＋従来ML系",
+      "definition": "CNNは画像特徴抽出を担当し、Gradient Boosting/XGBoostが最終の種類判定を行う。深層特徴を使うハイブリッド方式。",
+      "examples": "VGG16＋Gradient Boosting、ResNet18＋XGBoost",
+      "image_count": 1,
+      "multimodal_count": 1,
+      "held_count": 0,
+      "related_count": 0,
+      "paper_ids": "FIA02; MM001"
+    },
+    {
+      "family": "視覚Transformer系",
+      "definition": "ViT/Swinなどの視覚Transformerを主たる画像表現に使う。本区分の確認例は言語モデルを判定系に含めない。",
+      "examples": "ViT-Large、Swin backboneのMaskLenNet",
+      "image_count": 1,
+      "multimodal_count": 0,
+      "held_count": 0,
+      "related_count": 1,
+      "paper_ids": "FT002; FA001"
+    },
+    {
+      "family": "VLM／MLLM系",
+      "definition": "画像と言語を扱うモデルで種類を判断する。LLMを中核にする確認例はMLLMと明記。VLMとMLLMは排他的に件数を分けない。",
+      "examples": "Qwen3-VL-8B（MLLM）",
+      "image_count": 0,
+      "multimodal_count": 0,
+      "held_count": 1,
+      "related_count": 0,
+      "paper_ids": "MM002"
+    },
+    {
+      "family": "Attention検出器＋CNN系",
+      "definition": "Attention中心のYOLO12検出器とCNN型分割器を併用。YOLOという名称だけで純CNNやViTへ一括分類しない。",
+      "examples": "YOLO12s＋Ghost Slim U-Net",
+      "image_count": 0,
+      "multimodal_count": 0,
+      "held_count": 0,
+      "related_count": 1,
+      "paper_ids": "FIA09"
+    },
+    {
+      "family": "非深層学習（画像処理・ルール）",
+      "definition": "輪郭・二値化・ヒストグラム・閾値によって種類を判定する。",
+      "examples": "Sun・Yeh2018の機上画像処理",
+      "image_count": 1,
+      "multimodal_count": 0,
+      "held_count": 0,
+      "related_count": 0,
+      "paper_ids": "FIA01"
     }
   ],
   "sources": [
@@ -1006,6 +1158,18 @@
       "accessed": "2026-11-11",
       "verification": "PDF §3.1確認",
       "locator": "§3.1 PDF p.7（誌面13037）"
+    },
+    {
+      "source_id": "SMF001",
+      "title": "YOLOv12: Attention-Centric Real-Time Object Detectors",
+      "publisher": "Yunjie Tian; Qixiang Ye; David Doermann / arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2502.12524",
+      "doi": "10.48550/arXiv.2502.12524",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著抄録確認（分類補助。工具摩耗の直接研究件数に含めない）",
+      "locator": "Abstract"
     }
   ],
   "claims": [
@@ -1627,6 +1791,118 @@
       "field": "limitation",
       "claim": "種類分類は領域対応後の評価。量予測成績は対象外。データ/予測記録は企業制約で未公開",
       "status": "出版社本文該当節・大学書誌確認"
+    },
+    {
+      "claim_id": "CFM_YOLO12",
+      "entity_id": "FIA09",
+      "field": "モデル系統の補助根拠",
+      "claim": "YOLOv12原著はAttention中心の検出器と説明。工具論文のYOLO12s＋Ghost Slim U-Netは、検出側とCNN分割側を併記して分類する。",
+      "status": "原著抄録と工具論文Deep learning models節に基づく調査者分類"
+    },
+    {
+      "claim_id": "CFM_FT001",
+      "entity_id": "FT001",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "CNN系。CNNによる直接分類。主モデル: ToolWearnet（CNN、CAE事前学習）。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CF_FT001_model"
+    },
+    {
+      "claim_id": "CFM_FT002",
+      "entity_id": "FT002",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "視覚Transformer系。事前学習ViTを微調整して直接分類。主モデル: ViT-Large。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CF_FT002_model"
+    },
+    {
+      "claim_id": "CFM_FT003",
+      "entity_id": "FT003",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "CNN系。base modelのCNNによる直接分類。主モデル: 独自4層CNN。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CF_FT003_model"
+    },
+    {
+      "claim_id": "CFM_FA001",
+      "entity_id": "FA001",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "視覚Transformer系。Swin特徴＋query-basedの種類／mask出力。主モデル: MaskLenNet（Swin backbone）。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CF_FA001_model"
+    },
+    {
+      "claim_id": "CFM_FIA01",
+      "entity_id": "FIA01",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "非深層学習（画像処理・ルール）。輪郭・ヒストグラム・閾値判定。主モデル: 従来画像処理＋ルール。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CFI003"
+    },
+    {
+      "claim_id": "CFM_FIA02",
+      "entity_id": "FIA02",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "CNN特徴＋従来ML系。固定CNN特徴＋種類別Gradient Boosting。主モデル: VGG16＋Gradient Boosting。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CFI008"
+    },
+    {
+      "claim_id": "CFM_FIA03",
+      "entity_id": "FIA03",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "CNN系。CNNによる直接分類。後段ファジィ制御は分類器に含めない。主モデル: 独自CNN（3種類分類）。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CFI013"
+    },
+    {
+      "claim_id": "CFM_FIA04",
+      "entity_id": "FIA04",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "CNN系。転移学習CNNによる直接分類。主モデル: EfficientNet-B0。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CFI018"
+    },
+    {
+      "claim_id": "CFM_FIA05",
+      "entity_id": "FIA05",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "CNN系。VGG系CNNの比較。主モデル: VGG16／VGG19。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CFI023"
+    },
+    {
+      "claim_id": "CFM_FIA06",
+      "entity_id": "FIA06",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "CNN系。AlexNet派生CNN＋画像前処理比較。主モデル: AlexNet派生CNN。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CFI028"
+    },
+    {
+      "claim_id": "CFM_FIA07",
+      "entity_id": "FIA07",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "CNN系。CNN encoder–decoderによる種類付き画素分割。主モデル: U-Net。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CFI033"
+    },
+    {
+      "claim_id": "CFM_FIA08",
+      "entity_id": "FIA08",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "CNN系。U-Net分割＋Monte Carlo dropoutによる不確実性評価。主モデル: U-Net＋MC dropout。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CFI038"
+    },
+    {
+      "claim_id": "CFM_FIA09",
+      "entity_id": "FIA09",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "Attention検出器＋CNN系。種類付きYOLO12s検出＋CNNによる摩耗領域分割。主モデル: YOLO12s＋Ghost Slim U-Net。言語モデル: 判定構成に含まれない",
+      "status": "既存の構成記述から調査者が分類。元Claim: CFI043; CFM_YOLO12"
+    },
+    {
+      "claim_id": "CFM_MM001",
+      "entity_id": "MM001",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "CNN特徴＋従来ML系。CNN画像特徴＋信号特徴を連結→XGBoost分類。主モデル: ResNet18＋XGBoost。言語モデル: 判定構成に含まれない。入力がマルチモーダルでもMLLMではない",
+      "status": "既存の構成記述から調査者が分類。元Claim: MMC001"
+    },
+    {
+      "claim_id": "CFM_MM002",
+      "entity_id": "MM002",
+      "field": "主モデル系統（調査者分類）",
+      "claim": "VLM／MLLM系。MLLMによる種類判断＋診断文生成。段階学習と補助判定を併用。主モデル: Qwen3-VL-8B（MLLM）。言語モデル: あり：Qwen3-VL-8B。VLMのうちLLMを中核に持つMLLMとして整理",
+      "status": "既存の構成記述から調査者が分類。元Claim: MMC006"
     }
   ],
   "claim_evidence": [
@@ -2212,6 +2488,135 @@
       "locator": "§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9",
       "quote": "",
       "verification": "出版社本文該当節・大学書誌確認"
+    },
+    {
+      "claim_id": "CFM_YOLO12",
+      "source_id": "SMF001",
+      "locator": "Abstract",
+      "verification": "抄録確認"
+    },
+    {
+      "claim_id": "CFM_YOLO12",
+      "source_id": "SFI016",
+      "locator": "Deep learning models節（YOLO12sとGhost Convolutionsの説明）",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFM_FT001",
+      "source_id": "SF001",
+      "locator": "§§3–4、Fig.7、Tables4–7、PDF pp.7–14",
+      "quote": "",
+      "verification": "全文の方法・結果を再確認（ローカル公開PDF）"
+    },
+    {
+      "claim_id": "CFM_FT002",
+      "source_id": "SF002",
+      "locator": "§§2.1–3.2、Tables1–4、Figs7–10、PDF pp.5–12",
+      "quote": "",
+      "verification": "全文の方法・結果を再確認（ローカル公開PDF）"
+    },
+    {
+      "claim_id": "CFM_FT003",
+      "source_id": "SF003",
+      "locator": "§3.1、Fig.3、§4、Table1、§5、Fig.6、PDF pp.6–11",
+      "quote": "",
+      "verification": "全文の方法・結果確認（出版社公開PDF）"
+    },
+    {
+      "claim_id": "CFM_FA001",
+      "source_id": "SF004",
+      "locator": "§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9",
+      "quote": "",
+      "verification": "出版社本文該当節・大学書誌確認"
+    },
+    {
+      "claim_id": "CFM_FIA01",
+      "source_id": "SFI001",
+      "locator": "§§2–5; Figs. 10–13; Tables 1–2",
+      "quote": "",
+      "verification": "出版社PDF本文確認"
+    },
+    {
+      "claim_id": "CFM_FIA02",
+      "source_id": "SFI002",
+      "locator": "§§4.2–4.5, Tables 1–2, Fig. 6",
+      "quote": "",
+      "verification": "KIT公開の著者本文確認"
+    },
+    {
+      "claim_id": "CFM_FIA03",
+      "source_id": "SFI005",
+      "locator": "§§3.1–3.2、§4、Tables 1・4、Fig. 6–7",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFM_FIA04",
+      "source_id": "SFI006",
+      "locator": "Abstract; CNN-based tool wear classification model; Results & discussion",
+      "quote": "",
+      "verification": "出版社抄録・章抜粋確認、本文open 403"
+    },
+    {
+      "claim_id": "CFM_FIA05",
+      "source_id": "SFI008",
+      "locator": "出版社検索でAbstract/§4.6/Fig. 10–11説明を確認",
+      "quote": "",
+      "verification": "出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403"
+    },
+    {
+      "claim_id": "CFM_FIA06",
+      "source_id": "SFI010",
+      "locator": "原稿p.1, §§2.5/3.1–3.2, Tables 1–2",
+      "quote": "",
+      "verification": "著者公開原稿の抄録・章抜粋確認、PDF本文open不成功"
+    },
+    {
+      "claim_id": "CFM_FIA07",
+      "source_id": "SFI012",
+      "locator": "§3.1.1, Fig. 7, Table 3",
+      "quote": "",
+      "verification": "著者公開本文確認"
+    },
+    {
+      "claim_id": "CFM_FIA08",
+      "source_id": "SFI014",
+      "locator": "§§3–4、Table 1",
+      "quote": "",
+      "verification": "著者公開原稿確認"
+    },
+    {
+      "claim_id": "CFM_FIA09",
+      "source_id": "SFI016",
+      "locator": "Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFM_FIA09",
+      "source_id": "SMF001",
+      "locator": "Abstract",
+      "verification": "抄録確認"
+    },
+    {
+      "claim_id": "CFM_FIA09",
+      "source_id": "SFI016",
+      "locator": "Deep learning models節（YOLO12sとGhost Convolutionsの説明）",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFM_MM001",
+      "source_id": "MMS001",
+      "locator": "§3 Fig. 2、§5.4 Algorithm 2、Appendix A Table A1",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CFM_MM002",
+      "source_id": "MMS002",
+      "locator": "§3.1–3.4、§4.2 Fig. 5",
+      "verification": "出版社プレビュー・検索索引の原文確認"
     }
   ],
   "search_log": [
@@ -4478,6 +4883,15 @@
       "returned_count": "個別未記録",
       "total_hits": "未提供",
       "raw_path": "evidence/raw/focused_root/（一部検索スナップショット保存）"
+    },
+    {
+      "search_id": "QFM001",
+      "executed_at": "2026-11-11 02:52 JST",
+      "target": "出版社本文・原著arXiv抄録の再確認",
+      "queries": "https://link.springer.com/article/10.1007/s10845-026-02944-x ; https://arxiv.org/abs/2502.12524",
+      "returned_count": 2,
+      "total_hits": "非該当（URL直接参照）",
+      "purpose": "YOLO12sとGhost Slim U-Netのモデル系統確認。追加の工具摩耗研究として数えない"
     }
   ],
   "screening": [

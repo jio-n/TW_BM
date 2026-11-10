@@ -1,0 +1,29 @@
+{
+  "as_of": "2026-11-11",
+  "basis": "確認済みの主提案・種類分類サブタスクの構成に基づく調査者分類。比較モデルだけの採用で主分類を変えない。",
+  "families": [
+    {"family":"CNN系", "definition":"畳み込みネットワークで種類分類または種類付き分割を行う。CNN特徴と別の従来ML分類器の組合せは次の区分。", "examples":"ToolWearnet、独自CNN、VGG16/19、EfficientNet-B0、AlexNet、U-Net"},
+    {"family":"CNN特徴＋従来ML系", "definition":"CNNは画像特徴抽出を担当し、Gradient Boosting/XGBoostが最終の種類判定を行う。深層特徴を使うハイブリッド方式。", "examples":"VGG16＋Gradient Boosting、ResNet18＋XGBoost"},
+    {"family":"視覚Transformer系", "definition":"ViT/Swinなどの視覚Transformerを主たる画像表現に使う。本区分の確認例は言語モデルを判定系に含めない。", "examples":"ViT-Large、Swin backboneのMaskLenNet"},
+    {"family":"VLM／MLLM系", "definition":"画像と言語を扱うモデルで種類を判断する。LLMを中核にする確認例はMLLMと明記。VLMとMLLMは排他的に件数を分けない。", "examples":"Qwen3-VL-8B（MLLM）"},
+    {"family":"Attention検出器＋CNN系", "definition":"Attention中心のYOLO12検出器とCNN型分割器を併用。YOLOという名称だけで純CNNやViTへ一括分類しない。", "examples":"YOLO12s＋Ghost Slim U-Net"},
+    {"family":"非深層学習（画像処理・ルール）", "definition":"輪郭・二値化・ヒストグラム・閾値によって種類を判定する。", "examples":"Sun・Yeh2018の機上画像処理"}
+  ],
+  "records": {
+    "FT001": {"model_family":"CNN系", "model_pipeline":"CNNによる直接分類", "primary_models":"ToolWearnet（CNN、CAE事前学習）", "baseline_families":"CNN系：VGGNet-16", "language_model":"判定構成に含まれない", "model_family_basis":"CF_FT001_model"},
+    "FT002": {"model_family":"視覚Transformer系", "model_pipeline":"事前学習ViTを微調整して直接分類", "primary_models":"ViT-Large", "baseline_families":"CNN系：EfficientNet-B0", "language_model":"判定構成に含まれない", "model_family_basis":"CF_FT002_model"},
+    "FT003": {"model_family":"CNN系", "model_pipeline":"base modelのCNNによる直接分類", "primary_models":"独自4層CNN", "baseline_families":"種類分類サブタスクの別モデル比較は未確認", "language_model":"判定構成に含まれない", "model_family_basis":"CF_FT003_model"},
+    "FA001": {"model_family":"視覚Transformer系", "model_pipeline":"Swin特徴＋query-basedの種類／mask出力", "primary_models":"MaskLenNet（Swin backbone）", "baseline_families":"本追加分類では比較モデルの全系統を未整理", "language_model":"判定構成に含まれない", "model_family_basis":"CF_FA001_model"},
+    "FIA01": {"model_family":"非深層学習（画像処理・ルール）", "model_pipeline":"輪郭・ヒストグラム・閾値判定", "primary_models":"従来画像処理＋ルール", "baseline_families":"学習モデル比較は非該当", "language_model":"判定構成に含まれない", "model_family_basis":"CFI003"},
+    "FIA02": {"model_family":"CNN特徴＋従来ML系", "model_pipeline":"固定CNN特徴＋種類別Gradient Boosting", "primary_models":"VGG16＋Gradient Boosting", "baseline_families":"別アーキテクチャの比較は未確認", "language_model":"判定構成に含まれない", "model_family_basis":"CFI008"},
+    "FIA03": {"model_family":"CNN系", "model_pipeline":"CNNによる直接分類。後段ファジィ制御は分類器に含めない", "primary_models":"独自CNN（3種類分類）", "baseline_families":"種類分類の別モデル比較は未確認", "language_model":"判定構成に含まれない", "model_family_basis":"CFI013"},
+    "FIA04": {"model_family":"CNN系", "model_pipeline":"転移学習CNNによる直接分類", "primary_models":"EfficientNet-B0", "baseline_families":"今回取得した資料では未確認", "language_model":"判定構成に含まれない", "model_family_basis":"CFI018"},
+    "FIA05": {"model_family":"CNN系", "model_pipeline":"VGG系CNNの比較", "primary_models":"VGG16／VGG19", "baseline_families":"CNN系内比較：VGG16対VGG19。異なるモデル系統として数えない", "language_model":"判定構成に含まれない", "model_family_basis":"CFI023"},
+    "FIA06": {"model_family":"CNN系", "model_pipeline":"AlexNet派生CNN＋画像前処理比較", "primary_models":"AlexNet派生CNN", "baseline_families":"CNN系内で4前処理を比較", "language_model":"判定構成に含まれない", "model_family_basis":"CFI028"},
+    "FIA07": {"model_family":"CNN系", "model_pipeline":"CNN encoder–decoderによる種類付き画素分割", "primary_models":"U-Net", "baseline_families":"本追加分類では比較モデルの全系統を未整理", "language_model":"判定構成に含まれない", "model_family_basis":"CFI033"},
+    "FIA08": {"model_family":"CNN系", "model_pipeline":"U-Net分割＋Monte Carlo dropoutによる不確実性評価", "primary_models":"U-Net＋MC dropout", "baseline_families":"U-Net分割と不確実性評価の比較。独立なMLLMなし", "language_model":"判定構成に含まれない", "model_family_basis":"CFI038"},
+    "FIA09": {"model_family":"Attention検出器＋CNN系", "model_pipeline":"種類付きYOLO12s検出＋CNNによる摩耗領域分割", "primary_models":"YOLO12s＋Ghost Slim U-Net", "baseline_families":"本追加分類では比較モデルの全系統を未整理", "language_model":"判定構成に含まれない", "model_family_basis":"CFI043; CFM_YOLO12"},
+    "MM001": {"model_family":"CNN特徴＋従来ML系", "model_pipeline":"CNN画像特徴＋信号特徴を連結→XGBoost分類", "primary_models":"ResNet18＋XGBoost", "baseline_families":"本追加分類では比較モデルの全系統を未整理", "language_model":"判定構成に含まれない。入力がマルチモーダルでもMLLMではない", "model_family_basis":"MMC001"},
+    "MM002": {"model_family":"VLM／MLLM系", "model_pipeline":"MLLMによる種類判断＋診断文生成。段階学習と補助判定を併用", "primary_models":"Qwen3-VL-8B（MLLM）", "baseline_families":"CNN系：画像単独ResNet18。その他の比較手法は原文参照", "language_model":"あり：Qwen3-VL-8B。VLMのうちLLMを中核に持つMLLMとして整理", "model_family_basis":"MMC006"}
+  }
+}

@@ -50,7 +50,7 @@ temp.replace(book)
 
 d = json.loads((ROOT / 'data/focused_integrated.json').read_text(encoding='utf-8'))
 wb = load_workbook(book, data_only=False)
-expected = {'画像のみ':8, 'マルチモーダル':1, '保留':2, '領域分類の関連研究':4, '既存59本の再選別':59, '出典':len(d['sources']), '主張と根拠':len(d['claim_evidence'])}
+expected = {'モデル系統':len(d['model_family_summary']), '画像のみ':8, 'マルチモーダル':1, '保留':2, '領域分類の関連研究':4, '既存59本の再選別':59, '出典':len(d['sources']), '主張と根拠':len(d['claim_evidence'])}
 assert len(wb.worksheets) == len(expected)
 for sh in wb:
     assert sh.max_row - 4 == expected[sh.title], sh.title
@@ -67,6 +67,16 @@ with (ROOT / 'outputs/wear_type_classification_benchmark.csv').open(encoding='ut
     rows = list(csv.DictReader(f))
 assert len(rows) == len(d['records']) == 15
 assert len({r['doi'] for r in d['records'] if r['doi'] and r['doi'] != '未確認'}) == 14
-summary = {'as_of': d['as_of'], 'sheet_rows': expected, 'native_hyperlinks': links_added, 'excel_error_cells':0, 'records':len(rows), 'sources':len(d['sources']), 'claims':len(d['claims']), 'search_log_rows':len(d['search_log']), 'screening':dict(Counter(r['判定'] for r in d['screening'])), 'visual_check':'7シートの主要範囲を描画して確認。出典のリンク関数表示問題をネイティブリンクへ修正。'}
+assert all(r['model_family'] and r['primary_models'] and r['model_family_basis'] for r in rows)
+assert sum(f['image_count']+f['multimodal_count'] for f in d['model_family_summary']) == 9
+assert sum(f['held_count']+f['related_count'] for f in d['model_family_summary']) == 6
+for name in ['画像のみ','マルチモーダル','保留','領域分類の関連研究']:
+    sh=wb[name]
+    headers={c.value:c.column for c in sh[4]}
+    for row in sh.iter_rows(min_row=5):
+        record=next(r for r in d['records'] if r['id']==row[0].value)
+        assert row[headers['主モデル系統']-1].value == record['model_family']
+        assert row[headers['比較モデルの系統']-1].value == record['baseline_families']
+summary = {'as_of': d['as_of'], 'sheet_rows': expected, 'native_hyperlinks': links_added, 'excel_error_cells':0, 'records':len(rows), 'sources':len(d['sources']), 'claims':len(d['claims']), 'search_log_rows':len(d['search_log']), 'screening':dict(Counter(r['判定'] for r in d['screening'])), 'visual_check':'8シートの主要範囲を描画確認。系統別集計と個別15行・CSV/XLSXの系統を照合。出典はネイティブリンク。'}
 (ROOT / 'evidence/workbook_qa/focused/validation.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
 print(json.dumps(summary, ensure_ascii=False))

@@ -6,6 +6,7 @@ OUT=ROOT/'outputs'; EV=ROOT/'evidence/wear_type_classification'; EV.mkdir(exist_
 def read(name):return json.loads((ROOT/'data'/name).read_text(encoding='utf-8-sig'))
 root=read('focused_root.json'); img=read('focused_image_additional.json')
 multi=read('focused_multimodal.json')
+taxonomy=read('focused_model_families.json')
 def dumpcsv(path,rows,cols=None):
  if cols is None:cols=list(dict.fromkeys(k for r in rows for k in r))
  with path.open('w',encoding='utf-8-sig',newline='') as f:
@@ -39,6 +40,16 @@ for r in root['records']+root['adjacent']:
   claims.append({'claim_id':cid,'entity_id':r['id'],'field':f,'claim':r[f],'status':r['verification']})
   links.append({'claim_id':cid,'source_id':r['source_id'],'locator':r['locator'],'quote':'','verification':r['verification']})
 sources.append({'source_id':'SF005','title':root['exclusions'][0]['title'],'url':root['exclusions'][0]['url'],'doi':root['exclusions'][0]['doi'],'primary':True,'accessed':'2026-11-11','verification':'PDF §3.1確認','locator':root['exclusions'][0]['locator']})
+sources.append({'source_id':'SMF001','title':'YOLOv12: Attention-Centric Real-Time Object Detectors','publisher':'Yunjie Tian; Qixiang Ye; David Doermann / arXiv','year':2025,'url':'https://arxiv.org/abs/2502.12524','doi':'10.48550/arXiv.2502.12524','primary':True,'accessed':'2026-11-11','verification':'原著抄録確認（分類補助。工具摩耗の直接研究件数に含めない）','locator':'Abstract'})
+claims.append({'claim_id':'CFM_YOLO12','entity_id':'FIA09','field':'モデル系統の補助根拠','claim':'YOLOv12原著はAttention中心の検出器と説明。工具論文のYOLO12s＋Ghost Slim U-Netは、検出側とCNN分割側を併記して分類する。','status':'原著抄録と工具論文Deep learning models節に基づく調査者分類'})
+links.append({'claim_id':'CFM_YOLO12','source_id':'SMF001','locator':'Abstract','verification':'抄録確認'})
+links.extend({**l,'claim_id':'CFM_YOLO12','locator':'Deep learning models節（YOLO12sとGhost Convolutionsの説明）'} for l in list(links) if l['claim_id']=='CFI043')
+for r in records:
+ r.update(taxonomy['records'][r['id']])
+ basis=r['model_family_basis'].split('; ')
+ cid=f"CFM_{r['id']}"
+ claims.append({'claim_id':cid,'entity_id':r['id'],'field':'主モデル系統（調査者分類）','claim':f"{r['model_family']}。{r['model_pipeline']}。主モデル: {r['primary_models']}。言語モデル: {r['language_model']}",'status':'既存の構成記述から調査者が分類。元Claim: '+r['model_family_basis']})
+ links.extend({**l,'claim_id':cid} for l in list(links) if l['claim_id'] in basis)
 existing=read('integrated.json'); screening=[]
 for p in existing['papers']:
  pid=p['論文ID']; output=p['判定対象の摩耗種類・指標']
@@ -59,18 +70,25 @@ queries=[
  'High-accuracy tool wear monitoring for micro-milling method based on improved Pyramid Vision Transformer wear',
  'Development of ball end-mill wear condition wear classification four','site:mdpi.com/2504-4494/10/8/286 MaskLenNet mIoU Li','MaskLenNet 2026 authors','A Qualitative Tool Condition Monitoring Framework convolutional layers']
 for i,q in enumerate(queries,1):searches.append({'search_id':f'QFR{i:03}','executed_at':'2026-11-11 JST（時分未記録）','target':'Web検索・出版社一次本文','queries':q,'returned_count':'個別未記録','total_hits':'未提供','raw_path':'evidence/raw/focused_root/（一部検索スナップショット保存）'})
+searches.append({'search_id':'QFM001','executed_at':'2026-11-11 02:52 JST','target':'出版社本文・原著arXiv抄録の再確認','queries':'https://link.springer.com/article/10.1007/s10845-026-02944-x ; https://arxiv.org/abs/2502.12524','returned_count':2,'total_hits':'非該当（URL直接参照）','purpose':'YOLO12sとGhost Slim U-Netのモデル系統確認。追加の工具摩耗研究として数えない'})
 source_ids={s['source_id'] for s in sources}; claim_ids={c['claim_id'] for c in claims}
 assert len(source_ids)==len(sources),'duplicate source IDs'
 assert len(claim_ids)==len(claims),'duplicate claim IDs'
 assert all(l['source_id'] in source_ids and l['claim_id'] in claim_ids for l in links),'broken reference'
 assert all(c['entity_id'] in {r['id'] for r in records}|{'MM-DATA'} for c in claims),'unknown entity'
 assert len(screening)==59
-result={'as_of':'2026-11-11','records':records,'sources':sources,'claims':claims,'claim_evidence':links,'search_log':searches,'screening':screening,'exclusions':exclusions}
+family_summary=[]
+for f in taxonomy['families']:
+ rows=[r for r in records if r['model_family']==f['family']]
+ accepted=[r for r in rows if '保留' not in r['status'] and '関連' not in r['status']]
+ family_summary.append({**f,'image_count':sum(r['group']=='画像のみ' for r in accepted),'multimodal_count':sum(r['group']=='マルチモーダル' for r in accepted),'held_count':sum('保留' in r['status'] for r in rows),'related_count':sum('関連' in r['status'] for r in rows),'paper_ids':'; '.join(r['id'] for r in rows)})
+result={'as_of':'2026-11-11','records':records,'model_family_summary':family_summary,'sources':sources,'claims':claims,'claim_evidence':links,'search_log':searches,'screening':screening,'exclusions':exclusions}
 (ROOT/'data/focused_integrated.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
 for key in ['sources','claims','claim_evidence','search_log','exclusions']:
  dumpcsv(EV/(key+'.csv'),result[key])
 dumpcsv(EV/'existing_papers_screening.csv',screening)
 dumpcsv(OUT/'wear_type_classification_benchmark.csv',records)
+dumpcsv(OUT/'wear_type_model_family_summary.csv',family_summary)
 image_rows=[r for r in records if r['group']=='画像のみ' and '保留' not in r['status']]
 multi_rows=[r for r in records if r['group']=='マルチモーダル' and '保留' not in r['status']]
 held=[r for r in records if '保留' in r['status']]
@@ -78,7 +96,7 @@ adjacent=[r for r in records if '関連' in r['status']]
 def mdtable(rows):
  lines=['| ID・論文 | 実際のクラスラベル | 手法・入力 | 種類分類の成績 | 確認・評価上の注意 |','|---|---|---|---|---|']
  for r in rows:
-  vals=[f"**{r['id']}** [{r['authors'].split(';')[0]}ら ({r['year']})]({r['url']})",r['labels'],r['model'],r['performance'],r['verification']+'。'+r['limitation']]
+  vals=[f"**{r['id']}** [{r['authors'].split(';')[0]}ら ({r['year']})]({r['url']})",r['labels'],f"**{r['model_family']}**<br>{r['model']}",r['performance'],r['verification']+'。'+r['limitation']]
   lines.append('| '+' | '.join(str(v).replace('|','／').replace('\n','<br>') for v in vals)+' |')
  return '\n'.join(lines)
 report=f'''# 工具画像からの摩耗・損傷種類分類ベンチマーク
@@ -92,6 +110,23 @@ report=f'''# 工具画像からの摩耗・損傷種類分類ベンチマーク
 既存59本を再選別した結果、明確に再採用したのは **R0102（提示されたWu2019）とR0106（Singh2026）**。R0116/R0118はクラス定義未確定で保留、R0103/R0105/R0117は領域系の関連資料として記録した。旧保留R0027のYan論文は今回のマルチモーダル候補として再調査した。
 
 [専用Excel](../outputs/wear_type_classification_benchmark.xlsx)／[再利用用CSV](../outputs/wear_type_classification_benchmark.csv)／[既存59本の採否](../evidence/wear_type_classification/existing_papers_screening.csv)。原著者の性能値を条件間でランキングしない。
+
+### 1.1 モデル系統による分類
+
+CNN、ViT、VLM/MLLMはいずれも深層学習を使うため、「深層学習かvisionか」という二分ではなく、**主モデルの構造・最終判定方式**で分類した。入力が画像のみか画像＋センサかという軸とは独立している。比較用のベースラインだけにCNNを使用する論文は、CNN系の主提案として重複集計しない。
+
+| 主モデル系統 | 画像のみ・採用 | マルチモーダル・採用 | 保留 | 関連の領域系 | 該当論文ID |
+|---|---:|---:|---:|---:|---|
+{chr(10).join('| '+str(f['family'])+' | '+str(f['image_count'])+' | '+str(f['multimodal_count'])+' | '+str(f['held_count'])+' | '+str(f['related_count'])+' | '+f['paper_ids']+' |' for f in family_summary)}
+
+- **CNN系**：ToolWearnet、VGG、EfficientNet、AlexNet、U-Net等。主比較は5本。画像特徴だけをCNNから取り出す方式は次の区分へ分けた。
+- **CNN特徴＋従来ML系**：Walk2020はVGG16＋Gradient Boosting、Ahangar2026はResNet18＋XGBoost。後者は画像＋センサでも言語モデルを含まないためMLLMではない。
+- **視覚Transformer系**：Singh2026のViT-Large。関連表のMaskLenNetはSwin backbone。EfficientNet-B0はSingh論文の比較用CNNとして別列に残した。
+- **VLM／MLLM系**：YanのQwen3-VL-8B。LLMを中核に持つ画像・言語モデルなのでMLLMとして整理する。VLMとMLLMを別論文として二重計上しない。先行公開日未確認の保留区分は維持する。
+- **Attention検出器＋CNN系**：ホブ論文のYOLO12s＋Ghost Slim U-Net。[工具論文のモデル構成](https://link.springer.com/article/10.1007/s10845-026-02944-x)と[YOLOv12原著の抄録](https://arxiv.org/abs/2502.12524)に基づき併記した。単純なCNNまたはViTへ一律に割り当てない。
+- **非深層学習**：Sun・Yeh2018の輪郭・ヒストグラム・閾値による画像処理。
+
+Excelには「主モデル系統」「モデル構成・判定方式」「主モデル」「比較モデルの系統」「言語モデル」「系統分類の根拠Claim ID」を追加した。[分類定義と個別割当](../data/focused_model_families.json)と[系統別集計CSV](../outputs/wear_type_model_family_summary.csv)も参照できる。分類は調査者による整理であり、各論文の性能比較や優劣を示さない。
 
 ## 2. 画像のみを入力する種類分類
 

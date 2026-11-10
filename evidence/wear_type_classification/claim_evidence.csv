@@ -84,3 +84,22 @@ CF_FA001_data,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本�
 CF_FA001_split,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本文該当節・大学書誌確認
 CF_FA001_performance,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本文該当節・大学書誌確認
 CF_FA001_limitation,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本文該当節・大学書誌確認
+CFM_YOLO12,SMF001,Abstract,,抄録確認
+CFM_YOLO12,SFI016,Deep learning models節（YOLO12sとGhost Convolutionsの説明）,,出版社本文確認
+CFM_FT001,SF001,§§3–4、Fig.7、Tables4–7、PDF pp.7–14,,全文の方法・結果を再確認（ローカル公開PDF）
+CFM_FT002,SF002,§§2.1–3.2、Tables1–4、Figs7–10、PDF pp.5–12,,全文の方法・結果を再確認（ローカル公開PDF）
+CFM_FT003,SF003,§3.1、Fig.3、§4、Table1、§5、Fig.6、PDF pp.6–11,,全文の方法・結果確認（出版社公開PDF）
+CFM_FA001,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本文該当節・大学書誌確認
+CFM_FIA01,SFI001,§§2–5; Figs. 10–13; Tables 1–2,,出版社PDF本文確認
+CFM_FIA02,SFI002,"§§4.2–4.5, Tables 1–2, Fig. 6",,KIT公開の著者本文確認
+CFM_FIA03,SFI005,§§3.1–3.2、§4、Tables 1・4、Fig. 6–7,,出版社本文確認
+CFM_FIA04,SFI006,Abstract; CNN-based tool wear classification model; Results & discussion,,出版社抄録・章抜粋確認、本文open 403
+CFM_FIA05,SFI008,出版社検索でAbstract/§4.6/Fig. 10–11説明を確認,,出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403
+CFM_FIA06,SFI010,"原稿p.1, §§2.5/3.1–3.2, Tables 1–2",,著者公開原稿の抄録・章抜粋確認、PDF本文open不成功
+CFM_FIA07,SFI012,"§3.1.1, Fig. 7, Table 3",,著者公開本文確認
+CFM_FIA08,SFI014,§§3–4、Table 1,,著者公開原稿確認
+CFM_FIA09,SFI016,Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract,,出版社本文確認
+CFM_FIA09,SMF001,Abstract,,抄録確認
+CFM_FIA09,SFI016,Deep learning models節（YOLO12sとGhost Convolutionsの説明）,,出版社本文確認
+CFM_MM001,MMS001,§3 Fig. 2、§5.4 Algorithm 2、Appendix A Table A1,,全文確認
+CFM_MM002,MMS002,§3.1–3.4、§4.2 Fig. 5,,出版社プレビュー・検索索引の原文確認
