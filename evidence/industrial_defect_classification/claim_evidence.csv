@@ -1,0 +1,231 @@
+﻿claim_id,source_id,locator,quote,verification
+CIT001,SIT001,§4.1 Fig.5,,原著本文の該当節・表確認
+CIT002,SIT001,§4.1–4.3 Fig.6–7,,原著本文の該当節・表確認
+CIT003,SIT001,§3.3 Fig.2–4,,原著本文の該当節・表確認
+CIT004,SIT001,§5.1・§5.3 Table 3,,原著本文の該当節・表確認
+CIT005,SIT001,§4.3・§5.1,,原著本文の該当節・表確認
+CIT006,SIT002,§5、Fig.17,,原著本文の該当節・表確認
+CIT007,SIT002,§2.1、§5,,原著本文の該当節・表確認
+CIT008,SIT002,§2–4、Fig.1,,原著本文の該当節・表確認
+CIT009,SIT002,§6.1 Table 8 / Fig.17,,原著本文の該当節・表確認
+CIT010,SIT002,§2.1、§6.1,,原著本文の該当節・表確認
+CIT011,SIT003,"§3.1, Table 1、Fig.1,2,5",,原著本文の該当節・表確認
+CIT012,SIT003,§3.1–3.3,,原著本文の該当節・表確認
+CIT013,SIT003,§3.2,,原著本文の該当節・表確認
+CIT014,SIT003,"§4 Tables 4,7",,原著本文の該当節・表確認
+CIT015,SIT003,§3.3,,原著本文の該当節・表確認
+CIT016,SIT004,§III.A Fig.2–3 Table I,,著者公開の原稿本文・表確認
+CIT017,SIT004,§III.A,,著者公開の原稿本文・表確認
+CIT018,SIT004,§III.B/D/E,,著者公開の原稿本文・表確認
+CIT019,SIT004,§IV Fig.5–6,,著者公開の原稿本文・表確認
+CIT020,SIT004,§III.A,,著者公開の原稿本文・表確認
+CIT021,SIT005,§IV.A Table III,,著者公開の原稿本文・表確認
+CIT022,SIT005,§III.A／Table III,,著者公開の原稿本文・表確認
+CIT023,SIT005,§III.B Table II,,著者公開の原稿本文・表確認
+CIT024,SIT005,§V.A Table V・§V.B,,著者公開の原稿本文・表確認
+CIT025,SIT005,§III.A §IV.B Table V,,著者公開の原稿本文・表確認
+CIT026,SIT006,§1 Fig.1、§4.1 Fig.3–5,,原著本文の該当節・表確認
+CIT027,SIT006,§1、§4.1,,原著本文の該当節・表確認
+CIT028,SIT006,§3、§4.2,,原著本文の該当節・表確認
+CIT029,SIT006,§4.3 Tables II–IV、Fig.6,,原著本文の該当節・表確認
+CIT030,SIT006,§4.1–4.2,,原著本文の該当節・表確認
+CIT031,SIT007,Methods: Dataset,,著者公開の原稿本文・表確認
+CIT032,SIT007,Methods: Dataset/Model Architecture,,著者公開の原稿本文・表確認
+CIT033,SIT007,Methods: Swin Transformer Backbone,,著者公開の原稿本文・表確認
+CIT034,SIT007,"Results Table 1, Fig.1",,著者公開の原稿本文・表確認
+CIT035,SIT007,Methods Table 6,,著者公開の原稿本文・表確認
+CIT036,SIT008,"Fabric defect identification datasets and preprocessing, Table 8",,公開原著の検索抽出本文の該当節・表確認
+CIT037,SIT008,Fabric defect identification datasets and preprocessing,,公開原著の検索抽出本文の該当節・表確認
+CIT038,SIT008,"Proposed XCottL-FebViT framework execution, Fig.4",,公開原著の検索抽出本文の該当節・表確認
+CIT039,SIT008,Results Tables 12/14,,公開原著の検索抽出本文の該当節・表確認
+CIT040,SIT008,Tables 8–9、Table 12・stratified K-fold cross-validation,,公開原著の検索抽出本文の該当節・表確認
+CIT041,SIT009,§3.2.5 Table 1,,著者公開の原稿本文・表確認
+CIT042,SIT009,§3.1–3.2、§4.2,,著者公開の原稿本文・表確認
+CIT043,SIT009,§3.2.3–3.2.5、§4.2.1 Table 2,,著者公開の原稿本文・表確認
+CIT044,SIT009,§4.6、§4.9 Tables 6–7,,著者公開の原稿本文・表確認
+CIT045,SIT009,§3.2.5、§4.2.2、§4.9,,著者公開の原稿本文・表確認
+CIT046,SIT010,§3.1.1 Fig.1,,原著本文の該当節・表確認
+CIT047,SIT010,§3.1.1,,原著本文の該当節・表確認
+CIT048,SIT010,§3、§4.4 Tables 3/5,,原著本文の該当節・表確認
+CIT049,SIT010,§4.2–4.3 Table 2、§4.4 Table 5,,原著本文の該当節・表確認
+CIT050,SIT010,§3.1.1,,原著本文の該当節・表確認
+CIT051,SIT011,Abstract、§3、Table 3,,原著本文の該当節・表確認
+CIT052,SIT011,§3.2–3.4、Fig.6,,原著本文の該当節・表確認
+CIT053,SIT011,§3.6 Fig.6,,原著本文の該当節・表確認
+CIT054,SIT011,§4.1–4.2 Table 13,,原著本文の該当節・表確認
+CIT055,SIT011,§3.4 Table 5,,原著本文の該当節・表確認
+CIT056,SIT012,抄録,,一次資料の公開抄録・プレビュー
+CIT057,SIT012,抄録,,一次資料の公開抄録・プレビュー
+CIT058,SIT012,抄録,,一次資料の公開抄録・プレビュー
+CIT059,SIT012,抄録,,一次資料の公開抄録・プレビュー
+CIT060,SIT013,Methodプレビュー,,一次資料の公開抄録・プレビュー
+CIT061,SIT013,Abstract、Methodプレビュー,,一次資料の公開抄録・プレビュー
+CIT062,SIT013,Abstract、Methodプレビュー,,一次資料の公開抄録・プレビュー
+CIT063,SIT014,抄録,,一次資料の公開抄録・プレビュー
+CIT064,SIT014,抄録,,一次資料の公開抄録・プレビュー
+CIT065,SIT014,Resultsプレビュー,,一次資料の公開抄録・プレビュー
+CIT066,SIT015,Datasetプレビュー,,一次資料の公開抄録・プレビュー
+CIT067,SIT015,Abstract,,一次資料の公開抄録・プレビュー
+CIT068,SIT015,Abstract／Conclusionプレビュー,,一次資料の公開抄録・プレビュー
+CIT069,SIT016,Abstract,,一次資料の公開抄録・プレビュー
+CIT070,SIT016,Abstract,,一次資料の公開抄録・プレビュー
+CIT071,SIT017,§4.1,,公開原著の検索抽出本文の該当節・表確認
+CIT072,SIT017,§4.1,,公開原著の検索抽出本文の該当節・表確認
+CIT073,SIT017,Abstract、§4.4,,公開原著の検索抽出本文の該当節・表確認
+CIT074,SIT017,§4.1,,公開原著の検索抽出本文の該当節・表確認
+CIV039,SIV022,§2.1 Image Collection／§2.2 Image Annotation,,著者版全文確認
+CIV049,SIV022,§2.1 Image Collection／§2.2 Image Annotation,,著者版全文確認
+CIV001,SIV001,付録 More details of MVTec-FS／Table 7,,全文確認
+CIV002,SIV001,Fig. 2／MVREC／Multi-View Region-Context Feature Extraction,,全文確認
+CIV003,SIV001,MVREC／Training-free Zip-Adapter Classifier、Experiments Setting,,全文確認
+CIV004,SIV001,Fig. 2／MVREC／Eq. (1)–(5),,全文確認
+CIV005,SIV001,MVTec-FS Dataset／Fig. 4／Comparison on Other Datasets,,全文確認
+CIV006,SIV001,MVTec-FS Dataset／Experiments Setting,,全文確認
+CIV007,SIV001,Table 1／Results on MVTec-FS Dataset,,全文確認
+CIV008,SIV001,Table 1,,全文確認
+CIV009,SIV001,Comparison on Other Datasets／Fig. 6,,全文確認
+CIV010,SIV001,Fig. 2／Table 1／Discussion and Conclusion,,全文確認
+CIV011,SIV002,§4.1.1 Datasets／pp.19606–19607,,全文確認
+CIV012,SIV002,§3.2.1／Fig. 2／§4.2.2／Table 4,,全文確認
+CIV013,SIV002,§3.2.1–3.2.3／Fig. 2,,全文確認
+CIV014,SIV002,§3.2／Fig. 2／§4.1.2／Table 4,,全文確認
+CIV015,SIV002,§4.1.1 Datasets／pp.19606–19607,,全文確認
+CIV016,SIV002,§4.1.1–4.1.2／Table 1／参照[29],,全文確認
+CIV017,SIV002,Table 1／p.19607,,全文確認
+CIV018,SIV002,Tables 2–3,,全文確認
+CIV019,SIV002,§4.1／Table 1,,全文確認
+CIV020,SIV002,§4.1.1／§4.2.2／Table 4,,全文確認
+CIV021,SIV003,§2.3／§2.6 Problem 1／Fig. 2,,著者版全文確認（2025年公開。会議は2024年）
+CIV022,SIV003,§2.3／§3.1／§3.4,,著者版全文確認（2025年公開。会議は2024年）
+CIV023,SIV003,§3.1／Fig. 5,,著者版全文確認（2025年公開。会議は2024年）
+CIV024,SIV003,§3.4 Eq. (18)–(23)／§4.1,,著者版全文確認（2025年公開。会議は2024年）
+CIV025,SIV003,§2.3 SEM Image Defect Data,,著者版全文確認（2025年公開。会議は2024年）
+CIV026,SIV003,§2.6／§4.2 Benchmarks and Baselines,,著者版全文確認（2025年公開。会議は2024年）
+CIV027,SIV003,§4.2–4.4／Tables 2–3,,著者版全文確認（2025年公開。会議は2024年）
+CIV028,SIV003,§4.3／Fig. 7,,著者版全文確認（2025年公開。会議は2024年）
+CIV029,SIV003,§2.3／§4.3–4.4／Tables 2–3,,著者版全文確認（2025年公開。会議は2024年）
+CIV030,SIV004,Fig. 1／Table 4,,全文確認
+CIV031,SIV004,§3.1／Fig. 1,,全文確認
+CIV032,SIV004,§3.2.2／Fig. 2,,全文確認
+CIV033,SIV004,§3.2／Table 2／Fig. 2,,全文確認
+CIV034,SIV004,§3.1／Table 1,,全文確認
+CIV035,SIV004,§3.1／§3.2実験手順／Table 1,,全文確認
+CIV036,SIV004,§4.1–4.2／Table 3／Fig. 3–4,,全文確認
+CIV037,SIV004,§4.3／Table 4,,全文確認
+CIV038,SIV004,§5.3 Limitations and Future Work,,全文確認
+CIV039,SIV004,§3.1／Table 3／§5.3,,全文確認
+CIV040,SIV005,§III-A Experimental Setup／p.36547,,全文確認
+CIV041,SIV005,§II-C／§III-B／pp.36547–36548,,全文確認
+CIV042,SIV005,§II-C／§III-A／pp.36547–36548,,全文確認
+CIV043,SIV005,§II-C／§III-A／pp.36547–36548,,全文確認
+CIV044,SIV005,§III-A／p.36547,,全文確認
+CIV045,SIV005,§III-A–C／Tables I–IV／pp.36547–36548,,全文確認
+CIV046,SIV005,"Tables I, III／p.36548",,全文確認
+CIV047,SIV005,"Tables II, IV／p.36548",,全文確認
+CIV048,SIV005,"§III-A, C／Tables I–II",,全文確認
+CIV049,SIV005,§III-B–C／Tables I–IV,,全文確認
+CIV050,SIV021,著者版PDF v2 Appendix A Figure 4（PDF p.13）／Appendix B.1（PDF p.14）,,著者プレプリントv2全文確認（2026-05-08）
+CIV051,SIV006,§3.1–3.3／§4.2,,著者プレプリントv2全文確認（2026-05-08）
+CIV052,SIV006,§3.2–3.3／§4.2／§4.4,,著者プレプリントv2全文確認（2026-05-08）
+CIV053,SIV006,§4.2／Table 2,,著者プレプリントv2全文確認（2026-05-08）
+CIV054,SIV006,§3.1／Appendix A–B.1,,著者プレプリントv2全文確認（2026-05-08）
+CIV055,SIV006,§4.1／§4.4,,著者プレプリントv2全文確認（2026-05-08）
+CIV056,SIV006,§4.2／Table 2,,著者プレプリントv2全文確認（2026-05-08）
+CIV057,SIV006,Table 2,,著者プレプリントv2全文確認（2026-05-08）
+CIV058,SIV006,§4.4／Table 3,,著者プレプリントv2全文確認（2026-05-08）
+CIV059,SIV006,§4.1／Tables 2–3／Appendix B.5,,著者プレプリントv2全文確認（2026-05-08）
+CIV060,SIV007,Table 1／§4.1／§4.2 Fig. 3,,全文確認
+CIV061,SIV007,§3／Fig. 1／§4.1,,全文確認
+CIV062,SIV007,§3.1／Table 1／§4.2 Table 4／Appendix A,,全文確認
+CIV063,SIV007,§3／Eqs. (3)–(8)／§4.1,,全文確認
+CIV064,SIV007,§4.1 Dataset and Experimental Settings,,全文確認
+CIV065,SIV007,§4.1 Dataset and Experimental Settings,,全文確認
+CIV066,SIV007,§4.2／Table 2,,全文確認
+CIV067,SIV007,§4.2／Fig. 3,,全文確認
+CIV068,SIV007,§4.1–4.2／Fig. 3,,全文確認
+CIV069,SIV008,§5.5.1／Table 2／補足Tables 7–11,,著者版全文確認
+CIV070,SIV008,§4.2／Fig. 2,,著者版全文確認
+CIV071,SIV008,§4.1.1／補足§8.1／Tables 7–11,,著者版全文確認
+CIV072,SIV008,§4.1–4.2／Fig. 2,,著者版全文確認
+CIV073,SIV008,§5.1／補足§9,,著者版全文確認
+CIV074,SIV008,§5.2／補足§11.1,,著者版全文確認
+CIV075,SIV008,"§5.3／§5.5.1–5.5.2／Tables 1, 4",,著者版全文確認
+CIV076,SIV008,§5.5.1／Table 2,,著者版全文確認
+CIV077,SIV008,Table 2／補足§11.1,,著者版全文確認
+CIV078,SIV008,"§5.3／Tables 1–2, 4",,著者版全文確認
+CIV079,SIV009,Table 5 Sample inference results,,全文確認
+CIV080,SIV009,CLIP–MDC architecture／Fig. 1／Inference,,全文確認
+CIV081,SIV009,CLIP–MDC architecture／Defect classification using text prompts,,全文確認
+CIV082,SIV009,CLIP–MDC architecture／Fig. 1,,全文確認
+CIV083,SIV009,Experiments／Tables 3–4,,全文確認
+CIV084,SIV009,Quantitative and qualitative analysis／Tables 3–5,,全文確認
+CIV085,SIV009,Tables 3–5／Evaluation metrics,,全文確認
+CIM001,SIM002,§3・Fig. 3、§4.1評価設定,,原著の日本語要約
+CIM002,SIM002,§4.1,,原著の日本語要約
+CIM003,SIM002,§3 Table 1、Fig. 3、公式公開JSON,,原著の日本語要約
+CIM003,SIM024,MVTec/zipper、MVTec/cable,,著者データ上の原語キーを確認
+CIM004,SIM002,§4.1 Table 2,,原著の日本語要約
+CIM005,SIM002,§3 Table 1、§4.1評価設定,,原著の日本語要約
+CIM006,SIM003,§3.1–3.2、Fig. 4,,原著の日本語要約
+CIM007,SIM003,§3.1–3.2,,原著の日本語要約
+CIM008,SIM003,§3.3、Figs. 4–6,,原著の日本語要約
+CIM009,SIM003,§4.2 Tables 1–3,,原著の日本語要約
+CIM010,SIM003,§3.3、§4.2,,原著の日本語要約
+CIM011,SIM004,§3 Fig. 3、§4.1,,原著の日本語要約
+CIM012,SIM004,§3、§4.1,,原著の日本語要約
+CIM013,SIM004,§2.1 Fig. 2、Table 1,,原著の日本語要約
+CIM014,SIM004,§4.1.3、Table 2 Category,,原著の日本語要約
+CIM015,SIM004,§4.1.1–4.1.3,,原著の日本語要約
+CIM016,SIM006,§2 Fig. 5、§3 Fig. 6,,原著の日本語要約
+CIM017,SIM006,§2.1–2.2,,原著の日本語要約
+CIM018,SIM006,§3、Tables A1–A4,,原著の日本語要約
+CIM019,SIM006,§4 Eq. 1、Table 3、Tables A1–A4,,原著の日本語要約
+CIM020,SIM006,§3 Table 1,,原著の日本語要約
+CIM021,SIM008,§3、§4.2,,原著の日本語要約
+CIM022,SIM008,§3,,原著の日本語要約
+CIM023,SIM008,§4.2 Defect Classification,,原著の日本語要約
+CIM023,SIM024,MVTec/zipper、MVTec/cable,,著者データ上の原語キーを確認
+CIM024,SIM008,§4 Table 2,,原著の日本語要約
+CIM025,SIM008,§4.1–4.2,,原著の日本語要約
+CIM026,SIM009,§3、§4.1,,原著の日本語要約
+CIM027,SIM009,§3,,原著の日本語要約
+CIM028,SIM009,§4.2、Table 1,,原著の日本語要約
+CIM028,SIM024,MVTec/zipper、MVTec/cable,,著者データ上の原語キーを確認
+CIM029,SIM009,§4 Table 1,,原著の日本語要約
+CIM030,SIM009,§4.1と学習データ記載,,原著の日本語要約
+CIM031,SIM010,§§3–4、Appendices A–B,,原著の日本語要約
+CIM032,SIM010,§3,,原著の日本語要約
+CIM033,SIM010,§4.1–4.2、Table 1,,原著の日本語要約
+CIM033,SIM024,MVTec/zipper、MVTec/cable,,著者データ上の原語キーを確認
+CIM034,SIM010,§4.2 Table 1,,原著の日本語要約
+CIM035,SIM010,§4.1、Appendix A,,原著の日本語要約
+CIM036,SIM011,§MAU-Set、§MAU-GPT、Experiments,,原著の日本語要約
+CIM037,SIM011,§MAU-GPT,,原著の日本語要約
+CIM038,SIM011,Experiments Table 5,,原著の日本語要約
+CIM038,SIM024,MVTec/zipper、MVTec/cable,,著者データ上の原語キーを確認
+CIM039,SIM011,Experiments Table 5,,原著の日本語要約
+CIM040,SIM011,§MAU-Set、Experiments,,原著の日本語要約
+CIM041,SIM012,§3.1、§4.1,,原著の日本語要約
+CIM042,SIM012,§3.1–3.3、§4.1,,原著の日本語要約
+CIM043,SIM012,§4.1、Table 1,,原著の日本語要約
+CIM043,SIM024,MVTec/zipper、MVTec/cable,,著者データ上の原語キーを確認
+CIM044,SIM012,§4.2 Table 1,,原著の日本語要約
+CIM045,SIM012,§3.3、§4.1,,原著の日本語要約
+CIM046,SIM013,§3.2、§4.1、Appendix B,,原著の日本語要約
+CIM047,SIM013,§3、Appendix A,,原著の日本語要約
+CIM048,SIM013,§4.1、Table 1,,原著の日本語要約
+CIM048,SIM024,MVTec/zipper、MVTec/cable,,著者データ上の原語キーを確認
+CIM049,SIM013,§4.1 Table 1,,原著の日本語要約
+CIM050,SIM013,§4.1、Appendices A–B,,原著の日本語要約
+CIR_IR001_labels,SIR001,Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3,,出版社本文の対象・方法・結果節確認
+CIR_IR001_input,SIR001,Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3,,出版社本文の対象・方法・結果節確認
+CIR_IR001_primary_model,SIR001,Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3,,出版社本文の対象・方法・結果節確認
+CIR_IR001_performance,SIR001,Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3,,出版社本文の対象・方法・結果節確認
+CIR_IR001_split,SIR001,Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3,,出版社本文の対象・方法・結果節確認
+CIR_IR001_limitations,SIR001,Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3,,出版社本文の対象・方法・結果節確認
+CIR_IR002_labels,SIR002,§§3.1–3.5、4、Tables1–2,,出版社本文の方法・評価節確認
+CIR_IR002_input,SIR002,§§3.1–3.5、4、Tables1–2,,出版社本文の方法・評価節確認
+CIR_IR002_primary_model,SIR002,§§3.1–3.5、4、Tables1–2,,出版社本文の方法・評価節確認
+CIR_IR002_performance,SIR002,§§3.1–3.5、4、Tables1–2,,出版社本文の方法・評価節確認
+CIR_IR002_split,SIR002,§§3.1–3.5、4、Tables1–2,,出版社本文の方法・評価節確認
+CIR_IR002_limitations,SIR002,§§3.1–3.5、4、Tables1–2,,出版社本文の方法・評価節確認

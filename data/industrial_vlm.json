@@ -1,0 +1,1968 @@
+{
+  "records": [
+    {
+      "id": "IV001",
+      "status": "主採用",
+      "year": 2025,
+      "authors": "Shuai Lyu, Rongchen Zhang, Zeqi Ma, Fangjian Liao, Dongmei Mo, Waikeung Wong",
+      "title": "MVREC: A General Few-shot Defect Classification Model Using Multi-View Region-Context",
+      "venue": "AAAI 2025",
+      "doi": "10.1609/aaai.v39i6.32634",
+      "url": "https://arxiv.org/html/2412.16897",
+      "model_family": "対照学習VLM由来（視覚塔＋マスク）",
+      "primary_model": "MVREC＋Zip-Adapter(-F)。事前学習済みAlphaCLIPがマスクと周囲文脈の多視点特徴を抽出。Zip-Aは視覚的類似度によるサポート検索、Zip-A-Fは投影・サポート特徴を微調整。推論はサポートのone-hotラベルに基づく。",
+      "baseline_models": "AlphaCLIP共通。CLIP-ZeroShot、CLIP-KNN、CLIP-ProtoNet、CLIP-Adapter、CLIP-LinearProb、Tip-Adapter(-F)。",
+      "domain": "工業外観検査",
+      "product": "テクスチャ5製品群と物体9製品群。金属ナット、ねじ、ケーブル、ボトル、カプセル、タイル、布等。",
+      "input_group": "画像＋ROIマスク＋少数参照画像",
+      "input": "欠陥画像と既知の欠陥インスタンスマスク、ラベル付きサポート画像・マスク。画像から欠陥を自力発見する性能とは別。",
+      "prompt": "主提案は推論時に自然言語プロンプトなし。CLIP-ZeroShot比較条件ではクラス記述をテキスト埋め込み化。",
+      "task": "欠陥インスタンス単位、製品別の単一ラベル種類分類",
+      "labels": "原文Table 7の例：bottle＝broken_large, broken_small, contamination。metal_nut＝bent, color, flip, scratch。transistor＝bent_lead, cut_lead, damaged_case, misplaced。全リストはTable 7。",
+      "class_count": "46種類（原文の全体集計）、製品群別の候補集合。",
+      "mixed": "一枚に複数欠陥がある元のcombined画像をインスタンスに分割し個別にラベル付け。",
+      "dataset": "MVTec-FS（MVTec ADの再注釈）、NEU-DET、PCB Defect Dataset、MTD、AITEX",
+      "data_size": "MVTec-FS 1,228欠陥画像、14製品群。種類別インスタンス数9–58。",
+      "split": "種類ごとに50%/50%に分け、訓練側から各クラス1/3/5枚をサポート抽出、固定のテスト側をクエリ。サポートを5回抽出し平均。",
+      "learning": "N-way K-shot。Zip-Aは追加学習なし、Zip-A-Fは交差エントロピー＋triplet loss。",
+      "pretraining": "AlphaCLIP（対照事前学習VLM由来）。",
+      "metrics": "種類分類Accuracy（製品群別およびその平均）。",
+      "performance": "MVTec-FSのZip-A-Fは1/3/5-shotで73.7%/86.1%/89.4%。同表のテキスト0-shot比較は37.4%。",
+      "class_results": "5-shotの製品群別例：Grid 80.8%、Tile 97.6%、Transistor 100.0%。これは欠陥個別ラベルの成績とは別。",
+      "generalization": "他の4工業データセットでもデータセット内でサポートを再抽出して評価。サポートなしの工場外移植は未確認。",
+      "limitations": "マスク付き欠陥インスタンスが前提。製品群をまたぐ単一46クラス分類のスコアとしては扱えない。",
+      "code_data": "著者コード https://github.com/ShuaiLYU/MVREC",
+      "verification": "全文確認",
+      "locator": "付録 More details of MVTec-FS／Table 7／Fig. 2／MVREC／Multi-View Region-Context Feature Extraction／MVREC／Training-free Zip-Adapter Classifier、Experiments Setting／Fig. 2／MVREC／Eq. (1)–(5)／MVTec-FS Dataset／Fig. 4／Comparison on Other Datasets／MVTec-FS Dataset／Experiments Setting／Table 1／Results on MVTec-FS Dataset／Table 1／Comparison on Other Datasets／Fig. 6／Fig. 2／Table 1／Discussion and Conclusion",
+      "source_ids": "SIV001／SIV020"
+    },
+    {
+      "id": "IV002",
+      "status": "主採用",
+      "year": 2026,
+      "authors": "Huimin Li, Boxuan Hu, Yulin Zhang, Xiuzhuang Zhou, Junlin Hu",
+      "title": "Hyperbolic Defect Feature Synthesis for Few-Shot Defect Classification",
+      "venue": "IEEE/CVF CVPR 2026",
+      "doi": "未確認",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Hyperbolic_Defect_Feature_Synthesis_for_Few-Shot_Defect_Classification_CVPR_2026_paper.pdf",
+      "model_family": "対照学習VLM由来（視覚塔＋マスク）",
+      "primary_model": "HypDFS。AlphaCLIP ViT-L/14で特徴を得て、双曲空間の欠陥プロトタイプと分布モデルで特徴を合成。欠陥残差アダプタと階層対照学習で分類特徴を適応。",
+      "baseline_models": "CLIP-A、CLIP-ProtoNet、CLIP-KNN、CLIP-LinearProb、Tip-A-F、Zip-A-F",
+      "domain": "表面欠陥検査",
+      "product": "MVTec-FSの14製品群、磁性タイル",
+      "input_group": "画像＋ROIマスク＋少数参照画像",
+      "input": "欠陥画像。サポート学習は全体とクロップ双方の特徴を使用し、AlphaCLIPのマスク有無を比較。Fig. 2の評価はクエリ全体画像からの分類。クエリで用いるマスクの詳細は未確認。",
+      "prompt": "図2の評価経路は画像エンコーダと学習済みアダプタ。候補テキストを用いない。",
+      "task": "少数ショットの欠陥種類分類。MVTec-FSは製品別。",
+      "labels": "MTD＝blowhole, crack, break, fray, uneven。MVTec-FSの例：scratches, dents, dirt, deformation（論文中の説明語。評価ラベルの全原語はMVREC Table 7参照）。",
+      "class_count": "MTD 5欠陥種類、MVTec-FS 46種類（14製品群別）",
+      "mixed": "未確認",
+      "dataset": "MVTec-FS、Magnetic Tile Defect（MTD）",
+      "data_size": "MVTec-FS 1,228欠陥画像（種類あたり9–58インスタンス）、MTD 392欠陥画像。",
+      "split": "MVTec-FS既定の訓練／テスト（引用元MVRECは種類ごと50%/50%）。K=1/3/5。MTDの厳密な分割枚数・再抽出回数は未確認。",
+      "learning": "ラベル付き1/3/5-shot、潜在特徴合成＋階層対照学習＋交差エントロピー。",
+      "pretraining": "AlphaCLIP ViT-L/14。CLIP/AlphaCLIPのViT-B/16等もアブレーション。",
+      "metrics": "平均種類分類Accuracy。",
+      "performance": "Table 1。1/3/5-shotはMVTec-FS 79.3%/89.3%/91.7%、MTD 59.4%/78.6%/86.4%。Zip-A-FはMVTec-FS 73.7%/86.1%/89.4%、MTD 55.4%/67.6%/78.6%。",
+      "class_results": "Tables 2–3にMVTec-FS製品群別結果。個別欠陥種類の分類スコアは未確認。",
+      "generalization": "同一手法をMVTec-FSとMTDで個別評価。工場・設備を跨ぐホールドアウト評価は未確認。",
+      "limitations": "マスク注釈付き画像で評価。欠陥検出込みの総合性能および未知製品へのゼロショット性能は未確認。",
+      "code_data": "MVTec-FSとMTDは既存ベンチマーク。提案コード公開未確認。",
+      "verification": "全文確認",
+      "locator": "§4.1.1 Datasets／pp.19606–19607／§3.2.1／Fig. 2／§4.2.2／Table 4／§3.2.1–3.2.3／Fig. 2／§3.2／Fig. 2／§4.1.2／Table 4／§4.1.1 Datasets／pp.19606–19607／§4.1.1–4.1.2／Table 1／参照[29]／Table 1／p.19607／Tables 2–3／§4.1／Table 1／§4.1.1／§4.2.2／Table 4",
+      "source_ids": "SIV002"
+    },
+    {
+      "id": "IV003",
+      "status": "主採用",
+      "year": 2024,
+      "authors": "Qian Jin, Yuqi Jiang, Xudong Lu, Yumeng Liu, Yining Chen, Dawei Gao, Qi Sun, Cheng Zhuo",
+      "title": "SEM-CLIP: Precise Few-Shot Learning for Nanoscale Defect Detection in Scanning Electron Microscope Image",
+      "venue": "IEEE/ACM ICCAD 2024",
+      "doi": "10.1145/3676536.3676752",
+      "url": "https://arxiv.org/html/2502.14884",
+      "model_family": "対照学習VLM（テキスト枝＋視覚分類ヘッド）",
+      "primary_model": "SEM-CLIP。ViT-B/16+の複数層の視覚埋め込みとテキストの類似度確率に、各層CLSから学習した分類ヘッドの確率を加重和（後者の重みα=0.8）。",
+      "baseline_models": "ImageNet-21K事前学習のViT、ResNet101、ResNet50+ViT、EfficientNet。",
+      "domain": "半導体製造外観検査",
+      "product": "12インチ55 nm CMOS製造ラインのウェハ表面",
+      "input_group": "画像＋候補ラベル・テキスト",
+      "input": "製造ラインで得たグレースケールSEM画像。クエリ画像と、全クラス共通で事前定義した候補文を比較。学習時に少数画像を使用。",
+      "prompt": "欠陥形態の専門知識をstate-level文に入れ、SEMの暗さや焦点ずれを記述するtemplate-level文と合成。固定の候補文で全画像を評価。",
+      "task": "画像単位の単一ラベル種類分類（画素分割は別評価）",
+      "labels": "good（非欠陥）, bridges, copper residues, holes, infilm defects, particles, scratches（§2.3の原語）。",
+      "class_count": "6欠陥種類＋正常＝7",
+      "mixed": "未確認",
+      "dataset": "製造ライン取得の社内SEM画像",
+      "data_size": "1,332画像（正常226、欠陥1,106）。欠陥内訳はbridges 59、copper residues 141、holes 230、infilm defects 77、particles 455、scratches 144。",
+      "split": "分類比較は10-shot/クラス、各モデル同一テスト。独立テスト枚数・ウェハ単位分割は本文で未確認。",
+      "learning": "10-shot分類ヘッド微調整＋固定テキスト類似度。",
+      "pretraining": "LAION-400Mで事前学習したCLIP ViT-B/16+。",
+      "metrics": "分類Accuracy、Precision、Recall、F1。平均方式は未確認。",
+      "performance": "分類10-shotでAccuracy 83.7%、Precision 87.2%、Recall 86.7%、F1 84.4%。視覚ヘッドのみのアブレーションはAcc 83.6%/F1 84.3%、テキスト類似度のみは25.7%/16.0%。",
+      "class_results": "Fig. 7は10-shot混同行列。粒子と膜内欠陥の形態が近く誤認が見られる。",
+      "generalization": "別工場、別世代工程、未知欠陥の独立分類評価は未確認。",
+      "limitations": "単一製造ライン、クラス不均衡。テキスト併用の上積みは同アブレーションでAcc 0.1ポイント。",
+      "code_data": "社内データ。データ・コードの公開先は未確認。",
+      "verification": "著者版全文確認（2025年公開。会議は2024年）",
+      "locator": "§2.3／§2.6 Problem 1／Fig. 2／§2.3／§3.1／§3.4／§3.1／Fig. 5／§3.4 Eq. (18)–(23)／§4.1／§2.3 SEM Image Defect Data／§2.6／§4.2 Benchmarks and Baselines／§4.2–4.4／Tables 2–3／§4.3／Fig. 7／§2.3／§4.3–4.4／Tables 2–3",
+      "source_ids": "SIV003"
+    },
+    {
+      "id": "IV004",
+      "status": "主採用",
+      "year": 2025,
+      "authors": "Sang-Jeong Lee",
+      "title": "Few-Shot Adaptation of Foundation Vision Models for PCB Defect Inspection",
+      "venue": "Journal of Imaging 11(11), 415",
+      "doi": "10.3390/jimaging11110415",
+      "url": "https://www.mdpi.com/2313-433X/11/11/415",
+      "model_family": "対照学習VLM由来（CLIP視覚塔のみ）＋自己教師ありViT比較",
+      "primary_model": "CLIP-ViT-B/16、DINOv2-S/14にLinear Probe、LoRA、Deep Visual Prompt Tuning（VPT）を比較。VPTでは画像ViT各層に長さ8の学習可能トークン。",
+      "baseline_models": "ResNet50、EfficientNet-B0、Linear Probe、LoRA、DINOv2-S/14",
+      "domain": "電子基板外観検査",
+      "product": "PCB",
+      "input_group": "画像のみ（正解ROIクロップ）",
+      "input": "DeepPCBのtested画像から正解bboxをクロップ。CLIP 224²、DINOv2 518²。参照画像・差分画像・テキスト入力は使わない。",
+      "prompt": "視覚トークンのVPT。自然言語プロンプトや推論時のテキスト塔を用いる方式ではない。",
+      "task": "欠陥パッチ単位、単一ラベル種類分類",
+      "labels": "Mousebite, Open, Pinhole, Short, Spur, Spurious Copper（Table 4）",
+      "class_count": "6欠陥種類",
+      "mixed": "評価単位は単一正解bbox、画像全体の複数欠陥処理は未評価。",
+      "dataset": "DeepPCB-derived（欠陥bboxから生成）",
+      "data_size": "欠陥パッチ10,013、train 6,975 / validation 1,009 / test 2,029。",
+      "split": "欠陥種類層化7:1:2、k=5/10/20はtrainから種類ごと抽出、validation/test固定。試行3回平均の記載。基板や原画像IDでの群分けは未確認。",
+      "learning": "ラベル付き少数ショットおよび全データでパラメータ効率的微調整。",
+      "pretraining": "CLIP対照視覚・言語事前学習。DINOv2は自己教師あり視覚事前学習。",
+      "metrics": "Accuracy、macro-F1、macro-AUPRC、クラス別Accuracy。",
+      "performance": "全データTable 3のCLIP-VPTテストはAcc 0.990 / macro-F1 0.991 / macro-AUPRC 0.998。CLIP-Linear 0.971 / 0.972 / 0.991、CLIP-LoRA 0.969 / 0.971 / 0.992。DINOv2-VPT 0.988 / 0.988 / 0.998。少数ショットはFig. 3–4。",
+      "class_results": "全データCLIP-VPT Table 4、ラベル順のクラス別Accuracy 0.980 / 0.988 / 0.997 / 0.997 / 0.988 / 0.997。",
+      "generalization": "他PCBデータセットへの同プロトコル検証は今後の計画。",
+      "limitations": "既知の正解bboxによる分類であり、全基板画像からの検出・分類とは条件が異なる。Table 3のCNNはテストAcc 0.993–0.994でCLIP-VPT 0.990を上回る。 DeepPCBの元画像はPCBのCCD実撮像だが、データセット著者が試験画像に人工欠陥も手作業で追加。自然発生欠陥と追加欠陥を分けた評価は未確認。",
+      "code_data": "DeepPCB https://github.com/tangsanli5201/DeepPCB。実験コードの公開先は未確認。",
+      "verification": "全文確認",
+      "locator": "Fig. 1／Table 4／§3.1／Fig. 1／§3.2.2／Fig. 2／§3.2／Table 2／Fig. 2／§3.1／Table 1／§3.1／§3.2実験手順／Table 1／§4.1–4.2／Table 3／Fig. 3–4／§4.3／Table 4／§5.3 Limitations and Future Work／§3.1／Table 3／§5.3",
+      "source_ids": "SIV004／SIV022"
+    },
+    {
+      "id": "IV005",
+      "status": "主採用",
+      "year": 2026,
+      "authors": "Hoang Long Dinh, Diem Vuong Doan, Ngoc Khoat Nguyen, Duy Trung Nguyen, Huy Hoang Hoang",
+      "title": "Autonomous Defect Classification in Manufacturing: A Novel Few-Shot Vision-Language Modeling Approach",
+      "venue": "Engineering, Technology & Applied Science Research 16(3), 36545–36551",
+      "doi": "10.48084/etasr.18859",
+      "url": "https://etasr.com/index.php/ETASR/article/download/18859/6787/94416",
+      "model_family": "対照学習VLM由来（few-shot視覚プロトタイプ）＋テキストzero-shot設計",
+      "primary_model": "VLM-AOIのStage 2はCLIP ViT-B/32。数値比較のfew-shot条件はクラス別の画像プロトタイプとROIの類似度。設計上のzero-shot枝はクラス文とのコサイン類似度。",
+      "baseline_models": "ResNet-50 30-shot（既知4クラスのみ学習）、CLIPテキストzero-shotの設計。",
+      "domain": "電子基板外観検査",
+      "product": "PCB",
+      "input_group": "画像のみ（正解ROI）＋少数参照画像。別設計に候補文。",
+      "input": "評価ではDeepPCBの正解bboxを切り出した224×224画像。few-shotは30枚/種の視覚プロトタイプを使用。",
+      "prompt": "zero-shot設計では欠陥種と正常領域を記述する自然言語ライブラリ。主要定量表のfew-shotは画像プロトタイプを利用。",
+      "task": "欠陥パッチの種類分類（位置推定を除くStage 2）",
+      "labels": "Missing_hole, Mouse_bite, Open_circuit, Short, Spur, Spurious_copper",
+      "class_count": "6種類。Seen 4、Unseen 2（ベースライン基準）",
+      "mixed": "未確認",
+      "dataset": "DeepPCB",
+      "data_size": "評価クエリはSeen 1,833、Unseen 940。VLM-AOIのサポートは6種×30＝180。",
+      "split": "Seen＝Mouse_bite/Open_circuit/Short/Spur、Unseen＝Missing_hole/Spurious_copper。VLM-AOIは全6種のサポートを受け、ResNet-50は4種×30で学習。群単位分割は未確認。",
+      "learning": "few-shot 30枚/種、プロトタイプ分類。別枝のzero-shotはテキスト埋め込み。",
+      "pretraining": "CLIP ViT-B/32。",
+      "metrics": "Overall accuracy、precision、recall、F1、時間。",
+      "performance": "Tables I/IIIのVLM-AOI k=30はUnseen Acc 82.9%/F1 0.898、Seen Acc 61.3%/F1 0.643。ResNet-50は0.0%/0.000と78.3%/0.780。時間18.202 msと16.036 ms。",
+      "class_results": "Tables II/IVのVLM-AOI F1：Missing_hole 0.990、Mouse_bite 0.683、Open_circuit 0.669、Short 0.776、Spur 0.445、Spurious_copper 0.807。",
+      "generalization": "ベースラインに未学習の2種類を比較。提案には各30枚のラベル付き画像を与えており、未知種類を未提示のまま分類する評価ではない。",
+      "limitations": "正解bboxが前提。提案6種とベースライン4種でサポート条件が非対称。82.9%はfew-shotであり、テキストzero-shotの定量値はTables I–IVにない。 DeepPCBの元画像はPCBのCCD実撮像だが、データセット著者が試験画像に人工欠陥も手作業で追加。自然発生欠陥と追加欠陥を分けた評価は未確認。",
+      "code_data": "公開DeepPCB。実験コード公開未確認。",
+      "verification": "全文確認",
+      "locator": "§III-A Experimental Setup／p.36547／§II-C／§III-B／pp.36547–36548／§II-C／§III-A／pp.36547–36548／§II-C／§III-A／pp.36547–36548／§III-A／p.36547／§III-A–C／Tables I–IV／pp.36547–36548／Tables I, III／p.36548／Tables II, IV／p.36548／§III-A, C／Tables I–II／§III-B–C／Tables I–IV",
+      "source_ids": "SIV005／SIV022"
+    },
+    {
+      "id": "IV006",
+      "status": "主採用",
+      "year": 2026,
+      "authors": "Shuxian Zhao, Jie Gui, Baosheng Yu, Dacheng Tao",
+      "title": "SteelDefectX: A Multi-Form Vision-Language Dataset and Benchmark for Steel Surface Defect Analysis",
+      "venue": "arXiv:2603.21824 v2",
+      "doi": "10.48550/arXiv.2603.21824",
+      "url": "https://arxiv.org/html/2603.21824v2",
+      "model_family": "対照学習VLM（視覚残差アダプタ＋テキスト候補）",
+      "primary_model": "CLIP-Adapterによる各CLIP変種の視覚側適応。評価は画像と各ラベル文の埋め込み類似度最大のラベル。中心結果はLong-CLIP ViT-L/14。",
+      "baseline_models": "CLIP、OpenCLIP、EVA-CLIP、Long-CLIP、FG-CLIPのViT-B/16・L/14。外部転移は未適応Long-CLIPとも比較。",
+      "domain": "鉄鋼表面外観検査",
+      "product": "鋼材。外部転移はアルミ表面、継目無鋼管。",
+      "input_group": "画像＋候補ラベル・テキスト",
+      "input": "公開の鋼表面欠陥画像を256×256に統一。分類時はクエリ画像と全ラベル候補文。マスク由来の属性は学習時T3等の監督に使われ、分類時のT0/T1は候補側。",
+      "prompt": "T0＝欠陥名、T1＝欠陥名・典型視覚属性・想定原因のクラス記述。学習文T2＝自然文、T3＝構造化属性、T4＝テンプレート文。転移時は欠陥名テンプレートを各外部セットで統一。",
+      "task": "欠陥画像の単一ラベル25種類分類（分割・検索は別）",
+      "labels": "Crazing, Inclusion, Patches, Pitted surface, Punching, Rolled in scale, Water spot, Welding line, Oil spot, Crescent gap, Silk spot, Waist folding, Rolled pit, Bright scratch, Crease, Dark scratches, Secondary rust skin, White rust, Iron scale compression, Red iron sheet, Iron sheet ash, Oxide scale of plate system, Oxide scale of temperature system, Finishing roll printing, Slag Inclusion",
+      "class_count": "25欠陥種類",
+      "mixed": "未確認",
+      "dataset": "SteelDefectX（NEU、GC10、X-SDD、S3Dを統合し、FSC-20とESDIs-SODの選別データも利用）",
+      "data_size": "7,778画像、クラス別50–795画像。",
+      "split": "データセット公式train/validation 7:3。独立テスト分割の記載なし。外部転移はMSD-ClsとCGFSDS-9。",
+      "learning": "CLIP-Adapter、視覚側の軽量残差アダプタ、双方向交差エントロピー20 epochs。",
+      "pretraining": "各CLIP既存チェックポイントの事前学習を利用。",
+      "metrics": "全体Accuracy（Acc）と平均クラスAccuracy（mAcc）。",
+      "performance": "Table 2 Long-CLIP ViT-L/14、T3学習→T0評価はAcc 94.45%／mAcc 93.66%。同T3→T1は93.12%／90.70%。T2→T0は93.63%／92.56%。",
+      "class_results": "mAcc 93.66%。Table 2の個別欠陥種の成績は未確認。",
+      "generalization": "Table 3 Long-CLIP ViT-L/14のT2適応後、アルミ29.03%・継目無鋼管40.18% Acc（未適応ゼロショット8.60%・25.11%）。ターゲット候補ラベル文は既知。",
+      "limitations": "v2の条件を採用。統合集合の検証と外部転移の成績差が大きい。公開データ統合の工場・ロット単位分割は未確認。",
+      "code_data": "著者コード・データ https://github.com/Zhaosxian/SteelDefectX",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）",
+      "locator": "Appendix A／Appendix B.1／Figs. 5–6／§3.1–3.3／§4.2／§3.2–3.3／§4.2／§4.4／§4.2／Table 2／§3.1／Appendix A–B.1／§4.1／§4.4／§4.2／Table 2／Table 2／§4.4／Table 3／§4.1／Tables 2–3／Appendix B.5",
+      "source_ids": "SIV006／SIV021"
+    },
+    {
+      "id": "IV007",
+      "status": "主採用",
+      "year": 2026,
+      "authors": "Ziyue Wang, Yichen Yang, Jianning Chu, Yikai Zang, Zhongdi She, Weikang Fang, Ruoxin Wang",
+      "title": "YOLO-LA: Prototype-Based Vision–Language Alignment for Silicon Wafer Defect Pattern Detection",
+      "venue": "Micromachines 17(1), 67（号年2026、オンライン公開2025-12-31）",
+      "doi": "10.3390/mi17010067",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12844300/",
+      "model_family": "対照型の画像・言語整合（YOLO＋文エンコーダ、CLIP系チェックポイント不使用）",
+      "primary_model": "YOLO-LA。凍結YOLO画像埋め込みに軽量射影を適用し、凍結MiniLM-L6-v2で作ったクラス文プロトタイプとのコサイン類似度で分類。",
+      "baseline_models": "YOLOv8-N、YOLOv10-N、YOLOv11-N、YOLOv12-Nの各分類バックボーン。",
+      "domain": "半導体ウェハ検査",
+      "product": "シリコンウェハのウェハマップ。SEM写真とは別の視覚データ。",
+      "input_group": "ウェハマップ画像＋候補ラベル文プロトタイプ",
+      "input": "製造現場由来のWM-811Kウェハマップを128×128×3に変換。各欠陥クラスの固定自然言語記述を候補側に付与。",
+      "prompt": "クラス別に欠陥の空間分布・形状を自然文で定義し固定プロトタイプ化。標準・詳細・簡潔な文を比較。",
+      "task": "ウェハマップ単位の閉集合欠陥パターン分類",
+      "labels": "Center, Donut, Edge_Ring, Edge_Loc, Loc, Random, Scratch, Near_full。元データには正常Noneも存在。論文のFig. 3本文はBackgroundにも言及。",
+      "class_count": "8欠陥パターン。元データのNoneと実験節のBackgroundの対応・寄与は未確認。",
+      "mixed": "未確認",
+      "dataset": "WM-811K",
+      "data_size": "元811,457ウェハ、ラベルあり172,950。評価実験に欠陥パターン付き25,519画像を使用と記載。",
+      "split": "層化train/test 80:20、seed 42。trainからvalidationを別抽出（比率未確認）。",
+      "learning": "ラベル付き閉集合学習。YOLO学習後に凍結し、固定文プロトタイプに対する交差エントロピーで射影を学習。",
+      "pretraining": "YOLOのImageNet初期化とMiniLM-L6-v2。CLIPの画像・テキスト事前学習対を使用する方式とは異なる。",
+      "metrics": "Accuracy。プロンプト／凍結設定のアブレーションでmacro-F1。",
+      "performance": "Table 2 YOLOv10-N＋言語整合85.75% Acc、同バックボーンのみ83.50%（+2.25ポイント）。YOLOv12-N＋言語整合85.06%、同バックボーン83.48%。",
+      "class_results": "Fig. 3の混同行列はYOLOベースライン。提案のクラス別数値は未確認。",
+      "generalization": "単一ベンチマーク、分割内評価。外部工場・未知パターンの独立実証未確認。",
+      "limitations": "欠陥マップ形状の分類であり、光学/SEM表面写真における外観欠陥そのものとは別。背景クラスの記述が節間で明確でない。",
+      "code_data": "公開WM-811K。提案コードは未確認。",
+      "verification": "全文確認",
+      "locator": "Table 1／§4.1／§4.2 Fig. 3／§3／Fig. 1／§4.1／§3.1／Table 1／§4.2 Table 4／Appendix A／§3／Eqs. (3)–(8)／§4.1／§4.1 Dataset and Experimental Settings／§4.1 Dataset and Experimental Settings／§4.2／Table 2／§4.2／Fig. 3／§4.1–4.2／Fig. 3",
+      "source_ids": "SIV007"
+    },
+    {
+      "id": "IV008",
+      "status": "関連",
+      "year": 2025,
+      "authors": "Ylli Sadikaj, Hongkuan Zhou, Lavdim Halilaj, Stefan Schmid, Steffen Staab, Claudia Plant",
+      "title": "MultiADS: Defect-aware Supervision for Multi-type Anomaly Detection and Segmentation in Zero-Shot Learning",
+      "venue": "IEEE/CVF ICCV 2025",
+      "doi": "未確認",
+      "url": "https://arxiv.org/html/2504.06740",
+      "model_family": "対照学習VLM（欠陥種文＋局所パッチ整合）",
+      "primary_model": "MultiADS。CLIPのテキスト埋め込みと線形アダプタ付き局所画像特徴を整合し、正常＋K欠陥種の画素別マップを出す。MultiADS-Fは製品別に候補種を制限。",
+      "baseline_models": "WinCLIP、April-GAN、AnomalyCLIP、AdaCLIP等。",
+      "domain": "工業外観検査",
+      "product": "複数製品。部品、ねじ、ケーブル、カプセル等。",
+      "input_group": "画像＋候補ラベル・テキスト",
+      "input": "画像、欠陥種・正常を記述する候補テキスト。few-shotには正常参照画像を追加する設定あり。",
+      "prompt": "Knowledge Base for Anomaliesの欠陥種・外観記述を製品名や撮像テンプレートと合成。",
+      "task": "種類付き画素分割（MTAS）。画像レベル検知は正常／異常の二値評価。",
+      "labels": "Table 2の評価例：Extra, Stuck, Bent, Hole, Pit, Contamin., Scratch, Damage。対象データセットごとの候補は補足Tables 7–11。",
+      "class_count": "データセット別K欠陥＋正常。",
+      "mixed": "Figure 4に同一画像の複数種類を別マスクで出す例。訓練ではcombinedを除外し、テストには含める。",
+      "dataset": "MVTec-AD、VisA、MPDD、MAD-real/MAD-sim、Real-IAD",
+      "data_size": "データセット別。補足Tables 12–18参照。",
+      "split": "別データセットへのzero-shot転移。例：MVTec-ADで学習、VisAやMPDDでテスト。訓練からcombinedを除外。",
+      "learning": "補助データで欠陥種を学習し、ターゲットにテキスト候補を与えてzero-shot種類分割。",
+      "pretraining": "CLIP。",
+      "metrics": "欠陥種分割は画素macro-AUROC、macro-F1、macro-AP。画像レベルは二値。",
+      "performance": "Table 1のMVTec-AD→VisAは画素AUROC/F1/AP 93.6/22.3/24.8%、→MPDD 95.2/42.8/53.0%。画像単位の種類分類精度としては扱わない。",
+      "class_results": "Table 2の画素例：未学習PitのAUROC/F1/AP 97.08/6.15/1.01%、既学習Hole 99.55/12.64/25.19%。",
+      "generalization": "補助データで未観測の種類に評価例あり（画素単位）。",
+      "limitations": "カテゴリ別画素指標と二値画像指標であり、画像単位の欠陥種類選択精度は未確認。",
+      "code_data": "著者版補足§8.1がテキストプロンプトをコードへ添付すると記載。",
+      "verification": "著者版全文確認",
+      "locator": "§5.5.1／Table 2／補足Tables 7–11／§4.2／Fig. 2／§4.1.1／補足§8.1／Tables 7–11／§4.1–4.2／Fig. 2／§5.1／補足§9／§5.2／補足§11.1／§5.3／§5.5.1–5.5.2／Tables 1, 4／§5.5.1／Table 2／Table 2／補足§11.1／§5.3／Tables 1–2, 4",
+      "source_ids": "SIV008"
+    },
+    {
+      "id": "IV009",
+      "status": "関連",
+      "year": 2026,
+      "authors": "Taewon Ha, Chaeseon Hwang, Jongpil Jeong",
+      "title": "CLIP-MDC: CLIP encoder based multimodal defect classification with synthetic anomaly generation for real-time surface defect detection",
+      "venue": "Journal of Intelligent Manufacturing",
+      "doi": "10.1007/s10845-025-02773-4",
+      "url": "https://link.springer.com/article/10.1007/s10845-025-02773-4",
+      "model_family": "対照学習VLMの学習時監督（推論は画像のみ）",
+      "primary_model": "SuperSimpleNet系の分類・分割ヘッド。学習時にCLIPの画像／欠陥文の類似度を利用、推論時にCLIPを無効化し分類インデックスを定型文に戻す。",
+      "baseline_models": "SuperSimpleNet等。",
+      "domain": "工業外観検査",
+      "product": "MVTec ADの複数製品、KSDD2表面画像",
+      "input_group": "画像のみ（学習時のみ欠陥文）",
+      "input": "試験時の画像のみ。訓練時に合成異常特徴と製品・欠陥種の記述を利用。",
+      "prompt": "学習時に製品と欠陥名の組合せ文。推論はテキストを入力せず分類結果を文章化。",
+      "task": "画像レベルの種類推定例＋二値検出評価＋画素分割。定量的な種類分類ベンチマークは未確認。",
+      "labels": "Table 5掲載例：broken small, poke, crack, good condition。全クラスの種類分類精度は未確認。",
+      "class_count": "未確認",
+      "mixed": "未確認",
+      "dataset": "MVTec AD、KSDD2",
+      "data_size": "未確認",
+      "split": "未確認",
+      "learning": "合成異常を活用する監督・弱監督学習。",
+      "pretraining": "CLIP",
+      "metrics": "定量は二値AUROC、AUPRO等。種類名は推論例。",
+      "performance": "Table 5は種類名予測例と推論時間（平均約6.6 ms、A100）。Tables 3–4は二値検出・画素局在の評価。種類Accuracy／F1は未確認。",
+      "class_results": "未確認",
+      "generalization": "未確認",
+      "limitations": "例示をカテゴリ識別精度に換算しない。公開された定量結果は二値検出／画素局在の尺度。",
+      "code_data": "未確認",
+      "verification": "全文確認",
+      "locator": "Table 5 Sample inference results／CLIP–MDC architecture／Fig. 1／Inference／CLIP–MDC architecture／Defect classification using text prompts／CLIP–MDC architecture／Fig. 1／Experiments／Tables 3–4／Quantitative and qualitative analysis／Tables 3–5／Tables 3–5／Evaluation metrics",
+      "source_ids": "SIV009"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SIV021",
+      "title": "SteelDefectX: A Multi-Form Vision-Language Dataset and Benchmark for Steel Surface Defect Analysis",
+      "publisher": "arXiv v2",
+      "year": 2026,
+      "url": "https://arxiv.org/pdf/2603.21824v2",
+      "doi": "10.48550/arXiv.2603.21824",
+      "type": "著者プレプリントPDF",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "PDF全文確認",
+      "saved_path": "",
+      "locator": "著者版PDF v2 Appendix A Figure 4（PDF p.13）／Appendix B.1（PDF p.14）"
+    },
+    {
+      "source_id": "SIV022",
+      "title": "Online PCB Defect Detector On A New PCB Defect Dataset",
+      "publisher": "arXiv",
+      "year": 2019,
+      "url": "https://arxiv.org/html/1902.06197",
+      "doi": "10.48550/arXiv.1902.06197",
+      "type": "データセット原著・著者公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者版全文確認",
+      "saved_path": "",
+      "locator": "§2.1 Image Collection／§2.2 Image Annotation"
+    },
+    {
+      "source_id": "SIV001",
+      "title": "MVREC: A General Few-shot Defect Classification Model Using Multi-View Region-Context",
+      "publisher": "AAAI 2025",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2412.16897",
+      "doi": "10.1609/aaai.v39i6.32634",
+      "type": "著者公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "付録 More details of MVTec-FS／Table 7／Fig. 2／MVREC／Multi-View Region-Context Feature Extraction／MVREC／Training-free Zip-Adapter Classifier、Experiments Setting／Fig. 2／MVREC／Eq. (1)–(5)／MVTec-FS Dataset／Fig. 4／Comparison on Other Datasets／MVTec-FS Dataset／Experiments Setting／Table 1／Results on MVTec-FS Dataset／Table 1／Comparison on Other Datasets／Fig. 6／Fig. 2／Table 1／Discussion and Conclusion"
+    },
+    {
+      "source_id": "SIV002",
+      "title": "Hyperbolic Defect Feature Synthesis for Few-Shot Defect Classification",
+      "publisher": "IEEE/CVF CVPR 2026",
+      "year": 2026,
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Hyperbolic_Defect_Feature_Synthesis_for_Few-Shot_Defect_Classification_CVPR_2026_paper.pdf",
+      "doi": "未確認",
+      "type": "原著",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§4.1.1 Datasets／pp.19606–19607／§3.2.1／Fig. 2／§4.2.2／Table 4／§3.2.1–3.2.3／Fig. 2／§3.2／Fig. 2／§4.1.2／Table 4／§4.1.1 Datasets／pp.19606–19607／§4.1.1–4.1.2／Table 1／参照[29]／Table 1／p.19607／Tables 2–3／§4.1／Table 1／§4.1.1／§4.2.2／Table 4"
+    },
+    {
+      "source_id": "SIV003",
+      "title": "SEM-CLIP: Precise Few-Shot Learning for Nanoscale Defect Detection in Scanning Electron Microscope Image",
+      "publisher": "IEEE/ACM ICCAD 2024",
+      "year": 2024,
+      "url": "https://arxiv.org/html/2502.14884",
+      "doi": "10.1145/3676536.3676752",
+      "type": "著者公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者版全文確認（2025年公開。会議は2024年）",
+      "saved_path": "",
+      "locator": "§2.3／§2.6 Problem 1／Fig. 2／§2.3／§3.1／§3.4／§3.1／Fig. 5／§3.4 Eq. (18)–(23)／§4.1／§2.3 SEM Image Defect Data／§2.6／§4.2 Benchmarks and Baselines／§4.2–4.4／Tables 2–3／§4.3／Fig. 7／§2.3／§4.3–4.4／Tables 2–3"
+    },
+    {
+      "source_id": "SIV004",
+      "title": "Few-Shot Adaptation of Foundation Vision Models for PCB Defect Inspection",
+      "publisher": "Journal of Imaging 11(11), 415",
+      "year": 2025,
+      "url": "https://www.mdpi.com/2313-433X/11/11/415",
+      "doi": "10.3390/jimaging11110415",
+      "type": "原著",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "Fig. 1／Table 4／§3.1／Fig. 1／§3.2.2／Fig. 2／§3.2／Table 2／Fig. 2／§3.1／Table 1／§3.1／§3.2実験手順／Table 1／§4.1–4.2／Table 3／Fig. 3–4／§4.3／Table 4／§5.3 Limitations and Future Work／§3.1／Table 3／§5.3"
+    },
+    {
+      "source_id": "SIV020",
+      "title": "MVREC: A General Few-shot Defect Classification Model Using Multi-View Region-Context",
+      "publisher": "AAAI",
+      "year": 2025,
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/32634",
+      "doi": "10.1609/aaai.v39i6.32634",
+      "type": "会議書誌・抄録",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "出版社書誌・抄録確認",
+      "saved_path": "",
+      "locator": "Authors／DOI／How to Cite"
+    },
+    {
+      "source_id": "SIV005",
+      "title": "Autonomous Defect Classification in Manufacturing: A Novel Few-Shot Vision-Language Modeling Approach",
+      "publisher": "Engineering, Technology & Applied Science Research 16(3), 36545–36551",
+      "year": 2026,
+      "url": "https://etasr.com/index.php/ETASR/article/download/18859/6787/94416",
+      "doi": "10.48084/etasr.18859",
+      "type": "原著",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§III-A Experimental Setup／p.36547／§II-C／§III-B／pp.36547–36548／§II-C／§III-A／pp.36547–36548／§II-C／§III-A／pp.36547–36548／§III-A／p.36547／§III-A–C／Tables I–IV／pp.36547–36548／Tables I, III／p.36548／Tables II, IV／p.36548／§III-A, C／Tables I–II／§III-B–C／Tables I–IV"
+    },
+    {
+      "source_id": "SIV006",
+      "title": "SteelDefectX: A Multi-Form Vision-Language Dataset and Benchmark for Steel Surface Defect Analysis",
+      "publisher": "arXiv:2603.21824 v2",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2603.21824v2",
+      "doi": "10.48550/arXiv.2603.21824",
+      "type": "著者プレプリント",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）",
+      "saved_path": "",
+      "locator": "Appendix A／Appendix B.1／Figs. 5–6／§3.1–3.3／§4.2／§3.2–3.3／§4.2／§4.4／§4.2／Table 2／§3.1／Appendix A–B.1／§4.1／§4.4／§4.2／Table 2／Table 2／§4.4／Table 3／§4.1／Tables 2–3／Appendix B.5"
+    },
+    {
+      "source_id": "SIV007",
+      "title": "YOLO-LA: Prototype-Based Vision–Language Alignment for Silicon Wafer Defect Pattern Detection",
+      "publisher": "Micromachines 17(1), 67（号年2026、オンライン公開2025-12-31）",
+      "year": 2026,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12844300/",
+      "doi": "10.3390/mi17010067",
+      "type": "原著",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "Table 1／§4.1／§4.2 Fig. 3／§3／Fig. 1／§4.1／§3.1／Table 1／§4.2 Table 4／Appendix A／§3／Eqs. (3)–(8)／§4.1／§4.1 Dataset and Experimental Settings／§4.1 Dataset and Experimental Settings／§4.2／Table 2／§4.2／Fig. 3／§4.1–4.2／Fig. 3"
+    },
+    {
+      "source_id": "SIV008",
+      "title": "MultiADS: Defect-aware Supervision for Multi-type Anomaly Detection and Segmentation in Zero-Shot Learning",
+      "publisher": "IEEE/CVF ICCV 2025",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2504.06740",
+      "doi": "未確認",
+      "type": "著者公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者版全文確認",
+      "saved_path": "",
+      "locator": "§5.5.1／Table 2／補足Tables 7–11／§4.2／Fig. 2／§4.1.1／補足§8.1／Tables 7–11／§4.1–4.2／Fig. 2／§5.1／補足§9／§5.2／補足§11.1／§5.3／§5.5.1–5.5.2／Tables 1, 4／§5.5.1／Table 2／Table 2／補足§11.1／§5.3／Tables 1–2, 4"
+    },
+    {
+      "source_id": "SIV009",
+      "title": "CLIP-MDC: CLIP encoder based multimodal defect classification with synthetic anomaly generation for real-time surface defect detection",
+      "publisher": "Journal of Intelligent Manufacturing",
+      "year": 2026,
+      "url": "https://link.springer.com/article/10.1007/s10845-025-02773-4",
+      "doi": "10.1007/s10845-025-02773-4",
+      "type": "原著",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "Table 5 Sample inference results／CLIP–MDC architecture／Fig. 1／Inference／CLIP–MDC architecture／Defect classification using text prompts／CLIP–MDC architecture／Fig. 1／Experiments／Tables 3–4／Quantitative and qualitative analysis／Tables 3–5／Tables 3–5／Evaluation metrics"
+    },
+    {
+      "source_id": "SIV011",
+      "title": "WinCLIP: Zero-/Few-Shot Anomaly Classification and Segmentation",
+      "publisher": "IEEE/CVF CVPR",
+      "year": 2023,
+      "url": "https://cdn.amazon.science/9e/bb/aaa28b9b439f91d0f7d99963a1c0/winclip-zero-few-shot-anomaly-classification-and-segmentation.pdf",
+      "doi": "未確認",
+      "type": "原著・公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§4.1 Language-driven zero-shot AC／実験の画像・画素AUROC"
+    },
+    {
+      "source_id": "SIV012",
+      "title": "AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection",
+      "publisher": "ICLR／arXiv v12",
+      "year": 2024,
+      "url": "https://arxiv.org/html/2310.18961",
+      "doi": "未確認",
+      "type": "原著・公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§3.2／§4.1–4.2／Appendix F Tables 7–18"
+    },
+    {
+      "source_id": "SIV013",
+      "title": "FiLo: Zero-Shot Anomaly Detection by Fine-Grained Description and High-Quality Localization",
+      "publisher": "arXiv v3",
+      "year": 2024,
+      "url": "https://arxiv.org/html/2404.13671",
+      "doi": "未確認",
+      "type": "原著・公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§3.1–3.2／§4.2／Appendix A Tables 5–8／Fig. 4"
+    },
+    {
+      "source_id": "SIV014",
+      "title": "PromptAD: Learning Prompts with only Normal Samples for Few-Shot Anomaly Detection",
+      "publisher": "IEEE/CVF CVPR",
+      "year": 2024,
+      "url": "https://openaccess.thecvf.com/content/CVPR2024/supplemental/Li_PromptAD_Learning_Prompts_CVPR_2024_supplemental.pdf",
+      "doi": "未確認",
+      "type": "原著・公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "出版社補足・著者抄録確認",
+      "saved_path": "",
+      "locator": "補足の追加評価結果／画像AUPR・画素PRO"
+    },
+    {
+      "source_id": "SIV015",
+      "title": "CLIP-FSAC: Boosting CLIP for Few-Shot Anomaly Classification with Synthetic Anomalies",
+      "publisher": "IJCAI",
+      "year": 2024,
+      "url": "https://ijcai.org/proceedings/2024/203",
+      "doi": "未確認",
+      "type": "原著・公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "出版社抄録・本文抜粋確認",
+      "saved_path": "",
+      "locator": "Abstract／本文Fig. 2"
+    },
+    {
+      "source_id": "SIV016",
+      "title": "Open-Set Fine-Grained Industrial Defect Classification Based on CLIP Prompt Tuning and Vision-Language Alignment",
+      "publisher": "J-GLOBAL／IEEE EIBDCT 2026",
+      "year": 2026,
+      "url": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602212822461050",
+      "doi": "10.1109/EIBDCT69742.2026.11566999",
+      "type": "書誌索引",
+      "primary": "二次情報",
+      "accessed": "2026-11-11",
+      "verification": "二次書誌のみ（DOI候補、IEEE本文未取得）",
+      "saved_path": "",
+      "locator": "著者、書誌、IEEE 613–616頁"
+    },
+    {
+      "source_id": "SIV017",
+      "title": "Kaputt: A Large-Scale Dataset for Visual Defect Detection",
+      "publisher": "IEEE/CVF ICCV",
+      "year": 2025,
+      "url": "https://www.openaccess.thecvf.com/content/ICCV2025/papers/Hofer_Kaputt_A_Large-Scale_Dataset_for_Visual_Defect_Detection_ICCV_2025_paper.pdf",
+      "doi": "未確認",
+      "type": "原著・公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "一次資料検索抜粋",
+      "saved_path": "",
+      "locator": "WinCLIP zero/few-shot異常検知評価"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CIV001",
+      "entity_id": "IV001",
+      "field": "labels",
+      "claim": "原文Table 7の例：bottle＝broken_large, broken_small, contamination。metal_nut＝bent, color, flip, scratch。transistor＝bent_lead, cut_lead, damaged_case, misplaced。全リストはTable 7。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV002",
+      "entity_id": "IV001",
+      "field": "input",
+      "claim": "欠陥画像と既知の欠陥インスタンスマスク、ラベル付きサポート画像・マスク。画像から欠陥を自力発見する性能とは別。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV003",
+      "entity_id": "IV001",
+      "field": "prompt",
+      "claim": "主提案は推論時に自然言語プロンプトなし。CLIP-ZeroShot比較条件ではクラス記述をテキスト埋め込み化。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV004",
+      "entity_id": "IV001",
+      "field": "primary_model",
+      "claim": "MVREC＋Zip-Adapter(-F)。事前学習済みAlphaCLIPがマスクと周囲文脈の多視点特徴を抽出。Zip-Aは視覚的類似度によるサポート検索、Zip-A-Fは投影・サポート特徴を微調整。推論はサポートのone-hotラベルに基づく。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV005",
+      "entity_id": "IV001",
+      "field": "dataset",
+      "claim": "MVTec-FS（MVTec ADの再注釈）、NEU-DET、PCB Defect Dataset、MTD、AITEX",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV006",
+      "entity_id": "IV001",
+      "field": "split",
+      "claim": "種類ごとに50%/50%に分け、訓練側から各クラス1/3/5枚をサポート抽出、固定のテスト側をクエリ。サポートを5回抽出し平均。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV007",
+      "entity_id": "IV001",
+      "field": "performance",
+      "claim": "MVTec-FSのZip-A-Fは1/3/5-shotで73.7%/86.1%/89.4%。同表のテキスト0-shot比較は37.4%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV008",
+      "entity_id": "IV001",
+      "field": "class_results",
+      "claim": "5-shotの製品群別例：Grid 80.8%、Tile 97.6%、Transistor 100.0%。これは欠陥個別ラベルの成績とは別。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV009",
+      "entity_id": "IV001",
+      "field": "generalization",
+      "claim": "他の4工業データセットでもデータセット内でサポートを再抽出して評価。サポートなしの工場外移植は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV010",
+      "entity_id": "IV001",
+      "field": "limitations",
+      "claim": "マスク付き欠陥インスタンスが前提。製品群をまたぐ単一46クラス分類のスコアとしては扱えない。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV011",
+      "entity_id": "IV002",
+      "field": "labels",
+      "claim": "MTD＝blowhole, crack, break, fray, uneven。MVTec-FSの例：scratches, dents, dirt, deformation（論文中の説明語。評価ラベルの全原語はMVREC Table 7参照）。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV012",
+      "entity_id": "IV002",
+      "field": "input",
+      "claim": "欠陥画像。サポート学習は全体とクロップ双方の特徴を使用し、AlphaCLIPのマスク有無を比較。Fig. 2の評価はクエリ全体画像からの分類。クエリで用いるマスクの詳細は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV013",
+      "entity_id": "IV002",
+      "field": "prompt",
+      "claim": "図2の評価経路は画像エンコーダと学習済みアダプタ。候補テキストを用いない。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV014",
+      "entity_id": "IV002",
+      "field": "primary_model",
+      "claim": "HypDFS。AlphaCLIP ViT-L/14で特徴を得て、双曲空間の欠陥プロトタイプと分布モデルで特徴を合成。欠陥残差アダプタと階層対照学習で分類特徴を適応。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV015",
+      "entity_id": "IV002",
+      "field": "dataset",
+      "claim": "MVTec-FS、Magnetic Tile Defect（MTD）",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV016",
+      "entity_id": "IV002",
+      "field": "split",
+      "claim": "MVTec-FS既定の訓練／テスト（引用元MVRECは種類ごと50%/50%）。K=1/3/5。MTDの厳密な分割枚数・再抽出回数は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV017",
+      "entity_id": "IV002",
+      "field": "performance",
+      "claim": "Table 1。1/3/5-shotはMVTec-FS 79.3%/89.3%/91.7%、MTD 59.4%/78.6%/86.4%。Zip-A-FはMVTec-FS 73.7%/86.1%/89.4%、MTD 55.4%/67.6%/78.6%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV018",
+      "entity_id": "IV002",
+      "field": "class_results",
+      "claim": "Tables 2–3にMVTec-FS製品群別結果。個別欠陥種類の分類スコアは未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV019",
+      "entity_id": "IV002",
+      "field": "generalization",
+      "claim": "同一手法をMVTec-FSとMTDで個別評価。工場・設備を跨ぐホールドアウト評価は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV020",
+      "entity_id": "IV002",
+      "field": "limitations",
+      "claim": "マスク注釈付き画像で評価。欠陥検出込みの総合性能および未知製品へのゼロショット性能は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV021",
+      "entity_id": "IV003",
+      "field": "labels",
+      "claim": "good（非欠陥）, bridges, copper residues, holes, infilm defects, particles, scratches（§2.3の原語）。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV022",
+      "entity_id": "IV003",
+      "field": "input",
+      "claim": "製造ラインで得たグレースケールSEM画像。クエリ画像と、全クラス共通で事前定義した候補文を比較。学習時に少数画像を使用。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV023",
+      "entity_id": "IV003",
+      "field": "prompt",
+      "claim": "欠陥形態の専門知識をstate-level文に入れ、SEMの暗さや焦点ずれを記述するtemplate-level文と合成。固定の候補文で全画像を評価。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV024",
+      "entity_id": "IV003",
+      "field": "primary_model",
+      "claim": "SEM-CLIP。ViT-B/16+の複数層の視覚埋め込みとテキストの類似度確率に、各層CLSから学習した分類ヘッドの確率を加重和（後者の重みα=0.8）。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV025",
+      "entity_id": "IV003",
+      "field": "dataset",
+      "claim": "製造ライン取得の社内SEM画像",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV026",
+      "entity_id": "IV003",
+      "field": "split",
+      "claim": "分類比較は10-shot/クラス、各モデル同一テスト。独立テスト枚数・ウェハ単位分割は本文で未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV027",
+      "entity_id": "IV003",
+      "field": "performance",
+      "claim": "分類10-shotでAccuracy 83.7%、Precision 87.2%、Recall 86.7%、F1 84.4%。視覚ヘッドのみのアブレーションはAcc 83.6%/F1 84.3%、テキスト類似度のみは25.7%/16.0%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV028",
+      "entity_id": "IV003",
+      "field": "class_results",
+      "claim": "Fig. 7は10-shot混同行列。粒子と膜内欠陥の形態が近く誤認が見られる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV029",
+      "entity_id": "IV003",
+      "field": "limitations",
+      "claim": "単一製造ライン、クラス不均衡。テキスト併用の上積みは同アブレーションでAcc 0.1ポイント。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV030",
+      "entity_id": "IV004",
+      "field": "labels",
+      "claim": "Mousebite, Open, Pinhole, Short, Spur, Spurious Copper（Table 4）",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV031",
+      "entity_id": "IV004",
+      "field": "input",
+      "claim": "DeepPCBのtested画像から正解bboxをクロップ。CLIP 224²、DINOv2 518²。参照画像・差分画像・テキスト入力は使わない。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV032",
+      "entity_id": "IV004",
+      "field": "prompt",
+      "claim": "視覚トークンのVPT。自然言語プロンプトや推論時のテキスト塔を用いる方式ではない。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV033",
+      "entity_id": "IV004",
+      "field": "primary_model",
+      "claim": "CLIP-ViT-B/16、DINOv2-S/14にLinear Probe、LoRA、Deep Visual Prompt Tuning（VPT）を比較。VPTでは画像ViT各層に長さ8の学習可能トークン。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV034",
+      "entity_id": "IV004",
+      "field": "dataset",
+      "claim": "DeepPCB-derived（欠陥bboxから生成）",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV035",
+      "entity_id": "IV004",
+      "field": "split",
+      "claim": "欠陥種類層化7:1:2、k=5/10/20はtrainから種類ごと抽出、validation/test固定。試行3回平均の記載。基板や原画像IDでの群分けは未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV036",
+      "entity_id": "IV004",
+      "field": "performance",
+      "claim": "全データTable 3のCLIP-VPTテストはAcc 0.990 / macro-F1 0.991 / macro-AUPRC 0.998。CLIP-Linear 0.971 / 0.972 / 0.991、CLIP-LoRA 0.969 / 0.971 / 0.992。DINOv2-VPT 0.988 / 0.988 / 0.998。少数ショットはFig. 3–4。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV037",
+      "entity_id": "IV004",
+      "field": "class_results",
+      "claim": "全データCLIP-VPT Table 4、ラベル順のクラス別Accuracy 0.980 / 0.988 / 0.997 / 0.997 / 0.988 / 0.997。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV038",
+      "entity_id": "IV004",
+      "field": "generalization",
+      "claim": "他PCBデータセットへの同プロトコル検証は今後の計画。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV039",
+      "entity_id": "IV004",
+      "field": "limitations",
+      "claim": "既知の正解bboxによる分類であり、全基板画像からの検出・分類とは条件が異なる。Table 3のCNNはテストAcc 0.993–0.994でCLIP-VPT 0.990を上回る。 DeepPCBの元画像はPCBのCCD実撮像だが、データセット著者が試験画像に人工欠陥も手作業で追加。自然発生欠陥と追加欠陥を分けた評価は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV040",
+      "entity_id": "IV005",
+      "field": "labels",
+      "claim": "Missing_hole, Mouse_bite, Open_circuit, Short, Spur, Spurious_copper",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV041",
+      "entity_id": "IV005",
+      "field": "input",
+      "claim": "評価ではDeepPCBの正解bboxを切り出した224×224画像。few-shotは30枚/種の視覚プロトタイプを使用。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV042",
+      "entity_id": "IV005",
+      "field": "prompt",
+      "claim": "zero-shot設計では欠陥種と正常領域を記述する自然言語ライブラリ。主要定量表のfew-shotは画像プロトタイプを利用。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV043",
+      "entity_id": "IV005",
+      "field": "primary_model",
+      "claim": "VLM-AOIのStage 2はCLIP ViT-B/32。数値比較のfew-shot条件はクラス別の画像プロトタイプとROIの類似度。設計上のzero-shot枝はクラス文とのコサイン類似度。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV044",
+      "entity_id": "IV005",
+      "field": "dataset",
+      "claim": "DeepPCB",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV045",
+      "entity_id": "IV005",
+      "field": "split",
+      "claim": "Seen＝Mouse_bite/Open_circuit/Short/Spur、Unseen＝Missing_hole/Spurious_copper。VLM-AOIは全6種のサポートを受け、ResNet-50は4種×30で学習。群単位分割は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV046",
+      "entity_id": "IV005",
+      "field": "performance",
+      "claim": "Tables I/IIIのVLM-AOI k=30はUnseen Acc 82.9%/F1 0.898、Seen Acc 61.3%/F1 0.643。ResNet-50は0.0%/0.000と78.3%/0.780。時間18.202 msと16.036 ms。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV047",
+      "entity_id": "IV005",
+      "field": "class_results",
+      "claim": "Tables II/IVのVLM-AOI F1：Missing_hole 0.990、Mouse_bite 0.683、Open_circuit 0.669、Short 0.776、Spur 0.445、Spurious_copper 0.807。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV048",
+      "entity_id": "IV005",
+      "field": "generalization",
+      "claim": "ベースラインに未学習の2種類を比較。提案には各30枚のラベル付き画像を与えており、未知種類を未提示のまま分類する評価ではない。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV049",
+      "entity_id": "IV005",
+      "field": "limitations",
+      "claim": "正解bboxが前提。提案6種とベースライン4種でサポート条件が非対称。82.9%はfew-shotであり、テキストzero-shotの定量値はTables I–IVにない。 DeepPCBの元画像はPCBのCCD実撮像だが、データセット著者が試験画像に人工欠陥も手作業で追加。自然発生欠陥と追加欠陥を分けた評価は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV050",
+      "entity_id": "IV006",
+      "field": "labels",
+      "claim": "Crazing, Inclusion, Patches, Pitted surface, Punching, Rolled in scale, Water spot, Welding line, Oil spot, Crescent gap, Silk spot, Waist folding, Rolled pit, Bright scratch, Crease, Dark scratches, Secondary rust skin, White rust, Iron scale compression, Red iron sheet, Iron sheet ash, Oxide scale of plate system, Oxide scale of temperature system, Finishing roll printing, Slag Inclusion",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV051",
+      "entity_id": "IV006",
+      "field": "input",
+      "claim": "公開の鋼表面欠陥画像を256×256に統一。分類時はクエリ画像と全ラベル候補文。マスク由来の属性は学習時T3等の監督に使われ、分類時のT0/T1は候補側。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV052",
+      "entity_id": "IV006",
+      "field": "prompt",
+      "claim": "T0＝欠陥名、T1＝欠陥名・典型視覚属性・想定原因のクラス記述。学習文T2＝自然文、T3＝構造化属性、T4＝テンプレート文。転移時は欠陥名テンプレートを各外部セットで統一。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV053",
+      "entity_id": "IV006",
+      "field": "primary_model",
+      "claim": "CLIP-Adapterによる各CLIP変種の視覚側適応。評価は画像と各ラベル文の埋め込み類似度最大のラベル。中心結果はLong-CLIP ViT-L/14。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV054",
+      "entity_id": "IV006",
+      "field": "dataset",
+      "claim": "SteelDefectX（NEU、GC10、X-SDD、S3Dを統合し、FSC-20とESDIs-SODの選別データも利用）",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV055",
+      "entity_id": "IV006",
+      "field": "split",
+      "claim": "データセット公式train/validation 7:3。独立テスト分割の記載なし。外部転移はMSD-ClsとCGFSDS-9。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV056",
+      "entity_id": "IV006",
+      "field": "performance",
+      "claim": "Table 2 Long-CLIP ViT-L/14、T3学習→T0評価はAcc 94.45%／mAcc 93.66%。同T3→T1は93.12%／90.70%。T2→T0は93.63%／92.56%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV057",
+      "entity_id": "IV006",
+      "field": "class_results",
+      "claim": "mAcc 93.66%。Table 2の個別欠陥種の成績は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV058",
+      "entity_id": "IV006",
+      "field": "generalization",
+      "claim": "Table 3 Long-CLIP ViT-L/14のT2適応後、アルミ29.03%・継目無鋼管40.18% Acc（未適応ゼロショット8.60%・25.11%）。ターゲット候補ラベル文は既知。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV059",
+      "entity_id": "IV006",
+      "field": "limitations",
+      "claim": "v2の条件を採用。統合集合の検証と外部転移の成績差が大きい。公開データ統合の工場・ロット単位分割は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV060",
+      "entity_id": "IV007",
+      "field": "labels",
+      "claim": "Center, Donut, Edge_Ring, Edge_Loc, Loc, Random, Scratch, Near_full。元データには正常Noneも存在。論文のFig. 3本文はBackgroundにも言及。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV061",
+      "entity_id": "IV007",
+      "field": "input",
+      "claim": "製造現場由来のWM-811Kウェハマップを128×128×3に変換。各欠陥クラスの固定自然言語記述を候補側に付与。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV062",
+      "entity_id": "IV007",
+      "field": "prompt",
+      "claim": "クラス別に欠陥の空間分布・形状を自然文で定義し固定プロトタイプ化。標準・詳細・簡潔な文を比較。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV063",
+      "entity_id": "IV007",
+      "field": "primary_model",
+      "claim": "YOLO-LA。凍結YOLO画像埋め込みに軽量射影を適用し、凍結MiniLM-L6-v2で作ったクラス文プロトタイプとのコサイン類似度で分類。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV064",
+      "entity_id": "IV007",
+      "field": "dataset",
+      "claim": "WM-811K",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV065",
+      "entity_id": "IV007",
+      "field": "split",
+      "claim": "層化train/test 80:20、seed 42。trainからvalidationを別抽出（比率未確認）。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV066",
+      "entity_id": "IV007",
+      "field": "performance",
+      "claim": "Table 2 YOLOv10-N＋言語整合85.75% Acc、同バックボーンのみ83.50%（+2.25ポイント）。YOLOv12-N＋言語整合85.06%、同バックボーン83.48%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV067",
+      "entity_id": "IV007",
+      "field": "class_results",
+      "claim": "Fig. 3の混同行列はYOLOベースライン。提案のクラス別数値は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV068",
+      "entity_id": "IV007",
+      "field": "limitations",
+      "claim": "欠陥マップ形状の分類であり、光学/SEM表面写真における外観欠陥そのものとは別。背景クラスの記述が節間で明確でない。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV069",
+      "entity_id": "IV008",
+      "field": "labels",
+      "claim": "Table 2の評価例：Extra, Stuck, Bent, Hole, Pit, Contamin., Scratch, Damage。対象データセットごとの候補は補足Tables 7–11。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV070",
+      "entity_id": "IV008",
+      "field": "input",
+      "claim": "画像、欠陥種・正常を記述する候補テキスト。few-shotには正常参照画像を追加する設定あり。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV071",
+      "entity_id": "IV008",
+      "field": "prompt",
+      "claim": "Knowledge Base for Anomaliesの欠陥種・外観記述を製品名や撮像テンプレートと合成。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV072",
+      "entity_id": "IV008",
+      "field": "primary_model",
+      "claim": "MultiADS。CLIPのテキスト埋め込みと線形アダプタ付き局所画像特徴を整合し、正常＋K欠陥種の画素別マップを出す。MultiADS-Fは製品別に候補種を制限。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV073",
+      "entity_id": "IV008",
+      "field": "dataset",
+      "claim": "MVTec-AD、VisA、MPDD、MAD-real/MAD-sim、Real-IAD",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV074",
+      "entity_id": "IV008",
+      "field": "split",
+      "claim": "別データセットへのzero-shot転移。例：MVTec-ADで学習、VisAやMPDDでテスト。訓練からcombinedを除外。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV075",
+      "entity_id": "IV008",
+      "field": "performance",
+      "claim": "Table 1のMVTec-AD→VisAは画素AUROC/F1/AP 93.6/22.3/24.8%、→MPDD 95.2/42.8/53.0%。画像単位の種類分類精度としては扱わない。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV076",
+      "entity_id": "IV008",
+      "field": "class_results",
+      "claim": "Table 2の画素例：未学習PitのAUROC/F1/AP 97.08/6.15/1.01%、既学習Hole 99.55/12.64/25.19%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV077",
+      "entity_id": "IV008",
+      "field": "generalization",
+      "claim": "補助データで未観測の種類に評価例あり（画素単位）。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV078",
+      "entity_id": "IV008",
+      "field": "limitations",
+      "claim": "カテゴリ別画素指標と二値画像指標であり、画像単位の欠陥種類選択精度は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV079",
+      "entity_id": "IV009",
+      "field": "labels",
+      "claim": "Table 5掲載例：broken small, poke, crack, good condition。全クラスの種類分類精度は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV080",
+      "entity_id": "IV009",
+      "field": "input",
+      "claim": "試験時の画像のみ。訓練時に合成異常特徴と製品・欠陥種の記述を利用。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV081",
+      "entity_id": "IV009",
+      "field": "prompt",
+      "claim": "学習時に製品と欠陥名の組合せ文。推論はテキストを入力せず分類結果を文章化。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV082",
+      "entity_id": "IV009",
+      "field": "primary_model",
+      "claim": "SuperSimpleNet系の分類・分割ヘッド。学習時にCLIPの画像／欠陥文の類似度を利用、推論時にCLIPを無効化し分類インデックスを定型文に戻す。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV083",
+      "entity_id": "IV009",
+      "field": "dataset",
+      "claim": "MVTec AD、KSDD2",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV084",
+      "entity_id": "IV009",
+      "field": "performance",
+      "claim": "Table 5は種類名予測例と推論時間（平均約6.6 ms、A100）。Tables 3–4は二値検出・画素局在の評価。種類Accuracy／F1は未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CIV085",
+      "entity_id": "IV009",
+      "field": "limitations",
+      "claim": "例示をカテゴリ識別精度に換算しない。公開された定量結果は二値検出／画素局在の尺度。",
+      "status": "確認済み"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "claim_id": "CIV039",
+      "source_id": "SIV022",
+      "locator": "§2.1 Image Collection／§2.2 Image Annotation",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV049",
+      "source_id": "SIV022",
+      "locator": "§2.1 Image Collection／§2.2 Image Annotation",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV001",
+      "source_id": "SIV001",
+      "locator": "付録 More details of MVTec-FS／Table 7",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV002",
+      "source_id": "SIV001",
+      "locator": "Fig. 2／MVREC／Multi-View Region-Context Feature Extraction",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV003",
+      "source_id": "SIV001",
+      "locator": "MVREC／Training-free Zip-Adapter Classifier、Experiments Setting",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV004",
+      "source_id": "SIV001",
+      "locator": "Fig. 2／MVREC／Eq. (1)–(5)",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV005",
+      "source_id": "SIV001",
+      "locator": "MVTec-FS Dataset／Fig. 4／Comparison on Other Datasets",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV006",
+      "source_id": "SIV001",
+      "locator": "MVTec-FS Dataset／Experiments Setting",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV007",
+      "source_id": "SIV001",
+      "locator": "Table 1／Results on MVTec-FS Dataset",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV008",
+      "source_id": "SIV001",
+      "locator": "Table 1",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV009",
+      "source_id": "SIV001",
+      "locator": "Comparison on Other Datasets／Fig. 6",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV010",
+      "source_id": "SIV001",
+      "locator": "Fig. 2／Table 1／Discussion and Conclusion",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV011",
+      "source_id": "SIV002",
+      "locator": "§4.1.1 Datasets／pp.19606–19607",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV012",
+      "source_id": "SIV002",
+      "locator": "§3.2.1／Fig. 2／§4.2.2／Table 4",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV013",
+      "source_id": "SIV002",
+      "locator": "§3.2.1–3.2.3／Fig. 2",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV014",
+      "source_id": "SIV002",
+      "locator": "§3.2／Fig. 2／§4.1.2／Table 4",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV015",
+      "source_id": "SIV002",
+      "locator": "§4.1.1 Datasets／pp.19606–19607",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV016",
+      "source_id": "SIV002",
+      "locator": "§4.1.1–4.1.2／Table 1／参照[29]",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV017",
+      "source_id": "SIV002",
+      "locator": "Table 1／p.19607",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV018",
+      "source_id": "SIV002",
+      "locator": "Tables 2–3",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV019",
+      "source_id": "SIV002",
+      "locator": "§4.1／Table 1",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV020",
+      "source_id": "SIV002",
+      "locator": "§4.1.1／§4.2.2／Table 4",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV021",
+      "source_id": "SIV003",
+      "locator": "§2.3／§2.6 Problem 1／Fig. 2",
+      "quote": "",
+      "verification": "著者版全文確認（2025年公開。会議は2024年）"
+    },
+    {
+      "claim_id": "CIV022",
+      "source_id": "SIV003",
+      "locator": "§2.3／§3.1／§3.4",
+      "quote": "",
+      "verification": "著者版全文確認（2025年公開。会議は2024年）"
+    },
+    {
+      "claim_id": "CIV023",
+      "source_id": "SIV003",
+      "locator": "§3.1／Fig. 5",
+      "quote": "",
+      "verification": "著者版全文確認（2025年公開。会議は2024年）"
+    },
+    {
+      "claim_id": "CIV024",
+      "source_id": "SIV003",
+      "locator": "§3.4 Eq. (18)–(23)／§4.1",
+      "quote": "",
+      "verification": "著者版全文確認（2025年公開。会議は2024年）"
+    },
+    {
+      "claim_id": "CIV025",
+      "source_id": "SIV003",
+      "locator": "§2.3 SEM Image Defect Data",
+      "quote": "",
+      "verification": "著者版全文確認（2025年公開。会議は2024年）"
+    },
+    {
+      "claim_id": "CIV026",
+      "source_id": "SIV003",
+      "locator": "§2.6／§4.2 Benchmarks and Baselines",
+      "quote": "",
+      "verification": "著者版全文確認（2025年公開。会議は2024年）"
+    },
+    {
+      "claim_id": "CIV027",
+      "source_id": "SIV003",
+      "locator": "§4.2–4.4／Tables 2–3",
+      "quote": "",
+      "verification": "著者版全文確認（2025年公開。会議は2024年）"
+    },
+    {
+      "claim_id": "CIV028",
+      "source_id": "SIV003",
+      "locator": "§4.3／Fig. 7",
+      "quote": "",
+      "verification": "著者版全文確認（2025年公開。会議は2024年）"
+    },
+    {
+      "claim_id": "CIV029",
+      "source_id": "SIV003",
+      "locator": "§2.3／§4.3–4.4／Tables 2–3",
+      "quote": "",
+      "verification": "著者版全文確認（2025年公開。会議は2024年）"
+    },
+    {
+      "claim_id": "CIV030",
+      "source_id": "SIV004",
+      "locator": "Fig. 1／Table 4",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV031",
+      "source_id": "SIV004",
+      "locator": "§3.1／Fig. 1",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV032",
+      "source_id": "SIV004",
+      "locator": "§3.2.2／Fig. 2",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV033",
+      "source_id": "SIV004",
+      "locator": "§3.2／Table 2／Fig. 2",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV034",
+      "source_id": "SIV004",
+      "locator": "§3.1／Table 1",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV035",
+      "source_id": "SIV004",
+      "locator": "§3.1／§3.2実験手順／Table 1",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV036",
+      "source_id": "SIV004",
+      "locator": "§4.1–4.2／Table 3／Fig. 3–4",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV037",
+      "source_id": "SIV004",
+      "locator": "§4.3／Table 4",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV038",
+      "source_id": "SIV004",
+      "locator": "§5.3 Limitations and Future Work",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV039",
+      "source_id": "SIV004",
+      "locator": "§3.1／Table 3／§5.3",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV040",
+      "source_id": "SIV005",
+      "locator": "§III-A Experimental Setup／p.36547",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV041",
+      "source_id": "SIV005",
+      "locator": "§II-C／§III-B／pp.36547–36548",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV042",
+      "source_id": "SIV005",
+      "locator": "§II-C／§III-A／pp.36547–36548",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV043",
+      "source_id": "SIV005",
+      "locator": "§II-C／§III-A／pp.36547–36548",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV044",
+      "source_id": "SIV005",
+      "locator": "§III-A／p.36547",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV045",
+      "source_id": "SIV005",
+      "locator": "§III-A–C／Tables I–IV／pp.36547–36548",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV046",
+      "source_id": "SIV005",
+      "locator": "Tables I, III／p.36548",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV047",
+      "source_id": "SIV005",
+      "locator": "Tables II, IV／p.36548",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV048",
+      "source_id": "SIV005",
+      "locator": "§III-A, C／Tables I–II",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV049",
+      "source_id": "SIV005",
+      "locator": "§III-B–C／Tables I–IV",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV050",
+      "source_id": "SIV021",
+      "locator": "著者版PDF v2 Appendix A Figure 4（PDF p.13）／Appendix B.1（PDF p.14）",
+      "quote": "",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）"
+    },
+    {
+      "claim_id": "CIV051",
+      "source_id": "SIV006",
+      "locator": "§3.1–3.3／§4.2",
+      "quote": "",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）"
+    },
+    {
+      "claim_id": "CIV052",
+      "source_id": "SIV006",
+      "locator": "§3.2–3.3／§4.2／§4.4",
+      "quote": "",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）"
+    },
+    {
+      "claim_id": "CIV053",
+      "source_id": "SIV006",
+      "locator": "§4.2／Table 2",
+      "quote": "",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）"
+    },
+    {
+      "claim_id": "CIV054",
+      "source_id": "SIV006",
+      "locator": "§3.1／Appendix A–B.1",
+      "quote": "",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）"
+    },
+    {
+      "claim_id": "CIV055",
+      "source_id": "SIV006",
+      "locator": "§4.1／§4.4",
+      "quote": "",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）"
+    },
+    {
+      "claim_id": "CIV056",
+      "source_id": "SIV006",
+      "locator": "§4.2／Table 2",
+      "quote": "",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）"
+    },
+    {
+      "claim_id": "CIV057",
+      "source_id": "SIV006",
+      "locator": "Table 2",
+      "quote": "",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）"
+    },
+    {
+      "claim_id": "CIV058",
+      "source_id": "SIV006",
+      "locator": "§4.4／Table 3",
+      "quote": "",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）"
+    },
+    {
+      "claim_id": "CIV059",
+      "source_id": "SIV006",
+      "locator": "§4.1／Tables 2–3／Appendix B.5",
+      "quote": "",
+      "verification": "著者プレプリントv2全文確認（2026-05-08）"
+    },
+    {
+      "claim_id": "CIV060",
+      "source_id": "SIV007",
+      "locator": "Table 1／§4.1／§4.2 Fig. 3",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV061",
+      "source_id": "SIV007",
+      "locator": "§3／Fig. 1／§4.1",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV062",
+      "source_id": "SIV007",
+      "locator": "§3.1／Table 1／§4.2 Table 4／Appendix A",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV063",
+      "source_id": "SIV007",
+      "locator": "§3／Eqs. (3)–(8)／§4.1",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV064",
+      "source_id": "SIV007",
+      "locator": "§4.1 Dataset and Experimental Settings",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV065",
+      "source_id": "SIV007",
+      "locator": "§4.1 Dataset and Experimental Settings",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV066",
+      "source_id": "SIV007",
+      "locator": "§4.2／Table 2",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV067",
+      "source_id": "SIV007",
+      "locator": "§4.2／Fig. 3",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV068",
+      "source_id": "SIV007",
+      "locator": "§4.1–4.2／Fig. 3",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV069",
+      "source_id": "SIV008",
+      "locator": "§5.5.1／Table 2／補足Tables 7–11",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV070",
+      "source_id": "SIV008",
+      "locator": "§4.2／Fig. 2",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV071",
+      "source_id": "SIV008",
+      "locator": "§4.1.1／補足§8.1／Tables 7–11",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV072",
+      "source_id": "SIV008",
+      "locator": "§4.1–4.2／Fig. 2",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV073",
+      "source_id": "SIV008",
+      "locator": "§5.1／補足§9",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV074",
+      "source_id": "SIV008",
+      "locator": "§5.2／補足§11.1",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV075",
+      "source_id": "SIV008",
+      "locator": "§5.3／§5.5.1–5.5.2／Tables 1, 4",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV076",
+      "source_id": "SIV008",
+      "locator": "§5.5.1／Table 2",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV077",
+      "source_id": "SIV008",
+      "locator": "Table 2／補足§11.1",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV078",
+      "source_id": "SIV008",
+      "locator": "§5.3／Tables 1–2, 4",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CIV079",
+      "source_id": "SIV009",
+      "locator": "Table 5 Sample inference results",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV080",
+      "source_id": "SIV009",
+      "locator": "CLIP–MDC architecture／Fig. 1／Inference",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV081",
+      "source_id": "SIV009",
+      "locator": "CLIP–MDC architecture／Defect classification using text prompts",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV082",
+      "source_id": "SIV009",
+      "locator": "CLIP–MDC architecture／Fig. 1",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV083",
+      "source_id": "SIV009",
+      "locator": "Experiments／Tables 3–4",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV084",
+      "source_id": "SIV009",
+      "locator": "Quantitative and qualitative analysis／Tables 3–5",
+      "quote": "",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "CIV085",
+      "source_id": "SIV009",
+      "locator": "Tables 3–5／Evaluation metrics",
+      "quote": "",
+      "verification": "全文確認"
+    }
+  ],
+  "search_log": [
+    {
+      "search_id": "QIV001",
+      "executed_at": "2026-11-11（JST、時刻未記録）",
+      "query": "[object Object] ｜ [object Object] ｜ [object Object] ｜ [object Object]",
+      "target": "Web横断検索（同一バッチ。返却結果のクエリ別内訳なし）",
+      "returned_count": 21,
+      "total_hits": "未提供",
+      "candidate_count": 5,
+      "adopted_count": 3,
+      "excluded_count": 1,
+      "exclusion_reason": "登録候補の判定は台帳を参照。候補数は当該バッチに紐付く登録IDの数、同一候補は複数バッチに現れるため合算不可。未登録返却は重複・対象外・選別前。"
+    },
+    {
+      "search_id": "QIV002",
+      "executed_at": "2026-11-11（JST、時刻未記録）",
+      "query": "[object Object] ｜ [object Object] ｜ [object Object] ｜ [object Object]",
+      "target": "Web横断検索（同一バッチ。返却結果のクエリ別内訳なし）",
+      "returned_count": 19,
+      "total_hits": "未提供",
+      "candidate_count": 5,
+      "adopted_count": 4,
+      "excluded_count": 0,
+      "exclusion_reason": "登録候補の判定は台帳を参照。候補数は当該バッチに紐付く登録IDの数、同一候補は複数バッチに現れるため合算不可。未登録返却は重複・対象外・選別前。"
+    },
+    {
+      "search_id": "QIV003",
+      "executed_at": "2026-11-11（JST、時刻未記録）",
+      "query": "[object Object] ｜ [object Object] ｜ [object Object] ｜ [object Object]",
+      "target": "Web横断検索（同一バッチ。返却結果のクエリ別内訳なし）",
+      "returned_count": 19,
+      "total_hits": "未提供",
+      "candidate_count": 6,
+      "adopted_count": 5,
+      "excluded_count": 0,
+      "exclusion_reason": "登録候補の判定は台帳を参照。候補数は当該バッチに紐付く登録IDの数、同一候補は複数バッチに現れるため合算不可。未登録返却は重複・対象外・選別前。"
+    },
+    {
+      "search_id": "QIV004",
+      "executed_at": "2026-11-11（JST、時刻未記録）",
+      "query": "\"Hyperbolic Defect Feature Synthesis for Few-Shot Defect Classification\" Li HypDFS arxiv ｜ \"Open-Set Fine-Grained Industrial Defect Classification\" \"CLIP\" DOI ｜ WinCLIP AnomalyCLIP FiLo PromptAD official papers binary anomaly classification ｜ SteelDefectX github category list 25 classes labels",
+      "target": "Web横断検索（同一バッチ。返却結果のクエリ別内訳なし）",
+      "returned_count": 21,
+      "total_hits": "未提供",
+      "candidate_count": 7,
+      "adopted_count": 2,
+      "excluded_count": 4,
+      "exclusion_reason": "登録候補の判定は台帳を参照。候補数は当該バッチに紐付く登録IDの数、同一候補は複数バッチに現れるため合算不可。未登録返却は重複・対象外・選別前。"
+    },
+    {
+      "search_id": "QIV005",
+      "executed_at": "2026-11-11（JST、時刻未記録）",
+      "query": "site:arxiv.org FiLo Zero-Shot Anomaly Detection Fine-Grained Description High-Quality Localization ｜ \"EIBDCT\" \"Zian\" \"defect\" IEEE DOI ｜ SteelDefectX \"defect categories\" \"rolled-in\" Zhao",
+      "target": "Web横断検索（同一バッチ。返却結果のクエリ別内訳なし）",
+      "returned_count": 22,
+      "total_hits": "未提供",
+      "candidate_count": 2,
+      "adopted_count": 0,
+      "excluded_count": 1,
+      "exclusion_reason": "登録候補の判定は台帳を参照。候補数は当該バッチに紐付く登録IDの数、同一候補は複数バッチに現れるため合算不可。未登録返却は重複・対象外・選別前。"
+    },
+    {
+      "search_id": "QIV006",
+      "executed_at": "2026-11-11（JST、時刻未記録）",
+      "query": "\"MVREC\" \"32634\" doi Lyu AAAI ｜ \"Hyperbolic Defect Feature Synthesis\" IEEE DOI 2026 Li ｜ \"Open-Set Fine-Grained Industrial Defect Classification\" Zhu Zian IEEE Xplore ｜ \"SteelDefectX\" Zhao Gui Yu Tao dataset Huggingface",
+      "target": "Web横断検索（同一バッチ。返却結果のクエリ別内訳なし）",
+      "returned_count": 14,
+      "total_hits": "未提供",
+      "candidate_count": 3,
+      "adopted_count": 2,
+      "excluded_count": 0,
+      "exclusion_reason": "登録候補の判定は台帳を参照。候補数は当該バッチに紐付く登録IDの数、同一候補は複数バッチに現れるため合算不可。未登録返却は重複・対象外・選別前。"
+    },
+    {
+      "search_id": "QIV007",
+      "executed_at": "2026-11-11（JST、時刻未記録）",
+      "query": "\"A General Few-shot Defect Classification Model Using Multi-View Region-Context\" \"10.1609\" ｜ \"MultiADS\" \"Sadikaj\" DOI ICCV 2025 ｜ \"Hyperbolic Defect Feature Synthesis for Few-Shot Defect Classification\" doi CVPR 19602 ｜ \"Open-Set Fine-Grained Industrial Defect Classification\" \"11566999\"",
+      "target": "Web横断検索（同一バッチ。返却結果のクエリ別内訳なし）",
+      "returned_count": 16,
+      "total_hits": "未提供",
+      "candidate_count": 3,
+      "adopted_count": 2,
+      "excluded_count": 0,
+      "exclusion_reason": "登録候補の判定は台帳を参照。候補数は当該バッチに紐付く登録IDの数、同一候補は複数バッチに現れるため合算不可。未登録返却は重複・対象外・選別前。"
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "XIV001",
+      "title": "WinCLIP: Zero-/Few-Shot Anomaly Classification and Segmentation",
+      "year": 2023,
+      "doi": "未確認",
+      "url": "https://cdn.amazon.science/9e/bb/aaa28b9b439f91d0f7d99963a1c0/winclip-zero-few-shot-anomaly-classification-and-segmentation.pdf",
+      "status": "除外",
+      "reason": "画像の出力は正常・異常の二値スコア。製品名を入れる言語プロンプトは欠陥種類分類ではない。",
+      "source_ids": "SIV011"
+    },
+    {
+      "id": "XIV002",
+      "title": "AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection",
+      "year": 2024,
+      "doi": "未確認",
+      "url": "https://arxiv.org/html/2310.18961",
+      "status": "除外",
+      "reason": "学習するのは一般的な正常・異常プロンプト。付録のfine-grained data subsetは製品別の二値異常検知・局在であり欠陥タイプ出力ではない。",
+      "source_ids": "SIV012"
+    },
+    {
+      "id": "XIV003",
+      "title": "FiLo: Zero-Shot Anomaly Detection by Fine-Grained Description and High-Quality Localization",
+      "year": 2024,
+      "doi": "未確認",
+      "url": "https://arxiv.org/html/2404.13671",
+      "status": "除外",
+      "reason": "細粒度の候補文を用いるが主スコアは正常・異常にプール。付録のAUROCも製品別二値・局在。Fig. 4に細粒度語との類似度例があるが種類分類性能は未確認。",
+      "source_ids": "SIV013"
+    },
+    {
+      "id": "XIV004",
+      "title": "PromptAD: Learning Prompts with only Normal Samples for Few-Shot Anomaly Detection",
+      "year": 2024,
+      "doi": "未確認",
+      "url": "https://openaccess.thecvf.com/content/CVPR2024/supplemental/Li_PromptAD_Learning_Prompts_CVPR_2024_supplemental.pdf",
+      "status": "除外",
+      "reason": "正常例のみで学習する異常検知。画像AUROC/AUPRは二値、画素PROは局在指標で種類判定ではない。",
+      "source_ids": "SIV014"
+    },
+    {
+      "id": "XIV005",
+      "title": "CLIP-FSAC: Boosting CLIP for Few-Shot Anomaly Classification with Synthetic Anomalies",
+      "year": 2024,
+      "doi": "未確認",
+      "url": "https://ijcai.org/proceedings/2024/203",
+      "status": "除外",
+      "reason": "合成欠陥を用いたfew-shotの異常有無分類。成果は画像I-AUROC。",
+      "source_ids": "SIV015"
+    },
+    {
+      "id": "XIV006",
+      "title": "Open-Set Fine-Grained Industrial Defect Classification Based on CLIP Prompt Tuning and Vision-Language Alignment",
+      "year": 2026,
+      "doi": "10.1109/EIBDCT69742.2026.11566999",
+      "url": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602212822461050",
+      "status": "保留",
+      "reason": "題名・書誌は確認。IEEE本文に到達できず、欠陥原語ラベル・未知クラス扱い・分類指標を検証できない。DOIは検索結果で照合、出版社確認は未完了。",
+      "source_ids": "SIV016"
+    },
+    {
+      "id": "XIV007",
+      "title": "Kaputt: A Large-Scale Dataset for Visual Defect Detection",
+      "year": 2025,
+      "doi": "未確認",
+      "url": "https://www.openaccess.thecvf.com/content/ICCV2025/papers/Hofer_Kaputt_A_Large-Scale_Dataset_for_Visual_Defect_Detection_ICCV_2025_paper.pdf",
+      "status": "除外",
+      "reason": "WinCLIP実験で種類名を直接出力・定量評価する根拠を抽出できず、主比較から除外。",
+      "source_ids": "SIV017"
+    }
+  ],
+  "notes": [
+    "主採用7本、関連2本、除外6件、保留1件。採否は種類分類の独立定量評価、入力粒度、対象素材で区分した。",
+    "テキスト照合で種類を決定する方式はSEM-CLIP、SteelDefectX、非CLIP系のYOLO-LA。MVREC、HypDFS、Lee、Dinhの主定量結果ではCLIP派生の視覚特徴を利用し、自然言語候補は主性能の入力条件に含まれない。",
+    "追加探索領域：IEEE EIBDCT Open-Set論文の本文、非鉄金属・繊維・食品包装等の実工場画像での画像単位種類分類、未知種類を候補に明示しないopen-set判定、設備・工場をまたぐ独立試験。探索飽和は未確認。",
+    "原文の権利・アクセス差を考慮し、取得元URLと原資料位置をエビデンスに登録。長い抜粋や図表の複写は行っていない。"
+  ]
+}

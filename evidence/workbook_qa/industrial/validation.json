@@ -1,0 +1,35 @@
+{
+  "as_of": "2026-11-11",
+  "sheet_rows": {
+    "モデル系統": 4,
+    "視覚Transformer": 11,
+    "VLM・対照学習": 7,
+    "MLLM・LLM": 10,
+    "関連・保留": 10,
+    "除外候補": 25,
+    "出典": 76,
+    "主張と根拠": 230
+  },
+  "native_hyperlinks": 141,
+  "excel_error_cells": 0,
+  "records": 38,
+  "stats": {
+    "accepted": 28,
+    "related": 5,
+    "held": 5,
+    "detailed_records": 38,
+    "sources": 76,
+    "claims": 221,
+    "claim_links": 230,
+    "search_rows": 51,
+    "exclusion_rows": 25,
+    "source_aliases": 0
+  },
+  "checks": [
+    "論文ID・DOI重複と根拠参照は統合時検査",
+    "全38行の系統・主モデル・ラベル・性能・採否・Claim IDをCSV/JSON/XLSXで照合",
+    "全8シートの表・フィルタ・固定ペイン・行高を検査",
+    "画像プレビューは各シートの主要範囲、全セルの視覚精査ではない"
+  ],
+  "visual_review": "別途保存した8枚の主要範囲プレビューを確認"
+}

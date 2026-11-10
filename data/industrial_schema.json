@@ -1,0 +1,10 @@
+{
+  "record_fields": ["id","status","year","authors","title","venue","doi","url","model_family","primary_model","baseline_models","domain","product","input_group","input","prompt","task","labels","class_count","mixed","dataset","data_size","split","learning","pretraining","metrics","performance","class_results","generalization","limitations","code_data","verification","locator","source_ids"],
+  "bundle_keys": ["records","sources","claims","claim_evidence","search_log","exclusions","notes"],
+  "source_fields": ["source_id","title","publisher","year","url","doi","type","primary","accessed","verification","saved_path","locator"],
+  "claim_fields": ["claim_id","entity_id","field","claim","status"],
+  "link_fields": ["claim_id","source_id","locator","quote","verification"],
+  "search_fields": ["search_id","executed_at","query","target","returned_count","total_hits","candidate_count","adopted_count","excluded_count","exclusion_reason"],
+  "exclusion_fields": ["id","title","year","doi","url","status","reason","source_ids"],
+  "instructions": "recordsは主採用・保留・関連をstatusで区別。未確認は文字列で明示、数値ゼロで埋めない。主張は最低labels/input/model/performance/splitを分離し、出典位置と結ぶ。検索総件数が不明なら未提供。"
+}

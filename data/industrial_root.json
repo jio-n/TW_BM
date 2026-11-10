@@ -1,0 +1,404 @@
+{
+  "records": [
+    {
+      "id": "IR001",
+      "status": "関連（種類付き検出）",
+      "year": 2026,
+      "authors": "Yusen Zhao; Liang Tian; Yonggang Wang",
+      "title": "A unified vision-language model for cross-product defect detection in glove manufacturing",
+      "venue": "PLOS ONE 21(2): e0339867",
+      "doi": "10.1371/journal.pone.0339867",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0339867",
+      "model_family": "MLLM",
+      "primary_model": "Qwen2.5-VL-3B、SFT＋GRPOによるRFT",
+      "baseline_models": "Qwen2-VL-2B、SFTのみ、YOLO11-L",
+      "domain": "手袋製造",
+      "product": "青ニトリル手袋・白PVC手袋",
+      "input_group": "画像＋テキスト／プロンプト",
+      "input": "工場側面画像と製品別欠陥候補",
+      "prompt": "対象製品の欠陥クラス、座標・confidence・categoryと回答形式を指示",
+      "task": "種類付きbbox検出＋説明",
+      "labels": "青: adhesion, tearing, contamination。白: oil stains, tearing, Cuff Rolling Defect。正常: No Defects",
+      "class_count": "製品別3欠陥＋正常応答",
+      "mixed": "複数bboxに種類を付与。画像単位multi-label指標は未確認",
+      "dataset": "独自Glove dataset",
+      "data_size": "青23,799画像・27,083bbox、白11,378超画像",
+      "split": "held-out testとの記載。比率・個体/ライン単位分割未確認",
+      "learning": "SFT10epoch→RFT2epoch",
+      "pretraining": "Qwen2.5-VL-3B",
+      "metrics": "検出mAP",
+      "performance": "青0.63（YOLO0.62）、混合製品0.61。画像種類分類Accuracyではない",
+      "class_results": "種類単独の分類指標未確認",
+      "generalization": "混合2製品で学習。未見製品zero-shotとは異なる",
+      "limitations": "bboxノイズ、遮蔽、推論遅延。分類報酬があっても分類単独評価は未確認",
+      "code_data": "論文に https://github.com/GloamXun/Glove-MLLM と https://doi.org/10.6084/m9.figshare.30908033 の案内。実体再現未実施",
+      "verification": "出版社本文の対象・方法・結果節確認",
+      "locator": "Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3",
+      "source_ids": [
+        "SIR001"
+      ]
+    },
+    {
+      "id": "IR002",
+      "status": "関連（種類付き検出）",
+      "year": 2026,
+      "authors": "Chayanon Sub-r-pa; Rung-Ching Chen",
+      "title": "Adapting Vision–Language Models for Few-Shot Industrial Defect Detection",
+      "venue": "Algorithms 19(4), 259",
+      "doi": "10.3390/a19040259",
+      "url": "https://www.mdpi.com/1999-4893/19/4/259",
+      "model_family": "VLM（対照学習）",
+      "primary_model": "YOLO-World v2＋固定CLIP Text Encoder＋RepVL-PAN",
+      "baseline_models": "YOLOv11s、YOLOv26s、loss/augmentation ablations",
+      "domain": "工業製品・テクスチャ",
+      "product": "MVTec ADの15製品/材種",
+      "input_group": "画像＋テキスト／プロンプト",
+      "input": "画像、欠陥名候補",
+      "prompt": "broken, bent, metal contamination, cut inner insulation等。製品名を除外",
+      "task": "種類付きbbox検出",
+      "labels": "例: broken, glue, bent, metal contamination, cut inner insulation。全製品の全ラベル転記は未実施",
+      "class_count": "欠陥種は製品依存。15は製品カテゴリ数であり欠陥クラス数ではない",
+      "mixed": "複数領域にbboxを出力",
+      "dataset": "MVTec ADの画素マスクからbboxへ変換",
+      "data_size": "平均8学習画像・11.8欠陥instances/カテゴリ",
+      "split": "train:validation=1:9。通常MVTecの正常学習protocolと異なる",
+      "learning": "few-shot bbox教師あり微調整",
+      "pretraining": "YOLO-Worldの画像言語事前学習。CLIPテキスト塔は凍結",
+      "metrics": "検出mAP@50、検出Precision/Recall/F1",
+      "performance": "TileでmAP@50 64.9%、学習9instances。種類分類Accuracyではない",
+      "class_results": "製品別検出指標。画像単位の欠陥種類指標未確認",
+      "generalization": "外部データ検証なし",
+      "limitations": "重複bbox、近い欠陥語の取り違え。画像分類と同一表の精度比較不可",
+      "code_data": "論文内資料、追加照会方式",
+      "verification": "出版社本文の方法・評価節確認",
+      "locator": "§§3.1–3.5、4、Tables1–2",
+      "source_ids": [
+        "SIR002"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SIR001",
+      "title": "A unified vision-language model for cross-product defect detection in glove manufacturing",
+      "publisher": "Yusen Zhao; Liang Tian; Yonggang Wang",
+      "year": 2026,
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0339867",
+      "doi": "10.1371/journal.pone.0339867",
+      "type": "原著論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社本文の対象・方法・結果節確認",
+      "locator": "Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3",
+      "saved_path": "未保存（公式HTML参照）"
+    },
+    {
+      "source_id": "SIR002",
+      "title": "Adapting Vision–Language Models for Few-Shot Industrial Defect Detection",
+      "publisher": "Chayanon Sub-r-pa; Rung-Ching Chen",
+      "year": 2026,
+      "url": "https://www.mdpi.com/1999-4893/19/4/259",
+      "doi": "10.3390/a19040259",
+      "type": "原著論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社本文の方法・評価節確認",
+      "locator": "§§3.1–3.5、4、Tables1–2",
+      "saved_path": "未保存（公式HTML参照）"
+    },
+    {
+      "source_id": "SIR003",
+      "title": "Vision Transformerと大規模視覚言語モデルを用いた道路附属物の損傷種類と損傷程度の推定",
+      "publisher": "渡部航史; 前田圭介; 藤後廉; 小川貴弘; 長谷山美紀 / 土木学会",
+      "year": 2025,
+      "url": "https://www.jstage.jst.go.jp/article/jsceiii/6/3/6_966/_article/-char/ja",
+      "doi": "10.11532/jsceiii.6.3_966",
+      "type": "原著論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "書誌・抄録確認",
+      "locator": "抄録",
+      "saved_path": "未保存"
+    },
+    {
+      "source_id": "SIR004",
+      "title": "Knowledge-Augmented Zero-Shot Method for Power Equipment Defect Grading with Chain-of-Thought LLMs",
+      "publisher": "MDPI",
+      "year": 2025,
+      "url": "https://www.mdpi.com/2079-9292/14/15/3101",
+      "doi": "10.3390/electronics14153101",
+      "type": "原著論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社本文の検索抜粋確認",
+      "locator": "severity gradingの課題・事例記述",
+      "saved_path": "未保存"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CIR_IR001_labels",
+      "entity_id": "IR001",
+      "field": "labels",
+      "claim": "青: adhesion, tearing, contamination。白: oil stains, tearing, Cuff Rolling Defect。正常: No Defects",
+      "status": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR001_input",
+      "entity_id": "IR001",
+      "field": "input",
+      "claim": "工場側面画像と製品別欠陥候補",
+      "status": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR001_primary_model",
+      "entity_id": "IR001",
+      "field": "primary_model",
+      "claim": "Qwen2.5-VL-3B、SFT＋GRPOによるRFT",
+      "status": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR001_performance",
+      "entity_id": "IR001",
+      "field": "performance",
+      "claim": "青0.63（YOLO0.62）、混合製品0.61。画像種類分類Accuracyではない",
+      "status": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR001_split",
+      "entity_id": "IR001",
+      "field": "split",
+      "claim": "held-out testとの記載。比率・個体/ライン単位分割未確認",
+      "status": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR001_limitations",
+      "entity_id": "IR001",
+      "field": "limitations",
+      "claim": "bboxノイズ、遮蔽、推論遅延。分類報酬があっても分類単独評価は未確認",
+      "status": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_labels",
+      "entity_id": "IR002",
+      "field": "labels",
+      "claim": "例: broken, glue, bent, metal contamination, cut inner insulation。全製品の全ラベル転記は未実施",
+      "status": "出版社本文の方法・評価節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_input",
+      "entity_id": "IR002",
+      "field": "input",
+      "claim": "画像、欠陥名候補",
+      "status": "出版社本文の方法・評価節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_primary_model",
+      "entity_id": "IR002",
+      "field": "primary_model",
+      "claim": "YOLO-World v2＋固定CLIP Text Encoder＋RepVL-PAN",
+      "status": "出版社本文の方法・評価節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_performance",
+      "entity_id": "IR002",
+      "field": "performance",
+      "claim": "TileでmAP@50 64.9%、学習9instances。種類分類Accuracyではない",
+      "status": "出版社本文の方法・評価節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_split",
+      "entity_id": "IR002",
+      "field": "split",
+      "claim": "train:validation=1:9。通常MVTecの正常学習protocolと異なる",
+      "status": "出版社本文の方法・評価節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_limitations",
+      "entity_id": "IR002",
+      "field": "limitations",
+      "claim": "重複bbox、近い欠陥語の取り違え。画像分類と同一表の精度比較不可",
+      "status": "出版社本文の方法・評価節確認"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "claim_id": "CIR_IR001_labels",
+      "source_id": "SIR001",
+      "locator": "Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3",
+      "quote": "",
+      "verification": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR001_input",
+      "source_id": "SIR001",
+      "locator": "Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3",
+      "quote": "",
+      "verification": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR001_primary_model",
+      "source_id": "SIR001",
+      "locator": "Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3",
+      "quote": "",
+      "verification": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR001_performance",
+      "source_id": "SIR001",
+      "locator": "Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3",
+      "quote": "",
+      "verification": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR001_split",
+      "source_id": "SIR001",
+      "locator": "Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3",
+      "quote": "",
+      "verification": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR001_limitations",
+      "source_id": "SIR001",
+      "locator": "Data preparation; Fine-tuning strategy; Experimental and results; Tables1–3",
+      "quote": "",
+      "verification": "出版社本文の対象・方法・結果節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_labels",
+      "source_id": "SIR002",
+      "locator": "§§3.1–3.5、4、Tables1–2",
+      "quote": "",
+      "verification": "出版社本文の方法・評価節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_input",
+      "source_id": "SIR002",
+      "locator": "§§3.1–3.5、4、Tables1–2",
+      "quote": "",
+      "verification": "出版社本文の方法・評価節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_primary_model",
+      "source_id": "SIR002",
+      "locator": "§§3.1–3.5、4、Tables1–2",
+      "quote": "",
+      "verification": "出版社本文の方法・評価節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_performance",
+      "source_id": "SIR002",
+      "locator": "§§3.1–3.5、4、Tables1–2",
+      "quote": "",
+      "verification": "出版社本文の方法・評価節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_split",
+      "source_id": "SIR002",
+      "locator": "§§3.1–3.5、4、Tables1–2",
+      "quote": "",
+      "verification": "出版社本文の方法・評価節確認"
+    },
+    {
+      "claim_id": "CIR_IR002_limitations",
+      "source_id": "SIR002",
+      "locator": "§§3.1–3.5、4、Tables1–2",
+      "quote": "",
+      "verification": "出版社本文の方法・評価節確認"
+    }
+  ],
+  "search_log": [
+    {
+      "search_id": "QIR001",
+      "executed_at": "2026-11-11 JST（分秒未記録）",
+      "query": "industrial defect type classification vision language model benchmark anomaly classification | industrial anomaly understanding benchmark defect classification MLLM MMAD | surface defect classification vision transformer NEU dataset review | industrial defect category recognition CLIP multiclass anomaly",
+      "target": "Web検索（英語/日本語）",
+      "returned_count": "未集計・raw返却記録を参照",
+      "total_hits": "未提供",
+      "candidate_count": "担当別台帳へ統合",
+      "adopted_count": "担当別台帳へ統合",
+      "excluded_count": "担当別台帳へ統合",
+      "exclusion_reason": "二値異常検出・製品カテゴリ・対象ドメイン外を選別",
+      "raw_path": "evidence/raw/industrial_root/search1.json"
+    },
+    {
+      "search_id": "QIR002",
+      "executed_at": "2026-11-11 JST（分秒未記録）",
+      "query": "工具以外 欠陥 種類 分類 \"Vision Transformer\" 論文 | 工業 欠陥 分類 \"CLIP\" 論文 | industrial defect classification \"large language model\" prompt taxonomy multi label | \"industrial defect\" \"DINOv3\" classification",
+      "target": "Web検索（英語/日本語）",
+      "returned_count": "未集計・raw返却記録を参照",
+      "total_hits": "未提供",
+      "candidate_count": "担当別台帳へ統合",
+      "adopted_count": "担当別台帳へ統合",
+      "excluded_count": "担当別台帳へ統合",
+      "exclusion_reason": "二値異常検出・製品カテゴリ・対象ドメイン外を選別",
+      "raw_path": "evidence/raw/industrial_root/search2.json"
+    },
+    {
+      "search_id": "QIR003",
+      "executed_at": "2026-11-11 JST（分秒未記録）",
+      "query": "\"A unified vision-language model for cross-product defect detection in glove manufacturing\" | \"glove manufacturing\" \"Qwen\" \"unified\" defect 2026",
+      "target": "Web検索→PLOS原著",
+      "returned_count": "個別未記録",
+      "total_hits": "未提供",
+      "candidate_count": 1,
+      "adopted_count": 0,
+      "excluded_count": 0,
+      "exclusion_reason": "IR001として種類付き検出の関連表"
+    },
+    {
+      "search_id": "QIR004",
+      "executed_at": "2026-11-11 JST（分秒未記録）",
+      "query": "PLOS 10.1371/journal.pone.0339867 / MDPI a19040259 / J-STAGE 6.3_966 の原文参照",
+      "target": "出版社HTML・本文内find",
+      "returned_count": 3,
+      "total_hits": "非該当（直接参照）",
+      "candidate_count": 3,
+      "adopted_count": 0,
+      "excluded_count": 1,
+      "exclusion_reason": "IR001/IR002は種類付き検出、XR001はインフラ関連。PMC recaptcha後にPLOSへ移行"
+    },
+    {
+      "search_id": "QIR005",
+      "executed_at": "2026-11-11 JST（分秒未記録）",
+      "query": "https://arxiv.org/html/2506.03345v1 → 404; https://arxiv.org/pdf/2506.03345 → 原著PDF、III.A/Fig.2–3/IVを再確認",
+      "target": "著者公開PDF・匿名欠陥種類の採用監査",
+      "returned_count": 1,
+      "total_hits": "非該当（直接取得）",
+      "candidate_count": 0,
+      "adopted_count": "既存IT004の採用を維持・新規0",
+      "excluded_count": 0,
+      "exclusion_reason": "種類分類は明示、語彙対応は未確認として注記"
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "XR001",
+      "title": "Vision Transformerと大規模視覚言語モデルを用いた道路附属物の損傷種類と損傷程度の推定",
+      "year": 2025,
+      "doi": "10.11532/jsceiii.6.3_966",
+      "url": "https://www.jstage.jst.go.jp/article/jsceiii/6/3/6_966/_article/-char/ja",
+      "status": "関連範囲・主比較外",
+      "reason": "道路標識・照明などインフラ設備。ViTは損傷種類だが大規模VLMの担当は損傷程度。製造製品中心の今回主比較から別枠、VLMの種類分類実証として数えない。",
+      "source_ids": [
+        "SIR003"
+      ]
+    },
+    {
+      "id": "XR002",
+      "title": "Knowledge-Augmented Zero-Shot Method for Power Equipment Defect Grading with Chain-of-Thought LLMs",
+      "year": 2025,
+      "doi": "10.3390/electronics14153101",
+      "url": "https://www.mdpi.com/2079-9292/14/15/3101",
+      "status": "対象外",
+      "reason": "保守記述テキストからLevel I/II/IIIの重症度を出力。画像から欠陥種類を出力する課題ではない。",
+      "source_ids": [
+        "SIR004"
+      ]
+    }
+  ],
+  "notes": [
+    "関連表の検出mAPを画像種類分類精度へ転用しない。",
+    "追加日本語検索はインフラ損傷の近接例を返したが、国内製造分野を網羅したとは主張しない。"
+  ]
+}

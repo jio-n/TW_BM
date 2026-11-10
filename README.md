@@ -4,6 +4,12 @@
 
 ## 成果物と利用方法
 
+2026-11-11の拡張調査として、**工業製品・材料の欠陥種類分類を行う視覚Transformer／VLM／MLLM論文**を追加した。主比較28本（視覚Transformer11、VLM系7、MLLM10）、関連5本、保留5本。入力画像、候補ラベル・プロンプト、参照画像を区別し、二値異常検出や種類付き領域検出との違いを記録している。主比較の1本は匿名の欠陥種類IDであり、名称との対応は未確認。
+
+- [工業欠陥種類分類のExcel](outputs/industrial_defect_classification_benchmark.xlsx) / [CSV](outputs/industrial_defect_classification_benchmark.csv) / [モデル系統集計](outputs/industrial_model_family_summary.csv)
+- [日本語レポート・13章](reports/industrial_defect_classification_benchmark.md) / [網羅性・品質監査](reports/industrial_defect_classification_audit.md) / [調査仕様](reports/industrial_defect_classification_scope.md)
+- [代表12本の詳細](details/industrial_defect_classification/README.md) / [カバレッジ表](outputs/industrial_coverage.csv) / [出典・主張・検索・採否台帳](evidence/industrial_defect_classification/)
+
 2026-11-11の追加調査は、**工具画像から摩耗・損傷の種類名を分類する論文**に対象を絞った。画像のみ8本、画像を含むマルチモーダル1本、書誌等の保留2本、領域検出・分割の関連4本を分けて収録した。摩耗量・寿命予測、程度だけの段階分類は主比較から除外している。
 
 - [種類分類に絞ったExcel](outputs/wear_type_classification_benchmark.xlsx) / [CSV](outputs/wear_type_classification_benchmark.csv)

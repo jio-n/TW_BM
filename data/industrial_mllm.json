@@ -1,0 +1,2221 @@
+{
+  "records": [
+    {
+      "status": "採用",
+      "model_family": "VLM（MLLM）",
+      "domain": "工業外観検査",
+      "product": "MMADの対象製品・材料（電子部品、機械部品、外観素材・食品等）",
+      "input_group": "画像＋テキスト＋正常参照画像",
+      "input": "実製品クエリ画像、欠陥質問と選択肢。同一製品カテゴリの正常参照画像を標準1枚添付。",
+      "prompt": "欠陥タイプの四択。モデルごとの既定プロンプトを極力保持し、画像の複数質問は独立に実行。",
+      "task": "工業VQAの欠陥種類選択（Defect Classification）",
+      "labels": "製品別欠陥種類の四択。著者のデータ定義の原語キー例はzipper `split_teeth`, `squeezed_teeth`、cable `cable_swap`, `cut_inner_insulation`, `combined`。候補は質問ごとに異なる。",
+      "class_count": "画像データ全体の分類は38製品カテゴリ・244欠陥カテゴリ。1問4択。",
+      "mixed": "原データの `combined` ラベル例あり。VQAは原則1問1回答。",
+      "dataset": "MMAD（MVTec AD、MVTec LOCO AD、VisA、GoodsAD由来）",
+      "data_size": "MMAD原版は8,366画像・39,672問。種類質問4,688問。各実験の部分集合はsplit欄。",
+      "metrics": "欠陥種類選択のAccuracy（%）",
+      "class_results": "欠陥種類ラベル別の精度は未確認。",
+      "generalization": "複数出典・38製品カテゴリを含むが、工場／生産ラインを単位とする独立評価ではない。",
+      "code_data": "https://github.com/jam-cc/MMAD",
+      "verification": "全文確認",
+      "id": "IM001",
+      "year": 2025,
+      "authors": "Xi Jiang; Jian Li; Hanqiu Deng; Yong Liu; Bin-Bin Gao; Yifeng Zhou; Jialin Li; Chengjie Wang; Feng Zheng",
+      "title": "MMAD: A Comprehensive Benchmark for Multimodal Large Language Models in Industrial Anomaly Detection",
+      "venue": "ICLR 2025（ベンチマーク原著）",
+      "doi": "10.48550/arXiv.2410.09453（著者版）",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/d91ffbe9c126765755ff52d36b715683-Abstract-Conference.html",
+      "primary_model": "評価ベンチマーク。GPT-4o（2024-05-13）等を測定。",
+      "baseline_models": "Gemini-1.5-Pro、Claude-3.5-Sonnet、InternVL2、AnomalyGPT、LLaVA系等。",
+      "split": "ベンチマーク評価。標準1-shotは正常画像をランダムに1枚、1-shot+は最近傍検索。単画像制約モデルでは0-shot。",
+      "learning": "原ベンチマーク評価では学習しない。推論時参照を0/1/few-shot比較。",
+      "pretraining": "既存の商用／公開MLLM。",
+      "performance": "Table 2標準条件の欠陥種類Accuracy GPT-4o 65.80%、Claude-3.5-Sonnet 60.14%、Gemini-1.5-Pro 60.12%、InternVL2-76B 54.22%、AnomalyGPT-7B 27.49%。GPT-4oの74.92%は7タスク平均。",
+      "limitations": "選択肢付きのVQA。比較には参照枚数や入力制約の違いがある。実ラインでの閉集合性能には読み替えない。",
+      "locator": "§3、Table 1、Fig. 3、§4.1 Table 2",
+      "source_ids": [
+        "SIM001",
+        "SIM002",
+        "SIM020",
+        "SIM024"
+      ]
+    },
+    {
+      "status": "採用",
+      "model_family": "VLM（MLLM）",
+      "domain": "工業外観検査",
+      "product": "カプセル、カーペット、ねじ、ファスナー、ケーブルほかMVTec/VisA製品。",
+      "input_group": "画像＋テキスト＋正常参照画像",
+      "input": "原画像、異常マップに基づく赤輪郭付き画像、正常参照画像。画像448×448、温度0。",
+      "prompt": "正常品の形状、製品別欠陥クラスの定義、着目点を提示する閉集合プロンプト。",
+      "task": "画像の欠陥カテゴリ分類（閉集合・製品別クラス）",
+      "labels": "ボトルのプロンプト例 `Broken Large`, `Broken Small`, `Contamination`（Fig. 4）。MVTec-AC再編で capsule `poke`/`crack`、carpet `cut`/`hole`、screw `thread.side`/`thread.top`、zipper `broken_teeth`/`rough` を対ごとに統合（§3.3）。",
+      "class_count": "製品ごとに異なる。論文全体の統一クラス数は未確認。",
+      "mixed": "MVTec-ACは原版のcombinedクラス4件を除外。",
+      "dataset": "MVTec-AD、再編成MVTec-AC、再編成VisA-AC",
+      "data_size": "MVTec原版15製品、VisA原版12製品。VisA-ACでサンプル10件未満クラスを除外。再編後の正確な評価画像総数は未確認。",
+      "metrics": "分類Accuracy、F1、Cohen’s κ（%表示）。",
+      "class_results": "再編データセット上のクラス別数値は未確認。",
+      "generalization": "MVTec系とVisA系の両方で検証。異なる製品や欠陥でも適用できる一般性は評価分割に依存。",
+      "code_data": "論文末尾参照。公開データ再編手順は§3.3。",
+      "verification": "全文確認",
+      "id": "IM002",
+      "year": 2025,
+      "authors": "Sassan Mokhtar; Arian Mousakhan; Silvio Galesso; Jawad Tayyub; Thomas Brox",
+      "title": "Detect, Classify, Act: Categorizing Industrial Anomalies with Multi-Modal Large Language Models",
+      "venue": "IEEE/CVF CVPR Workshops 2025（VAND）",
+      "doi": "10.1109/CVPRW67362.2025.00390",
+      "url": "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+      "primary_model": "VELM（DDAD/PatchCoreとGPT-4o/4o-miniのカスケード）。異常領域を輪郭で強調しMLLMが分類。",
+      "baseline_models": "Echo、MCAD（MVTec-AD）、PatchCore、GPT-4o-mini、oracle GTマスク。",
+      "split": "各原データセットを再編し評価。MVTec-ACは重複クラス統合・誤注記見直し・combined削除、VisA-ACは少数クラス除外・4クラス統合。",
+      "learning": "正常データで学習する異常検出器。MLLM分類はプロンプトによる推論。",
+      "pretraining": "GPT-4o／GPT-4o-mini。",
+      "performance": "DDAD＋GPT-4o MVTec-AC 84.0% Accuracy、80.3% F1、79.7% κ、VisA-AC 69.6% Accuracy。GTマスクoracleはMVTec-AC 87.8%、VisA-AC 87.6%。Table 1原MVTec-ADでは81.4%だがAbstractは80.4%と記載。",
+      "limitations": "検出器の位置精度に依存。原MVTec-ADのAccuracyはAbstractとTable 1で記載差。ベンチマークの除外・統合後の数値。",
+      "locator": "§3.1–3.3、Fig. 4、§4.2 Tables 1–3",
+      "source_ids": [
+        "SIM003",
+        "SIM022"
+      ]
+    },
+    {
+      "status": "採用",
+      "model_family": "VLM（MLLM）",
+      "domain": "半導体ウエハ表面・SEM",
+      "product": "ウェハ上の回路パターン",
+      "input_group": "画像＋テキスト",
+      "input": "480×480 SEM実写、質問、画像から取得した文字情報とラベル集合。",
+      "prompt": "対話で欠陥の種類を尋ねる。カテゴリ候補を全問の推論プロンプトに固定するかは未確認。",
+      "task": "SEM画像の欠陥カテゴリ質問（Category Q&A）。内部の分類器・画素検出は別。",
+      "labels": "`Hole`, `Particle`, `Scratch`, `Pattern`（Table 1表記、§2.1はpattern deformities）、正常画像は `good`。",
+      "class_count": "欠陥4種類、別に正常。",
+      "mixed": "複合クラス未確認。",
+      "dataset": "SEM-WaD（社内取得）",
+      "data_size": "正常1,226、異常1,182の合計2,408画像。§4.1.3は各欠陥種15問と別50問を記載するが、Table 2 Category採点の分母は明示しない。",
+      "metrics": "Category Q&Aの正答率（%）。",
+      "class_results": "種類別Category正答率は未確認。Table 1の種類別Image-AUCは異常有無であり、種類分類精度としない。",
+      "generalization": "未確認",
+      "code_data": "SEM-WaDは原著でin-house。公開コード／データを確認できず。",
+      "verification": "全文確認",
+      "id": "IM003",
+      "year": 2024,
+      "authors": "Yuqi Jiang; Xudong Lu; Qian Jin; Qi Sun; Hanming Wu; Cheng Zhuo",
+      "title": "FabGPT: An Efficient Large Multimodal Model for Complex Wafer Defect Knowledge Queries",
+      "venue": "IEEE/ACM ICCAD 2024（オンライン刊行2025）",
+      "doi": "10.1145/3676536.3676750",
+      "url": "https://doi.org/10.1145/3676536.3676750",
+      "primary_model": "FabGPT。PandaGPT（Vicuna-7B＋凍結ImageBind Huge）、CLIP画像／ラベル特徴、画像上文字メタデータ、prompt modulation。",
+      "baseline_models": "Category Q&AはLisa、AnomalyGPT、GPT-4。",
+      "split": "SEM画像train/test 7:3。両群に正常・異常。独立ウエハ・製造ロット単位か未確認。",
+      "learning": "prompt tuning、分類・セグメンテーション・対話学習。PandaGPTと画像特徴を統合。",
+      "pretraining": "Vicuna-7B、ImageBind Huge、CLIP。",
+      "performance": "Table 2のCategory FabGPT 97.50%、Lisa 92.50%、AnomalyGPT 75.00%、GPT-4 37.50%。全種類Q&A平均は96.86%。",
+      "limitations": "単一の非公開由来SEMデータ。Q&Aの採点分母と工場／ロットの独立性は未確認。",
+      "locator": "§2.1、Figs. 2–3、§4.1、Tables 1–2",
+      "source_ids": [
+        "SIM004",
+        "SIM005"
+      ]
+    },
+    {
+      "status": "採用",
+      "model_family": "VLM（MLLM）",
+      "domain": "金属積層造形／LPBF",
+      "product": "粉末床の層画像（AddUp FormUp 350、EOS M290、4材料条件）",
+      "input_group": "画像＋テキスト＋文献参照画像",
+      "input": "溶融後・粉末塗布後の実可視画像、科学文献由来の欠陥参照画像・記述。ORNLのIR等は保有されるが当該モデルの評価入力は可視。",
+      "prompt": "名前付き欠陥ごとに文献根拠を提示し有無を回答、各対象を3回試行。別出力段階で各種類を0/1に整形。",
+      "task": "粉末床の名前付き欠陥の多ラベル分類（種類ごとの有無、単一の正常／異常検出とは別）",
+      "labels": "§3: Recoater Hopping, Recoater Streaking, Incomplete Spreading, Swelling, Debris, Super-Elevation, Soot, Excessive Melting, Localized Bright Spot, Spatter on Powder, Mounding Powder, Localized Dark Regions, Misprint。付録表ではEdge Swelling、Crashing、Stripe Boundaryの表記も使用。",
+      "class_count": "§3本文列挙13種類。付録の評価対象は機種・材料で異なり、本文リストにない名称もある。",
+      "mixed": "複数種類の同時発生あり。出力は種類ごとのビット。",
+      "dataset": "Oak Ridge National LaboratoryのLPBF層ごとの可視画像",
+      "data_size": "Table 1のテスト画像26＋14＋9＋5＝54。",
+      "metrics": "種類ごとに予測0/1と正解を照合するAccuracy（Eq. 1）。機種・材料別の評価対象種類で平均。",
+      "class_results": "例 EOS DMREFのRecoater Streaking 1.00、Incomplete Spreading 0.22、Stripe Boundary 0.00。分母は同条件9画像、正解有無の両方を含む（Table A3、Eq. 1）。",
+      "generalization": "機種・材料をまたぐ推論例。各条件5–26枚と少数で、製造現場への統計的一般化は未確立。",
+      "code_data": "ORNL参照データあり。実装コード公開は未確認。",
+      "verification": "全文確認",
+      "id": "IM004",
+      "year": 2025,
+      "authors": "Kiarash Naghavi Khanghah; Zhiling Chen; Lela Romeo; Qian Yang; Rajiv Malhotra; Farhad Imani; Hongyi Xu",
+      "title": "Multimodal RAG-driven Anomaly Detection and Classification in Laser Powder Bed Fusion using Large Language Models",
+      "venue": "ASME 51st DAC / IDETC-CIE 2025",
+      "doi": "10.1115/DETC2025-168615",
+      "url": "https://doi.org/10.1115/DETC2025-168615",
+      "primary_model": "RAG＋GPT-4o-mini／Qwen2-VL-2B。ColPali画像検索、text-embedding-ada-002文献検索。",
+      "baseline_models": "出現率に応じたランダム、Qwen2-VL-2B、GPT-4o-miniのRAGなし。",
+      "split": "54件はテスト専用。異なる2機種・4条件の画像を評価。追加学習なし、文献を検索ソースとして使用。",
+      "learning": "ゼロショット推論、タイプ別の文献テキスト／画像RAG。",
+      "pretraining": "GPT-4o-mini、Qwen2-VL-2B。",
+      "performance": "GPT-4o-mini＋RAGの平均AccuracyはAddUp Maraging Steel 0.620、EOS 17-4 PH 0.621、EOS DMREF 0.521、EOS Inconel 718 0.738。RAGなしは同順0.610/0.471/0.401/0.523（Table 3）。",
+      "limitations": "タイプ別二値正答率のため陰性の多い種類で偏る。完全一致・macro-F1とは別。対象は工程中の粉末床の異常で完成部品の検査ではない。",
+      "locator": "§2 Fig. 5、§3 Table 1、§4 Eq. 1、Table 3、Tables A1–A4",
+      "source_ids": [
+        "SIM006",
+        "SIM007"
+      ]
+    },
+    {
+      "status": "採用",
+      "model_family": "VLM（MLLM）",
+      "domain": "工業外観検査",
+      "product": "MMADの対象製品・材料（電子部品、機械部品、外観素材・食品等）",
+      "input_group": "画像＋テキスト",
+      "input": "工業画像、問題文、選択肢。追加画像入力の比較も実施。提案条件の画像参照はTable 2に明確な個別注記なし。",
+      "prompt": "順序をランダム化した選択肢と、理由＋所定出力形式の指示。",
+      "task": "工業VQAの欠陥種類選択（Defect Classification）",
+      "labels": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "class_count": "MMAD全体で244欠陥カテゴリ・種類質問は4択。使用サブセットの種類数は未確認。",
+      "mixed": "未確認",
+      "dataset": "MMAD（MVTec AD、MVTec LOCO AD、VisA、GoodsAD由来）",
+      "data_size": "MMAD原版は8,366画像・39,672問。種類質問4,688問。各実験の部分集合はsplit欄。",
+      "metrics": "欠陥種類選択のAccuracy（%）",
+      "class_results": "欠陥種類ラベル別の精度は未確認。",
+      "generalization": "MVTec3D-ADへ別評価（Table 4）だが種類単独指標ではない。",
+      "code_data": "公開有無未確認。",
+      "verification": "全文確認",
+      "id": "IM005",
+      "year": 2025,
+      "authors": "Yuhao Chao; Jie Liu; Jie Tang; Gangshan Wu",
+      "title": "AnomalyR1: A GRPO-based End-to-end MLLM for Industrial Anomaly Detection",
+      "venue": "arXivプレプリント",
+      "doi": "10.48550/arXiv.2504.11914",
+      "url": "https://arxiv.org/html/2504.11914",
+      "primary_model": "AnomalyR1（Qwen2.5-VL 3B、GRPO＋ROAM）。",
+      "baseline_models": "Qwen2.5-VL 3B base / SFT、GPT-4o、InternVL2等。",
+      "split": "学習に工業データセット由来600画像、MMAD形式を活用。§4.2のTable 2でMMAD評価、訓練／評価の画像IDレベルの重複排除・種類質問数は未確認。",
+      "learning": "SFT比較、ROAM付きGRPO。",
+      "pretraining": "Qwen2.5-VL 3B。",
+      "performance": "Table 2 欠陥種類Accuracy 63.56%。base 41.07%、SFT 41.51%。76.96%は全サブタスク平均。",
+      "limitations": "MMAD種類数と評価質問分母の個別記載未確認。後続論文の引用値63.50%ではなく当該原著の63.56%を採用。",
+      "locator": "§§3–4、Table 2、MVTec3D Table 4",
+      "source_ids": [
+        "SIM008",
+        "SIM002",
+        "SIM024"
+      ]
+    },
+    {
+      "status": "採用",
+      "model_family": "VLM（MLLM）",
+      "domain": "工業外観検査",
+      "product": "MMADの対象製品・材料（電子部品、機械部品、外観素材・食品等）",
+      "input_group": "画像＋テキスト",
+      "input": "検査画像・質問・選択肢を入力。モデルは視覚欠陥領域の自己生成表現を使う。正常参照画像は別の1-shot設定も検証。",
+      "prompt": "MMADの欠陥種類選択。別の1-shotでは同カテゴリ正常画像をプロンプト前置。",
+      "task": "工業VQAの欠陥種類選択（Defect Classification）",
+      "labels": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "class_count": "MMAD全体で244欠陥カテゴリ・種類質問は4択。使用サブセットの種類数は未確認。",
+      "mixed": "未確認",
+      "dataset": "MMAD（MVTec AD、MVTec LOCO AD、VisA、GoodsAD由来）",
+      "data_size": "MMAD原版は8,366画像・39,672問。種類質問4,688問。各実験の部分集合はsplit欄。",
+      "metrics": "欠陥種類選択のAccuracy（%）",
+      "class_results": "欠陥種類ラベル別の精度は未確認。",
+      "generalization": "MMAD複数対象。別の画像／画素検出指標を種類分類の汎化に含めない。",
+      "code_data": "著者公開先は原著参照。",
+      "verification": "全文確認",
+      "id": "IM006",
+      "year": 2025,
+      "authors": "Shifang Zhao; Yiheng Lin; Lu Han; Yao Zhao; Yunchao Wei",
+      "title": "OmniAD: Intrinsic Anomaly Detection and Reasoning via Semantic Anomaly Encoding",
+      "venue": "arXiv（初版2025、改訂本文を確認）",
+      "doi": "10.48550/arXiv.2505.22039",
+      "url": "https://arxiv.org/html/2505.22039",
+      "primary_model": "OmniAD（Qwen2.5-VL 3B/7B、Semantic Anomaly Encodingと視覚誘導テキスト推論）。",
+      "baseline_models": "GPT-4o、Qwen2.5-VL、AnomalyR1等。",
+      "split": "MMADの約20%/80%評価系統。学習SFT 1.6k画像／6.4k QA、GRPO 293画像／1.1k QA。種類質問の個別評価nは未確認。",
+      "learning": "SFTとGRPO、検出・回答・出力形式の報酬。",
+      "pretraining": "Qwen2.5-VL 3B／7B。",
+      "performance": "Table 1の欠陥種類Accuracy 7B 78.80%、3B 75.90%。7Bの79.9%は全7タスク平均。",
+      "limitations": "MMADの学習部分集合を使用するため、原版ベンチマークの未学習MLLMと条件が異なる。",
+      "locator": "§§3–4、Table 1、学習データ記載",
+      "source_ids": [
+        "SIM009",
+        "SIM002",
+        "SIM024"
+      ]
+    },
+    {
+      "status": "採用",
+      "model_family": "VLM（MLLM）",
+      "domain": "工業外観検査",
+      "product": "MMADの対象製品・材料（電子部品、機械部品、外観素材・食品等）",
+      "input_group": "画像＋テキスト＋正常参照画像",
+      "input": "クエリ・同一対象の正常参照画像を比較し、選択肢を含む質問に答える。",
+      "prompt": "比較根拠、欠陥位置、選択肢を所定の出力形式で回答。",
+      "task": "工業VQAの欠陥種類選択（Defect Classification）",
+      "labels": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "class_count": "MMAD全体で244欠陥カテゴリ・種類質問は4択。使用サブセットの種類数は未確認。",
+      "mixed": "未確認",
+      "dataset": "MMAD（MVTec AD、MVTec LOCO AD、VisA、GoodsAD由来）",
+      "data_size": "MMAD原版は8,366画像・39,672問。種類質問4,688問。各実験の部分集合はsplit欄。",
+      "metrics": "欠陥種類選択のAccuracy（%）",
+      "class_results": "欠陥種類ラベル別の精度は未確認。",
+      "generalization": "未確認",
+      "code_data": "https://github.com/woodavid31/JUDO",
+      "verification": "全文確認",
+      "id": "IM007",
+      "year": 2026,
+      "authors": "Hyunju Kang; Woohyun Lee; Jaewon Kim; Hogun Park",
+      "title": "JUDO: A Juxtaposed Domain-Oriented Multimodal Reasoner for Industrial Anomaly QA",
+      "venue": "arXivプレプリント",
+      "doi": "10.48550/arXiv.2605.20284",
+      "url": "https://arxiv.org/html/2605.20284",
+      "primary_model": "JUDO（Qwen2.5-VL-7B、並置比較による異常位置SFT、ドメインQA学習、GRPO）。",
+      "baseline_models": "Qwen2.5-VL 7B、AnomalyR1 7B、GPT-4o、Gemini-2.5-Pro等。",
+      "split": "Stage 1にReal-IAD 1.4k画像・MMAD 293画像（カテゴリごと1件）、Stage 2に約13k QA、Stage 3に同一MMAD画像から1.4k QA。MMADの種類質問分母・画像IDの完全分離は未確認。",
+      "learning": "パッチ位置のSFT、専門知識SFT、ドメイン報酬付きGRPO。",
+      "pretraining": "Qwen2.5-VL-7B。",
+      "performance": "Table 1の欠陥種類Accuracy 74.74%。同表Qwen2.5-VL-7B 54.35%、AnomalyR1 7B 64.81%。81.20%は全タスク平均。",
+      "limitations": "同一ベンチマーク由来を学習に使用。画像ID単位の評価分離と種類別nを確認できる範囲は限られる。",
+      "locator": "§3、§4.1–4.2 Table 1、Appendices A–B",
+      "source_ids": [
+        "SIM010",
+        "SIM002",
+        "SIM024"
+      ]
+    },
+    {
+      "status": "採用",
+      "model_family": "VLM（MLLM）",
+      "domain": "工業外観検査",
+      "product": "電子部品、建築材料、機械部品、消費財、光学検査対象等。",
+      "input_group": "画像＋テキスト",
+      "input": "実工業画像と質問／選択肢。異常マップ由来情報をモデルに統合。",
+      "prompt": "MMADの欠陥種類4択。MAU-Setでは二値、選択、自由文を含む階層QA。",
+      "task": "工業VQAの欠陥種類選択（Defect Classification）",
+      "labels": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "class_count": "MMAD全体で244欠陥カテゴリ・種類質問は4択。使用サブセットの種類数は未確認。",
+      "mixed": "未確認",
+      "dataset": "学習・独自評価MAU-Set、別の評価にMMAD。",
+      "data_size": "MAU-Set約28k画像・224k QA、35製品種・100超欠陥クラス。MMAD種類問題の採点数は論文内で未確認。",
+      "metrics": "欠陥種類選択のAccuracy（%）",
+      "class_results": "欠陥種類ラベル別の精度は未確認。",
+      "generalization": "複数工業データで構成したMAU-SetとMMADを評価。原画像ソース重複の監査は未確認。",
+      "code_data": "原著にデータ／モデルの案内。公開有無は未確認。",
+      "verification": "全文確認",
+      "id": "IM008",
+      "year": 2026,
+      "authors": "Zhuonan Wang; Zhenxuan Fan; Siwen Tan; Yu Zhong; Yuqian Yuan; Haoyuan Li; Hao Jiang; Wenqiao Zhang; Feifei Shao; Hongwei Wang; Jun Xiao",
+      "title": "MAU-GPT: Enhancing Multi-type Industrial Anomaly Understanding via Anomaly-aware and Generalist Experts Adaptation",
+      "venue": "AAAI 2026",
+      "doi": "10.1609/aaai.v40i31.39889",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850",
+      "primary_model": "MAU-GPT-4B（Gemma-3系列、Anomaly-aware expertとGeneralist expertの適応）。",
+      "baseline_models": "Gemma-3-4B、GPT-4o、LLaVA-NeXT、InternVL2等。",
+      "split": "MAU-Setで各データ元を固定比率分割、MMADで追加ベンチマーク。MMADとの原画像重複の検証は未確認。",
+      "learning": "2段階学習、異常適応のLoRA mixture-of-expertsと一般知識エキスパート。",
+      "pretraining": "Gemma-3-4B。",
+      "performance": "MMAD Table 5 Defect Classification Accuracy 39.31%。Gemma3-4B 37.07%、GPT-4o 65.80%。61.41%は全タスク平均。",
+      "limitations": "同じ論文のMAU-Set QA集約指標とMMAD種類指標は区別。MMADの画像数・分類分母・参照数の個別記述は未確認。",
+      "locator": "§MAU-Set、§MAU-GPT、Experiments Table 5",
+      "source_ids": [
+        "SIM011",
+        "SIM023",
+        "SIM002",
+        "SIM024"
+      ]
+    },
+    {
+      "status": "採用",
+      "model_family": "VLM（MLLM）",
+      "domain": "工業外観検査",
+      "product": "MMADの対象製品・材料（電子部品、機械部品、外観素材・食品等）",
+      "input_group": "画像＋テキスト",
+      "input": "工業画像、欠陥種類の選択質問。外部正常参照・ツール不要。",
+      "prompt": "MMAD選択肢と画像。推論はgreedy、最大320トークン、潜在反復8。",
+      "task": "工業VQAの欠陥種類選択（Defect Classification）",
+      "labels": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "class_count": "MMAD全体で244欠陥カテゴリ・種類質問は4択。使用サブセットの種類数は未確認。",
+      "mixed": "未確認",
+      "dataset": "IAD-LR-22K（MMAD／Real-IADから作成）、MMAD評価。",
+      "data_size": "IAD-LR-22K 4,523画像・22,228インスタンス。MMAD学習部分1,600画像／7,613問、評価6,766画像／32,059問。種類質問の個別nは未確認。",
+      "metrics": "欠陥種類選択のAccuracy（%）",
+      "class_results": "欠陥種類ラベル別の精度は未確認。",
+      "generalization": "Real-IAD学習で複数他データへのOOD評価もあるが、当該表の集約結果をMMAD種類精度と混同しない。",
+      "code_data": "原著の公開予定先 https://github.com/Yen666/Anomaly-LR",
+      "verification": "全文確認",
+      "id": "IM009",
+      "year": 2026,
+      "authors": "Jaron Yeh; Yen-Wei Chang; Jiang Liu; Shao-Yuan Lo",
+      "title": "Industrial Anomaly Detection via Defect-Grounded Reasoning in Visual Latent Space",
+      "venue": "arXivプレプリント",
+      "doi": "10.48550/arXiv.2609.29457",
+      "url": "https://arxiv.org/html/2609.29457",
+      "primary_model": "Anomaly-LR（Qwen2.5-VL 3B／7B）。全体文脈を言語推論し、局所欠陥を視覚潜在空間で反復精緻化。",
+      "baseline_models": "OmniAD、EMIT、AD-Copilot、InspectorGPT、AgentIAD等。",
+      "split": "MMAD由来学習約20%、画像単位で排他的な残り80%を評価。OODはReal-IAD学習と別データ評価。",
+      "learning": "局所マスク教師を用いる潜在特徴再構成と回答・推論文学習。",
+      "pretraining": "Qwen2.5-VL 3B／7B。",
+      "performance": "Table 1の欠陥種類Accuracy 7B 82.70%、3B 82.49%。Table 1の全タスク平均87.12%/86.00%は別指標。",
+      "limitations": "プレプリント。20/80分割とベンチマーク全体を使う他論文の数値は直接順位付けしない。",
+      "locator": "§3.1–3.3、§4.1–4.2、Tables 1–2",
+      "source_ids": [
+        "SIM012",
+        "SIM002",
+        "SIM024"
+      ]
+    },
+    {
+      "status": "採用",
+      "model_family": "VLM（MLLM）",
+      "domain": "工業外観検査",
+      "product": "MMADの対象製品・材料（電子部品、機械部品、外観素材・食品等）",
+      "input_group": "画像＋テキスト＋正常参照画像",
+      "input": "クエリ画像、質問と選択肢、検索された正常参照画像1枚・テキスト知識。欠陥マップの専門家は主に検出・位置質問で作動。",
+      "prompt": "検索知識・正常参照画像を併記し、モデル群で選択肢を統合。",
+      "task": "工業VQAの欠陥種類選択（Defect Classification）",
+      "labels": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "class_count": "MMAD全体で244欠陥カテゴリ・種類質問は4択。使用サブセットの種類数は未確認。",
+      "mixed": "未確認",
+      "dataset": "MMAD（MVTec AD、MVTec LOCO AD、VisA、GoodsAD由来）",
+      "data_size": "著者評価39,670問（MMAD原著39,672と2問差、著者表記を保持）。種類設問の評価分母は未確認。",
+      "metrics": "欠陥種類選択のAccuracy（%）",
+      "class_results": "欠陥種類ラベル別の精度は未確認。",
+      "generalization": "固定構成の学習なし構成を評価、独立生産ラインでの検証は未確認。",
+      "code_data": "公開状況未確認。",
+      "verification": "全文確認",
+      "id": "IM010",
+      "year": 2026,
+      "authors": "Xingwu Zhang; Duanyang Du; Huiling Zhu; Jiayue Dai; Yixiao Liu; Guozhi Liu; Zhihan Zhang; Zijun Long",
+      "title": "Is In-Domain Training Enough for Fine-Grained Industrial Anomaly Understanding?",
+      "venue": "arXivプレプリント（2026-10-08）",
+      "doi": "10.48550/arXiv.2610.12310",
+      "url": "https://arxiv.org/html/2610.12310",
+      "primary_model": "SiGMA（複数のMLLM、ドメイン知識・正常画像検索、信頼度重み付き統合）。",
+      "baseline_models": "Gemini-2.5-Pro、Qwen3-VL、OmniAD、JUDO、Reason-IAD等。",
+      "split": "MMAD評価回答でモデル構成／ハイパーパラメータを選定。固定後の信頼度推定はラベルなし評価バッチを用いる。",
+      "learning": "MLLMの追加パラメータ更新なし。評価バッチに対するラベルなし推定と検索。",
+      "pretraining": "既存の複数MLLM（主構成8基礎エージェント、最大3補助モデル）。",
+      "performance": "Table 1の欠陥種類Accuracy 79.2%。85.2%は7タスク平均。",
+      "limitations": "MMADの評価回答でチームと設定を選択したため、完全に未使用の評価セット性能と扱えない。",
+      "locator": "§3、§4.1 Table 1、Appendices A/B/E/G",
+      "source_ids": [
+        "SIM013",
+        "SIM002",
+        "SIM024"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SIM001",
+      "title": "MMAD: A Comprehensive Benchmark for Multimodal Large Language Models in Industrial Anomaly Detection",
+      "publisher": "ICLR",
+      "year": "2025",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/d91ffbe9c126765755ff52d36b715683-Abstract-Conference.html",
+      "doi": "未割当",
+      "type": "学会公式",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "書誌・抄録",
+      "saved_path": "",
+      "locator": "公式採録"
+    },
+    {
+      "source_id": "SIM002",
+      "title": "MMAD: A Comprehensive Benchmark for Multimodal Large Language Models in Industrial Anomaly Detection",
+      "publisher": "著者／arXiv",
+      "year": "2024–2025",
+      "url": "https://arxiv.org/html/2410.09453",
+      "doi": "10.48550/arXiv.2410.09453",
+      "type": "著者公開版",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§3、§4.1、Tables 1–2、Fig. 3、Appendix"
+    },
+    {
+      "source_id": "SIM003",
+      "title": "Detect, Classify, Act: Categorizing Industrial Anomalies with Multi-Modal Large Language Models",
+      "publisher": "IEEE/CVF",
+      "year": "2025",
+      "url": "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+      "doi": "10.1109/CVPRW67362.2025.00390",
+      "type": "会議原著",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§3.1–3.3、Fig. 4、§4.1–4.2、Tables 1–3"
+    },
+    {
+      "source_id": "SIM004",
+      "title": "FabGPT: An Efficient Large Multimodal Model for Complex Wafer Defect Knowledge Queries",
+      "publisher": "著者／arXiv",
+      "year": "2024",
+      "url": "https://arxiv.org/html/2407.10810",
+      "doi": "10.48550/arXiv.2407.10810",
+      "type": "著者公開版",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§2.1、§3 Figs. 2–3、§4.1、Tables 1–2"
+    },
+    {
+      "source_id": "SIM005",
+      "title": "FabGPT: An Efficient Large Multimodal Model for Complex Wafer Defect Knowledge Queries",
+      "publisher": "ACM／Crossref",
+      "year": "2024（会議）、2025（オンライン）",
+      "url": "https://doi.org/10.1145/3676536.3676750",
+      "doi": "10.1145/3676536.3676750",
+      "type": "会議書誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "Crossref書誌確認",
+      "saved_path": "",
+      "locator": "書誌・著者・刊行日"
+    },
+    {
+      "source_id": "SIM006",
+      "title": "Multimodal RAG-driven Anomaly Detection and Classification in Laser Powder Bed Fusion using Large Language Models",
+      "publisher": "著者／arXiv",
+      "year": "2025",
+      "url": "https://arxiv.org/pdf/2505.13828",
+      "doi": "10.48550/arXiv.2505.13828",
+      "type": "著者公開版",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§§2–4、Tables 1/3/A1–A4、Eq. 1、Figs. 5/8"
+    },
+    {
+      "source_id": "SIM007",
+      "title": "Multimodal RAG-driven Anomaly Detection and Classification in Laser Powder Bed Fusion using Large Language Models",
+      "publisher": "Rutgers大学／ASME",
+      "year": "2025",
+      "url": "https://www.researchwithrutgers.org/en/publications/multimodal-rag-driven-anomaly-detection-and-classification-in-las/",
+      "doi": "10.1115/DETC2025-168615",
+      "type": "所属機関公式書誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "書誌・抄録確認",
+      "saved_path": "",
+      "locator": "学会媒体、DOI、著者"
+    },
+    {
+      "source_id": "SIM008",
+      "title": "AnomalyR1: A GRPO-based End-to-end MLLM for Industrial Anomaly Detection",
+      "publisher": "著者／arXiv",
+      "year": "2025",
+      "url": "https://arxiv.org/html/2504.11914",
+      "doi": "10.48550/arXiv.2504.11914",
+      "type": "プレプリント",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§3–4、Tables 2–4"
+    },
+    {
+      "source_id": "SIM009",
+      "title": "OmniAD: Intrinsic Anomaly Detection and Reasoning via Semantic Anomaly Encoding",
+      "publisher": "著者／arXiv",
+      "year": "2025（初版）",
+      "url": "https://arxiv.org/html/2505.22039",
+      "doi": "10.48550/arXiv.2505.22039",
+      "type": "改訂プレプリント",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§§3–4、Table 1、Appendix"
+    },
+    {
+      "source_id": "SIM010",
+      "title": "JUDO: A Juxtaposed Domain-Oriented Multimodal Reasoner for Industrial Anomaly QA",
+      "publisher": "著者／arXiv",
+      "year": "2026",
+      "url": "https://arxiv.org/html/2605.20284",
+      "doi": "10.48550/arXiv.2605.20284",
+      "type": "プレプリント",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§§3–4、Table 1、Appendix A–B"
+    },
+    {
+      "source_id": "SIM011",
+      "title": "MAU-GPT: Enhancing Multi-type Industrial Anomaly Understanding via Anomaly-aware and Generalist Experts Adaptation",
+      "publisher": "AAAI",
+      "year": "2026",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850",
+      "doi": "10.1609/aaai.v40i31.39889",
+      "type": "会議原著",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§MAU-Set、§MAU-GPT、Experiments、Tables 1/4/5"
+    },
+    {
+      "source_id": "SIM012",
+      "title": "Industrial Anomaly Detection via Defect-Grounded Reasoning in Visual Latent Space",
+      "publisher": "著者／arXiv",
+      "year": "2026",
+      "url": "https://arxiv.org/html/2609.29457",
+      "doi": "10.48550/arXiv.2609.29457",
+      "type": "プレプリント",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§3、§4.1–4.2、Tables 1–2"
+    },
+    {
+      "source_id": "SIM013",
+      "title": "Is In-Domain Training Enough for Fine-Grained Industrial Anomaly Understanding?",
+      "publisher": "著者／arXiv",
+      "year": "2026",
+      "url": "https://arxiv.org/html/2610.12310",
+      "doi": "10.48550/arXiv.2610.12310",
+      "type": "プレプリント",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§§3–4、Table 1、Appendices A/B/E/G"
+    },
+    {
+      "source_id": "SIM014",
+      "title": "AnomalyGPT: Detecting Industrial Anomalies Using Large Vision-Language Models",
+      "publisher": "AAAI",
+      "year": "2024",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/download/27963/27945",
+      "doi": "10.1609/aaai.v38i3.27963",
+      "type": "会議原著",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "該当節確認",
+      "saved_path": "",
+      "locator": "方法・実験"
+    },
+    {
+      "source_id": "SIM015",
+      "title": "Towards Zero-Shot Anomaly Detection and Reasoning with Multimodal Large Language Models",
+      "publisher": "著者／arXiv",
+      "year": "2025",
+      "url": "https://arxiv.org/html/2502.07601",
+      "doi": "10.48550/arXiv.2502.07601",
+      "type": "著者公開版（CVPR 2025）",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§3–4、Appendix、Table 15"
+    },
+    {
+      "source_id": "SIM016",
+      "title": "DefectGPT: An Automatic Retrieval-Augmented Framework for Digital Twin-Based Defect Information Management and Analytics",
+      "publisher": "香港中文大学",
+      "year": "2025",
+      "url": "https://research.cuhk.edu.hk/en/publications/defectgpt-an-automatic-retrieval-augmented-framework-for-digital-/",
+      "doi": "未確認",
+      "type": "著者所属機関公式書誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "抄録確認",
+      "saved_path": "",
+      "locator": "対象・方法"
+    },
+    {
+      "source_id": "SIM017",
+      "title": "WaferSAGE: Large Language Model-Powered Wafer Defect Analysis via Synthetic Data Generation and Rubric-Guided Reinforcement Learning",
+      "publisher": "著者／arXiv",
+      "year": "2026",
+      "url": "https://arxiv.org/html/2604.27629",
+      "doi": "10.48550/arXiv.2604.27629",
+      "type": "プレプリント",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§§3–4、Tables 2–3"
+    },
+    {
+      "source_id": "SIM018",
+      "title": "Lightweight multimodal large language model enabling efficient one shot industrial visual anomaly detection",
+      "publisher": "Springer Nature",
+      "year": "2026",
+      "url": "https://link.springer.com/article/10.1007/s44163-026-01252-w",
+      "doi": "10.1007/s44163-026-01252-w",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "該当節確認",
+      "saved_path": "",
+      "locator": "§4、Fig. 9"
+    },
+    {
+      "source_id": "SIM019",
+      "title": "Adaptive multimodal large language model with hierarchical cross modal grounding for real time industrial visual anomaly detection on edge devices",
+      "publisher": "Springer Nature",
+      "year": "2026",
+      "url": "https://link.springer.com/article/10.1007/s44163-026-02008-2",
+      "doi": "10.1007/s44163-026-02008-2",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "該当節確認",
+      "saved_path": "",
+      "locator": "§4.1、PCB-Defect記述・評価指標"
+    },
+    {
+      "source_id": "SIM020",
+      "title": "MMAD official code and data",
+      "publisher": "MMAD著者",
+      "year": "2025",
+      "url": "https://github.com/jam-cc/MMAD",
+      "doi": "非該当",
+      "type": "著者リポジトリ",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著からリンク確認",
+      "saved_path": "",
+      "locator": "Dataset、evaluation"
+    },
+    {
+      "source_id": "SIM021",
+      "title": "Interactive multimodal quality assessment in laser powder bed fusion using vision-large language models",
+      "publisher": "Elsevier",
+      "year": "2026",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1526612526007607",
+      "doi": "未確認",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社抄録の索引確認",
+      "saved_path": "",
+      "locator": "Abstract"
+    },
+    {
+      "source_id": "SIM022",
+      "title": "Detect, Classify, Act DOI metadata",
+      "publisher": "Crossref／IEEE",
+      "year": "2025",
+      "url": "https://api.crossref.org/works/10.1109/cvprw67362.2025.00390",
+      "doi": "10.1109/CVPRW67362.2025.00390",
+      "type": "DOI書誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "Crossref書誌確認",
+      "saved_path": "",
+      "locator": "登録題名・媒体・発行年"
+    },
+    {
+      "source_id": "SIM023",
+      "title": "MAU-GPT DOI metadata",
+      "publisher": "Crossref／AAAI",
+      "year": "2026",
+      "url": "https://api.crossref.org/works/10.1609/aaai.v40i31.39889",
+      "doi": "10.1609/aaai.v40i31.39889",
+      "type": "DOI書誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "Crossref書誌確認",
+      "saved_path": "",
+      "locator": "登録題名・媒体・発行年"
+    },
+    {
+      "source_id": "SIM024",
+      "title": "MMAD dataset domain knowledge / anomaly class keys",
+      "publisher": "MMAD著者",
+      "year": "2025（論文）",
+      "url": "https://github.com/jam-cc/MMAD/blob/main/dataset/MMAD/domain_knowledge.json",
+      "doi": "非該当",
+      "type": "著者公開データ",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "ラベルキー確認",
+      "saved_path": "",
+      "locator": "JSON MVTec/zipper と MVTec/cable"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CIM001",
+      "entity_id": "IM001",
+      "field": "input",
+      "claim": "実製品クエリ画像、欠陥質問と選択肢。同一製品カテゴリの正常参照画像を標準1枚添付。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM002",
+      "entity_id": "IM001",
+      "field": "primary_model",
+      "claim": "評価ベンチマーク。GPT-4o（2024-05-13）等を測定。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM003",
+      "entity_id": "IM001",
+      "field": "labels",
+      "claim": "製品別欠陥種類の四択。著者のデータ定義の原語キー例はzipper `split_teeth`, `squeezed_teeth`、cable `cable_swap`, `cut_inner_insulation`, `combined`。候補は質問ごとに異なる。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM004",
+      "entity_id": "IM001",
+      "field": "performance",
+      "claim": "Table 2標準条件の欠陥種類Accuracy GPT-4o 65.80%、Claude-3.5-Sonnet 60.14%、Gemini-1.5-Pro 60.12%、InternVL2-76B 54.22%、AnomalyGPT-7B 27.49%。GPT-4oの74.92%は7タスク平均。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM005",
+      "entity_id": "IM001",
+      "field": "split",
+      "claim": "ベンチマーク評価。標準1-shotは正常画像をランダムに1枚、1-shot+は最近傍検索。単画像制約モデルでは0-shot。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM006",
+      "entity_id": "IM002",
+      "field": "input",
+      "claim": "原画像、異常マップに基づく赤輪郭付き画像、正常参照画像。画像448×448、温度0。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM007",
+      "entity_id": "IM002",
+      "field": "primary_model",
+      "claim": "VELM（DDAD/PatchCoreとGPT-4o/4o-miniのカスケード）。異常領域を輪郭で強調しMLLMが分類。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM008",
+      "entity_id": "IM002",
+      "field": "labels",
+      "claim": "ボトルのプロンプト例 `Broken Large`, `Broken Small`, `Contamination`（Fig. 4）。MVTec-AC再編で capsule `poke`/`crack`、carpet `cut`/`hole`、screw `thread.side`/`thread.top`、zipper `broken_teeth`/`rough` を対ごとに統合（§3.3）。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM009",
+      "entity_id": "IM002",
+      "field": "performance",
+      "claim": "DDAD＋GPT-4o MVTec-AC 84.0% Accuracy、80.3% F1、79.7% κ、VisA-AC 69.6% Accuracy。GTマスクoracleはMVTec-AC 87.8%、VisA-AC 87.6%。Table 1原MVTec-ADでは81.4%だがAbstractは80.4%と記載。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM010",
+      "entity_id": "IM002",
+      "field": "split",
+      "claim": "各原データセットを再編し評価。MVTec-ACは重複クラス統合・誤注記見直し・combined削除、VisA-ACは少数クラス除外・4クラス統合。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM011",
+      "entity_id": "IM003",
+      "field": "input",
+      "claim": "480×480 SEM実写、質問、画像から取得した文字情報とラベル集合。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM012",
+      "entity_id": "IM003",
+      "field": "primary_model",
+      "claim": "FabGPT。PandaGPT（Vicuna-7B＋凍結ImageBind Huge）、CLIP画像／ラベル特徴、画像上文字メタデータ、prompt modulation。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM013",
+      "entity_id": "IM003",
+      "field": "labels",
+      "claim": "`Hole`, `Particle`, `Scratch`, `Pattern`（Table 1表記、§2.1はpattern deformities）、正常画像は `good`。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM014",
+      "entity_id": "IM003",
+      "field": "performance",
+      "claim": "Table 2のCategory FabGPT 97.50%、Lisa 92.50%、AnomalyGPT 75.00%、GPT-4 37.50%。全種類Q&A平均は96.86%。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM015",
+      "entity_id": "IM003",
+      "field": "split",
+      "claim": "SEM画像train/test 7:3。両群に正常・異常。独立ウエハ・製造ロット単位か未確認。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM016",
+      "entity_id": "IM004",
+      "field": "input",
+      "claim": "溶融後・粉末塗布後の実可視画像、科学文献由来の欠陥参照画像・記述。ORNLのIR等は保有されるが当該モデルの評価入力は可視。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM017",
+      "entity_id": "IM004",
+      "field": "primary_model",
+      "claim": "RAG＋GPT-4o-mini／Qwen2-VL-2B。ColPali画像検索、text-embedding-ada-002文献検索。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM018",
+      "entity_id": "IM004",
+      "field": "labels",
+      "claim": "§3: Recoater Hopping, Recoater Streaking, Incomplete Spreading, Swelling, Debris, Super-Elevation, Soot, Excessive Melting, Localized Bright Spot, Spatter on Powder, Mounding Powder, Localized Dark Regions, Misprint。付録表ではEdge Swelling、Crashing、Stripe Boundaryの表記も使用。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM019",
+      "entity_id": "IM004",
+      "field": "performance",
+      "claim": "GPT-4o-mini＋RAGの平均AccuracyはAddUp Maraging Steel 0.620、EOS 17-4 PH 0.621、EOS DMREF 0.521、EOS Inconel 718 0.738。RAGなしは同順0.610/0.471/0.401/0.523（Table 3）。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM020",
+      "entity_id": "IM004",
+      "field": "split",
+      "claim": "54件はテスト専用。異なる2機種・4条件の画像を評価。追加学習なし、文献を検索ソースとして使用。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM021",
+      "entity_id": "IM005",
+      "field": "input",
+      "claim": "工業画像、問題文、選択肢。追加画像入力の比較も実施。提案条件の画像参照はTable 2に明確な個別注記なし。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM022",
+      "entity_id": "IM005",
+      "field": "primary_model",
+      "claim": "AnomalyR1（Qwen2.5-VL 3B、GRPO＋ROAM）。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM023",
+      "entity_id": "IM005",
+      "field": "labels",
+      "claim": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM024",
+      "entity_id": "IM005",
+      "field": "performance",
+      "claim": "Table 2 欠陥種類Accuracy 63.56%。base 41.07%、SFT 41.51%。76.96%は全サブタスク平均。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM025",
+      "entity_id": "IM005",
+      "field": "split",
+      "claim": "学習に工業データセット由来600画像、MMAD形式を活用。§4.2のTable 2でMMAD評価、訓練／評価の画像IDレベルの重複排除・種類質問数は未確認。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM026",
+      "entity_id": "IM006",
+      "field": "input",
+      "claim": "検査画像・質問・選択肢を入力。モデルは視覚欠陥領域の自己生成表現を使う。正常参照画像は別の1-shot設定も検証。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM027",
+      "entity_id": "IM006",
+      "field": "primary_model",
+      "claim": "OmniAD（Qwen2.5-VL 3B/7B、Semantic Anomaly Encodingと視覚誘導テキスト推論）。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM028",
+      "entity_id": "IM006",
+      "field": "labels",
+      "claim": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM029",
+      "entity_id": "IM006",
+      "field": "performance",
+      "claim": "Table 1の欠陥種類Accuracy 7B 78.80%、3B 75.90%。7Bの79.9%は全7タスク平均。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM030",
+      "entity_id": "IM006",
+      "field": "split",
+      "claim": "MMADの約20%/80%評価系統。学習SFT 1.6k画像／6.4k QA、GRPO 293画像／1.1k QA。種類質問の個別評価nは未確認。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM031",
+      "entity_id": "IM007",
+      "field": "input",
+      "claim": "クエリ・同一対象の正常参照画像を比較し、選択肢を含む質問に答える。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM032",
+      "entity_id": "IM007",
+      "field": "primary_model",
+      "claim": "JUDO（Qwen2.5-VL-7B、並置比較による異常位置SFT、ドメインQA学習、GRPO）。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM033",
+      "entity_id": "IM007",
+      "field": "labels",
+      "claim": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM034",
+      "entity_id": "IM007",
+      "field": "performance",
+      "claim": "Table 1の欠陥種類Accuracy 74.74%。同表Qwen2.5-VL-7B 54.35%、AnomalyR1 7B 64.81%。81.20%は全タスク平均。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM035",
+      "entity_id": "IM007",
+      "field": "split",
+      "claim": "Stage 1にReal-IAD 1.4k画像・MMAD 293画像（カテゴリごと1件）、Stage 2に約13k QA、Stage 3に同一MMAD画像から1.4k QA。MMADの種類質問分母・画像IDの完全分離は未確認。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM036",
+      "entity_id": "IM008",
+      "field": "input",
+      "claim": "実工業画像と質問／選択肢。異常マップ由来情報をモデルに統合。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM037",
+      "entity_id": "IM008",
+      "field": "primary_model",
+      "claim": "MAU-GPT-4B（Gemma-3系列、Anomaly-aware expertとGeneralist expertの適応）。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM038",
+      "entity_id": "IM008",
+      "field": "labels",
+      "claim": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM039",
+      "entity_id": "IM008",
+      "field": "performance",
+      "claim": "MMAD Table 5 Defect Classification Accuracy 39.31%。Gemma3-4B 37.07%、GPT-4o 65.80%。61.41%は全タスク平均。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM040",
+      "entity_id": "IM008",
+      "field": "split",
+      "claim": "MAU-Setで各データ元を固定比率分割、MMADで追加ベンチマーク。MMADとの原画像重複の検証は未確認。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM041",
+      "entity_id": "IM009",
+      "field": "input",
+      "claim": "工業画像、欠陥種類の選択質問。外部正常参照・ツール不要。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM042",
+      "entity_id": "IM009",
+      "field": "primary_model",
+      "claim": "Anomaly-LR（Qwen2.5-VL 3B／7B）。全体文脈を言語推論し、局所欠陥を視覚潜在空間で反復精緻化。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM043",
+      "entity_id": "IM009",
+      "field": "labels",
+      "claim": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM044",
+      "entity_id": "IM009",
+      "field": "performance",
+      "claim": "Table 1の欠陥種類Accuracy 7B 82.70%、3B 82.49%。Table 1の全タスク平均87.12%/86.00%は別指標。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM045",
+      "entity_id": "IM009",
+      "field": "split",
+      "claim": "MMAD由来学習約20%、画像単位で排他的な残り80%を評価。OODはReal-IAD学習と別データ評価。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM046",
+      "entity_id": "IM010",
+      "field": "input",
+      "claim": "クエリ画像、質問と選択肢、検索された正常参照画像1枚・テキスト知識。欠陥マップの専門家は主に検出・位置質問で作動。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM047",
+      "entity_id": "IM010",
+      "field": "primary_model",
+      "claim": "SiGMA（複数のMLLM、ドメイン知識・正常画像検索、信頼度重み付き統合）。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM048",
+      "entity_id": "IM010",
+      "field": "labels",
+      "claim": "MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM049",
+      "entity_id": "IM010",
+      "field": "performance",
+      "claim": "Table 1の欠陥種類Accuracy 79.2%。85.2%は7タスク平均。",
+      "status": "原著確認"
+    },
+    {
+      "claim_id": "CIM050",
+      "entity_id": "IM010",
+      "field": "split",
+      "claim": "MMAD評価回答でモデル構成／ハイパーパラメータを選定。固定後の信頼度推定はラベルなし評価バッチを用いる。",
+      "status": "原著確認"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "claim_id": "CIM001",
+      "source_id": "SIM002",
+      "locator": "§3・Fig. 3、§4.1評価設定",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM002",
+      "source_id": "SIM002",
+      "locator": "§4.1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM003",
+      "source_id": "SIM002",
+      "locator": "§3 Table 1、Fig. 3、公式公開JSON",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM003",
+      "source_id": "SIM024",
+      "locator": "MVTec/zipper、MVTec/cable",
+      "quote": "",
+      "verification": "著者データ上の原語キーを確認"
+    },
+    {
+      "claim_id": "CIM004",
+      "source_id": "SIM002",
+      "locator": "§4.1 Table 2",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM005",
+      "source_id": "SIM002",
+      "locator": "§3 Table 1、§4.1評価設定",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM006",
+      "source_id": "SIM003",
+      "locator": "§3.1–3.2、Fig. 4",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM007",
+      "source_id": "SIM003",
+      "locator": "§3.1–3.2",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM008",
+      "source_id": "SIM003",
+      "locator": "§3.3、Figs. 4–6",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM009",
+      "source_id": "SIM003",
+      "locator": "§4.2 Tables 1–3",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM010",
+      "source_id": "SIM003",
+      "locator": "§3.3、§4.2",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM011",
+      "source_id": "SIM004",
+      "locator": "§3 Fig. 3、§4.1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM012",
+      "source_id": "SIM004",
+      "locator": "§3、§4.1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM013",
+      "source_id": "SIM004",
+      "locator": "§2.1 Fig. 2、Table 1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM014",
+      "source_id": "SIM004",
+      "locator": "§4.1.3、Table 2 Category",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM015",
+      "source_id": "SIM004",
+      "locator": "§4.1.1–4.1.3",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM016",
+      "source_id": "SIM006",
+      "locator": "§2 Fig. 5、§3 Fig. 6",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM017",
+      "source_id": "SIM006",
+      "locator": "§2.1–2.2",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM018",
+      "source_id": "SIM006",
+      "locator": "§3、Tables A1–A4",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM019",
+      "source_id": "SIM006",
+      "locator": "§4 Eq. 1、Table 3、Tables A1–A4",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM020",
+      "source_id": "SIM006",
+      "locator": "§3 Table 1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM021",
+      "source_id": "SIM008",
+      "locator": "§3、§4.2",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM022",
+      "source_id": "SIM008",
+      "locator": "§3",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM023",
+      "source_id": "SIM008",
+      "locator": "§4.2 Defect Classification",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM023",
+      "source_id": "SIM024",
+      "locator": "MVTec/zipper、MVTec/cable",
+      "quote": "",
+      "verification": "著者データ上の原語キーを確認"
+    },
+    {
+      "claim_id": "CIM024",
+      "source_id": "SIM008",
+      "locator": "§4 Table 2",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM025",
+      "source_id": "SIM008",
+      "locator": "§4.1–4.2",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM026",
+      "source_id": "SIM009",
+      "locator": "§3、§4.1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM027",
+      "source_id": "SIM009",
+      "locator": "§3",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM028",
+      "source_id": "SIM009",
+      "locator": "§4.2、Table 1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM028",
+      "source_id": "SIM024",
+      "locator": "MVTec/zipper、MVTec/cable",
+      "quote": "",
+      "verification": "著者データ上の原語キーを確認"
+    },
+    {
+      "claim_id": "CIM029",
+      "source_id": "SIM009",
+      "locator": "§4 Table 1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM030",
+      "source_id": "SIM009",
+      "locator": "§4.1と学習データ記載",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM031",
+      "source_id": "SIM010",
+      "locator": "§§3–4、Appendices A–B",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM032",
+      "source_id": "SIM010",
+      "locator": "§3",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM033",
+      "source_id": "SIM010",
+      "locator": "§4.1–4.2、Table 1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM033",
+      "source_id": "SIM024",
+      "locator": "MVTec/zipper、MVTec/cable",
+      "quote": "",
+      "verification": "著者データ上の原語キーを確認"
+    },
+    {
+      "claim_id": "CIM034",
+      "source_id": "SIM010",
+      "locator": "§4.2 Table 1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM035",
+      "source_id": "SIM010",
+      "locator": "§4.1、Appendix A",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM036",
+      "source_id": "SIM011",
+      "locator": "§MAU-Set、§MAU-GPT、Experiments",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM037",
+      "source_id": "SIM011",
+      "locator": "§MAU-GPT",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM038",
+      "source_id": "SIM011",
+      "locator": "Experiments Table 5",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM038",
+      "source_id": "SIM024",
+      "locator": "MVTec/zipper、MVTec/cable",
+      "quote": "",
+      "verification": "著者データ上の原語キーを確認"
+    },
+    {
+      "claim_id": "CIM039",
+      "source_id": "SIM011",
+      "locator": "Experiments Table 5",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM040",
+      "source_id": "SIM011",
+      "locator": "§MAU-Set、Experiments",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM041",
+      "source_id": "SIM012",
+      "locator": "§3.1、§4.1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM042",
+      "source_id": "SIM012",
+      "locator": "§3.1–3.3、§4.1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM043",
+      "source_id": "SIM012",
+      "locator": "§4.1、Table 1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM043",
+      "source_id": "SIM024",
+      "locator": "MVTec/zipper、MVTec/cable",
+      "quote": "",
+      "verification": "著者データ上の原語キーを確認"
+    },
+    {
+      "claim_id": "CIM044",
+      "source_id": "SIM012",
+      "locator": "§4.2 Table 1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM045",
+      "source_id": "SIM012",
+      "locator": "§3.3、§4.1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM046",
+      "source_id": "SIM013",
+      "locator": "§3.2、§4.1、Appendix B",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM047",
+      "source_id": "SIM013",
+      "locator": "§3、Appendix A",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM048",
+      "source_id": "SIM013",
+      "locator": "§4.1、Table 1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM048",
+      "source_id": "SIM024",
+      "locator": "MVTec/zipper、MVTec/cable",
+      "quote": "",
+      "verification": "著者データ上の原語キーを確認"
+    },
+    {
+      "claim_id": "CIM049",
+      "source_id": "SIM013",
+      "locator": "§4.1 Table 1",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    },
+    {
+      "claim_id": "CIM050",
+      "source_id": "SIM013",
+      "locator": "§4.1、Appendices A–B",
+      "quote": "",
+      "verification": "原著の日本語要約"
+    }
+  ],
+  "search_log": [
+    {
+      "search_id": "QIM001",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "industrial defect type classification multimodal large language model VQA MMAD defect classification accuracy Anomaly-OV DefectGPT 2026 industrial anomaly MLLM | industrial defect classification multimodal large language model defect category Accuracy VQA AnomalyGPT MiniGPT4-AD MMAD benchmark AnomalyR1 industrial defect taxonomy 2025 2026 | industrial anomaly inspection benchmark defect type classification multimodal large language models MMAD II-Bench 2026 defect category | industrial defect type classification large vision language model PCB steel surface NEU 2025 2026 classification six defect types VLM Qwen CLIP",
+      "target": "Web文献探索",
+      "returned_count": 24,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://mlanthology.org/iclr/2025/jiang2025iclr-mmad/",
+        "https://link.springer.com/article/10.1007/s44163-026-02008-2",
+        "https://arxiv.org/abs/2410.09453",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://wiki.seeedstudio.com/solutions/edge-surface-defect-inspection/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12808781/",
+        "https://www.sota2.com/research/sota/industrial-anomaly-detection-on-mmad",
+        "https://arxiv.org/abs/2610.12310",
+        "https://openaccess.thecvf.com/content/CVPR2026/papers/Ni_Towards_Open-Vocabulary_Industrial_Defect_Understanding_with_a_Large-Scale_Multimodal_Dataset_CVPR_2026_paper.pdf",
+        "https://link.springer.com/article/10.1007/s44163-026-01252-w",
+        "https://proceedings.iclr.cc/paper_files/paper/2025/file/d91ffbe9c126765755ff52d36b715683-Paper-Conference.pdf",
+        "https://www.sciencedirect.com/science/article/pii/S0031320325014153",
+        "https://aei.ewapub.com/article/view/26796",
+        "https://en.papernotes.org/ECCV2026/object_detection/global_logic_and_local_search_dual-stream_multimodal_in-context_learning_for_ver/",
+        "https://link.springer.com/article/10.1007/s00170-026-17818-y",
+        "https://file.ewadirect.com/press/media/c82cab8cd03c47caa963d6ce59003019.marked_UUwA1yV.pdf",
+        "https://www.researchgate.net/publication/412112953_ADOPD_Reference-Privileged_On-Policy_Distillation_for_MLLM-Based_Industrial_Anomaly_Detection",
+        "https://ojs.aaai.org/index.php/AAAI/article/view/27963",
+        "https://arxiv.org/abs/2605.10833",
+        "https://arxiv.org/abs/2609.29457",
+        "https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_502/paper.pdf",
+        "https://en.wikipedia.org/wiki/MMMU",
+        "https://en.wikipedia.org/wiki/Qwen",
+        "https://en.wikipedia.org/wiki/Anomaly_detection"
+      ]
+    },
+    {
+      "search_id": "QIM002",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "Anomaly-OV DefectGPT Defect classification MMAD Anomaly classification industrial MLLM table | MMAD Anomaly Classification Table AnomalyR1 Anomaly-OV IAD GPT RealiAD defect classification Industrial anomaly understanding model Qwen 2025 2026 | MMAD \"Anomaly Classification\" MLLM industrial anomaly DeepInspect DefectGPT 2026 accuracy defect class | industrial visual anomaly defect category classification VQA benchmark 2026 MMAD InspectBench InAD multimodal defect class",
+      "target": "Web文献探索",
+      "returned_count": 22,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://www.sota2.com/research/sota/industrial-anomaly-detection-on-mmad",
+        "https://link.springer.com/article/10.1007/s44163-026-02008-2",
+        "https://thelatestinai.com/papers/2610.12310?density=cards",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://huggingface.co/datasets/1779-lab/MMAD_remake_Benchmark",
+        "https://doi.org/10.1016/j.patcog.2026.113354",
+        "https://link.springer.com/article/10.1007/s44163-026-01252-w",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13468834/",
+        "https://www.preprints.org/manuscript/202606.0719",
+        "https://thelatestinai.com/papers/2609.29457",
+        "https://www.scribd.com/document/963804924/MMAD",
+        "https://rt.http3.lol/index.php?q=aHR0cHM6Ly9hcnhpdi5vcmcvaHRtbC8yNjExLjA4MDgwdjE",
+        "https://rt.http3.lol/index.php?q=aHR0cHM6Ly9hcnhpdi5vcmcvaHRtbC8yNjA4LjI5NzgzdjE",
+        "https://proceedings.iclr.cc/paper_files/paper/2025/file/d91ffbe9c126765755ff52d36b715683-Paper-Conference.pdf",
+        "https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_502/paper.pdf",
+        "https://arxiv.org/abs/2410.09453",
+        "https://arxiv.org/abs/2510.16036",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850",
+        "https://arxiv.org/abs/2512.13671",
+        "https://openaccess.thecvf.com/content/CVPR2026/papers/Ni_Towards_Open-Vocabulary_Industrial_Defect_Understanding_with_a_Large-Scale_Multimodal_Dataset_CVPR_2026_paper.pdf",
+        "https://aclanthology.org/2026.findings-acl.562.pdf",
+        "https://arxiv.org/abs/2308.15366"
+      ]
+    },
+    {
+      "search_id": "QIM003",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "Anomaly-OV open vocabulary industrial anomaly MLLM paper MMAD | DefectGPT industrial defect classification Qwen LLM arxiv paper | MiniGPT4-AD industrial anomaly detection anomaly classification MMAD paper | AnomalyR1 MMAD anomaly classification industrial anomaly detection arxiv defect",
+      "target": "Web文献探索",
+      "returned_count": 23,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/abs/2504.11914",
+        "https://arxiv.org/abs/2410.09453",
+        "https://arxiv.org/abs/2509.14404",
+        "https://arxiv.org/abs/2609.29457",
+        "https://research.cuhk.edu.hk/en/publications/defectgpt-an-automatic-retrieval-augmented-framework-for-digital-/",
+        "https://huggingface.co/papers/2512.24160",
+        "https://huggingface.co/papers/2604.27629",
+        "https://doi.org/g8wp8h",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/27963/27945",
+        "https://link.springer.com/article/10.1007/s44163-026-01252-w",
+        "https://en.papernotes.org/CVPR2025/object_detection/towards_zero-shot_anomaly_detection_and_reasoning_with_multimodal_large_language/",
+        "https://pith.science/paper/2502.07601",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850",
+        "https://hongsong-wang.github.io/Industrial_Anomaly_Detection/",
+        "https://huggingface.co/papers/2603.13779",
+        "https://huggingface.co/datasets/jiang-cc/MMAD/blob/main/LEADERBOARD.md",
+        "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Anomize_Better_Open_Vocabulary_Video_Anomaly_Detection_CVPR_2025_paper.pdf",
+        "https://lacuna.tiptreesystems.com/work/anomalyr1-a-grpo-based-end-to-end-mllm",
+        "https://www.aimodels.fyi/papers/arxiv/industrial-anomaly-detection-via-defect-grounded-reasoning",
+        "https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_Open-Vocabulary_Video_Anomaly_Detection_CVPR_2024_paper.pdf",
+        "https://proceedings.iclr.cc/paper_files/paper/2025/file/d91ffbe9c126765755ff52d36b715683-Paper-Conference.pdf",
+        "https://openreview.net/pdf/988ee21521b3db1d4f866a6e9a0ace145141268e.pdf",
+        "https://en.wikipedia.org/wiki/Anomaly_detection"
+      ]
+    },
+    {
+      "search_id": "QIM004",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "\"Defect Classification\" \"MMAD\" site:arxiv.org/html anomaly industrial MAU-GPT 2026 Qwen3-VL table | \"Defect Classification\" \"MMAD\" industrial anomaly \"AnomalyR1\" \"Expert\" 2026 paper | \"Anomaly Classification\" \"MMAD\" Qwen \"ours\" industrial anomaly arxiv 2025 2026 | Towards Zero-Shot Anomaly Detection and Reasoning with Multimodal Large Language Models Anomaly-OV CVPR 2025 classification FabGPT wafer defect defect type accuracy",
+      "target": "Web文献探索",
+      "returned_count": 23,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/abs/2502.07601",
+        "https://xujiacong.github.io/Anomaly-OV/",
+        "https://en.papernotes.org/CVPR2025/object_detection/towards_zero-shot_anomaly_detection_and_reasoning_with_multimodal_large_language/",
+        "https://mlanthology.org/cvpr/2025/xu2025cvpr-zeroshot/",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/html/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.html",
+        "https://openaccess.thecvf.com/content/ICCV2025/html/Ma_ReMP-AD_Retrieval-enhanced_Multi-modal_Prompt_Fusion_for_Few-Shot_Industrial_Visual_Anomaly_ICCV_2025_paper.html",
+        "https://dblp.dagstuhl.de/rec/conf/cvpr/XuL0PD25.html",
+        "https://mlanthology.org/cvpr/2025/zhang2025cvpr-trainingfree/",
+        "https://atlas.scime.ai/paper/27937/towards-zero-shot-anomaly-detection-and-reasoning-with-multimodal-large-language",
+        "https://proceedings.iclr.cc/paper_files/paper/2025/hash/d91ffbe9c126765755ff52d36b715683-Abstract-Conference.html",
+        "https://usa.honda-ri.com/w/towards-zero-shot-anomaly-detection-and-reasoning-with-multimodal-large-language-models",
+        "https://www.alphaxiv.org/abs/2502.07601",
+        "https://dblp1.uni-trier.de/rec/conf/cvpr/XuL0PD25.html",
+        "https://shoepaly.app/?_=%2Fpdf%2F2605.20284%23hKr38k1yZITo%2FkpxGBdjJos%3D",
+        "https://arxiv.org/abs/2407.10810",
+        "https://openaccess.thecvf.com/content/CVPR2026/papers/Qu_AG-VAS_Anchor-Guided_Zero-Shot_Visual_Anomaly_Segmentation_with_Large_Multimodal_Models_CVPR_2026_paper.pdf",
+        "https://arxiv.org/abs/2505.13828",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://aclanthology.org/2025.findings-naacl.333.pdf",
+        "https://arxiv.org/abs/2603.04727",
+        "https://www.openaccess.thecvf.com/content/ICCV2025/papers/Sadikaj_MultiADS_Defect-aware_Supervision_for_Multi-type_Anomaly_Detection_and_Segmentation_in_ICCV_2025_paper.pdf",
+        "https://media.eventhosts.cc/Conferences/CVPR2026/CVPR_main_conf_2026_15.pdf",
+        "https://en.wikipedia.org/wiki/MMMU"
+      ]
+    },
+    {
+      "search_id": "QIM005",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "https://arxiv.org/html/2410.09453 | https://arxiv.org/html/2505.13828 | https://arxiv.org/html/2605.20284 | https://arxiv.org/html/2610.12310 | https://arxiv.org/html/2609.29457 | https://arxiv.org/html/2407.10810 | https://arxiv.org/html/2502.07601 | https://arxiv.org/html/2504.11914",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 8,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/html/2410.09453",
+        "https://arxiv.org/html/2605.20284",
+        "https://arxiv.org/html/2610.12310",
+        "https://arxiv.org/html/2609.29457",
+        "https://arxiv.org/html/2407.10810",
+        "https://arxiv.org/html/2502.07601",
+        "https://arxiv.org/html/2504.11914"
+      ]
+    },
+    {
+      "search_id": "QIM006",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "turn146view0 Defect Classification | turn146view2 Defect Classification | turn146view3 Defect Classification | turn146view4 classification | turn146view5 classification | turn146view6 classification | turn146view7 Defect Classification | turn140search17 Defect Classification | turn137search13 87.6",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 18,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/html/2410.09453",
+        "https://arxiv.org/html/2605.20284",
+        "https://arxiv.org/html/2610.12310",
+        "https://arxiv.org/html/2609.29457",
+        "https://arxiv.org/html/2407.10810",
+        "https://arxiv.org/html/2502.07601",
+        "https://arxiv.org/html/2504.11914",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf"
+      ]
+    },
+    {
+      "search_id": "QIM007",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "OmniAD Enhancing Industrial Anomaly Detection Multimodal Large Language Models arxiv 2025 MMAD Zhao | WaferSAGE arxiv 2604.27629 defect type classification multiple choice classification industrial wafer | AnomalyGPT MiniGPT4-AD 2024 industrial anomaly detection type defect paper model MiniGPT4-AD classification | Multimodal RAG-driven Anomaly Detection and Classification in Laser Powder Bed Fusion using Large Language Models classification types accuracy 2505.13828",
+      "target": "Web文献探索",
+      "returned_count": 21,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/abs/2505.22039",
+        "https://arxiv.org/abs/2604.27629",
+        "https://arxiv.org/abs/2505.13828",
+        "https://doi.org/10.48550/arXiv.2505.13828",
+        "https://arxiv.org/abs/2410.09453",
+        "https://mlanthology.org/aaai/2024/gu2024aaai-anomalygpt/",
+        "https://proceedings.iclr.cc/paper_files/paper/2025/file/d91ffbe9c126765755ff52d36b715683-Paper-Conference.pdf",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/27963/27945",
+        "https://www.sciencedirect.com/science/article/pii/S1526612526007607",
+        "https://huggingface.co/datasets/Niraya666/WaferSAGE-Wafermap-VQA-Dataset",
+        "https://lacuna.tiptreesystems.com/work/multimodal-rag-driven-anomaly-detection-and-classification",
+        "https://link.springer.com/article/10.1007/s10845-024-02521-0",
+        "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602211189981412",
+        "https://github.com/broshenn/wafer-defect-vlm/blob/main/docs/WaferSAGE_%E4%B8%AD%E6%96%87%E7%B2%BE%E8%AF%BB%E4%B8%8E%E8%AE%AD%E7%BB%83%E6%96%B9%E6%A1%88.md",
+        "https://papers.cool/arxiv/2604.27629",
+        "https://atlas.scime.ai/paper/5193/anomalygpt-detecting-industrial-anomalies-using-large-vision-language-models",
+        "https://sjtu-icat.github.io/publication/zhang2025eiad/",
+        "https://openalex.org/works/W4412567591",
+        "https://journal.hep.com.cn/fem/EN/PDF/10.1007/s42524-026-5273-5",
+        "https://aclanthology.org/2025.findings-naacl.333.pdf",
+        "https://en.wikipedia.org/wiki/Orthogonal_defect_classification"
+      ]
+    },
+    {
+      "search_id": "QIM008",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "turn146view0 Table 1: | turn146view2 Defect Cls | turn146view3 Table 1: | turn146view4 Anomaly-LR (Ours) | turn146view5 Classification Accuracy | turn146view7 Table 1: | turn137search13 VisA-AC dataset consists | https://arxiv.org/html/2505.22039 Defect Classification | https://arxiv.org/html/2604.27629 accuracy | https://arxiv.org/pdf/2505.13828 accuracy",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 17,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/html/2410.09453",
+        "https://arxiv.org/html/2605.20284",
+        "https://arxiv.org/html/2610.12310",
+        "https://arxiv.org/html/2609.29457",
+        "https://arxiv.org/html/2407.10810",
+        "https://arxiv.org/html/2504.11914",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://arxiv.org/html/2505.22039",
+        "https://arxiv.org/html/2604.27629"
+      ]
+    },
+    {
+      "search_id": "QIM009",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "turn146view0 L202 | turn146view2 L176 | turn146view3 L82 | turn146view4 L107 | turn146view5 L240 | turn146view7 L231 | turn137search13 L131 | https://arxiv.org/html/2505.22039 L182 | turn140search17 L755",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 17,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/html/2410.09453",
+        "https://arxiv.org/html/2605.20284",
+        "https://arxiv.org/html/2610.12310",
+        "https://arxiv.org/html/2609.29457",
+        "https://arxiv.org/html/2407.10810",
+        "https://arxiv.org/html/2504.11914",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://arxiv.org/html/2505.22039",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850"
+      ]
+    },
+    {
+      "search_id": "QIM010",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "turn146view0 L190 | turn146view0 L103 | turn146view2 L151 | turn146view3 L121 | turn146view7 L205 | turn146view5 L266 | turn137search13 L182 | https://arxiv.org/html/2505.22039 L217 | https://arxiv.org/pdf/2505.13828 L165 | https://arxiv.org/html/2604.27629 L252",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 16,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/html/2410.09453",
+        "https://arxiv.org/html/2605.20284",
+        "https://arxiv.org/html/2610.12310",
+        "https://arxiv.org/html/2504.11914",
+        "https://arxiv.org/html/2407.10810",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://arxiv.org/html/2505.22039",
+        "https://arxiv.org/html/2604.27629"
+      ]
+    },
+    {
+      "search_id": "QIM011",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "turn146view5 78.00 | turn146view5 SEM-WaD dataset consists | turn146view5 Particle | turn137search13 anomaly classes | turn146view3 SiGMA (Ours) | turn146view7 63.50 | turn146view2 4,000 | turn146view0 bent wire | turn140search17 MAU-20K",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 16,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/html/2407.10810",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://arxiv.org/html/2610.12310",
+        "https://arxiv.org/html/2504.11914",
+        "https://arxiv.org/html/2605.20284",
+        "https://arxiv.org/html/2410.09453",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850"
+      ]
+    },
+    {
+      "search_id": "QIM012",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "turn146view5 L225 | turn146view5 L268 | turn146view5 coarse | turn146view5 classification task | turn146view7 L213 | turn137search13 L225 | turn146view2 training dataset | turn146view3 NVIDIA",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/html/2407.10810",
+        "https://arxiv.org/html/2504.11914",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://arxiv.org/html/2605.20284",
+        "https://arxiv.org/html/2610.12310"
+      ]
+    },
+    {
+      "search_id": "QIM013",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "\"FabGPT: An Efficient Large Multimodal Model for Complex Wafer Defect Knowledge Queries\" DOI journal IEEE 2026 | \"Multimodal RAG-driven Anomaly Detection and Classification\" Amini LPBF classification lack of fusion spatter DOI | \"Interactive multimodal quality assessment\" laser powder bed fusion classification category vision large language models S1526612526007607 metrics | \"MAU-GPT\" \"39889\" DOI authors Anomaly understanding AAAI 2026",
+      "target": "Web文献探索",
+      "returned_count": 19,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S1526612526007607",
+        "https://ieeexplore.ieee.org/abstract/document/11395290",
+        "https://doi.org/g8wp8h",
+        "https://arxiv.org/abs/2505.13828",
+        "https://arxiv.org/abs/2407.10810",
+        "https://doi.org/10.48550/arXiv.2505.13828",
+        "https://lacuna.tiptreesystems.com/venue/ieee-tcad/2026",
+        "https://www.proceedings.com/content/082/082785webtoc.pdf",
+        "https://papers.cool/venue/39889%40AAAI",
+        "https://www.researchgate.net/publication/382271286_FabGPT_An_Efficient_Large_Multimodal_Model_for_Complex_Wafer_Defect_Knowledge_Queries",
+        "https://event.asme.org/Events/media/library/resources/idetc-cie/IDETC-CIE-Conference-Program.pdf",
+        "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602211189981412",
+        "https://lacuna.tiptreesystems.com/work/fabgpt-an-efficient-large-multimodal-model-for-complex-wafer-defect-knowledge/wrk_94a99fdfaf4e7a6b9d843f1e99614c87",
+        "https://app.cochat.ai/papers/10.1109/cvpr52688.2022.00724",
+        "https://www.cse.cuhk.edu.hk/~byu/doc/cv-byu.pdf",
+        "https://confcats-event-sessions.s3.amazonaws.com/iccad24/uploads/ICCAD_2024_Program_Final.pdf",
+        "https://lacuna.tiptreesystems.com/work/multimodal-rag-driven-anomaly-detection-and-classification",
+        "https://confcats-event-sessions.s3.amazonaws.com/iccad24/uploads/ICCAD_2024_Preliminary-Program2.pdf"
+      ]
+    },
+    {
+      "search_id": "QIM014",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "turn179search0 lack of fusion | turn179search0 accuracy | https://ieeexplore.ieee.org/document/11395290 | https://ojs.aaai.org/index.php/AAAI/article/view/39889 | https://openaccess.thecvf.com/content/CVPR2025W/VAND/html/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.html | https://arxiv.org/abs/2505.13828",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 7,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://ieeexplore.ieee.org/document/11395290",
+        "https://ojs.aaai.org/index.php/AAAI/article/view/39889",
+        "https://arxiv.org/abs/2505.13828"
+      ]
+    },
+    {
+      "search_id": "QIM015",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "\"11395290\" \"FabGPT\" 10.1109 TCAD Jiang defect | \"MAU-GPT\" \"10.1609/aaai\" Anomaly-aware generalist experts | \"Multimodal Rag-Driven Anomaly Detection and Classification\" \"10.1115\" Naghavi Khanghah | \"Detect, Classify, Act\" \"10.1109\" Mokhtar Le Boudec VeLM CVPRW DOI",
+      "target": "Web文献探索",
+      "returned_count": 14,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://www.researchwithrutgers.org/en/publications/multimodal-rag-driven-anomaly-detection-and-classification-in-las/",
+        "https://www.minicod.com/papers/detect-classify-act-categorizing-industrial-anomalies-with-multi-modal-large-language-models-7d5305c4",
+        "https://doi.org/10.1115/1.4072033",
+        "https://scirate.com/?date=2026-02-12&page=194&range=182",
+        "https://scirate.com/search?q=au%3AKhanghah_K+in%3Acs",
+        "https://scirate.com/?date=2025-05-19&page=188&range=31",
+        "https://publikationen.bibliothek.kit.edu/1000193853/182458328",
+        "https://ouci.dntb.gov.ua/en/works/4Kr1LW6n/",
+        "https://elib.uni-stuttgart.de/server/api/core/bitstreams/a9db08a4-c819-47a1-8752-2f29a6b1a580/content",
+        "https://biblio.morgan.edu/recent.php",
+        "https://accelresearching.com/accel-zinc-picolinate-50mg/?_=%2Fsearch%2Fcs%23nLw79nwZb1b3uPkZUsgpm5M%3D&query=Mokhtar%2C+S&searchtype=author",
+        "https://mecatron.rma.ac.be/index.php/publications/",
+        "https://citestamp.com/paper/10.1109/wacv57701.2024.00020",
+        "https://www.grafiati.com/fr/literature-selections/agent-navigation/journal/"
+      ]
+    },
+    {
+      "search_id": "QIM016",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "https://arxiv.org/pdf/2505.13828 | turn191search0 | turn137search13 L94 | turn146view0 L150 | turn146view7 L196 | turn146view2 L130 | turn140search17 L10 | turn146view4 L84",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 15,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://www.researchwithrutgers.org/en/publications/multimodal-rag-driven-anomaly-detection-and-classification-in-las/",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://arxiv.org/html/2410.09453",
+        "https://arxiv.org/html/2504.11914",
+        "https://arxiv.org/html/2605.20284",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850",
+        "https://arxiv.org/html/2609.29457"
+      ]
+    },
+    {
+      "search_id": "QIM017",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "turn194view0 TABLE 3 | turn194view0 labels | turn194view0 Recoater | turn194view0 % accuracy | turn140search17 Gemma3 | turn140search17 30,000 | turn146view4 L116 | turn146view3 L84 | turn146view2 L84",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 14,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/html/2609.29457",
+        "https://arxiv.org/html/2610.12310",
+        "https://arxiv.org/html/2605.20284",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850"
+      ]
+    },
+    {
+      "search_id": "QIM018",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "turn146view2 L65 | turn146view3 L84 | turn146view4 L47 | https://arxiv.org/html/2505.22039 L47 | turn137search13 L17 | turn140search17 L15 | turn146view0 crack | turn140search17 1,400",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 14,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/html/2605.20284",
+        "https://arxiv.org/html/2610.12310",
+        "https://arxiv.org/html/2609.29457",
+        "https://arxiv.org/html/2505.22039",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850",
+        "https://arxiv.org/html/2410.09453"
+      ]
+    },
+    {
+      "search_id": "QIM019",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "https://arxiv.org/abs/2605.20284 L11 | https://arxiv.org/abs/2610.12310 L11 | https://arxiv.org/abs/2609.29457 L11 | https://arxiv.org/abs/2505.22039 L11 | https://arxiv.org/abs/2505.02626 L11 | turn140search17 multi-type dataset | turn146view0 4,688 | turn137search13 exclusively | turn146view7 training set",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://arxiv.org/abs/2605.20284",
+        "https://arxiv.org/abs/2610.12310",
+        "https://arxiv.org/abs/2609.29457",
+        "https://arxiv.org/abs/2505.22039",
+        "https://arxiv.org/abs/2505.02626",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850",
+        "https://arxiv.org/html/2410.09453",
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://arxiv.org/html/2504.11914"
+      ]
+    },
+    {
+      "search_id": "QIM020",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "turn140search17 In total | turn140search17 samples | turn140search17 Table 2: | turn137search13 L84 | turn137search13 L232 | turn146view4 1,600 | https://arxiv.org/html/2505.22039 held-out | turn146view0 L179",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2025W/VAND/papers/Mokhtar_Detect_Classify_Act_Categorizing_Industrial_Anomalies_with_Multi-Modal_Large_Language_CVPRW_2025_paper.pdf",
+        "https://arxiv.org/html/2410.09453",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850",
+        "https://arxiv.org/html/2609.29457",
+        "https://arxiv.org/html/2505.22039"
+      ]
+    },
+    {
+      "search_id": "QIM021",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "https://github.com/jam-cc/MMAD mmad.json | turn146view0 Metal Nut | turn146view0 What type | turn146view5 github.com | https://arxiv.org/html/2505.22039 Qwen2.5-VL-3B | turn140search17 Gemma-3-4B | turn146view2 remaining | turn146view6 GPT-4o Score",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://github.com/jam-cc/MMAD",
+        "https://arxiv.org/html/2410.09453",
+        "https://arxiv.org/html/2407.10810",
+        "https://arxiv.org/html/2505.22039",
+        "https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850",
+        "https://arxiv.org/html/2605.20284",
+        "https://arxiv.org/html/2502.07601"
+      ]
+    },
+    {
+      "search_id": "QIM022",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "turn256view0 L242 | turn146view0 L239 | turn146view4 L120 | turn146view6 L189 | https://openaccess.thecvf.com/content/CVPR2026/papers/Ni_Towards_Open-Vocabulary_Industrial_Defect_Understanding_with_a_Large-Scale_Multimodal_Dataset_CVPR_2026_paper.html",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 9,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://github.com/jam-cc/MMAD",
+        "https://arxiv.org/html/2410.09453",
+        "https://arxiv.org/html/2609.29457",
+        "https://arxiv.org/html/2502.07601"
+      ]
+    },
+    {
+      "search_id": "QIM023",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "MMAD authors' dataset/MMAD/domain_knowledge.json",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 2,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://github.com/jam-cc/MMAD/blob/main/dataset/MMAD/domain_knowledge.json"
+      ]
+    },
+    {
+      "search_id": "QIM024",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "MMAD author dataset example label keys | IMDD CVPR2026 classification section",
+      "target": "原著・出版社・著者資料の確認",
+      "returned_count": 4,
+      "total_hits": "未提供",
+      "candidate_count": "横断スクリーニングに集約",
+      "adopted_count": "横断スクリーニングに集約",
+      "excluded_count": "横断スクリーニングに集約",
+      "exclusion_reason": "URLと原著で選別。各候補判定はexclusions／records。",
+      "result_urls": [
+        "https://github.com/jam-cc/MMAD/blob/main/dataset/MMAD/domain_knowledge.json",
+        "https://openaccess.thecvf.com/content/CVPR2026/papers/Ni_Towards_Open-Vocabulary_Industrial_Defect_Understanding_with_a_Large-Scale_Multimodal_Dataset_CVPR_2026_paper.pdf"
+      ]
+    },
+    {
+      "search_id": "QIM025",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "Crossref query.bibliographic: FabGPT; Detect, Classify, Act; MAU-GPT; Interactive multimodal quality assessment in laser powder bed fusion",
+      "target": "Crossref API",
+      "returned_count": 3,
+      "total_hits": "未提供",
+      "candidate_count": 4,
+      "adopted_count": "採用済3件の書誌確認",
+      "excluded_count": 0,
+      "exclusion_reason": "3件の採用書誌を照合。Elsevier LPBF候補の検索は429、採否保留。"
+    },
+    {
+      "search_id": "QIM026",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "arXiv:2505.13828, PDF本文 §§2–4, Tables 1, 3, A1–A4, Figs. 5, 8",
+      "target": "公開著者PDFの局所テキスト抽出",
+      "returned_count": 1,
+      "total_hits": 1,
+      "candidate_count": 1,
+      "adopted_count": 1,
+      "excluded_count": 0,
+      "exclusion_reason": "工程異常の種類別Accuracyを原著確認。"
+    },
+    {
+      "search_id": "QIM027",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "query": "I3候補の重複排除と本文スクリーニングの集計",
+      "target": "採否監査",
+      "returned_count": 18,
+      "total_hits": "非該当",
+      "candidate_count": 18,
+      "adopted_count": 10,
+      "excluded_count": 2,
+      "exclusion_reason": "ほか関連3件・保留3件。複数バッチでヒットした同一研究は1件。"
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "IMX001",
+      "title": "AnomalyGPT: Detecting Industrial Anomalies Using Large Vision-Language Models",
+      "year": "2024",
+      "doi": "10.1609/aaai.v38i3.27963",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/download/27963/27945",
+      "status": "関連",
+      "reason": "AnomalyGPT原著は正常／異常・位置評価と会話例が中心。原著に欠陥種類のみの独立した定量評価なし。MMAD/FabGPTでの比較対象としての種類スコアは各評価論文に帰属。",
+      "source_ids": [
+        "SIM014"
+      ]
+    },
+    {
+      "id": "IMX002",
+      "title": "Towards Zero-Shot Anomaly Detection and Reasoning with Multimodal Large Language Models",
+      "year": "2025",
+      "doi": "10.48550/arXiv.2502.07601",
+      "url": "https://arxiv.org/html/2502.07601",
+      "status": "関連",
+      "reason": "Anomaly-OVは異常検出と自由文説明・推論を評価。形態語の出力例はあるが、独立したカテゴリ正答率を確認できない。",
+      "source_ids": [
+        "SIM015"
+      ]
+    },
+    {
+      "id": "IMX003",
+      "title": "DefectGPT: An Automatic Retrieval-Augmented Framework for Digital Twin-Based Defect Information Management and Analytics",
+      "year": "2025",
+      "doi": "未確認",
+      "url": "https://research.cuhk.edu.hk/en/publications/defectgpt-an-automatic-retrieval-augmented-framework-for-digital-/",
+      "status": "除外",
+      "reason": "建築デジタルツインの記録・テキスト検索によるRAG。工業部品の実画像入力から欠陥種類を出力する評価は対象外。",
+      "source_ids": [
+        "SIM016"
+      ]
+    },
+    {
+      "id": "IMX004",
+      "title": "WaferSAGE: Large Language Model-Powered Wafer Defect Analysis via Synthetic Data Generation and Rubric-Guided Reinforcement Learning",
+      "year": "2026",
+      "doi": "10.48550/arXiv.2604.27629",
+      "url": "https://arxiv.org/html/2604.27629",
+      "status": "関連",
+      "reason": "ウェハマップ画像の説明・分析にLLM-Judgeと混合ルール得点を使用。欠陥形態の独立したカテゴリ正答率を確認できない。",
+      "source_ids": [
+        "SIM017"
+      ]
+    },
+    {
+      "id": "IMX005",
+      "title": "Lightweight multimodal large language model enabling efficient one shot industrial visual anomaly detection",
+      "year": "2026",
+      "doi": "10.1007/s44163-026-01252-w",
+      "url": "https://link.springer.com/article/10.1007/s44163-026-01252-w",
+      "status": "除外",
+      "reason": "複数欠陥がデータに含まれるがFig. 9の出力評価は正常／異常の二値。",
+      "source_ids": [
+        "SIM018"
+      ]
+    },
+    {
+      "id": "IMX006",
+      "title": "Adaptive multimodal large language model with hierarchical cross modal grounding for real time industrial visual anomaly detection on edge devices",
+      "year": "2026",
+      "doi": "10.1007/s44163-026-02008-2",
+      "url": "https://link.springer.com/article/10.1007/s44163-026-02008-2",
+      "status": "保留",
+      "reason": "PCB-Defectに6種類と記すが、確認した集約指標が種類別分類か正常／異常か判別できない。",
+      "source_ids": [
+        "SIM019"
+      ]
+    },
+    {
+      "id": "IMX007",
+      "title": "Interactive multimodal quality assessment in laser powder bed fusion using vision-large language models",
+      "year": "2026",
+      "doi": "未確認",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1526612526007607",
+      "status": "保留",
+      "reason": "LPBFの画像対話・品質評価は確認。利用可能な出版社情報から独立した種類分類指標・正確な出力ラベルは未確認。",
+      "source_ids": [
+        "SIM021"
+      ]
+    },
+    {
+      "id": "IMX008",
+      "title": "MiniGPT4-AD（名称照合候補）",
+      "year": "未確認",
+      "doi": "未確認",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/download/27963/27945",
+      "status": "保留",
+      "reason": "MiniGPT4-ADという独立した査読／公開原著を確認できず。AnomalyGPTが基盤系譜として言及するMiniGPT-4と混同しない。",
+      "source_ids": [
+        "SIM014"
+      ]
+    }
+  ],
+  "notes": [
+    "基準日は2026-11-11。採用10件、関連3件、除外2件、保留3件。採用の内訳は工業VQA8件、画像の閉集合カテゴリ分類1件、LPBF種類ごとの多ラベル1件。",
+    "MMAD派生7件は同一ベンチマークを用い、正常参照の選び方、原版／部分集合、学習、モデル選定条件が異なる。画像分類・VQA・種類別ビットAccuracyを直接ランキングしない。",
+    "FabGPTはICCAD 2024会議版を採用し、著者原文Table 2のCategoryを引用。公開された著者版の試験記述ではCategory分母は明記なし。同題の後続IEEE論文候補は独立採用として数えない。",
+    "異常検出・自由文生成・製品種類分類・全7タスク平均は、欠陥種類の主性能から除外。",
+    "検索応答のreturned_countは返却・参照結果ID数。検索エンジン母集団の総件数ではない。特定のモデル系統と代表候補に絞った調査で、探索飽和は未確認。"
+  ]
+}
