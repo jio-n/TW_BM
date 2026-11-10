@@ -4,6 +4,14 @@
 
 ## 成果物と利用方法
 
+2026-11-11の追加調査は、**工具画像から摩耗・損傷の種類名を分類する論文**に対象を絞った。画像のみ8本、画像を含むマルチモーダル1本、書誌等の保留2本、領域検出・分割の関連4本を分けて収録した。摩耗量・寿命予測、程度だけの段階分類は主比較から除外している。
+
+- [種類分類に絞ったExcel](outputs/wear_type_classification_benchmark.xlsx) / [CSV](outputs/wear_type_classification_benchmark.csv)
+- [種類分類の調査レポート](reports/wear_type_classification_benchmark.md) / [調査仕様と採否基準](reports/wear_type_classification_scope.md)
+- [既存59本の再選別](evidence/wear_type_classification/existing_papers_screening.csv) / [追加調査の根拠台帳](evidence/wear_type_classification/)
+
+以下は2026-10-20の広域調査であり、今回の限定条件を満たす件数とは区別する。
+
 | 成果物 | リンク |
 |---|---|
 | 商用製品ベンチマーク（33件） | [Excel](outputs/commercial_tool_benchmark.xlsx) / [CSV](outputs/commercial_tool_benchmark.csv) |

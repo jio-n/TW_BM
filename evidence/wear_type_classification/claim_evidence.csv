@@ -1,0 +1,86 @@
+﻿claim_id,source_id,locator,quote,verification
+CFI001,SFI001,§§2–5; Figs. 10–13; Tables 1–2,Status Determination,出版社PDF本文確認
+CFI002,SFI001,§§2–5; Figs. 10–13; Tables 1–2,,出版社PDF本文確認
+CFI003,SFI001,§§2–5; Figs. 10–13; Tables 1–2,,出版社PDF本文確認
+CFI004,SFI001,§§2–5; Figs. 10–13; Tables 1–2,,出版社PDF本文確認
+CFI005,SFI001,§§2–5; Figs. 10–13; Tables 1–2,,出版社PDF本文確認
+CFI006,SFI002,"§§4.2–4.5, Tables 1–2, Fig. 6",one with ﬂank wear as binary target variable,KIT公開の著者本文確認
+CFI007,SFI002,"§§4.2–4.5, Tables 1–2, Fig. 6",,KIT公開の著者本文確認
+CFI008,SFI002,"§§4.2–4.5, Tables 1–2, Fig. 6",,KIT公開の著者本文確認
+CFI009,SFI002,"§§4.2–4.5, Tables 1–2, Fig. 6",,KIT公開の著者本文確認
+CFI010,SFI002,"§§4.2–4.5, Tables 1–2, Fig. 6",,KIT公開の著者本文確認
+CFI011,SFI005,§§3.1–3.2、§4、Tables 1・4、Fig. 6–7,the output is the type of wear,出版社本文確認
+CFI012,SFI005,§§3.1–3.2、§4、Tables 1・4、Fig. 6–7,,出版社本文確認
+CFI013,SFI005,§§3.1–3.2、§4、Tables 1・4、Fig. 6–7,,出版社本文確認
+CFI014,SFI005,§§3.1–3.2、§4、Tables 1・4、Fig. 6–7,,出版社本文確認
+CFI015,SFI005,§§3.1–3.2、§4、Tables 1・4、Fig. 6–7,,出版社本文確認
+CFI016,SFI006,Abstract; CNN-based tool wear classification model; Results & discussion,"Flank, Flank+BUE, Flank+Face, and Chipping",出版社抄録・章抜粋確認、本文open 403
+CFI017,SFI006,Abstract; CNN-based tool wear classification model; Results & discussion,,出版社抄録・章抜粋確認、本文open 403
+CFI018,SFI006,Abstract; CNN-based tool wear classification model; Results & discussion,,出版社抄録・章抜粋確認、本文open 403
+CFI019,SFI006,Abstract; CNN-based tool wear classification model; Results & discussion,,出版社抄録・章抜粋確認、本文open 403
+CFI020,SFI006,Abstract; CNN-based tool wear classification model; Results & discussion,,出版社抄録・章抜粋確認、本文open 403
+CFI021,SFI008,出版社検索でAbstract/§4.6/Fig. 10–11説明を確認,"840 images, while 30 % (360 images)",出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403
+CFI022,SFI008,出版社検索でAbstract/§4.6/Fig. 10–11説明を確認,,出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403
+CFI023,SFI008,出版社検索でAbstract/§4.6/Fig. 10–11説明を確認,,出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403
+CFI024,SFI008,出版社検索でAbstract/§4.6/Fig. 10–11説明を確認,,出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403
+CFI025,SFI008,出版社検索でAbstract/§4.6/Fig. 10–11説明を確認,,出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403
+CFI026,SFI010,"原稿p.1, §§2.5/3.1–3.2, Tables 1–2",Built-up Edge (BUE) and Chipping,著者公開原稿の抄録・章抜粋確認、PDF本文open不成功
+CFI027,SFI010,"原稿p.1, §§2.5/3.1–3.2, Tables 1–2",,著者公開原稿の抄録・章抜粋確認、PDF本文open不成功
+CFI028,SFI010,"原稿p.1, §§2.5/3.1–3.2, Tables 1–2",,著者公開原稿の抄録・章抜粋確認、PDF本文open不成功
+CFI029,SFI010,"原稿p.1, §§2.5/3.1–3.2, Tables 1–2",,著者公開原稿の抄録・章抜粋確認、PDF本文open不成功
+CFI030,SFI010,"原稿p.1, §§2.5/3.1–3.2, Tables 1–2",,著者公開原稿の抄録・章抜粋確認、PDF本文open不成功
+CFI031,SFI012,"§3.1.1, Fig. 7, Table 3",We split our dataset containing 213 microscopic images,著者公開本文確認
+CFI032,SFI012,"§3.1.1, Fig. 7, Table 3",,著者公開本文確認
+CFI033,SFI012,"§3.1.1, Fig. 7, Table 3",,著者公開本文確認
+CFI034,SFI012,"§3.1.1, Fig. 7, Table 3",,著者公開本文確認
+CFI035,SFI012,"§3.1.1, Fig. 7, Table 3",,著者公開本文確認
+CFI036,SFI014,§§3–4、Table 1,multi-class image segmentation task,著者公開原稿確認
+CFI037,SFI014,§§3–4、Table 1,,著者公開原稿確認
+CFI038,SFI014,§§3–4、Table 1,,著者公開原稿確認
+CFI039,SFI014,§§3–4、Table 1,,著者公開原稿確認
+CFI040,SFI014,§§3–4、Table 1,,著者公開原稿確認
+CFI041,SFI016,Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract,partitioned into five equal subsets at the scan level,出版社本文確認
+CFI042,SFI016,Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract,,出版社本文確認
+CFI043,SFI016,Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract,,出版社本文確認
+CFI044,SFI016,Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract,,出版社本文確認
+CFI045,SFI016,Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract,,出版社本文確認
+MMC001,MMS001,§3 Fig. 2、§5.4 Algorithm 2、Appendix A Table A1,,全文確認
+MMC002,MMS001,§5.4 Algorithm 2 step 9、§6.9 Fig. 13,,全文確認
+MMC003,MMS001,§6.9 Table 10、Figs. 14–15,,全文確認
+MMC004,MMS001,§5.2、§5.4 Algorithm 2、Appendix A Table A1,,全文確認
+MMC005,MMS001,誌面上部・DOI,,全文確認
+MMC006,MMS002,§3.1–3.4、§4.2 Fig. 5,,出版社プレビュー・検索索引の原文確認
+MMC007,MMS002,§3.3、§4.1,,出版社プレビュー・検索索引の原文確認
+MMC008,MMS002,§4.1 Table 2、§4.6 Table 7,,出版社プレビュー・検索索引の原文確認
+MMC009,MMS002,Abstract、§4.3 Table 3、§4.4–4.6 Tables 4/6/7,,出版社プレビュー・検索索引の原文確認
+MMC010,MMS003,created、deposited、issued、published-print、published-online欠落,,メタデータ確認
+MMC011,MMS007,代表性论文・著作,,出版物一覧確認
+MMC012,MMS004,Information、label structure、sensor file structure,,公式説明確認
+CF_FT001_labels,SF001,§§3–4、Fig.7、Tables4–7、PDF pp.7–14,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT001_input,SF001,§§3–4、Fig.7、Tables4–7、PDF pp.7–14,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT001_model,SF001,§§3–4、Fig.7、Tables4–7、PDF pp.7–14,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT001_data,SF001,§§3–4、Fig.7、Tables4–7、PDF pp.7–14,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT001_split,SF001,§§3–4、Fig.7、Tables4–7、PDF pp.7–14,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT001_performance,SF001,§§3–4、Fig.7、Tables4–7、PDF pp.7–14,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT001_limitation,SF001,§§3–4、Fig.7、Tables4–7、PDF pp.7–14,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT002_labels,SF002,§§2.1–3.2、Tables1–4、Figs7–10、PDF pp.5–12,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT002_input,SF002,§§2.1–3.2、Tables1–4、Figs7–10、PDF pp.5–12,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT002_model,SF002,§§2.1–3.2、Tables1–4、Figs7–10、PDF pp.5–12,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT002_data,SF002,§§2.1–3.2、Tables1–4、Figs7–10、PDF pp.5–12,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT002_split,SF002,§§2.1–3.2、Tables1–4、Figs7–10、PDF pp.5–12,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT002_performance,SF002,§§2.1–3.2、Tables1–4、Figs7–10、PDF pp.5–12,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT002_limitation,SF002,§§2.1–3.2、Tables1–4、Figs7–10、PDF pp.5–12,,全文の方法・結果を再確認（ローカル公開PDF）
+CF_FT003_labels,SF003,§3.1、Fig.3、§4、Table1、§5、Fig.6、PDF pp.6–11,,全文の方法・結果確認（出版社公開PDF）
+CF_FT003_input,SF003,§3.1、Fig.3、§4、Table1、§5、Fig.6、PDF pp.6–11,,全文の方法・結果確認（出版社公開PDF）
+CF_FT003_model,SF003,§3.1、Fig.3、§4、Table1、§5、Fig.6、PDF pp.6–11,,全文の方法・結果確認（出版社公開PDF）
+CF_FT003_data,SF003,§3.1、Fig.3、§4、Table1、§5、Fig.6、PDF pp.6–11,,全文の方法・結果確認（出版社公開PDF）
+CF_FT003_split,SF003,§3.1、Fig.3、§4、Table1、§5、Fig.6、PDF pp.6–11,,全文の方法・結果確認（出版社公開PDF）
+CF_FT003_performance,SF003,§3.1、Fig.3、§4、Table1、§5、Fig.6、PDF pp.6–11,,全文の方法・結果確認（出版社公開PDF）
+CF_FT003_limitation,SF003,§3.1、Fig.3、§4、Table1、§5、Fig.6、PDF pp.6–11,,全文の方法・結果確認（出版社公開PDF）
+CF_FA001_labels,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本文該当節・大学書誌確認
+CF_FA001_input,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本文該当節・大学書誌確認
+CF_FA001_model,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本文該当節・大学書誌確認
+CF_FA001_data,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本文該当節・大学書誌確認
+CF_FA001_split,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本文該当節・大学書誌確認
+CF_FA001_performance,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本文該当節・大学書誌確認
+CF_FA001_limitation,SF004,§§2.1、2.3.3 Eq9、3.1、4.4; Tables4–9,,出版社本文該当節・大学書誌確認

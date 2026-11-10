@@ -1,0 +1,1716 @@
+{
+  "records": [
+    {
+      "id": "FIA01",
+      "category": "画像のみ・種類分類（ルール）",
+      "title": "Using the Machine Vision Method to Develop an On-machine Insert Condition Monitoring System for Computer Numerical Control Turning Machine Tools",
+      "doi": "10.3390/ma11101977",
+      "year": 2018,
+      "venue": "Materials 11(10):1977",
+      "authors": [
+        "Wei-Heng Sun",
+        "Syh-Shiuh Yeh"
+      ],
+      "exact_labels": [
+        "BUE",
+        "fracture",
+        "chipping",
+        "normal wear",
+        "over-wear"
+      ],
+      "input": "機上CCD工具画像。旋削用超硬インサート、中炭素鋼。可変周囲光・先端補助光で輪郭と刃先特徴を撮像。",
+      "model": "輪郭二値化と基準線から破断/BUEを判定し、逃げ面ROIのグレーヒストグラムからチッピングと摩耗を識別。逃げ面摩耗を normal wear と over-wear に分ける（0.3 mm、チッピング指標50%の閾値）。",
+      "performance": "20個の使用済インサートを例示評価。Table 1の出力集計はBUE 3、fracture 1、chipping 3、normal wear 6、over-wear 7。独立Accuracy/F1なし。2.75秒平均判定、約13秒全工程。",
+      "split": "学習モデルでない。§5の評価20個と、同一インサート10反復の再現性試験を区別。",
+      "locators": "§§2–5; Figs. 10–13; Tables 1–2",
+      "verification": "出版社PDF本文確認",
+      "limitations": "論文の4形態（flank wear, chipping, fracture, BUE）とTable 1の5状態出力を区別。0.67%と0.62%は同一個体反復時のチッピング率・摩耗量の相対標準偏差で分類精度ではない。",
+      "source_ids": [
+        "SFI001"
+      ]
+    },
+    {
+      "id": "FIA02",
+      "category": "画像のみ・種類分類（2独立二値）",
+      "title": "Towards Leveraging End-of-Life Tools as an Asset: Value Co-Creation based on Deep Learning in the Machining Industry",
+      "doi": "10.24251/HICSS.2020.124",
+      "year": 2020,
+      "venue": "Proceedings of HICSS-53, pp. 995–1004",
+      "authors": [
+        "Jannis Walk",
+        "Niklas Kühl",
+        "Jonathan Schäfer"
+      ],
+      "exact_labels": [
+        "flank wear: present/absent",
+        "chipping: present/absent"
+      ],
+      "input": "実生産2台、1種類インサートの逃げ面側写真648枚。1600×1200から640×480へ。",
+      "model": "ImageNet事前学習VGG-16の畳み込み部で固定特徴を抽出、scikit-learn Gradient Boostingを種類ごとに学習。",
+      "performance": "3-fold CVのMatthews correlation coefficient：逃げ面摩耗0.878、チッピング0.644。",
+      "split": "3-fold CV。工具ID/機械で分離したかは未確認。",
+      "locators": "§§4.2–4.5, Tables 1–2, Fig. 6",
+      "verification": "KIT公開著者本文・会議抄録・DOI書誌確認",
+      "limitations": "二つの出力は同時陽性可。元注釈にflank wear536、chipping359、no wear96、built-up edge90を含むが、BUEのモデル評価なし。",
+      "source_ids": [
+        "SFI002",
+        "SFI003",
+        "SFI004"
+      ]
+    },
+    {
+      "id": "FIA03",
+      "category": "画像のみ・種類分類（後段制御から分離）",
+      "title": "Teaching machines to optimizing machining parameters: using independent fuzzy logic controller and image data",
+      "doi": "10.1007/s42452-022-04987-0",
+      "year": 2022,
+      "venue": "SN Applied Sciences 4:107",
+      "authors": [
+        "Harshavardhan Mamledesai",
+        "Yufan Zheng",
+        "Rafiq Ahmad"
+      ],
+      "exact_labels": [
+        "BUE",
+        "Deformation",
+        "Normal wear"
+      ],
+      "input": "使用済TNMG/CNMGおよび非コートHSSの工具RGB画像（DFK33GP006、200×200×3へ）。旋削。",
+      "model": "CNN（畳み込み、max-pooling、dense、3クラス出力）で画像から種類予測。摩耗量は別途手計測、切削速度とともに後段ファジィ制御へ入力。",
+      "performance": "検証89枚でaccuracy 86.52%、loss 0.3752（Table 4）。",
+      "split": "学習207枚/検証89枚。独立テスト、工具個体分割・加工条件分割未確認。",
+      "locators": "§§3.1–3.2、§4、Tables 1・4、Fig. 6–7",
+      "verification": "出版社本文確認",
+      "limitations": "Normal wearは無摩耗と同義ではない。クレータやチッピングは今後の課題。Mamledesai 2020と同研究系列、画像重複未確認。",
+      "source_ids": [
+        "SFI005"
+      ]
+    },
+    {
+      "id": "FIA04",
+      "category": "画像のみ・種類分類（出版社抄録＋章抜粋）",
+      "title": "Realizing on-machine tool wear monitoring through integration of vision-based system with CNC milling machine",
+      "doi": "10.1016/j.jmsy.2024.12.004",
+      "year": 2025,
+      "venue": "Journal of Manufacturing Systems 78:283–293（2025年2月号）",
+      "authors": [
+        "Aitha Sudheer Kumar",
+        "Ankit Agarwal",
+        "Vinita Gangaram Jansari",
+        "K A Desai",
+        "Chiranjoy Chattopadhyay",
+        "Laine Mears"
+      ],
+      "exact_labels": [
+        "Flank",
+        "Flank+BUE",
+        "Flank+Face",
+        "Chipping"
+      ],
+      "input": "NC内に固定したDino-Lite顕微鏡で、IN718をフライス加工する際に側刃の高解像画像を断続撮影。複数切削速度。",
+      "model": "事前学習EfficientNet-B0（出版社表記 Efficient-Net-b0）を画像分類に転移学習。",
+      "performance": "未見テストデータに対する4種類分類accuracy 94.11%（出版社抄録）。",
+      "split": "未見テストデータ記載。画像数、split詳細、工具・加工条件の分離単位は本文取得制約により未確認。",
+      "locators": "Abstract; CNN-based tool wear classification model; Results & discussion",
+      "verification": "出版社抄録・章抜粋確認",
+      "limitations": "複合ラベルは4つの択一クラスで、多ラベル出力と区別。後続ViT (R0106) と著者・工具/材・分類が重なる。データ同一性は未確認、独立再現と数えない。",
+      "source_ids": [
+        "SFI006",
+        "SFI007"
+      ]
+    },
+    {
+      "id": "FIA05",
+      "category": "画像のみ・種類分類（評価整合に留保）",
+      "title": "Dual-scale evaluation of hybrid Al-SiC/graphene composites: Mechanical properties and deep learning-driven machinability insights",
+      "doi": "10.1016/j.rineng.2025.105742",
+      "year": 2025,
+      "venue": "Results in Engineering 27:105742",
+      "authors": [
+        "Natrayan Lakshmaiya",
+        "K. Vijetha",
+        "Arockia Selvakumar Arockia Doss",
+        "KJN Sai Nitesh",
+        "Nimel Sworna Ross",
+        "Ramya Maranan"
+      ],
+      "exact_labels": [
+        "crater wear",
+        "built-up edge (BUE) formation",
+        "thermal cracking",
+        "edge chipping",
+        "abrasion"
+      ],
+      "input": "Al 5457 + 6% SiC + 6% grapheneの穴あけで得た工具摩耗画像、224×224。撮像・工具詳細の未確認事項あり。",
+      "model": "VGG16とVGG19。150元画像を回転/反転/平行移動/輝度等で1200枚に拡張。",
+      "performance": "論文報告のテストaccuracy VGG16 98.86%、VGG19 92.3%。VGG16 F1 98.86%、VGG19 F1 92.30%（平均化定義未確認）。再現・独立評価は未確認。",
+      "split": "拡張・前処理した1200枚を840学習/360テストへ。原画像単位/工具単位の分離は確認できず、類似画像の分割跨ぎリスク。",
+      "locators": "出版社検索でAbstract/§4.6/Fig. 10–11説明を確認",
+      "verification": "出版社抄録・本文該当箇所の検索抜粋確認",
+      "limitations": "360枚に対する単純な整数正解数比を小数第2位に丸めても98.86%にならない。集計方法・図の元データ未確認のため報告値と明示し、ランキング根拠にしない。",
+      "source_ids": [
+        "SFI008",
+        "SFI009"
+      ]
+    },
+    {
+      "id": "FIA06",
+      "category": "画像のみ・種類分類（著者原稿確認）",
+      "title": "Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling",
+      "doi": null,
+      "year": 2026,
+      "venue": "Semarak International Journal of Applied Sciences and Engineering Technology 9(1):1–12（原稿表紙）",
+      "authors": [
+        "Chee Wai Yong",
+        "Nurul Husna Mohd Yusoff",
+        "Aini Zuhra Abdul Kadir",
+        "Shao Wei Koh",
+        "Tan Kim Loong",
+        "Mohd Azlan Suhaimi"
+      ],
+      "exact_labels": [
+        "Built-up Edge (BUE)",
+        "Chipping"
+      ],
+      "input": "微細ドリルのすくい面画像。CMOステレオ顕微鏡で工具を垂直に立て真上90°から撮像。",
+      "model": "AlexNet派生CNN/Adam。Gray_Edge, Gray_MorphEdge, RGB_Enhanced, ContourOnlyの4前処理比較。",
+      "performance": "ContourOnly内部validation accuracy 99.26%、recall BUE 0.99、Chipping 1.00（原稿Table 1）。別データ例ではRGB_EnhancedとContourOnlyがチッピング5枚中4枚を判定（著者抜粋）。",
+      "split": "主学習/検証の分割割合・画像/工具単位未確認。別データ由来の各種5枚、計10枚は結果の目視レビューを含む確認（§2.5）。",
+      "locators": "原稿p.1, §§2.5/3.1–3.2, Tables 1–2",
+      "verification": "著者公開原稿抄録・方法/結果抜粋確認",
+      "limitations": "軽微チッピング少数。99.26%は別工具外部試験の性能でない。DOI/出版社の当該記事ページ・完全本文は確認できず、巻号表紙を一次著者原稿に依拠。",
+      "source_ids": [
+        "SFI010",
+        "SFI011"
+      ]
+    },
+    {
+      "id": "FIA07",
+      "category": "隣接・種類付き意味分割",
+      "title": "Artificial Intelligence for Sustainability: Facilitating Sustainable Smart Product-Service Systems with Computer Vision",
+      "doi": "10.1016/j.jclepro.2023.136748",
+      "year": 2023,
+      "venue": "Journal of Cleaner Production 402:136748",
+      "authors": [
+        "Jannis Walk",
+        "Niklas Kühl",
+        "Michael Saidani",
+        "Jürgen Schatte"
+      ],
+      "exact_labels": [
+        "Background",
+        "Flank wear",
+        "Chipping",
+        "Built-up edge"
+      ],
+      "input": "使用済切削工具の顕微鏡画像213枚（本文のもう一事例であるX線回転陽極を除外）。",
+      "model": "U-Net、種類ごとのピクセル意味分割。",
+      "performance": "51テスト画像でDice：background 0.991 / flank 0.695 / chipping 0.244 / BUE 0.596、平均0.631、pixel accuracy 0.977。",
+      "split": "画像152学習/10検証/51テスト。工具単位分割未確認。",
+      "locators": "§3.1.1, Fig. 7, Table 3",
+      "verification": "著者本文・出版社版書誌確認",
+      "limitations": "画像レベル分類でない。Treiss et al. の213枚/同Diceのベース結果と重複が強く示唆され、独立データ・別ベンチマーク性能と扱わない。",
+      "source_ids": [
+        "SFI012",
+        "SFI013"
+      ]
+    },
+    {
+      "id": "FIA08",
+      "category": "隣接・種類付き意味分割と不確実性",
+      "title": "An Uncertainty-based Human-in-the-loop System for Industrial Tool Wear Analysis",
+      "doi": "10.1007/978-3-030-67670-4_6",
+      "year": 2021,
+      "venue": "ECML PKDD 2020 Applied Data Science and Demo Track, LNCS 12461, pp. 85–100（2021刊行）",
+      "authors": [
+        "Alexander Treiss",
+        "Jannis Walk",
+        "Niklas Kühl"
+      ],
+      "exact_labels": [
+        "Background",
+        "Flank wear",
+        "Chipping",
+        "Built-up edge"
+      ],
+      "input": "顧客の実加工で寿命まで使ったCeratizit切削インサートの画像213枚、ピクセル注釈。",
+      "model": "U-Netセマンティック分割、Monte Carlo dropout不確実性、低品質予測を人へ回すシミュレーション。",
+      "performance": "Table 1のtool wear Dice平均0.631、チッピング0.244、pixel accuracy 0.977。予測品質と不確実性の回帰R² 0.718は種類分類の指標でない。",
+      "split": "213画像の分割詳細はFIA07と同じ評価結果で関連。原稿データセット詳細を参照。",
+      "locators": "§§3–4、Table 1",
+      "verification": "KIT公開著者原稿・書誌確認",
+      "limitations": "ピクセル出力。画像レベルの低信頼判定は品質推定であって摩耗種類分類でない。同じ213枚・同DiceのFIA07との独立性なしとして監査。",
+      "source_ids": [
+        "SFI014",
+        "SFI015"
+      ]
+    },
+    {
+      "id": "FIA09",
+      "category": "隣接・種類付き物体検出＋分割",
+      "title": "Deep learning method for wear assessment and regeneration support in gear hobbing tools",
+      "doi": "10.1007/s10845-026-02944-x",
+      "year": 2026,
+      "venue": "Journal of Intelligent Manufacturing（2026-08-04公開）",
+      "authors": [
+        "Kacper Marciniak",
+        "Piotr Lampa",
+        "Mariusz Mrzygłód",
+        "Paweł Majewski",
+        "Jacek Reiner"
+      ],
+      "exact_labels": [
+        "edge wear",
+        "built-up",
+        "contamination"
+      ],
+      "input": "歯切りホブの歯を工業用検査機で走査した逃げ面画像。21工具個体・50スキャン、2500注釈画像。",
+      "model": "YOLO12sが3種類の矩形を出力し、Ghost Slim U-Netがedge wear ROIを分割、ポリゴンから摩耗量を算出。",
+      "performance": "分割F1 0.886 ± 0.004、摩耗量MAE 4.05 ± 0.23 µm（要約の測定指標、画像分類精度ではない）。",
+      "split": "スキャン単位5-fold。工具×状態の同一スキャン由来画像は分離。異なる状態の同一工具まで完全排除したとまでは確認できない。",
+      "locators": "Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract",
+      "verification": "出版社本文確認",
+      "limitations": "導入のflank/notch/BUE/contamination一覧をそのまま学習ラベルとしない。edge wearは分割、built-up/contaminationは検出。",
+      "source_ids": [
+        "SFI016"
+      ]
+    },
+    {
+      "id": "FIA10",
+      "category": "特許・画像種類分類（論文数に含めない）",
+      "title": "一种基于自蒸馏的刀具损伤智能检测方法 (CN116993711A)",
+      "doi": null,
+      "year": 2023,
+      "venue": "CN116993711A（2023-11-03公開）",
+      "authors": [
+        "王禹林",
+        "潘一",
+        "郝玲",
+        "周世超",
+        "熊哲"
+      ],
+      "exact_labels": [
+        "碎断",
+        "崩刃",
+        "裂纹",
+        "后刀面磨损"
+      ],
+      "input": "工業カメラ工具画像、灰度化224×224。",
+      "model": "自適応ノイズ除去分類の教師（ResNet18に置換）と自己蒸留、深浅の分類ヘッド。",
+      "performance": "公開文献に精度向上の主張あり。比較条件・再現未確認のため基準性能値として採用しない。",
+      "split": "公開文献の発明内容7:1:2、実施形態7:2:1で記載不整合。工具個体分離未確認。",
+      "locators": "発明内容・実施形態・請求項1・図2–4",
+      "verification": "特許公開本文確認",
+      "limitations": "論文でなく、類似特許との商用実装関係未確認。",
+      "source_ids": [
+        "SFI017"
+      ],
+      "publication_number": "CN116993711A"
+    },
+    {
+      "id": "FIA11",
+      "category": "比較実験だけ画像単独（主論文はマルチモーダル）",
+      "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+      "doi": "10.1016/j.ress.2026.113287",
+      "year": 2027,
+      "venue": "Reliability Engineering & System Safety 277:113287（2027年巻号、オンライン初出日未確認）",
+      "authors": [
+        "Liang Yan",
+        "Haitong Luo",
+        "Shichang Du",
+        "Shuo Wang",
+        "Shanshan Li",
+        "Xianmin Chen"
+      ],
+      "exact_labels": [
+        "flank wear（本文確認）",
+        "その他の厳密ラベル表記は取得抜粋で未確認"
+      ],
+      "input": "MATWIの切れ刃RGB画像から抽出したedge strip image。主提案は画像＋センサ＋工程文脈を入力する別タスク。",
+      "model": "画像単独比較ResNet18、ほか再実装のYuan画像特徴とVerbeke 2D CNN。Qwen3-VL-8B主提案は画像単独でない。",
+      "performance": "ResNet18画像単独90.98% Accuracy / 61.79% Macro-F1（Table 3）。Table 6の再実装画像単独：Yuan 73.00%/28.14%、Verbeke 17.75%/11.78%。",
+      "split": "MATWI工具Set単位: train 2/3/5/7/8/10/11、val 6/12、test 4/9/13（247例、Table 7）。",
+      "locators": "§4.1、§4.3/Table 3、§4.5/Table 6、Table 7",
+      "verification": "出版社抄録・章抜粋、共著者機関書誌確認",
+      "limitations": "主提案は集計外。先行公開日が2026-11-11以前と確定できていないので比較補足扱い。多数派flank 76.11%と報告、Macro-F1を併記。",
+      "source_ids": [
+        "SFI018",
+        "SFI019"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SFI001",
+      "title": "Using the Machine Vision Method to Develop an On-machine Insert Condition Monitoring System for Computer Numerical Control Turning Machine Tools",
+      "url": "https://www.mdpi.com/1996-1944/11/10/1977/pdf?version=1539498597",
+      "kind": "publisher_pdf",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社PDF本文確認",
+      "locator": "§§2–5; Fig. 10, Fig. 12; Tables 1–2 (PDF p.12–14)",
+      "doi": "10.3390/ma11101977"
+    },
+    {
+      "source_id": "SFI002",
+      "title": "Towards Leveraging End-of-Life Tools as an Asset: Value Co-Creation based on Deep Learning in the Machining Industry",
+      "url": "https://publikationen.bibliothek.kit.edu/1000099219/56353670",
+      "kind": "institutional_pdf",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "KIT公開の著者本文確認",
+      "locator": "§§4.2–4.5, Tables 1–2, Fig. 6",
+      "doi": null
+    },
+    {
+      "source_id": "SFI003",
+      "title": "HICSS-53: Towards Leveraging End-of-Life Tools as an Asset",
+      "url": "https://aisel.aisnet.org/hicss-53/da/bi_applications/2/",
+      "kind": "proceedings_index",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "会議の書誌・抄録確認",
+      "locator": "Description; event dates",
+      "doi": null
+    },
+    {
+      "source_id": "SFI004",
+      "title": "Towards leveraging end-of-life tools as an asset: Value Co-Creation based on Deep Learning in the Machining Industry",
+      "url": "https://www.mendeley.com/catalogue/4cdcf935-64f2-3ad2-b3af-559d18de5a8b/",
+      "kind": "bibliographic_secondary",
+      "primary": false,
+      "accessed": "2026-11-11",
+      "verification": "DOIメタデータ確認（DOI URLのopen不成功）",
+      "locator": "DOI and pp. 995–1004",
+      "doi": "10.24251/hicss.2020.124"
+    },
+    {
+      "source_id": "SFI005",
+      "title": "Teaching machines to optimizing machining parameters: using independent fuzzy logic controller and image data",
+      "url": "https://link.springer.com/article/10.1007/s42452-022-04987-0",
+      "kind": "publisher_html",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社本文確認",
+      "locator": "§3.1–3.2; §4; Tables 1 & 4; Figs. 5–7",
+      "doi": "10.1007/s42452-022-04987-0"
+    },
+    {
+      "source_id": "SFI006",
+      "title": "Realizing on-machine tool wear monitoring through integration of vision-based system with CNC milling machine",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278612524002978",
+      "kind": "publisher_preview",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社抄録・章抜粋確認、本文open 403",
+      "locator": "Abstract; CNN-based tool wear classification model; Results & discussion",
+      "doi": "10.1016/j.jmsy.2024.12.004"
+    },
+    {
+      "source_id": "SFI007",
+      "title": "Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718",
+      "url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "kind": "publisher_html",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社本文確認（本調査の既採用R0106）",
+      "locator": "Authors; Abstract; §2; Kumar et al. reference",
+      "doi": "10.3390/machines14060589"
+    },
+    {
+      "source_id": "SFI008",
+      "title": "Dual-scale evaluation of hybrid Al-SiC/graphene composites: Mechanical properties and deep learning-driven machinability insights",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2590123025018134",
+      "kind": "publisher_preview",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403",
+      "locator": "Abstract; §4.6; Figs. 10–11",
+      "doi": "10.1016/j.rineng.2025.105742"
+    },
+    {
+      "source_id": "SFI009",
+      "title": "Dual-scale evaluation of hybrid Al-SiC/graphene composites: Mechanical properties and deep learning-driven machinability insights",
+      "url": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202502224522770523",
+      "kind": "bibliographic_secondary",
+      "primary": false,
+      "accessed": "2026-11-11",
+      "verification": "J-GLOBAL書誌確認",
+      "locator": "Authors; Results in Engineering 27:105742",
+      "doi": null
+    },
+    {
+      "source_id": "SFI010",
+      "title": "Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling",
+      "url": "https://www.researchgate.net/publication/406927055_Tool_Wear_Classification_Based_on_Convolutional_Neural_Network_in_Micro_Drilling",
+      "kind": "author_uploaded_manuscript_preview",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "著者公開原稿の抄録・章抜粋確認、PDF本文open不成功",
+      "locator": "p.1; §§2.5, 3.1–3.2; Tables 1–2",
+      "doi": null
+    },
+    {
+      "source_id": "SFI011",
+      "title": "Semarak International Journal of Applied Sciences and Engineering Technology – archive",
+      "url": "https://semarakilmu.my/index.php/sijaset/issue/archive",
+      "kind": "publisher_index",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "巻号確認、当該号目次open不成功",
+      "locator": "Vol. 9 No. 1 (March 2026)",
+      "doi": null
+    },
+    {
+      "source_id": "SFI012",
+      "title": "Artificial Intelligence for Sustainability: Facilitating Sustainable Smart Product-Service Systems with Computer Vision",
+      "url": "https://arxiv.org/pdf/2303.13540",
+      "kind": "author_preprint_pdf",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "著者公開本文確認",
+      "locator": "§3.1.1; Fig. 7; Table 3",
+      "doi": null
+    },
+    {
+      "source_id": "SFI013",
+      "title": "Artificial intelligence for sustainability: Facilitating sustainable smart product-service systems with computer vision",
+      "url": "https://publikationen.bibliothek.kit.edu/1000157731",
+      "kind": "institutional_metadata",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "大学による出版版書誌確認",
+      "locator": "Journal of Cleaner Production 402, 136748",
+      "doi": "10.1016/j.jclepro.2023.136748"
+    },
+    {
+      "source_id": "SFI014",
+      "title": "An Uncertainty-based Human-in-the-loop System for Industrial Tool Wear Analysis",
+      "url": "https://publikationen.bibliothek.kit.edu/1000124315/89528219",
+      "kind": "institutional_pdf",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "著者公開原稿確認",
+      "locator": "§§3–4, Table 1",
+      "doi": null
+    },
+    {
+      "source_id": "SFI015",
+      "title": "An Uncertainty-based Human-in-the-loop System for Industrial Tool Wear Analysis",
+      "url": "https://publikationen.bibliothek.kit.edu/1000124315",
+      "kind": "institutional_metadata",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "KIT書誌確認",
+      "locator": "2020会議・2021刊行の区別",
+      "doi": "10.1007/978-3-030-67670-4_6"
+    },
+    {
+      "source_id": "SFI016",
+      "title": "Deep learning method for wear assessment and regeneration support in gear hobbing tools",
+      "url": "https://link.springer.com/article/10.1007/s10845-026-02944-x",
+      "kind": "publisher_html",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社本文確認",
+      "locator": "Prepared dataset; Table 1; Figs. 4–5; Deep learning models; Abstract",
+      "doi": "10.1007/s10845-026-02944-x"
+    },
+    {
+      "source_id": "SFI017",
+      "title": "一种基于自蒸馏的刀具损伤智能检测方法 (CN116993711A)",
+      "url": "https://patents.google.com/patent/CN116993711A/zh",
+      "kind": "patent_publication",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "特許公開本文確認（論文でない）",
+      "locator": "発明内容; 実施形態; 請求項; 図2–4",
+      "doi": null
+    },
+    {
+      "source_id": "SFI018",
+      "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+      "kind": "publisher_preview",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社抄録・§4章抜粋確認、本文open 403",
+      "locator": "§4.1/Table 2; §4.3/Table 3; §4.5/Table 6; Table 7",
+      "doi": "10.1016/j.ress.2026.113287"
+    },
+    {
+      "source_id": "SFI019",
+      "title": "Shichang Du faculty publications",
+      "url": "https://me.sjtu.edu.cn/teacher_directory1/dushichang.html",
+      "kind": "institutional_metadata",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "共著者所属機関の書誌確認、添付PDFopen不成功",
+      "locator": "英文期刊[1] 2027;277:113287",
+      "doi": null
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CFI001",
+      "entity_id": "FIA01",
+      "field": "exact_labels",
+      "claim": "BUE / fracture / chipping / normal wear / over-wear",
+      "status": "出版社PDF本文確認"
+    },
+    {
+      "claim_id": "CFI002",
+      "entity_id": "FIA01",
+      "field": "input",
+      "claim": "機上CCD工具画像。旋削用超硬インサート、中炭素鋼。可変周囲光・先端補助光で輪郭と刃先特徴を撮像。",
+      "status": "出版社PDF本文確認"
+    },
+    {
+      "claim_id": "CFI003",
+      "entity_id": "FIA01",
+      "field": "model",
+      "claim": "輪郭二値化と基準線から破断/BUEを判定し、逃げ面ROIのグレーヒストグラムからチッピングと摩耗を識別。逃げ面摩耗を normal wear と over-wear に分ける（0.3 mm、チッピング指標50%の閾値）。",
+      "status": "出版社PDF本文確認"
+    },
+    {
+      "claim_id": "CFI004",
+      "entity_id": "FIA01",
+      "field": "performance",
+      "claim": "20個の使用済インサートを例示評価。Table 1の出力集計はBUE 3、fracture 1、chipping 3、normal wear 6、over-wear 7。独立Accuracy/F1なし。2.75秒平均判定、約13秒全工程。",
+      "status": "出版社PDF本文確認"
+    },
+    {
+      "claim_id": "CFI005",
+      "entity_id": "FIA01",
+      "field": "split",
+      "claim": "学習モデルでない。§5の評価20個と、同一インサート10反復の再現性試験を区別。",
+      "status": "出版社PDF本文確認"
+    },
+    {
+      "claim_id": "CFI006",
+      "entity_id": "FIA02",
+      "field": "exact_labels",
+      "claim": "flank wear: present/absent / chipping: present/absent",
+      "status": "KIT公開著者本文・会議抄録・DOI書誌確認"
+    },
+    {
+      "claim_id": "CFI007",
+      "entity_id": "FIA02",
+      "field": "input",
+      "claim": "実生産2台、1種類インサートの逃げ面側写真648枚。1600×1200から640×480へ。",
+      "status": "KIT公開著者本文・会議抄録・DOI書誌確認"
+    },
+    {
+      "claim_id": "CFI008",
+      "entity_id": "FIA02",
+      "field": "model",
+      "claim": "ImageNet事前学習VGG-16の畳み込み部で固定特徴を抽出、scikit-learn Gradient Boostingを種類ごとに学習。",
+      "status": "KIT公開著者本文・会議抄録・DOI書誌確認"
+    },
+    {
+      "claim_id": "CFI009",
+      "entity_id": "FIA02",
+      "field": "performance",
+      "claim": "3-fold CVのMatthews correlation coefficient：逃げ面摩耗0.878、チッピング0.644。",
+      "status": "KIT公開著者本文・会議抄録・DOI書誌確認"
+    },
+    {
+      "claim_id": "CFI010",
+      "entity_id": "FIA02",
+      "field": "split",
+      "claim": "3-fold CV。工具ID/機械で分離したかは未確認。",
+      "status": "KIT公開著者本文・会議抄録・DOI書誌確認"
+    },
+    {
+      "claim_id": "CFI011",
+      "entity_id": "FIA03",
+      "field": "exact_labels",
+      "claim": "BUE / Deformation / Normal wear",
+      "status": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI012",
+      "entity_id": "FIA03",
+      "field": "input",
+      "claim": "使用済TNMG/CNMGおよび非コートHSSの工具RGB画像（DFK33GP006、200×200×3へ）。旋削。",
+      "status": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI013",
+      "entity_id": "FIA03",
+      "field": "model",
+      "claim": "CNN（畳み込み、max-pooling、dense、3クラス出力）で画像から種類予測。摩耗量は別途手計測、切削速度とともに後段ファジィ制御へ入力。",
+      "status": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI014",
+      "entity_id": "FIA03",
+      "field": "performance",
+      "claim": "検証89枚でaccuracy 86.52%、loss 0.3752（Table 4）。",
+      "status": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI015",
+      "entity_id": "FIA03",
+      "field": "split",
+      "claim": "学習207枚/検証89枚。独立テスト、工具個体分割・加工条件分割未確認。",
+      "status": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI016",
+      "entity_id": "FIA04",
+      "field": "exact_labels",
+      "claim": "Flank / Flank+BUE / Flank+Face / Chipping",
+      "status": "出版社抄録・章抜粋確認"
+    },
+    {
+      "claim_id": "CFI017",
+      "entity_id": "FIA04",
+      "field": "input",
+      "claim": "NC内に固定したDino-Lite顕微鏡で、IN718をフライス加工する際に側刃の高解像画像を断続撮影。複数切削速度。",
+      "status": "出版社抄録・章抜粋確認"
+    },
+    {
+      "claim_id": "CFI018",
+      "entity_id": "FIA04",
+      "field": "model",
+      "claim": "事前学習EfficientNet-B0（出版社表記 Efficient-Net-b0）を画像分類に転移学習。",
+      "status": "出版社抄録・章抜粋確認"
+    },
+    {
+      "claim_id": "CFI019",
+      "entity_id": "FIA04",
+      "field": "performance",
+      "claim": "未見テストデータに対する4種類分類accuracy 94.11%（出版社抄録）。",
+      "status": "出版社抄録・章抜粋確認"
+    },
+    {
+      "claim_id": "CFI020",
+      "entity_id": "FIA04",
+      "field": "split",
+      "claim": "未見テストデータ記載。画像数、split詳細、工具・加工条件の分離単位は本文取得制約により未確認。",
+      "status": "出版社抄録・章抜粋確認"
+    },
+    {
+      "claim_id": "CFI021",
+      "entity_id": "FIA05",
+      "field": "exact_labels",
+      "claim": "crater wear / built-up edge (BUE) formation / thermal cracking / edge chipping / abrasion",
+      "status": "出版社抄録・本文該当箇所の検索抜粋確認"
+    },
+    {
+      "claim_id": "CFI022",
+      "entity_id": "FIA05",
+      "field": "input",
+      "claim": "Al 5457 + 6% SiC + 6% grapheneの穴あけで得た工具摩耗画像、224×224。撮像・工具詳細の未確認事項あり。",
+      "status": "出版社抄録・本文該当箇所の検索抜粋確認"
+    },
+    {
+      "claim_id": "CFI023",
+      "entity_id": "FIA05",
+      "field": "model",
+      "claim": "VGG16とVGG19。150元画像を回転/反転/平行移動/輝度等で1200枚に拡張。",
+      "status": "出版社抄録・本文該当箇所の検索抜粋確認"
+    },
+    {
+      "claim_id": "CFI024",
+      "entity_id": "FIA05",
+      "field": "performance",
+      "claim": "論文報告のテストaccuracy VGG16 98.86%、VGG19 92.3%。VGG16 F1 98.86%、VGG19 F1 92.30%（平均化定義未確認）。再現・独立評価は未確認。",
+      "status": "出版社抄録・本文該当箇所の検索抜粋確認"
+    },
+    {
+      "claim_id": "CFI025",
+      "entity_id": "FIA05",
+      "field": "split",
+      "claim": "拡張・前処理した1200枚を840学習/360テストへ。原画像単位/工具単位の分離は確認できず、類似画像の分割跨ぎリスク。",
+      "status": "出版社抄録・本文該当箇所の検索抜粋確認"
+    },
+    {
+      "claim_id": "CFI026",
+      "entity_id": "FIA06",
+      "field": "exact_labels",
+      "claim": "Built-up Edge (BUE) / Chipping",
+      "status": "著者公開原稿抄録・方法/結果抜粋確認"
+    },
+    {
+      "claim_id": "CFI027",
+      "entity_id": "FIA06",
+      "field": "input",
+      "claim": "微細ドリルのすくい面画像。CMOステレオ顕微鏡で工具を垂直に立て真上90°から撮像。",
+      "status": "著者公開原稿抄録・方法/結果抜粋確認"
+    },
+    {
+      "claim_id": "CFI028",
+      "entity_id": "FIA06",
+      "field": "model",
+      "claim": "AlexNet派生CNN/Adam。Gray_Edge, Gray_MorphEdge, RGB_Enhanced, ContourOnlyの4前処理比較。",
+      "status": "著者公開原稿抄録・方法/結果抜粋確認"
+    },
+    {
+      "claim_id": "CFI029",
+      "entity_id": "FIA06",
+      "field": "performance",
+      "claim": "ContourOnly内部validation accuracy 99.26%、recall BUE 0.99、Chipping 1.00（原稿Table 1）。別データ例ではRGB_EnhancedとContourOnlyがチッピング5枚中4枚を判定（著者抜粋）。",
+      "status": "著者公開原稿抄録・方法/結果抜粋確認"
+    },
+    {
+      "claim_id": "CFI030",
+      "entity_id": "FIA06",
+      "field": "split",
+      "claim": "主学習/検証の分割割合・画像/工具単位未確認。別データ由来の各種5枚、計10枚は結果の目視レビューを含む確認（§2.5）。",
+      "status": "著者公開原稿抄録・方法/結果抜粋確認"
+    },
+    {
+      "claim_id": "CFI031",
+      "entity_id": "FIA07",
+      "field": "exact_labels",
+      "claim": "Background / Flank wear / Chipping / Built-up edge",
+      "status": "著者本文・出版社版書誌確認"
+    },
+    {
+      "claim_id": "CFI032",
+      "entity_id": "FIA07",
+      "field": "input",
+      "claim": "使用済切削工具の顕微鏡画像213枚（本文のもう一事例であるX線回転陽極を除外）。",
+      "status": "著者本文・出版社版書誌確認"
+    },
+    {
+      "claim_id": "CFI033",
+      "entity_id": "FIA07",
+      "field": "model",
+      "claim": "U-Net、種類ごとのピクセル意味分割。",
+      "status": "著者本文・出版社版書誌確認"
+    },
+    {
+      "claim_id": "CFI034",
+      "entity_id": "FIA07",
+      "field": "performance",
+      "claim": "51テスト画像でDice：background 0.991 / flank 0.695 / chipping 0.244 / BUE 0.596、平均0.631、pixel accuracy 0.977。",
+      "status": "著者本文・出版社版書誌確認"
+    },
+    {
+      "claim_id": "CFI035",
+      "entity_id": "FIA07",
+      "field": "split",
+      "claim": "画像152学習/10検証/51テスト。工具単位分割未確認。",
+      "status": "著者本文・出版社版書誌確認"
+    },
+    {
+      "claim_id": "CFI036",
+      "entity_id": "FIA08",
+      "field": "exact_labels",
+      "claim": "Background / Flank wear / Chipping / Built-up edge",
+      "status": "KIT公開著者原稿・書誌確認"
+    },
+    {
+      "claim_id": "CFI037",
+      "entity_id": "FIA08",
+      "field": "input",
+      "claim": "顧客の実加工で寿命まで使ったCeratizit切削インサートの画像213枚、ピクセル注釈。",
+      "status": "KIT公開著者原稿・書誌確認"
+    },
+    {
+      "claim_id": "CFI038",
+      "entity_id": "FIA08",
+      "field": "model",
+      "claim": "U-Netセマンティック分割、Monte Carlo dropout不確実性、低品質予測を人へ回すシミュレーション。",
+      "status": "KIT公開著者原稿・書誌確認"
+    },
+    {
+      "claim_id": "CFI039",
+      "entity_id": "FIA08",
+      "field": "performance",
+      "claim": "Table 1のtool wear Dice平均0.631、チッピング0.244、pixel accuracy 0.977。予測品質と不確実性の回帰R² 0.718は種類分類の指標でない。",
+      "status": "KIT公開著者原稿・書誌確認"
+    },
+    {
+      "claim_id": "CFI040",
+      "entity_id": "FIA08",
+      "field": "split",
+      "claim": "213画像の分割詳細はFIA07と同じ評価結果で関連。原稿データセット詳細を参照。",
+      "status": "KIT公開著者原稿・書誌確認"
+    },
+    {
+      "claim_id": "CFI041",
+      "entity_id": "FIA09",
+      "field": "exact_labels",
+      "claim": "edge wear / built-up / contamination",
+      "status": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI042",
+      "entity_id": "FIA09",
+      "field": "input",
+      "claim": "歯切りホブの歯を工業用検査機で走査した逃げ面画像。21工具個体・50スキャン、2500注釈画像。",
+      "status": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI043",
+      "entity_id": "FIA09",
+      "field": "model",
+      "claim": "YOLO12sが3種類の矩形を出力し、Ghost Slim U-Netがedge wear ROIを分割、ポリゴンから摩耗量を算出。",
+      "status": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI044",
+      "entity_id": "FIA09",
+      "field": "performance",
+      "claim": "分割F1 0.886 ± 0.004、摩耗量MAE 4.05 ± 0.23 µm（要約の測定指標、画像分類精度ではない）。",
+      "status": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI045",
+      "entity_id": "FIA09",
+      "field": "split",
+      "claim": "スキャン単位5-fold。工具×状態の同一スキャン由来画像は分離。異なる状態の同一工具まで完全排除したとまでは確認できない。",
+      "status": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI046",
+      "entity_id": "FIA10",
+      "field": "exact_labels",
+      "claim": "碎断 / 崩刃 / 裂纹 / 后刀面磨损",
+      "status": "特許公開本文確認"
+    },
+    {
+      "claim_id": "CFI047",
+      "entity_id": "FIA10",
+      "field": "input",
+      "claim": "工業カメラ工具画像、灰度化224×224。",
+      "status": "特許公開本文確認"
+    },
+    {
+      "claim_id": "CFI048",
+      "entity_id": "FIA10",
+      "field": "model",
+      "claim": "自適応ノイズ除去分類の教師（ResNet18に置換）と自己蒸留、深浅の分類ヘッド。",
+      "status": "特許公開本文確認"
+    },
+    {
+      "claim_id": "CFI049",
+      "entity_id": "FIA10",
+      "field": "performance",
+      "claim": "公開文献に精度向上の主張あり。比較条件・再現未確認のため基準性能値として採用しない。",
+      "status": "特許公開本文確認"
+    },
+    {
+      "claim_id": "CFI050",
+      "entity_id": "FIA10",
+      "field": "split",
+      "claim": "公開文献の発明内容7:1:2、実施形態7:2:1で記載不整合。工具個体分離未確認。",
+      "status": "特許公開本文確認"
+    },
+    {
+      "claim_id": "CFI051",
+      "entity_id": "FIA11",
+      "field": "exact_labels",
+      "claim": "flank wear（本文確認） / その他の厳密ラベル表記は取得抜粋で未確認",
+      "status": "出版社抄録・章抜粋、共著者機関書誌確認"
+    },
+    {
+      "claim_id": "CFI052",
+      "entity_id": "FIA11",
+      "field": "input",
+      "claim": "MATWIの切れ刃RGB画像から抽出したedge strip image。主提案は画像＋センサ＋工程文脈を入力する別タスク。",
+      "status": "出版社抄録・章抜粋、共著者機関書誌確認"
+    },
+    {
+      "claim_id": "CFI053",
+      "entity_id": "FIA11",
+      "field": "model",
+      "claim": "画像単独比較ResNet18、ほか再実装のYuan画像特徴とVerbeke 2D CNN。Qwen3-VL-8B主提案は画像単独でない。",
+      "status": "出版社抄録・章抜粋、共著者機関書誌確認"
+    },
+    {
+      "claim_id": "CFI054",
+      "entity_id": "FIA11",
+      "field": "performance",
+      "claim": "ResNet18画像単独90.98% Accuracy / 61.79% Macro-F1（Table 3）。Table 6の再実装画像単独：Yuan 73.00%/28.14%、Verbeke 17.75%/11.78%。",
+      "status": "出版社抄録・章抜粋、共著者機関書誌確認"
+    },
+    {
+      "claim_id": "CFI055",
+      "entity_id": "FIA11",
+      "field": "split",
+      "claim": "MATWI工具Set単位: train 2/3/5/7/8/10/11、val 6/12、test 4/9/13（247例、Table 7）。",
+      "status": "出版社抄録・章抜粋、共著者機関書誌確認"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "claim_id": "CFI001",
+      "source_id": "SFI001",
+      "locator": "§§2–5; Figs. 10–13; Tables 1–2",
+      "quote": "Status Determination",
+      "verification": "出版社PDF本文確認"
+    },
+    {
+      "claim_id": "CFI002",
+      "source_id": "SFI001",
+      "locator": "§§2–5; Figs. 10–13; Tables 1–2",
+      "quote": "",
+      "verification": "出版社PDF本文確認"
+    },
+    {
+      "claim_id": "CFI003",
+      "source_id": "SFI001",
+      "locator": "§§2–5; Figs. 10–13; Tables 1–2",
+      "quote": "",
+      "verification": "出版社PDF本文確認"
+    },
+    {
+      "claim_id": "CFI004",
+      "source_id": "SFI001",
+      "locator": "§§2–5; Figs. 10–13; Tables 1–2",
+      "quote": "",
+      "verification": "出版社PDF本文確認"
+    },
+    {
+      "claim_id": "CFI005",
+      "source_id": "SFI001",
+      "locator": "§§2–5; Figs. 10–13; Tables 1–2",
+      "quote": "",
+      "verification": "出版社PDF本文確認"
+    },
+    {
+      "claim_id": "CFI006",
+      "source_id": "SFI002",
+      "locator": "§§4.2–4.5, Tables 1–2, Fig. 6",
+      "quote": "one with ﬂank wear as binary target variable",
+      "verification": "KIT公開の著者本文確認"
+    },
+    {
+      "claim_id": "CFI007",
+      "source_id": "SFI002",
+      "locator": "§§4.2–4.5, Tables 1–2, Fig. 6",
+      "quote": "",
+      "verification": "KIT公開の著者本文確認"
+    },
+    {
+      "claim_id": "CFI008",
+      "source_id": "SFI002",
+      "locator": "§§4.2–4.5, Tables 1–2, Fig. 6",
+      "quote": "",
+      "verification": "KIT公開の著者本文確認"
+    },
+    {
+      "claim_id": "CFI009",
+      "source_id": "SFI002",
+      "locator": "§§4.2–4.5, Tables 1–2, Fig. 6",
+      "quote": "",
+      "verification": "KIT公開の著者本文確認"
+    },
+    {
+      "claim_id": "CFI010",
+      "source_id": "SFI002",
+      "locator": "§§4.2–4.5, Tables 1–2, Fig. 6",
+      "quote": "",
+      "verification": "KIT公開の著者本文確認"
+    },
+    {
+      "claim_id": "CFI011",
+      "source_id": "SFI005",
+      "locator": "§§3.1–3.2、§4、Tables 1・4、Fig. 6–7",
+      "quote": "the output is the type of wear",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI012",
+      "source_id": "SFI005",
+      "locator": "§§3.1–3.2、§4、Tables 1・4、Fig. 6–7",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI013",
+      "source_id": "SFI005",
+      "locator": "§§3.1–3.2、§4、Tables 1・4、Fig. 6–7",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI014",
+      "source_id": "SFI005",
+      "locator": "§§3.1–3.2、§4、Tables 1・4、Fig. 6–7",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI015",
+      "source_id": "SFI005",
+      "locator": "§§3.1–3.2、§4、Tables 1・4、Fig. 6–7",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI016",
+      "source_id": "SFI006",
+      "locator": "Abstract; CNN-based tool wear classification model; Results & discussion",
+      "quote": "Flank, Flank+BUE, Flank+Face, and Chipping",
+      "verification": "出版社抄録・章抜粋確認、本文open 403"
+    },
+    {
+      "claim_id": "CFI017",
+      "source_id": "SFI006",
+      "locator": "Abstract; CNN-based tool wear classification model; Results & discussion",
+      "quote": "",
+      "verification": "出版社抄録・章抜粋確認、本文open 403"
+    },
+    {
+      "claim_id": "CFI018",
+      "source_id": "SFI006",
+      "locator": "Abstract; CNN-based tool wear classification model; Results & discussion",
+      "quote": "",
+      "verification": "出版社抄録・章抜粋確認、本文open 403"
+    },
+    {
+      "claim_id": "CFI019",
+      "source_id": "SFI006",
+      "locator": "Abstract; CNN-based tool wear classification model; Results & discussion",
+      "quote": "",
+      "verification": "出版社抄録・章抜粋確認、本文open 403"
+    },
+    {
+      "claim_id": "CFI020",
+      "source_id": "SFI006",
+      "locator": "Abstract; CNN-based tool wear classification model; Results & discussion",
+      "quote": "",
+      "verification": "出版社抄録・章抜粋確認、本文open 403"
+    },
+    {
+      "claim_id": "CFI021",
+      "source_id": "SFI008",
+      "locator": "出版社検索でAbstract/§4.6/Fig. 10–11説明を確認",
+      "quote": "840 images, while 30 % (360 images)",
+      "verification": "出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403"
+    },
+    {
+      "claim_id": "CFI022",
+      "source_id": "SFI008",
+      "locator": "出版社検索でAbstract/§4.6/Fig. 10–11説明を確認",
+      "quote": "",
+      "verification": "出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403"
+    },
+    {
+      "claim_id": "CFI023",
+      "source_id": "SFI008",
+      "locator": "出版社検索でAbstract/§4.6/Fig. 10–11説明を確認",
+      "quote": "",
+      "verification": "出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403"
+    },
+    {
+      "claim_id": "CFI024",
+      "source_id": "SFI008",
+      "locator": "出版社検索でAbstract/§4.6/Fig. 10–11説明を確認",
+      "quote": "",
+      "verification": "出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403"
+    },
+    {
+      "claim_id": "CFI025",
+      "source_id": "SFI008",
+      "locator": "出版社検索でAbstract/§4.6/Fig. 10–11説明を確認",
+      "quote": "",
+      "verification": "出版社検索インデックスで抄録・§4.6詳細・図キャプション確認。本文open 403"
+    },
+    {
+      "claim_id": "CFI026",
+      "source_id": "SFI010",
+      "locator": "原稿p.1, §§2.5/3.1–3.2, Tables 1–2",
+      "quote": "Built-up Edge (BUE) and Chipping",
+      "verification": "著者公開原稿の抄録・章抜粋確認、PDF本文open不成功"
+    },
+    {
+      "claim_id": "CFI027",
+      "source_id": "SFI010",
+      "locator": "原稿p.1, §§2.5/3.1–3.2, Tables 1–2",
+      "quote": "",
+      "verification": "著者公開原稿の抄録・章抜粋確認、PDF本文open不成功"
+    },
+    {
+      "claim_id": "CFI028",
+      "source_id": "SFI010",
+      "locator": "原稿p.1, §§2.5/3.1–3.2, Tables 1–2",
+      "quote": "",
+      "verification": "著者公開原稿の抄録・章抜粋確認、PDF本文open不成功"
+    },
+    {
+      "claim_id": "CFI029",
+      "source_id": "SFI010",
+      "locator": "原稿p.1, §§2.5/3.1–3.2, Tables 1–2",
+      "quote": "",
+      "verification": "著者公開原稿の抄録・章抜粋確認、PDF本文open不成功"
+    },
+    {
+      "claim_id": "CFI030",
+      "source_id": "SFI010",
+      "locator": "原稿p.1, §§2.5/3.1–3.2, Tables 1–2",
+      "quote": "",
+      "verification": "著者公開原稿の抄録・章抜粋確認、PDF本文open不成功"
+    },
+    {
+      "claim_id": "CFI031",
+      "source_id": "SFI012",
+      "locator": "§3.1.1, Fig. 7, Table 3",
+      "quote": "We split our dataset containing 213 microscopic images",
+      "verification": "著者公開本文確認"
+    },
+    {
+      "claim_id": "CFI032",
+      "source_id": "SFI012",
+      "locator": "§3.1.1, Fig. 7, Table 3",
+      "quote": "",
+      "verification": "著者公開本文確認"
+    },
+    {
+      "claim_id": "CFI033",
+      "source_id": "SFI012",
+      "locator": "§3.1.1, Fig. 7, Table 3",
+      "quote": "",
+      "verification": "著者公開本文確認"
+    },
+    {
+      "claim_id": "CFI034",
+      "source_id": "SFI012",
+      "locator": "§3.1.1, Fig. 7, Table 3",
+      "quote": "",
+      "verification": "著者公開本文確認"
+    },
+    {
+      "claim_id": "CFI035",
+      "source_id": "SFI012",
+      "locator": "§3.1.1, Fig. 7, Table 3",
+      "quote": "",
+      "verification": "著者公開本文確認"
+    },
+    {
+      "claim_id": "CFI036",
+      "source_id": "SFI014",
+      "locator": "§§3–4、Table 1",
+      "quote": "multi-class image segmentation task",
+      "verification": "著者公開原稿確認"
+    },
+    {
+      "claim_id": "CFI037",
+      "source_id": "SFI014",
+      "locator": "§§3–4、Table 1",
+      "quote": "",
+      "verification": "著者公開原稿確認"
+    },
+    {
+      "claim_id": "CFI038",
+      "source_id": "SFI014",
+      "locator": "§§3–4、Table 1",
+      "quote": "",
+      "verification": "著者公開原稿確認"
+    },
+    {
+      "claim_id": "CFI039",
+      "source_id": "SFI014",
+      "locator": "§§3–4、Table 1",
+      "quote": "",
+      "verification": "著者公開原稿確認"
+    },
+    {
+      "claim_id": "CFI040",
+      "source_id": "SFI014",
+      "locator": "§§3–4、Table 1",
+      "quote": "",
+      "verification": "著者公開原稿確認"
+    },
+    {
+      "claim_id": "CFI041",
+      "source_id": "SFI016",
+      "locator": "Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract",
+      "quote": "partitioned into five equal subsets at the scan level",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI042",
+      "source_id": "SFI016",
+      "locator": "Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI043",
+      "source_id": "SFI016",
+      "locator": "Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI044",
+      "source_id": "SFI016",
+      "locator": "Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI045",
+      "source_id": "SFI016",
+      "locator": "Prepared dataset/Table 1; Figs. 4–5; Deep learning models; Abstract",
+      "quote": "",
+      "verification": "出版社本文確認"
+    },
+    {
+      "claim_id": "CFI046",
+      "source_id": "SFI017",
+      "locator": "発明内容・実施形態・請求項1・図2–4",
+      "quote": "碎断、崩刃、裂纹及后刀面磨损",
+      "verification": "特許公開本文確認（論文でない）"
+    },
+    {
+      "claim_id": "CFI047",
+      "source_id": "SFI017",
+      "locator": "発明内容・実施形態・請求項1・図2–4",
+      "quote": "",
+      "verification": "特許公開本文確認（論文でない）"
+    },
+    {
+      "claim_id": "CFI048",
+      "source_id": "SFI017",
+      "locator": "発明内容・実施形態・請求項1・図2–4",
+      "quote": "",
+      "verification": "特許公開本文確認（論文でない）"
+    },
+    {
+      "claim_id": "CFI049",
+      "source_id": "SFI017",
+      "locator": "発明内容・実施形態・請求項1・図2–4",
+      "quote": "",
+      "verification": "特許公開本文確認（論文でない）"
+    },
+    {
+      "claim_id": "CFI050",
+      "source_id": "SFI017",
+      "locator": "発明内容・実施形態・請求項1・図2–4",
+      "quote": "",
+      "verification": "特許公開本文確認（論文でない）"
+    },
+    {
+      "claim_id": "CFI051",
+      "source_id": "SFI018",
+      "locator": "§4.1、§4.3/Table 3、§4.5/Table 6、Table 7",
+      "quote": "ResNet18 with the edge strip image",
+      "verification": "出版社抄録・§4章抜粋確認、本文open 403"
+    },
+    {
+      "claim_id": "CFI052",
+      "source_id": "SFI018",
+      "locator": "§4.1、§4.3/Table 3、§4.5/Table 6、Table 7",
+      "quote": "",
+      "verification": "出版社抄録・§4章抜粋確認、本文open 403"
+    },
+    {
+      "claim_id": "CFI053",
+      "source_id": "SFI018",
+      "locator": "§4.1、§4.3/Table 3、§4.5/Table 6、Table 7",
+      "quote": "",
+      "verification": "出版社抄録・§4章抜粋確認、本文open 403"
+    },
+    {
+      "claim_id": "CFI054",
+      "source_id": "SFI018",
+      "locator": "§4.1、§4.3/Table 3、§4.5/Table 6、Table 7",
+      "quote": "",
+      "verification": "出版社抄録・§4章抜粋確認、本文open 403"
+    },
+    {
+      "claim_id": "CFI055",
+      "source_id": "SFI018",
+      "locator": "§4.1、§4.3/Table 3、§4.5/Table 6、Table 7",
+      "quote": "",
+      "verification": "出版社抄録・§4章抜粋確認、本文open 403"
+    }
+  ],
+  "search_log": [
+    {
+      "search_id": "QFI001",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "cutting tool wear image classification \"crater wear\" \"flank wear\" \"chipping\" CNN classification dataset"
+        },
+        {
+          "q": "\"tool wear\" \"built-up edge\" \"chipping\" image classification CNN cutting tool wear type"
+        },
+        {
+          "q": "\"cutting tool\" image \"wear types\" classification \"flank\" crater machine learning dataset"
+        },
+        {
+          "q": "tool insert \"wear types\" classification \"crater\" images CNN vision flank breakage"
+        }
+      ],
+      "returned_count": 18,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI002",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "\"Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling\" AIP DOI publisher"
+        },
+        {
+          "q": "\"Realizing on-machine tool wear monitoring\" Kumar Agarwal tool wear EfficienNet four classes flank BUE"
+        },
+        {
+          "q": "\"wear type classification\" cutting tool image \"chipping\" milling wear classification different dataset"
+        },
+        {
+          "q": "\"Dual-scale evaluation of hybrid Al-SiC/graphene composites\" \"confusion matrix\" tool wear authors"
+        }
+      ],
+      "returned_count": 22,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI003",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "\"Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling\" Semarak 2026 DOI publisher site:semarakilmu.com.my OR site:semarakilmu.com"
+        },
+        {
+          "q": "\"Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling\" BUE \"Table 2\" Semarak"
+        },
+        {
+          "q": "\"Artificial Intelligence for Sustainability\" \"Chipping\" worn cutting tools computer vision authors ACM"
+        },
+        {
+          "q": "\"MATWI\" milling \"wear type\" classification data paper original dataset tool wear"
+        }
+      ],
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI004",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "site:semarakilmu.my \"Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling\""
+        },
+        {
+          "q": "\"Yong\" \"Mohd Yusoff\" \"Micro Drilling\" Semarak 9 2026"
+        },
+        {
+          "q": "\"Artificial Intelligence for Sustainability\" \"Facilitating Sustainable Smart Product-Service Systems\" arxiv doi"
+        },
+        {
+          "q": "\"NJUST-CCTD\" \"wear\" classification label Pan dataset types"
+        }
+      ],
+      "returned_count": 16,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI005",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "\"Using the Machine Vision Method to Develop an On-machine Insert Condition\" recognition \"chipping\" decision Sun Yeh 1977"
+        },
+        {
+          "q": "\"Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling\" \"10.\" Yong Kadir Semarakilmu.my"
+        },
+        {
+          "q": "\"wear type\" \"tool\" classification camera cutting image \"built-up edge\" recognition CNN SVM -Wu -Kumar -Yi"
+        },
+        {
+          "q": "\"MATWI: A Multimodal Automatic Tool Wear Inspection Dataset and Baseline Algorithms\" classification wear type De Pauw images"
+        }
+      ],
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI006",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "site:pmc.ncbi.nlm.nih.gov \"Using the Machine Vision Method to Develop an On-machine Insert Condition\" 2018 Sun Yeh"
+        },
+        {
+          "q": "\"10.1016/j.jmsy.2024.12.004\" \"94.11\" EfficientNet training testing classification Kumar pdf"
+        },
+        {
+          "q": "\"Realizing on-machine tool wear monitoring\" Kumar pdf \"94.11\" Clemson IIT authors full text"
+        },
+        {
+          "q": "\"S2590123025018134\" \"105742\" 10.1016 DOI Crossref"
+        }
+      ],
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI007",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "\"Dual-scale evaluation of hybrid Al-SiC/graphene composites\" Lakshmaiya 105742 doi"
+        }
+      ],
+      "returned_count": 16,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI008",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "画像 工具 摩耗 種類 分類 逃げ面 すくい面 構成刃先 チッピング 機械学習 論文"
+        },
+        {
+          "q": "刀具磨损 类型 分类 图像 后刀面 积屑瘤 崩刃 深度学习 识别 论文"
+        },
+        {
+          "q": "\"tool wear type classification\" \"chipping\" \"crater wear\" image machining deep learning"
+        },
+        {
+          "q": "\"Multimodal large language model\" \"explainable tool wear state assessment\" \"Image-only\" image types MATWI"
+        }
+      ],
+      "returned_count": 17,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI009",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "\"A unified multimodal large language model for explainable tool wear state assessment\" \"image-only\" \"classification\" \"Table\" 2026"
+        },
+        {
+          "q": "\"MaskLenNet\" \"Flank_wear\" \"Chipping\" \"breakage\" Tang 286 metrics"
+        },
+        {
+          "q": "\"Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling\" ContourOnly 99.26 split images 80 20"
+        }
+      ],
+      "returned_count": 14,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI010",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "\"10.1016/j.ress.2026.113287\" authors \"flank wear\" \"adhesive wear\" \"chipping\""
+        },
+        {
+          "q": "\"A unified multimodal large language model for explainable tool wear state assessment\" Yuan Verbeke 37 38 references authors"
+        },
+        {
+          "q": "\"tool wear classification based on convolutional neural network and time series images during high precision turning of copper\" wear classes flank wear adhesive"
+        },
+        {
+          "q": "\"Machine Vision Micro-Milling Tool Wear Inspection by Image Reconstruction and Light Reflectance\" classification flank crater radius"
+        }
+      ],
+      "returned_count": 19,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI011",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "\"A unified multimodal large language model for explainable tool wear state assessment\" \"mixed wear\" \"adhesive wear\" 247"
+        },
+        {
+          "q": "\"CN116993711A\" \"刀具\" 自蒸馏 图像 检测 论文 崩刃 裂纹"
+        }
+      ],
+      "returned_count": 9,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI012",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "\"Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling\" \"dataset was\" \"images\" Yong Kadir training validation 2026"
+        },
+        {
+          "q": "site:semarakilmu.my/index.php/sijaset/article \"micro drilling\" \"Yong\""
+        },
+        {
+          "q": "\"A unified multimodal large language model for explainable tool wear state assessment\" \"adhesive\" \"mixed\" Yan Du MATWI"
+        },
+        {
+          "q": "\"Estimation of the inference quality of machine learning models for cutting tools inspection\" Marciniak Reiner class edge wear labels"
+        }
+      ],
+      "returned_count": 15,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI013",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run literature_search_query",
+      "queries": [
+        {
+          "q": "image-only cutting tool wear type classification morphology abrasion adhesion fracture built-up edge chipping crater milling optical images annotated dataset no sensors"
+        },
+        {
+          "q": "convolutional image classification of cutting insert deterioration categories BUE tool fracture flank wear classification photographs turning milling"
+        }
+      ],
+      "returned_count": 21,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI014",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "\"Towards Leveraging End-of-Life Tools as an Asset\" Walk 648 gradient boosting DOI conference"
+        },
+        {
+          "q": "\"Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling\" \"images\" \"randomly divided\" Yong"
+        }
+      ],
+      "returned_count": 16,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    },
+    {
+      "search_id": "QFI015",
+      "executed_at": "2026-11-11 (Asia/Tokyo; minute not recorded)",
+      "target": "web.run search_query（出版社・大学原文を優先）",
+      "queries": [
+        {
+          "q": "\"Image-Mining-Based Decision Support Systems: Design Knowledge and its Evaluation in Tool Wear Analysis\" segmentation labels Walk"
+        },
+        {
+          "q": "\"An Uncertainty-based Human-in-the-loop System for Industrial Tool Wear Analysis\" same dataset 213 background"
+        }
+      ],
+      "returned_count": 17,
+      "total_hits": "未提供",
+      "raw_path": "なし（検索結果から採否・一次URL・該当箇所を記録）"
+    }
+  ],
+  "exclusions": [
+    {
+      "candidate_id": "XFI001",
+      "title": "Automatic Identification of Tool Wear Based on Thermography and a Convolutional Neural Network during the Turning Process",
+      "doi": "10.3390/s21051917",
+      "url": "https://www.mdpi.com/1424-8220/21/5/1917",
+      "reason": "§2.1 explicitly excludes wear type; none/low/medium/high are severity labels."
+    },
+    {
+      "candidate_id": "XFI002",
+      "title": "Tool Wear Monitoring in Milling Based on Fine-Grained Image Classification of Machined Surface Images",
+      "doi": null,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9658698/",
+      "reason": "§4.1 Table 3 sharp/normal/dull; workpiece photo, not tool morphology."
+    },
+    {
+      "candidate_id": "XFI003",
+      "title": "NJUST-CCTD: An Image Database for Milling Tool Wear Classification with Deep Learning",
+      "doi": "10.21203/rs.3.rs-1953358/v1",
+      "url": "https://github.com/paddy112233/PADDY",
+      "reason": "Author dataset repo class1 wear tools, class2 no-wear tools; binary presence."
+    },
+    {
+      "candidate_id": "XFI004",
+      "title": "MATWI: A Multimodal Automatic Tool Wear Inspection Dataset and Baseline Algorithms",
+      "doi": "10.1007/978-3-031-44137-0_22",
+      "url": "https://doi.org/10.1007/978-3-031-44137-0_22",
+      "reason": "Dataset provides type annotations but original image baseline predicts continuous wear, not type."
+    },
+    {
+      "candidate_id": "XFI005",
+      "title": "Tool wear classification based on convolutional neural network and time series images during high precision turning of copper",
+      "doi": "10.1016/j.wear.2023.204692",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0043164823000753",
+      "reason": "Abstract and time-series-imaging method: input 'images' are encoded cutting-force signals, not optical."
+    },
+    {
+      "candidate_id": "XFI006",
+      "title": "A novel approach of tool condition monitoring in sustainable machining of Ni alloy with transfer learning models",
+      "doi": "10.1007/s10845-023-02074-8",
+      "url": "https://link.springer.com/article/10.1007/s10845-023-02074-8",
+      "reason": "Classification of tool wear conditions section: actual four image labels Dry/Flood/MQL/Cryo are machining environments."
+    },
+    {
+      "candidate_id": "XFI007",
+      "title": "Nonastreda multimodal dataset for efficient tool wear state monitoring",
+      "doi": null,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12341703/",
+      "reason": "§3.3 actual classification labels sharp/used/dulled; numeric flank wear, gaps and overhang belong to regression labels."
+    },
+    {
+      "candidate_id": "XFI008",
+      "title": "Monitoring Built-Up Edge, Chipping, Thermal Cracking, and Plastic Deformation of Milling Cutter Inserts through Spindle Vibration Signals",
+      "doi": "10.3390/machines11080790",
+      "url": "https://doi.org/10.3390/machines11080790",
+      "reason": "Real morphology labels, but model input is spindle vibration histogram features."
+    },
+    {
+      "candidate_id": "XFI009",
+      "title": "Machine vision micro-milling tool wear inspection by image reconstruction and light reflectance",
+      "doi": "10.1016/j.precisioneng.2016.01.003",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0141635916000052",
+      "reason": "Photo-based wear region and reflectance assessment, not output of distinct type classes."
+    },
+    {
+      "candidate_id": "XFI010",
+      "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and the Data-Adequacy Limits of Algorithmic Correction",
+      "doi": "10.3390/ai7100400",
+      "url": "https://www.mdpi.com/2673-2688/7/10/400",
+      "reason": "MATWI type as analysis covariate, prediction target wear amount with interval and binary inspection flag."
+    },
+    {
+      "candidate_id": "XFI011",
+      "title": "MaskLenNet: A Query-Based Instance Segmentation and Length Prediction Network for Quantitative Industrial Tool Wear and Breakage Assessment",
+      "doi": "10.3390/jmmp10080286",
+      "url": "https://www.mdpi.com/2504-4494/10/8/286",
+      "reason": "Instance masks and length estimates, not image labels. Adjacent task assigned to root; avoid duplicate."
+    },
+    {
+      "candidate_id": "XFI012",
+      "title": "Tool Wear Classification Based on Support Vector Machine and Deep Learning Models",
+      "doi": null,
+      "url": "https://sensors.myu-group.co.jp/sm_pdf/SM3833.pdf",
+      "reason": "Flank/crater/chipping introduced as mechanisms, classifier uses stage/degree. Introductory figures insufficient for type inclusion."
+    }
+  ],
+  "notes": [
+    "範囲は実際の工具画像のみをモデル入力とし、形態・機構・複合クラスのいずれかを出力する画像レベル分類。独立な2つの種類有無出力も採用するが、択一多クラス分類と区別。ルール式画像分類もモデルを明示して採用。",
+    "6件の追加中、学術実験の原資料本文確認3件（Sun/Yeh、Walk HICSS、Mamledesai 2022）、出版社/著者の抄録・方法/結果抜粋確認3件（Kumar、Lakshmaiya、Yong）。Wu 2019、Singh 2026、Mamledesai 2020はrootの担当により重複登録しない。",
+    "隣接研究は画像中の領域に摩耗タイプを付与するが、画像単位分類の精度表と分離。Walk 2023とTreiss 2021の213枚・同指標は独立データとみなさない。",
+    "Yan et al.の主提案はマルチモーダル・学術担当別管理。画像単独比較実験は別枠とし、オンライン公開日未確定のため基準内の本数には含めない。",
+    "工具個体・加工条件分離が未報告の結果、拡張後分割、混合ラベル体系の違い、MCC・F1・Accuracyの違いがあり、同一順位表を作成しない。"
+  ]
+}

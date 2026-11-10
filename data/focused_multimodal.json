@@ -1,0 +1,2504 @@
+{
+  "as_of": "2026-11-11",
+  "scope": "実工具画像と別モダリティを推論で併用し、定義済みの摩耗・損傷形態を分類した直接研究。複合ラベルおよび形態に基づく二群を許容。",
+  "records": [
+    {
+      "id": "MM001",
+      "status": "採用",
+      "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and the Data-Adequacy Limits of Algorithmic Correction",
+      "authors": [
+        "M. Nadeem Ahangar",
+        "Z. A. Farhat",
+        "Aparajithan Sivanathan",
+        "Mohsin Ali Farhat",
+        "E. Hashemi"
+      ],
+      "affiliations": [
+        "University of Sheffield",
+        "University of Alberta"
+      ],
+      "country": [
+        "英国",
+        "カナダ"
+      ],
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": "AI 7(10), 400",
+      "doi": "10.3390/ai7100400",
+      "source_ids": [
+        "MMS001",
+        "MMS004",
+        "MMS005",
+        "MMS006"
+      ],
+      "dataset": "MATWI",
+      "tool": "超硬フライス用インサート",
+      "process": "CNCフライス加工",
+      "modalities": [
+        "刃先のRGB実写",
+        "加速度",
+        "マイク音響",
+        "3軸切削力",
+        "切削履歴特徴量"
+      ],
+      "model": "ResNet-18の512次元画像特徴と84次元信号・履歴特徴を連結し、クラス重み付きXGBoostで判定。",
+      "exact_labels": [
+        "0 (flank)",
+        "1 (needs inspection: adhesive/combined)"
+      ],
+      "output": "形態に基づく二群。凝着単独と逃げ面＋凝着の複合を区別しない。三分類の別実験も掲載。",
+      "split": "工具単位。学習 Sets 1/5/7/8/10/12、検証 6/13/15、テスト 4/9/11/16。全体の分割は501/247/396切削、分類時はラベルなしを除外。",
+      "metrics": "2群 ROC-AUC 0.928。検証で選んだ閾値0.30でテストRecall 65.5%、誤警報率1.1%、Precision 96.2%。三分類Accuracy 70.5%、複合96件と凝着20件を全件見逃し。",
+      "limitations": "同一公開データセットの固定工具分割。二群のしきい値は運用条件に依存。単独の凝着・複合を判別するモデルとしては評価できない。",
+      "claim_ids": [
+        "MMC001",
+        "MMC002",
+        "MMC003",
+        "MMC004",
+        "MMC005"
+      ]
+    },
+    {
+      "id": "MM002",
+      "status": "技術適合・先行公開日未確認（保留）",
+      "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+      "authors": [
+        "Liang Yan",
+        "Haitong Luo",
+        "Shichang Du",
+        "Shuo Wang",
+        "Shanshan Li",
+        "Xianmin Chen"
+      ],
+      "country": [
+        "中国"
+      ],
+      "year": 2027,
+      "published": "2027-01巻号。先行公開日は未確認。2026-11-11時点で出版社プレビューの原文を確認。",
+      "venue": "Reliability Engineering & System Safety 277(P5), 113287",
+      "doi": "10.1016/j.ress.2026.113287",
+      "source_ids": [
+        "MMS002",
+        "MMS003",
+        "MMS004",
+        "MMS005",
+        "MMS007"
+      ],
+      "dataset": "MATWI",
+      "tool": "超硬フライス用インサート",
+      "process": "CNCフライス加工",
+      "modalities": [
+        "刃先のRGB実写・初期基準画像由来の差分",
+        "加速度STFT",
+        "音響STFT",
+        "切削力の変換・統計特徴を使う下位モデルの出力",
+        "切削条件・診断コンテキスト"
+      ],
+      "model": "Qwen3-VL-8Bを段階学習し、工具実写・センサ由来表現・工程文脈・下位モデルの証拠を統合。Adhesion GateとWear Type Refinementを使い、摩耗種類を含む診断レポートを生成。",
+      "exact_labels": [
+        "flank wear",
+        "adhesion",
+        "flank wear with adhesion"
+      ],
+      "output": "三種類の摩耗分類。摩耗量回帰および保全支援レポートは別出力。",
+      "split": "工具単位。学習 Sets 2/3/5/7/8/10/11、検証 6/12、テスト 4/9/13。テスト247サンプル（Table 7）。",
+      "metrics": "Accuracy 93.12%、Macro-F1 77.09%。同論文の画像単独ResNet18エッジ帯はAccuracy 90.98%、Macro-F1 61.79%（Table 3）。",
+      "limitations": "単一データセット。画像単独との比較はモデル構成・学習も異なる。論文の巻号日と先行公開日を区別。",
+      "claim_ids": [
+        "MMC006",
+        "MMC007",
+        "MMC008",
+        "MMC009",
+        "MMC010",
+        "MMC011"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "MMS001",
+      "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and the Data-Adequacy Limits of Algorithmic Correction",
+      "publisher": "MDPI",
+      "year": "2026-10-03",
+      "url": "https://www.mdpi.com/2673-2688/7/10/400",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§3、§5.2、§5.4 Algorithm 2、§6.9 Table 10 / Figs. 13–15、Appendix A"
+    },
+    {
+      "source_id": "MMS002",
+      "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+      "publisher": "Elsevier",
+      "year": "2027-01（巻号）",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社プレビュー・検索索引の原文確認",
+      "saved_path": "",
+      "locator": "Abstract、§3、§4.1–4.7、Tables 2–7"
+    },
+    {
+      "source_id": "MMS003",
+      "title": "Crossref DOI metadata for 10.1016/j.ress.2026.113287",
+      "publisher": "Crossref／Elsevier登録",
+      "year": "2027-01（巻号）",
+      "url": "https://api.crossref.org/works/10.1016/j.ress.2026.113287",
+      "type": "DOI登録メタデータ",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "メタデータ確認",
+      "saved_path": "evidence/raw/focused_multimodal/yan_crossref.json",
+      "locator": "message.created、message.deposited、message.issued、message.published-print。published-online欠落。"
+    },
+    {
+      "source_id": "MMS004",
+      "title": "Multimodal Automatic Tool Wear Inspection Dataset (MATWI)",
+      "publisher": "KU Leuven EAVISE",
+      "year": "2025（アーカイブ公開）",
+      "url": "https://iiw.kuleuven.be/onderzoek/eavise/MATWI/MATWI",
+      "type": "研究機関データセット",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "公式説明確認",
+      "saved_path": "",
+      "locator": "Information、label structure、sensor file structure"
+    },
+    {
+      "source_id": "MMS005",
+      "title": "Replication Data for: MATWI: A Multimodal Automatic Tool Wear Inspection Dataset and Baseline Algorithms",
+      "publisher": "KU Leuven RDR",
+      "year": "2025",
+      "url": "https://doi.org/10.48804/GK6LHH",
+      "type": "研究機関データセット",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "公式書誌・説明確認",
+      "saved_path": "",
+      "locator": "Description、Dataset Metrics、Related Publication"
+    },
+    {
+      "source_id": "MMS006",
+      "title": "Crossref DOI metadata for 10.3390/ai7100400",
+      "publisher": "Crossref／MDPI登録",
+      "year": "2026-10-03",
+      "url": "https://api.crossref.org/works/10.3390/ai7100400",
+      "type": "DOI登録メタデータ",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "メタデータ確認",
+      "saved_path": "evidence/raw/focused_multimodal/ahangar_crossref.json",
+      "locator": "message.author、message.title、message.published"
+    },
+    {
+      "source_id": "MMS007",
+      "title": "杜世昌（Shichang Du）研究者情報",
+      "publisher": "上海交通大学",
+      "year": "未確認",
+      "url": "https://me.sjtu.edu.cn/teacher_directory1/dushichang.html",
+      "type": "著者所属機関の研究者ページ",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版物一覧確認",
+      "saved_path": "",
+      "locator": "代表性论文・著作"
+    },
+    {
+      "source_id": "MMS008",
+      "title": "A Tool Wear Prediction Network Fusing Visual-Acoustic Cross-Attention and Interval Guidance",
+      "publisher": "MDPI",
+      "year": "2026",
+      "url": "https://www.mdpi.com/2075-1702/14/7/826",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "Abstract、方法の回帰タスク、評価指標"
+    },
+    {
+      "source_id": "MMS009",
+      "title": "Unsupervised Tool State Classification Based on Multi-Modal Fusion",
+      "publisher": "MDPI",
+      "year": "2026",
+      "url": "https://www.mdpi.com/2075-1702/14/7/799",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "該当節確認",
+      "saved_path": "",
+      "locator": "Abstract、§4.2 Labeling and Evaluation Metrics"
+    },
+    {
+      "source_id": "MMS010",
+      "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+      "publisher": "著者投稿／arXiv",
+      "year": "2025",
+      "url": "https://arxiv.org/html/2511.01320v1",
+      "type": "プレプリント",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§§III、V、VI-A"
+    },
+    {
+      "source_id": "MMS011",
+      "title": "Federated Learning for Distributed CNC Tool Wear Prediction",
+      "publisher": "著者投稿／arXiv",
+      "year": "2026",
+      "url": "https://arxiv.org/html/2608.11281v1",
+      "type": "プレプリント",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "§§4.1–4.3、Tables 1–2"
+    },
+    {
+      "source_id": "MMS012",
+      "title": "A novel and scalable multimodal large language model architecture Tool-MMGPT for future tool wear prediction in titanium alloy high-speed milling processes",
+      "publisher": "Elsevier",
+      "year": "2025",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0166361525000673",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "抄録確認",
+      "saved_path": "",
+      "locator": "Abstract"
+    },
+    {
+      "source_id": "MMS013",
+      "title": "Image-based tool condition monitoring based on convolution neural network in turning process",
+      "publisher": "Springer Nature",
+      "year": "2022（巻号）",
+      "url": "https://link.springer.com/article/10.1007/s00170-021-08282-x",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "抄録確認",
+      "saved_path": "",
+      "locator": "Abstract"
+    },
+    {
+      "source_id": "MMS014",
+      "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining",
+      "publisher": "Elsevier",
+      "year": "2026（巻号）",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0043164825007537",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社書誌・抄録の索引確認",
+      "saved_path": "",
+      "locator": "Abstract、公開情報で出力クラス詳細未確認"
+    },
+    {
+      "source_id": "MMS015",
+      "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining",
+      "publisher": "Universitat Politècnica de València",
+      "year": "2026（巻号）",
+      "url": "https://panorama.upv.es/es/ipublic/item/10701676",
+      "type": "著者所属機関の書誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "書誌・概要確認",
+      "saved_path": "",
+      "locator": "Datos、Resumen"
+    },
+    {
+      "source_id": "MMS016",
+      "title": "Combining Sensor Fusion and a Machine Learning Framework for Accurate Tool Wear Prediction During Machining",
+      "publisher": "MDPI",
+      "year": "2025",
+      "url": "https://www.mdpi.com/2075-1702/13/2/132",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "全文確認",
+      "saved_path": "",
+      "locator": "Abstract、Fig. 2、Table 1、Datasets I–III"
+    },
+    {
+      "source_id": "MMS017",
+      "title": "Cross-Condition Tool Wear State Monitoring via Multi-Source Sensor Signal Fusion and Supervised Transfer Learning",
+      "publisher": "著者原文／PubMed Central",
+      "year": "2026",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13259135/",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "該当節確認",
+      "saved_path": "",
+      "locator": "摩耗段階ラベル作成、モデル入力"
+    },
+    {
+      "source_id": "MMS018",
+      "title": "Dual-method approach of tool condition monitoring using sensor-based deep learning with vision-based image processing",
+      "publisher": "Elsevier",
+      "year": "2025",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1526612525006991",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社プレビュー確認",
+      "saved_path": "",
+      "locator": "Abstract、Introduction、§5と§6の分担"
+    },
+    {
+      "source_id": "MMS019",
+      "title": "A new embedded vision system for monitoring tool conditions in production lines using a combination of direct and indirect methods",
+      "publisher": "Elsevier",
+      "year": "2023",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1526612523007120",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社プレビュー確認",
+      "saved_path": "",
+      "locator": "Abstract、Introduction"
+    },
+    {
+      "source_id": "MMS020",
+      "title": "Automatic Tool Wear Inspection by Cascading Sensor and Image Data",
+      "publisher": "Springer Nature",
+      "year": "2025-01-01（出版社の公開日。会議は2023年）",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39",
+      "type": "国際会議論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "抄録確認",
+      "saved_path": "",
+      "locator": "First Online、Abstract。Yan §4.5の再実装と区別。"
+    },
+    {
+      "source_id": "MMS021",
+      "title": "Automatic Identification of Tool Wear Based on Convolutional Neural Network in Face Milling Process",
+      "publisher": "MDPI",
+      "year": "2019",
+      "url": "https://www.mdpi.com/1424-8220/19/18/3817",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "本文確認",
+      "saved_path": "",
+      "locator": "実験の分類対象・画像入力"
+    },
+    {
+      "source_id": "MMS022",
+      "title": "Tool wear classification using time series imaging and deep learning",
+      "publisher": "Springer Nature",
+      "year": "2019",
+      "url": "https://link.springer.com/article/10.1007/s00170-019-04090-6",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "抄録確認",
+      "saved_path": "",
+      "locator": "Abstract、時系列信号の画像変換"
+    },
+    {
+      "source_id": "MMS023",
+      "title": "Sensor fusion for online tool condition monitoring in milling",
+      "publisher": "Taylor & Francis",
+      "year": "2007-09-26",
+      "url": "https://doi.org/10.1080/00207540500536913",
+      "type": "査読誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "抄録確認",
+      "saved_path": "",
+      "locator": "Abstract、in-cycle / in-process / breakage の処理"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "MMC001",
+      "entity_id": "MM001",
+      "field": "推論入力とモデル",
+      "claim": "刃先RGB画像のResNet-18特徴512次元と、加速度、マイク音響、切削力、履歴を含む84次元を結合。結合特徴をクラス重み付きXGBoostへ入力。",
+      "source_id": "MMS001",
+      "locator": "§3 Fig. 2、§5.4 Algorithm 2、Appendix A Table A1",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "MMC002",
+      "entity_id": "MM001",
+      "field": "原文ラベルと3分類",
+      "claim": "形態二群の原文ラベルは `0 (flank)` と `1 (needs inspection: adhesive/combined)`。元の3分類ではAccuracy 70.5%、複合96件・凝着20件をすべて見逃した。",
+      "source_id": "MMS001",
+      "locator": "§5.4 Algorithm 2 step 9、§6.9 Fig. 13",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "MMC003",
+      "entity_id": "MM001",
+      "field": "分類性能",
+      "claim": "テスト二群のROC-AUC 0.928。検証で選んだ閾値0.30でRecall 0.655、False-Alarm Rate 0.011、Precision 0.962。閾値0.50のRecallは0.181。",
+      "source_id": "MMS001",
+      "locator": "§6.9 Table 10、Figs. 14–15",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "MMC004",
+      "entity_id": "MM001",
+      "field": "評価分割",
+      "claim": "工具単位で学習 Sets 1/5/7/8/10/12、検証 6/13/15、テスト 4/9/11/16。全体は501/247/396切削。分類の処理では型ラベルなしを除外。",
+      "source_id": "MMS001",
+      "locator": "§5.2、§5.4 Algorithm 2、Appendix A Table A1",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "MMC005",
+      "entity_id": "MM001",
+      "field": "公開日",
+      "claim": "出版社掲載日は2026-10-03。",
+      "source_id": "MMS001",
+      "locator": "誌面上部・DOI",
+      "verification": "全文確認"
+    },
+    {
+      "claim_id": "MMC006",
+      "entity_id": "MM002",
+      "field": "推論入力とモデル",
+      "claim": "Qwen3-VL-8Bが実工具画像とセンサの時周波数表現、工程文脈、下位モデル由来の根拠を併用し、摩耗種類を推論する。",
+      "source_id": "MMS002",
+      "locator": "§3.1–3.4、§4.2 Fig. 5",
+      "verification": "出版社プレビュー・検索索引の原文確認"
+    },
+    {
+      "claim_id": "MMC007",
+      "entity_id": "MM002",
+      "field": "原文ラベル",
+      "claim": "`flank wear`、`adhesion`、`flank wear with adhesion` の三分類。",
+      "source_id": "MMS002",
+      "locator": "§3.3、§4.1",
+      "verification": "出版社プレビュー・検索索引の原文確認"
+    },
+    {
+      "claim_id": "MMC008",
+      "entity_id": "MM002",
+      "field": "評価分割",
+      "claim": "MATWIの工具単位で学習 Sets 2/3/5/7/8/10/11、検証 6/12、テスト 4/9/13。テスト247サンプル。",
+      "source_id": "MMS002",
+      "locator": "§4.1 Table 2、§4.6 Table 7",
+      "verification": "出版社プレビュー・検索索引の原文確認"
+    },
+    {
+      "claim_id": "MMC009",
+      "entity_id": "MM002",
+      "field": "分類性能と画像単独比較",
+      "claim": "提案モデルAccuracy 93.12%、Macro-F1 77.09%。画像単独ResNet18エッジ帯Accuracy 90.98%、Macro-F1 61.79%。モデル構成・学習も異なるため融合単独の効果量ではない。",
+      "source_id": "MMS002",
+      "locator": "Abstract、§4.3 Table 3、§4.4–4.6 Tables 4/6/7",
+      "verification": "出版社プレビュー・検索索引の原文確認"
+    },
+    {
+      "claim_id": "MMC010",
+      "entity_id": "MM002",
+      "field": "巻号日と先行公開日",
+      "claim": "巻号日は2027-01。CrossrefのDOIレコード作成日2026-08-17と登録更新日2026-09-10は先行公開日を示さない。出版社プレビュー本文は調査日時点に検索索引で確認。",
+      "source_id": "MMS003",
+      "locator": "created、deposited、issued、published-print、published-online欠落",
+      "verification": "メタデータ確認"
+    },
+    {
+      "claim_id": "MMC011",
+      "entity_id": "MM002",
+      "field": "著者・巻号の照合",
+      "claim": "Elsevierプレビューと上海交通大学の著者プロフィールが2027年巻の書誌を示す。著者プロフィールのPDFパスの日付は先行公開日の根拠として未採用。",
+      "source_id": "MMS007",
+      "locator": "代表性论文・著作",
+      "verification": "出版物一覧確認"
+    },
+    {
+      "claim_id": "MMC012",
+      "entity_id": "MM-DATA",
+      "field": "MATWIのデータと分類語彙",
+      "claim": "工具17本の刃先画像と加速度・音響・三軸力。逃げ面、凝着、両者の複合の型注記がある。個々の論文はデータの異なる部分集合を使用。",
+      "source_id": "MMS004",
+      "locator": "Information、label structure、sensor file structure",
+      "verification": "公式説明確認"
+    }
+  ],
+  "search_log": [
+    {
+      "search_id": "MMQ001",
+      "date_jst": "2026-11-11",
+      "target": "Web検索（原資料特定・引用候補探索）",
+      "queries": [
+        {
+          "q": "\"tool wear\" \"wear type\" classification \"image\" \"multimodal\" cutting tool acoustic vibration flank crater chipping"
+        },
+        {
+          "q": "cutting tool wear type classification actual image sensor fusion visual acoustic tool wear type crater flank breakage"
+        },
+        {
+          "q": "tool wear morphology type classification multi-modal tool images cutting force vibration flank crater adhesion fusion"
+        },
+        {
+          "q": "工具 摩耗 種類 分類 刃先画像 センサ 融合 クレータ 逃げ面 欠損 画像 振動"
+        }
+      ],
+      "returned_count": 26,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "5－1　工具の損傷形態",
+          "url": "https://www.tetras.uitec.jeed.go.jp/files/kankoubutu/f-027-12.pdf",
+          "reference": "turn85search12"
+        },
+        {
+          "title": "<tabl",
+          "url": "https://www.sumitool.com/downloads/cutting-tools/general-catalog/assets/pdf/n2.pdf",
+          "reference": "turn85search13"
+        },
+        {
+          "title": "補正とは？摩耗の種類・測定・CNC補正設計の基礎知識 - 精密位置決めセンサはメトロール",
+          "url": "https://www.metrol.co.jp/blog/2024/07/16/74567/",
+          "reference": "turn85search0"
+        },
+        {
+          "title": "切削工具2025-2026 | CUTTING TOOLS 2025-2026",
+          "url": "https://www.nachi-fujikoshi.co.jp/dcms_media/other/2003-29.pdf",
+          "reference": "turn85search14"
+        },
+        {
+          "title": "On-Line Sensing of Flank and Crater Wear of Cutting Tools",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0007850607625499",
+          "reference": "turn85search1"
+        },
+        {
+          "title": "ドリルのトラブルシューティング | 技術情報 | MISUMI(ミスミ)",
+          "url": "https://jp.misumi-ec.com/tech-info/categories/machine_processing/mp04/j0060.html?msockid=1b0a12dc76826d7c24ac04b0778c6c17",
+          "reference": "turn85search2"
+        },
+        {
+          "title": "0100_研究報告_R4",
+          "url": "https://iri.pref.tochigi.lg.jp/content/files/62_22.pdf",
+          "reference": "turn85search15"
+        },
+        {
+          "title": "ِ٦ؠؖ؎س",
+          "url": "https://tungaloy.com/wpdata/wp-content/uploads/GC_2023-2024_J_L_UsersGuide.pdf",
+          "reference": "turn85search16"
+        },
+        {
+          "title": "Automatic Identification of Tool Wear Based on Convolutional Neural Network in Face Milling Process",
+          "url": "https://www.mdpi.com/1424-8220/19/18/3817",
+          "reference": "turn85search3"
+        },
+        {
+          "title": "A Tool Wear Prediction Network Fusing Visual-Acoustic Cross-Attention and Interval Guidance",
+          "url": "https://www.mdpi.com/2075-1702/14/7/826",
+          "reference": "turn85search4"
+        },
+        {
+          "title": "MaskLenNet: A Query-Based Instance Segmentation and Length Prediction Network for Quantitative Industrial Tool Wear and Breakage Assessment",
+          "url": "https://www.mdpi.com/2504-4494/10/8/286",
+          "reference": "turn85search5"
+        },
+        {
+          "title": "Tool wear classification using time series imaging and deep learning",
+          "url": "https://link.springer.com/article/10.1007/s00170-019-04090-6",
+          "reference": "turn85search6"
+        },
+        {
+          "title": "Unsupervised Tool State Classification Based on Multi-Modal Fusion",
+          "url": "https://www.mdpi.com/2075-1702/14/7/799",
+          "reference": "turn85search7"
+        },
+        {
+          "title": "切削加工のDXを加速させるセンサ搭載切削工具",
+          "url": "https://sumitomoelectric.com/jp/sites/japan/files/2025-01/download_documents/J206-03.pdf",
+          "reference": "turn85search17"
+        },
+        {
+          "title": "Advanced Sensor Technologies in Cutting Applications: A Review",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12899726/",
+          "reference": "turn85search8"
+        },
+        {
+          "title": "画像処理を用いた工具形状の評価法 (I)",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2005S/0/2005S_0_260/_article/-char/ja",
+          "reference": "turn85search9"
+        },
+        {
+          "title": "穴あけ工具の摩耗と対策",
+          "url": "https://www.iscar.co.za/ja-jp/products/insert-wear-problems-and-solutions/drilling",
+          "reference": "turn85search10"
+        },
+        {
+          "title": "Application of digital image processing in tool condition monitoring: A review",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1755581713000072",
+          "reference": "turn85search11"
+        },
+        {
+          "title": "Tool Wear Segmentation in Blanking Processes with Fully Convolutional Networks based Digital Image Processing",
+          "url": "https://arxiv.org/abs/2311.12841",
+          "reference": "turn85academia18"
+        },
+        {
+          "title": "Tool wear monitoring using an online, automatic and low cost system based on local texture",
+          "url": "https://arxiv.org/abs/2402.05977",
+          "reference": "turn85academia19"
+        },
+        {
+          "title": "Tool wear",
+          "url": "https://en.wikipedia.org/wiki/Tool_wear",
+          "reference": "turn85search20"
+        },
+        {
+          "title": "Effects of Tool Wear on the Surface Texture in Turning: A Feature Characterization Approach Based on ISO 21920-2",
+          "url": "https://arxiv.org/abs/2608.12163",
+          "reference": "turn85academia21"
+        },
+        {
+          "title": "Combining shape and contour features to improve tool wear monitoring in milling processes",
+          "url": "https://arxiv.org/abs/2402.05978",
+          "reference": "turn85academia22"
+        },
+        {
+          "title": "Medición del desgaste en herramientas de corte",
+          "url": "https://es.wikipedia.org/wiki/Medici%C3%B3n_del_desgaste_en_herramientas_de_corte",
+          "reference": "turn85search23"
+        },
+        {
+          "title": "Tool",
+          "url": "https://en.wikipedia.org/wiki/Tool",
+          "reference": "turn85search24"
+        },
+        {
+          "title": "Wear",
+          "url": "https://en.wikipedia.org/wiki/Wear",
+          "reference": "turn85search25"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ002",
+      "date_jst": "2026-11-11",
+      "target": "文献検索索引（発見用）",
+      "queries": [
+        {
+          "q": "cutting tool wear damage types classification tool microscopy image acoustic emission sensor multimodal fusion multi input chipping flank crater breakage"
+        },
+        {
+          "q": "tool wear \"tool images\" \"vibration\" fusion classification \"chipping\" cutting tool"
+        },
+        {
+          "q": "\"tool wear\" \"wear types\" fusion image process parameters cutting tool classification \"flank\""
+        },
+        {
+          "q": "\"tool wear\" \"multi-modal\" image signals \"wear type\" classification sensor fusion"
+        }
+      ],
+      "returned_count": 35,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/snippet-256-270 ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia0"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/snippet-62-70 ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia1"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/snippet-272-276 ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia2"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/snippet-74-80 ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia3"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/snippet-379-387 ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia4"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/snippet-104-130 ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia5"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/snippet-389-391 ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia6"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/snippet-228-232 ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia7"
+        },
+        {
+          "title": "Towards Leveraging End-of-Life Tools as an Asset: Value Co-Creation based on Deep Learning in the Machining Industry",
+          "url": "https://aixiv.openai.com/2008.01053/snippet-47-51 ; rewritten summary of https://arxiv.org/abs/2008.01053",
+          "reference": "turn86academia8"
+        },
+        {
+          "title": "Explainable AI for Tool Wear Prediction in Turning",
+          "url": "https://aixiv.openai.com/2308.08765/snippet-20-24 ; rewritten summary of https://arxiv.org/abs/2308.08765",
+          "reference": "turn86academia9"
+        },
+        {
+          "title": "Explainable AI for Tool Wear Prediction in Turning",
+          "url": "https://aixiv.openai.com/2308.08765/extended-abstract ; rewritten summary of https://arxiv.org/abs/2308.08765",
+          "reference": "turn86academia10"
+        },
+        {
+          "title": "Federated Learning for Distributed CNC Tool Wear Prediction",
+          "url": "https://aixiv.openai.com/2608.11281/snippet-192-194 ; rewritten summary of https://arxiv.org/abs/2608.11281",
+          "reference": "turn86academia11"
+        },
+        {
+          "title": "Towards Leveraging End-of-Life Tools as an Asset: Value Co-Creation based on Deep Learning in the Machining Industry",
+          "url": "https://aixiv.openai.com/2008.01053/extended-abstract ; rewritten summary of https://arxiv.org/abs/2008.01053",
+          "reference": "turn86academia12"
+        },
+        {
+          "title": "Towards Leveraging End-of-Life Tools as an Asset: Value Co-Creation based on Deep Learning in the Machining Industry",
+          "url": "https://aixiv.openai.com/2008.01053/snippet-37-43 ; rewritten summary of https://arxiv.org/abs/2008.01053",
+          "reference": "turn86academia13"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/extended-abstract ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia14"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/snippet-393-397 ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia15"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/snippet-82-100 ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia16"
+        },
+        {
+          "title": "Data-driven prediction of tool wear using Bayesian-regularized artificial neural networks",
+          "url": "https://aixiv.openai.com/2311.18620/extended-abstract ; rewritten summary of https://arxiv.org/abs/2311.18620",
+          "reference": "turn86academia17"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://aixiv.openai.com/2511.01320/snippet-41-45 ; rewritten summary of https://arxiv.org/abs/2511.01320",
+          "reference": "turn86academia18"
+        },
+        {
+          "title": "Data-driven tool wear prediction in milling, based on a process-integrated single-sensor approach",
+          "url": "https://aixiv.openai.com/2412.19950/snippet-165-175 ; rewritten summary of https://arxiv.org/abs/2412.19950",
+          "reference": "turn86academia19"
+        },
+        {
+          "title": "Federated Learning for Distributed CNC Tool Wear Prediction",
+          "url": "https://aixiv.openai.com/2608.11281/snippet-182-196 ; rewritten summary of https://arxiv.org/abs/2608.11281",
+          "reference": "turn86academia20"
+        },
+        {
+          "title": "Data-driven prediction of tool wear using Bayesian-regularized artificial neural networks",
+          "url": "https://aixiv.openai.com/2311.18620/snippet-379-400 ; rewritten summary of https://arxiv.org/abs/2311.18620",
+          "reference": "turn86academia21"
+        },
+        {
+          "title": "Data-driven prediction of tool wear using Bayesian-regularized artificial neural networks",
+          "url": "https://aixiv.openai.com/2311.18620/snippet-72-76 ; rewritten summary of https://arxiv.org/abs/2311.18620",
+          "reference": "turn86academia22"
+        },
+        {
+          "title": "Towards Leveraging End-of-Life Tools as an Asset: Value Co-Creation based on Deep Learning in the Machining Industry",
+          "url": "https://aixiv.openai.com/2008.01053/snippet-121-139 ; rewritten summary of https://arxiv.org/abs/2008.01053",
+          "reference": "turn86academia23"
+        },
+        {
+          "title": "Towards Leveraging End-of-Life Tools as an Asset: Value Co-Creation based on Deep Learning in the Machining Industry",
+          "url": "https://aixiv.openai.com/2008.01053/snippet-86-95 ; rewritten summary of https://arxiv.org/abs/2008.01053",
+          "reference": "turn86academia24"
+        },
+        {
+          "title": "Explainable AI for Tool Wear Prediction in Turning",
+          "url": "https://aixiv.openai.com/2308.08765/snippet-48-54 ; rewritten summary of https://arxiv.org/abs/2308.08765",
+          "reference": "turn86academia25"
+        },
+        {
+          "title": "Towards Leveraging End-of-Life Tools as an Asset: Value Co-Creation based on Deep Learning in the Machining Industry",
+          "url": "https://aixiv.openai.com/2008.01053/snippet-76-84 ; rewritten summary of https://arxiv.org/abs/2008.01053",
+          "reference": "turn86academia26"
+        },
+        {
+          "title": "An Uncertainty-based Human-in-the-loop System for Industrial Tool Wear Analysis",
+          "url": "https://aixiv.openai.com/2007.07129/snippet-90-113 ; rewritten summary of https://arxiv.org/abs/2007.07129",
+          "reference": "turn86academia27"
+        },
+        {
+          "title": "Towards Leveraging End-of-Life Tools as an Asset: Value Co-Creation based on Deep Learning in the Machining Industry",
+          "url": "https://aixiv.openai.com/2008.01053/snippet-183-185 ; rewritten summary of https://arxiv.org/abs/2008.01053",
+          "reference": "turn86academia28"
+        },
+        {
+          "title": "Artificial Intelligence for Sustainability: Facilitating Sustainable Smart Product-Service Systems with Computer Vision",
+          "url": "https://aixiv.openai.com/2303.13540/snippet-111-115 ; rewritten summary of https://arxiv.org/abs/2303.13540",
+          "reference": "turn86academia29"
+        },
+        {
+          "title": "Prediction of tool-wear in turning of medical grade cobalt chromium molybdenum alloy (ASTM F75) using non-parametric Bayesian models",
+          "url": "https://aixiv.openai.com/1608.03091/extended-abstract ; rewritten summary of https://arxiv.org/abs/1608.03091",
+          "reference": "turn86academia30"
+        },
+        {
+          "title": "Machine learning based modelling and optimization in hard turning of AISI D6 steel with newly developed AlTiSiN coated carbide tool",
+          "url": "https://aixiv.openai.com/2202.00596/snippet-48-52 ; rewritten summary of https://arxiv.org/abs/2202.00596",
+          "reference": "turn86academia31"
+        },
+        {
+          "title": "Tool Breakage Detection using Deep Learning",
+          "url": "https://aixiv.openai.com/1808.05347/snippet-9-13 ; rewritten summary of https://arxiv.org/abs/1808.05347",
+          "reference": "turn86academia32"
+        },
+        {
+          "title": "Machine learning based modelling and optimization in hard turning of AISI D6 steel with newly developed AlTiSiN coated carbide tool",
+          "url": "https://aixiv.openai.com/2202.00596/snippet-76-80 ; rewritten summary of https://arxiv.org/abs/2202.00596",
+          "reference": "turn86academia33"
+        },
+        {
+          "title": "Semi-Supervised Health Index Monitoring with Feature Generation and Fusion",
+          "url": "https://aixiv.openai.com/2312.02867/snippet-126-150 ; rewritten summary of https://arxiv.org/abs/2312.02867",
+          "reference": "turn86academia34"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ003",
+      "date_jst": "2026-11-11",
+      "target": "Web検索（原資料特定・引用候補探索）",
+      "queries": [
+        {
+          "q": "\"tool wear\" \"image\" \"sensor fusion\" \"multimodal\" tool condition classification wear type datasets MATWI MF-TCM"
+        },
+        {
+          "q": "\"tool wear\" \"images\" \"acoustic\" \"multimodal\" cutting tool chipping breakage TEA-net"
+        },
+        {
+          "q": "\"tool wear\" \"vision\" \"sensor fusion\" chipping flank crater classification mode machining"
+        },
+        {
+          "q": "\"tool wear\" tool image \"multimodal\" adhesive flank classification Federated Learning MATWI"
+        }
+      ],
+      "returned_count": 15,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "MATWI: Multimodal Automatic Tool Wear Inspection dataset — EAVISE",
+          "url": "https://iiw.kuleuven.be/onderzoek/eavise/MATWI/MATWI",
+          "reference": "turn87search0"
+        },
+        {
+          "title": "Unsupervised Tool State Classification Based on Multi-Modal Fusion",
+          "url": "https://www.mdpi.com/2075-1702/14/7/799",
+          "reference": "turn87search1"
+        },
+        {
+          "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0043164825007537",
+          "reference": "turn87search2"
+        },
+        {
+          "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and the Data-Adequacy Limits of Algorithmic Correction",
+          "url": "https://www.mdpi.com/2673-2688/7/10/400",
+          "reference": "turn87search3"
+        },
+        {
+          "title": "Mudestreda Multimodal Device State Recognition Dataset",
+          "url": "https://zenodo.org/records/8238653",
+          "reference": "turn87search4"
+        },
+        {
+          "title": "Sensor fusion for monitoring machine tool conditions",
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/095119297131066",
+          "reference": "turn87search5"
+        },
+        {
+          "title": "Cutting Tool Remaining Useful Life Prediction Using Multi-Sensor Data Fusion Through Graph Neural Networks and Transformers",
+          "url": "https://www.mdpi.com/2075-1702/13/11/1027",
+          "reference": "turn87search6"
+        },
+        {
+          "title": "Nonastreda multimodal dataset for efficient tool wear state monitoring",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12341703/",
+          "reference": "turn87search7"
+        },
+        {
+          "title": "Using the Machine Vision Method to Develop an On-machine Insert Condition Monitoring System for Computer Numerical Control Turning Machine Tools",
+          "url": "https://doi.org/10.3390%2Fma11101977",
+          "reference": "turn87search8"
+        },
+        {
+          "title": "Combining Sensor Fusion and a Machine Learning Framework for Accurate Tool Wear Prediction During Machining",
+          "url": "https://www.researchgate.net/publication/388874482_Combining_Sensor_Fusion_and_a_Machine_Learning_Framework_for_Accurate_Tool_Wear_Prediction_During_Machining",
+          "reference": "turn87search9"
+        },
+        {
+          "title": "Advanced Sensor Technologies in Cutting Applications: A Review",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12899726/",
+          "reference": "turn87search10"
+        },
+        {
+          "title": "A review of tool wear monitoring in milling: perception, edge processing and cloud decision",
+          "url": "https://link.springer.com/article/10.1007/s00170-026-18763-6",
+          "reference": "turn87search11"
+        },
+        {
+          "title": "Servic",
+          "url": "https://repositum.tuwien.at/bitstream/20.500.12708/227559/1/Wang-2025-OmniFuser%20Adaptive%20Multimodal%20Fusion%20for%20Service-Oriented%20Pred...-smur.pdf",
+          "reference": "turn87search12"
+        },
+        {
+          "title": "Sensor data fusion and cutting tool status recognition by k-means clustering",
+          "url": "https://www.extrica.com/article/24728/pdf",
+          "reference": "turn87search13"
+        },
+        {
+          "title": "Department",
+          "url": "https://etheses.whiterose.ac.uk/13392/1/NOPPARAT%20PHD%20THESIS%20-%20APRIL%202016.pdf",
+          "reference": "turn87search14"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ004",
+      "date_jst": "2026-11-11",
+      "target": "出版社・研究機関・DOI確認",
+      "queries": [
+        {
+          "ref_id": "turn87search2",
+          "pattern": "classes"
+        },
+        {
+          "ref_id": "turn87search2",
+          "pattern": "wear stages"
+        },
+        {
+          "ref_id": "turn87search1",
+          "pattern": "Kou"
+        },
+        {
+          "ref_id": "turn87search3",
+          "pattern": "inspection classification"
+        },
+        {
+          "ref_id": "turn87search0",
+          "pattern": "type:"
+        }
+      ],
+      "returned_count": 2,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and the Data-Adequacy Limits of Algorithmic Correction",
+          "url": "https://www.mdpi.com/2673-2688/7/10/400",
+          "reference": "turn89view3"
+        },
+        {
+          "title": "MATWI: Multimodal Automatic Tool Wear Inspection dataset — EAVISE",
+          "url": "https://iiw.kuleuven.be/onderzoek/eavise/MATWI/MATWI",
+          "reference": "turn89view4"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ005",
+      "date_jst": "2026-11-11",
+      "target": "出版社・研究機関・DOI確認",
+      "queries": [
+        {
+          "ref_id": "turn89view3",
+          "pattern": "6.8. Wear-Type"
+        },
+        {
+          "ref_id": "turn89view3",
+          "pattern": "Table 4. Tool-level"
+        },
+        {
+          "ref_id": "turn89view3",
+          "pattern": "Research Article"
+        },
+        {
+          "ref_id": "turn89view3",
+          "pattern": "three-class"
+        },
+        {
+          "ref_id": "turn89view3",
+          "pattern": "First A."
+        },
+        {
+          "ref_id": "turn89view3",
+          "pattern": "Table 10."
+        }
+      ],
+      "returned_count": 1,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and the Data-Adequacy Limits of Algorithmic Correction",
+          "url": "https://www.mdpi.com/2673-2688/7/10/400",
+          "reference": "turn93view5"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ006",
+      "date_jst": "2026-11-11",
+      "target": "出版社・研究機関・DOI確認",
+      "queries": [
+        {
+          "ref_id": "turn89view3",
+          "lineno": 140
+        },
+        {
+          "ref_id": "turn89view3",
+          "lineno": 264
+        },
+        {
+          "ref_id": "turn89view3",
+          "lineno": 287
+        },
+        {
+          "ref_id": "turn89view3",
+          "lineno": 826
+        }
+      ],
+      "returned_count": 1,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and the Data-Adequacy Limits of Algorithmic Correction",
+          "url": "https://www.mdpi.com/2673-2688/7/10/400",
+          "reference": "turn95view3"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ007",
+      "date_jst": "2026-11-11",
+      "target": "出版社・研究機関・DOI確認",
+      "queries": [
+        {
+          "ref_id": "https://arxiv.org/html/2608.11281v1",
+          "pattern": "wear type"
+        },
+        {
+          "ref_id": "https://arxiv.org/html/2608.11281v1",
+          "pattern": "regression"
+        },
+        {
+          "ref_id": "https://arxiv.org/html/2511.01320v1",
+          "pattern": "Sharp"
+        },
+        {
+          "ref_id": "turn85search4",
+          "pattern": "multi-class"
+        }
+      ],
+      "returned_count": 3,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "Federated Learning for Distributed CNC Tool Wear Prediction",
+          "url": "https://arxiv.org/html/2608.11281v1",
+          "reference": "turn96view1"
+        },
+        {
+          "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+          "url": "https://arxiv.org/html/2511.01320v1",
+          "reference": "turn96view2"
+        },
+        {
+          "title": "A Tool Wear Prediction Network Fusing Visual-Acoustic Cross-Attention and Interval Guidance",
+          "url": "https://www.mdpi.com/2075-1702/14/7/826",
+          "reference": "turn96view3"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ008",
+      "date_jst": "2026-11-11",
+      "target": "Web検索（原資料特定・引用候補探索）",
+      "queries": [
+        {
+          "q": "\"TEA-net\" \"tool wear\" \"classes\" \"therm\" flank light medium severe 316L"
+        },
+        {
+          "q": "\"tool wear\" \"infrared\" \"Kou\" \"vibration\" \"current\" \"91%\""
+        },
+        {
+          "q": "\"MATWI\" \"wear type classification\" \"adhesive\" model"
+        },
+        {
+          "q": "\"tool wear\" \"image\" \"wear type\" \"multimodal\" \"adhesion\" -site:wikipedia.org -site:researchgate.net"
+        }
+      ],
+      "returned_count": 14,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "Tool condition monitoring and remaining useful life prediction based on multi-modal fusion and transfer learning under variable working conditions",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0278612525001967",
+          "reference": "turn98search0"
+        },
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+          "reference": "turn98search1"
+        },
+        {
+          "title": "A Deep-Learning-Based Multi-Modal Sensor Fusion Approach for Detection of Equipment Faults",
+          "url": "https://pdfs.semanticscholar.org/fbc3/f9604f0d00f60820fd84bbbeb255a4c911e5.pdf",
+          "reference": "turn98search12"
+        },
+        {
+          "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and the Data-Adequacy Limits of Algorithmic Correction",
+          "url": "https://www.mdpi.com/2673-2688/7/10/400",
+          "reference": "turn98search2"
+        },
+        {
+          "title": "Deep learning-based tool wear classification under MQL in Ti-6Al-4V turning using full-field thermal imaging",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0043164826004229",
+          "reference": "turn98search3"
+        },
+        {
+          "title": "Methodology for To",
+          "url": "https://mdpi-res.com/d_attachment/machines/machines-11-00480/article_deploy/machines-11-00480-with-cover.pdf?version=1681813850",
+          "reference": "turn98search13"
+        },
+        {
+          "title": "Research on multi-signal milling tool wear prediction method based on GAF-ResNext",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0736584523001096",
+          "reference": "turn98search4"
+        },
+        {
+          "title": "MaskLenNet: A Query-Based Instance Segmentation and Length Prediction Network for Quantitative Industrial Tool Wear and Breakage Assessment",
+          "url": "https://www.mdpi.com/2504-4494/10/8/286",
+          "reference": "turn98search5"
+        },
+        {
+          "title": "Convolution kernel sliding feature extraction | Download Scientific Diagram",
+          "url": "https://www.researchgate.net/figure/Convolution-kernel-sliding-feature-extraction_fig5_357644549",
+          "reference": "turn98search6"
+        },
+        {
+          "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and Data-Intrinsic Limits",
+          "url": "https://www.preprints.org/manuscript/202608.0160",
+          "reference": "turn98search7"
+        },
+        {
+          "title": "Methodology for Tool Wear Detection in CNC Machines Based on Fusion Flux Current of Motor and Image Workpieces",
+          "url": "https://www.mdpi.com/2075-1702/11/4/480",
+          "reference": "turn98search8"
+        },
+        {
+          "title": "A review of tool wear monitoring in milling: perception, edge processing and cloud decision",
+          "url": "https://link.springer.com/article/10.1007/s00170-026-18763-6",
+          "reference": "turn98search9"
+        },
+        {
+          "title": "Methodology for Tool Wear Detection in CNC Machines Based on Fusion Flux Current of Motor and Image Workpieces",
+          "url": "https://doi.org/10.3390/machines11040480",
+          "reference": "turn98search10"
+        },
+        {
+          "title": "Nan Xie's research works | Tongji University, Shanghai and other places",
+          "url": "https://www.researchgate.net/scientific-contributions/Nan-Xie-75300001",
+          "reference": "turn98search11"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ009",
+      "date_jst": "2026-11-11",
+      "target": "Web検索（原資料特定・引用候補探索）",
+      "queries": [
+        {
+          "q": "\"A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support\" DOI \"Macro-F1\""
+        },
+        {
+          "q": "\"TEA-net\" \"tool wear\" \"Addepalli\" \"classes\" ZrO2 SS316L manuscript"
+        },
+        {
+          "q": "\"Kou\" \"tool wear\" \"infrared\" CNN signal 91 condition original DOI"
+        },
+        {
+          "q": "\"MATWI\" \"wear-type classification\" multimodal \"adhesion\" \"Qwen\""
+        }
+      ],
+      "returned_count": 18,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://ideas.repec.org/a/eee/reensy/v277y2027ip5s0951832026010963.html",
+          "reference": "turn102search0"
+        },
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0951832026010963",
+          "reference": "turn102search1"
+        },
+        {
+          "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0043164825007537",
+          "reference": "turn102search2"
+        },
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+          "reference": "turn102search3"
+        },
+        {
+          "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0043164825007537",
+          "reference": "turn102search4"
+        },
+        {
+          "title": "Deep learning-based tool wear classification under MQL in Ti-6Al-4V turning using full-field thermal imaging",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0043164826004229",
+          "reference": "turn102search5"
+        },
+        {
+          "title": "Tool condition monitoring and remaining useful life prediction based on multi-modal fusion and transfer learning under variable working conditions",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0278612525001967",
+          "reference": "turn102search6"
+        },
+        {
+          "title": "A Deep-Learning-Based Multi-Modal Sensor Fusion Approach for Detection of Equipment Faults",
+          "url": "https://pdfs.semanticscholar.org/fbc3/f9604f0d00f60820fd84bbbeb255a4c911e5.pdf",
+          "reference": "turn102search12"
+        },
+        {
+          "title": "Research on multi-signal milling tool wear prediction method based on GAF-ResNext",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0736584523001096",
+          "reference": "turn102search7"
+        },
+        {
+          "title": "Methodology for To",
+          "url": "https://mdpi-res.com/d_attachment/machines/machines-11-00480/article_deploy/machines-11-00480-with-cover.pdf?version=1681813850",
+          "reference": "turn102search13"
+        },
+        {
+          "title": "Methodology for Tool Wear Detection in CNC Machines Based on Fusion Flux Current of Motor and Image Workpieces",
+          "url": "https://doi.org/10.3390/machines11040480",
+          "reference": "turn102search8"
+        },
+        {
+          "title": "Nan Xie's research works | Tongji University, Shanghai and other places",
+          "url": "https://www.researchgate.net/scientific-contributions/Nan-Xie-75300001",
+          "reference": "turn102search9"
+        },
+        {
+          "title": "Tool-Wear-Estimation System in Milling Using Multi-View CNN Based on Reflected Infrared Images",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9921934/",
+          "reference": "turn102search10"
+        },
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://backend.eurekamag.com/research/109/626/109626556.php",
+          "reference": "turn102search11"
+        },
+        {
+          "title": "Available online at www.sciencedirect.com",
+          "url": "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/de087072-2028-49d4-bf74-020c9b4def22/content",
+          "reference": "turn102search14"
+        },
+        {
+          "title": "Tool-Wear-Estimation System in Milling Using Multi-View CNN Based on Reflected Infrared Images",
+          "url": "https://www.mdpi.com/1424-8220/23/3/1208/pdf?version=1674208417",
+          "reference": "turn102search15"
+        },
+        {
+          "title": "Thesis Abstract",
+          "url": "https://www.keio.ac.jp/files/6c1eebb77be32fa673cd03065e456139c56fd1864b45f2b320bfb821f9d72414",
+          "reference": "turn102search16"
+        },
+        {
+          "title": "A systematic review on smart and predictive maintenance",
+          "url": "https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/deliver/index/docId/123505/file/123505.pdf",
+          "reference": "turn102search17"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ010",
+      "date_jst": "2026-11-11",
+      "target": "Web検索（原資料特定・引用候補探索）",
+      "queries": [
+        {
+          "q": "\"10.1016/j.ress.2026.113287\" \"available online\" Yan date"
+        },
+        {
+          "q": "\"10.1016/j.ress.2026.113287\" 2026 October online publication Yan Luo"
+        },
+        {
+          "q": "\"Rui Kou\" \"tool infrared\" \"flank wear\" images CNN DOI"
+        },
+        {
+          "q": "\"TEA-net\" \"AUC\" \"wear classes\" \"Phanindra Addepalli\""
+        }
+      ],
+      "returned_count": 12,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://ideas.repec.org/a/eee/reensy/v277y2027ip5s0951832026010963.html",
+          "reference": "turn105search0"
+        },
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://www.researchgate.net/publication/412332620_A_unified_multimodal_large_language_model_for_explainable_tool_wear_state_assessment_and_maintenance_decision_support",
+          "reference": "turn105search1"
+        },
+        {
+          "title": "Tool wear condition monitoring by combining spindle motor current signal analysis and machined surface image processing",
+          "url": "https://ouci.dntb.gov.ua/en/works/4bYWmod7/",
+          "reference": "turn105search2"
+        },
+        {
+          "title": "A sample-efficient transfer learning framework for industrial remaining useful life prediction leveraging large languag…",
+          "url": "https://ouci.dntb.gov.ua/en/works/7B6OM5p6/",
+          "reference": "turn105search3"
+        },
+        {
+          "title": "Nan Xie's research works | Tongji University, Shanghai and other places",
+          "url": "https://www.researchgate.net/scientific-contributions/Nan-Xie-75300001",
+          "reference": "turn105search4"
+        },
+        {
+          "title": "ChatGPT-like large-scale foundation models for prognostics and health management: A survey and roadmaps — CiteStamp",
+          "url": "https://citestamp.com/paper/10.1016/j.ress.2023.109850",
+          "reference": "turn105search5"
+        },
+        {
+          "title": "Tool condition monitoring and remaining useful life prediction based on multi-modal fusion and transfer learning under variable working conditions",
+          "url": "https://www.researchgate.net/publication/394193435_Tool_condition_monitoring_and_remaining_useful_life_prediction_based_on_multi-modal_fusion_and_transfer_learning_under_variable_working_conditions",
+          "reference": "turn105search6"
+        },
+        {
+          "title": "Xue-Mei Liu's research works | Tongji University and other places",
+          "url": "https://www.researchgate.net/scientific-contributions/Xue-Mei-Liu-2158131317",
+          "reference": "turn105search7"
+        },
+        {
+          "title": "Gated Recurrent Units Based Neural Network For Tool Condition Monitoring",
+          "url": "https://www.researchgate.net/publication/324150606_Gated_Recurrent_Units_Based_Neural_Network_For_Tool_Condition_Monitoring",
+          "reference": "turn105search8"
+        },
+        {
+          "title": "PWDformer: Deformable transformer for long-term series forecasting — CiteStamp",
+          "url": "https://citestamp.com/paper/10.1016/j.patcog.2023.110118",
+          "reference": "turn105search9"
+        },
+        {
+          "title": "Physics-Driven Deep Feature Fusion: A Lightweight CSAKansformer Architecture for Tool Wear Diagnosis in P25 Turning",
+          "url": "https://www.researchgate.net/publication/404750509_Physics-Driven_Deep_Feature_Fusion_A_Lightweight_CSAKansformer_Architecture_for_Tool_Wear_Diagnosis_in_P25_Turning",
+          "reference": "turn105search10"
+        },
+        {
+          "title": "AE-LSTM-CNN Model based Tool Wear Monitoring",
+          "url": "https://www.researchgate.net/publication/375314156_AE-LSTM-CNN_Model_based_Tool_Wear_Monitoring",
+          "reference": "turn105search11"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ011",
+      "date_jst": "2026-11-11",
+      "target": "出版社・研究機関・DOI確認",
+      "queries": [
+        {
+          "ref_id": "https://api.crossref.org/works/10.1016/j.ress.2026.113287"
+        },
+        {
+          "ref_id": "https://doi.org/10.1016/j.ress.2026.113287"
+        },
+        {
+          "ref_id": "turn98search1",
+          "lineno": 35
+        }
+      ],
+      "returned_count": 0,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": []
+    },
+    {
+      "search_id": "MMQ012",
+      "date_jst": "2026-11-11",
+      "target": "Web検索（原資料特定・引用候補探索）",
+      "queries": [
+        {
+          "q": "\"tool wear\" \"flank wear\" \"adhesion\" \"classification\" \"sensor\" \"image\" MATWI -Ahangar -Yan"
+        },
+        {
+          "q": "\"tool wear\" \"wear-type classification\" \"images\" \"multimodal\" -Ahangar -Yan"
+        },
+        {
+          "q": "\"cutting tool\" \"crater wear\" \"chipping\" \"sensor fusion\" \"vision\" \"classification\" tool photographs machining"
+        },
+        {
+          "q": "\"TEA-net\" \"tool wear\" classification \"severe\" \"minor\" \"wear type\" Addepalli"
+        }
+      ],
+      "returned_count": 14,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "Combining Sensor Fusion and a Machine Learning Framework for Accurate Tool Wear Prediction During Machining",
+          "url": "https://www.mdpi.com/2075-1702/13/2/132",
+          "reference": "turn113search0"
+        },
+        {
+          "title": "State-of-the-art review of applications of image processing techniques for tool condition monitoring on conventional machining processes",
+          "url": "https://link.springer.com/article/10.1007/s00170-023-12679-1",
+          "reference": "turn113search1"
+        },
+        {
+          "title": "Tool Wear Monitoring in Milling Based on Fine-Grained Image Classification of Machined Surface Images",
+          "url": "https://www.mdpi.com/1424-8220/22/21/8416",
+          "reference": "turn113search2"
+        },
+        {
+          "title": "Tool life prognostics in CNC turning of AISI 4140 steel using neural network based on computer vision",
+          "url": "https://link.springer.com/article/10.1007/s00170-022-10485-9",
+          "reference": "turn113search3"
+        },
+        {
+          "title": "Advanced Sensor Technologies in Cutting Applications: A Review",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12899726/",
+          "reference": "turn113search4"
+        },
+        {
+          "title": "Automatic Identification of Tool Wear Based on Convolutional Neural Network in Face Milling Process",
+          "url": "https://www.mdpi.com/1424-8220/19/18/3817",
+          "reference": "turn113search5"
+        },
+        {
+          "title": "Using the Machine Vision Method to Develop an On-machine Insert Condition Monitoring System for Computer Numerical Control Turning Machine Tools",
+          "url": "https://doi.org/10.3390%2Fma11101977",
+          "reference": "turn113search6"
+        },
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+          "reference": "turn113search7"
+        },
+        {
+          "title": "Tool Wear and Failure Prediction in Machining Difficult-to-Machine Materials: A Review of Monitoring, Modeling, and Intelligent Manufacturing Technologies",
+          "url": "https://www.mdpi.com/2504-4494/10/10/372",
+          "reference": "turn113search8"
+        },
+        {
+          "title": "Cutting tool condition monitoring using eigenfaces",
+          "url": "https://link.springer.com/article/10.1007/s11740-022-01132-z",
+          "reference": "turn113search9"
+        },
+        {
+          "title": "An Automated Feature-Based Image Registration Strategy for Tool Condition Monitoring in CNC Machine Applications",
+          "url": "https://www.mdpi.com/1424-8220/24/23/7458",
+          "reference": "turn113search10"
+        },
+        {
+          "title": "Investigation on universal tool wear measurement technique using image-based cross-correlation analysis",
+          "url": "https://doi.org/10.1016/j.measurement.2020.108489",
+          "reference": "turn113search11"
+        },
+        {
+          "title": "Advanced Sensor Technologies in Cutting Applications: A Review",
+          "url": "https://www.mdpi.com/1424-8220/26/3/762/pdf?version=1769359452",
+          "reference": "turn113search12"
+        },
+        {
+          "title": "Use of acoustic emission and cutting force signals to monitor built-up edge formation in stainless steel turning",
+          "url": "https://www.researchgate.net/profile/Yassmin-Seid-Ahmed/publication/332552609_Use_of_acoustic_emission_and_cutting_force_signals_to_monitor_built-up_edge_formation_in_stainless_steel_turning/links/5cd9d89a299bf14d9594f556/Use-of-acoustic-emission-and-cutting-force-signals-to-monitor-built-up-edge-formation-in-stainless-steel-turning.pdf",
+          "reference": "turn113search13"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ013",
+      "date_jst": "2026-11-11",
+      "target": "Web検索（原資料特定・引用候補探索）",
+      "queries": [
+        {
+          "q": "\"93.12%\" \"77.09%\" \"tool wear\" site:sciencedirect.com"
+        },
+        {
+          "q": "\"S0951832026010963\" \"Available online\" OR \"17 August 2026\" OR \"August 2026\" site:sciencedirect.com"
+        },
+        {
+          "q": "\"Image-based tool condition monitoring based on convolution neural network in turning process\" site:link.springer.com"
+        },
+        {
+          "q": "\"TEA-net: A multimodal deep learning framework for tool wear classification\" DOI dataset author manuscript"
+        }
+      ],
+      "returned_count": 13,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+          "reference": "turn116search0"
+        },
+        {
+          "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0043164825007537",
+          "reference": "turn116search1"
+        },
+        {
+          "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining - Universidad Politécnica de Valencia",
+          "url": "https://panorama.upv.es/es/ipublic/item/10701676",
+          "reference": "turn116search2"
+        },
+        {
+          "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining - Universitat Politècnica de València",
+          "url": "https://panorama.upv.es/cat/ipublic/item/10701676",
+          "reference": "turn116search3"
+        },
+        {
+          "title": "ORCID",
+          "url": "https://orcid.org/0000-0001-8883-164X",
+          "reference": "turn116search4"
+        },
+        {
+          "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining",
+          "url": "https://eurekamag.com/research/101/238/101238929.php",
+          "reference": "turn116search5"
+        },
+        {
+          "title": "Sensor fusion and the application of artificial intelligence to identify tool wear in turning operations",
+          "url": "https://link.springer.com/article/10.1007/s00170-023-11113-w",
+          "reference": "turn116search6"
+        },
+        {
+          "title": "A novel simultaneous monitoring method for surface roughness and tool wear in milling process",
+          "url": "https://oamonitor.ireland.openaire.eu/national/search/publication?pid=10.1038%2Fs41598-025-92178-3",
+          "reference": "turn116search7"
+        },
+        {
+          "title": "Tool life prognostics in CNC turning of AISI 4140 steel using neural network based on computer vision",
+          "url": "https://link.springer.com/article/10.1007/s00170-022-10485-9",
+          "reference": "turn116search8"
+        },
+        {
+          "title": "Search Result - KUforest",
+          "url": "https://research.ku.ac.th/forest/Search.aspx?keyword=Wear+model",
+          "reference": "turn116search9"
+        },
+        {
+          "title": "State-of-the-art review of applications of image processing techniques for tool condition monitoring on conventional machining processes",
+          "url": "https://link.springer.com/article/10.1007/s00170-023-12679-1",
+          "reference": "turn116search10"
+        },
+        {
+          "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0043164825007537",
+          "reference": "turn116search11"
+        },
+        {
+          "title": "ขอมมลอาจารยยมหาวทยาลยเกษตรศาสตรย",
+          "url": "https://research.ku.ac.th/ku_resume/?idcode=510119",
+          "reference": "turn116search12"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ014",
+      "date_jst": "2026-11-11",
+      "target": "Web検索（原資料特定・引用候補探索）",
+      "queries": [
+        {
+          "q": "Verbeke De Pauw tool wear image sensor late fusion machine monitoring wear classification original article"
+        },
+        {
+          "q": "\"Image-based tool condition monitoring based on convolution neural network in turning process\" Kou Springer DOI"
+        },
+        {
+          "q": "\"Tool-MMGPT\" tool wear prediction data images wear type"
+        },
+        {
+          "q": "\"A unified multimodal large language model\" \"17 August 2026\" Elsevier Yan Luo 113287"
+        }
+      ],
+      "returned_count": 22,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "Research Square",
+          "url": "https://assets-eu.researchsquare.com/files/rs-494700/v1_covered.pdf?c=1641509301",
+          "reference": "turn118search12"
+        },
+        {
+          "title": "Sensor fusion for monitoring machine tool conditions",
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/095119297131066",
+          "reference": "turn118search0"
+        },
+        {
+          "title": "A novel and scalable multimodal large language model architecture Tool-MMGPT for future tool wear prediction in titanium alloy high-speed milling processes",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0166361525000673/pdf",
+          "reference": "turn118search1"
+        },
+        {
+          "title": "Replication Data for: MATWI: A Multimodal Automatic Tool Wear Inspection dataset",
+          "url": "https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi%3A10.48804%2FGK6LHH",
+          "reference": "turn118search2"
+        },
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+          "reference": "turn118search3"
+        },
+        {
+          "title": "DESIGN AND IMPLEMENTATION OF SENSOR-BASED TOOL-WEAR MONITORING SYSTEMS",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S088832709690031X",
+          "reference": "turn118search4"
+        },
+        {
+          "title": "Cross-Condition Tool Wear State Monitoring via Multi-Source Sensor Signal Fusion and Supervised Transfer Learning",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13259135/",
+          "reference": "turn118search5"
+        },
+        {
+          "title": "A machine vision system for tool wear assessment",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0301679X96000588",
+          "reference": "turn118search6"
+        },
+        {
+          "title": "Research  Development",
+          "url": "https://www.archive.muszaki.uni-mate.hu/system/files/oldal/mel_tts_2017_vol15.pdf",
+          "reference": "turn118search13"
+        },
+        {
+          "title": "Sensor fusion and the application of artificial intelligence to identify tool wear in turning operations",
+          "url": "https://irep.ntu.ac.uk/id/eprint/48435/1/1736433_Al-Habaibeh.pdf",
+          "reference": "turn118search14"
+        },
+        {
+          "title": "Dual-method approach of tool condition monitoring using sensor-based deep learning with vision-based image processing",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1526612525006991",
+          "reference": "turn118search7"
+        },
+        {
+          "title": "Sensor fusion for online tool condition monitoring in milling",
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/00207540500536913",
+          "reference": "turn118search8"
+        },
+        {
+          "title": "Tool Condition Monitoring with Convolutional Neural Network for Milling Tools and Turning Inserts",
+          "url": "https://jurnalindustri.petra.ac.id/index.php/ind/article/view/25743?articlesBySimilarityPage=2",
+          "reference": "turn118search9"
+        },
+        {
+          "title": "Tool Wear Classification using Time Series Imaging and Deep Learning",
+          "url": "https://nottingham-repository.worktribe.com/output/2289644",
+          "reference": "turn118search10"
+        },
+        {
+          "title": "DOI: 10.32604/iasc.2024.043091",
+          "url": "https://cdn.techscience.cn/files/iasc/2024/TSP_IASC-39-2/TSP_IASC_43091/TSP_IASC_43091.pdf",
+          "reference": "turn118search15"
+        },
+        {
+          "title": "Jurnal Teknik Industri, Vol. 25 No. 1, June 2023",
+          "url": "https://pdfs.semanticscholar.org/b161/23c690c26681f7a5af47699f0c24635acc1f.pdf",
+          "reference": "turn118search16"
+        },
+        {
+          "title": "Tool Wear Segmentation in Blanking Processes with Fully Convolutional Networks based Digital Image Processing",
+          "url": "https://arxiv.org/abs/2311.12841",
+          "reference": "turn118academia17"
+        },
+        {
+          "title": "Combining shape and contour features to improve tool wear monitoring in milling processes",
+          "url": "https://arxiv.org/abs/2402.05978",
+          "reference": "turn118academia18"
+        },
+        {
+          "title": "Workpiece Image-based Tool Wear Classification in Blanking Processes Using Deep Convolutional Neural Networks",
+          "url": "https://arxiv.org/abs/2107.12034",
+          "reference": "turn118academia19"
+        },
+        {
+          "title": "Tool wear monitoring using an online, automatic and low cost system based on local texture",
+          "url": "https://arxiv.org/abs/2402.05977",
+          "reference": "turn118academia20"
+        },
+        {
+          "title": "Ferrography",
+          "url": "https://en.wikipedia.org/wiki/Ferrography",
+          "reference": "turn118search21"
+        },
+        {
+          "title": "CNC machine tool monitoring by AE sensors",
+          "url": "https://en.wikipedia.org/wiki/CNC_machine_tool_monitoring_by_AE_sensors",
+          "reference": "turn118search22"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ015",
+      "date_jst": "2026-11-11",
+      "target": "出版社・研究機関・DOI確認",
+      "queries": [
+        {
+          "ref_id": "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39"
+        },
+        {
+          "ref_id": "https://link.springer.com/article/10.1007/s00170-021-08282-x"
+        },
+        {
+          "ref_id": "turn118search7",
+          "pattern": "tool wear modes"
+        },
+        {
+          "ref_id": "turn113search0",
+          "pattern": "vision measuring machine"
+        },
+        {
+          "ref_id": "turn96view3",
+          "pattern": "regression"
+        }
+      ],
+      "returned_count": 3,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "Automatic Tool Wear Inspection by Cascading Sensor and Image Data | Springer Nature Link",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39",
+          "reference": "turn124view0"
+        },
+        {
+          "title": "Image-based tool condition monitoring based on convolution neural network in turning process | The International Journal of Advanced Manufacturing Technology | Springer Nature Link",
+          "url": "https://link.springer.com/article/10.1007/s00170-021-08282-x",
+          "reference": "turn124view1"
+        },
+        {
+          "title": "A Tool Wear Prediction Network Fusing Visual-Acoustic Cross-Attention and Interval Guidance",
+          "url": "https://www.mdpi.com/2075-1702/14/7/826",
+          "reference": "turn124view4"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ016",
+      "date_jst": "2026-11-11",
+      "target": "Web検索（原資料特定・引用候補探索）",
+      "queries": [
+        "\"10.1016/j.ress.2026.113287\" \"available online\"",
+        "\"Automatic tool wear inspection by cascading sensor and image data\" threshold verbeke",
+        "\"Dual-method approach of tool condition monitoring using sensor-based deep learning with vision-based image processing\" flank classification",
+        "\"TEA-net\" \"tool wear classification\" \"severe\" thermal Addepalli"
+      ],
+      "returned_count": 15,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "Dual-method approach of tool condition monitoring using sensor-based deep learning with vision-based image processing",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1526612525006991",
+          "reference": "turn126search0"
+        },
+        {
+          "title": "dblp: PKDD/ECML Workshops 2023",
+          "url": "https://dblp.org/db/conf/pkdd/pkdd2023-w4.html",
+          "reference": "turn126search1"
+        },
+        {
+          "title": "Replication Data for: MATWI: A Multimodal Automatic Tool Wear Inspection dataset",
+          "url": "https://doi.org/10.48804/GK6LHH",
+          "reference": "turn126search2"
+        },
+        {
+          "title": "Recent publications of Toon Goedemé — PSI",
+          "url": "https://www.esat.kuleuven.be/psi/members/recent-publications-of-toon-goedeme/view?fromnr=231&pubsonpage=10&pubtype=&sortby=screator",
+          "reference": "turn126search3"
+        },
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+          "reference": "turn126search4"
+        },
+        {
+          "title": "Αποτελέσματα αναζήτησης - \"JACOBS, TOM\" :: Library Catalog",
+          "url": "https://vufind2.lib.aegean.gr/EDS/Search?dfApplied=1&filter%5B%5D=EXPAND%3A%22fulltext%22&filter%5B%5D=EXPAND%3A%22relatedsubjects%22&filter%5B%5D=Publisher%3A%22springer+nature%22&lookfor=%22JACOBS%2C+TOM%22&type=AU",
+          "reference": "turn126search5"
+        },
+        {
+          "title": "MATWI: A Multimodal Automatic Tool Wear Inspection Dataset and Baseline Algorithms",
+          "url": "https://ouci.dntb.gov.ua/en/works/40ykny5l/",
+          "reference": "turn126search6"
+        },
+        {
+          "title": "Dynamical Systems, Signal Processing and Data Analytics (STADIUS) | Research Portal",
+          "url": "https://www.researchportal.be/en/organisation/dynamical-systems-signal-processing-and-data-analytics-stadius",
+          "reference": "turn126search7"
+        },
+        {
+          "title": "Toon Goedemé — EAVISE",
+          "url": "https://iiw.kuleuven.be/onderzoek/eavise/people/00041334/view?fromnr=11&pubsonpage=10&pubtype=conference&sortby=stitle",
+          "reference": "turn126search8"
+        },
+        {
+          "title": "Dual-method approach of tool condition monitoring using sensor-based deep learning with vision-based image processing",
+          "url": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202502253745706677",
+          "reference": "turn126search9"
+        },
+        {
+          "title": "KU Leuven who's who - Lars De Pauw",
+          "url": "https://www.kuleuven.be/wieiswie/en/person/00132225",
+          "reference": "turn126search10"
+        },
+        {
+          "title": "Αποτελέσματα αναζήτησης - \"JACOBS, TOM\" :: Library Catalog",
+          "url": "https://vufind2.lib.aegean.gr/EDS/Search?dfApplied=1&filter%5B%5D=ContentProvider%3A%22BASE%22&filter%5B%5D=EXPAND%3A%22fulltext%22&filter%5B%5D=EXPAND%3A%22relatedsubjects%22&lookfor=%22JACOBS%2C+TOM%22&type=AU",
+          "reference": "turn126search11"
+        },
+        {
+          "title": "Advanced Sensor Technologies in Cutting Applications: A Review",
+          "url": "https://www.mdpi.com/1424-8220/26/3/762/pdf?version=1769359452",
+          "reference": "turn126search12"
+        },
+        {
+          "title": "Publication List of the Flanders AI Research Program",
+          "url": "https://www.flandersairesearch.be/storage/airesearch/flandersairesearchprogram-publications2023.pdf.pdf",
+          "reference": "turn126search13"
+        },
+        {
+          "title": "Tool Condition Mo",
+          "url": "https://www.preprints.org/frontend/manuscript/effe751494683d79101af5795c05ec8b/download_pub",
+          "reference": "turn126search14"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ017",
+      "date_jst": "2026-11-11",
+      "target": "Web検索（原資料特定・引用候補探索）",
+      "queries": [
+        "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39",
+        "\"Unsupervised Tool State Classification Based on Multi-Modal Fusion\" flank wear levels Sun",
+        "\"A new embedded vision system for monitoring tool conditions in production lines using a combination of direct and indirect methods\" wear modes classification",
+        "\"Combining Sensor Fusion and a Machine Learning Framework\" \"vision\" 132 tool wear machining features classifier"
+      ],
+      "returned_count": 16,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "Combining Sensor Fusion and a Machine Learning Framework for Accurate Tool Wear Prediction During Machining",
+          "url": "https://www.mdpi.com/2075-1702/13/2/132",
+          "reference": "turn128search0"
+        },
+        {
+          "title": "A new embedded vision system for monitoring tool conditions in production lines using a combination of direct and indirect methods",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1526612523007120",
+          "reference": "turn128search1"
+        },
+        {
+          "title": "Unsupervised Tool State Classification Based on Multi-Modal Fusion",
+          "url": "https://www.mdpi.com/2075-1702/14/7/799",
+          "reference": "turn128search2"
+        },
+        {
+          "title": "Towards Intelligent Manufacturing: Machine Learning, Deep Learning, and Computer Vision for Tool Wear Estimation in Milling and Micromilling Processes",
+          "url": "https://www.mdpi.com/2076-3417/16/1/485",
+          "reference": "turn128search3"
+        },
+        {
+          "title": "A systematic review on smart and predictive maintenance",
+          "url": "https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/deliver/index/docId/123505/file/123505.pdf",
+          "reference": "turn128search12"
+        },
+        {
+          "title": "WoS Export.xlsx",
+          "url": "https://tudatalib.ulb.tu-darmstadt.de/server/api/core/bitstreams/3352441b-d6ac-4ab8-899f-9a49e9df9d0b/content",
+          "reference": "turn128search13"
+        },
+        {
+          "title": "Survey on machine learning applied to CNC milling processes",
+          "url": "https://link.springer.com/article/10.1007/s40436-025-00564-x",
+          "reference": "turn128search4"
+        },
+        {
+          "title": "U.S. Patent Application for Enhanced Spatial and Material Processing Architecture for Computer Numerical Control Operations Patent Application (Application #20260277186 issued September 17, 2026) - Justia Patents Search",
+          "url": "https://patents.justia.com/patent/20260277186",
+          "reference": "turn128search5"
+        },
+        {
+          "title": "Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718",
+          "url": "https://www.mdpi.com/2075-1702/14/6/589",
+          "reference": "turn128search6"
+        },
+        {
+          "title": "Arı and Akkoyun / Usak University Journal of Engineering Sciences 2025, 8(1): 14-25",
+          "url": "https://dergipark.org.tr/en/download/article-file/4207225",
+          "reference": "turn128search14"
+        },
+        {
+          "title": "Survey on machine learning applied to CNC milling processes",
+          "url": "https://doi.org/10.1007/s40436-025-00564-x",
+          "reference": "turn128search7"
+        },
+        {
+          "title": "Cloud, Edge, and Digital Twin Architectures for Condition Monitoring of Computer Numerical Control Machine Tools: A Systematic Review",
+          "url": "https://doi.org/10.3390/info17020153",
+          "reference": "turn128search8"
+        },
+        {
+          "title": "A Machine Vision System for Gear Defect Detection",
+          "url": "https://www.researchgate.net/publication/392263016_A_Machine_Vision_System_for_Gear_Defect_Detection",
+          "reference": "turn128search9"
+        },
+        {
+          "title": "Review of advanced sensor system applications in grinding operations",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12627894/",
+          "reference": "turn128search10"
+        },
+        {
+          "title": "A novel cross-domain tool breakage monitoring method based on locality preserving joint transfer with intra-class compactness",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1526612524001890",
+          "reference": "turn128search11"
+        },
+        {
+          "title": "Automatic Tool Wear Inspection by Cascading Sensor and Image Data | Springer Nature Link",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39",
+          "reference": "turn128view0"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ018",
+      "date_jst": "2026-11-11",
+      "target": "出版社・研究機関・DOI確認",
+      "queries": [
+        "Springer 10.1007/978-3-031-74640-6_39 threshold",
+        "MDPI 10.3390/machines14070799 surface image",
+        "Elsevier 10.1016/j.jmapro.2023.07.028 was segmented",
+        "\"A unified multimodal large language model\" \"247\" Yan MATWI",
+        "\"Trustworthy Multimodal Tool-Wear Prediction\" \"Table 10\" \"96\" Ahangar"
+      ],
+      "returned_count": 18,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and the Data-Adequacy Limits of Algorithmic Correction",
+          "url": "https://www.mdpi.com/2673-2688/7/10/400",
+          "reference": "turn129search0"
+        },
+        {
+          "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and Data-Intrinsic Limits",
+          "url": "https://www.preprints.org/manuscript/202608.0160",
+          "reference": "turn129search1"
+        },
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+          "reference": "turn129search2"
+        },
+        {
+          "title": "Latest 15 Papers - July 08, 2026 · Issue #247 · yanghlll/ArxivDaily-Haolin · GitHub",
+          "url": "https://github.com/yanghlll/ArxivDaily-Haolin/issues/247",
+          "reference": "turn129search3"
+        },
+        {
+          "title": "On Fairness of Unified Multimodal Large Language Model for Image Generation",
+          "url": "https://eurekamag.com/research/110/074/110074049.php",
+          "reference": "turn129search4"
+        },
+        {
+          "title": "UniT: Unified Multimodal Chain-of-Thought Test-time Scaling · mlsanity",
+          "url": "https://mlsanity.com/paper/2602.12279/",
+          "reference": "turn129search5"
+        },
+        {
+          "title": "dblp: Yali Wang 0001",
+          "url": "https://dblp.org/pid/01/773-1.html",
+          "reference": "turn129search6"
+        },
+        {
+          "title": "IEEE/CVF Conference on",
+          "url": "https://media.eventhosts.cc/Conferences/CVPR2026/CVPR_main_conf_2026_15.pdf",
+          "reference": "turn129search12"
+        },
+        {
+          "title": "Nano-EmoX: Unifying Multimodal Emotional Intelligence from Perception to Empathy",
+          "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_Nano-EmoX_Unifying_Multimodal_Emotional_Intelligence_from_Perception_to_Empathy_CVPR_2026_paper.pdf",
+          "reference": "turn129search13"
+        },
+        {
+          "title": "On Fairness of Unified Multimodal Large Language Model for Image Generation",
+          "url": "https://staging2.eurekamag.com/research/110/074/110074049.php",
+          "reference": "turn129search7"
+        },
+        {
+          "title": "Daily Papers - Hugging Face",
+          "url": "https://huggingface.co/papers?q=multimodal+semantics",
+          "reference": "turn129search8"
+        },
+        {
+          "title": "Co-Reinforcement Learning for Unified Multimodal Understanding and Generation · mlsanity",
+          "url": "https://mlsanity.com/paper/2505.17534/",
+          "reference": "turn129search9"
+        },
+        {
+          "title": "Explainable and Interpretable Multimodal Large Language Models: A Comprehensive Survey",
+          "url": "https://pith.science/paper/2412.02104",
+          "reference": "turn129search10"
+        },
+        {
+          "title": "Daily Papers - Hugging Face",
+          "url": "https://huggingface.co/papers?q=unified+diagrammatic+formulation",
+          "reference": "turn129search11"
+        },
+        {
+          "title": "Factorize, Reconstruct, Enhance: A Unified Framework for Multimodal Sentiment Analysis",
+          "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_Factorize_Reconstruct_Enhance_A_Unified_Framework_for_Multimodal_Sentiment_Analysis_CVPR_2026_paper.pdf",
+          "reference": "turn129search14"
+        },
+        {
+          "title": "AAAI-25 Full Poster Schedule 2.23.25.xlsx",
+          "url": "https://aaai.org/wp-content/uploads/2025/02/AAAI-25-Thursday-Poster-Session-All-Tracks-2.23.pdf",
+          "reference": "turn129search15"
+        },
+        {
+          "title": "How Do Optical Flow and Textual Prompts Collaborate to Assist in Audio-Visual Semantic Segmentation?",
+          "url": "https://www.openaccess.thecvf.com/content/ICCV2025/papers/Lee_How_Do_Optical_Flow_and_Textual_Prompts_Collaborate_to_Assist_ICCV_2025_paper.pdf",
+          "reference": "turn129search16"
+        },
+        {
+          "title": "Automatic Tool Wear Inspection by Cascading Sensor and Image Data | Springer Nature Link",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39",
+          "reference": "turn129view0"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ019",
+      "date_jst": "2026-11-11",
+      "target": "出版社・研究機関・DOI確認",
+      "queries": [
+        "Elsevier Yan preview locate 247 samples, §4.1, flank wear with adhesion",
+        "Springer Verbeke chapter abstract",
+        "\"A unified multimodal large language model for explainable tool wear state assessment\" \"90.98\""
+      ],
+      "returned_count": 2,
+      "total_hits": "索引全体の件数は取得不可",
+      "candidate_count": "バッチ間重複があるため個別集計しない",
+      "adopted_count": "最終判定はrecords/exclusionsに集約",
+      "excluded_count": "最終判定はexclusionsに集約",
+      "count_definition": "検索応答からURLを抽出し、バッチ内で重複排除した件数。未取得・索引外は含まない。",
+      "hits": [
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+          "reference": "turn130search0"
+        },
+        {
+          "title": "Automatic Tool Wear Inspection by Cascading Sensor and Image Data | Springer Nature Link",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39",
+          "reference": "turn130view3"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ020",
+      "date_jst": "2026-11-11",
+      "target": "Crossref API",
+      "queries": [
+        "https://api.crossref.org/works/10.1016/j.ress.2026.113287",
+        "https://api.crossref.org/works/10.3390/ai7100400"
+      ],
+      "returned_count": 2,
+      "total_hits": 2,
+      "candidate_count": 2,
+      "adopted_count": 1,
+      "excluded_count": 0,
+      "pending_count": 1,
+      "raw_paths": [
+        "evidence/raw/focused_multimodal/yan_crossref.json",
+        "evidence/raw/focused_multimodal/ahangar_crossref.json"
+      ]
+    },
+    {
+      "search_id": "MMQ021",
+      "date_jst": "2026-11-11",
+      "target": "出版社・研究機関の追加確認",
+      "queries": [
+        "Springer 10.1007/978-3-031-74640-6_39 abstract (lines 42–46)",
+        "\"Sensor fusion for online tool condition monitoring in milling\" \"wear\" vision force breakage 10.1080/00207540500536913",
+        "\"Automatic Tool Wear Inspection by Cascading Sensor and Image Data\" Verbeke wear threshold"
+      ],
+      "returned_count": 19,
+      "total_hits": "索引全体の件数は取得不可",
+      "hits": [
+        {
+          "title": "Sensor fusion for online tool condition monitoring in milling",
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/00207540500536913",
+          "reference": "turn131search0"
+        },
+        {
+          "title": "dblp: PKDD/ECML Workshops 2023",
+          "url": "https://dblp.org/db/conf/pkdd/pkdd2023-w4.html",
+          "reference": "turn131search1"
+        },
+        {
+          "title": "Toon Goedemé — PSI",
+          "url": "https://www.esat.kuleuven.be/psi/members/00041334/view?fromnr=11&pubsonpage=10&pubtype=conference&sortby=stitle",
+          "reference": "turn131search2"
+        },
+        {
+          "title": "R. Serra, et al.: EXPERIMENTAL EVALUATION OF FLANK WEAR IN DRY TURNING FROM ACCELEROMETER DATA",
+          "url": "https://iiav.org/ijav/content/volumes/21_2016_590031458046128/vol_1/842_fullpaper_59751458214878.pdf",
+          "reference": "turn131search12"
+        },
+        {
+          "title": "Replication Data for: MATWI: A Multimodal Automatic Tool Wear Inspection dataset",
+          "url": "https://doi.org/10.48804/GK6LHH",
+          "reference": "turn131search3"
+        },
+        {
+          "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+          "reference": "turn131search4"
+        },
+        {
+          "title": "Cutting state monitoring in milling by a neural network",
+          "url": "https://www.sciencedirect.com/science/article/pii/0890695594900507",
+          "reference": "turn131search5"
+        },
+        {
+          "title": "Type of the Paper (Article",
+          "url": "https://www.researchgate.net/publication/386030412_A_Review_of_Physics-Based_Data-Driven_and_Hybrid_Models_for_Tool_Wear_Monitoring/fulltext/674042327ca4cb2842a07499/A-Review-of-Physics-Based-Data-Driven-and-Hybrid-Models-for-Tool-Wear-Monitoring.pdf",
+          "reference": "turn131search13"
+        },
+        {
+          "title": "Αποτελέσματα αναζήτησης - \"JACOBS, TOM\" :: Library Catalog",
+          "url": "https://vufind2.lib.aegean.gr/EDS/Search?dfApplied=1&filter%5B%5D=EXPAND%3A%22fulltext%22&filter%5B%5D=EXPAND%3A%22relatedsubjects%22&filter%5B%5D=Publisher%3A%22springer+nature%22&lookfor=%22JACOBS%2C+TOM%22&type=AU",
+          "reference": "turn131search6"
+        },
+        {
+          "title": "MATWI: A Multimodal Automatic Tool Wear Inspection Dataset and Baseline Algorithms",
+          "url": "https://ouci.dntb.gov.ua/en/works/40ykny5l/",
+          "reference": "turn131search7"
+        },
+        {
+          "title": "Investigation of signal behaviors for sensor fusion with tool condition monitoring system in turning",
+          "url": "https://apm.eurekamag.com/research/100/981/100981221.php",
+          "reference": "turn131search8"
+        },
+        {
+          "title": "Sensor-based intelligent tool online monitoring technology: applications and progress",
+          "url": "https://ouci.dntb.gov.ua/en/works/9j5mgVjl/",
+          "reference": "turn131search9"
+        },
+        {
+          "title": "Advanced monitoring of machining operations",
+          "url": "https://www.researchgate.net/publication/222410171_Advanced_monitoring_of_machining_operations",
+          "reference": "turn131search10"
+        },
+        {
+          "title": "A machine vision system for wear monitoring and breakage detection of single-point cutting tools",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/0360835294900523",
+          "reference": "turn131search11"
+        },
+        {
+          "title": "End milling tool condition monitoring with vibration signals and machine learning classifiers: A comparative study",
+          "url": "https://assets-eu.researchsquare.com/files/rs-7455892/v1_covered_9b79dc8a-6baa-440d-9c73-3392951a9655.pdf?c=1760323687",
+          "reference": "turn131search14"
+        },
+        {
+          "title": "ELK Asia Pacific Journals – Special Issue",
+          "url": "https://cdn2.f-cdn.com/files/download/74169152/Abhi91_7292828229.pdf",
+          "reference": "turn131search15"
+        },
+        {
+          "title": "¶ (10 pt)",
+          "url": "https://ijmmt.ro/vol12no22020/01_Mourad_Bendifallah.pdf",
+          "reference": "turn131search16"
+        },
+        {
+          "title": "Microsoft Word - 026-041  2021-0453  滕洪钊",
+          "url": "https://qikan.cmes.org/jxgcxb/EN/PDF/10.3901/JME.2022.06.026",
+          "reference": "turn131search17"
+        },
+        {
+          "title": "Automatic Tool Wear Inspection by Cascading Sensor and Image Data | Springer Nature Link",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39",
+          "reference": "turn131view0"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ022",
+      "date_jst": "2026-11-11",
+      "target": "出版社・研究機関の追加確認",
+      "queries": [
+        "\"Automatic Tool Wear Inspection by Cascading Sensor and Image Data\" \"First Online\" 10.1007/978-3-031-74640-6_39",
+        "https://lirias.kuleuven.be/handle/20.500.12942/726421"
+      ],
+      "returned_count": 1,
+      "total_hits": "索引全体の件数は取得不可",
+      "hits": [
+        {
+          "title": "Automatic tool wear inspection by cascading sensor and image data",
+          "url": "https://lirias.kuleuven.be/handle/20.500.12942/726421 ; rewritten summary of https://lirias.kuleuven.be/4113650",
+          "reference": "turn132view0"
+        }
+      ]
+    },
+    {
+      "search_id": "MMQ023",
+      "date_jst": "2026-11-11",
+      "target": "出版社・研究機関の追加確認",
+      "queries": [
+        "KU Leuven LIRIAS 4113650 author-archive PDF",
+        "Springer 10.1007/978-3-031-74640-6_39 first online date"
+      ],
+      "returned_count": 1,
+      "total_hits": "索引全体の件数は取得不可",
+      "hits": [
+        {
+          "title": "Automatic Tool Wear Inspection by Cascading Sensor and Image Data | Springer Nature Link",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39",
+          "reference": "turn133view1"
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "MMX001",
+      "title": "A Tool Wear Prediction Network Fusing Visual-Acoustic Cross-Attention and Interval Guidance",
+      "doi": "10.3390/machines14070826",
+      "status": "除外",
+      "reason": "実刃先画像＋音響の融合。出力は摩耗量の回帰で、区間ガイダンスは種類ラベルではない。",
+      "source_id": "MMS008",
+      "locator": "Abstract、方法の回帰タスク、評価指標"
+    },
+    {
+      "id": "MMX002",
+      "title": "Unsupervised Tool State Classification Based on Multi-Modal Fusion",
+      "doi": "10.3390/machines14070799",
+      "status": "除外",
+      "reason": "被削材の加工面画像を用いる。刃先の撮像・顕微鏡はVB測定・ラベル作成用。出力はVBに基づく initial wear／normal wear／severe wear。",
+      "source_id": "MMS009",
+      "locator": "Abstract、§4.2 Labeling and Evaluation Metrics"
+    },
+    {
+      "id": "MMX003",
+      "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+      "doi": "arXiv:2511.01320",
+      "status": "除外",
+      "reason": "刃先画像とセンサを併用するが、分類出力は Sharp／Used／Dulled の程度段階。力予測は別出力。",
+      "source_id": "MMS010",
+      "locator": "§§III、V、VI-A"
+    },
+    {
+      "id": "MMX004",
+      "title": "Federated Learning for Distributed CNC Tool Wear Prediction",
+      "doi": "arXiv:2608.11281",
+      "status": "除外",
+      "reason": "画像・信号の回帰モデルを別々に検証。種類注記は一部の入力文脈または層別指標用で、型の推定出力はない。",
+      "source_id": "MMS011",
+      "locator": "§§4.1–4.3、Tables 1–2"
+    },
+    {
+      "id": "MMX005",
+      "title": "A novel and scalable multimodal large language model architecture Tool-MMGPT for future tool wear prediction in titanium alloy high-speed milling processes",
+      "doi": "10.1016/j.compind.2025.104302",
+      "status": "除外",
+      "reason": "工具画像と振動の融合はあるが、将来摩耗量の数値予測。",
+      "source_id": "MMS012",
+      "locator": "Abstract"
+    },
+    {
+      "id": "MMX006",
+      "title": "Image-based tool condition monitoring based on convolution neural network in turning process",
+      "doi": "10.1007/s00170-021-08282-x",
+      "status": "除外",
+      "reason": "工具の赤外線像と信号画像を併用。出力の分類は逃げ面摩耗量の区分で、摩耗の形態を区別するクラスは確認できない。",
+      "source_id": "MMS013",
+      "locator": "Abstract"
+    },
+    {
+      "id": "MMX007",
+      "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining",
+      "doi": "10.1016/j.wear.2025.206484",
+      "status": "保留",
+      "reason": "熱画像・幾何学特徴・統計特徴を扱う。確認できた抄録・機関書誌では摩耗形態の正確な出力ラベルが未確認。材料名は出力クラスとして扱わない。",
+      "source_id": "MMS014",
+      "locator": "Abstract、公開情報で出力クラス詳細未確認"
+    },
+    {
+      "id": "MMX008",
+      "title": "Combining Sensor Fusion and a Machine Learning Framework for Accurate Tool Wear Prediction During Machining",
+      "doi": "10.3390/machines13020132",
+      "status": "除外",
+      "reason": "逃げ面・クレータ・チッピングと複合を光学機器で確認するが、分類器の入力は力と加速度由来の特徴。工具画像は推論入力に入らない。",
+      "source_id": "MMS016",
+      "locator": "Abstract、Fig. 2、Table 1、Datasets I–III"
+    },
+    {
+      "id": "MMX009",
+      "title": "Cross-Condition Tool Wear State Monitoring via Multi-Source Sensor Signal Fusion and Supervised Transfer Learning",
+      "doi": "",
+      "status": "除外",
+      "reason": "刃先写真はVBの正解作成用。推論はセンサ信号で、出力は摩耗程度。",
+      "source_id": "MMS017",
+      "locator": "摩耗段階ラベル作成、モデル入力"
+    },
+    {
+      "id": "MMX010",
+      "title": "Dual-method approach of tool condition monitoring using sensor-based deep learning with vision-based image processing",
+      "doi": "",
+      "status": "除外",
+      "reason": "音響放射の波形分類と実工具の画像確認を段階的に実施。公開節からは両者を入力とする形態分類出力を確認できない。",
+      "source_id": "MMS018",
+      "locator": "Abstract、Introduction、§5と§6の分担"
+    },
+    {
+      "id": "MMX011",
+      "title": "A new embedded vision system for monitoring tool conditions in production lines using a combination of direct and indirect methods",
+      "doi": "10.1016/j.jmapro.2023.07.028",
+      "status": "除外",
+      "reason": "段付きドリルを実撮像し、電流・振動系も併設。抄録のU-Net評価は画像系で、二系統の入力による形態分類の根拠が確認できない。",
+      "source_id": "MMS019",
+      "locator": "Abstract、Introduction"
+    },
+    {
+      "id": "MMX012",
+      "title": "Automatic Tool Wear Inspection by Cascading Sensor and Image Data",
+      "doi": "10.1007/978-3-031-74640-6_39",
+      "status": "保留",
+      "reason": "信号と画像をカスケード利用する。確認範囲で原論文の形態分類クラスは未確認。Yanの三分類再実装は独立事例として扱わない。",
+      "source_id": "MMS020",
+      "locator": "Abstract。Yan §4.5の再実装と区別。"
+    },
+    {
+      "id": "MMX013",
+      "title": "Automatic Identification of Tool Wear Based on Convolutional Neural Network in Face Milling Process",
+      "doi": "10.3390/s19183817",
+      "status": "除外",
+      "reason": "凝着、工具破損、すくい面、逃げ面を区別するが画像のみ。",
+      "source_id": "MMS021",
+      "locator": "実験の分類対象・画像入力"
+    },
+    {
+      "id": "MMX014",
+      "title": "Tool wear classification using time series imaging and deep learning",
+      "doi": "10.1007/s00170-019-04090-6",
+      "status": "除外",
+      "reason": "時系列信号を画像へ変換したもので、実工具の光学画像は分類入力に含まれない。",
+      "source_id": "MMS022",
+      "locator": "Abstract、時系列信号の画像変換"
+    },
+    {
+      "id": "MMX015",
+      "title": "Sensor fusion for online tool condition monitoring in milling",
+      "doi": "10.1080/00207540500536913",
+      "status": "除外",
+      "reason": "加工間の画像で逃げ面摩耗量を測り、画像計測値を利用して切削力による摩耗量推定器を更新。破損は力信号の別処理で検出。画像と力から二種類を分類する単一出力は確認できない。",
+      "source_id": "MMS023",
+      "locator": "Abstract、in-cycle / in-process / breakage の処理"
+    }
+  ],
+  "summary": {
+    "adopted": 1,
+    "technical_match_date_pending": 1,
+    "screened_out": 13,
+    "nearby_unresolved": 2,
+    "dataset_resource_count": 1
+  },
+  "notes": [
+    "両研究がMATWIを使うため、異なる工具分割の結果を直接順位付けしない。",
+    "研究の対象に該当しない実装や分類出力を、検索語の一致だけで採用しない。"
+  ]
+}
