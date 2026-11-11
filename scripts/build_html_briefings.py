@@ -131,12 +131,24 @@ def score(perf):
     return f'{value:g}'
 
 
+def class_description(record):
+    original=record.get('labels') or '未確認'
+    japanese=record.get('labels_ja')
+    content=f'<div class="class-labels">{esc(japanese or original)}</div>'
+    if japanese and japanese!=original:
+        content+=f'<div class="class-original">原語：{esc(original)}</div>'
+    content+=f'<div class="output-task">出力形式：{esc(record.get("task") or "未確認")}</div>'
+    if record.get('mixed') and record['mixed']!='未確認':
+        content+=f'<div class="class-original">複合状態：{esc(record["mixed"])}</div>'
+    return content
+
+
 def cases(records, performance, ids):
     index={r['id']:r for r in records}
     cards=[]
     for ident in ids:
         r,p=index[ident],performance[ident]
-        cards.append(f'<article class="card"><div class="kicker">{esc(ident)} / {esc(r["year"])}</div><h3>{esc(p["name"])}</h3><div class="metric-name">{esc(p["metric"])}</div><div class="metric">{score(p)}</div><p>{esc(p["result"])}</p><div class="case-labels">出力：{esc(r.get("labels_ja",r["labels"]))}</div><p class="case-note">{esc(p["note"])}</p><div class="card-links"><a href="#{ident}">条件・根拠を開く</a>{link(r["url"],"原資料")}</div></article>')
+        cards.append(f'<article class="card" data-case="{ident}"><div class="kicker">{esc(ident)} / {esc(r["year"])}</div><h3>{esc(p["name"])}</h3><div class="metric-name">{esc(p["metric"])}</div><div class="metric">{score(p)}</div><p>{esc(p["result"])}</p><div class="case-labels"><strong>判定クラス・出力</strong>{class_description(r)}</div><p class="case-note">{esc(p["note"])}</p><div class="card-links"><a href="#{ident}">条件・根拠を開く</a>{link(r["url"],"原資料")}</div></article>')
     return '<div class="grid2">'+''.join(cards)+'</div>'
 
 
@@ -170,7 +182,7 @@ def catalogue(data, performance, industrial):
         family=r['family_group'] if industrial else r['model_family']
         inp=r.get('input_group',r.get('group'))
         search=' '.join(str(v) for v in r.values()).lower()
-        rows.append(f'<tr data-paper="{ident}" data-status="{cat}" data-family="{esc(family)}" data-input="{esc(inp)}" data-search="{esc(search)}"><td><span class="paper-id">{ident} · {esc(r["year"])}</span><a class="paper-name" href="#{ident}">{esc(p["name"])}</a><div class="paper-meta">{badge(r)} {esc(r["status"] if r["status"] not in ["採用","主採用","関連","保留"] else "")}</div></td><td>{esc(family)}<div class="paper-meta">{esc(inp)}</div></td><td><span class="metric-name">{esc(p["metric"])}</span><b class="metric-value">{score(p)}</b><div class="paper-meta">{esc(p["verification"])}</div></td><td><div class="result-text">{esc(p["result"])}</div><div class="condition">{esc(p["note"])}</div></td></tr>')
+        rows.append(f'<tr data-paper="{ident}" data-status="{cat}" data-family="{esc(family)}" data-input="{esc(inp)}" data-search="{esc(search)}"><td><span class="paper-id">{ident} · {esc(r["year"])}</span><a class="paper-name" href="#{ident}">{esc(p["name"])}</a><div class="paper-meta">{badge(r)} {esc(r["status"] if r["status"] not in ["採用","主採用","関連","保留"] else "")}</div></td><td>{esc(family)}<div class="paper-meta">{esc(inp)}</div></td><td class="target-classes">{class_description(r)}</td><td><span class="metric-name">{esc(p["metric"])}</span><b class="metric-value">{score(p)}</b><div class="paper-meta">{esc(p["verification"])}</div></td><td><div class="result-text">{esc(p["result"])}</div><div class="condition">{esc(p["note"])}</div></td></tr>')
         field_pairs=[('採用区分',r['status']),('対象',r.get('tool',r.get('product'))),('原語クラス',r['labels']),('日本語ラベル',r.get('labels_ja')),('分類タスク',r['task']),('複合状態の扱い',r.get('mixed')),('推論時入力',r['input']),('プロンプト',r.get('prompt')),('主モデル',r.get('model',r.get('primary_model'))),('モデル系統',family),('最終判定構成',r.get('model_pipeline')),('比較モデル',r.get('baseline_models',r.get('baseline_families'))),('学習・事前学習',r.get('learning')),('事前学習',r.get('pretraining')),('データセット／系列',r.get('dataset',r.get('dataset_family'))),('データ規模',r.get('data',r.get('data_size'))),('分割・評価条件',p['split']),('代表指標の単位・尺度',p['unit']),('報告性能',r['performance']),('クラス別結果',r.get('class_results')),('一般化評価',r.get('generalization')),('技術上の限界',r.get('limitation',r.get('limitations'))),('公開データ・コード',r.get('code_data')),('確認状態',r['verification']),('原資料内の位置',p['locator']),('Source ID',p['source_ids']),('性能のClaim ID',p['claim_ids'])]
         facts='<dl class="fact-grid">'+''.join(f'<dt>{esc(k)}</dt><dd>{esc(v)}</dd>' for k,v in field_pairs if v is not None)+'</dl>'
         evidence_rows=[]
@@ -186,7 +198,7 @@ def catalogue(data, performance, industrial):
         evidence='<details class="evidence"><summary>主張と原資料の対応を確認する（'+str(len(evidence_rows))+'件）</summary>'+table(['Claim ID','項目','記録した主張','原資料・位置'],evidence_rows)+'</details>'
         doi=link('https://doi.org/'+r['doi'],'DOI') if str(r.get('doi','')).startswith('10.') else 'DOI未確認'
         details.append(f'<details class="paper" id="{ident}"><summary><span class="paper-id">{ident} · {esc(r["year"])}</span><span class="summary-title">{esc(r["title"])}</span>{badge(r)}</summary><div class="paper-body"><p class="paper-head">{esc(r["authors"])}<br>{link(r["url"],"原論文／公開版を開く")}　{doi}</p>{facts}{evidence}</div></details>')
-    summary=controls+'<div class="table-wrap"><table class="matrix"><thead><tr><th scope="col">論文・採否</th><th scope="col">モデル・入力</th><th scope="col">代表指標と報告値</th><th scope="col">結果と解釈上の注意</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table></div><p class="empty" id="empty" hidden>該当する論文はありません。検索語や絞り込み条件を変更してください。</p>'
+    summary=controls+'<div class="table-wrap"><table class="matrix"><thead><tr><th scope="col">論文・採否</th><th scope="col">モデル・入力</th><th scope="col">判定クラス・出力</th><th scope="col">代表指標と報告値</th><th scope="col">結果と解釈上の注意</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table></div><p class="empty" id="empty" hidden>該当する論文はありません。検索語や絞り込み条件を変更してください。</p>'
     detailed='<div class="details-toolbar"><button data-expand="true">表示中の詳細をすべて開く</button><button data-expand="false">詳細を閉じる</button></div>'+''.join(details)
     return summary,detailed
 
@@ -226,7 +238,7 @@ def research(industrial=False):
     body+=section(2,'families','主モデルの構成で分類する',family_chart(records,industrial)+f'<p class="source-line">{esc(family_note)}</p>')
     body+=section(3,'highlights','代表研究を、条件付きの数値で読む',cases(records,perf,selected),intro='方式と評価上の論点が異なる研究を選んだ。掲載順は性能順位ではなく、異なる指標を直接比較するものではない。')
     summary,details=catalogue(data,perf,industrial)
-    body+=section(4,'comparison','全収録論文の性能一覧',note('数値を並べても、一律の精度ランキングにはしない','代表値には対応する指標を表示。結果欄には他の報告値、注意欄には条件差を残した。「未確定」は未報告・未抽出・未確認等を含むため、論文詳細で理由を確認する。')+summary,intro='採否・モデル系統・入力で絞り込み、論文名から詳細を開ける。保留と関連の数値は主採用研究とは区別する。')
+    body+=section(4,'comparison','全収録論文の性能一覧',note('数値を並べても、一律の精度ランキングにはしない','代表値には対応する指標を表示。判定クラス欄には原語・確認済みの日本語ラベルと出力形式を併記し、複合クラス、独立二値判定、質問ごとに選択肢が変わるVQAを区別する。ラベルの例示・一部確認・未確認という制約も保持した。結果欄には他の報告値、注意欄には条件差を残した。「未確定」は未報告・未抽出・未確認等を含むため、論文詳細で理由を確認する。')+summary,intro='採否・モデル系統・入力で絞り込み、判定クラスと性能を同じ行で確認できる。論文名から詳細を開ける。保留と関連の数値は主採用研究とは区別する。')
     body+=section(5,'details','ラベル、モデル、分割、根拠を確認する',details,intro='各論文を開くと、原語ラベル・実数性能・評価分割・制約・原資料へのリンクを確認できる。さらに主張とSource IDの対応を展開できる。')
     body+=section(6,'limits','比較の限界と、次の調査',table(['注意点','読み方'],limit_rows)+note('網羅探索は継続中','5つの論文サイトで検索を試行したが、20検索枠中3枠は専用式未実施で、多くの未取得ページ・未判定候補が残る。新候補は今回の詳細表へ未検証のまま追加していない。',True)+f'<div class="panel"><h3>次に確認すること</h3><p>{next_text}</p><p class="source-line"><a href="research_methodology.html">調査方法のHTMLへ</a>'+ref('reports/database_keyword_search_pilot.md','最新DB検索の実施範囲')+ref('evidence/database_keyword_pilot/followup_queue.csv','本文確認待ち候補')+'</p></div><p class="source-line">再利用用：'+ref(workbook,'専用Excel')+ref('outputs/classification_performance_summary.xlsx','指標・実数・条件の精度一覧')+ref('data/'+name,'構造化データ')+'</p>')
     page(FILES[2 if industrial else 1][0],'03' if industrial else '02',title,subtitle,[(len(records),'詳細収録',f'採用{counts["accept"]}・保留{counts["hold"]}・関連{counts["related"]}'),(counts['accept'],'主比較に採用','工具・工場の独立実証数ではない'),(counts['hold'],'詳細表の保留','検索候補台帳の保留数とは別'),(numeric,'数値を確認した収録行',f'{len(records)-numeric}行は未報告・未抽出・未確認等')],nav,body,'#326d96' if industrial else '#a1662d')

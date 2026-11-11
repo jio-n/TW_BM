@@ -48,3 +48,4 @@ F1–F4の目的・入力・出力・完了条件と残課題は [種類分類�
 | K1 | 永続台帳と進捗・指示・監査の実装 | K0 | kit/scripts、templates | K0 | init/ingest/update/configure/request/next/build/audit/checkpointが動作 | 検索・原著確認は担当AIが実行 | 完了 |
 | K2 | 既存実データで動作確認 | DBパイロット、比較67行 | kit/examples/tool-wear-review | K1 | 48実行366hitsと比較67ID保持、旧データ非変更、HTML一致 | 旧引用調査全体は未移行 | 完了 |
 | K3 | 誤った進捗判定・再開の検証 | K1/K2、別テーマの合成データ | kit/tests、QA.md、html_validation | K2 | 19テスト、独立利用試験、静的HTML・JS・スキル検査 | ブラウザ表示/操作未検証 | 完了 |
+| H1 | 比較一覧に判定対象を明示 | ユーザー指摘、既存67論文のlabels/task | 結果HTML、性能/Round2表、キットの一覧 | K3、既存HTML | 全67行・12代表カードのラベル照合、根拠未抽出を明示、採否・値を維持 | ブラウザ表示/操作未検証 | 完了 |

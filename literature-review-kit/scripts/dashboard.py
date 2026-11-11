@@ -6,9 +6,13 @@ import json
 
 def render(config, data, status, actions, audit):
     """Return one self-contained HTML page, including request-file drafting."""
+    outputs = {}
+    for entry in data.get("evidence", []):
+        if entry.get("field") in ("labels", "output") and entry.get("value"):
+            outputs.setdefault(entry["paper_id"], []).append({key: entry.get(key, "") for key in ("evidence_id", "field", "value", "verification")})
     payload = json.dumps(
         {"config": config, "data": data, "status": status,
-         "actions": actions, "audit": audit},
+         "actions": actions, "audit": audit, "paper_outputs": outputs},
         ensure_ascii=False,
         allow_nan=False,
     )
@@ -47,7 +51,7 @@ HTML = r'''<!doctype html>
 <p class="help">候補は調査を進める順番の目安です。スコアは確率、論文の品質、採用判定を表しません。引用数は出典と確認日を論文詳細に記録し、未取得の情報は未知のまま表示します。</p>
 <div id="action-table"></div></section>
 <section id="hits"><h2>検索ヒット全行</h2><p class="help">同じ論文が複数の検索に出た行も残します。検索結果の行数と、識別した論文数はそれぞれの集計です。</p><div id="hit-table"></div></section>
-<section id="papers"><h2>論文ごとの確認状態</h2><p class="help">判定・保存・読了・抽出・引用追跡を同じ行で確認できます。詳細から書誌、判定理由、根拠、引用数の確認元を閲覧できます。</p><div id="paper-table"></div></section>
+<section id="papers"><h2>論文ごとの確認状態</h2><p class="help">判定対象・クラス、採否・保存・読了・抽出・引用追跡を同じ行で確認できます。判定対象は抽出済みのlabels/outputの根拠から表示し、未抽出は未確認とします。詳細から書誌、判定理由、根拠、引用数の確認元を閲覧できます。</p><div id="paper-table"></div></section>
 <section id="tasks"><h2>利用者の指示と作業状態</h2><div id="task-table"></div></section>
 <section id="requests"><h2>追加指示を下書きする</h2>
 <div class="notice">下書きは現在の台帳に未反映です。JSONを保存した後、CLIの <code>import-requests</code> で対象プロジェクトに読み込んでください。指示の登録後も、調査を実施し根拠を確認してから作業を完了にします。</div>
@@ -111,6 +115,12 @@ SCRIPT = r'''
   const actionNames = {search_more:"検索を追加取得",screen:"採否を確認",obtain_fulltext:"全文を入手",read_fulltext:"本文を読む",extract:"情報を抽出",trace_backward:"参考文献を追跡",trace_forward:"被引用文献を追跡",verify_identity:"同一性を確認",reconsider:"判定を再検討",custom:"その他の指示"};
   const fieldNames = {paper_id:"論文ID",title:"題名",authors:"著者",year:"年",doi:"DOI",arxiv_id:"arXiv ID",url:"原資料URL",identity_status:"同一性の照合",domain:"対象領域",tags:"タグ",screening:"採否",screening_reason:"採否の理由",screening_evidence:"採否の根拠",access_status:"アクセス",download_status:"保存状態",local_path:"保存パス",reading_status:"確認深度",extraction_status:"抽出",backward_status:"後方引用",forward_status:"前方引用",relevance:"関連性",relevance_reason:"関連性の理由",citation_count:"被引用数",citation_source:"引用数の出典",citation_checked_at:"引用数確認日時",user_priority:"利用者優先度",notes:"注記",updated_at:"更新日時",research_question:"研究課題",method:"手法",results:"結果",evaluation_conditions:"評価条件",limitations:"限界"};
   const label = value => names[value] || text(value);
+  Object.assign(fieldNames, {classification_output:"判定対象・クラス",labels:"判定クラス",output:"判定対象・出力"});
+  const outputText = paperId => {
+    const entries = (payload.paper_outputs || {})[paperId] || [];
+    return entries.length ? entries.map(entry => text(entry.value) + "\n確認状態：" + label(entry.verification) + " ／ 根拠：" + text(entry.evidence_id)).join("\n\n") : "未確認（判定対象・クラスの根拠未抽出）";
+  };
+  const withOutputs = records => records.map(row => ({...row,classification_output:row.target_type === "paper" ? outputText(row.target_id) : "非該当（検索式・プロジェクトへの指示）"}));
   const badge = value => {
     const positive = ["include","saved","sections","full","complete","done","success","checked","confirmed","verified_identifier"];
     const negative = ["failed","invalid","blocked"];
@@ -171,6 +181,7 @@ SCRIPT = r'''
   }
   const col = (key, title, cell, cls) => ({key,title,cell,cls});
   const state = (key, title) => col(key,title,row => badge(row[key]));
+  const outputColumn = col("classification_output", "判定対象・クラス", undefined, "cell-wide");
   function fieldList(record) {
     const list = el("dl", undefined, "field-list");
     for (const [key, value] of Object.entries(record)) {
@@ -237,16 +248,16 @@ SCRIPT = r'''
     col("prospect","見込み",row=>label(row.prospect)),col("notes","注記",undefined,"cell-wide"),col("","指示",row=>instructionButton("query",row.query_id,"search_more"))
   ],[["source","情報源"],["prospect","見込み"],["total_kind","総数の確度"]]);
   table("query-table", queries,[col("query_id","検索式ID"),col("source","情報源"),col("query_text","検索式",undefined,"cell-wide"),state("state","状態"),col("required","必須"),col("planned_limit","予定取得数"),col("sort_order","並び順"),col("coverage_cell","カバレッジ"),col("purpose","目的"),col("notes","注記"),col("","指示",row=>instructionButton("query",row.query_id,"search_more"))],[["state","状態"],["source","情報源"],["required","必須"]]);
-  table("action-table",payload.actions || [],[
-    col("action_id","候補ID"),col("action","作業",row=>actionNames[row.action]||text(row.action)),col("target_type","対象種別",row=>label(row.target_type)),col("target_id","対象ID"),col("target_title","対象の題名・検索式",row=>row.target_type==="paper"?(paperMap.get(row.target_id)||{}).title:row.target_type==="query"?(queryMap.get(row.target_id)||{}).query_text:config.title,"cell-title"),col("priority","優先度（1が最高）"),col("lane","選定枠"),
+  table("action-table",withOutputs(payload.actions || []),[
+    col("action_id","候補ID"),col("action","作業",row=>actionNames[row.action]||text(row.action)),col("target_type","対象種別",row=>label(row.target_type)),col("target_id","対象ID"),col("target_title","対象の題名・検索式",row=>row.target_type==="paper"?(paperMap.get(row.target_id)||{}).title:row.target_type==="query"?(queryMap.get(row.target_id)||{}).query_text:config.title,"cell-title"),outputColumn,col("priority","優先度（1が最高）"),col("lane","選定枠"),
     col("score","スコア",row=>number(row.score)===null?"未知":Number(row.score).toFixed(3)),
     col("score_known_weight","既知情報の重み",row=>number(row.score_known_weight)===null?"未知":Number(row.score_known_weight).toFixed(3)),col("score_upper","スコア上限",row=>number(row.score_upper)===null?"未知":Number(row.score_upper).toFixed(3)),
     col("reason","理由",undefined,"cell-wide"),col("amount","量・範囲"),col("","指示",row=>instructionButton(row.target_type,row.target_id,row.action))
   ],[["action","作業"],["lane","選定枠"],["target_type","対象種別"]]);
-  const hitRows = rows("hits").map(hit=>{const run=runMap.get(hit.run_id)||{},q=queryMap.get(run.query_id)||{},p=paperMap.get(hit.paper_id)||{};return {...hit,query_id:run.query_id || "",search_set_id:run.search_set_id || "",source:q.source || "",run_status:run.status || "",screening:p.screening || "unreviewed",reading_status:p.reading_status || "not_started",extraction_status:p.extraction_status || "not_started"};});
-  table("hit-table",hitRows,[col("hit_id","ヒットID"),col("query_id","検索式"),col("search_set_id","集合"),col("source","情報源"),col("run_id","取得実行"),col("rank","順位"),col("paper_id","論文ID"),col("title","検索時の題名",undefined,"cell-title"),state("screening","採否"),state("reading_status","読了"),col("url","出典",row=>link(row.url)),col("","指示",row=>instructionButton("paper",row.paper_id,"screen"))],[["screening","採否"],["reading_status","読了"],["run_status","実行状態"],["source","情報源"]]);
-  table("paper-table",papers,[col("paper_id","論文ID"),col("title","題名",undefined,"cell-title"),col("year","年"),state("screening","採否"),state("download_status","保存"),state("reading_status","読了"),state("extraction_status","抽出"),state("backward_status","後方引用"),state("forward_status","前方引用"),state("identity_status","同一性"),col("","詳細",paperDetails),col("","指示",row=>instructionButton("paper",row.paper_id,"read_fulltext"))],[["screening","採否"],["download_status","保存"],["reading_status","読了"],["extraction_status","抽出"],["backward_status","後方引用"],["forward_status","前方引用"],["identity_status","同一性"]]);
-  table("task-table",rows("tasks"),[col("task_id","指示ID"),col("action","作業",row=>actionNames[row.action]||row.action),col("target_type","対象種別"),col("target_id","対象ID"),state("status","状態"),col("priority","優先度（1が最高）"),col("amount","量・範囲"),col("reason","理由",undefined,"cell-wide"),col("requested_by","依頼者"),col("created_at","登録日時"),col("completed_at","完了日時"),col("evidence_ref","完了根拠")],[["status","状態"],["action","作業"],["requested_by","依頼者"]]);
+  const hitRows = rows("hits").map(hit=>{const run=runMap.get(hit.run_id)||{},q=queryMap.get(run.query_id)||{},p=paperMap.get(hit.paper_id)||{};return {...hit,classification_output:outputText(hit.paper_id),query_id:run.query_id || "",search_set_id:run.search_set_id || "",source:q.source || "",run_status:run.status || "",screening:p.screening || "unreviewed",reading_status:p.reading_status || "not_started",extraction_status:p.extraction_status || "not_started"};});
+  table("hit-table",hitRows,[col("hit_id","ヒットID"),col("query_id","検索式"),col("search_set_id","集合"),col("source","情報源"),col("run_id","取得実行"),col("rank","順位"),col("paper_id","論文ID"),col("title","検索時の題名",undefined,"cell-title"),outputColumn,state("screening","採否"),state("reading_status","読了"),col("url","出典",row=>link(row.url)),col("","指示",row=>instructionButton("paper",row.paper_id,"screen"))],[["screening","採否"],["reading_status","読了"],["run_status","実行状態"],["source","情報源"]]);
+  table("paper-table",papers.map(row=>({...row,classification_output:outputText(row.paper_id)})),[col("paper_id","論文ID"),col("title","題名",undefined,"cell-title"),outputColumn,col("year","年"),state("screening","採否"),state("download_status","保存"),state("reading_status","読了"),state("extraction_status","抽出"),state("backward_status","後方引用"),state("forward_status","前方引用"),state("identity_status","同一性"),col("","詳細",paperDetails),col("","指示",row=>instructionButton("paper",row.paper_id,"read_fulltext"))],[["screening","採否"],["download_status","保存"],["reading_status","読了"],["extraction_status","抽出"],["backward_status","後方引用"],["forward_status","前方引用"],["identity_status","同一性"]]);
+  table("task-table",withOutputs(rows("tasks")),[col("task_id","指示ID"),col("action","作業",row=>actionNames[row.action]||row.action),col("target_type","対象種別"),col("target_id","対象ID"),outputColumn,state("status","状態"),col("priority","優先度（1が最高）"),col("amount","量・範囲"),col("reason","理由",undefined,"cell-wide"),col("requested_by","依頼者"),col("created_at","登録日時"),col("completed_at","完了日時"),col("evidence_ref","完了根拠")],[["status","状態"],["action","作業"],["requested_by","依頼者"]]);
   const extraTables=[
     ["runs","検索実行履歴",[["status","状態"],["semantics","意味の確認"],["total_kind","総数の確度"]]],
     ["evidence","主張と出典",[["verification","確認深度"],["field","抽出項目"]]],
@@ -263,7 +274,7 @@ SCRIPT = r'''
     byId("request-target").value=type==="project"?config.project_id||"":"";
   }
   function drawDrafts(){
-    table("draft-table",drafts.map(row=>({...row,status:"draft"})),[col("request_id","下書きID"),col("target_type","対象種別"),col("target_id","対象ID"),col("action","作業",row=>actionNames[row.action]||row.action),col("priority","優先度（1が最高）"),col("amount","量・範囲"),col("reason","理由",undefined,"cell-wide"),state("status","状態"),col("","操作",row=>{const button=el("button","削除","tiny secondary");button.type="button";button.addEventListener("click",()=>{const index=drafts.findIndex(item=>item.request_id===row.request_id);if(index>=0)drafts.splice(index,1);drawDrafts();byId("request-message").textContent="下書きを削除しました。";});return button;})],[["status","状態"],["target_type","対象種別"],["action","作業"]]);
+    table("draft-table",withOutputs(drafts.map(row=>({...row,status:"draft"}))),[col("request_id","下書きID"),col("target_type","対象種別"),col("target_id","対象ID"),outputColumn,col("action","作業",row=>actionNames[row.action]||row.action),col("priority","優先度（1が最高）"),col("amount","量・範囲"),col("reason","理由",undefined,"cell-wide"),state("status","状態"),col("","操作",row=>{const button=el("button","削除","tiny secondary");button.type="button";button.addEventListener("click",()=>{const index=drafts.findIndex(item=>item.request_id===row.request_id);if(index>=0)drafts.splice(index,1);drawDrafts();byId("request-message").textContent="下書きを削除しました。";});return button;})],[["status","状態"],["target_type","対象種別"],["action","作業"]]);
     byId("download-requests").disabled=drafts.length===0;
   }
   byId("request-type").addEventListener("change",updateTargets);

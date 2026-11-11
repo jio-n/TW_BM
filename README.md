@@ -16,7 +16,7 @@
 2. [工具摩耗・損傷の種類分類](outputs/html/tool_wear_classification.html)：18件（採用12・保留1・関連5）。
 3. [工業欠陥の種類分類](outputs/html/industrial_defect_classification.html)：49件（採用38・保留5・関連6）。
 
-結果資料には絞り込み、論文詳細、原資料リンクを収録。比較表の採否・値は維持。[HTML品質確認](reports/html_briefings_quality.md)に数値・構造の検査結果とブラウザ表示確認の制約を記録した。
+結果資料には絞り込み、論文詳細、原資料リンクを収録。性能一覧は判定クラス・出力形式を入力・報告値と同じ行で表示する。比較表の採否・値は維持。[HTML品質確認](reports/html_briefings_quality.md)に数値・構造の検査結果とブラウザ表示確認の制約を記録した。
 
 **論文ごとの実際の精度を見る場合**は、工具摩耗18本・工業欠陥49本をまとめた [性能値のExcel](outputs/classification_performance_summary.xlsx) / [CSV](outputs/classification_performance_summary.csv) / [数値の読み方](reports/classification_performance_summary.md) を参照。計67本＝主採用50本、保留6本、関連11本。Accuracy、Precision、Recall、F1等の数値と評価条件を併記し、数値未確認は埋めていない。
 

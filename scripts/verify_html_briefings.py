@@ -43,11 +43,25 @@ for path in sorted(OUT.glob('*.html')):
             errors.append('catalogue ID mismatch')
         if len(tree.xpath('//details[@class="paper"]'))!=len(index):
             errors.append('details count mismatch')
+        headers=tree.xpath('//table[@class="matrix"]/thead/tr/th/text()')
+        if len(headers)!=5 or headers[2]!='判定クラス・出力':
+            errors.append('classification target column missing')
         for row in rows:
             ident=row.get('data-paper'); r=index[ident]; p=performance[ident]
             cat='hold' if '保留' in r['status'] else 'related' if '関連' in r['status'] else 'accept'
             if row.get('data-status')!=cat:
                 errors.append(ident+': status changed')
+            cells=row.xpath('./td[@class="target-classes"]')
+            if len(row.xpath('./td'))!=5 or len(cells)!=1:
+                errors.append(ident+': classification target cell missing')
+            else:
+                target_text=cells[0].text_content()
+                for field in ['labels','labels_ja','task','mixed']:
+                    value=r.get(field)
+                    if value and value!='未確認' and str(value).replace('。。','。') not in target_text:
+                        errors.append(ident+': summary missing '+field)
+                if r['labels']=='未確認' and '未確認' not in target_text:
+                    errors.append(ident+': unverified labels not marked')
             detail=tree.get_element_by_id(ident).text_content()
             for field in ['title','authors','labels','performance','verification']:
                 if str(r[field]).replace('。。','。') not in detail:
@@ -65,6 +79,11 @@ for path in sorted(OUT.glob('*.html')):
                     errors.append(ident+': numeric scale changed')
             if p['metric'] not in row.text_content() or p['result'].replace('。。','。') not in row.text_content():
                 errors.append(ident+': metric/result mismatch')
+        for card in tree.xpath('//article[@data-case]'):
+            record=index[card.get('data-case')]
+            for field in ['labels','task']:
+                if record[field].replace('。。','。') not in card.text_content():
+                    errors.append(record['id']+': highlight missing '+field)
         category_counts=dict(Counter(r.get('data-status') for r in rows))
     else:
         category_counts={}

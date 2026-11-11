@@ -90,8 +90,11 @@ out={'as_of':'2026-11-11','scope':'工具摩耗と工業欠陥の種類分類。
 with (ROOT/'outputs/classification_performance_summary.csv').open('w',encoding='utf-8-sig',newline='') as f:
  w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 def md_table(items):
- s='| 論文・モデル | 採否 | 指標と実際の成績 | 評価上の注意 |\n|---|---|---|---|\n'
- for r in items:s+=f"| **{r['id']}** [{r['name']}]({r['url']}) | {r['status']} | {r['result']} | {r['note']} |\n"
+ s='| 論文・モデル | 採否 | 判定クラス・出力 | 指標と実際の成績 | 評価上の注意 |\n|---|---|---|---|---|\n'
+ for r in items:
+  source=all_original[r['id']][1]
+  classes=(source.get('labels_ja','')+'<br>原語：' if source.get('labels_ja') else '')+r['labels']+'<br>出力形式：'+source['task']
+  s+=f"| **{r['id']}** [{r['name']}]({r['url']}) | {r['status']} | {classes.replace('|', '&#124;')} | {r['result']} | {r['note']} |\n"
  return s
 report=f'''# 種類分類の性能値まとめと調査範囲の評価
 

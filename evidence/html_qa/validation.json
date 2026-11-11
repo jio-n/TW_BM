@@ -3,7 +3,7 @@
   "files": [
     {
       "file": "industrial_defect_classification.html",
-      "bytes": 459421,
+      "bytes": 480812,
       "records": 49,
       "status_counts": {
         "accept": 38,
@@ -16,7 +16,7 @@
     },
     {
       "file": "research_methodology.html",
-      "bytes": 35780,
+      "bytes": 36159,
       "records": 0,
       "status_counts": {},
       "internal_ids": 8,
@@ -25,7 +25,7 @@
     },
     {
       "file": "tool_wear_classification.html",
-      "bytes": 176975,
+      "bytes": 187486,
       "records": 18,
       "status_counts": {
         "accept": 12,

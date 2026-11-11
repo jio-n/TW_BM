@@ -38,12 +38,17 @@ def main():
     payload=json.loads(next(s['text'] for s in page.scripts if s['id']=='review-data'))
     assert payload['config']==cfg and payload['data']==data,'Embedded data stale'
     assert payload['status']['data_hash']==digest(cfg,data),'Status stale'
+    expected_outputs={}
+    for entry in data['evidence']:
+        if entry['field'] in ('labels','output') and entry['value']:
+            expected_outputs.setdefault(entry['paper_id'],[]).append({k:entry[k] for k in ('evidence_id','field','value','verification')})
+    assert payload['paper_outputs']==expected_outputs,'Classification targets differ from recorded evidence'
     assert len(payload['status']['plan_checks'])>=6,'Missing plan checks'
     scripts=[s['text'] for s in page.scripts if s['id']!='review-data']
     with tempfile.TemporaryDirectory(dir=project/'outputs') as folder:
         path=Path(folder)/'dashboard.js';path.write_text('\n'.join(scripts),encoding='utf-8')
         subprocess.run([args.node,'--check',str(path)],check=True,capture_output=True)
-    result=dict(static_validation='PASS',rows={t:len(data[t]) for t in TABLES},html_bytes=len(html.encode()),javascript_syntax='PASS',embedded_data='exact match',browser_visual_and_interaction='not verified',evidence_note='Static checks validate records and syntax; they do not prove UI operation or literature coverage.')
+    result=dict(static_validation='PASS',rows={t:len(data[t]) for t in TABLES},html_bytes=len(html.encode()),javascript_syntax='PASS',embedded_data='exact match',papers_with_output_evidence=len(expected_outputs),browser_visual_and_interaction='not verified',evidence_note='Static checks validate records and syntax; they do not prove UI operation or literature coverage.')
     (project/'outputs/html_validation.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False))
 

@@ -15,7 +15,7 @@ def link(r):return f"[{r['id']}：{r['title']}]({r['url']})"
 counts=[]
 for name,b in [('工具摩耗',wear),('工業欠陥',ind)]:
     rs=b['records'];counts.append([name,len(rs),sum('採用' in r['status'] for r in rs),sum('保留' in r['status'] for r in rs),sum('関連' in r['status'] for r in rs)])
-new_table=table(['論文・モデル','採否','種類分類の報告値','条件・制約'],[[link(r),r['status'],r['performance'],r.get('limitation',r.get('limitations',''))] for r in new])
+new_table=table(['論文・モデル','採否','判定クラス・出力','種類分類の報告値','条件・制約'],[[link(r),r['status'],allrows[r['id']]['labels']+'<br>出力形式：'+allrows[r['id']]['task'],r['performance'],r.get('limitation',r.get('limitations',''))] for r in new])
 report=f'''# 引用追跡と保留論文再確認：Round2
 
 調査基準日：2026-11-11。工具の実写から摩耗種類を出力する研究と、工業欠陥種類を出力するTransformer／VLM／MLLM研究を追跡した。摩耗量、寿命、摩耗程度、正常／異常だけの分類は主比較に含めない。
