@@ -1,0 +1,1432 @@
+{
+  "scope": "Singh2026の直接参考文献17/18/19/21/29を今回Web・一次資料で再確認。工具実写→名前付き摩耗/損傷種類カテゴリが対象。",
+  "as_of": "2026-11-11",
+  "created_at": "2026-11-11T14:53:44.008574+00:00",
+  "records": [
+    {
+      "id": "SWRC17",
+      "seed_title": "Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718",
+      "seed_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "seed_reference": 17,
+      "citation_edge_status": "確認済み：seed原著Referencesに題名・著者・DOIリンク",
+      "doi": "10.1016/j.promfg.2020.05.134",
+      "title": "Digital image processing with deep learning for automated cutting tool wear detection",
+      "authors": "Thomas Bergs; Carsten Holst; Pranjul Gupta; Thorsten Augspurger",
+      "year": 2020,
+      "publisher": "Elsevier BV",
+      "venue": "Procedia Manufacturing",
+      "source_ids": [
+        "SWSC000",
+        "SWSC001"
+      ],
+      "as_of": "2026-11-11",
+      "checked_at": "2026-11-11T14:53:44.008574+00:00",
+      "old_data_policy": "旧表の結論を継承せず今回原著または出版社プレビューで確認",
+      "remaining": [
+        "raw原像と拡張後分割の詳細は別途再現時に確認"
+      ],
+      "decision": "除外",
+      "technical_fit": "不適合：分類は工具形状、摩耗は領域分割",
+      "verification": "公開原著PDFの方法・結果・考察を確認",
+      "input": "Keyence VHX-6000顕微鏡による実工具画像",
+      "actual_tool_photo": true,
+      "multimodal_inference": false,
+      "output": "工具形状5種分類／摩耗領域のsemantic segmentation。名前付き摩耗機構カテゴリ出力ではない。",
+      "original_labels": [
+        "ball end mill",
+        "end mill",
+        "end mill with corner radius",
+        "insert",
+        "drill"
+      ],
+      "label_scope": "工具形状クラス（摩耗種類クラスではない）",
+      "wear_mechanism_labels": [],
+      "model": "工具形状：simple CNN（§2.5、Table5）。摩耗領域：U-Net（FCN）、One-for-all／工具別One-for-each。",
+      "performance": [
+        {
+          "metric": "tool-type classification accuracy",
+          "value": 95.6,
+          "unit": "%",
+          "condition": "工具形状分類test242画像。摩耗種類分類の成績として使用不可。",
+          "locator": "§3.1 / Fig.21 / PDF p.8、誌面p.954"
+        },
+        {
+          "metric": "wear segmentation mean IoU",
+          "value": 0.73,
+          "unit": "ratio",
+          "condition": "One-for-all test。分類Accuracyとは異なる指標。",
+          "locator": "Table7 / §3.2 / PDF p.9、誌面p.955"
+        },
+        {
+          "metric": "wear segmentation mean IoU",
+          "value": 0.37,
+          "unit": "ratio",
+          "condition": "未知工具・撮像摂動inference画像、通常testとは別。",
+          "locator": "§3.2–4 / PDF p.10、誌面p.956"
+        }
+      ],
+      "data": "400原像（8群×50）、拡張3000。工具形状test242。",
+      "split": "U-Netはtrain/validation/test=0.8/0.1/0.1（Table6、PDF p.7）。工具形状test242画像（§3.1）。原像単位で拡張前分割したかは今回未確認。",
+      "locator": "§2.2 Table3、§2.5 Table5、§3.1 Fig21、§3.2 Table7、§4; PDF pp.5–10",
+      "notes": "tool typeをwear typeと誤読しない。95.6%は工具形状5種。",
+      "claim_ids": [
+        "CWSC021",
+        "CWSC022",
+        "CWSC023",
+        "CWSC024"
+      ]
+    },
+    {
+      "id": "SWRC18",
+      "seed_title": "Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718",
+      "seed_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "seed_reference": 18,
+      "citation_edge_status": "確認済み：seed原著Referencesに題名・著者・DOIリンク",
+      "doi": "10.1016/j.jmsy.2023.03.005",
+      "title": "CNN-based in situ tool wear detection: A study on model training and data augmentation in turning inserts",
+      "authors": "Alberto García-Pérez; Amina Ziegenbein; Eric Schmidt; Faranak Shamsafar; Asier Fernández-Valdivielso; Raúl Llorente-Rodríguez; Matthias Weigold",
+      "year": 2023,
+      "publisher": "Elsevier BV",
+      "venue": "Journal of Manufacturing Systems",
+      "source_ids": [
+        "SWSC000",
+        "SWSC002"
+      ],
+      "as_of": "2026-11-11",
+      "checked_at": "2026-11-11T14:53:44.008574+00:00",
+      "old_data_policy": "旧表の結論を継承せず今回原著または出版社プレビューで確認",
+      "remaining": [
+        "subscription全文未取得",
+        "universalモデル名称・各datasetのsplit未確認"
+      ],
+      "decision": "除外（公開原著該当箇所で二値出力確認）",
+      "technical_fit": "不適合：OK/NOKの交換適否二値",
+      "verification": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。",
+      "input": "機上の旋削インサート実写。K|Lensは1露光で9視点。",
+      "actual_tool_photo": true,
+      "multimodal_inference": false,
+      "output": "工具状態の許容／非許容の二値分類",
+      "original_labels": [
+        "acceptable (OK)",
+        "non-acceptable (NOK)"
+      ],
+      "label_scope": "原著IntroductionおよびDiscussion明記",
+      "wear_mechanism_labels": [],
+      "model": "CNN binary classifier。specializedモデルはXception（原著Results preview）。universalモデルの具体構造は今回原著未確認。",
+      "performance": [
+        {
+          "metric": "binary classification accuracy (up to)",
+          "value": 97.8,
+          "unit": "%",
+          "condition": "4インサート種類、roundで良好／rhombicへ失敗。最良条件のデータ数・splitは本文未取得で未確認。摩耗種類Accuracyではない。",
+          "locator": "Abstract / Introduction / Discussion"
+        },
+        {
+          "metric": "Matthews correlation coefficient",
+          "value": 0.955,
+          "unit": "ratio",
+          "condition": "上記binary結果。",
+          "locator": "Abstract / Introduction"
+        }
+      ],
+      "data": "4insert types。最低2000画像がacceptable accuracyのため必要とHighlights記載。各実験分割の詳細未確認。",
+      "split": "本文未取得、未確認",
+      "locator": "出版社Abstract; Introduction(main contribution paragraph); Results section snippet; Discussion and conclusions",
+      "notes": "Singh seed ref18自体はGarcía-Pérezを筆頭に正しく列挙。今回分担のZiegenbein2023という略称は第2著者であり筆頭著者ではない。seed本文EfficientNet-b4の紹介と原著preview Xception専門モデルを混同しない。",
+      "claim_ids": [
+        "CWSC025",
+        "CWSC026",
+        "CWSC027"
+      ]
+    },
+    {
+      "id": "SWRC19",
+      "seed_title": "Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718",
+      "seed_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "seed_reference": 19,
+      "citation_edge_status": "確認済み：seed原著Referencesに題名・著者・DOIリンク",
+      "doi": "10.1016/j.jmapro.2023.07.028",
+      "title": "A new embedded vision system for monitoring tool conditions in production lines using a combination of direct and indirect methods",
+      "authors": "Henry Peterson Scharf; Heraldo Nelio Cambraia; Dalberto Dias da Costa",
+      "year": 2023,
+      "publisher": "Elsevier BV",
+      "venue": "Journal of Manufacturing Processes",
+      "source_ids": [
+        "SWSC000",
+        "SWSC003"
+      ],
+      "as_of": "2026-11-11",
+      "checked_at": "2026-11-11T14:53:44.008574+00:00",
+      "old_data_policy": "旧表の結論を継承せず今回原著または出版社プレビューで確認",
+      "remaining": [
+        "原著全文・ラベル定義・混同行列・融合方法詳細・分割の取得"
+      ],
+      "decision": "保留（本文・原語出力ラベル未取得、二値除外候補）",
+      "technical_fit": "公開原著で実写＋センサ融合は確認。種類分類は未確認。seed紹介はOK/NOK。",
+      "verification": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得",
+      "input": "ATC内embedded visionによるstep drill実写、およびelectric current・vibration sensor features",
+      "actual_tool_photo": true,
+      "multimodal_inference": true,
+      "output": "工具状態監視。種類名を出力する証拠は今回原著公開範囲で未確認。",
+      "original_labels": [],
+      "label_scope": "未確認。Introductionのcrater/notch/flank列挙は背景説明であり出力ラベルと扱わない。",
+      "wear_mechanism_labels": [],
+      "model": "実画像U-Net、電流・振動特徴量Random Forest、両方式の融合",
+      "performance": [
+        {
+          "metric": "accuracy",
+          "value": 91,
+          "unit": "%",
+          "condition": "embedded step-drill images/U-Net、クラス・split未確認",
+          "locator": "Abstract"
+        },
+        {
+          "metric": "accuracy",
+          "value": 95,
+          "unit": "%",
+          "condition": "current+vibration features/Random Forest、クラス・split未確認",
+          "locator": "Abstract"
+        },
+        {
+          "metric": "accuracy",
+          "value": 96,
+          "unit": "%",
+          "condition": "image methodとsensor method融合、原著Abstract。種類分類の成績とは認定しない。",
+          "locator": "Abstract"
+        }
+      ],
+      "data": "特殊step drill、鍛造SAE4144鋼、38RC。画像・センサ件数未確認。",
+      "split": "未確認",
+      "locator": "出版社Abstract; Introduction; Implementation and case study section snippet",
+      "secondary_label_evidence": {
+        "source_id": "SWSC000",
+        "locator": "Introduction(ref19紹介)",
+        "labels": [
+          "OK",
+          "NOK (worn)"
+        ],
+        "interpretation": "11分割周刃のうち1つNOKなら交換とseedが紹介。対象原著の出力語として未確定。"
+      },
+      "claim_ids": [
+        "CWSC028",
+        "CWSC029",
+        "CWSC030"
+      ]
+    },
+    {
+      "id": "SWRC21",
+      "seed_title": "Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718",
+      "seed_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "seed_reference": 21,
+      "citation_edge_status": "確認済み：seed原著Referencesに題名・著者・DOIリンク",
+      "doi": "10.1007/s00170-026-17619-3",
+      "title": "Systematic approach for generating diversity-enhanced image dataset for vision-based on-machine tool wear monitoring systems",
+      "authors": "Garvit Singh; Ankit Agarwal; Kaushal A. Desai; Laine Mears",
+      "year": 2026,
+      "publisher": "Springer Science and Business Media LLC",
+      "venue": "The International Journal of Advanced Manufacturing Technology",
+      "source_ids": [
+        "SWSC000",
+        "SWSC004"
+      ],
+      "as_of": "2026-11-11",
+      "checked_at": "2026-11-11T14:53:44.008574+00:00",
+      "old_data_policy": "旧表の結論を継承せず今回原著または出版社プレビューで確認",
+      "remaining": [
+        "subscription本文の実験条件・test画像生成の組合せ詳細",
+        "工具・系列単位分割とvalidationの確認",
+        "明示被削材・工具仕様の当該原著本文確認"
+      ],
+      "existing_ids": [
+        "WR2C003",
+        "RWU155"
+      ],
+      "decision": "適合確認（本文詳細未取得）",
+      "technical_fit": "適合：工具RGB実写から名前付き4種、複合ラベルを含む単一カテゴリ出力",
+      "verification": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。",
+      "input": "機上顕微鏡の工具刃先RGB実写画像。機上撮像のvariabilityを画像拡張で模擬。",
+      "actual_tool_photo": true,
+      "multimodal_inference": false,
+      "output": "4種の工具摩耗・損傷状態。Softmax最大確率の単一カテゴリ（Fig6）。",
+      "original_labels": [
+        "Flank",
+        "Flank +BUE",
+        "Flank + Face",
+        "Chipping"
+      ],
+      "label_scope": "Fig2の原語表記。Fig6/7はFlank + BUEと空白差がある。Faceをcraterへ置換しない。",
+      "wear_mechanism_labels": [
+        "Flank",
+        "Flank + BUE",
+        "Flank + Face",
+        "Chipping"
+      ],
+      "class_count": 4,
+      "mixed_classes": true,
+      "model": "EfficientNet-b0、transfer learning、CNN画像分類。GradCAMは誤分類解釈。",
+      "performance": [
+        {
+          "metric": "classification accuracy",
+          "value": 84.16,
+          "unit": "%",
+          "condition": "原著Abstract報告値。Fig7 test混同行列は120件、対角101件（101/120=84.166...%）。原test40画像を複合augmentationで拡張。",
+          "locator": "Abstract; Fig2; Fig7"
+        },
+        {
+          "metric": "Matthews Correlation Coefficient",
+          "value": 0.772,
+          "unit": "ratio",
+          "condition": "Abstract。本文表・式は未取得。",
+          "locator": "Abstract"
+        },
+        {
+          "metric": "Flank + BUE recall (derived)",
+          "value": 33.3333333333,
+          "unit": "%",
+          "condition": "今回Fig7から計算：5/15。著者がrecall値として報告したと推定しない。",
+          "locator": "Fig7 row2"
+        }
+      ],
+      "data": {
+        "original_images": 200,
+        "train_original": 160,
+        "test_original": 40,
+        "train_original_per_class": [
+          74,
+          12,
+          54,
+          20
+        ],
+        "test_original_per_class": [
+          15,
+          5,
+          15,
+          5
+        ],
+        "augmented_train": 28000,
+        "augmented_train_per_class": [
+          7000,
+          7000,
+          7000,
+          7000
+        ],
+        "test_confusion_total": 120,
+        "source": "Fig2; Abstract; Fig7",
+        "test_count_provenance": "元test40はFig2。残20%原像を複合拡張してtestに使用することはAbstract。Fig7の評価120件は行列和から直接確認。40枚それぞれを厳密3倍した生成規則までは未確認。"
+      },
+      "split": "原像80% train/20%testを先に分離し各々拡張（Abstract/Fig2）。工具単位・加工系列単位の完全独立性、validation方法は本文未取得で未確認。",
+      "confusion_matrix": {
+        "rows_actual_columns_predicted": true,
+        "labels": [
+          "Flank",
+          "Flank + BUE",
+          "Flank + Face",
+          "Chipping"
+        ],
+        "values": [
+          [
+            44,
+            0,
+            1,
+            0
+          ],
+          [
+            3,
+            5,
+            7,
+            0
+          ],
+          [
+            0,
+            2,
+            37,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            15
+          ]
+        ],
+        "locator": "公開原著Fig7",
+        "verification": "図を目視読取、総数120/対角101を照合"
+      },
+      "locator": "出版社Abstract; Fig1(input setup); Fig2(labels/counts/split); Fig6(classification pipeline); Fig7(test confusion)",
+      "notes": "新規発見ではなく既存保留候補の確認深化。未取得本文を全文確認に昇格しない。平均84.16%に対してBUE複合クラスの取り逃しが目立つ。 原著Abstractは84.16%、Fig7の101/120は84.1667%（通常の小数2桁四捨五入は84.17%）。切捨てか別集計かは未確認で、著者報告値を置換しない。 test120件の由来について、40×3という個別生成規則は推定しない。",
+      "claim_ids": [
+        "CWSC031",
+        "CWSC032",
+        "CWSC033",
+        "CWSC034",
+        "CWSC035"
+      ]
+    },
+    {
+      "id": "SWRC29",
+      "seed_title": "Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718",
+      "seed_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "seed_reference": 29,
+      "citation_edge_status": "確認済み：seed原著Referencesに題名・著者・DOIリンク",
+      "doi": "10.1109/3M-NANO49087.2021.9599807",
+      "title": "Wear status prediction of micro milling tools by transfer learning and ViT model",
+      "authors": "Qiang Sun; Zhanjiang Yu; Yiquan Li; Shen Yang; Jinkai Xu; Huadong Yu",
+      "year": 2021,
+      "publisher": "IEEE",
+      "venue": "2021 IEEE International Conference on Manipulation, Manufacturing and Measurement on the Nanoscale (3M-NANO)",
+      "source_ids": [
+        "SWSC000",
+        "SWSC005",
+        "SWSC006"
+      ],
+      "as_of": "2026-11-11",
+      "checked_at": "2026-11-11T14:53:44.008574+00:00",
+      "old_data_policy": "旧表の結論を継承せず今回原著または出版社プレビューで確認",
+      "remaining": [
+        "IEEE原著本文",
+        "全クラス原語・程度閾値",
+        "データ規模・分割と評価条件"
+      ],
+      "decision": "保留（原著本文未取得、程度分類の除外候補）",
+      "technical_fit": "実工具写真＋ViTは一次著者会議digestで確認。種類ラベルは一次未確認、seed紹介は摩耗段階4種。",
+      "verification": "Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。",
+      "input": "マイクロミリング工具rear face wear画像（著者発表digest）。",
+      "actual_tool_photo": true,
+      "multimodal_inference": false,
+      "output": "wear status prediction、原著全クラス未確認",
+      "original_labels": [],
+      "label_scope": "未確認。seed Introductionの段階ラベルをこの論文の原語確定ラベルに転記しない。",
+      "wear_mechanism_labels": [],
+      "model": "ViT＋transfer learning（題名・著者digest）。",
+      "performance": [
+        {
+          "metric": "generalizability prediction accuracy",
+          "value": 92.5,
+          "unit": "%",
+          "condition": "著者発表digest報告。test件数・分割・クラス不明、種類分類精度と扱わない。",
+          "locator": "Conference Program Digest printed p.67 / PDF p.76 / presentation20-1"
+        }
+      ],
+      "data": "未確認",
+      "split": "未確認",
+      "locator": "著者会議digest20-1; 原論文本文未取得",
+      "secondary_label_evidence": {
+        "source_id": "SWSC000",
+        "locator": "Introduction(ref29紹介)",
+        "labels": [
+          "no-wear",
+          "initial wear",
+          "normal wear",
+          "severe wear"
+        ],
+        "interpretation": "seed著者は摩耗段階4種と明記。対象原著本文でのラベル語・閾値は未確認。"
+      },
+      "notes": "検索サイトの自動翻訳等にretracted相当語が現れたが、一次根拠がないため撤回と認定しない。",
+      "claim_ids": [
+        "CWSC036"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SWSC000",
+      "title": "Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718",
+      "url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "type": "出版社原著Web本文",
+      "verification": "今回ReferencesおよびIntroduction該当節を確認",
+      "locator": "References [17],[18],[19],[21],[29]; Introduction",
+      "accessed": "2026-11-11",
+      "primary": true
+    },
+    {
+      "source_id": "SWSC001",
+      "title": "Digital image processing with deep learning for automated cutting tool wear detection",
+      "publisher": "Elsevier BV",
+      "year": 2020,
+      "url": "https://d-nb.info/1229969632/34",
+      "doi": "10.1016/j.promfg.2020.05.134",
+      "type": "原著",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "metadata_raw": "evidence/raw/wu_singh_references/ref01_crossref.json",
+      "oa_metadata_raw": "evidence/raw/wu_singh_references/ref01_openalex.json",
+      "alternate_url": "https://publications.rwth-aachen.de/record/793074/files/793074.pdf",
+      "verification": "公開原著PDFの方法・結果・考察を確認",
+      "saved_path": "evidence/raw/wu_singh_references/bergs2020_dnb.pdf",
+      "locator": "§2.2 Table3、§2.5 Table5、§3.1 Fig21、§3.2 Table7、§4; PDF pp.5–10"
+    },
+    {
+      "source_id": "SWSC002",
+      "title": "CNN-based in situ tool wear detection: A study on model training and data augmentation in turning inserts",
+      "publisher": "Elsevier BV",
+      "year": 2023,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278612523000547",
+      "doi": "10.1016/j.jmsy.2023.03.005",
+      "type": "原著",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "metadata_raw": "evidence/raw/wu_singh_references/ref02_crossref.json",
+      "oa_metadata_raw": "evidence/raw/wu_singh_references/ref02_openalex.json",
+      "verification": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。",
+      "saved_path": "",
+      "locator": "出版社Abstract; Introduction(main contribution paragraph); Results section snippet; Discussion and conclusions"
+    },
+    {
+      "source_id": "SWSC003",
+      "title": "A new embedded vision system for monitoring tool conditions in production lines using a combination of direct and indirect methods",
+      "publisher": "Elsevier BV",
+      "year": 2023,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1526612523007120",
+      "doi": "10.1016/j.jmapro.2023.07.028",
+      "type": "原著",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "metadata_raw": "evidence/raw/wu_singh_references/ref03_crossref.json",
+      "oa_metadata_raw": "evidence/raw/wu_singh_references/ref03_openalex.json",
+      "verification": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得",
+      "saved_path": "",
+      "locator": "出版社Abstract; Introduction; Implementation and case study section snippet"
+    },
+    {
+      "source_id": "SWSC004",
+      "title": "Systematic approach for generating diversity-enhanced image dataset for vision-based on-machine tool wear monitoring systems",
+      "publisher": "Springer Science and Business Media LLC",
+      "year": 2026,
+      "url": "https://link.springer.com/article/10.1007/s00170-026-17619-3",
+      "doi": "10.1007/s00170-026-17619-3",
+      "type": "原著",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "metadata_raw": "evidence/raw/wu_singh_references/ref04_crossref.json",
+      "oa_metadata_raw": "evidence/raw/wu_singh_references/ref04_openalex.json",
+      "verification": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。",
+      "saved_path": "",
+      "locator": "出版社Abstract; Fig1(input setup); Fig2(labels/counts/split); Fig6(classification pipeline); Fig7(test confusion)",
+      "published": "2026-02-11",
+      "figure_sources": [
+        {
+          "figure": 1,
+          "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00170-026-17619-3/MediaObjects/170_2026_17619_Fig1_HTML.png",
+          "saved_path": "evidence/raw/wu_singh_references/singh_dataset2026_fig1.png"
+        },
+        {
+          "figure": 2,
+          "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00170-026-17619-3/MediaObjects/170_2026_17619_Fig2_HTML.png",
+          "saved_path": "evidence/raw/wu_singh_references/singh_dataset2026_fig2.png"
+        },
+        {
+          "figure": 6,
+          "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00170-026-17619-3/MediaObjects/170_2026_17619_Fig6_HTML.png",
+          "saved_path": "evidence/raw/wu_singh_references/singh_dataset2026_fig6.png"
+        },
+        {
+          "figure": 7,
+          "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00170-026-17619-3/MediaObjects/170_2026_17619_Fig7_HTML.png",
+          "saved_path": "evidence/raw/wu_singh_references/singh_dataset2026_fig7.png"
+        }
+      ]
+    },
+    {
+      "source_id": "SWSC005",
+      "title": "Wear status prediction of micro milling tools by transfer learning and ViT model",
+      "publisher": "IEEE",
+      "year": 2021,
+      "url": "https://ieeexplore.ieee.org/document/9599807",
+      "doi": "10.1109/3M-NANO49087.2021.9599807",
+      "type": "原著",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "metadata_raw": "evidence/raw/wu_singh_references/ref05_crossref.json",
+      "oa_metadata_raw": "evidence/raw/wu_singh_references/ref05_openalex.json",
+      "verification": "書誌確認、IEEE本文未取得",
+      "saved_path": "",
+      "locator": "Crossref metadata"
+    },
+    {
+      "source_id": "SWSC006",
+      "title": "IEEE 3M-NANO 2021 Conference Program Digest",
+      "url": "https://nanophys.ru/data/documents/IEEE-3M-NANO-2021-Conference-Program-Digest.pdf",
+      "type": "著者発表要約を含む学会program digest",
+      "primary": true,
+      "verification": "Web PDFの発表20-1該当ページ確認。原論文全文ではない。",
+      "saved_path": "",
+      "locator": "printed p.67 / PDF p.76 / 20-1",
+      "accessed": "2026-11-11"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CWSC001",
+      "entity_id": "SWRC17",
+      "field": "input",
+      "claim": "Keyence VHX-6000顕微鏡による実工具画像",
+      "status": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC002",
+      "entity_id": "SWRC17",
+      "field": "output",
+      "claim": "工具形状5種分類／摩耗領域のsemantic segmentation。名前付き摩耗機構カテゴリ出力ではない。",
+      "status": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC003",
+      "entity_id": "SWRC17",
+      "field": "model",
+      "claim": "工具形状：simple CNN（§2.5、Table5）。摩耗領域：U-Net（FCN）、One-for-all／工具別One-for-each。",
+      "status": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC004",
+      "entity_id": "SWRC17",
+      "field": "decision",
+      "claim": "除外",
+      "status": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC005",
+      "entity_id": "SWRC18",
+      "field": "input",
+      "claim": "機上の旋削インサート実写。K|Lensは1露光で9視点。",
+      "status": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC006",
+      "entity_id": "SWRC18",
+      "field": "output",
+      "claim": "工具状態の許容／非許容の二値分類",
+      "status": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC007",
+      "entity_id": "SWRC18",
+      "field": "model",
+      "claim": "CNN binary classifier。specializedモデルはXception（原著Results preview）。universalモデルの具体構造は今回原著未確認。",
+      "status": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC008",
+      "entity_id": "SWRC18",
+      "field": "decision",
+      "claim": "除外（公開原著該当箇所で二値出力確認）",
+      "status": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC009",
+      "entity_id": "SWRC19",
+      "field": "input",
+      "claim": "ATC内embedded visionによるstep drill実写、およびelectric current・vibration sensor features",
+      "status": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC010",
+      "entity_id": "SWRC19",
+      "field": "output",
+      "claim": "工具状態監視。種類名を出力する証拠は今回原著公開範囲で未確認。",
+      "status": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC011",
+      "entity_id": "SWRC19",
+      "field": "model",
+      "claim": "実画像U-Net、電流・振動特徴量Random Forest、両方式の融合",
+      "status": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC012",
+      "entity_id": "SWRC19",
+      "field": "decision",
+      "claim": "保留（本文・原語出力ラベル未取得、二値除外候補）",
+      "status": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC013",
+      "entity_id": "SWRC21",
+      "field": "input",
+      "claim": "機上顕微鏡の工具刃先RGB実写画像。機上撮像のvariabilityを画像拡張で模擬。",
+      "status": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC014",
+      "entity_id": "SWRC21",
+      "field": "output",
+      "claim": "4種の工具摩耗・損傷状態。Softmax最大確率の単一カテゴリ（Fig6）。",
+      "status": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC015",
+      "entity_id": "SWRC21",
+      "field": "model",
+      "claim": "EfficientNet-b0、transfer learning、CNN画像分類。GradCAMは誤分類解釈。",
+      "status": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC016",
+      "entity_id": "SWRC21",
+      "field": "decision",
+      "claim": "適合確認（本文詳細未取得）",
+      "status": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC017",
+      "entity_id": "SWRC29",
+      "field": "input",
+      "claim": "マイクロミリング工具rear face wear画像（著者発表digest）。",
+      "status": "Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。"
+    },
+    {
+      "claim_id": "CWSC018",
+      "entity_id": "SWRC29",
+      "field": "output",
+      "claim": "wear status prediction、原著全クラス未確認",
+      "status": "Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。"
+    },
+    {
+      "claim_id": "CWSC019",
+      "entity_id": "SWRC29",
+      "field": "model",
+      "claim": "ViT＋transfer learning（題名・著者digest）。",
+      "status": "Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。"
+    },
+    {
+      "claim_id": "CWSC020",
+      "entity_id": "SWRC29",
+      "field": "decision",
+      "claim": "保留（原著本文未取得、程度分類の除外候補）",
+      "status": "Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。"
+    },
+    {
+      "claim_id": "CWSC021",
+      "entity_id": "SWRC17",
+      "field": "original_labels",
+      "claim": [
+        "ball end mill",
+        "end mill",
+        "end mill with corner radius",
+        "insert",
+        "drill"
+      ],
+      "status": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC022",
+      "entity_id": "SWRC17",
+      "field": "performance",
+      "claim": {
+        "metric": "tool-type classification accuracy",
+        "value": 95.6,
+        "unit": "%",
+        "condition": "工具形状分類test242画像。摩耗種類分類の成績として使用不可。",
+        "locator": "§3.1 / Fig.21 / PDF p.8、誌面p.954"
+      },
+      "status": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC023",
+      "entity_id": "SWRC17",
+      "field": "performance",
+      "claim": {
+        "metric": "wear segmentation mean IoU",
+        "value": 0.73,
+        "unit": "ratio",
+        "condition": "One-for-all test。分類Accuracyとは異なる指標。",
+        "locator": "Table7 / §3.2 / PDF p.9、誌面p.955"
+      },
+      "status": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC024",
+      "entity_id": "SWRC17",
+      "field": "performance",
+      "claim": {
+        "metric": "wear segmentation mean IoU",
+        "value": 0.37,
+        "unit": "ratio",
+        "condition": "未知工具・撮像摂動inference画像、通常testとは別。",
+        "locator": "§3.2–4 / PDF p.10、誌面p.956"
+      },
+      "status": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC025",
+      "entity_id": "SWRC18",
+      "field": "original_labels",
+      "claim": [
+        "acceptable (OK)",
+        "non-acceptable (NOK)"
+      ],
+      "status": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC026",
+      "entity_id": "SWRC18",
+      "field": "performance",
+      "claim": {
+        "metric": "binary classification accuracy (up to)",
+        "value": 97.8,
+        "unit": "%",
+        "condition": "4インサート種類、roundで良好／rhombicへ失敗。最良条件のデータ数・splitは本文未取得で未確認。摩耗種類Accuracyではない。",
+        "locator": "Abstract / Introduction / Discussion"
+      },
+      "status": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC027",
+      "entity_id": "SWRC18",
+      "field": "performance",
+      "claim": {
+        "metric": "Matthews correlation coefficient",
+        "value": 0.955,
+        "unit": "ratio",
+        "condition": "上記binary結果。",
+        "locator": "Abstract / Introduction"
+      },
+      "status": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC028",
+      "entity_id": "SWRC19",
+      "field": "performance",
+      "claim": {
+        "metric": "accuracy",
+        "value": 91,
+        "unit": "%",
+        "condition": "embedded step-drill images/U-Net、クラス・split未確認",
+        "locator": "Abstract"
+      },
+      "status": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC029",
+      "entity_id": "SWRC19",
+      "field": "performance",
+      "claim": {
+        "metric": "accuracy",
+        "value": 95,
+        "unit": "%",
+        "condition": "current+vibration features/Random Forest、クラス・split未確認",
+        "locator": "Abstract"
+      },
+      "status": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC030",
+      "entity_id": "SWRC19",
+      "field": "performance",
+      "claim": {
+        "metric": "accuracy",
+        "value": 96,
+        "unit": "%",
+        "condition": "image methodとsensor method融合、原著Abstract。種類分類の成績とは認定しない。",
+        "locator": "Abstract"
+      },
+      "status": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC031",
+      "entity_id": "SWRC21",
+      "field": "original_labels",
+      "claim": [
+        "Flank",
+        "Flank +BUE",
+        "Flank + Face",
+        "Chipping"
+      ],
+      "status": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC032",
+      "entity_id": "SWRC21",
+      "field": "performance",
+      "claim": {
+        "metric": "classification accuracy",
+        "value": 84.16,
+        "unit": "%",
+        "condition": "原著Abstract報告値。Fig7 test混同行列は120件、対角101件（101/120=84.166...%）。原test40画像を複合augmentationで拡張。",
+        "locator": "Abstract; Fig2; Fig7"
+      },
+      "status": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC033",
+      "entity_id": "SWRC21",
+      "field": "performance",
+      "claim": {
+        "metric": "Matthews Correlation Coefficient",
+        "value": 0.772,
+        "unit": "ratio",
+        "condition": "Abstract。本文表・式は未取得。",
+        "locator": "Abstract"
+      },
+      "status": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC034",
+      "entity_id": "SWRC21",
+      "field": "performance",
+      "claim": {
+        "metric": "Flank + BUE recall (derived)",
+        "value": 33.3333333333,
+        "unit": "%",
+        "condition": "今回Fig7から計算：5/15。著者がrecall値として報告したと推定しない。",
+        "locator": "Fig7 row2"
+      },
+      "status": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC035",
+      "entity_id": "SWRC21",
+      "field": "data_and_split",
+      "claim": {
+        "original_images": 200,
+        "train_original": 160,
+        "test_original": 40,
+        "train_original_per_class": [
+          74,
+          12,
+          54,
+          20
+        ],
+        "test_original_per_class": [
+          15,
+          5,
+          15,
+          5
+        ],
+        "augmented_train": 28000,
+        "augmented_train_per_class": [
+          7000,
+          7000,
+          7000,
+          7000
+        ],
+        "test_confusion_total": 120,
+        "source": "Fig2; Abstract; Fig7"
+      },
+      "status": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC036",
+      "entity_id": "SWRC29",
+      "field": "performance",
+      "claim": {
+        "metric": "generalizability prediction accuracy",
+        "value": 92.5,
+        "unit": "%",
+        "condition": "著者発表digest報告。test件数・分割・クラス不明、種類分類精度と扱わない。",
+        "locator": "Conference Program Digest printed p.67 / PDF p.76 / presentation20-1"
+      },
+      "status": "Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "claim_id": "CWSC001",
+      "source_id": "SWSC001",
+      "locator": "§2.2 Table3、§2.5 Table5、§3.1 Fig21、§3.2 Table7、§4; PDF pp.5–10",
+      "quote": "",
+      "verification": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC002",
+      "source_id": "SWSC001",
+      "locator": "§2.2 Table3、§2.5 Table5、§3.1 Fig21、§3.2 Table7、§4; PDF pp.5–10",
+      "quote": "",
+      "verification": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC003",
+      "source_id": "SWSC001",
+      "locator": "§2.2 Table3、§2.5 Table5、§3.1 Fig21、§3.2 Table7、§4; PDF pp.5–10",
+      "quote": "",
+      "verification": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC004",
+      "source_id": "SWSC001",
+      "locator": "§2.2 Table3、§2.5 Table5、§3.1 Fig21、§3.2 Table7、§4; PDF pp.5–10",
+      "quote": "",
+      "verification": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC005",
+      "source_id": "SWSC002",
+      "locator": "出版社Abstract; Introduction(main contribution paragraph); Results section snippet; Discussion and conclusions",
+      "quote": "",
+      "verification": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC006",
+      "source_id": "SWSC002",
+      "locator": "出版社Abstract; Introduction(main contribution paragraph); Results section snippet; Discussion and conclusions",
+      "quote": "",
+      "verification": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC007",
+      "source_id": "SWSC002",
+      "locator": "出版社Abstract; Introduction(main contribution paragraph); Results section snippet; Discussion and conclusions",
+      "quote": "",
+      "verification": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC008",
+      "source_id": "SWSC002",
+      "locator": "出版社Abstract; Introduction(main contribution paragraph); Results section snippet; Discussion and conclusions",
+      "quote": "",
+      "verification": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC009",
+      "source_id": "SWSC003",
+      "locator": "出版社Abstract; Introduction; Implementation and case study section snippet",
+      "quote": "",
+      "verification": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC010",
+      "source_id": "SWSC003",
+      "locator": "出版社Abstract; Introduction; Implementation and case study section snippet",
+      "quote": "",
+      "verification": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC011",
+      "source_id": "SWSC003",
+      "locator": "出版社Abstract; Introduction; Implementation and case study section snippet",
+      "quote": "",
+      "verification": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC012",
+      "source_id": "SWSC003",
+      "locator": "出版社Abstract; Introduction; Implementation and case study section snippet",
+      "quote": "",
+      "verification": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC013",
+      "source_id": "SWSC004",
+      "locator": "出版社Abstract; Fig1(input setup); Fig2(labels/counts/split); Fig6(classification pipeline); Fig7(test confusion)",
+      "quote": "",
+      "verification": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC014",
+      "source_id": "SWSC004",
+      "locator": "出版社Abstract; Fig1(input setup); Fig2(labels/counts/split); Fig6(classification pipeline); Fig7(test confusion)",
+      "quote": "",
+      "verification": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC015",
+      "source_id": "SWSC004",
+      "locator": "出版社Abstract; Fig1(input setup); Fig2(labels/counts/split); Fig6(classification pipeline); Fig7(test confusion)",
+      "quote": "",
+      "verification": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC016",
+      "source_id": "SWSC004",
+      "locator": "出版社Abstract; Fig1(input setup); Fig2(labels/counts/split); Fig6(classification pipeline); Fig7(test confusion)",
+      "quote": "",
+      "verification": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC017",
+      "source_id": "SWSC006",
+      "locator": "Program Digest, printed p.67 / PDF p.76, presentation20-1",
+      "quote": "",
+      "verification": "Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。"
+    },
+    {
+      "claim_id": "CWSC018",
+      "source_id": "SWSC005",
+      "locator": "著者会議digest20-1; 原論文本文未取得",
+      "quote": "",
+      "verification": "Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。"
+    },
+    {
+      "claim_id": "CWSC019",
+      "source_id": "SWSC006",
+      "locator": "Program Digest, printed p.67 / PDF p.76, presentation20-1",
+      "quote": "",
+      "verification": "Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。"
+    },
+    {
+      "claim_id": "CWSC020",
+      "source_id": "SWSC005",
+      "locator": "著者会議digest20-1; 原論文本文未取得",
+      "quote": "",
+      "verification": "Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。"
+    },
+    {
+      "claim_id": "CWSC021",
+      "source_id": "SWSC001",
+      "locator": "§2.2 Table3、§2.5 Table5、§3.1 Fig21、§3.2 Table7、§4; PDF pp.5–10",
+      "quote": "",
+      "verification": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC022",
+      "source_id": "SWSC001",
+      "locator": "§3.1 / Fig.21 / PDF p.8、誌面p.954",
+      "quote": "",
+      "verification": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC023",
+      "source_id": "SWSC001",
+      "locator": "Table7 / §3.2 / PDF p.9、誌面p.955",
+      "quote": "",
+      "verification": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC024",
+      "source_id": "SWSC001",
+      "locator": "§3.2–4 / PDF p.10、誌面p.956",
+      "quote": "",
+      "verification": "公開原著PDFの方法・結果・考察を確認"
+    },
+    {
+      "claim_id": "CWSC025",
+      "source_id": "SWSC002",
+      "locator": "出版社Abstract; Introduction(main contribution paragraph); Results section snippet; Discussion and conclusions",
+      "quote": "",
+      "verification": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC026",
+      "source_id": "SWSC002",
+      "locator": "Abstract / Introduction / Discussion",
+      "quote": "",
+      "verification": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC027",
+      "source_id": "SWSC002",
+      "locator": "Abstract / Introduction",
+      "quote": "",
+      "verification": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。"
+    },
+    {
+      "claim_id": "CWSC028",
+      "source_id": "SWSC003",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC029",
+      "source_id": "SWSC003",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC030",
+      "source_id": "SWSC003",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得"
+    },
+    {
+      "claim_id": "CWSC031",
+      "source_id": "SWSC004",
+      "locator": "出版社Abstract; Fig1(input setup); Fig2(labels/counts/split); Fig6(classification pipeline); Fig7(test confusion)",
+      "quote": "",
+      "verification": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC032",
+      "source_id": "SWSC004",
+      "locator": "Abstract; Fig2; Fig7",
+      "quote": "",
+      "verification": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC033",
+      "source_id": "SWSC004",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC034",
+      "source_id": "SWSC004",
+      "locator": "Fig7 row2",
+      "quote": "",
+      "verification": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC035",
+      "source_id": "SWSC004",
+      "locator": "Fig2 / Abstract",
+      "quote": "",
+      "verification": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+    },
+    {
+      "claim_id": "CWSC036",
+      "source_id": "SWSC006",
+      "locator": "Conference Program Digest printed p.67 / PDF p.76 / presentation20-1",
+      "quote": "",
+      "verification": "Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。"
+    }
+  ],
+  "search_log": [
+    {
+      "search_id": "QWSC001",
+      "executed_at": "2026-11-11（時分未記録）",
+      "provider": "web search_query",
+      "queries": [
+        "\"10.1016/j.promfg.2020.05.134\"",
+        "\"10.1016/j.jmsy.2023.03.005\"",
+        "\"10.1016/j.jmapro.2023.07.028\""
+      ],
+      "returned_count": null,
+      "total_hits": null,
+      "status": "実行済み",
+      "notes": "複数式の集約応答。式別返却数・総ヒット数は未提供。本文取得状態とは別。"
+    },
+    {
+      "search_id": "QWSC002",
+      "executed_at": "2026-11-11（時分未記録）",
+      "provider": "web search_query",
+      "queries": [
+        "\"10.1007/s00170-026-17619-3\"",
+        "\"10.1109/3M-NANO49087.2021.9599807\""
+      ],
+      "returned_count": null,
+      "total_hits": null,
+      "status": "実行済み",
+      "notes": "複数式の集約応答。式別返却数・総ヒット数は未提供。本文取得状態とは別。"
+    },
+    {
+      "search_id": "QWSC003",
+      "executed_at": "2026-11-11（時分未記録）",
+      "provider": "web search_query",
+      "queries": [
+        "\"CNN-based in situ tool wear detection\" pdf",
+        "\"A new embedded vision system\" \"pdf\"",
+        "\"Systematic approach for generating diversity-enhanced\" pdf",
+        "\"Wear status prediction of micro milling tools\" pdf"
+      ],
+      "returned_count": null,
+      "total_hits": null,
+      "status": "実行済み",
+      "notes": "複数式の集約応答。式別返却数・総ヒット数は未提供。本文取得状態とは別。"
+    },
+    {
+      "search_id": "QWSC004",
+      "executed_at": "2026-11-11（時分未記録）",
+      "provider": "web search_query",
+      "queries": [
+        "\"S0278612523000547\" pdf",
+        "\"CNN-based in situ\" site:tuprints.ulb.tu-darmstadt.de",
+        "\"A new embedded vision system for monitoring tool conditions\" Scharf",
+        "\"Systematic approach for generating diversity-enhanced image dataset\" Singh"
+      ],
+      "returned_count": null,
+      "total_hits": null,
+      "status": "実行済み",
+      "notes": "複数式の集約応答。式別返却数・総ヒット数は未提供。本文取得状態とは別。"
+    },
+    {
+      "search_id": "QWSC005",
+      "executed_at": "2026-11-11（時分未記録）",
+      "provider": "web search_query",
+      "queries": [
+        "\"CNN-based in situ tool wear detection\" \"pdf\" -site:ablesci.com -site:researchgate.net",
+        "\"A new embedded vision\" Scharf \"OK\" \"NOK\"",
+        "\"Systematic approach\" \"17619\" \"wear\" \"flank\""
+      ],
+      "returned_count": null,
+      "total_hits": null,
+      "status": "実行済み",
+      "notes": "複数式の集約応答。式別返却数・総ヒット数は未提供。本文取得状態とは別。"
+    },
+    {
+      "search_id": "QWSC006",
+      "executed_at": "2026-11-11（時分未記録）",
+      "provider": "web search_query",
+      "queries": [
+        "site:sciencedirect.com/science/article/pii/S0278612523000547 \"EfficientNet\"",
+        "site:sciencedirect.com/science/article/pii/S1526612523007120 \"OK\" \"NOK\"",
+        "\"Wear status prediction of micro milling tools\" \"no\" \"wear\"",
+        "\"Systematic approach for generating diversity-enhanced\" \"flank\""
+      ],
+      "returned_count": null,
+      "total_hits": null,
+      "status": "実行済み",
+      "notes": "複数式の集約応答。式別返却数・総ヒット数は未提供。本文取得状態とは別。"
+    }
+  ],
+  "retrieval_attempts": [
+    {
+      "url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "status": "今回ReferencesおよびIntroduction該当節を確認",
+      "saved_path": "",
+      "locator": "References [17],[18],[19],[21],[29]; Introduction"
+    },
+    {
+      "url": "https://d-nb.info/1229969632/34",
+      "status": "公開原著PDFの方法・結果・考察を確認",
+      "saved_path": "evidence/raw/wu_singh_references/bergs2020_dnb.pdf",
+      "locator": "§2.2 Table3、§2.5 Table5、§3.1 Fig21、§3.2 Table7、§4; PDF pp.5–10"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278612523000547",
+      "status": "出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。",
+      "saved_path": "",
+      "locator": "出版社Abstract; Introduction(main contribution paragraph); Results section snippet; Discussion and conclusions"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1526612523007120",
+      "status": "出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得",
+      "saved_path": "",
+      "locator": "出版社Abstract; Introduction; Implementation and case study section snippet"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00170-026-17619-3",
+      "status": "出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。",
+      "saved_path": "",
+      "locator": "出版社Abstract; Fig1(input setup); Fig2(labels/counts/split); Fig6(classification pipeline); Fig7(test confusion)"
+    },
+    {
+      "url": "https://ieeexplore.ieee.org/document/9599807",
+      "status": "書誌確認、IEEE本文未取得",
+      "saved_path": "",
+      "locator": "Crossref metadata"
+    },
+    {
+      "url": "https://nanophys.ru/data/documents/IEEE-3M-NANO-2021-Conference-Program-Digest.pdf",
+      "status": "Web PDFの発表20-1該当ページ確認。原論文全文ではない。",
+      "saved_path": "",
+      "locator": "printed p.67 / PDF p.76 / 20-1"
+    },
+    {
+      "url": "https://publications.rwth-aachen.de/record/793074/files/793074.pdf",
+      "status": "Web PDF本文取得成功、直接urllibは248byte HTMLchallenge。PDF保存と扱わずchallenge.htmlへ分離",
+      "saved_path": "evidence/raw/wu_singh_references/bergs2020_challenge.html"
+    },
+    {
+      "url": "https://link.springer.com/content/pdf/10.1007/s00170-026-17619-3.pdf",
+      "status": "Webはsubscription previewへredirect、本文未取得"
+    },
+    {
+      "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9599807",
+      "status": "Web取得不可"
+    },
+    {
+      "url": "https://tubiblio.ulb.tu-darmstadt.de/138109/",
+      "status": "Web timeout、OpenAlexのOA locationは有料出版社ページへのリンクであり本文PDF未取得"
+    },
+    {
+      "url": "https://nanophys.ru/data/documents/IEEE-3M-NANO-2021-Conference-Program-Digest.pdf",
+      "status": "Web PDFの該当著者要約確認。ローカルurllibは長時間無応答で中断、保存無し"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/bergs2020_challenge.html",
+      "bytes": 248,
+      "sha256": "4681fa6e4303ecc351521fa1c7c836c9f3d6774b11725d39885ec3bf8ff16561",
+      "file_written_at": "2026-11-11T14:47:33.969667+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/bergs2020_dnb.pdf",
+      "bytes": 3037807,
+      "sha256": "a5a6e4ec0b32ae189b19d860fc73e0e9d8dc4e0b20ca872b970c8d72e85fcafa",
+      "file_written_at": "2026-11-11T14:50:07.384604+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/ref01_crossref.json",
+      "bytes": 17828,
+      "sha256": "b37014e7ee846d7ba1ba8bf743a9382579ad9826d89a289c4e6bdf62ae657f73",
+      "file_written_at": "2026-11-11T14:46:29.896230+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/ref01_openalex.json",
+      "bytes": 20141,
+      "sha256": "b6c16a6524358a2e57b5f5114538e9463a4b840f0329598fac2203ea599c62a2",
+      "file_written_at": "2026-11-11T14:46:31.664565+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/ref02_crossref.json",
+      "bytes": 21677,
+      "sha256": "42ec137089e362af5c558391f76f1c4c943a91735afef8994b3c149918c19e62",
+      "file_written_at": "2026-11-11T14:46:33.525532+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/ref02_openalex.json",
+      "bytes": 19873,
+      "sha256": "ff3fd566e5998bd79929d72298b87f0fb0a4cfc5862ddc3b8b5488ce0b2371f4",
+      "file_written_at": "2026-11-11T14:46:34.974705+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/ref03_crossref.json",
+      "bytes": 15995,
+      "sha256": "7700cf110b04c45928c5084f068ab2b7fcce7a5eff53c3c5b4be6b71f8d152f0",
+      "file_written_at": "2026-11-11T14:46:36.896196+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/ref03_openalex.json",
+      "bytes": 14132,
+      "sha256": "3279574927e2a089de305442d52cbc0071be037a3ee0c3bc68f807280c16eeb2",
+      "file_written_at": "2026-11-11T14:46:38.333474+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/ref04_crossref.json",
+      "bytes": 16316,
+      "sha256": "eaae413158db27b693dadcca04aaff10d8c4e83905714c7e16dce1caec3f4e7e",
+      "file_written_at": "2026-11-11T14:46:40.145123+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/ref04_openalex.json",
+      "bytes": 15099,
+      "sha256": "3cc51958991f96106d1dcd3f74b111629dc91b5ba52c370f2b8aa9bf2b826210",
+      "file_written_at": "2026-11-11T14:46:41.613280+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/ref05_crossref.json",
+      "bytes": 5776,
+      "sha256": "e570fcc47719b7074662d8d256675778a118504ab01a129393fa4dcc9728da1e",
+      "file_written_at": "2026-11-11T14:46:43.303519+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/ref05_openalex.json",
+      "bytes": 16917,
+      "sha256": "b5aad4a23fced9657109d4254e99f72efa3d0b789a78c8fcf067b788f2928667",
+      "file_written_at": "2026-11-11T14:46:45.015828+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/singh_dataset2026_fig1.png",
+      "bytes": 717054,
+      "sha256": "3fb9d69a82cef9bfe5ad92f9c5bc60bbd392b48d529d1b85a235152579b2973c",
+      "file_written_at": "2026-11-11T14:50:14.531471+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/singh_dataset2026_fig2.png",
+      "bytes": 1206956,
+      "sha256": "bb2dd4dff80a581e755bb30d051be70b74a42412b0fc25798059b0751c62cc3f",
+      "file_written_at": "2026-11-11T14:50:15.927315+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/singh_dataset2026_fig6.png",
+      "bytes": 573603,
+      "sha256": "ea0aed8ede080da108f1dfccff0d165b9eaade02522f196a9a578eac0891ebed",
+      "file_written_at": "2026-11-11T14:50:52.992853+00:00"
+    },
+    {
+      "local_path": "evidence/raw/wu_singh_references/singh_dataset2026_fig7.png",
+      "bytes": 213858,
+      "sha256": "b7d54303d9f83abdd4b916c75940c42c55209c1d1290026a67eb16b608b5816d",
+      "file_written_at": "2026-11-11T14:50:49.871819+00:00"
+    }
+  ],
+  "notes": [
+    "既存比較表・台帳は変更していない。",
+    "適合1（既存候補WR2C003/RWU155の確認深化）、不適合2、保留2。",
+    "本文未取得のまま採用するのではなくref21は出版社原著Fig2/6/7で入力・全カテゴリ・分類出力・評価母数を直接確認できたため適合確認（本文詳細未取得）とする、というroot判断を反映。",
+    "全頁精読や全文取得と抄録/preview/図確認を区別。",
+    "ASME2023 10.1115/IMECE2023-113344（WR2C021）はroot担当の二次hop保留であり本担当5件に追加しない。"
+  ]
+}

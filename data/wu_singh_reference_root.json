@@ -1,0 +1,550 @@
+{
+  "as_of": "2026-11-12",
+  "candidates": [
+    {
+      "id": "FW2001",
+      "depth": 1,
+      "route": "FT002 [20]",
+      "authors": "Kumarほか",
+      "year": "2025（online 2024）",
+      "title": "HG-XAI: human-guided tool wear identification approach through augmentation of explainable artificial intelligence with machine vision",
+      "doi": "10.1007/s10845-024-02476-2",
+      "url": "https://link.springer.com/article/10.1007/s10845-024-02476-2",
+      "decision": "適合確認・既収録",
+      "input": "工具実写",
+      "classes": "Flank; Flank+BUE; Flank+Face; Chipping",
+      "model": "EfficientNet-b0＋人の判断＋XAI",
+      "performance_and_conditions": "Accuracy 93.08%。人の介入を含む。評価数・分割単位未確認",
+      "verification": "出版社抄録",
+      "locator": "Abstract; References（ASME2023への引用）"
+    },
+    {
+      "id": "FIA04",
+      "depth": 1,
+      "route": "FT002 [31]",
+      "authors": "Kumarほか",
+      "year": "2025（online 2024）",
+      "title": "Realizing on-machine tool wear monitoring through integration of vision-based system with CNC milling machine",
+      "doi": "10.1016/j.jmsy.2024.12.004",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278612524002978",
+      "decision": "適合確認・既収録",
+      "input": "機上顕微鏡の工具実写",
+      "classes": "Flank; Flank+BUE; Flank+Face; Chipping",
+      "model": "EfficientNet-b0／転移学習CNN",
+      "performance_and_conditions": "Accuracy 94.11%。未見テスト画像。件数・工具別分割未確認",
+      "verification": "出版社抄録・章抜粋",
+      "locator": "Abstract; CNN-based tool wear classification model"
+    },
+    {
+      "id": "FT001",
+      "depth": 1,
+      "route": "FT002 [22]",
+      "authors": "Wuほか",
+      "year": "2019",
+      "title": "Automatic Identification of Tool Wear Based on Convolutional Neural Network in Face Milling Process",
+      "doi": "10.3390/s19183817",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/",
+      "decision": "適合確認・今回の起点自身",
+      "input": "フェイスミル工具実写",
+      "classes": "Adhesive wear; Tool breakage; Rake face wear; Flank wear",
+      "model": "ToolWearnet CNN",
+      "performance_and_conditions": "平均recognition precision（著者AP）96.20%。Accuracyとは同一視しない。既存FT001より",
+      "verification": "公開本文・既存詳細抽出",
+      "locator": "§§3–4; Table7"
+    },
+    {
+      "id": "FIA01",
+      "depth": 2,
+      "route": "FT001 [11] → Ong2019 [19]",
+      "authors": "Sun・Yeh",
+      "year": "2018",
+      "title": "Using the Machine Vision Method to Develop an On-machine Insert Condition Monitoring System for Computer Numerical Control Turning Machine Tools",
+      "doi": "10.3390/ma11101977",
+      "url": "https://www.mdpi.com/1996-1944/11/10/1977",
+      "decision": "適合確認・既収録・二段目",
+      "input": "機上CCDの旋削インサート画像",
+      "classes": "BUE; fracture; chipping; normal wear; over-wear（逃げ面摩耗を2程度に分ける）",
+      "model": "輪郭・ヒストグラム・閾値ルール。CNNではない",
+      "performance_and_conditions": "独立Accuracy/F1なし。20インサートの実験例と反復測定。相対標準偏差を分類精度へ転用しない",
+      "verification": "公開本文・既存FIA01の詳細抽出",
+      "locator": "Abstract; §4; §5 Table1"
+    },
+    {
+      "id": "WR2C021",
+      "depth": 2,
+      "route": "FT002 [20] → HG-XAI参考文献Kumar2023",
+      "authors": "Kumarほか",
+      "year": "2023",
+      "title": "Vision-Based Tool Wear Classification During End-Milling of Inconel 718 Using a Pre-Trained Convolutional Neural Network",
+      "doi": "10.1115/IMECE2023-113344",
+      "url": "https://doi.org/10.1115/IMECE2023-113344",
+      "decision": "保留継続・既知候補・二段目",
+      "input": "工具画像（題名・前回機関抄録）",
+      "classes": "出力原語ラベル未確認。背景のcrater/chippingをラベルに転記しない",
+      "model": "既存候補記録ではEfficientNet-b3。今回本文再確認不可",
+      "performance_and_conditions": "未確認",
+      "verification": "HG-XAI参考文献と著者機関の業績で実在確認。DOI本文取得失敗",
+      "locator": "HG-XAI References; 著者業績Conference Publications 9"
+    },
+    {
+      "id": "WRC07",
+      "depth": 1,
+      "route": "FT001 [7]",
+      "authors": "García-Ordásほか",
+      "year": "2018",
+      "title": "Tool wear monitoring using an online, automatic and low cost system based on local texture",
+      "doi": "10.1016/j.ymssp.2018.04.035",
+      "url": "https://www.sciencedirect.com/science/article/pii/S088832701830236X",
+      "decision": "対象外",
+      "input": "工具刃先実写",
+      "classes": "serviceable / disposable",
+      "model": "LBP特徴＋SVM",
+      "performance_and_conditions": "90.26%は廃棄刃判定。摩耗種類成績には採用しない",
+      "verification": "原著抄録・公開抜粋",
+      "locator": "Abstract / Introduction"
+    },
+    {
+      "id": "WRC09",
+      "depth": 1,
+      "route": "FT001 [9]",
+      "authors": "García-Ordásほか",
+      "year": "2017（online 2016）",
+      "title": "A computer vision approach to analyze and classify tool wear level in milling processes using shape descriptors and machine learning techniques",
+      "doi": "10.1007/s00170-016-9541-0",
+      "url": "https://link.springer.com/article/10.1007/s00170-016-9541-0",
+      "decision": "対象外",
+      "input": "工具摩耗領域画像",
+      "classes": "low/high または low/medium/high",
+      "model": "B-ORCHIZ＋SVM",
+      "performance_and_conditions": "程度分類のため種類成績に不採用",
+      "verification": "原著抄録",
+      "locator": "Abstract"
+    },
+    {
+      "id": "WRC11",
+      "depth": 1,
+      "route": "FT001 [11]",
+      "authors": "Ong・Lee・Lau",
+      "year": "2019",
+      "title": "Tool condition monitoring in CNC end milling using wavelet neural network based on machine vision",
+      "doi": "10.1007/s00170-019-04020-6",
+      "url": "https://link.springer.com/article/10.1007/s00170-019-04020-6",
+      "decision": "対象外",
+      "input": "画像の摩耗領域特徴＋切削条件。粗さを加えた入力も比較",
+      "classes": "逃げ面摩耗の程度を予測。種類クラスなし",
+      "model": "Wavelet neural network",
+      "performance_and_conditions": "種類分類の精度は非該当",
+      "verification": "原著抄録",
+      "locator": "Abstract; References [19]"
+    },
+    {
+      "id": "WRC_S11",
+      "depth": 1,
+      "route": "FT002 [11]",
+      "authors": "Dai・Zhu",
+      "year": "2018",
+      "title": "A machine vision system for micro-milling tool condition monitoring",
+      "doi": "10.1016/j.precisioneng.2017.12.006",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0141635917302817",
+      "decision": "対象外",
+      "input": "微小ミリング工具画像",
+      "classes": "逃げ面摩耗等の量・面積・進展。種類クラスなし",
+      "model": "従来画像処理",
+      "performance_and_conditions": "種類分類の精度は非該当",
+      "verification": "原著抄録・公開抜粋",
+      "locator": "Abstract; Conclusions"
+    },
+    {
+      "id": "WRC_S12",
+      "depth": 1,
+      "route": "FT002 [12]",
+      "authors": "Pengほか",
+      "year": "2021",
+      "title": "Application of machine vision method in tool wear monitoring",
+      "doi": "10.1007/s00170-021-07522-4",
+      "url": "https://link.springer.com/article/10.1007/s00170-021-07522-4",
+      "decision": "対象外",
+      "input": "工具画像＋加工面テクスチャ",
+      "classes": "逃げ面摩耗面積・幅・程度。種類クラスなし",
+      "model": "画像処理・GLCM",
+      "performance_and_conditions": "種類分類の精度は非該当",
+      "verification": "原著抄録",
+      "locator": "Abstract"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SWS001",
+      "title": "HG-XAI: human-guided tool wear identification approach through augmentation of explainable artificial intelligence with machine vision",
+      "publisher": "原著出版社／PMC（下記URL）",
+      "year": "2025（online 2024）",
+      "url": "https://link.springer.com/article/10.1007/s10845-024-02476-2",
+      "doi": "10.1007/s10845-024-02476-2",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社抄録",
+      "locator": "Abstract; References（ASME2023への引用）"
+    },
+    {
+      "source_id": "SWS002",
+      "title": "Realizing on-machine tool wear monitoring through integration of vision-based system with CNC milling machine",
+      "publisher": "原著出版社／PMC（下記URL）",
+      "year": "2025（online 2024）",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278612524002978",
+      "doi": "10.1016/j.jmsy.2024.12.004",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社抄録・章抜粋",
+      "locator": "Abstract; CNN-based tool wear classification model"
+    },
+    {
+      "source_id": "SWS003",
+      "title": "Automatic Identification of Tool Wear Based on Convolutional Neural Network in Face Milling Process",
+      "publisher": "原著出版社／PMC（下記URL）",
+      "year": "2019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/",
+      "doi": "10.3390/s19183817",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "公開本文・既存詳細抽出",
+      "locator": "§§3–4; Table7"
+    },
+    {
+      "source_id": "SWS004",
+      "title": "Using the Machine Vision Method to Develop an On-machine Insert Condition Monitoring System for Computer Numerical Control Turning Machine Tools",
+      "publisher": "原著出版社／PMC（下記URL）",
+      "year": "2018",
+      "url": "https://www.mdpi.com/1996-1944/11/10/1977",
+      "doi": "10.3390/ma11101977",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "公開本文・既存FIA01の詳細抽出",
+      "locator": "Abstract; §4; §5 Table1"
+    },
+    {
+      "source_id": "SWS005",
+      "title": "Vision-Based Tool Wear Classification During End-Milling of Inconel 718 Using a Pre-Trained Convolutional Neural Network",
+      "publisher": "UNC Charlotte（著者の所属機関）",
+      "year": "2023",
+      "url": "https://webpages.charlotte.edu/aagarw31/publications.html",
+      "doi": "10.1115/IMECE2023-113344",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "HG-XAI参考文献と著者機関の業績で実在確認。DOI本文取得失敗",
+      "locator": "HG-XAI References; 著者業績Conference Publications 9"
+    },
+    {
+      "source_id": "SWS006",
+      "title": "Tool wear monitoring using an online, automatic and low cost system based on local texture",
+      "publisher": "原著出版社／PMC（下記URL）",
+      "year": "2018",
+      "url": "https://www.sciencedirect.com/science/article/pii/S088832701830236X",
+      "doi": "10.1016/j.ymssp.2018.04.035",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著抄録・公開抜粋",
+      "locator": "Abstract / Introduction"
+    },
+    {
+      "source_id": "SWS007",
+      "title": "A computer vision approach to analyze and classify tool wear level in milling processes using shape descriptors and machine learning techniques",
+      "publisher": "原著出版社／PMC（下記URL）",
+      "year": "2017（online 2016）",
+      "url": "https://link.springer.com/article/10.1007/s00170-016-9541-0",
+      "doi": "10.1007/s00170-016-9541-0",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著抄録",
+      "locator": "Abstract"
+    },
+    {
+      "source_id": "SWS008",
+      "title": "Tool condition monitoring in CNC end milling using wavelet neural network based on machine vision",
+      "publisher": "原著出版社／PMC（下記URL）",
+      "year": "2019",
+      "url": "https://link.springer.com/article/10.1007/s00170-019-04020-6",
+      "doi": "10.1007/s00170-019-04020-6",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著抄録",
+      "locator": "Abstract; References [19]"
+    },
+    {
+      "source_id": "SWS009",
+      "title": "A machine vision system for micro-milling tool condition monitoring",
+      "publisher": "原著出版社／PMC（下記URL）",
+      "year": "2018",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0141635917302817",
+      "doi": "10.1016/j.precisioneng.2017.12.006",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著抄録・公開抜粋",
+      "locator": "Abstract; Conclusions"
+    },
+    {
+      "source_id": "SWS010",
+      "title": "Application of machine vision method in tool wear monitoring",
+      "publisher": "原著出版社／PMC（下記URL）",
+      "year": "2021",
+      "url": "https://link.springer.com/article/10.1007/s00170-021-07522-4",
+      "doi": "10.1007/s00170-021-07522-4",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著抄録",
+      "locator": "Abstract"
+    },
+    {
+      "source_id": "SWS011",
+      "title": "Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718",
+      "publisher": "MDPI",
+      "year": 2026,
+      "url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "doi": "10.3390/machines14060589",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著IntroductionとReferencesの該当節確認",
+      "locator": "References [1–36]; Introduction"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CWS001",
+      "entity_id": "FW2001",
+      "claim": "入力: 工具実写。出力: Flank; Flank+BUE; Flank+Face; Chipping。モデル: EfficientNet-b0＋人の判断＋XAI。Accuracy 93.08%。人の介入を含む。評価数・分割単位未確認",
+      "verification": "出版社抄録"
+    },
+    {
+      "claim_id": "CWS002",
+      "entity_id": "FIA04",
+      "claim": "入力: 機上顕微鏡の工具実写。出力: Flank; Flank+BUE; Flank+Face; Chipping。モデル: EfficientNet-b0／転移学習CNN。Accuracy 94.11%。未見テスト画像。件数・工具別分割未確認",
+      "verification": "出版社抄録・章抜粋"
+    },
+    {
+      "claim_id": "CWS003",
+      "entity_id": "FT001",
+      "claim": "入力: フェイスミル工具実写。出力: Adhesive wear; Tool breakage; Rake face wear; Flank wear。モデル: ToolWearnet CNN。平均recognition precision（著者AP）96.20%。Accuracyとは同一視しない。既存FT001より",
+      "verification": "公開本文・既存詳細抽出"
+    },
+    {
+      "claim_id": "CWS004",
+      "entity_id": "FIA01",
+      "claim": "入力: 機上CCDの旋削インサート画像。出力: BUE; fracture; chipping; normal wear; over-wear（逃げ面摩耗を2程度に分ける）。モデル: 輪郭・ヒストグラム・閾値ルール。CNNではない。独立Accuracy/F1なし。20インサートの実験例と反復測定。相対標準偏差を分類精度へ転用しない",
+      "verification": "公開本文・既存FIA01の詳細抽出"
+    },
+    {
+      "claim_id": "CWS005",
+      "entity_id": "WRC07",
+      "claim": "入力: 工具刃先実写。出力: serviceable / disposable。モデル: LBP特徴＋SVM。90.26%は廃棄刃判定。摩耗種類成績には採用しない",
+      "verification": "原著抄録・公開抜粋"
+    },
+    {
+      "claim_id": "CWS006",
+      "entity_id": "WRC09",
+      "claim": "入力: 工具摩耗領域画像。出力: low/high または low/medium/high。モデル: B-ORCHIZ＋SVM。程度分類のため種類成績に不採用",
+      "verification": "原著抄録"
+    },
+    {
+      "claim_id": "CWS007",
+      "entity_id": "WRC11",
+      "claim": "入力: 画像の摩耗領域特徴＋切削条件。粗さを加えた入力も比較。出力: 逃げ面摩耗の程度を予測。種類クラスなし。モデル: Wavelet neural network。種類分類の精度は非該当",
+      "verification": "原著抄録"
+    },
+    {
+      "claim_id": "CWS008",
+      "entity_id": "WRC_S11",
+      "claim": "入力: 微小ミリング工具画像。出力: 逃げ面摩耗等の量・面積・進展。種類クラスなし。モデル: 従来画像処理。種類分類の精度は非該当",
+      "verification": "原著抄録・公開抜粋"
+    },
+    {
+      "claim_id": "CWS009",
+      "entity_id": "WRC_S12",
+      "claim": "入力: 工具画像＋加工面テクスチャ。出力: 逃げ面摩耗面積・幅・程度。種類クラスなし。モデル: 画像処理・GLCM。種類分類の精度は非該当",
+      "verification": "原著抄録"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "claim_id": "CWS001",
+      "source_id": "SWS001",
+      "locator": "Abstract; References（ASME2023への引用）",
+      "verification": "出版社抄録",
+      "quote": ""
+    },
+    {
+      "claim_id": "CWS002",
+      "source_id": "SWS002",
+      "locator": "Abstract; CNN-based tool wear classification model",
+      "verification": "出版社抄録・章抜粋",
+      "quote": ""
+    },
+    {
+      "claim_id": "CWS003",
+      "source_id": "SWS003",
+      "locator": "§§3–4; Table7",
+      "verification": "公開本文・既存詳細抽出",
+      "quote": ""
+    },
+    {
+      "claim_id": "CWS004",
+      "source_id": "SWS004",
+      "locator": "Abstract; §4; §5 Table1",
+      "verification": "公開本文・既存FIA01の詳細抽出",
+      "quote": ""
+    },
+    {
+      "claim_id": "CWS005",
+      "source_id": "SWS006",
+      "locator": "Abstract / Introduction",
+      "verification": "原著抄録・公開抜粋",
+      "quote": ""
+    },
+    {
+      "claim_id": "CWS006",
+      "source_id": "SWS007",
+      "locator": "Abstract",
+      "verification": "原著抄録",
+      "quote": ""
+    },
+    {
+      "claim_id": "CWS007",
+      "source_id": "SWS008",
+      "locator": "Abstract; References [19]",
+      "verification": "原著抄録",
+      "quote": ""
+    },
+    {
+      "claim_id": "CWS008",
+      "source_id": "SWS009",
+      "locator": "Abstract; Conclusions",
+      "verification": "原著抄録・公開抜粋",
+      "quote": ""
+    },
+    {
+      "claim_id": "CWS009",
+      "source_id": "SWS010",
+      "locator": "Abstract",
+      "verification": "原著抄録",
+      "quote": ""
+    }
+  ],
+  "citation_edges": [
+    {
+      "edge_id": "EWS1",
+      "entity_id": "FW2001",
+      "route": "FT002 [20]",
+      "depth": 1,
+      "evidence_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "status": "原著参考文献で確認"
+    },
+    {
+      "edge_id": "EWS2",
+      "entity_id": "FIA04",
+      "route": "FT002 [31]",
+      "depth": 1,
+      "evidence_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "status": "原著参考文献で確認"
+    },
+    {
+      "edge_id": "EWS3",
+      "entity_id": "FT001",
+      "route": "FT002 [22]",
+      "depth": 1,
+      "evidence_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "status": "原著参考文献で確認"
+    },
+    {
+      "edge_id": "EWS4",
+      "entity_id": "FIA01",
+      "route": "FT001 [11] → Ong2019 [19]",
+      "depth": 2,
+      "evidence_url": "https://link.springer.com/article/10.1007/s00170-019-04020-6",
+      "status": "原著参考文献で確認"
+    },
+    {
+      "edge_id": "EWS5",
+      "entity_id": "WR2C021",
+      "route": "FT002 [20] → HG-XAI参考文献Kumar2023",
+      "depth": 2,
+      "evidence_url": "https://link.springer.com/article/10.1007/s10845-024-02476-2",
+      "status": "原著参考文献で確認"
+    },
+    {
+      "edge_id": "EWS6",
+      "entity_id": "WRC07",
+      "route": "FT001 [7]",
+      "depth": 1,
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/",
+      "status": "原著参考文献で確認"
+    },
+    {
+      "edge_id": "EWS7",
+      "entity_id": "WRC09",
+      "route": "FT001 [9]",
+      "depth": 1,
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/",
+      "status": "原著参考文献で確認"
+    },
+    {
+      "edge_id": "EWS8",
+      "entity_id": "WRC11",
+      "route": "FT001 [11]",
+      "depth": 1,
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/",
+      "status": "原著参考文献で確認"
+    },
+    {
+      "edge_id": "EWS9",
+      "entity_id": "WRC_S11",
+      "route": "FT002 [11]",
+      "depth": 1,
+      "evidence_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "status": "原著参考文献で確認"
+    },
+    {
+      "edge_id": "EWS10",
+      "entity_id": "WRC_S12",
+      "route": "FT002 [12]",
+      "depth": 1,
+      "evidence_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "status": "原著参考文献で確認"
+    }
+  ],
+  "retrieval_attempts": [
+    {
+      "attempt_id": "AWS001",
+      "url": "https://www.mdpi.com/1424-8220/19/18/3817",
+      "executed_at": "2026-11-11（時分未記録）",
+      "route": "Web open",
+      "result": "初回429。PMC公開本文へ切替して確認",
+      "fallback": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/"
+    },
+    {
+      "attempt_id": "AWS002",
+      "url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "executed_at": "2026-11-11（時分未記録）",
+      "route": "Web open",
+      "result": "初回cache miss、後続のWeb検索・openで本文確認"
+    },
+    {
+      "attempt_id": "AWS003",
+      "url": "seed2本のWeb本文",
+      "executed_at": "2026-11-11（時分未記録）",
+      "route": "Python urllibローカル保存",
+      "result": "DNS解決失敗、保存なし。Webツールで確認。"
+    },
+    {
+      "attempt_id": "AWS004",
+      "url": "https://doi.org/10.1115/IMECE2023-113344",
+      "executed_at": "2026-11-11〜12（個別時刻は検索台帳）",
+      "route": "Web DOI・機関業績・著者profile",
+      "result": "DOI本文取得不可。機関業績で書誌確認、Clemson profileはiframeのみ。原語クラス保留継続。"
+    },
+    {
+      "attempt_id": "AWS005",
+      "url": "https://doi.org/10.13196/j.cims.2017.10.008",
+      "executed_at": "2026-11-11〜12（個別時刻は検索台帳）",
+      "route": "Web DOI",
+      "result": "本文取得不可。Wuの引用文脈は振動信号の画像化と説明。一次選別段階を保持。"
+    }
+  ]
+}

@@ -4,6 +4,10 @@
 
 ## 成果物と利用方法
 
+### Wu・Singhの参考文献からの追加確認（2026-11-12）
+
+[追補レポート](reports/wu_singh_reference_followup.md)／[直接参考文献67件の採否](evidence/wu_singh_references/references.csv)／[候補のクラス・成績](evidence/wu_singh_references/candidate_checks.csv)。Wu2019とSingh2026の直接引用を一次選別し、Wu自身を除く3本の適合を確認。旧保留WR2C003は出版社公開図で4種類名を確認した。旧Excel・HTML・キットへは未統合のため、この判定差分は追補を参照する。
+
 ### テーマを変えて使う文献調査キット
 
 [現在の調査ダッシュボード](literature-review-kit/examples/tool-wear-review/outputs/dashboard.html) ／ [使い方](literature-review-kit/README.md) ／ [設計](literature-review-kit/DESIGN.md) ／ [AI用手順](literature-review-kit/SKILL.md)。検索式・全ヒット・採否・保存・読了・抽出・引用・追加指示をCSV/JSONへ保存し、単体HTMLで確認する。調査量・優先点・探索配分を変更できる。既存調査の移行例は48実行・366ヒット行・338論文台帳行であり、詳細比較済みの本数や世界全体の網羅率ではない。[検証結果と移行範囲](literature-review-kit/QA.md)を参照。

@@ -1,0 +1,628 @@
+{
+  "FT001": {
+    "DOI": "10.3390/s19183817",
+    "reference": [
+      {
+        "key": "ref_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "2175",
+        "DOI": "10.1016/j.ins.2008.10.016",
+        "article-title": "A hybrid learning algorithm for a class of interval type-2 fuzzy neural networks",
+        "volume": "179",
+        "author": "Castro",
+        "year": "2009",
+        "journal-title": "Inf. Sci."
+      },
+      {
+        "key": "ref_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "693",
+        "DOI": "10.1007/s00170-004-2038-2",
+        "article-title": "State-of-the-art methods and results in tool condition monitoring: A review",
+        "volume": "26",
+        "author": "Rehorn",
+        "year": "2005",
+        "journal-title": "Int. J. Adv. Manuf. Technol."
+      },
+      {
+        "key": "ref_3",
+        "doi-asserted-by": "crossref",
+        "first-page": "1525",
+        "DOI": "10.1016/S0890-6955(99)00018-8",
+        "article-title": "Tool wear detection with fuzzy classification and wavelet fuzzy neural network",
+        "volume": "39",
+        "author": "Yao",
+        "year": "1999",
+        "journal-title": "Int. J. Mach. Tools Manuf."
+      },
+      {
+        "key": "ref_4",
+        "doi-asserted-by": "crossref",
+        "first-page": "923",
+        "DOI": "10.1007/s10845-014-0941-4",
+        "article-title": "Cutting tool operational reliability prediction based on acoustic emission and logistic regression model",
+        "volume": "26",
+        "author": "Li",
+        "year": "2015",
+        "journal-title": "J. Intell. Manuf."
+      },
+      {
+        "key": "ref_5",
+        "doi-asserted-by": "crossref",
+        "first-page": "6400",
+        "DOI": "10.1109/ACCESS.2018.2797003",
+        "article-title": "Frequency and Time-Frequency Analysis of Cutting Force and Vibration Signals for Tool Condition Monitoring",
+        "volume": "6",
+        "author": "Jauregui",
+        "year": "2018",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "ref_6",
+        "doi-asserted-by": "crossref",
+        "first-page": "317",
+        "DOI": "10.1504/IJCAT.2011.042709",
+        "article-title": "Real-time tool condition monitoring of face milling using acousto-optic emission—An experimental approach",
+        "volume": "41",
+        "author": "Prasad",
+        "year": "2011",
+        "journal-title": "Int. J. Comput. Appl. Technol."
+      },
+      {
+        "key": "ref_7",
+        "doi-asserted-by": "crossref",
+        "first-page": "98",
+        "DOI": "10.1016/j.ymssp.2018.04.035",
+        "article-title": "Tool wear monitoring using an online, automatic and low cost system based on local texture",
+        "volume": "112",
+        "year": "2018",
+        "journal-title": "Mech. Syst. Signal Process."
+      },
+      {
+        "key": "ref_8",
+        "doi-asserted-by": "crossref",
+        "first-page": "503",
+        "DOI": "10.1016/j.ymssp.2017.11.022",
+        "article-title": "Predicting tool life in turning operations using neural networks and image processing",
+        "volume": "104",
+        "author": "Mikolajczyk",
+        "year": "2018",
+        "journal-title": "Mech. Syst. Signal Process."
+      },
+      {
+        "key": "ref_9",
+        "doi-asserted-by": "crossref",
+        "first-page": "1947",
+        "DOI": "10.1007/s00170-016-9541-0",
+        "article-title": "A computer vision approach to analyze and classify tool wear level in milling processes using shape descriptors and machine learning techniques",
+        "volume": "90",
+        "author": "Alegre",
+        "year": "2017",
+        "journal-title": "Int. J. Adv. Manuf. Technol."
+      },
+      {
+        "key": "ref_10",
+        "doi-asserted-by": "crossref",
+        "first-page": "1285",
+        "DOI": "10.1007/s10845-015-1155-0",
+        "article-title": "Tool-wear prediction and pattern-recognition using artificial neural network and DNA-based computing",
+        "volume": "28",
+        "author": "Ullah",
+        "year": "2017",
+        "journal-title": "J. Intellig. Manuf."
+      },
+      {
+        "key": "ref_11",
+        "first-page": "112",
+        "article-title": "Tool condition monitoring in CNC end milling using wavelet neural network based on machine vision",
+        "volume": "29",
+        "author": "Ong",
+        "year": "2019",
+        "journal-title": "Int. J. Adv. Manuf. Technol."
+      },
+      {
+        "key": "ref_12",
+        "doi-asserted-by": "crossref",
+        "first-page": "100",
+        "DOI": "10.1016/j.ymssp.2016.11.026",
+        "article-title": "Neural network approach for automatic image analysis of cutting edge wear",
+        "volume": "88",
+        "author": "Mikolajczyk",
+        "year": "2017",
+        "journal-title": "Mech. Syst. Signal Process."
+      },
+      {
+        "key": "ref_13",
+        "doi-asserted-by": "crossref",
+        "first-page": "55",
+        "DOI": "10.1126/science.1193270",
+        "article-title": "Piezo1 and Piezo2 are essential components of distinct mechanically-activated cation channels",
+        "volume": "330",
+        "author": "Bertrand",
+        "year": "2010",
+        "journal-title": "Science"
+      },
+      {
+        "key": "ref_14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sa, I., Ge, Z., Dayoub, F., Upcroft, B., Perez, T., and McCool, C. (2016). DeepFruits: A Fruit Detection System Using Deep Neural Networks. Sensors, 16.",
+        "DOI": "10.3390/s16081222"
+      },
+      {
+        "key": "ref_15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Fuentes, A., Yoon, S., Kim, S.C., and Park, D.S. (2017). A Robust Deep-Learning-Based Detector for Real-Time Tomato Plant Diseases and Pests Recognition. Sensors, 17.",
+        "DOI": "10.3390/s17092022"
+      },
+      {
+        "key": "ref_16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rahnemoonfar, M., and Sheppard, C. (2017). Deep Count: Fruit Counting Based on Deep Simulated Learning. Sensors, 17.",
+        "DOI": "10.3390/s17040905"
+      },
+      {
+        "key": "ref_17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, S., Liu, G., Tang, X., Lu, J., and Hu, J. (2017). An Ensemble Deep Convolutional Neural Network Model with Improved D-S Evidence Fusion for Bearing Fault Diagnosis. Sensors, 17.",
+        "DOI": "10.3390/s17081729"
+      },
+      {
+        "key": "ref_18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Guo, S., Yang, T., Gao, W., and Zhang, C. (2018). A Novel Fault Diagnosis Method for Rotating Machinery Based on a Convolutional Neural Network. Sensors, 18.",
+        "DOI": "10.3390/s18051429"
+      },
+      {
+        "key": "ref_19",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dai, M., Zheng, D., Na, R., Wang, S., and Zhang, S. (2019). EEG Classification of Motor Imagery Using a Novel Deep Learning Framework. Sensors, 19.",
+        "DOI": "10.3390/s19030551"
+      },
+      {
+        "key": "ref_20",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Al Machot, F., Elmachot, A., Ali, M., Al Machot, E., and Kyamakya, K. (2019). A Deep-Learning Model for Subject-Independent Human Emotion Recognition Using Electrodermal Activity Sensors. Sensors, 19.",
+        "DOI": "10.3390/s19071659"
+      },
+      {
+        "key": "ref_21",
+        "first-page": "1",
+        "article-title": "Gearbox fault identification and classification with convolutional neural networks",
+        "volume": "2015",
+        "author": "Chen",
+        "year": "2015",
+        "journal-title": "Shock Vib."
+      },
+      {
+        "key": "ref_22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang, W., Peng, G., Li, C., Chen, Y.H., and Zhang, Z.J. (2017). A New Deep Learning Model for Fault Diagnosis with Good Anti-Noise and Domain Adaptation Ability on Raw Vibration Signals. Sensors, 17.",
+        "DOI": "10.20944/preprints201701.0132.v1"
+      },
+      {
+        "key": "ref_23",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1016/j.measurement.2017.07.017",
+        "article-title": "A convolutional neural network based feature learning and fault diagnosis method for the condition monitoring of gearbox",
+        "volume": "111",
+        "author": "Jing",
+        "year": "2017",
+        "journal-title": "Measurement"
+      },
+      {
+        "key": "ref_24",
+        "doi-asserted-by": "crossref",
+        "first-page": "3217",
+        "DOI": "10.1007/s00170-018-2420-0",
+        "article-title": "Tool condition monitoring using spectral subtraction and convolutional neural networks in milling process",
+        "volume": "98",
+        "author": "Fatemeh",
+        "year": "2018",
+        "journal-title": "Int. J. Adv. Manuf. Technol."
+      },
+      {
+        "key": "ref_25",
+        "first-page": "2146",
+        "article-title": "Tool wear monitoring based on deep learning",
+        "volume": "23",
+        "author": "Zhang",
+        "year": "2017",
+        "journal-title": "Comput. Integr. Manuf. Syst."
+      },
+      {
+        "key": "ref_26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhao, R., Yan, R., Wang, J., and Mao, K. (2017). Learning to Monitor Machine Health with Convolutional Bi-Directional LSTM Networks. Sensors, 17.",
+        "DOI": "10.3390/s17020273"
+      },
+      {
+        "key": "ref_27",
+        "doi-asserted-by": "crossref",
+        "first-page": "1137",
+        "DOI": "10.1109/TPAMI.2016.2577031",
+        "article-title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+        "volume": "39",
+        "author": "Ren",
+        "year": "2017",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "key": "ref_28",
+        "doi-asserted-by": "crossref",
+        "first-page": "39",
+        "DOI": "10.1016/j.neunet.2014.08.005",
+        "article-title": "Deep Convolutional Neural Networks for Large-scale Speech Tasks",
+        "volume": "64",
+        "author": "Sainath",
+        "year": "2015",
+        "journal-title": "Neural Netw."
+      },
+      {
+        "key": "ref_29",
+        "doi-asserted-by": "crossref",
+        "first-page": "1691",
+        "DOI": "10.1162/089976699300016197",
+        "article-title": "A Computational Model for Visual Selection",
+        "volume": "11",
+        "author": "Amit",
+        "year": "1999",
+        "journal-title": "Neural Comput."
+      },
+      {
+        "key": "ref_30",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wen, S., Chen, Z., and Li, C. (2018). Vision-Based Surface Inspection System for Bearing Rollers Using Convolutional Neural Networks. Appl. Sci., 8.",
+        "DOI": "10.3390/app8122565"
+      },
+      {
+        "key": "ref_31",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhou, P., Zhou, G., Zhu, Z., Tang, C., He, Z., and Li, W. (2018). Health Monitoring for Balancing Tail Ropes of a Hoisting System Using a Convolutional Neural Network. Appl. Sci., 8.",
+        "DOI": "10.3390/app8081346"
+      }
+    ],
+    "metadata_source": "https://api.crossref.org/works/10.3390/s19183817",
+    "verification": "出版社/PMC参考文献との照合。書誌の不一致はreferences.csvへ記録"
+  },
+  "FT002": {
+    "DOI": "10.3390/machines14060589",
+    "reference": [
+      {
+        "key": "ref_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "101002",
+        "DOI": "10.1115/1.4062603",
+        "article-title": "Evaluation of Contrived Wear Methodology in End Milling of Inconel 718",
+        "volume": "145",
+        "author": "Potthoff",
+        "year": "2023",
+        "journal-title": "J. Manuf. Sci. Eng."
+      },
+      {
+        "key": "ref_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "3159",
+        "DOI": "10.1007/s00170-025-15983-0",
+        "article-title": "Machinability of Waspaloy: An investigation of cutting forces and tool wear in turning",
+        "volume": "139",
+        "author": "Veiga",
+        "year": "2025",
+        "journal-title": "Int. J. Adv. Manuf. Technol."
+      },
+      {
+        "key": "ref_3",
+        "doi-asserted-by": "crossref",
+        "first-page": "3296",
+        "DOI": "10.1007/s10853-009-3445-4",
+        "article-title": "An experimental analysis of effective high speed turning of superalloy Inconel 718",
+        "volume": "44",
+        "author": "Thakur",
+        "year": "2009",
+        "journal-title": "J. Mater. Sci."
+      },
+      {
+        "key": "ref_4",
+        "doi-asserted-by": "crossref",
+        "first-page": "1000",
+        "DOI": "10.1016/j.proeng.2017.01.252",
+        "article-title": "Tool wear assessment during machining of Inconel 718",
+        "volume": "174",
+        "author": "Xavior",
+        "year": "2017",
+        "journal-title": "Procedia Eng."
+      },
+      {
+        "key": "ref_5",
+        "doi-asserted-by": "crossref",
+        "first-page": "6001",
+        "DOI": "10.1007/s00170-024-13685-7",
+        "article-title": "The relationship between the cutting-edge, tool wear, and chip formation during Inconel 718 dry cutting",
+        "volume": "132",
+        "author": "Kumar",
+        "year": "2024",
+        "journal-title": "Int. J. Adv. Manuf. Technol."
+      },
+      {
+        "key": "ref_6",
+        "doi-asserted-by": "crossref",
+        "first-page": "150",
+        "DOI": "10.1016/j.measurement.2018.09.045",
+        "article-title": "State-of-the-art of surface integrity induced by tool wear effects in machining process of titanium and nickel alloys: A review",
+        "volume": "132",
+        "author": "Liang",
+        "year": "2019",
+        "journal-title": "Measurement"
+      },
+      {
+        "key": "ref_7",
+        "doi-asserted-by": "crossref",
+        "first-page": "2079",
+        "DOI": "10.1007/s10845-022-01923-2",
+        "article-title": "Artificial intelligence systems for tool condition monitoring in machining: Analysis and critical review",
+        "volume": "34",
+        "author": "Pimenov",
+        "year": "2023",
+        "journal-title": "J. Intell. Manuf."
+      },
+      {
+        "key": "ref_8",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang, H., Jiang, S., Gao, D., Sun, Y., and Bai, W. (2024). A review of physics-based, data-driven, and hybrid models for tool wear monitoring. Machines, 12.",
+        "DOI": "10.3390/machines12120833"
+      },
+      {
+        "key": "ref_9",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sheng, X., Zhu, Z., and Liu, C. (2026). A Review of the Machining Mechanisms in Field-Assisted Cutting of Brittle Materials. Micromachines, 17.",
+        "DOI": "10.3390/mi17030361"
+      },
+      {
+        "key": "ref_10",
+        "doi-asserted-by": "crossref",
+        "first-page": "109683",
+        "DOI": "10.1016/j.measurement.2021.109683",
+        "article-title": "A machine vision method for measurement of machining tool wear",
+        "volume": "182",
+        "author": "Yu",
+        "year": "2021",
+        "journal-title": "Measurement"
+      },
+      {
+        "key": "ref_11",
+        "doi-asserted-by": "crossref",
+        "first-page": "183",
+        "DOI": "10.1016/j.precisioneng.2017.12.006",
+        "article-title": "A machine vision system for micro-milling tool condition monitoring",
+        "volume": "52",
+        "author": "Dai",
+        "year": "2018",
+        "journal-title": "Precis. Eng."
+      },
+      {
+        "key": "ref_12",
+        "doi-asserted-by": "crossref",
+        "first-page": "1357",
+        "DOI": "10.1007/s00170-021-07522-4",
+        "article-title": "Application of machine vision method in tool wear monitoring",
+        "volume": "116",
+        "author": "Peng",
+        "year": "2021",
+        "journal-title": "Int. J. Adv. Manuf. Technol."
+      },
+      {
+        "key": "ref_13",
+        "doi-asserted-by": "crossref",
+        "first-page": "43",
+        "DOI": "10.1016/S0924-0136(00)00896-7",
+        "article-title": "Tool wear evaluation by stereo vision and prediction by artificial neural network",
+        "volume": "112",
+        "author": "Prasad",
+        "year": "2001",
+        "journal-title": "J. Mater. Process. Technol."
+      },
+      {
+        "key": "ref_14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mohamed, A., Hassan, M., M’Saoubi, R., and Attia, H. (2022). Tool condition monitoring for high-performance machining systems—A review. Sensors, 22.",
+        "DOI": "10.3390/s22062206"
+      },
+      {
+        "key": "ref_15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Munaro, R., Attanasio, A., and Del Prete, A. (2023). Tool wear monitoring with artificial intelligence methods: A review. J. Manuf. Mater. Process., 7.",
+        "DOI": "10.3390/jmmp7040129"
+      },
+      {
+        "key": "ref_16",
+        "doi-asserted-by": "crossref",
+        "first-page": "2683",
+        "DOI": "10.1007/s00170-021-07325-7",
+        "article-title": "A review on deep learning in machining and tool monitoring: Methods, opportunities, and challenges",
+        "volume": "115",
+        "author": "Nasir",
+        "year": "2021",
+        "journal-title": "Int. J. Adv. Manuf. Technol."
+      },
+      {
+        "key": "ref_17",
+        "doi-asserted-by": "crossref",
+        "first-page": "947",
+        "DOI": "10.1016/j.promfg.2020.05.134",
+        "article-title": "Digital image processing with deep learning for automated cutting tool wear detection",
+        "volume": "48",
+        "author": "Bergs",
+        "year": "2020",
+        "journal-title": "Procedia Manuf."
+      },
+      {
+        "key": "ref_18",
+        "doi-asserted-by": "crossref",
+        "first-page": "85",
+        "DOI": "10.1016/j.jmsy.2023.03.005",
+        "article-title": "CNN-based in situ tool wear detection: A study on model training and data augmentation in turning inserts",
+        "volume": "68",
+        "author": "Ziegenbein",
+        "year": "2023",
+        "journal-title": "J. Manuf. Sys."
+      },
+      {
+        "key": "ref_19",
+        "doi-asserted-by": "crossref",
+        "first-page": "143",
+        "DOI": "10.1016/j.jmapro.2023.07.028",
+        "article-title": "A new embedded vision system for monitoring tool conditions in production lines using a combination of direct and indirect methods",
+        "volume": "102",
+        "author": "Scharf",
+        "year": "2023",
+        "journal-title": "J. Manuf. Process."
+      },
+      {
+        "key": "ref_20",
+        "doi-asserted-by": "crossref",
+        "first-page": "4807",
+        "DOI": "10.1007/s10845-024-02476-2",
+        "article-title": "HG-XAI: Human-guided tool wear identification approach through augmentation of explainable artificial intelligence with machine vision",
+        "volume": "36",
+        "author": "Kumar",
+        "year": "2025",
+        "journal-title": "J. Intell. Manuf."
+      },
+      {
+        "key": "ref_21",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Singh, G., Agarwal, A., Desai, K.A., and Mears, L. (2026). Systematic approach for generating diversity-enhanced image dataset for vision-based on-machine tool wear monitoring systems. Int. J. Adv. Manuf. Technol., 1–12.",
+        "DOI": "10.1007/s00170-026-17619-3"
+      },
+      {
+        "key": "ref_22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wu, X., Liu, Y., Zhou, X., and Mou, A. (2019). Automatic identification of tool wear based on convolutional neural network in face milling process. Sensors, 19.",
+        "DOI": "10.3390/s19183817"
+      },
+      {
+        "key": "ref_23",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Turan, H.I., and Mamedov, A. (2026). Tool Wear Detection in Milling Using Convolutional Neural Networks and Audible Sound Signals. Machines, 14.",
+        "DOI": "10.3390/machines14010059"
+      },
+      {
+        "key": "ref_24",
+        "doi-asserted-by": "crossref",
+        "first-page": "1345",
+        "DOI": "10.1109/TKDE.2009.191",
+        "article-title": "A survey on transfer learning",
+        "volume": "22",
+        "author": "Pan",
+        "year": "2009",
+        "journal-title": "IEEE Trans. Knowl. Data Eng."
+      },
+      {
+        "key": "ref_25",
+        "unstructured": "Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., and Gelly, S. (2020). An image is worth 16x16 words: Transformers for image recognition at scale. arXiv."
+      },
+      {
+        "key": "ref_26",
+        "doi-asserted-by": "crossref",
+        "first-page": "065106",
+        "DOI": "10.1088/1361-6501/ab7282",
+        "article-title": "A novel transformer-based neural network model for tool wear estimation",
+        "volume": "31",
+        "author": "Liu",
+        "year": "2020",
+        "journal-title": "Meas. Sci. Technol."
+      },
+      {
+        "key": "ref_27",
+        "doi-asserted-by": "crossref",
+        "first-page": "125010",
+        "DOI": "10.1088/1361-6501/ac22ee",
+        "article-title": "Tool wear estimation using a CNN-transformer model with semi-supervised learning",
+        "volume": "32",
+        "author": "Liu",
+        "year": "2021",
+        "journal-title": "Meas. Sci. Technol."
+      },
+      {
+        "key": "ref_28",
+        "doi-asserted-by": "crossref",
+        "first-page": "708",
+        "DOI": "10.1016/j.compind.2013.03.010",
+        "article-title": "On-line tool wear measurement for ball-end milling cutter based on machine vision",
+        "volume": "64",
+        "author": "Zhang",
+        "year": "2013",
+        "journal-title": "Comput. Ind."
+      },
+      {
+        "key": "ref_29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sun, Q., Yu, Z., Li, Y., Yang, S., Xu, J., and Yu, H. (2021). Wear status prediction of micro milling tools by transfer learning and ViT model. Proceedings of the 2021 IEEE International Conference on Manipulation, Manufacturing and Measurement on the Nanoscale (3M-NANO), IEEE.",
+        "DOI": "10.1109/3M-NANO49087.2021.9599807"
+      },
+      {
+        "key": "ref_30",
+        "doi-asserted-by": "crossref",
+        "first-page": "112473",
+        "DOI": "10.1016/j.ymssp.2025.112473",
+        "article-title": "Tool wear state recognition study based on an MTF and a vision transformer with a Kolmogorov-Arnold network",
+        "volume": "228",
+        "author": "Dong",
+        "year": "2025",
+        "journal-title": "Mech. Syst. Signal Process"
+      },
+      {
+        "key": "ref_31",
+        "doi-asserted-by": "crossref",
+        "first-page": "283",
+        "DOI": "10.1016/j.jmsy.2024.12.004",
+        "article-title": "Realizing on-machine tool wear monitoring through integration of vision-based system with CNC milling machine",
+        "volume": "78",
+        "author": "Kumar",
+        "year": "2025",
+        "journal-title": "J. Manuf. Sys."
+      },
+      {
+        "key": "ref_32",
+        "first-page": "V002T02A058",
+        "article-title": "Investigation of Trochoidal Milling in Nickel-Based Superalloy Inconel 718 and Comparison With End Milling",
+        "volume": "45813",
+        "author": "Pleta",
+        "year": "2014",
+        "journal-title": "Int. Manuf. Sci. Eng. Conf."
+      },
+      {
+        "key": "ref_33",
+        "unstructured": "Coromant, S. (2025, May 25). Cutting Data Calculation, Available online: https://www.sandvik.coromant.com/en-gb/tools/digital-machining/coroplus-tool-guide."
+      },
+      {
+        "key": "ref_34",
+        "unstructured": "(1989). Tool Life Testing in Milling. Part 2: End Milling (Standard No. ISO8688-2). Available online: https://www.iso.org/obp/ui/#iso:std:iso:8688:-2:ed-1:v1:en."
+      },
+      {
+        "key": "ref_35",
+        "doi-asserted-by": "crossref",
+        "first-page": "111607",
+        "DOI": "10.1016/j.patcog.2025.111607",
+        "article-title": "Dynamic accumulated attention map for interpreting evolution of decision-making in vision transformer",
+        "volume": "165",
+        "author": "Liao",
+        "year": "2025",
+        "journal-title": "Pattern Recognit."
+      },
+      {
+        "key": "ref_36",
+        "doi-asserted-by": "crossref",
+        "first-page": "336",
+        "DOI": "10.1007/s11263-019-01228-7",
+        "article-title": "Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization",
+        "volume": "128",
+        "author": "Selvaraju",
+        "year": "2020",
+        "journal-title": "Int. J. Comput. Vision."
+      }
+    ],
+    "metadata_source": "https://api.crossref.org/works/10.3390/machines14060589",
+    "verification": "出版社/PMC参考文献との照合。書誌の不一致はreferences.csvへ記録"
+  }
+}

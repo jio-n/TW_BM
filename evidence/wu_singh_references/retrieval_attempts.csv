@@ -1,0 +1,34 @@
+﻿attempt_id,url,executed_at,route,result,fallback,status,saved_path,locator,local_path,bytes,sha256,file_written_at
+AWS001,https://www.mdpi.com/1424-8220/19/18/3817,2026-11-11（時分未記録）,Web open,初回429。PMC公開本文へ切替して確認,https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/,,,,,,,
+AWS002,https://www.mdpi.com/2075-1702/14/6/589,2026-11-11（時分未記録）,Web open,初回cache miss、後続のWeb検索・openで本文確認,,,,,,,,
+AWS003,seed2本のWeb本文,2026-11-11（時分未記録）,Python urllibローカル保存,DNS解決失敗、保存なし。Webツールで確認。,,,,,,,,
+AWS004,https://doi.org/10.1115/IMECE2023-113344,2026-11-11〜12（個別時刻は検索台帳）,Web DOI・機関業績・著者profile,DOI本文取得不可。機関業績で書誌確認、Clemson profileはiframeのみ。原語クラス保留継続。,,,,,,,,
+AWS005,https://doi.org/10.13196/j.cims.2017.10.008,2026-11-11〜12（個別時刻は検索台帳）,Web DOI,本文取得不可。Wuの引用文脈は振動信号の画像化と説明。一次選別段階を保持。,,,,,,,,
+,https://www.mdpi.com/2075-1702/14/6/589,,,,,今回ReferencesおよびIntroduction該当節を確認,,"References [17],[18],[19],[21],[29]; Introduction",,,,
+,https://d-nb.info/1229969632/34,,,,,公開原著PDFの方法・結果・考察を確認,evidence/raw/wu_singh_references/bergs2020_dnb.pdf,§2.2 Table3、§2.5 Table5、§3.1 Fig21、§3.2 Table7、§4; PDF pp.5–10,,,,
+,https://www.sciencedirect.com/science/article/pii/S0278612523000547,,,,,出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。,,出版社Abstract; Introduction(main contribution paragraph); Results section snippet; Discussion and conclusions,,,,
+,https://www.sciencedirect.com/science/article/abs/pii/S1526612523007120,,,,,出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得,,出版社Abstract; Introduction; Implementation and case study section snippet,,,,
+,https://link.springer.com/article/10.1007/s00170-026-17619-3,,,,,"出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。",,出版社Abstract; Fig1(input setup); Fig2(labels/counts/split); Fig6(classification pipeline); Fig7(test confusion),,,,
+,https://ieeexplore.ieee.org/document/9599807,,,,,書誌確認、IEEE本文未取得,,Crossref metadata,,,,
+,https://nanophys.ru/data/documents/IEEE-3M-NANO-2021-Conference-Program-Digest.pdf,,,,,Web PDFの発表20-1該当ページ確認。原論文全文ではない。,,printed p.67 / PDF p.76 / 20-1,,,,
+,https://publications.rwth-aachen.de/record/793074/files/793074.pdf,,,,,Web PDF本文取得成功、直接urllibは248byte HTMLchallenge。PDF保存と扱わずchallenge.htmlへ分離,evidence/raw/wu_singh_references/bergs2020_challenge.html,,,,,
+,https://link.springer.com/content/pdf/10.1007/s00170-026-17619-3.pdf,,,,,Webはsubscription previewへredirect、本文未取得,,,,,,
+,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9599807,,,,,Web取得不可,,,,,,
+,https://tubiblio.ulb.tu-darmstadt.de/138109/,,,,,Web timeout、OpenAlexのOA locationは有料出版社ページへのリンクであり本文PDF未取得,,,,,,
+,https://nanophys.ru/data/documents/IEEE-3M-NANO-2021-Conference-Program-Digest.pdf,,,,,Web PDFの該当著者要約確認。ローカルurllibは長時間無応答で中断、保存無し,,,,,,
+,,,,,,,,,evidence/raw/wu_singh_references/bergs2020_challenge.html,248,4681fa6e4303ecc351521fa1c7c836c9f3d6774b11725d39885ec3bf8ff16561,2026-11-11T14:47:33.969667+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/bergs2020_dnb.pdf,3037807,a5a6e4ec0b32ae189b19d860fc73e0e9d8dc4e0b20ca872b970c8d72e85fcafa,2026-11-11T14:50:07.384604+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/ref01_crossref.json,17828,b37014e7ee846d7ba1ba8bf743a9382579ad9826d89a289c4e6bdf62ae657f73,2026-11-11T14:46:29.896230+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/ref01_openalex.json,20141,b6c16a6524358a2e57b5f5114538e9463a4b840f0329598fac2203ea599c62a2,2026-11-11T14:46:31.664565+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/ref02_crossref.json,21677,42ec137089e362af5c558391f76f1c4c943a91735afef8994b3c149918c19e62,2026-11-11T14:46:33.525532+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/ref02_openalex.json,19873,ff3fd566e5998bd79929d72298b87f0fb0a4cfc5862ddc3b8b5488ce0b2371f4,2026-11-11T14:46:34.974705+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/ref03_crossref.json,15995,7700cf110b04c45928c5084f068ab2b7fcce7a5eff53c3c5b4be6b71f8d152f0,2026-11-11T14:46:36.896196+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/ref03_openalex.json,14132,3279574927e2a089de305442d52cbc0071be037a3ee0c3bc68f807280c16eeb2,2026-11-11T14:46:38.333474+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/ref04_crossref.json,16316,eaae413158db27b693dadcca04aaff10d8c4e83905714c7e16dce1caec3f4e7e,2026-11-11T14:46:40.145123+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/ref04_openalex.json,15099,3cc51958991f96106d1dcd3f74b111629dc91b5ba52c370f2b8aa9bf2b826210,2026-11-11T14:46:41.613280+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/ref05_crossref.json,5776,e570fcc47719b7074662d8d256675778a118504ab01a129393fa4dcc9728da1e,2026-11-11T14:46:43.303519+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/ref05_openalex.json,16917,b5aad4a23fced9657109d4254e99f72efa3d0b789a78c8fcf067b788f2928667,2026-11-11T14:46:45.015828+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/singh_dataset2026_fig1.png,717054,3fb9d69a82cef9bfe5ad92f9c5bc60bbd392b48d529d1b85a235152579b2973c,2026-11-11T14:50:14.531471+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/singh_dataset2026_fig2.png,1206956,bb2dd4dff80a581e755bb30d051be70b74a42412b0fc25798059b0751c62cc3f,2026-11-11T14:50:15.927315+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/singh_dataset2026_fig6.png,573603,ea0aed8ede080da108f1dfccff0d165b9eaade02522f196a9a578eac0891ebed,2026-11-11T14:50:52.992853+00:00
+,,,,,,,,,evidence/raw/wu_singh_references/singh_dataset2026_fig7.png,213858,b7d54303d9f83abdd4b916c75940c42c55209c1d1290026a67eb16b608b5816d,2026-11-11T14:50:49.871819+00:00

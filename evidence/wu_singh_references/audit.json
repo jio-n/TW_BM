@@ -1,0 +1,27 @@
+{
+  "as_of": "2026-11-12",
+  "seed_reference_positions": {
+    "FT001": 31,
+    "FT002": 36
+  },
+  "screened_reference_positions": 67,
+  "decisions": {
+    "対象外（一次選別を含む）": 61,
+    "保留（対象外候補・原著ラベル未確認）": 2,
+    "適合確認": 4
+  },
+  "direct_confirmed_including_seed": 4,
+  "direct_confirmed_excluding_Wu_seed": 3,
+  "previously_adopted_direct": 3,
+  "previously_held_now_scope_confirmed": 1,
+  "newly_discovered_confirmed_papers": 0,
+  "original_checked_reference_positions": 12,
+  "author_conference_digest_additional_positions": 1,
+  "checks": "67 unique seed-reference IDs; root claims/sources/edges referential integrity",
+  "limitations": [
+    "67原著の全文確認ではない。12引用位置は原著本文/抄録/図の確認を伴う。Sun2021は別に著者発表要約を確認。",
+    "二段目はSun2018とASME2023を重点追跡しただけで、二段目全集合は未選別。",
+    "Sun2021は原著本文未取得。除外ラベルはSingh2026による紹介。",
+    "旧Excel/HTML/キットは今回の追加表へ未統合。今回の判定差分を別台帳で保持。"
+  ]
+}

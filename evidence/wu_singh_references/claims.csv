@@ -1,0 +1,46 @@
+﻿claim_id,entity_id,claim,verification,field,status
+CWS001,FW2001,入力: 工具実写。出力: Flank; Flank+BUE; Flank+Face; Chipping。モデル: EfficientNet-b0＋人の判断＋XAI。Accuracy 93.08%。人の介入を含む。評価数・分割単位未確認,出版社抄録,,
+CWS002,FIA04,入力: 機上顕微鏡の工具実写。出力: Flank; Flank+BUE; Flank+Face; Chipping。モデル: EfficientNet-b0／転移学習CNN。Accuracy 94.11%。未見テスト画像。件数・工具別分割未確認,出版社抄録・章抜粋,,
+CWS003,FT001,入力: フェイスミル工具実写。出力: Adhesive wear; Tool breakage; Rake face wear; Flank wear。モデル: ToolWearnet CNN。平均recognition precision（著者AP）96.20%。Accuracyとは同一視しない。既存FT001より,公開本文・既存詳細抽出,,
+CWS004,FIA01,入力: 機上CCDの旋削インサート画像。出力: BUE; fracture; chipping; normal wear; over-wear（逃げ面摩耗を2程度に分ける）。モデル: 輪郭・ヒストグラム・閾値ルール。CNNではない。独立Accuracy/F1なし。20インサートの実験例と反復測定。相対標準偏差を分類精度へ転用しない,公開本文・既存FIA01の詳細抽出,,
+CWS005,WRC07,入力: 工具刃先実写。出力: serviceable / disposable。モデル: LBP特徴＋SVM。90.26%は廃棄刃判定。摩耗種類成績には採用しない,原著抄録・公開抜粋,,
+CWS006,WRC09,入力: 工具摩耗領域画像。出力: low/high または low/medium/high。モデル: B-ORCHIZ＋SVM。程度分類のため種類成績に不採用,原著抄録,,
+CWS007,WRC11,入力: 画像の摩耗領域特徴＋切削条件。粗さを加えた入力も比較。出力: 逃げ面摩耗の程度を予測。種類クラスなし。モデル: Wavelet neural network。種類分類の精度は非該当,原著抄録,,
+CWS008,WRC_S11,入力: 微小ミリング工具画像。出力: 逃げ面摩耗等の量・面積・進展。種類クラスなし。モデル: 従来画像処理。種類分類の精度は非該当,原著抄録・公開抜粋,,
+CWS009,WRC_S12,入力: 工具画像＋加工面テクスチャ。出力: 逃げ面摩耗面積・幅・程度。種類クラスなし。モデル: 画像処理・GLCM。種類分類の精度は非該当,原著抄録,,
+CWSC001,SWRC17,Keyence VHX-6000顕微鏡による実工具画像,,input,公開原著PDFの方法・結果・考察を確認
+CWSC002,SWRC17,工具形状5種分類／摩耗領域のsemantic segmentation。名前付き摩耗機構カテゴリ出力ではない。,,output,公開原著PDFの方法・結果・考察を確認
+CWSC003,SWRC17,工具形状：simple CNN（§2.5、Table5）。摩耗領域：U-Net（FCN）、One-for-all／工具別One-for-each。,,model,公開原著PDFの方法・結果・考察を確認
+CWSC004,SWRC17,除外,,decision,公開原著PDFの方法・結果・考察を確認
+CWSC005,SWRC18,機上の旋削インサート実写。K|Lensは1露光で9視点。,,input,出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。
+CWSC006,SWRC18,工具状態の許容／非許容の二値分類,,output,出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。
+CWSC007,SWRC18,CNN binary classifier。specializedモデルはXception（原著Results preview）。universalモデルの具体構造は今回原著未確認。,,model,出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。
+CWSC008,SWRC18,除外（公開原著該当箇所で二値出力確認）,,decision,出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。
+CWSC009,SWRC19,ATC内embedded visionによるstep drill実写、およびelectric current・vibration sensor features,,input,出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得
+CWSC010,SWRC19,工具状態監視。種類名を出力する証拠は今回原著公開範囲で未確認。,,output,出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得
+CWSC011,SWRC19,実画像U-Net、電流・振動特徴量Random Forest、両方式の融合,,model,出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得
+CWSC012,SWRC19,保留（本文・原語出力ラベル未取得、二値除外候補）,,decision,出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得
+CWSC013,SWRC21,機上顕微鏡の工具刃先RGB実写画像。機上撮像のvariabilityを画像拡張で模擬。,,input,"出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+CWSC014,SWRC21,4種の工具摩耗・損傷状態。Softmax最大確率の単一カテゴリ（Fig6）。,,output,"出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+CWSC015,SWRC21,EfficientNet-b0、transfer learning、CNN画像分類。GradCAMは誤分類解釈。,,model,"出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+CWSC016,SWRC21,適合確認（本文詳細未取得）,,decision,"出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+CWSC017,SWRC29,マイクロミリング工具rear face wear画像（著者発表digest）。,,input,Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。
+CWSC018,SWRC29,wear status prediction、原著全クラス未確認,,output,Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。
+CWSC019,SWRC29,ViT＋transfer learning（題名・著者digest）。,,model,Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。
+CWSC020,SWRC29,保留（原著本文未取得、程度分類の除外候補）,,decision,Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。
+CWSC021,SWRC17,"[""ball end mill"", ""end mill"", ""end mill with corner radius"", ""insert"", ""drill""]",,original_labels,公開原著PDFの方法・結果・考察を確認
+CWSC022,SWRC17,"{""metric"": ""tool-type classification accuracy"", ""value"": 95.6, ""unit"": ""%"", ""condition"": ""工具形状分類test242画像。摩耗種類分類の成績として使用不可。"", ""locator"": ""§3.1 / Fig.21 / PDF p.8、誌面p.954""}",,performance,公開原著PDFの方法・結果・考察を確認
+CWSC023,SWRC17,"{""metric"": ""wear segmentation mean IoU"", ""value"": 0.73, ""unit"": ""ratio"", ""condition"": ""One-for-all test。分類Accuracyとは異なる指標。"", ""locator"": ""Table7 / §3.2 / PDF p.9、誌面p.955""}",,performance,公開原著PDFの方法・結果・考察を確認
+CWSC024,SWRC17,"{""metric"": ""wear segmentation mean IoU"", ""value"": 0.37, ""unit"": ""ratio"", ""condition"": ""未知工具・撮像摂動inference画像、通常testとは別。"", ""locator"": ""§3.2–4 / PDF p.10、誌面p.956""}",,performance,公開原著PDFの方法・結果・考察を確認
+CWSC025,SWRC18,"[""acceptable (OK)"", ""non-acceptable (NOK)""]",,original_labels,出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。
+CWSC026,SWRC18,"{""metric"": ""binary classification accuracy (up to)"", ""value"": 97.8, ""unit"": ""%"", ""condition"": ""4インサート種類、roundで良好／rhombicへ失敗。最良条件のデータ数・splitは本文未取得で未確認。摩耗種類Accuracyではない。"", ""locator"": ""Abstract / Introduction / Discussion""}",,performance,出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。
+CWSC027,SWRC18,"{""metric"": ""Matthews correlation coefficient"", ""value"": 0.955, ""unit"": ""ratio"", ""condition"": ""上記binary結果。"", ""locator"": ""Abstract / Introduction""}",,performance,出版社公開abstract・Introduction・Results/Discussion section snippets。subscription全文未取得。
+CWSC028,SWRC19,"{""metric"": ""accuracy"", ""value"": 91, ""unit"": ""%"", ""condition"": ""embedded step-drill images/U-Net、クラス・split未確認"", ""locator"": ""Abstract""}",,performance,出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得
+CWSC029,SWRC19,"{""metric"": ""accuracy"", ""value"": 95, ""unit"": ""%"", ""condition"": ""current+vibration features/Random Forest、クラス・split未確認"", ""locator"": ""Abstract""}",,performance,出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得
+CWSC030,SWRC19,"{""metric"": ""accuracy"", ""value"": 96, ""unit"": ""%"", ""condition"": ""image methodとsensor method融合、原著Abstract。種類分類の成績とは認定しない。"", ""locator"": ""Abstract""}",,performance,出版社Abstract・Introduction・Methodology等のsection snippets、全文未取得
+CWSC031,SWRC21,"[""Flank"", ""Flank +BUE"", ""Flank + Face"", ""Chipping""]",,original_labels,"出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+CWSC032,SWRC21,"{""metric"": ""classification accuracy"", ""value"": 84.16, ""unit"": ""%"", ""condition"": ""原著Abstract報告値。Fig7 test混同行列は120件、対角101件（101/120=84.166...%）。原test40画像を複合augmentationで拡張。"", ""locator"": ""Abstract; Fig2; Fig7""}",,performance,"出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+CWSC033,SWRC21,"{""metric"": ""Matthews Correlation Coefficient"", ""value"": 0.772, ""unit"": ""ratio"", ""condition"": ""Abstract。本文表・式は未取得。"", ""locator"": ""Abstract""}",,performance,"出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+CWSC034,SWRC21,"{""metric"": ""Flank + BUE recall (derived)"", ""value"": 33.3333333333, ""unit"": ""%"", ""condition"": ""今回Fig7から計算：5/15。著者がrecall値として報告したと推定しない。"", ""locator"": ""Fig7 row2""}",,performance,"出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+CWSC035,SWRC21,"{""original_images"": 200, ""train_original"": 160, ""test_original"": 40, ""train_original_per_class"": [74, 12, 54, 20], ""test_original_per_class"": [15, 5, 15, 5], ""augmented_train"": 28000, ""augmented_train_per_class"": [7000, 7000, 7000, 7000], ""test_confusion_total"": 120, ""source"": ""Fig2; Abstract; Fig7""}",,data_and_split,"出版社Abstract＋公開原著Fig1,Fig2,Fig6,Fig7を今回取得・目視確認。subscription本文詳細は未取得。"
+CWSC036,SWRC29,"{""metric"": ""generalizability prediction accuracy"", ""value"": 92.5, ""unit"": ""%"", ""condition"": ""著者発表digest報告。test件数・分割・クラス不明、種類分類精度と扱わない。"", ""locator"": ""Conference Program Digest printed p.67 / PDF p.76 / presentation20-1""}",,performance,Crossref書誌＋著者の学会program digest pp.67(printed)/76(PDF)の発表要約確認。IEEE本文はrobot challenge、stamp未取得。

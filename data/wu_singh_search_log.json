@@ -1,0 +1,452 @@
+[
+  {
+    "search_id": "QWS001",
+    "executed_at": "2026-11-11 14:45:50 UTC",
+    "query": {
+      "search_query": [
+        {
+          "q": "\"Automatic Identification of Tool Wear\" \"References\" 3817"
+        },
+        {
+          "q": "\"Implementation of Vision Transformer Model\" \"589\" references"
+        },
+        {
+          "q": "\"Tool wear monitoring using an online, automatic and low cost system based on local texture\""
+        },
+        {
+          "q": "\"Tool condition monitoring in CNC end milling\" \"Ong\" wavelet machine vision"
+        }
+      ],
+      "response_length": "long"
+    },
+    "provider": "Web検索・原資料閲覧",
+    "returned_source_count": 18,
+    "returned_urls": [
+      "https://www.sciencedirect.com/science/article/pii/S088832701830236X",
+      "https://buleria.unileon.es/bitstream/handle/10612/17635/Tool_Wear_Monitoring_Using.pdf?isAllowed=y&sequence=1",
+      "https://arxiv.org/abs/2402.05977",
+      "https://ouci.dntb.gov.ua/en/works/4EXY1jO7/",
+      "https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202402200129443730",
+      "https://openscholar.dut.ac.za/server/api/core/bitstreams/fe2c95a5-5f14-4827-94ad-7c9d5380ad34/content",
+      "https://tuprints.ulb.tu-darmstadt.de/server/api/core/bitstreams/b3719821-41dd-483e-a32f-6e37e4b30f86/content",
+      "https://www.unileon.es/files/publicaciones_investigacion08_2018-1.pdf",
+      "https://hal.science/hal-03950000v1/file/machine%20learning%2C%20m.soori.pdf",
+      "https://www.mdpi.com/1424-8220/24/23/7458",
+      "https://sonar.eurekamag.com/research/089/092/089092039.php",
+      "https://www.mdpi.com/2073-8994/13/8/1438",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8510400/",
+      "https://link.springer.com/article/10.1007/s00170-023-12679-1",
+      "https://www.mdpi.com/1424-8220/23/10/4595",
+      "https://www.researchgate.net/publication/337027741_Tool_condition_monitoring_techniques_in_milling_process_-_a_review",
+      "https://www.sciencedirect.com/science/article/abs/pii/S0166361522001786",
+      "https://doi.org/10.3390%2Fdrones7050287"
+    ],
+    "total_hits": "未提供",
+    "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+  },
+  {
+    "search_id": "QWS002",
+    "executed_at": "2026-11-11 14:46:06 UTC",
+    "query": {
+      "search_query": [
+        {
+          "q": "\"Automatic Identification of Tool Wear Based\" Wu PMC"
+        },
+        {
+          "q": "\"Implementation of Vision Transformer Model for Robust Tool Wear\" Singh"
+        },
+        {
+          "q": "\"HG-XAI\" \"Flank\" \"chipping\""
+        },
+        {
+          "q": "\"Realizing on-machine tool wear monitoring\" classes"
+        }
+      ],
+      "response_length": "long"
+    },
+    "provider": "Web検索・原資料閲覧",
+    "returned_source_count": 18,
+    "returned_urls": [
+      "https://www.mdpi.com/2075-1702/14/6/589",
+      "https://pubmed.ncbi.nlm.nih.gov/31487810/",
+      "https://www.mdpi.com/1424-8220/19/18/3817/pdf?version=1567583055",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/",
+      "https://www.deepdyve.com/lp/unpaywall/implementation-of-vision-transformer-model-for-robust-tool-wear-8I0KtdhQ7A",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7967223/",
+      "https://buscaintegrada.ufrj.br/Author/Home?author=A+Desai",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11644175/",
+      "https://www.cmemo.org.cn/EN/abstract/abstract10215.shtml",
+      "https://ira.lib.polyu.edu.hk/bitstream/10397/91267/1/Chao_Digitalisation_servitisation_machine.pdf",
+      "https://www.flame.edu.in/pdfs/newsletters/vc/FLAME-University-VC-Newsletter-February-2025.pdf",
+      "https://ein.org.pl/pdf-168082-91276?filename=91276.pdf",
+      "https://repositorio.unifei.edu.br/jspui/bitstream/123456789/4285/1/Tese_2025025.pdf",
+      "https://www.sciencedirect.com/science/article/pii/S0263224126023146",
+      "https://mdpi-res.com/d_attachment/machines/machines-12-00184/article_deploy/machines-12-00184.pdf",
+      "https://doi.org/10.1016%2Fj.smse.2023.100009",
+      "https://eurekamag.com/research/105/996/105996829.php",
+      "https://eurekamag.com/research/103/079/103079183.php"
+    ],
+    "total_hits": "未提供",
+    "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+  },
+  {
+    "search_id": "QWS003",
+    "executed_at": "2026-11-11 14:46:19 UTC",
+    "query": {
+      "open": [
+        {
+          "ref_id": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/"
+        },
+        {
+          "ref_id": "https://www.mdpi.com/2075-1702/14/6/589"
+        },
+        {
+          "ref_id": "https://link.springer.com/article/10.1007/s10845-024-02476-2"
+        },
+        {
+          "ref_id": "https://www.sciencedirect.com/science/article/pii/S0278612524002978"
+        }
+      ],
+      "response_length": "long"
+    },
+    "provider": "Web検索・原資料閲覧",
+    "returned_source_count": 4,
+    "returned_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/",
+      "https://www.mdpi.com/2075-1702/14/6/589",
+      "https://link.springer.com/article/10.1007/s10845-024-02476-2"
+    ],
+    "total_hits": "未提供",
+    "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+  },
+  {
+    "search_id": "QWS004",
+    "executed_at": "2026-11-11 14:46:33 UTC",
+    "query": {
+      "open": [
+        {
+          "ref_id": "turn505view0",
+          "lineno": 425
+        },
+        {
+          "ref_id": "turn505view1",
+          "lineno": 195
+        },
+        {
+          "ref_id": "turn505view1",
+          "lineno": 420
+        }
+      ],
+      "search_query": [
+        {
+          "q": "\"A computer vision approach to analyze and classify tool wear level\" classes"
+        },
+        {
+          "q": "\"Tool condition monitoring in CNC end milling using wavelet neural network\" site:link.springer.com"
+        },
+        {
+          "q": "\"Realizing on-machine tool wear monitoring\" \"Flank\""
+        }
+      ],
+      "response_length": "long"
+    },
+    "provider": "Web検索・原資料閲覧",
+    "returned_source_count": 18,
+    "returned_urls": [
+      "https://portalcientifico.unileon.es/documentos/5f7d67ee299952781cdd3a6a",
+      "https://www.sciencedirect.com/science/article/pii/S0278612524002978",
+      "https://scispace.com/pdf/a-computer-vision-approach-to-analyze-and-classify-tool-wear-3r3vme97ls.pdf",
+      "https://www.sciencedirect.com/science/article/pii/S0263224126023146",
+      "https://eurekamag.com/research/105/996/105996829.php",
+      "https://www.mdpi.com/2504-4494/10/10/372",
+      "https://www.mdpi.com/2504-4494/2/4/72",
+      "https://link.springer.com/article/10.1007/s11831-023-09979-w",
+      "https://link.springer.com/article/10.1007/s40436-025-00564-x",
+      "https://link.springer.com/article/10.1007/s00170-023-12679-1",
+      "https://www.sciencedirect.com/science/article/abs/pii/S0169260715000590",
+      "https://ouci.dntb.gov.ua/en/works/40ykny5l/",
+      "https://kesifaraci.com/index.jsp?fields=keywords&modul=advantage-search&operator=or&p=1&searchword=%22Tool+wear+classification%22",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/",
+      "https://www.mdpi.com/2075-1702/14/6/589"
+    ],
+    "total_hits": "未提供",
+    "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+  },
+  {
+    "search_id": "QWS005",
+    "executed_at": "2026-11-11T14:49:09.621Z",
+    "query": {
+      "open": [
+        "10.1007/s00170-016-9541-0",
+        "10.1007/s00170-019-04020-6"
+      ],
+      "search": [
+        "\"10.1115/IMECE2023-113344\"",
+        "\"Realizing on-machine tool wear monitoring\" \"Flank\""
+      ]
+    },
+    "provider": "Web検索・原資料閲覧",
+    "returned_source_count": 16,
+    "returned_urls": [
+      "https://www.sciencedirect.com/science/article/pii/S0278612524002978",
+      "https://www.canyam.com/en/article/realizing-on-machine-tool-wear-monitoring-through-integration-of-vision-based-system-with-cnc-milling-machine/58125629",
+      "https://aperta.ulakbim.gov.tr/api/files/92eb891d-9c2e-4275-878b-ed33cb9b5da9/rk_maa_paper_utis2024.pdf",
+      "https://www.researchgate.net/publication/387130493_Realizing_on-machine_tool_wear_monitoring_through_integration_of_vision-based_system_with_CNC_milling_machine",
+      "https://www.sciencedirect.com/science/article/pii/S0263224126023146",
+      "https://www.grafiati.com/en/literature-selections/edge-prediction-based-skelton-formation/",
+      "https://corp.eurekamag.com/research/108/340/108340602.php",
+      "https://eurekamag.com/research/105/996/105996829.php",
+      "https://scholarlist.org/researcher/0000-0002-2973-4652",
+      "https://cecas.clemson.edu/manufacturing-lab/people/ankit-agarwal/",
+      "https://www.grafiati.com/en/literature-selections/tool-wear-and-deformation/",
+      "https://www.sciencedirect.com/science/article/abs/pii/S1526612526002434",
+      "https://www.rankless.org/authors/ankit-agarwal-3",
+      "https://www.ijemnet.com/article/pdf/preview/10.1088/2631-7990/ae1be8.pdf",
+      "https://link.springer.com/article/10.1007/s00170-016-9541-0",
+      "https://link.springer.com/article/10.1007/s00170-019-04020-6"
+    ],
+    "total_hits": "未提供",
+    "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+  },
+  {
+    "search_id": "QWS006",
+    "executed_at": "2026-11-11T14:49:17.145Z",
+    "query": {
+      "find": [
+        {
+          "ref_id": "turn511view0",
+          "pattern": "Abstract"
+        },
+        {
+          "ref_id": "turn511view1",
+          "pattern": "Abstract"
+        }
+      ],
+      "search_query": [
+        {
+          "q": "\"Vision-Based Tool Wear Classification During End-Milling\" site:asmedigitalcollection.asme.org"
+        }
+      ],
+      "response_length": "long"
+    },
+    "provider": "Web検索・原資料閲覧",
+    "returned_source_count": 4,
+    "returned_urls": [
+      "https://link.springer.com/article/10.1007/s00170-016-9541-0",
+      "https://link.springer.com/article/10.1007/s00170-019-04020-6"
+    ],
+    "total_hits": "未提供",
+    "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+  },
+  {
+    "search_id": "QWS007",
+    "executed_at": "2026-11-11T14:49:28.424Z",
+    "query": {
+      "open": [
+        {
+          "ref_id": "https://doi.org/10.1115/IMECE2023-113344"
+        },
+        {
+          "ref_id": "https://www.mdpi.com/1996-1944/11/10/1977"
+        }
+      ],
+      "response_length": "short"
+    },
+    "provider": "Web検索・原資料閲覧",
+    "returned_source_count": 2,
+    "returned_urls": [
+      "https://www.mdpi.com/1996-1944/11/10/1977"
+    ],
+    "total_hits": "未提供",
+    "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+  },
+  {
+    "search_id": "QWS008",
+    "executed_at": "2026-11-11T14:49:39.852Z",
+    "query": {
+      "search_query": [
+        {
+          "q": "\"10.1115/IMECE2023-113344\" \"wear\" \"classification\""
+        },
+        {
+          "q": "\"A machine vision system for micro-milling tool condition monitoring\" wear classification"
+        },
+        {
+          "q": "\"Tool wear monitoring based on deep learning\" \"Zhang\" \"2017\" \"2146\""
+        },
+        {
+          "q": "\"Application of machine vision method in tool wear monitoring\" \"wear\""
+        }
+      ],
+      "response_length": "long"
+    },
+    "provider": "Web検索・原資料閲覧",
+    "returned_source_count": 18,
+    "returned_urls": [
+      "https://www.sciencedirect.com/science/article/pii/S0141635917302817",
+      "https://eurekamag.com/research/106/063/106063306.php",
+      "https://www.zy-titanium.com/company-news/1243.html",
+      "https://scispace.com/papers/application-of-machine-vision-method-in-tool-wear-monitoring-3wiyq936ed",
+      "https://qikan.cmes.org/jxgcxb/EN/PDF/10.3901/JME.2019.14.001",
+      "https://assets-eu.researchsquare.com/files/rs-681400/v1_covered.pdf?c=1631873379",
+      "https://doi.org/10.1016/j.precisioneng.2024.01.010",
+      "https://iris.sena.edu.co/EDS/Search?lookfor=%22Peng%2C+Ruitao%22&type=Author",
+      "https://aperta.ulakbim.gov.tr/api/files/92eb891d-9c2e-4275-878b-ed33cb9b5da9/rk_maa_paper_utis2024.pdf",
+      "https://onlinelibrary.wiley.com/doi/10.1002/int.22493",
+      "https://journals.sagepub.com/doi/pdf/10.1177/16878132221119926",
+      "https://link.springer.com/article/10.1186/s10033-025-01225-7",
+      "https://file.sciopen.com/sciopen_public/1810237678738436097.pdf",
+      "https://www.rankless.org/authors/ruitao-peng",
+      "https://www.diva-portal.org/smash/get/diva2%3A1960908/FULLTEXT01.pdf",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9058732/",
+      "https://www.mdpi.com/2073-8994/14/3/469",
+      "https://www.cmemo.org.cn/EN/abstract/abstract10215.shtml"
+    ],
+    "total_hits": "未提供",
+    "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+  },
+  {
+    "search_id": "QWS009",
+    "executed_at": "2026-11-11T14:50:09.909Z",
+    "query": {
+      "open": [
+        {
+          "ref_id": "https://link.springer.com/article/10.1007/s00170-021-07522-4"
+        }
+      ],
+      "search_query": [
+        {
+          "q": "\"基于深度学习的刀具磨损监测方法\" site:cims-journal.cn"
+        },
+        {
+          "q": "\"Vision-Based Tool Wear Classification During End-Milling\" \"Flank\""
+        },
+        {
+          "q": "\"Vision-Based Tool Wear Classification During End-Milling\" \"asme\" \"2023\""
+        }
+      ],
+      "response_length": "long"
+    },
+    "provider": "Web検索・原資料閲覧",
+    "returned_source_count": 16,
+    "returned_urls": [
+      "https://aperta.ulakbim.gov.tr/api/files/92eb891d-9c2e-4275-878b-ed33cb9b5da9/rk_maa_paper_utis2024.pdf",
+      "https://www.sciencedirect.com/science/article/pii/S0278612524002978",
+      "https://webpages.charlotte.edu/aagarw31/publications.html",
+      "https://www.mdpi.com/2075-1702/14/6/589",
+      "https://cecas.clemson.edu/manufacturing-lab/people/ankit-agarwal/",
+      "https://www.clemson.edu/cecas/departments/automotive-engineering/people/faculty-docs/mears_publications.pdf",
+      "https://www.mdpi.com/2504-4494/2/4/72",
+      "https://www.grafiati.com/en/literature-selections/edge-prediction-based-skelton-formation/",
+      "https://scholarlist.org/researcher/0000-0002-2973-4652",
+      "https://clemson.discovery.academicanalytics.com/scholar/907304/VINITA-JANSARI",
+      "https://www.sciencedirect.com/science/article/pii/S0952197624007280",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12341703/",
+      "https://adscientificindex.com/scientist/sudheer-kumar-aitha/5686570/",
+      "https://link.springer.com/article/10.1186/s10033-025-01225-7",
+      "https://jame.yildiz.edu.tr/storage/upload/pdfs/1767341331-en.pdf",
+      "https://link.springer.com/article/10.1007/s00170-021-07522-4"
+    ],
+    "total_hits": "未提供",
+    "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+  },
+  {
+    "search_id": "QWS010",
+    "executed_at": "2026-11-11T14:50:17.353Z",
+    "query": {
+      "open": [
+        {
+          "ref_id": "https://webpages.charlotte.edu/aagarw31/publications.html"
+        }
+      ],
+      "find": [
+        {
+          "ref_id": "https://link.springer.com/article/10.1007/s00170-021-07522-4",
+          "pattern": "Abstract"
+        },
+        {
+          "ref_id": "https://www.mdpi.com/2075-1702/14/6/589",
+          "pattern": "Sun et al."
+        }
+      ],
+      "response_length": "short"
+    },
+    "provider": "Web検索・原資料閲覧",
+    "returned_source_count": 3,
+    "returned_urls": [
+      "https://webpages.charlotte.edu/aagarw31/publications.html",
+      "https://link.springer.com/article/10.1007/s00170-021-07522-4",
+      "https://www.mdpi.com/2075-1702/14/6/589"
+    ],
+    "total_hits": "未提供",
+    "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+  },
+  {
+    "search_id": "QWS011",
+    "executed_at": "2026-11-11T14:50:30.817Z",
+    "query": {
+      "open": [
+        {
+          "ref_id": "turn516view0",
+          "lineno": 35
+        }
+      ],
+      "response_length": "short"
+    },
+    "provider": "Web検索・原資料閲覧",
+    "returned_source_count": 2,
+    "returned_urls": [
+      "https://webpages.charlotte.edu/aagarw31/publications.html"
+    ],
+    "total_hits": "未提供",
+    "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+  }
+,
+{
+  "search_id": "QWS012",
+  "executed_at": "2026-11-11T14:52:02.154Z",
+  "query": {
+    "open": [
+      {
+        "ref_id": "https://doi.org/10.13196/j.cims.2017.10.008"
+      },
+      {
+        "ref_id": "https://clemson.discovery.academicanalytics.com/scholar/907304/VINITA-JANSARI"
+      }
+    ],
+    "response_length": "short"
+  },
+  "provider": "Web検索・原資料閲覧",
+  "returned_source_count": 2,
+  "returned_urls": [
+    "https://clemson.discovery.academicanalytics.com/scholar/907304/VINITA-JANSARI"
+  ],
+  "total_hits": "未提供",
+  "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+},
+{
+  "search_id": "QWS013",
+  "executed_at": "2026-11-11T14:52:55.914Z",
+  "query": {
+    "find": [
+      {
+        "ref_id": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/",
+        "pattern": "Zhang"
+      },
+      {
+        "ref_id": "https://link.springer.com/article/10.1007/s10845-024-02476-2",
+        "pattern": "113344"
+      }
+    ],
+    "response_length": "short"
+  },
+  "provider": "Web検索・原資料閲覧",
+  "returned_source_count": 2,
+  "returned_urls": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/",
+    "https://link.springer.com/article/10.1007/s10845-024-02476-2"
+  ],
+  "total_hits": "未提供",
+  "notes": "1実行内に複数クエリ/閲覧を含む。返却source ID数にはエラー応答を含み、検索総件数ではない。"
+}
+]

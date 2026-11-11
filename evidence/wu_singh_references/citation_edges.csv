@@ -1,0 +1,16 @@
+﻿edge_id,entity_id,route,depth,evidence_url,status
+EWS1,FW2001,FT002 [20],1,https://www.mdpi.com/2075-1702/14/6/589,原著参考文献で確認
+EWS2,FIA04,FT002 [31],1,https://www.mdpi.com/2075-1702/14/6/589,原著参考文献で確認
+EWS3,FT001,FT002 [22],1,https://www.mdpi.com/2075-1702/14/6/589,原著参考文献で確認
+EWS4,FIA01,FT001 [11] → Ong2019 [19],2,https://link.springer.com/article/10.1007/s00170-019-04020-6,原著参考文献で確認
+EWS5,WR2C021,FT002 [20] → HG-XAI参考文献Kumar2023,2,https://link.springer.com/article/10.1007/s10845-024-02476-2,原著参考文献で確認
+EWS6,WRC07,FT001 [7],1,https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/,原著参考文献で確認
+EWS7,WRC09,FT001 [9],1,https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/,原著参考文献で確認
+EWS8,WRC11,FT001 [11],1,https://pmc.ncbi.nlm.nih.gov/articles/PMC6767294/,原著参考文献で確認
+EWS9,WRC_S11,FT002 [11],1,https://www.mdpi.com/2075-1702/14/6/589,原著参考文献で確認
+EWS10,WRC_S12,FT002 [12],1,https://www.mdpi.com/2075-1702/14/6/589,原著参考文献で確認
+EWS_A17,SWRC17,FT002 [17],1,https://www.mdpi.com/2075-1702/14/6/589,原著参考文献で確認
+EWS_A18,SWRC18,FT002 [18],1,https://www.mdpi.com/2075-1702/14/6/589,原著参考文献で確認
+EWS_A19,SWRC19,FT002 [19],1,https://www.mdpi.com/2075-1702/14/6/589,原著参考文献で確認
+EWS_A21,SWRC21,FT002 [21],1,https://www.mdpi.com/2075-1702/14/6/589,原著参考文献で確認
+EWS_A29,SWRC29,FT002 [29],1,https://www.mdpi.com/2075-1702/14/6/589,原著参考文献で確認
