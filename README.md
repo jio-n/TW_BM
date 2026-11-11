@@ -4,6 +4,16 @@
 
 ## 成果物と利用方法
 
+### 3つのHTML資料
+
+各ファイルを保存し、ブラウザで開く。本文・CSS・操作用JavaScriptを内蔵した単体HTML。原資料リンクにはネット接続が必要。GitHubのファイル画面ではソースが表示されるため、Download raw fileで保存する。
+
+1. [調査方法と網羅性を高める仕組み](outputs/html/research_methodology.html)：実際の探索、DB検索、引用追跡、根拠管理、監査、残課題。
+2. [工具摩耗・損傷の種類分類](outputs/html/tool_wear_classification.html)：18件（採用12・保留1・関連5）。
+3. [工業欠陥の種類分類](outputs/html/industrial_defect_classification.html)：49件（採用38・保留5・関連6）。
+
+結果資料には絞り込み、論文詳細、原資料リンクを収録。比較表の採否・値は維持。[HTML品質確認](reports/html_briefings_quality.md)に数値・構造の検査結果とブラウザ表示確認の制約を記録した。
+
 **論文ごとの実際の精度を見る場合**は、工具摩耗18本・工業欠陥49本をまとめた [性能値のExcel](outputs/classification_performance_summary.xlsx) / [CSV](outputs/classification_performance_summary.csv) / [数値の読み方](reports/classification_performance_summary.md) を参照。計67本＝主採用50本、保留6本、関連11本。Accuracy、Precision、Recall、F1等の数値と評価条件を併記し、数値未確認は埋めていない。
 
 引用追跡・保留再確認で主比較に新規12本を追加し、保留1本を採用へ移した。[追加調査結果](reports/round2_findings.md) / [探索の監査](reports/search_process_audit.md) / [再利用する探索手順・テンプレート・監査スクリプト](methods/README.md)。主要16本の両方向を追ったが、部分確認と未判定候補が残り、完全網羅・探索飽和は未確認。

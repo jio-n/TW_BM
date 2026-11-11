@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "file": "industrial_defect_classification.html",
+      "bytes": 459421,
+      "records": 49,
+      "status_counts": {
+        "accept": 38,
+        "hold": 5,
+        "related": 6
+      },
+      "internal_ids": 59,
+      "links": 494,
+      "errors": []
+    },
+    {
+      "file": "research_methodology.html",
+      "bytes": 35780,
+      "records": 0,
+      "status_counts": {},
+      "internal_ids": 8,
+      "links": 33,
+      "errors": []
+    },
+    {
+      "file": "tool_wear_classification.html",
+      "bytes": 176975,
+      "records": 18,
+      "status_counts": {
+        "accept": 12,
+        "related": 5,
+        "hold": 1
+      },
+      "internal_ids": 28,
+      "links": 207,
+      "errors": []
+    }
+  ],
+  "visual_validation": "未実施：IABのlocalhost接続タイムアウト。file URLはブラウザポリシーで拒否。",
+  "interaction_validation": "静的検査とJavaScript構文確認。ブラウザでの実操作は未検証。"
+}
