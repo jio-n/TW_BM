@@ -1,0 +1,46 @@
+{
+  "queries": [
+    {
+      "query_id": "Q0025",
+      "required": "false",
+      "state": "paused",
+      "notes": "Imported legacy query; unspecified search field/filter/sort was not reconstructed.／診断式として保持。次の探索対象に自動昇格しない"
+    },
+    {
+      "query_id": "Q0026",
+      "required": "false",
+      "state": "paused",
+      "notes": "Imported legacy query; unspecified search field/filter/sort was not reconstructed.／診断式として保持。次の探索対象に自動昇格しない"
+    },
+    {
+      "query_id": "Q0027",
+      "required": "false",
+      "state": "paused",
+      "notes": "Imported legacy query; unspecified search field/filter/sort was not reconstructed.／診断式として保持。次の探索対象に自動昇格しない"
+    },
+    {
+      "query_id": "Q0028",
+      "required": "false",
+      "state": "paused",
+      "notes": "Imported legacy query; unspecified search field/filter/sort was not reconstructed.／診断式として保持。次の探索対象に自動昇格しない"
+    },
+    {
+      "query_id": "Q0029",
+      "required": "false",
+      "state": "paused",
+      "notes": "Imported legacy query; unspecified search field/filter/sort was not reconstructed.／診断式として保持。次の探索対象に自動昇格しない"
+    },
+    {
+      "query_id": "Q0030",
+      "required": "false",
+      "state": "paused",
+      "notes": "Imported legacy query; unspecified search field/filter/sort was not reconstructed.／診断式として保持。次の探索対象に自動昇格しない"
+    },
+    {
+      "query_id": "Q0031",
+      "required": "false",
+      "state": "paused",
+      "notes": "Imported legacy query; unspecified search field/filter/sort was not reconstructed.／診断式として保持。次の探索対象に自動昇格しない"
+    }
+  ]
+}

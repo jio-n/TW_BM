@@ -39,3 +39,12 @@ F1–F4の目的・入力・出力・完了条件と残課題は [種類分類�
 | D1 | 5DBの公式検索を両ドメインで試行 | 一般検索語・公式仕様 | data/database_*_pilot.json | D0 | 成否・式・取得範囲を保存 | 上位ページ・未実施セル | 完了 |
 | D2 | 検索から候補への追跡と監査 | D1 | evidence/database_keyword_pilot | D1 | 件数・ID・エラー誤判定の検査 | 本文・独立選別 | 完了 |
 | D3 | 再利用手順と試行報告、GitHub更新 | D1/D2 | methods/database_search_protocol.md、試行報告 | D2 | 手順・残件・監査結果を公開 | 網羅探索・精度への追加採用は別段階 | 完了 |
+
+## 分野を変えて使う調査管理（2026-11-11）
+
+| ID | 目的・範囲・実施内容 | 入力 | 出力 | 依存 | 完了条件 | 残課題 | 状態 |
+|---|---|---|---|---|---|---|---|
+| K0 | 対象・検索・状態・指示・終了判断を汎用化 | ユーザー指定、既存手順 | kit/DESIGN・schema・SKILL・検索プロトコル | D3 | 未知・既知残作業、状態分離、調整可能な量と優先度を定義 | 計画の分野別レビューは毎回必要 | 完了 |
+| K1 | 永続台帳と進捗・指示・監査の実装 | K0 | kit/scripts、templates | K0 | init/ingest/update/configure/request/next/build/audit/checkpointが動作 | 検索・原著確認は担当AIが実行 | 完了 |
+| K2 | 既存実データで動作確認 | DBパイロット、比較67行 | kit/examples/tool-wear-review | K1 | 48実行366hitsと比較67ID保持、旧データ非変更、HTML一致 | 旧引用調査全体は未移行 | 完了 |
+| K3 | 誤った進捗判定・再開の検証 | K1/K2、別テーマの合成データ | kit/tests、QA.md、html_validation | K2 | 19テスト、独立利用試験、静的HTML・JS・スキル検査 | ブラウザ表示/操作未検証 | 完了 |

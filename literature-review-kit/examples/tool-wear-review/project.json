@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "project_id": "tool-wear-review",
+  "title": "工具摩耗・工業欠陥の種類分類：既存調査の移行例",
+  "as_of": "2026-11-11",
+  "topic": "工具実写画像・マルチモーダルによる摩耗損傷種類分類と工業欠陥のViT/VLM分類",
+  "scope": {
+    "input": "工具の実写画像、画像＋センサ／工業製品の画像（prompt可）",
+    "output": "名前付き欠陥・摩耗・損傷種類のカテゴリ分類",
+    "population": "工具と工業製品。関連境界・保留も台帳に残す",
+    "include": [
+      "工具画像の種類分類",
+      "工業欠陥のViT/VLM/MLLM種類分類"
+    ],
+    "exclude": [
+      "正常異常だけ",
+      "摩耗段階・VB回帰・寿命だけ",
+      "工具写真でない信号の画像化だけ"
+    ],
+    "period": "原則2015年以降、基準日2026-11-11まで。旧比較表の留保を保持",
+    "languages": [
+      "en",
+      "ja"
+    ]
+  },
+  "mode": "standard",
+  "limits": {
+    "per_query_target": 100,
+    "screen_batch": 25,
+    "read_batch": 5,
+    "citation_seed_target": 10,
+    "citation_depth": 1
+  },
+  "priority": {
+    "weights": {
+      "relevance": 0.65,
+      "recency": 0.25,
+      "citations": 0.1
+    },
+    "recency_years": 5,
+    "citation_rate_cap": 20,
+    "exploration_fraction": 0.2,
+    "recent_fraction": 0.2,
+    "seed": "review-v1"
+  },
+  "required_extraction_fields": [
+    "input",
+    "labels",
+    "model",
+    "results",
+    "evaluation_conditions",
+    "limitations"
+  ],
+  "stop_rules": {
+    "min_decided_for_yield": 10,
+    "max_required_unsearched": 0,
+    "max_unreviewed_in_target": 0,
+    "max_pending_user_tasks": 0,
+    "claim_exhaustive": false
+  },
+  "migration_scope": "既存比較67行とDBキーワードpilotの検索48行・出現366行・候補189行を移行対象とする。件数は入力snapshotの説明であり独立論文数ではない。DOI/arXiv/出版社URLの厳密一致で統合、題名のみは未検証。旧候補の生行をnotesに保存し保留・未選別を残す。全文確認はsections以下、抽出はpartialにとどめる。rawは複製せず実在確認したファイルへ相対参照。引用数は未移行。過去の前後引用調査は別範囲のため移行せずnot_started。事後的known-item照合は独立回収試験でないためknown_itemsへ移行しない。citation_checks/known_itemsは空。検索の未知フィールド・未知時刻・未知requested_countは推定しない。未実施3セルの検索式は移行時の提案。旧followup_queue99行は自動候補でありpapers.notesに保存。ユーザー明示指示ではないためtasksは空とし、残作業は各状態から提示する。"
+}

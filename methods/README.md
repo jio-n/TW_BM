@@ -28,4 +28,6 @@ python scripts/write_round2_reports.py
 
 ## DB別キーワード検索
 
+継続的な運用には [文献調査キット](../literature-review-kit/README.md) を追加した。上記の調査方法を、8表のCSV、更新履歴、設定可能な優先度、HTMLでの進捗確認・追加指示へ具体化している。新テーマはキットの `init` から開始し、この調査固有の語群・採否を引き継がない。
+
 [DB検索プロトコル](database_search_protocol.md) と [今回の試行結果](../reports/database_keyword_search_pilot.md) を追加。`evidence/database_keyword_pilot/` に5サイトの検索・順位・候補・残件を保存した。再生成と監査は `python scripts/build_database_pilot.py --self-test`。このスクリプトは保存済みデータの整形であり、ネット検索の自動実行ではない。

@@ -1,0 +1,18 @@
+{
+  "static_validation": "PASS",
+  "rows": {
+    "queries": 45,
+    "runs": 48,
+    "hits": 366,
+    "papers": 338,
+    "evidence": 402,
+    "tasks": 0,
+    "citation_checks": 0,
+    "known_items": 0
+  },
+  "html_bytes": 1576150,
+  "javascript_syntax": "PASS",
+  "embedded_data": "exact match",
+  "browser_visual_and_interaction": "not verified",
+  "evidence_note": "Static checks validate records and syntax; they do not prove UI operation or literature coverage."
+}

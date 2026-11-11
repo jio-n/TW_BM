@@ -24,3 +24,5 @@
 - `scripts/audit_literature_search.py` のPASSは記録構造の確認。網羅率や意味的正確性の保証として使わない。未判定・未取得・未実施を成果物へ残す。
 
 - DB別キーワード検索は `methods/database_search_protocol.md` を併用。公式サイト/APIとWebのsite:検索を区別し、取得ページ・診断式・エラー・未実施セルを残す。検索候補を本文検証前に精度表へ採用しない。
+
+- ユーザー指定による汎用の調査管理は `literature-review-kit/SKILL.md` を入口にする。キットはCSV/JSON・更新履歴・単体HTMLの管理用で、独自検索基盤やWebサービスではない。旧比較データを維持し、新テーマは別projectへ初期化する。

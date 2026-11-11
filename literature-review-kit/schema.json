@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "tables": {
+    "queries": ["query_id", "source", "query_text", "search_field", "filters", "sort_order", "purpose", "coverage_cell", "required", "planned_limit", "priority", "state", "seed_paper_id", "direction", "notes"],
+    "runs": ["run_id", "query_id", "search_set_id", "executed_at", "status", "semantics", "total_hits", "total_kind", "start_rank", "requested_count", "returned_count", "next_cursor", "url", "raw_path", "notes"],
+    "hits": ["hit_id", "run_id", "rank", "paper_id", "title", "url", "doi"],
+    "papers": ["paper_id", "title", "authors", "year", "doi", "arxiv_id", "url", "identity_status", "domain", "tags", "screening", "screening_reason", "screening_evidence", "access_status", "download_status", "local_path", "reading_status", "extraction_status", "backward_status", "forward_status", "relevance", "relevance_reason", "citation_count", "citation_source", "citation_checked_at", "user_priority", "notes", "updated_at"],
+    "evidence": ["evidence_id", "paper_id", "field", "value", "unit", "context", "url", "locator", "verification"],
+    "tasks": ["task_id", "action", "target_type", "target_id", "status", "priority", "amount", "reason", "created_at", "requested_by", "completed_at", "evidence_ref"],
+    "citation_checks": ["check_id", "paper_id", "direction", "provider", "search_set_id", "total_hits", "total_kind", "checked_count", "state", "evidence_url", "notes"],
+    "known_items": ["test_id", "paper_id", "query_id", "registered_at", "database_indexed", "found_run_id", "test_type", "notes"]
+  },
+  "enums": {
+    "queries.state": ["planned", "active", "paused", "closed"],
+    "runs.status": ["success", "failed", "diagnostic", "duplicate"],
+    "runs.semantics": ["checked", "uncertain", "invalid"],
+    "runs.total_kind": ["exact", "approximate", "unknown"],
+    "papers.identity_status": ["verified_identifier", "title_match_unverified", "unresolved"],
+    "papers.screening": ["unreviewed", "potential", "include", "exclude", "hold"],
+    "papers.access_status": ["unknown", "metadata", "abstract", "online_fulltext", "blocked", "not_found"],
+    "papers.download_status": ["not_attempted", "saved", "failed", "not_saved"],
+    "papers.reading_status": ["not_started", "metadata", "abstract", "partial_text", "sections", "full"],
+    "papers.extraction_status": ["not_started", "partial", "complete"],
+    "papers.backward_status": ["not_started", "partial", "complete", "blocked", "not_applicable"],
+    "papers.forward_status": ["not_started", "partial", "complete", "blocked", "not_applicable"],
+    "tasks.action": ["search_more", "screen", "obtain_fulltext", "read_fulltext", "extract", "trace_backward", "trace_forward", "verify_identity", "reconsider", "custom"],
+    "tasks.target_type": ["paper", "query", "project"],
+    "tasks.status": ["pending", "in_progress", "done", "blocked", "cancelled"],
+    "evidence.verification": ["confirmed", "abstract", "partial", "unknown"],
+    "citation_checks.direction": ["backward", "forward"],
+    "citation_checks.total_kind": ["exact", "approximate", "unknown"],
+    "citation_checks.state": ["not_started", "partial", "complete", "blocked"],
+    "known_items.database_indexed": ["yes", "no", "unknown"],
+    "known_items.test_type": ["predeclared", "posthoc"]
+  }
+}

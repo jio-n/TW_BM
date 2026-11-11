@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "project_id": "new-review",
+  "title": "新しい文献調査",
+  "as_of": "2026-11-11",
+  "topic": "",
+  "scope": {"input": "", "output": "", "population": "", "include": [], "exclude": [], "period": "", "languages": ["en", "ja"]},
+  "mode": "standard",
+  "limits": {"per_query_target": 100, "screen_batch": 25, "read_batch": 5, "citation_seed_target": 10, "citation_depth": 1},
+  "priority": {"weights": {"relevance": 0.65, "recency": 0.25, "citations": 0.10}, "recency_years": 5, "citation_rate_cap": 20, "exploration_fraction": 0.20, "recent_fraction": 0.20, "seed": "review-v1"},
+  "required_extraction_fields": ["research_question", "method", "results", "evaluation_conditions", "limitations"],
+  "stop_rules": {"min_decided_for_yield": 10, "max_required_unsearched": 0, "max_unreviewed_in_target": 0, "max_pending_user_tasks": 0, "claim_exhaustive": false},
+  "migration_scope": "新規プロジェクト。初期設定と検索式を記入してから検索する。"
+}

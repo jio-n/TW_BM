@@ -4,6 +4,10 @@
 
 ## 成果物と利用方法
 
+### テーマを変えて使う文献調査キット
+
+[現在の調査ダッシュボード](literature-review-kit/examples/tool-wear-review/outputs/dashboard.html) ／ [使い方](literature-review-kit/README.md) ／ [設計](literature-review-kit/DESIGN.md) ／ [AI用手順](literature-review-kit/SKILL.md)。検索式・全ヒット・採否・保存・読了・抽出・引用・追加指示をCSV/JSONへ保存し、単体HTMLで確認する。調査量・優先点・探索配分を変更できる。既存調査の移行例は48実行・366ヒット行・338論文台帳行であり、詳細比較済みの本数や世界全体の網羅率ではない。[検証結果と移行範囲](literature-review-kit/QA.md)を参照。
+
 ### 3つのHTML資料
 
 各ファイルを保存し、ブラウザで開く。本文・CSS・操作用JavaScriptを内蔵した単体HTML。原資料リンクにはネット接続が必要。GitHubのファイル画面ではソースが表示されるため、Download raw fileで保存する。

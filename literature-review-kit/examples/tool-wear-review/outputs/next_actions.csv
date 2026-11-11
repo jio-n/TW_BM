@@ -1,0 +1,63 @@
+﻿action_id,action,target_type,target_id,priority,amount,reason,lane,score,score_known_weight,score_upper
+A-search_more-Q0001,search_more,query,Q0001,3,25,次の未取得順位 11、今回目標まで 90枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0002,search_more,query,Q0002,3,25,次の未取得順位 11、今回目標まで 90枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0003,search_more,query,Q0003,3,25,次の未取得順位 11、今回目標まで 90枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0004,search_more,query,Q0004,3,25,次の未取得順位 11、今回目標まで 90枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0005,search_more,query,Q0005,3,5,次の未取得順位 26、今回目標まで 5枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0006,search_more,query,Q0006,3,25,次の未取得順位 26、今回目標まで 52枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0007,search_more,query,Q0007,3,25,次の未取得順位 21、今回目標まで 80枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0008,search_more,query,Q0008,3,25,次の未取得順位 1、今回目標まで 100枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0009,search_more,query,Q0009,3,25,次の未取得順位 11、今回目標まで 90枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0010,search_more,query,Q0010,3,25,次の未取得順位 1、今回目標まで 100枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0011,search_more,query,Q0011,3,25,次の未取得順位 11、今回目標まで 83枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0012,search_more,query,Q0012,3,25,次の未取得順位 1、今回目標まで 100枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0013,search_more,query,Q0013,3,25,次の未取得順位 11、今回目標まで 69枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0014,search_more,query,Q0014,3,25,次の未取得順位 1、今回目標まで 100枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0015,search_more,query,Q0015,3,25,次の未取得順位 7、今回目標まで 0枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0016,search_more,query,Q0016,3,25,次の未取得順位 1、今回目標まで 100枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0017,search_more,query,Q0017,3,25,次の未取得順位 11、今回目標まで 90枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0018,search_more,query,Q0018,3,25,次の未取得順位 1、今回目標まで 100枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0019,search_more,query,Q0019,3,25,次の未取得順位 11、今回目標まで 0枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0020,search_more,query,Q0020,3,25,次の未取得順位 10、今回目標まで 0枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0021,search_more,query,Q0021,3,25,次の未取得順位 1、今回目標まで 0枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0022,search_more,query,Q0022,3,11,次の未取得順位 41、今回目標まで 11枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0023,search_more,query,Q0023,3,25,次の未取得順位 1、今回目標まで 0枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0024,search_more,query,Q0024,3,25,次の未取得順位 2、今回目標まで 0枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0036,search_more,query,Q0036,3,25,次の未取得順位 12、今回目標まで 89枠。,検索の残範囲,,,
+A-search_more-Q0038,search_more,query,Q0038,3,25,次の未取得順位 14、今回目標まで 41枠。,検索の残範囲,,,
+A-search_more-Q0042,search_more,query,Q0042,3,25,次の未取得順位 7、今回目標まで 94枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0043,search_more,query,Q0043,3,25,次の未取得順位 1、今回目標まで 100枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0044,search_more,query,Q0044,3,25,次の未取得順位 1、今回目標まで 100枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-search_more-Q0045,search_more,query,Q0045,3,25,次の未取得順位 1、今回目標まで 100枠。検索式の意味確認を先行。,検索の残範囲,,,
+A-read_fulltext-FIA06,read_fulltext,paper,FIA06,3,1,Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling／既存比較表の採否: 採用,優先点,90.0,0.9,100.0
+A-extract-FT002,extract,paper,FT002,3,1,Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718／既存比較表の採否: 採用,優先点,90.0,0.9,100.0
+A-extract-IM007,extract,paper,IM007,3,1,JUDO: A Juxtaposed Domain-Oriented Multimodal Reasoner for Industrial Anomaly QA／既存比較表の採否: 採用,優先点,90.0,0.9,100.0
+A-extract-IM008,extract,paper,IM008,3,1,MAU-GPT: Enhancing Multi-type Industrial Anomaly Understanding via Anomaly-aware and Generalist Experts Adaptation／既存比較表の採否: 採用,優先点,90.0,0.9,100.0
+A-extract-IM009,extract,paper,IM009,3,1,Industrial Anomaly Detection via Defect-Grounded Reasoning in Visual Latent Space／既存比較表の採否: 採用,優先点,90.0,0.9,100.0
+A-obtain_fulltext-MM002,obtain_fulltext,paper,MM002,3,1,A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support／既存比較表の採否: 技術適合・先行公開日未確認（保留）,新しさ,0,0,100
+A-obtain_fulltext-FW2003,obtain_fulltext,paper,FW2003,3,1,Wear Classification of Abrasive Flap Wheels using a Hierarchical Deep Learning Approach／既存比較表の採否: 関連（主比較外）,新しさ,68.33,0.9,78.33
+A-screen-W0216,screen,paper,W0216,3,1,Research on detection of loosening and missing defects in petrochemical equipment bolt fasteners based on improved YOLOv5s／採否未確認,探索枠,0,0,100
+A-screen-W0224,screen,paper,W0224,3,1,無電解Ni-Pの超精密旋削における単結晶ダイヤモンド工具の摩耗／採否未確認,探索枠,0,0,100
+A-screen-W0061,screen,paper,W0061,3,1,Automation of Offline Tool Wear Measurement on the Example of Inserts for Super-Alloy Machining／種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認,探索枠,5.0,0.25,80.0
+A-screen-W0219,screen,paper,W0219,3,1,FA-YOLO: A High-Precision and Efficient Method for Fabric Defect Detection in Textile Industry／採否未確認,探索枠,0,0,100
+A-obtain_fulltext-W0156,obtain_fulltext,paper,W0156,3,1,Myriad: Large Multimodal Model by Applying Vision Experts for Industrial Anomaly Detection／異常マップ誘導MLLM。複数データセットの検知と説明を報告するが、種類単独の定量評価は抄録で未確認。,探索枠,53.33,0.9,63.33
+A-trace_backward-FT002,trace_backward,paper,FT002,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_forward-FT002,trace_forward,paper,FT002,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_backward-FIA06,trace_backward,paper,FIA06,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_forward-FIA06,trace_forward,paper,FIA06,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_backward-MM001,trace_backward,paper,MM001,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_forward-MM001,trace_forward,paper,MM001,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_backward-IT003,trace_backward,paper,IT003,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_forward-IT003,trace_forward,paper,IT003,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_backward-IT007,trace_backward,paper,IT007,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_forward-IT007,trace_forward,paper,IT007,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_backward-IT008,trace_backward,paper,IT008,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_forward-IT008,trace_forward,paper,IT008,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_backward-IT009,trace_backward,paper,IT009,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_forward-IT009,trace_forward,paper,IT009,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_backward-IT010,trace_backward,paper,IT010,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_forward-IT010,trace_forward,paper,IT010,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_backward-IT011,trace_backward,paper,IT011,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_forward-IT011,trace_forward,paper,IT011,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_backward-IV002,trace_backward,paper,IV002,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
+A-trace_forward-IV002,trace_forward,paper,IV002,4,1,採用論文の引用追跡。取得集合と選別数を記録する。,引用の拡張,,,
