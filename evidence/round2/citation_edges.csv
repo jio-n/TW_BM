@@ -1,0 +1,277 @@
+﻿edge_id,seed_id,candidate_id,direction,relation_status,evidence_url,locator,notes,bundle
+ERWU001,FT001,RWU001,backward,索引で確認（原文未照合）,https://openalex.org/W639708223,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU002,FT001,RWU002,backward,原文で確認,https://openalex.org/W1999720993,Wu2019 PDF p.16 References #13,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU003,FT001,RWU003,backward,索引で確認（原文未照合）,https://openalex.org/W2584994008,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU004,FT001,RWU004,backward,索引で確認（原文未照合）,https://openalex.org/W2753403518,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU005,FT001,RWU005,backward,索引で確認（原文未照合）,https://openalex.org/W2501369945,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU006,FT001,RWU006,backward,索引で確認（原文未照合）,https://openalex.org/W2580840020,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU007,FT001,RWU007,backward,索引で確認（原文未照合）,https://openalex.org/W2735326783,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU008,FT001,RWU008,backward,索引で確認（原文未照合）,https://openalex.org/W2611227133,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU009,FT001,RWU009,backward,索引で確認（原文未照合）,https://openalex.org/W2033310064,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU010,FT001,RWU010,backward,索引で確認（原文未照合）,https://openalex.org/W2126584714,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU011,FT001,RWU011,backward,索引で確認（原文未照合）,https://openalex.org/W4243012846,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU012,FT001,RWU012,backward,索引で確認（原文未照合）,https://openalex.org/W1981144549,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU013,FT001,RWU013,backward,索引で確認（原文未照合）,https://openalex.org/W2801457104,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU014,FT001,RWU014,backward,索引で確認（原文未照合）,https://openalex.org/W2911969890,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU015,FT001,RWU015,backward,索引で確認（原文未照合）,https://openalex.org/W2741289421,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU016,FT001,RWU016,backward,索引で確認（原文未照合）,https://openalex.org/W2886374926,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU017,FT001,RWU017,backward,索引で確認（原文未照合）,https://openalex.org/W2768108646,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU018,FT001,RWU018,backward,索引で確認（原文未照合）,https://openalex.org/W1952294081,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU019,FT001,RWU019,backward,索引で確認（原文未照合）,https://openalex.org/W2790661307,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU020,FT001,RWU020,backward,索引で確認（原文未照合）,https://openalex.org/W2932628637,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU021,FT001,RWU021,backward,索引で確認（原文未照合）,https://openalex.org/W2558443896,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU022,FT001,RWU022,backward,索引で確認（原文未照合）,https://openalex.org/W2802877483,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU023,FT001,RWU023,backward,索引で確認（原文未照合）,https://openalex.org/W2955310096,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU024,FT001,RWU024,backward,索引で確認（原文未照合）,https://openalex.org/W2124722975,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU025,FT001,RWU025,backward,索引で確認（原文未照合）,https://openalex.org/W2528329754,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU026,FT001,RWU026,backward,索引で確認（原文未照合）,https://openalex.org/W2017775298,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU027,FT001,RWU027,backward,索引で確認（原文未照合）,https://openalex.org/W2904186644,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU028,FT001,RWU028,backward,索引で確認（原文未照合）,https://openalex.org/W2885679288,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU029,FT001,RWU029,backward,索引で確認（原文未照合）,https://openalex.org/W2063310398,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU030,FT001,RWU030,backward,索引で確認（原文未照合）,https://openalex.org/W2152081686,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU031,FT001,RWU031,backward,索引で確認（原文未照合）,https://openalex.org/W1981535490,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU032,FT001,RWU032,forward,索引で確認（原文未照合）,https://openalex.org/W4220925901,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU033,FT001,RWU033,forward,索引で確認（原文未照合）,https://openalex.org/W3170637310,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU034,FT001,RWU034,forward,索引で確認（原文未照合）,https://openalex.org/W4316135871,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU035,FT001,RWU035,forward,索引で確認（原文未照合）,https://openalex.org/W3037565425,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU036,FT001,RWU036,forward,索引で確認（原文未照合）,https://openalex.org/W4283386603,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU037,FT001,RWU037,forward,索引で確認（原文未照合）,https://openalex.org/W3198611057,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU038,FT001,RWU038,forward,索引で確認（原文未照合）,https://openalex.org/W4402906809,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU039,FT001,RWU039,forward,索引で確認（原文未照合）,https://openalex.org/W3146674346,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU040,FT001,RWU040,forward,索引で確認（原文未照合）,https://openalex.org/W4280602937,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU041,FT001,RWU041,forward,索引で確認（原文未照合）,https://openalex.org/W4315784642,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU042,FT001,RWU042,forward,索引で確認（原文未照合）,https://openalex.org/W4404586629,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU043,FT001,RWU043,forward,索引で確認（原文未照合）,https://openalex.org/W3204791550,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU044,FT001,RWU044,forward,索引で確認（原文未照合）,https://openalex.org/W3119816807,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU045,FT001,RWU045,forward,索引で確認（原文未照合）,https://openalex.org/W3197807047,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU046,FT001,RWU046,forward,索引で確認（原文未照合）,https://openalex.org/W3037998911,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU047,FT001,RWU047,forward,索引で確認（原文未照合）,https://openalex.org/W4308946360,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU048,FT001,RWU048,forward,索引で確認（原文未照合）,https://openalex.org/W4283324335,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU049,FT001,RWU049,forward,索引で確認（原文未照合）,https://openalex.org/W4408083067,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU050,FT001,RWU050,forward,索引で確認（原文未照合）,https://openalex.org/W4401285668,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU051,FT001,RWU051,forward,索引で確認（原文未照合）,https://openalex.org/W4405463953,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU052,FT001,RWU052,forward,索引で確認（原文未照合）,https://openalex.org/W4386002520,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU053,FT001,RWU053,forward,索引で確認（原文未照合）,https://openalex.org/W4400977410,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU054,FT001,RWU054,forward,索引で確認（原文未照合）,https://openalex.org/W4403940694,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU055,FT001,RWU055,forward,索引で確認（原文未照合）,https://openalex.org/W4399655599,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU056,FT001,RWU056,forward,索引で確認（原文未照合）,https://openalex.org/W4411232137,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU057,FT001,RWU057,forward,索引で確認（原文未照合）,https://openalex.org/W4399420851,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU058,FT001,RWU058,forward,索引で確認（原文未照合）,https://openalex.org/W4396811811,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU059,FT001,RWU059,forward,索引で確認（原文未照合）,https://openalex.org/W4391686238,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU060,FT001,RWU060,forward,索引で確認（原文未照合）,https://openalex.org/W4413052537,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU061,FT001,RWU061,forward,索引で確認（原文未照合）,https://openalex.org/W3133934458,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU062,FT001,RWU062,forward,索引で確認（原文未照合）,https://openalex.org/W4289755639,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU063,FT001,RWU063,forward,索引で確認（原文未照合）,https://openalex.org/W4289224222,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU064,FT001,RWU064,forward,索引で確認（原文未照合）,https://openalex.org/W3086638248,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU065,FT001,RWU065,forward,索引で確認（原文未照合）,https://openalex.org/W4210634774,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU066,FT001,RWU066,forward,索引で確認（原文未照合）,https://openalex.org/W3093040707,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU067,FT001,RWU067,forward,索引で確認（原文未照合）,https://openalex.org/W3209440801,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU068,FT001,RWU068,forward,索引で確認（原文未照合）,https://openalex.org/W3201790755,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU069,FT001,RWU069,forward,索引で確認（原文未照合）,https://openalex.org/W3197735755,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU070,FT001,RWU070,forward,索引で確認（原文未照合）,https://openalex.org/W4312056068,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU071,FT001,RWU071,forward,索引で確認（原文未照合）,https://openalex.org/W3091977516,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU072,FT001,RWU072,forward,索引で確認（原文未照合）,https://openalex.org/W3186351866,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU073,FT001,RWU073,forward,索引で確認（原文未照合）,https://openalex.org/W4307939236,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU074,FT001,RWU074,forward,索引で確認（原文未照合）,https://openalex.org/W4380627458,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU075,FT001,RWU075,forward,索引で確認（原文未照合）,https://openalex.org/W4300594418,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU076,FT001,RWU076,forward,索引で確認（原文未照合）,https://openalex.org/W3102172434,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU077,FT001,RWU077,forward,索引で確認（原文未照合）,https://openalex.org/W3181719572,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU078,FT001,RWU078,forward,索引で確認（原文未照合）,https://openalex.org/W4206145296,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU079,FT001,RWU079,forward,索引で確認（原文未照合）,https://openalex.org/W4285274513,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU080,FT001,RWU080,forward,索引で確認（原文未照合）,https://openalex.org/W4291415053,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU081,FT001,RWU081,forward,索引で確認（原文未照合）,https://openalex.org/W4384787137,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU082,FT001,RWU082,forward,索引で確認（原文未照合）,https://openalex.org/W4381165622,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU083,FT001,RWU083,forward,索引で確認（原文未照合）,https://openalex.org/W4387641538,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU084,FT001,RWU084,forward,索引で確認（原文未照合）,https://openalex.org/W4293547554,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU085,FT001,RWU085,forward,索引で確認（原文未照合）,https://openalex.org/W4384789043,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU086,FT001,RWU086,forward,索引で確認（原文未照合）,https://openalex.org/W4390579687,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU087,FT001,RWU087,forward,索引で確認（原文未照合）,https://openalex.org/W4405185322,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU088,FT001,RWU088,forward,索引で確認（原文未照合）,https://openalex.org/W4411336587,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU089,FT001,RWU089,forward,索引で確認（原文未照合）,https://openalex.org/W4411472698,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU090,FT001,RWU090,forward,索引で確認（原文未照合）,https://openalex.org/W4386901264,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU091,FT001,RWU091,forward,索引で確認（原文未照合）,https://openalex.org/W4392716436,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU092,FT001,RWU092,forward,索引で確認（原文未照合）,https://openalex.org/W4401977554,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU093,FT001,RWU093,forward,索引で確認（原文未照合）,https://openalex.org/W4399168478,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU094,FT001,RWU094,forward,索引で確認（原文未照合）,https://openalex.org/W4391924015,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU095,FT001,RWU095,forward,索引で確認（原文未照合）,https://openalex.org/W4404734974,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU096,FT001,RWU096,forward,索引で確認（原文未照合）,https://openalex.org/W7118126489,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU097,FT001,RWU097,forward,索引で確認（原文未照合）,https://openalex.org/W4404016658,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU098,FT001,RWU098,forward,索引で確認（原文未照合）,https://openalex.org/W4410731651,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU099,FT001,RWU099,forward,索引で確認（原文未照合）,https://openalex.org/W4412403540,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU100,FT001,RWU100,forward,索引で確認（原文未照合）,https://openalex.org/W4413352901,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU101,FT001,RWU101,forward,索引で確認（原文未照合）,https://openalex.org/W3108196746,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU102,FT001,RWU102,forward,索引で確認（原文未照合）,https://openalex.org/W3183235195,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU103,FT001,RWU103,forward,索引で確認（原文未照合）,https://openalex.org/W4313431622,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU104,FT001,RWU104,forward,索引で確認（原文未照合）,https://openalex.org/W4317538448,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU105,FT001,RWU105,forward,索引で確認（原文未照合）,https://openalex.org/W3116979932,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU106,FT001,RWU106,forward,索引で確認（原文未照合）,https://openalex.org/W4323051069,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU107,FT001,RWU107,forward,索引で確認（原文未照合）,https://openalex.org/W3202710328,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU108,FT001,RWU108,forward,索引で確認（原文未照合）,https://openalex.org/W4291415167,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU109,FT001,RWU109,forward,索引で確認（原文未照合）,https://openalex.org/W4312999010,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU110,FT001,RWU110,forward,索引で確認（原文未照合）,https://openalex.org/W4389206757,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU111,FT001,RWU111,forward,索引で確認（原文未照合）,https://openalex.org/W4396544939,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU112,FT001,RWU112,forward,索引で確認（原文未照合）,https://openalex.org/W4384786851,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU113,FT001,RWU113,forward,索引で確認（原文未照合）,https://openalex.org/W4400950750,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU114,FT001,RWU114,forward,索引で確認（原文未照合）,https://openalex.org/W4404636187,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU115,FT001,RWU115,forward,索引で確認（原文未照合）,https://openalex.org/W4388327990,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU116,FT001,RWU116,forward,索引で確認（原文未照合）,https://openalex.org/W7108598942,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU117,FT001,RWU117,forward,索引で確認（原文未照合）,https://openalex.org/W7129023467,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU118,FT001,RWU118,forward,索引で確認（原文未照合）,https://openalex.org/W4280506622,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU119,FT001,RWU119,forward,索引で確認（原文未照合）,https://openalex.org/W3173038142,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU120,FT001,RWU120,forward,索引で確認（原文未照合）,https://openalex.org/W4307732914,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU121,FT001,RWU121,forward,索引で確認（原文未照合）,https://openalex.org/W3205204392,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU122,FT001,RWU122,forward,索引で確認（原文未照合）,https://openalex.org/W4200490900,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU123,FT001,RWU123,forward,索引で確認（原文未照合）,https://openalex.org/W4225158811,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU124,FT001,RWU124,forward,索引で確認（原文未照合）,https://openalex.org/W4399370028,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU125,FT001,RWU125,forward,索引で確認（原文未照合）,https://openalex.org/W4394933521,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU126,FT001,RWU126,forward,索引で確認（原文未照合）,https://openalex.org/W4383702559,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU127,FT001,RWU127,forward,索引で確認（原文未照合）,https://openalex.org/W4220725518,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU128,FT001,RWU128,forward,索引で確認（原文未照合）,https://openalex.org/W4386616191,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU129,FT001,RWU129,forward,索引で確認（原文未照合）,https://openalex.org/W4402262409,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU130,FT001,RWU130,forward,索引で確認（原文未照合）,https://openalex.org/W4407988932,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU131,FT001,RWU131,forward,索引で確認（原文未照合）,https://openalex.org/W4406086434,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU132,FT001,RWU132,forward,索引で確認（原文未照合）,https://openalex.org/W4413929953,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU133,FT001,RWU133,forward,索引で確認（原文未照合）,https://openalex.org/W4416534462,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU134,FT001,RWU134,forward,索引で確認（原文未照合）,https://openalex.org/W3158388759,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU135,FT001,RWU135,forward,索引で確認（原文未照合）,https://openalex.org/W4286668874,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU136,FT001,RWU136,forward,索引で確認（原文未照合）,https://openalex.org/W4386136757,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU137,FT001,RWU137,forward,索引で確認（原文未照合）,https://openalex.org/W4387463199,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU138,FT001,RWU138,forward,索引で確認（原文未照合）,https://openalex.org/W4403249993,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU139,FT001,RWU139,forward,索引で確認（原文未照合）,https://openalex.org/W4412438792,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU140,FT001,RWU140,forward,索引で確認（原文未照合）,https://openalex.org/W7196970776,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU141,FT001,RWU141,forward,索引で確認（原文未照合）,https://openalex.org/W4214870740,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU142,FT001,RWU142,forward,索引で確認（原文未照合）,https://openalex.org/W3048233391,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU143,FT001,RWU143,forward,索引で確認（原文未照合）,https://openalex.org/W3115380369,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU144,FT001,RWU144,forward,索引で確認（原文未照合）,https://openalex.org/W3204023391,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU145,FT001,RWU145,forward,索引で確認（原文未照合）,https://openalex.org/W4220858848,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU146,FT001,RWU146,forward,索引で確認（原文未照合）,https://openalex.org/W3133029326,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU147,FT001,RWU147,forward,索引で確認（原文未照合）,https://openalex.org/W4384786695,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU148,FT001,RWU148,forward,索引で確認（原文未照合）,https://openalex.org/W4200212009,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU149,FT001,RWU149,forward,索引で確認（原文未照合）,https://openalex.org/W4381663916,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU150,FT001,RWU150,forward,索引で確認（原文未照合）,https://openalex.org/W4399698426,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU151,FT001,RWU151,forward,索引で確認（原文未照合）,https://openalex.org/W4388943113,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU152,FT001,RWU152,forward,索引で確認（原文未照合）,https://openalex.org/W4408152687,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU153,FT001,RWU153,forward,索引で確認（原文未照合）,https://openalex.org/W4409147145,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU154,FT001,RWU154,forward,索引で確認（原文未照合）,https://openalex.org/W4412471575,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU155,FT001,RWU155,forward,索引で確認（原文未照合）,https://openalex.org/W7128510937,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU156,FT001,RWU156,forward,索引で確認（原文未照合）,https://openalex.org/W7130375504,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU157,FT001,RWU157,forward,索引で確認（原文未照合）,https://openalex.org/W7162551044,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU158,FT001,RWU158,forward,索引で確認（原文未照合）,https://openalex.org/W4245203320,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU159,FT001,RWU159,forward,索引で確認（原文未照合）,https://openalex.org/W4311690477,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU160,FT001,RWU160,forward,索引で確認（原文未照合）,https://openalex.org/W4385444397,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU161,FT001,RWU161,forward,索引で確認（原文未照合）,https://openalex.org/W3095528971,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU162,FT001,RWU162,forward,索引で確認（原文未照合）,https://openalex.org/W3096574175,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU163,FT001,RWU163,forward,索引で確認（原文未照合）,https://openalex.org/W4402629256,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU164,FT001,RWU164,forward,索引で確認（原文未照合）,https://openalex.org/W4410852498,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU165,FT001,RWU165,forward,索引で確認（原文未照合）,https://openalex.org/W3191620616,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU166,FT001,RWU166,forward,索引で確認（原文未照合）,https://openalex.org/W4200346678,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU167,FT001,RWU167,forward,索引で確認（原文未照合）,https://openalex.org/W4294069421,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU168,FT001,RWU168,forward,索引で確認（原文未照合）,https://openalex.org/W4307130497,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU169,FT001,RWU169,forward,索引で確認（原文未照合）,https://openalex.org/W4381334412,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU170,FT001,RWU170,forward,索引で確認（原文未照合）,https://openalex.org/W4382204082,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU171,FT001,RWU171,forward,索引で確認（原文未照合）,https://openalex.org/W4383825777,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU172,FT001,RWU172,forward,索引で確認（原文未照合）,https://openalex.org/W4392243789,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU173,FT001,RWU173,forward,索引で確認（原文未照合）,https://openalex.org/W4401597568,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU174,FT001,RWU174,forward,索引で確認（原文未照合）,https://openalex.org/W4408051801,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU175,FT001,RWU175,forward,索引で確認（原文未照合）,https://openalex.org/W4410436208,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU176,FT001,RWU176,forward,索引で確認（原文未照合）,https://openalex.org/W4410578827,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU177,FT001,RWU177,forward,索引で確認（原文未照合）,https://openalex.org/W4412167670,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU178,FT001,RWU178,forward,索引で確認（原文未照合）,https://openalex.org/W4415603670,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU179,FT001,RWU179,forward,索引で確認（原文未照合）,https://openalex.org/W4416740548,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU180,FT001,RWU180,forward,索引で確認（原文未照合）,https://openalex.org/W4417422727,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU181,FT001,RWU181,forward,索引で確認（原文未照合）,https://openalex.org/W7116854143,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU182,FT001,RWU182,forward,索引で確認（原文未照合）,https://openalex.org/W7130315478,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU183,FT001,RWU183,forward,索引で確認（原文未照合）,https://openalex.org/W7137338720,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU184,FT001,RWU184,forward,索引で確認（原文未照合）,https://openalex.org/W7138921519,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU185,FT001,RWU185,forward,索引で確認（原文未照合）,https://openalex.org/W7160869006,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU186,FT001,RWU186,forward,索引で確認（原文未照合）,https://openalex.org/W7169858800,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU187,FT001,RWU187,forward,索引で確認（原文未照合）,https://openalex.org/W7214987735,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU188,FT001,RWU188,forward,索引で確認（原文未照合）,https://openalex.org/W7220832636,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU189,FT001,RWU189,forward,索引で確認（原文未照合）,https://openalex.org/W7224925450,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU190,FT001,RWU190,forward,索引で確認（原文未照合）,https://openalex.org/W7225102745,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERWU191,FT001,RWU191,forward,索引で確認（原文未照合）,https://openalex.org/W7225121597,FT001 referenced_works / cites filter,類似候補ではなくOpenAlexの引用リンク。索引の同定・年・網羅性には誤差があり得る,round2_root.json
+ERW001,FT001,WR2C008,forward,確認済み（原著）,https://arxiv.org/html/2603.12852,§2.2・§2.3、References [17],KählerらがWuを引用。,round2_wear.json
+ERW002,FT001,WR2C010,backward,未確認（関連検索）,https://www.mdpi.com/1996-1944/11/10/1977,題名・主題の探索,Wu原著参考文献では関係未確認。,round2_wear.json
+ERW003,FT001,WR2C015,forward,確認済み（引用索引）,https://api.openalex.org/works?filter=cites%3AW2972227710&per_page=20&sort=publication_date%3Adesc,results 6: referenced_works includes W2972227710,2026/7の画像＋音響回帰。,round2_wear.json
+ERW004,FT001,WR2C019,forward,確認済み（引用索引）,https://api.openalex.org/works?filter=cites%3AW2972227710&per_page=20&sort=publication_date%3Adesc,results 8: referenced_works includes W2972227710,製造由来インサート欠陥。,round2_wear.json
+ERW005,FT001,WR2C022,forward,確認済み（引用索引）,https://api.openalex.org/works?filter=cites%3AW2972227710&per_page=20&sort=publication_date%3Adesc,results 14: referenced_works includes W2972227710,SEMによる摩耗分類の研究。,round2_wear.json
+ERW006,FT001,WR2C024,forward,確認済み（原著）,https://www.mdpi.com/1424-8220/21/5/1917,Introduction、Wu 2019 references [27],実画像の種類分類を引用したが本論は温度像の程度。,round2_wear.json
+ERW007,FT001,WR2C028,forward,確認済み（引用索引）,https://api.openalex.org/works?filter=cites%3AW2972227710&per_page=20&sort=publication_date%3Adesc,results 4: referenced_works includes W2972227710,MaskLenNet。,round2_wear.json
+ERW008,FIA02,WR2C011,forward,確認済み（引用索引）,https://api.openalex.org/works?filter=cites%3AW3003268894%2Cto_publication_date%3A2026-11-11&per_page=100,results 2: referenced_works includes W3003268894,摩耗領域計測。,round2_wear.json
+ERW009,FIA02,WR2C012,forward,確認済み（引用索引）,https://api.openalex.org/works?filter=cites%3AW3003268894%2Cto_publication_date%3A2026-11-11&per_page=100,results 3: referenced_works includes W3003268894,既存FIA08。,round2_wear.json
+ERW010,FIA02,WR2C026,backward,確認済み（原著）,https://arxiv.org/html/2008.01053,References [23],Lanzetta 2001。,round2_wear.json
+ERW011,FIA04,WR2C001,backward,確認済み（出版社登録参照）,https://api.crossref.org/works/10.1016/j.jmsy.2024.12.004,message.reference 19番（表題）,KumarらHG-XAIへの引用。,round2_wear.json
+ERW012,FIA04,WR2C002,forward,確認済み（引用索引）,https://api.openalex.org/works?filter=cites%3AW4405463953%2Cto_publication_date%3A2026-11-11&per_page=100,results 48: referenced_works includes W4405463953,照明L1→L2。,round2_wear.json
+ERW013,FIA04,WR2C003,forward,確認済み（原著）,https://link.springer.com/article/10.1007/s00170-026-17619-3,References [2],SinghらがKumarの撮像方式論文を引用。,round2_wear.json
+ERW014,FIA04,WR2C009,forward,確認済み（原著）,https://www.mdpi.com/2075-1702/14/6/589,§2.1/References [31],既収録FT002。,round2_wear.json
+ERW015,FIA04,WR2C016,forward,確認済み（引用索引）,https://api.openalex.org/works?filter=cites%3AW4405463953%2Cto_publication_date%3A2026-11-11&per_page=100,results 24: referenced_works includes W4405463953,セグメント化・予測。,round2_wear.json
+ERW016,FIA04,WR2C017,forward,確認済み（引用索引）,https://api.openalex.org/works?filter=cites%3AW4405463953%2Cto_publication_date%3A2026-11-11&per_page=100,results 22: referenced_works includes W4405463953,U-Netドメイン適応。,round2_wear.json
+ERW017,FIA04,WR2C018,forward,確認済み（引用索引）,https://api.openalex.org/works?filter=cites%3AW4405463953%2Cto_publication_date%3A2026-11-11&per_page=100,results 17: referenced_works includes W4405463953,程度クラス。,round2_wear.json
+ERW018,FIA04,WR2C020,backward,確認済み（出版社登録参照）,https://api.crossref.org/works/10.1016/j.jmsy.2024.12.004,message.reference 25番,OK/NOK。,round2_wear.json
+ERW019,FIA04,WR2C021,backward,確認済み（出版社登録参照）,https://api.crossref.org/works/10.1016/j.jmsy.2024.12.004,message.reference 18番（表題）,ASME2023。,round2_wear.json
+ERW020,FIA04,WR2C027,backward,確認済み（出版社登録参照）,https://api.crossref.org/works/10.1016/j.jmsy.2024.12.004,message.reference 20番,Wu 2019。,round2_wear.json
+ERW021,FT002,WR2C001,backward,確認済み（原著）,https://www.mdpi.com/2075-1702/14/6/589,References [20]、Introduction,HG-XAI。,round2_wear.json
+ERW022,FT002,WR2C003,backward,確認済み（原著）,https://www.mdpi.com/2075-1702/14/6/589,§2.1、References [21],画像拡張の前報。,round2_wear.json
+ERW023,FT002,WR2C020,backward,確認済み（原著）,https://www.mdpi.com/2075-1702/14/6/589,References [18],OK/NOK。,round2_wear.json
+ERW024,FT002,WR2C027,backward,確認済み（原著）,https://www.mdpi.com/2075-1702/14/6/589,References [22],Wu 2019。,round2_wear.json
+ERW025,FT002,WR2C028,forward,確認済み（引用索引）,https://api.openalex.org/works?filter=cites%3AW7162551044%2Cto_publication_date%3A2026-11-11&per_page=100,results 1: referenced_works includes W7162551044,MaskLenNet。,round2_wear.json
+ERW026,MM001,WR2C013,backward,確認済み（原著）,https://www.mdpi.com/2673-2688/7/10/400,References [12] 原著・[45] データ,MATWI。,round2_wear.json
+ERW027,MM001,WR2C014,backward,未確認（関連検索）,https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39,題名・共用データによる検索,Ahangarからの引用関係を確認できず。,round2_wear.json
+ERT001,IT003,KRT006,backward,確認済み（原著参考文献）,https://www.mdpi.com/2076-3417/16/6/3022,§2; References [8],著者はHao Wei。2024年オンライン公開、2025年巻号,round2_vit.json
+ERT002,IT003,KRT007,backward,確認済み（原著参考文献）,https://www.mdpi.com/2076-3417/16/6/3022,References [1],,round2_vit.json
+ERT003,IT003,KRT008,backward,確認済み（原著参考文献）,https://www.mdpi.com/2076-3417/16/6/3022,References [2],,round2_vit.json
+ERT004,IT004,KRT004,backward,確認済み（原著参考文献）,https://arxiv.org/pdf/2506.03345,§II; §VI References [7],,round2_vit.json
+ERT005,IT004,KRT009,backward,確認済み（原著参考文献）,https://arxiv.org/pdf/2506.03345,§II; §VI References [1],,round2_vit.json
+ERT006,IT004,KRT010,forward,確認済み（原著の題名・全著者一致、引用DOI／会議名不一致）,https://www.nature.com/articles/s41598-026-63864-7,References [20],引用元のACM書誌はASMCの書誌と矛盾。題名・全著者が一致する引用のみ記録し、引用元DOIをIT004に採用しない,round2_vit.json
+ERT007,IT005,KRT011,backward,確認済み（原著参考文献）,https://arxiv.org/pdf/2504.02494,§V Table V; References [17],,round2_vit.json
+ERT008,IT005,KRT012,backward,確認済み（原著参考文献）,https://arxiv.org/pdf/2504.02494,References [20],,round2_vit.json
+ERT009,IT005,KRT016,forward,確認済み（原著参考文献）,https://arxiv.org/html/2610.28949v1,§2; References Mohammad and Ryu (2025),原著にarXiv:2504.02494記載,round2_vit.json
+ERT010,IT005,KRT017,forward,確認済み（原著参考文献）,https://arxiv.org/html/2604.27629v1,§2.1; References [8],,round2_vit.json
+ERT011,IT005,KRT018,関連,未確認（版関係の推定、引用関係未確認）,https://www.nature.com/articles/s41598-026-63752-0,Abstract; Article metadata,引用件数に含めない,round2_vit.json
+ERT012,IT006,KRT013,backward,確認済み（原著参考文献）,https://globals.ieice.org/en_publications/elex/10.1587/elex.21.20240054/_f,References [7],,round2_vit.json
+ERT013,IT006,KRT014,backward,確認済み（原著参考文献）,https://globals.ieice.org/en_publications/elex/10.1587/elex.21.20240054/_f,References [8],,round2_vit.json
+ERT014,IT006,KRT015,forward,確認済み（原著参考文献）,https://globals.ieice.org/en_transactions/fundamentals/10.1587/transfun.2025EAP1012/_f,§1; References [15],,round2_vit.json
+ERT015,IT009,KRT019,backward,確認済み（原著参考文献）,https://arxiv.org/html/2608.12725v1,§2.1; §4.7; References [14],,round2_vit.json
+ERT016,IT009,KRT020,backward,確認済み（原著参考文献）,https://arxiv.org/html/2608.12725v1,§2.1; References [26],,round2_vit.json
+ERT017,IT009,KRT021,関連,未確認（テーマ検索のみ）,https://www.mdpi.com/1996-1073/19/2/462,§3–4,ELと熱画像で撮像が異なる,round2_vit.json
+ERT018,IT003,KRT022,関連,未確認（テーマ検索のみ）,https://www.mdpi.com/2073-8994/17/8/1313,§3–4,独立の鋼板分類論文,round2_vit.json
+ERT019,IT009,KRT023,関連,未確認（テーマ検索のみ）,https://www.sciencedirect.com/science/article/pii/S2590123026010492,Abstract,熱画像、生成データ補完というテーマ上の関連,round2_vit.json
+ERT020,IT015,KRT025,forward,確認済み（原著参考文献）,https://www.researchgate.net/publication/400665300_Improving_Semiconductor_Defect_Classification_in_SEM_Images_via_Domain_Adaptation,References [13],,round2_vit.json
+ERT021,IT015,KRT026,forward,確認済み（原著参考文献）,https://pmc.ncbi.nlm.nih.gov/articles/PMC12900135/,References [2],索引上の原著References欄でDOI一致,round2_vit.json
+ERV001,IV001,KRV022,forward,確認済み（原著参照）,https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Hyperbolic_Defect_Feature_Synthesis_for_Few-Shot_Defect_Classification_CVPR_2026_paper.pdf,§2／References [29]／Table 1,,round2_vlm.json
+ERV002,IV001,KRV009,forward,機関抄録で言及確認（引用欄未取得）,https://yonsei.elsevierpure.com/en/publications/umdc-a-unified-training-free-model-for-multi-category-few-shot-de/,Abstract,MVRECを名指しで比較。,round2_vlm.json
+ERV003,IV001,KRV020,forward,検索候補（引用未確認）,https://pmc.ncbi.nlm.nih.gov/articles/PMC12808781/,検索結果／比較節,正式な参照番号は抽出未確認。,round2_vlm.json
+ERV004,IV001,KRV025,backward,確認済み（原著参照）,https://arxiv.org/html/2412.16897,References Gu et al. (2024),,round2_vlm.json
+ERV005,IV001,KRV027,backward,確認済み（原著参照）,https://arxiv.org/html/2412.16897,References Zhou et al. (2023),,round2_vlm.json
+ERV006,IV001,KRV031,backward,確認済み（原著参照）,https://arxiv.org/html/2412.16897,References Xiao et al. (2022),,round2_vlm.json
+ERV007,IV002,KRV021,backward,確認済み（原著参照）,https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Hyperbolic_Defect_Feature_Synthesis_for_Few-Shot_Defect_Classification_CVPR_2026_paper.pdf,References [29]／Table 1,,round2_vlm.json
+ERV008,IV002,KRV009,forward,機関抄録で言及確認（引用欄未取得）,https://yonsei.elsevierpure.com/en/publications/umdc-a-unified-training-free-model-for-multi-category-few-shot-de/,Abstract,MTD比較でHypDFSを名指し。,round2_vlm.json
+ERV009,IV003,KRV008,forward,確認済み（原著参照）,https://link.springer.com/article/10.1007/s44443-026-00893-2,References Jin et al. (2024),,round2_vlm.json
+ERV010,IV003,KRV010,forward,検索候補（引用未確認）,https://1201jin.github.io/,Publications [J4]／[C5],著者の拡張研究。抄録に原版への言及があるが正式引用欄の一次資料は未取得。,round2_vlm.json
+ERV011,IV003,KRV026,backward,確認済み（原著参照）,https://arxiv.org/html/2502.14884,References [20],,round2_vlm.json
+ERV012,IV003,KRV025,backward,確認済み（原著参照）,https://arxiv.org/html/2502.14884,References [28],,round2_vlm.json
+ERV013,IV003,KRV034,forward,検索候補（引用未確認）,https://63dac.conference-program.com/presentation/?id=RESEARCH649&sess=sess160,DAC公式発表書誌,,round2_vlm.json
+ERV014,IM001,KRV023,backward,確認済み（原著参照）,https://arxiv.org/html/2410.09453,References Jiang et al. (2024b),,round2_vlm.json
+ERV015,IM001,KRV025,backward,確認済み（原著参照）,https://arxiv.org/html/2410.09453,References Gu et al. (2024),,round2_vlm.json
+ERV016,IM001,KRV028,backward,確認済み（原著参照）,https://arxiv.org/html/2410.09453,References Yang et al. (2023)／§3,,round2_vlm.json
+ERV017,IM001,KRV001,forward,確認済み（原著参照）,https://arxiv.org/html/2501.15795v1,References [13]／§4.1,,round2_vlm.json
+ERV018,IM001,KRV002,forward,確認済み（原著参照）,https://arxiv.org/html/2602.09850v4,§4.1／References Jiang et al. (2024),,round2_vlm.json
+ERV019,IM001,KRV003,forward,確認済み（原著参照）,https://arxiv.org/html/2512.13671v2,References [18]／§4.1,,round2_vlm.json
+ERV020,IM001,KRV004,forward,確認済み（原著参照）,https://arxiv.org/html/2607.03817,References [23]／Table 1,,round2_vlm.json
+ERV021,IM001,KRV005,forward,確認済み（原著参照）,https://arxiv.org/html/2608.09789v1,References Jiang et al. (2025)／§4.1,,round2_vlm.json
+ERV022,IM001,KRV006,forward,確認済み（原著参照）,https://arxiv.org/html/2507.21619v1,References Jiang et al. (2024a)／Test Datasets,,round2_vlm.json
+ERV023,IM001,KRV007,forward,確認済み（原著参照）,https://arxiv.org/html/2608.29783v1,References Jiang et al. (2025)／Experimental Setup,,round2_vlm.json
+ERV024,IM001,KRV032,forward,確認済み（原著参照）,https://arxiv.org/html/2505.02626,References [17]／§3.3,,round2_vlm.json
+ERV025,IM001,KRV033,forward,確認済み（原著参照）,https://arxiv.org/html/2610.12310,References／§4.1／Table 1,,round2_vlm.json
+ERV026,IM001,KRV018,forward,検索候補（引用未確認）,https://arxiv.org/html/2605.10833,§2／Table 1,関連比較は確認。引用書誌の該当番号は未抽出。,round2_vlm.json
+ERV027,IM001,KRV019,forward,確認済み（原著参照）,https://pmc.ncbi.nlm.nih.gov/articles/PMC13468834/,References [10]／§4.1,,round2_vlm.json
+ERV028,IM002,KRV001,backward,確認済み（原著参照）,https://arxiv.org/html/2505.02626,References [7]／Table 2,,round2_vlm.json
+ERV029,IM002,KRV024,backward,確認済み（原著参照）,https://arxiv.org/html/2505.02626,References [17],,round2_vlm.json
+ERV030,IM002,KRV025,backward,確認済み（原著参照）,https://arxiv.org/html/2505.02626,References [13],,round2_vlm.json
+ERV031,IM003,KRV008,forward,確認済み（原著参照）,https://link.springer.com/article/10.1007/s44443-026-00893-2,References Jiang et al. (2024),,round2_vlm.json
+ERV032,IM003,KRV015,forward,確認済み（原著参照）,https://arxiv.org/html/2601.19222,References Jiang et al. (2024b)／§2.3,,round2_vlm.json
+ERV033,IM003,KRV016,forward,検索候補（引用未確認）,https://7jiangyq.github.io/,Publications FabThink と FabGPT,同著者の後続手法。本文引用未確認。,round2_vlm.json
+ERV034,IM003,KRV017,version,異版書誌確認,https://research.cuhk.edu.hk/en/publications/fabgpt-an-efficient-large-multimodal-model-for-complex-wafer-defe/,Abstract／DOI,同題の誌版。被引用件数には含めない。,round2_vlm.json
+ERV035,IM003,KRV025,backward,確認済み（原著参照）,https://arxiv.org/html/2407.10810,References [14],,round2_vlm.json
+ERV036,IM003,KRV029,backward,確認済み（原著参照）,https://arxiv.org/html/2407.10810,References [4],,round2_vlm.json
+ERV037,IM003,KRV030,backward,確認済み（原著参照）,https://arxiv.org/html/2407.10810,References [12],,round2_vlm.json

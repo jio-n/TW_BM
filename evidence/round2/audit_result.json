@@ -1,0 +1,276 @@
+{
+  "structural_status": "PASS",
+  "errors": [],
+  "warnings": [],
+  "search_rows": 128,
+  "candidate_discovery_rows": 279,
+  "candidate_keys": 268,
+  "unresolved_discovery_rows": 63,
+  "unresolved_candidate_keys": 61,
+  "citation_edges": 276,
+  "retrieval_attempts": 76,
+  "planned_seed_directions": 32,
+  "seed_states": {
+    "申告した取得集合を全件一次選別": 16,
+    "部分確認／総数未確認": 16
+  },
+  "seed_checks": [
+    {
+      "scope": "工具",
+      "seed_id": "FT001",
+      "direction": "backward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 2,
+      "details": "31/31: 索引集合全件取得・全件タイトル／利用可能抄録選別 | 31/31: Crossrefの登録31件を題名一次選別"
+    },
+    {
+      "scope": "工具",
+      "seed_id": "FT001",
+      "direction": "forward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 2,
+      "details": "160/160: 索引集合全件取得・全件タイトル／利用可能抄録選別 | 20/160: この台帳は索引の一部。別途root取得"
+    },
+    {
+      "scope": "工具",
+      "seed_id": "FIA02",
+      "direction": "backward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "46/46: 著者版の参考文献全件を題名一次選別"
+    },
+    {
+      "scope": "工具",
+      "seed_id": "FIA02",
+      "direction": "forward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "4/4: 当該索引・日付条件内全返却を一次選別"
+    },
+    {
+      "scope": "工具",
+      "seed_id": "FIA04",
+      "direction": "backward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "38/38: Crossref登録38件の題名一次選別"
+    },
+    {
+      "scope": "工具",
+      "seed_id": "FIA04",
+      "direction": "forward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "52/52: 当該索引・日付条件内全返却を一次選別"
+    },
+    {
+      "scope": "工具",
+      "seed_id": "FT002",
+      "direction": "backward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "36/36: 出版社番号・Crossref登録36件を一次選別"
+    },
+    {
+      "scope": "工具",
+      "seed_id": "FT002",
+      "direction": "forward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "1/1: 当該索引・日付条件内全返却を一次選別"
+    },
+    {
+      "scope": "工具",
+      "seed_id": "MM001",
+      "direction": "backward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "56/56: 原著番号で56件の一次選別"
+    },
+    {
+      "scope": "工具",
+      "seed_id": "MM001",
+      "direction": "forward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "0/0: 当該索引の該当結果0"
+    },
+    {
+      "scope": "工業ViT",
+      "seed_id": "IT003",
+      "direction": "backward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "3/26: 一部確認"
+    },
+    {
+      "scope": "工業ViT",
+      "seed_id": "IT003",
+      "direction": "forward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "0/None: 取得失敗・検索範囲限定"
+    },
+    {
+      "scope": "工業ViT",
+      "seed_id": "IT004",
+      "direction": "backward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "2/10: 一部確認"
+    },
+    {
+      "scope": "工業ViT",
+      "seed_id": "IT004",
+      "direction": "forward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "1/None: 一部確認"
+    },
+    {
+      "scope": "工業ViT",
+      "seed_id": "IT005",
+      "direction": "backward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "2/39: 一部確認"
+    },
+    {
+      "scope": "工業ViT",
+      "seed_id": "IT005",
+      "direction": "forward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "2/None: 一部確認"
+    },
+    {
+      "scope": "工業ViT",
+      "seed_id": "IT006",
+      "direction": "backward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "2/33: 一部確認"
+    },
+    {
+      "scope": "工業ViT",
+      "seed_id": "IT006",
+      "direction": "forward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "1/None: 一部確認"
+    },
+    {
+      "scope": "工業ViT",
+      "seed_id": "IT009",
+      "direction": "backward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "2/36: 一部確認"
+    },
+    {
+      "scope": "工業ViT",
+      "seed_id": "IT009",
+      "direction": "forward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "0/None: 取得失敗・検索範囲限定"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IV001",
+      "direction": "backward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "32/32: 全件確認（参考文献題名の範囲）"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IV001",
+      "direction": "forward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "3/未提供: 一部確認"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IV002",
+      "direction": "backward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "58/58: 全件確認（参考文献題名の範囲）"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IV002",
+      "direction": "forward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "1/未提供: 一部確認"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IV003",
+      "direction": "backward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "35/35: 全件確認（参考文献題名の範囲）"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IV003",
+      "direction": "forward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "3/未提供: 一部確認"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IM001",
+      "direction": "backward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "60/60: 全件確認（参考文献題名の範囲）"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IM001",
+      "direction": "forward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "11/未提供: 一部確認"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IM002",
+      "direction": "backward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "28/28: 全件確認（参考文献題名の範囲）"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IM002",
+      "direction": "forward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "0/未提供: 一部確認"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IM003",
+      "direction": "backward",
+      "status": "申告した取得集合を全件一次選別",
+      "record_count": 1,
+      "details": "34/34: 全件確認（参考文献題名の範囲）"
+    },
+    {
+      "scope": "工業VLM_MLLM",
+      "seed_id": "IM003",
+      "direction": "forward",
+      "status": "部分確認／総数未確認",
+      "record_count": 1,
+      "details": "3/未提供: 一部確認"
+    }
+  ],
+  "coverage_conclusion": "選定seedの追跡状況は監査可能。新規候補が継続発見され、再帰追跡・独立検索式回収試験・除外再査読が未完了。完全網羅・探索飽和を主張しない。"
+}

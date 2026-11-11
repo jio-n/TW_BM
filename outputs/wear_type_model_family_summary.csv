@@ -1,5 +1,5 @@
 ﻿family,definition,examples,image_count,multimodal_count,held_count,related_count,paper_ids
-CNN系,畳み込みネットワークで種類分類または種類付き分割を行う。CNN特徴と別の従来ML分類器の組合せは次の区分。,ToolWearnet、独自CNN、VGG16/19、EfficientNet-B0、AlexNet、U-Net,5,0,1,2,FT001; FT003; FIA03; FIA04; FIA05; FIA06; FIA07; FIA08
+CNN系,畳み込みネットワークで種類分類または種類付き分割を行う。CNN特徴と別の従来ML分類器の組合せは次の区分。,ToolWearnet、独自CNN、VGG16/19、EfficientNet-B0、AlexNet、U-Net,8,0,0,3,FT001; FT003; FIA03; FIA04; FIA05; FIA06; FIA07; FIA08; FW2001; FW2002; FW2003
 CNN特徴＋従来ML系,CNNは画像特徴抽出を担当し、Gradient Boosting/XGBoostが最終の種類判定を行う。深層特徴を使うハイブリッド方式。,VGG16＋Gradient Boosting、ResNet18＋XGBoost,1,1,0,0,FIA02; MM001
 視覚Transformer系,ViT/Swinなどの視覚Transformerを主たる画像表現に使う。本区分の確認例は言語モデルを判定系に含めない。,ViT-Large、Swin backboneのMaskLenNet,1,0,0,1,FT002; FA001
 VLM／MLLM系,画像と言語を扱うモデルで種類を判断する。LLMを中核にする確認例はMLLMと明記。VLMとMLLMは排他的に件数を分けない。,Qwen3-VL-8B（MLLM）,0,0,1,0,MM002

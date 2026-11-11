@@ -67,9 +67,9 @@ for name in ['視覚Transformer','VLM・対照学習','MLLM・LLM','関連・保
    assert row[headers[header]].value==r[key],(r['id'],key)
 assert sum(bool(c.hyperlink) for sh in wb for row in sh for c in row)==links_added
 with (ROOT/'outputs/industrial_defect_classification_benchmark.csv').open(encoding='utf-8-sig',newline='') as f: rows=list(csv.DictReader(f))
-assert len(rows)==len(records)==38
-assert sum(x['accepted_count'] for x in d['family_summary'])==len(main)==28
+assert len(rows)==len(records)
+assert sum(x['accepted_count'] for x in d['family_summary'])==len(main)
 assert all(r['claim_ids'] and r['source_ids'] and r['model_family'] for r in rows)
-qa={'as_of':d['as_of'],'sheet_rows':expected,'native_hyperlinks':links_added,'excel_error_cells':0,'records':len(rows),'stats':d['stats'],'checks':['論文ID・DOI重複と根拠参照は統合時検査','全38行の系統・主モデル・ラベル・性能・採否・Claim IDをCSV/JSON/XLSXで照合','全8シートの表・フィルタ・固定ペイン・行高を検査','画像プレビューは各シートの主要範囲、全セルの視覚精査ではない'],'visual_review':'別途保存した8枚の主要範囲プレビューを確認'}
+qa={'as_of':d['as_of'],'sheet_rows':expected,'native_hyperlinks':links_added,'excel_error_cells':0,'records':len(rows),'stats':d['stats'],'checks':['論文ID・DOI重複と根拠参照は統合時検査','全行の系統・主モデル・ラベル・性能・採否・Claim IDをCSV/JSON/XLSXで照合','全8シートの表・フィルタ・固定ペイン・行高を検査','画像プレビューは各シートの主要範囲、全セルの視覚精査ではない'],'visual_review':'主要範囲・追加行のプレビューを確認'}
 (ROOT/'evidence/workbook_qa/industrial/validation.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(qa,ensure_ascii=False))

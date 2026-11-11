@@ -14,7 +14,8 @@ def clean(v): return str(v).replace('|','／').replace('\n','<br>')
 def table(headers, rows):
  return '| '+' | '.join(headers)+' |\n|'+'|'.join(['---']*len(headers))+'|\n'+'\n'.join('| '+' | '.join(clean(v) for v in row)+' |' for row in rows)
 def paper_table(prefix):
- return table(['ID・原著','年','主モデル','原語クラス／粒度','種類分類の指標・条件'],[[ref(r['id']),r['year'],r['primary_model'],r['labels'],r['performance']] for r in main if r['id'].startswith(prefix)])
+ family={'IT':'視覚Transformer','IV':'VLM／VLM由来特徴','IM':'MLLM'}[prefix]
+ return table(['ID・原著','年','主モデル','原語クラス／粒度','種類分類の指標・条件'],[[ref(r['id']),r['year'],r['primary_model'],r['labels'],r['performance']] for r in main if r['family_group']==family])
 
 coverage_groups=[
  ('モデル系統','視覚Transformer','IT001 IT002 IT003 IT004 IT005 IT006 IT007 IT008 IT009 IT010 IT011','該当事例あり'),
@@ -43,7 +44,13 @@ coverage_groups=[
  ('学習','言語を使う厳密な未知欠陥ゼロショット','','比較条件の統一が不足・要追加調査'),
  ('地域','国内機関・日本語学会','','今回の系統的な所属国監査は未実施・要追加調査'),
 ]
-coverage=[{'axis':a,'category':b,'paper_ids':ids,'count':len(ids.split()),'status':status} for a,b,ids,status in coverage_groups]
+coverage_additions={'鋼材・金属表面':'IVT2003','ウェハビンマップ':'IVT2001','複数製品・共通ベンチマーク':'IVL2001 IVL2002 IVL2003 IVL2004 IVL2005 IVL2006 IVL2007','画像／画像化マップのみ・学習済み分類器':'IVT2001 IVT2002 IVT2003','画像＋質問／プロンプト（正常参照・RAG等を含む）':'IVL2001 IVL2002 IVL2003 IVL2004 IVL2005 IVL2006 IVL2007','欠陥種類VQA':'IVL2001 IVL2002 IVL2003 IVL2004 IVL2005 IVL2006 IVL2007','複合クラスまたは多ラベルを明示':'IVT2001'}
+coverage=[]
+for a,b,ids,status in coverage_groups:
+ if a=='モデル系統' and b in ['視覚Transformer','VLM／VLM由来特徴','MLLM']: ids=' '.join(r['id'] for r in main if r['family_group']==b)
+ elif b in coverage_additions: ids+=' '+coverage_additions[b]
+ coverage.append({'axis':a,'category':b,'paper_ids':ids,'count':len(ids.split()),'status':status})
+coverage.extend([{'axis':'対象','category':'太陽電池赤外熱画像','paper_ids':'IVT2002','count':1,'status':'該当事例あり'},{'axis':'出力','category':'未知欠陥のクラス発見','paper_ids':'IVL2008','count':1,'status':'関連・閉集合分類とは別'}])
 with (ROOT/'outputs/industrial_coverage.csv').open('w',encoding='utf-8-sig',newline='') as f:
  w=csv.DictWriter(f,fieldnames=list(coverage[0]));w.writeheader();w.writerows(coverage)
 
@@ -53,7 +60,7 @@ report=f'''# 工業・産業の欠陥種類分類：Transformer・VLM・MLLMベ�
 
 ## 1. エグゼクティブサマリー
 
-**欠陥の種類をカテゴリとして答える28本を主比較対象とした。** 視覚Transformer11本、VLM／VLM由来特徴7本、MLLM10本。関連5本・保留5本を別に収録し、Excelは計38行。主比較のうちIT004は欠陥種類を匿名IDで表すため、名称の共通語彙比較には使えない。その他にも原語ラベルの全量一覧が未抽出の部分集合があり、各行に明記した。
+**欠陥の種類をカテゴリとして答える{len(main)}本を主比較対象とした。** 系統別内訳は{dict(Counter(r['family_group'] for r in main))}。関連{d['stats']['related']}本・保留{d['stats']['held']}本を別に収録し、Excelは計{len(records)}行。主比較のうちIT004は欠陥種類を匿名IDで表すため、名称の共通語彙比較には使えない。その他にも原語ラベルの全量一覧が未抽出の部分集合があり、各行に明記した。Round2の追加探索・残件は[更新報告](round2_findings.md)と[探索監査](search_process_audit.md)を参照。
 
 [Excel](../outputs/industrial_defect_classification_benchmark.xlsx)／[CSV](../outputs/industrial_defect_classification_benchmark.csv)／[系統集計](../outputs/industrial_model_family_summary.csv)／[品質監査](industrial_defect_classification_audit.md)／[代表論文の詳細](../details/industrial_defect_classification/README.md)。
 
@@ -103,7 +110,7 @@ SEM-CLIPでは視覚分類ヘッドだけのAccuracy83.6%に対し、テキス�
 
 {paper_table('IM')}
 
-MMAD系7本（IM001、IM005–IM010）は同じベンチマークへの集中を含み、独立した7種類の工場データ検証ではない。MMADの244欠陥カテゴリと、各設問の4択は異なる単位である。標準1-shotは正常参照画像1枚であり、各欠陥のラベル付き学習例1枚を与えるfew-shotと同義ではない。{ref('IM001')}。
+初回収録のMMAD系7本（IM001、IM005–IM010）に加えてRound2でも同じベンチマークを利用する研究が増えた。論文数を独立した工場データ検証数として扱わない。MMADの244欠陥カテゴリと、各設問の4択は異なる単位である。標準1-shotは正常参照画像1枚であり、各欠陥のラベル付き学習例1枚を与えるfew-shotと同義ではない。{ref('IM001')}。
 
 純粋なテキストLLMだけで画像から欠陥種類を分類する主採用例は0本だった。画像を受け取るGPT-4o、Qwen-VL、Gemma等はこの調査ではMLLMに集計する。0本は文献の不存在を証明するものではない。
 
@@ -159,7 +166,7 @@ IV005の「unseen」は比較用ResNetの学習に含まれない種類であり
 
 ## 12. 網羅性・制約
 
-38本の詳細表に加え、除外・保留・関連・重複候補25行を管理した。後者には同一論文の異版や同定できない名称も含み、合計63本の実在する独立論文を確認したという意味ではない。76出典、221主張、230根拠対応を登録した。主採用28本は一次資料に対応するが、全体を完全精読した割合とは異なる。
+{len(records)}本の詳細表と、初回の除外・保留・関連・重複候補{len(d['exclusions'])}行、Round2の発見台帳を管理した。候補には同一論文の異版や同定できない名称も含み、行数の合計を独立論文数としない。{d['stats']['sources']}出典、{d['stats']['claims']}主張、{d['stats']['claim_links']}根拠対応を登録した。主採用{len(main)}本は一次資料に対応するが、全文を完全精読した割合とは異なる。
 
 鋼材、SEM、ウェハパターン、PCB、太陽電池、繊維、竹製品、積層造形をカバーする。日本語・国内機関の網羅検索、包装・食品・自動車部品など個別産業、画像＋物理センサの種類分類、独立工場評価は不足する。追加探索でも新しい候補が出ており、探索飽和は証明していない。詳細は[カバレッジCSV](../outputs/industrial_coverage.csv)と監査報告を参照。
 

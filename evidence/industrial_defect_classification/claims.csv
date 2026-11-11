@@ -1,222 +1,301 @@
-﻿claim_id,entity_id,field,claim,status
-CIT001,IT001,labels,cracks (Cr); inclusions (In); patches (Pa); pitted surface (PS); rolled-in scale (RS); scratches (Sc),確認済み（記載条件）
-CIT002,IT001,input,200×200グレースケールの表面像をJET疑似カラー化し224×224にリサイズ,確認済み（記載条件）
-CIT003,IT001,primary_model,CNN-T：4層畳み込み、パッチ埋込、2層Transformer encoder、MLP分類器,確認済み（記載条件）
-CIT004,IT001,performance,学習80%：Accuracy 99.17%、precision 99.21%、recall 99.17%、F1 99.17%（10実験平均）,確認済み（記載条件）
-CIT005,IT001,split,学習70/75/80%、残りテスト。10回反復の平均。専用検証集合未確認,確認済み（記載条件）
-CIT006,IT002,labels,scratches (0); crazing (1); inclusion (2); patch (3); pitted surface (4); rolled-in (5),確認済み（記載条件）
-CIT007,IT002,input,鋼表面グレースケール画像。NEU-DET由来だが画像全体を分類し、bboxを出力しない,確認済み（記載条件）
-CIT008,IT002,primary_model,Keras/TensorFlowで実装したViT分類器（パッチ化＋自己注意＋MLP）,確認済み（記載条件）
-CIT009,IT002,performance,最良設定のTest accuracy 96.39%（347/360；Table 8とFig.17）,確認済み（記載条件）
-CIT010,IT002,split,"各クラス240学習・60テスト（計1,440/360）; 独立のハイパーパラメータ検証用分割は未確認",確認済み（記載条件）
-CIT011,IT003,labels,NEU-DET: Crazing; Inclusion; Patches; Pitted Surface; Rolled-in Scale; Scratches | X-SDD: finishing roll printing; iron sheet ash; oxide scale of plate system; oxide scale of temperature system; red iron; slag inclusion; surface scratch | MTDD: blowhole; crack; fray; break; uneven; non-defective surfaces,確認済み（記載条件）
-CIT012,IT003,input,NEU-DETグレー画像、X-SDD／MTDD RGB画像を224×224へ変換,確認済み（記載条件）
-CIT013,IT003,primary_model,Swin Transformer; CoAtNet（新規提案モデルではない）,確認済み（記載条件）
-CIT014,IT003,performance,Swin：NEU-DET Acc/F1 100/100%；X-SDD 94.9/94.0%；MTDD 88.7/76.9%。CoAtNet Acc/F1 は同順98.6/98.6%、91.9/87.9%、84.3/63.0%,確認済み（記載条件）
-CIT015,IT003,split,各データセット65%学習/15%検証/20%テスト。ロット分割の有無未確認,確認済み（記載条件）
-CIT016,IT004,labels,本文・Fig.2–3では欠陥を数値IDで匿名化（1–11）。種類の名称は未公表／未確認。図キャプション内の層別クラス数とID範囲が不整合,確認済み（記載条件）
-CIT017,IT004,input,実ファブSEM画像、図中注記を除去し340×340へ切出し、224×224へリサイズ。ウェハマップではない,確認済み（記載条件）
-CIT018,IT004,primary_model,DINOv2の微調整。半教師あり版は疑似ラベルを併用,確認済み（記載条件）
-CIT019,IT004,performance,教師あり微調整でLayer 1は5画像/種類、Layer 2は15画像/種類でそれぞれ90%超。疑似ラベルの加算効果は著者報告で2–6%（Fig.6）,確認済み（記載条件）
-CIT020,IT004,split,学習/検証/テスト。学習とテストに同一ウェハ由来画像を混ぜない。件数・層ごとの配分の詳細は抽出テキストで未確認,確認済み（記載条件）
-CIT021,IT005,labels,Normal; Center; Donut; Edge_Loc; Edge_Ring; LOC; Near_Full; Scratch; Random。複合29種はTable III（例 Center+Edge_Loc; Donut+LOC+Edge_Ring+Scratch）,確認済み（記載条件）
-CIT022,IT005,input,ウェハのダイ状態グリッド。224×224へ整形、3ch化。実物の光学写真ではない,確認済み（記載条件）
-CIT023,IT005,primary_model,ViT-Tiny（12層、hidden 192、3 head、5.7Mパラメータ、patch 16）,確認済み（記載条件）
-CIT024,IT005,performance,Table VのViT-Tiny validation accuracy 98.4%。4複合グループ平均F1 0.9767（§V.B、MSF-Trans 0.9473）。抄録のF1 98.4%とTable V accuracyは別表記,確認済み（記載条件）
-CIT025,IT005,split,ランダム学習80/テスト20%（§IV.B）。Table Vでは20%側をValidation Accuracyと記すため、別検証・テストとみなさない,確認済み（記載条件）
-CIT026,IT006,labels,Center; Donut; Edge-Loc; Edge-Ring; Loc; Random; Scratch; Near-Full; Normal。合成対象はScratch/Loc/Donut/Center/Edge-Ring/Edge-Loc,確認済み（記載条件）
-CIT027,IT006,input,ダイ電気検査の二次元ビンマップを64×64へ最近傍整形。表面写真ではない,確認済み（記載条件）
-CIT028,IT006,primary_model,ViT-Lite-6/4、CVT-6/4、CCT、Swin-T、LeViT-192でUnionMixup＋MMSTM,確認済み（記載条件）
-CIT029,IT006,performance,ViT-Lite-6/4の2複合テストでmixupなし比+17.1（原著%表記）。3複合で無mixup比少なくとも+21.8、4複合で+24.7（原著%表記）,確認済み（記載条件）
-CIT030,IT006,split,単一型ラベルから学習、別途合成した2–4複合で試験。混合元ウェハの学習との重複防止や厳密分割率未確認,確認済み（記載条件）
-CIT031,IT007,labels,Center; Donut; Edge-Loc; Edge-Ring; Loc; Random; Scratch; Near-Full,確認済み（記載条件）
-CIT032,IT007,input,0背景、1良品ダイ、2不良ダイの2Dグリッドを224×224にし3ch化。光学画像ではない,確認済み（記載条件）
-CIT033,IT007,primary_model,Swin-Tiny（patch 4、window 7、線形分類head）；Grad-CAMは別途説明評価,確認済み（記載条件）
-CIT034,IT007,performance,"3,828のテストでAccuracy 94.83%、macro F1 92.44%、balanced accuracy 92.18%（Table 1）。IoU 0.129は分類ではなくGrad-CAM局在評価",確認済み（記載条件）
-CIT035,IT007,split,"層別70/15/15%、17,863/3,828/3,828、seed 42",確認済み（記載条件）
-CIT036,IT008,labels,Blood Spot; Coffee Stain; Detergent Stain; Food Spot; Glue Spot; Ink Stain; Makeup Stain; Marker Spot; Oil Stain; Paint Spot; Rust Stain; Sweat Stain,確認済み（記載条件）
-CIT037,IT008,input,スマホで撮影した布の416×416 JPG。家庭環境で照明を統制,確認済み（記載条件）
-CIT038,IT008,primary_model,XCottL-FebViT枠組みのLEViT（CNN前段、階層的自己注意、MLP、平均プーリングによる教師あり分類）,確認済み（記載条件）
-CIT039,IT008,performance,LEViTのFabricSpotDefect F1 99.95±0.40%（拡張データ10-fold、Table 12）。この表のF1を元画像独立テストAccuracyとみなさない,確認済み（記載条件）
-CIT040,IT008,split,"元の643学習/219検証/152テストを記述。拡張後はTable 9に4,800/300/900、Table 12の成績は別途、拡張データの層別10-fold CV。原画像単位で拡張系列を分離したか未確認",確認済み（記載条件）
-CIT041,IT009,labels,Contact_BeltMarks; Contact_Corrosion; Contact_FrontGridInterruption; Contact_NearSolderPad; Crack_Closed; Crack_Isolated; Crack_Resistive; Interconnect_BrightSpot; Interconnect_Disconnected; Interconnect_HighlyResistive; No_Defect; Unknown,確認済み（記載条件）
-CIT042,IT009,input,セルのEL画像。欠陥の画素マスクは訓練拡張時のみ、推論不要,確認済み（記載条件）
-CIT043,IT009,primary_model,ViT-S、ViT-L、EfficientNetV2-Lを比較。提案は学習時のみLaMaの塗り直しで欠陥を分離するGDI,確認済み（記載条件）
-CIT044,IT009,performance,ViT-S＋GDI、学習20%・閾値0.5固定の4 seed：全ラベル一致0.3883±0.0111、macro F1 0.5965±0.0119（GDIなし0.3467±0.0123、0.5710±0.0057）。テスト閾値調整条件のViT-S 0.4286／0.6507とは区別,確認済み（記載条件）
-CIT045,IT009,split,原画像を先に約80/20に分け、GDI生成は学習のみ。学習の1/5/10/20/50/100%部分集合を比較。主要実験はテスト集合で閾値最適化、補助実験は閾値0.5固定4 seeds,確認済み（記載条件）
-CIT046,IT010,labels,mildew; bending; black spots; cracking; pointed（序論はslendernessと記載）,確認済み（記載条件）
-CIT047,IT010,input,コンベア上の産業カメラ画像、1500×60から512×96に異方性リサイズ。1本を6角度撮像,確認済み（記載条件）
-CIT048,IT010,primary_model,C-ViT：細長い画像向けCNN Feature ExtractorでViTパッチ埋め込みを置換、難例の対照損失HCLで学習,確認済み（記載条件）
-CIT049,IT010,performance,Table 2 C-ViT＋HCL：mAP 94.3%、OF1 90.2%、CF1 88.5%。ViT-Small：91.6%、85.8%、81.7%。序論の93.8%は本文表と相違するためTable 2/5を採用,確認済み（記載条件）
-CIT050,IT010,split,学習/検証/テスト70/20/10%。同一箸を別分割に入れない管理は確認できず,確認済み（記載条件）
-CIT051,IT011,labels,Cell-Interconnection; Electrically Insulated Cell Parts; Finger Defect; Material; Microcrack; Multi-Defect; Normal; Visual,確認済み（記載条件）
-CIT052,IT011,input,生産ラインのELパネル画像からRLSAと形態処理でセル切出し、256×256×3,確認済み（記載条件）
-CIT053,IT011,primary_model,PVELNet：多尺度並列畳み込み・残差とTransformer自己注意の分類器,確認済み（記載条件）
-CIT054,IT011,performance,未拡張テストAccuracy 95.71%（95% CI 95.26–96.16%）。同条件VGG19 94.69%、DarkNet53 94.65%（Table 13）,確認済み（記載条件）
-CIT055,IT011,split,"Table 5から元画像学習23,607、拡張後30,030、未拡張テスト7,508（各行合算）。先に分割し少数クラスの学習のみ幾何拡張。パネル/ロット単位分割は未確認",確認済み（記載条件）
-CIT056,IT012,input,PCB外観画像,確認済み（確認範囲内）
-CIT057,IT012,primary_model,ConvNeXt-Tiny、EfficientNet-V2-S、MaxViT-T、Swin-T、ViT-B/16の同条件比較,確認済み（確認範囲内）
-CIT058,IT012,performance,抄録ではConvNeXt-Tinyが最高（macro F1 0.99743と記載）、Swin-T/ViT-B/16は約0.5ポイント下。各ViT絶対値未確認,確認済み（確認範囲内）
-CIT059,IT012,split,GroupShuffleSplitで画像単位の漏洩を抑制と抄録に記載、具体数は未確認,確認済み（確認範囲内）
-CIT060,IT013,labels,keyholing; desirable; balling; lack-of-fusion (LOF),確認済み（確認範囲内）
-CIT061,IT013,input,推論では上面熱動画のみ、訓練時にシミュレーション由来の側面深さを追加,確認済み（確認範囲内）
-CIT062,IT013,primary_model,ViViT＋タスク別アダプタ。訓練中のみ物理シミュレーションの溶融池深さを補助回帰,確認済み（確認範囲内）
-CIT063,IT014,input,PVセルのEL画像,確認済み（確認範囲内）
-CIT064,IT014,primary_model,MetaFormer系PVEL-ViT、埋込多尺度融合と選択的トークン注意,確認済み（確認範囲内）
-CIT065,IT014,performance,公開プレビューのPVEL-ViT accuracy 0.9584。課題ラベルと分割が照合できず比較から除外,確認済み（確認範囲内）
-CIT066,IT015,input,実ファブの欠陥SEM画像,確認済み（確認範囲内）
-CIT067,IT015,primary_model,CNN＋Transformer分類分岐とPyramid Attentionによるセグメンテーション分岐のDeepSEM-Net,確認済み（確認範囲内）
-CIT068,IT015,performance,元5クラス分類accuracy 97.25%、セグメンテーションIoU 84.40%（別タスク）,確認済み（確認範囲内）
-CIT069,IT016,primary_model,低ランク適応転移学習と多ラベル分類。LoRAが使用できても元モデルをTransformerと推定しない,確認済み（確認範囲内）
-CIT070,IT016,performance,元課題93.28%、別のSLSデータセットに転移後99.32%と公開抄録に記載。詳細条件未確認,確認済み（確認範囲内）
-CIT071,IT017,labels,DeepPCB: open; short; mouse bite; spur; pinhole; spurious copper。他データセット原語の詳細は未照合,確認済み（確認範囲内）
-CIT072,IT017,input,DeepPCBの欠陥側画像、他PCB画像、HRIPCBの注釈による欠陥パッチ,確認済み（確認範囲内）
-CIT073,IT017,primary_model,PCBVisionNet（Dual-Domain Attention＋Multi-Scale Feature Extractor、CNN）。ViT-Base/Swin-Tinyは比較器のみ,確認済み（確認範囲内）
-CIT074,IT017,split,DeepPCB 1050/225/225、PKU 970/208/208、HRIPCB 1470/315/315,確認済み（確認範囲内）
-CIV001,IV001,labels,"原文Table 7の例：bottle＝broken_large, broken_small, contamination。metal_nut＝bent, color, flip, scratch。transistor＝bent_lead, cut_lead, damaged_case, misplaced。全リストはTable 7。",確認済み
-CIV002,IV001,input,欠陥画像と既知の欠陥インスタンスマスク、ラベル付きサポート画像・マスク。画像から欠陥を自力発見する性能とは別。,確認済み
-CIV003,IV001,prompt,主提案は推論時に自然言語プロンプトなし。CLIP-ZeroShot比較条件ではクラス記述をテキスト埋め込み化。,確認済み
-CIV004,IV001,primary_model,MVREC＋Zip-Adapter(-F)。事前学習済みAlphaCLIPがマスクと周囲文脈の多視点特徴を抽出。Zip-Aは視覚的類似度によるサポート検索、Zip-A-Fは投影・サポート特徴を微調整。推論はサポートのone-hotラベルに基づく。,確認済み
-CIV005,IV001,dataset,MVTec-FS（MVTec ADの再注釈）、NEU-DET、PCB Defect Dataset、MTD、AITEX,確認済み
-CIV006,IV001,split,種類ごとに50%/50%に分け、訓練側から各クラス1/3/5枚をサポート抽出、固定のテスト側をクエリ。サポートを5回抽出し平均。,確認済み
-CIV007,IV001,performance,MVTec-FSのZip-A-Fは1/3/5-shotで73.7%/86.1%/89.4%。同表のテキスト0-shot比較は37.4%。,確認済み
-CIV008,IV001,class_results,5-shotの製品群別例：Grid 80.8%、Tile 97.6%、Transistor 100.0%。これは欠陥個別ラベルの成績とは別。,確認済み
-CIV009,IV001,generalization,他の4工業データセットでもデータセット内でサポートを再抽出して評価。サポートなしの工場外移植は未確認。,確認済み
-CIV010,IV001,limitations,マスク付き欠陥インスタンスが前提。製品群をまたぐ単一46クラス分類のスコアとしては扱えない。,確認済み
-CIV011,IV002,labels,"MTD＝blowhole, crack, break, fray, uneven。MVTec-FSの例：scratches, dents, dirt, deformation（論文中の説明語。評価ラベルの全原語はMVREC Table 7参照）。",確認済み
-CIV012,IV002,input,欠陥画像。サポート学習は全体とクロップ双方の特徴を使用し、AlphaCLIPのマスク有無を比較。Fig. 2の評価はクエリ全体画像からの分類。クエリで用いるマスクの詳細は未確認。,確認済み
-CIV013,IV002,prompt,図2の評価経路は画像エンコーダと学習済みアダプタ。候補テキストを用いない。,確認済み
-CIV014,IV002,primary_model,HypDFS。AlphaCLIP ViT-L/14で特徴を得て、双曲空間の欠陥プロトタイプと分布モデルで特徴を合成。欠陥残差アダプタと階層対照学習で分類特徴を適応。,確認済み
-CIV015,IV002,dataset,MVTec-FS、Magnetic Tile Defect（MTD）,確認済み
-CIV016,IV002,split,MVTec-FS既定の訓練／テスト（引用元MVRECは種類ごと50%/50%）。K=1/3/5。MTDの厳密な分割枚数・再抽出回数は未確認。,確認済み
-CIV017,IV002,performance,Table 1。1/3/5-shotはMVTec-FS 79.3%/89.3%/91.7%、MTD 59.4%/78.6%/86.4%。Zip-A-FはMVTec-FS 73.7%/86.1%/89.4%、MTD 55.4%/67.6%/78.6%。,確認済み
-CIV018,IV002,class_results,Tables 2–3にMVTec-FS製品群別結果。個別欠陥種類の分類スコアは未確認。,確認済み
-CIV019,IV002,generalization,同一手法をMVTec-FSとMTDで個別評価。工場・設備を跨ぐホールドアウト評価は未確認。,確認済み
-CIV020,IV002,limitations,マスク注釈付き画像で評価。欠陥検出込みの総合性能および未知製品へのゼロショット性能は未確認。,確認済み
-CIV021,IV003,labels,"good（非欠陥）, bridges, copper residues, holes, infilm defects, particles, scratches（§2.3の原語）。",確認済み
-CIV022,IV003,input,製造ラインで得たグレースケールSEM画像。クエリ画像と、全クラス共通で事前定義した候補文を比較。学習時に少数画像を使用。,確認済み
-CIV023,IV003,prompt,欠陥形態の専門知識をstate-level文に入れ、SEMの暗さや焦点ずれを記述するtemplate-level文と合成。固定の候補文で全画像を評価。,確認済み
-CIV024,IV003,primary_model,SEM-CLIP。ViT-B/16+の複数層の視覚埋め込みとテキストの類似度確率に、各層CLSから学習した分類ヘッドの確率を加重和（後者の重みα=0.8）。,確認済み
-CIV025,IV003,dataset,製造ライン取得の社内SEM画像,確認済み
-CIV026,IV003,split,分類比較は10-shot/クラス、各モデル同一テスト。独立テスト枚数・ウェハ単位分割は本文で未確認。,確認済み
-CIV027,IV003,performance,分類10-shotでAccuracy 83.7%、Precision 87.2%、Recall 86.7%、F1 84.4%。視覚ヘッドのみのアブレーションはAcc 83.6%/F1 84.3%、テキスト類似度のみは25.7%/16.0%。,確認済み
-CIV028,IV003,class_results,Fig. 7は10-shot混同行列。粒子と膜内欠陥の形態が近く誤認が見られる。,確認済み
-CIV029,IV003,limitations,単一製造ライン、クラス不均衡。テキスト併用の上積みは同アブレーションでAcc 0.1ポイント。,確認済み
-CIV030,IV004,labels,"Mousebite, Open, Pinhole, Short, Spur, Spurious Copper（Table 4）",確認済み
-CIV031,IV004,input,DeepPCBのtested画像から正解bboxをクロップ。CLIP 224²、DINOv2 518²。参照画像・差分画像・テキスト入力は使わない。,確認済み
-CIV032,IV004,prompt,視覚トークンのVPT。自然言語プロンプトや推論時のテキスト塔を用いる方式ではない。,確認済み
-CIV033,IV004,primary_model,CLIP-ViT-B/16、DINOv2-S/14にLinear Probe、LoRA、Deep Visual Prompt Tuning（VPT）を比較。VPTでは画像ViT各層に長さ8の学習可能トークン。,確認済み
-CIV034,IV004,dataset,DeepPCB-derived（欠陥bboxから生成）,確認済み
-CIV035,IV004,split,欠陥種類層化7:1:2、k=5/10/20はtrainから種類ごと抽出、validation/test固定。試行3回平均の記載。基板や原画像IDでの群分けは未確認。,確認済み
-CIV036,IV004,performance,全データTable 3のCLIP-VPTテストはAcc 0.990 / macro-F1 0.991 / macro-AUPRC 0.998。CLIP-Linear 0.971 / 0.972 / 0.991、CLIP-LoRA 0.969 / 0.971 / 0.992。DINOv2-VPT 0.988 / 0.988 / 0.998。少数ショットはFig. 3–4。,確認済み
-CIV037,IV004,class_results,全データCLIP-VPT Table 4、ラベル順のクラス別Accuracy 0.980 / 0.988 / 0.997 / 0.997 / 0.988 / 0.997。,確認済み
-CIV038,IV004,generalization,他PCBデータセットへの同プロトコル検証は今後の計画。,確認済み
-CIV039,IV004,limitations,既知の正解bboxによる分類であり、全基板画像からの検出・分類とは条件が異なる。Table 3のCNNはテストAcc 0.993–0.994でCLIP-VPT 0.990を上回る。 DeepPCBの元画像はPCBのCCD実撮像だが、データセット著者が試験画像に人工欠陥も手作業で追加。自然発生欠陥と追加欠陥を分けた評価は未確認。,確認済み
-CIV040,IV005,labels,"Missing_hole, Mouse_bite, Open_circuit, Short, Spur, Spurious_copper",確認済み
-CIV041,IV005,input,評価ではDeepPCBの正解bboxを切り出した224×224画像。few-shotは30枚/種の視覚プロトタイプを使用。,確認済み
-CIV042,IV005,prompt,zero-shot設計では欠陥種と正常領域を記述する自然言語ライブラリ。主要定量表のfew-shotは画像プロトタイプを利用。,確認済み
-CIV043,IV005,primary_model,VLM-AOIのStage 2はCLIP ViT-B/32。数値比較のfew-shot条件はクラス別の画像プロトタイプとROIの類似度。設計上のzero-shot枝はクラス文とのコサイン類似度。,確認済み
-CIV044,IV005,dataset,DeepPCB,確認済み
-CIV045,IV005,split,Seen＝Mouse_bite/Open_circuit/Short/Spur、Unseen＝Missing_hole/Spurious_copper。VLM-AOIは全6種のサポートを受け、ResNet-50は4種×30で学習。群単位分割は未確認。,確認済み
-CIV046,IV005,performance,Tables I/IIIのVLM-AOI k=30はUnseen Acc 82.9%/F1 0.898、Seen Acc 61.3%/F1 0.643。ResNet-50は0.0%/0.000と78.3%/0.780。時間18.202 msと16.036 ms。,確認済み
-CIV047,IV005,class_results,Tables II/IVのVLM-AOI F1：Missing_hole 0.990、Mouse_bite 0.683、Open_circuit 0.669、Short 0.776、Spur 0.445、Spurious_copper 0.807。,確認済み
-CIV048,IV005,generalization,ベースラインに未学習の2種類を比較。提案には各30枚のラベル付き画像を与えており、未知種類を未提示のまま分類する評価ではない。,確認済み
-CIV049,IV005,limitations,正解bboxが前提。提案6種とベースライン4種でサポート条件が非対称。82.9%はfew-shotであり、テキストzero-shotの定量値はTables I–IVにない。 DeepPCBの元画像はPCBのCCD実撮像だが、データセット著者が試験画像に人工欠陥も手作業で追加。自然発生欠陥と追加欠陥を分けた評価は未確認。,確認済み
-CIV050,IV006,labels,"Crazing, Inclusion, Patches, Pitted surface, Punching, Rolled in scale, Water spot, Welding line, Oil spot, Crescent gap, Silk spot, Waist folding, Rolled pit, Bright scratch, Crease, Dark scratches, Secondary rust skin, White rust, Iron scale compression, Red iron sheet, Iron sheet ash, Oxide scale of plate system, Oxide scale of temperature system, Finishing roll printing, Slag Inclusion",確認済み
-CIV051,IV006,input,公開の鋼表面欠陥画像を256×256に統一。分類時はクエリ画像と全ラベル候補文。マスク由来の属性は学習時T3等の監督に使われ、分類時のT0/T1は候補側。,確認済み
-CIV052,IV006,prompt,T0＝欠陥名、T1＝欠陥名・典型視覚属性・想定原因のクラス記述。学習文T2＝自然文、T3＝構造化属性、T4＝テンプレート文。転移時は欠陥名テンプレートを各外部セットで統一。,確認済み
-CIV053,IV006,primary_model,CLIP-Adapterによる各CLIP変種の視覚側適応。評価は画像と各ラベル文の埋め込み類似度最大のラベル。中心結果はLong-CLIP ViT-L/14。,確認済み
-CIV054,IV006,dataset,SteelDefectX（NEU、GC10、X-SDD、S3Dを統合し、FSC-20とESDIs-SODの選別データも利用）,確認済み
-CIV055,IV006,split,データセット公式train/validation 7:3。独立テスト分割の記載なし。外部転移はMSD-ClsとCGFSDS-9。,確認済み
-CIV056,IV006,performance,Table 2 Long-CLIP ViT-L/14、T3学習→T0評価はAcc 94.45%／mAcc 93.66%。同T3→T1は93.12%／90.70%。T2→T0は93.63%／92.56%。,確認済み
-CIV057,IV006,class_results,mAcc 93.66%。Table 2の個別欠陥種の成績は未確認。,確認済み
-CIV058,IV006,generalization,Table 3 Long-CLIP ViT-L/14のT2適応後、アルミ29.03%・継目無鋼管40.18% Acc（未適応ゼロショット8.60%・25.11%）。ターゲット候補ラベル文は既知。,確認済み
-CIV059,IV006,limitations,v2の条件を採用。統合集合の検証と外部転移の成績差が大きい。公開データ統合の工場・ロット単位分割は未確認。,確認済み
-CIV060,IV007,labels,"Center, Donut, Edge_Ring, Edge_Loc, Loc, Random, Scratch, Near_full。元データには正常Noneも存在。論文のFig. 3本文はBackgroundにも言及。",確認済み
-CIV061,IV007,input,製造現場由来のWM-811Kウェハマップを128×128×3に変換。各欠陥クラスの固定自然言語記述を候補側に付与。,確認済み
-CIV062,IV007,prompt,クラス別に欠陥の空間分布・形状を自然文で定義し固定プロトタイプ化。標準・詳細・簡潔な文を比較。,確認済み
-CIV063,IV007,primary_model,YOLO-LA。凍結YOLO画像埋め込みに軽量射影を適用し、凍結MiniLM-L6-v2で作ったクラス文プロトタイプとのコサイン類似度で分類。,確認済み
-CIV064,IV007,dataset,WM-811K,確認済み
-CIV065,IV007,split,層化train/test 80:20、seed 42。trainからvalidationを別抽出（比率未確認）。,確認済み
-CIV066,IV007,performance,Table 2 YOLOv10-N＋言語整合85.75% Acc、同バックボーンのみ83.50%（+2.25ポイント）。YOLOv12-N＋言語整合85.06%、同バックボーン83.48%。,確認済み
-CIV067,IV007,class_results,Fig. 3の混同行列はYOLOベースライン。提案のクラス別数値は未確認。,確認済み
-CIV068,IV007,limitations,欠陥マップ形状の分類であり、光学/SEM表面写真における外観欠陥そのものとは別。背景クラスの記述が節間で明確でない。,確認済み
-CIV069,IV008,labels,"Table 2の評価例：Extra, Stuck, Bent, Hole, Pit, Contamin., Scratch, Damage。対象データセットごとの候補は補足Tables 7–11。",確認済み
-CIV070,IV008,input,画像、欠陥種・正常を記述する候補テキスト。few-shotには正常参照画像を追加する設定あり。,確認済み
-CIV071,IV008,prompt,Knowledge Base for Anomaliesの欠陥種・外観記述を製品名や撮像テンプレートと合成。,確認済み
-CIV072,IV008,primary_model,MultiADS。CLIPのテキスト埋め込みと線形アダプタ付き局所画像特徴を整合し、正常＋K欠陥種の画素別マップを出す。MultiADS-Fは製品別に候補種を制限。,確認済み
-CIV073,IV008,dataset,MVTec-AD、VisA、MPDD、MAD-real/MAD-sim、Real-IAD,確認済み
-CIV074,IV008,split,別データセットへのzero-shot転移。例：MVTec-ADで学習、VisAやMPDDでテスト。訓練からcombinedを除外。,確認済み
-CIV075,IV008,performance,Table 1のMVTec-AD→VisAは画素AUROC/F1/AP 93.6/22.3/24.8%、→MPDD 95.2/42.8/53.0%。画像単位の種類分類精度としては扱わない。,確認済み
-CIV076,IV008,class_results,Table 2の画素例：未学習PitのAUROC/F1/AP 97.08/6.15/1.01%、既学習Hole 99.55/12.64/25.19%。,確認済み
-CIV077,IV008,generalization,補助データで未観測の種類に評価例あり（画素単位）。,確認済み
-CIV078,IV008,limitations,カテゴリ別画素指標と二値画像指標であり、画像単位の欠陥種類選択精度は未確認。,確認済み
-CIV079,IV009,labels,"Table 5掲載例：broken small, poke, crack, good condition。全クラスの種類分類精度は未確認。",確認済み
-CIV080,IV009,input,試験時の画像のみ。訓練時に合成異常特徴と製品・欠陥種の記述を利用。,確認済み
-CIV081,IV009,prompt,学習時に製品と欠陥名の組合せ文。推論はテキストを入力せず分類結果を文章化。,確認済み
-CIV082,IV009,primary_model,SuperSimpleNet系の分類・分割ヘッド。学習時にCLIPの画像／欠陥文の類似度を利用、推論時にCLIPを無効化し分類インデックスを定型文に戻す。,確認済み
-CIV083,IV009,dataset,MVTec AD、KSDD2,確認済み
-CIV084,IV009,performance,Table 5は種類名予測例と推論時間（平均約6.6 ms、A100）。Tables 3–4は二値検出・画素局在の評価。種類Accuracy／F1は未確認。,確認済み
-CIV085,IV009,limitations,例示をカテゴリ識別精度に換算しない。公開された定量結果は二値検出／画素局在の尺度。,確認済み
-CIM001,IM001,input,実製品クエリ画像、欠陥質問と選択肢。同一製品カテゴリの正常参照画像を標準1枚添付。,原著確認
-CIM002,IM001,primary_model,評価ベンチマーク。GPT-4o（2024-05-13）等を測定。,原著確認
-CIM003,IM001,labels,"製品別欠陥種類の四択。著者のデータ定義の原語キー例はzipper `split_teeth`, `squeezed_teeth`、cable `cable_swap`, `cut_inner_insulation`, `combined`。候補は質問ごとに異なる。",原著確認
-CIM004,IM001,performance,Table 2標準条件の欠陥種類Accuracy GPT-4o 65.80%、Claude-3.5-Sonnet 60.14%、Gemini-1.5-Pro 60.12%、InternVL2-76B 54.22%、AnomalyGPT-7B 27.49%。GPT-4oの74.92%は7タスク平均。,原著確認
-CIM005,IM001,split,ベンチマーク評価。標準1-shotは正常画像をランダムに1枚、1-shot+は最近傍検索。単画像制約モデルでは0-shot。,原著確認
-CIM006,IM002,input,原画像、異常マップに基づく赤輪郭付き画像、正常参照画像。画像448×448、温度0。,原著確認
-CIM007,IM002,primary_model,VELM（DDAD/PatchCoreとGPT-4o/4o-miniのカスケード）。異常領域を輪郭で強調しMLLMが分類。,原著確認
-CIM008,IM002,labels,"ボトルのプロンプト例 `Broken Large`, `Broken Small`, `Contamination`（Fig. 4）。MVTec-AC再編で capsule `poke`/`crack`、carpet `cut`/`hole`、screw `thread.side`/`thread.top`、zipper `broken_teeth`/`rough` を対ごとに統合（§3.3）。",原著確認
-CIM009,IM002,performance,DDAD＋GPT-4o MVTec-AC 84.0% Accuracy、80.3% F1、79.7% κ、VisA-AC 69.6% Accuracy。GTマスクoracleはMVTec-AC 87.8%、VisA-AC 87.6%。Table 1原MVTec-ADでは81.4%だがAbstractは80.4%と記載。,原著確認
-CIM010,IM002,split,各原データセットを再編し評価。MVTec-ACは重複クラス統合・誤注記見直し・combined削除、VisA-ACは少数クラス除外・4クラス統合。,原著確認
-CIM011,IM003,input,480×480 SEM実写、質問、画像から取得した文字情報とラベル集合。,原著確認
-CIM012,IM003,primary_model,FabGPT。PandaGPT（Vicuna-7B＋凍結ImageBind Huge）、CLIP画像／ラベル特徴、画像上文字メタデータ、prompt modulation。,原著確認
-CIM013,IM003,labels,"`Hole`, `Particle`, `Scratch`, `Pattern`（Table 1表記、§2.1はpattern deformities）、正常画像は `good`。",原著確認
-CIM014,IM003,performance,Table 2のCategory FabGPT 97.50%、Lisa 92.50%、AnomalyGPT 75.00%、GPT-4 37.50%。全種類Q&A平均は96.86%。,原著確認
-CIM015,IM003,split,SEM画像train/test 7:3。両群に正常・異常。独立ウエハ・製造ロット単位か未確認。,原著確認
-CIM016,IM004,input,溶融後・粉末塗布後の実可視画像、科学文献由来の欠陥参照画像・記述。ORNLのIR等は保有されるが当該モデルの評価入力は可視。,原著確認
-CIM017,IM004,primary_model,RAG＋GPT-4o-mini／Qwen2-VL-2B。ColPali画像検索、text-embedding-ada-002文献検索。,原著確認
-CIM018,IM004,labels,"§3: Recoater Hopping, Recoater Streaking, Incomplete Spreading, Swelling, Debris, Super-Elevation, Soot, Excessive Melting, Localized Bright Spot, Spatter on Powder, Mounding Powder, Localized Dark Regions, Misprint。付録表ではEdge Swelling、Crashing、Stripe Boundaryの表記も使用。",原著確認
-CIM019,IM004,performance,GPT-4o-mini＋RAGの平均AccuracyはAddUp Maraging Steel 0.620、EOS 17-4 PH 0.621、EOS DMREF 0.521、EOS Inconel 718 0.738。RAGなしは同順0.610/0.471/0.401/0.523（Table 3）。,原著確認
-CIM020,IM004,split,54件はテスト専用。異なる2機種・4条件の画像を評価。追加学習なし、文献を検索ソースとして使用。,原著確認
-CIM021,IM005,input,工業画像、問題文、選択肢。追加画像入力の比較も実施。提案条件の画像参照はTable 2に明確な個別注記なし。,原著確認
-CIM022,IM005,primary_model,AnomalyR1（Qwen2.5-VL 3B、GRPO＋ROAM）。,原著確認
-CIM023,IM005,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認
-CIM024,IM005,performance,Table 2 欠陥種類Accuracy 63.56%。base 41.07%、SFT 41.51%。76.96%は全サブタスク平均。,原著確認
-CIM025,IM005,split,学習に工業データセット由来600画像、MMAD形式を活用。§4.2のTable 2でMMAD評価、訓練／評価の画像IDレベルの重複排除・種類質問数は未確認。,原著確認
-CIM026,IM006,input,検査画像・質問・選択肢を入力。モデルは視覚欠陥領域の自己生成表現を使う。正常参照画像は別の1-shot設定も検証。,原著確認
-CIM027,IM006,primary_model,OmniAD（Qwen2.5-VL 3B/7B、Semantic Anomaly Encodingと視覚誘導テキスト推論）。,原著確認
-CIM028,IM006,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認
-CIM029,IM006,performance,Table 1の欠陥種類Accuracy 7B 78.80%、3B 75.90%。7Bの79.9%は全7タスク平均。,原著確認
-CIM030,IM006,split,MMADの約20%/80%評価系統。学習SFT 1.6k画像／6.4k QA、GRPO 293画像／1.1k QA。種類質問の個別評価nは未確認。,原著確認
-CIM031,IM007,input,クエリ・同一対象の正常参照画像を比較し、選択肢を含む質問に答える。,原著確認
-CIM032,IM007,primary_model,JUDO（Qwen2.5-VL-7B、並置比較による異常位置SFT、ドメインQA学習、GRPO）。,原著確認
-CIM033,IM007,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認
-CIM034,IM007,performance,Table 1の欠陥種類Accuracy 74.74%。同表Qwen2.5-VL-7B 54.35%、AnomalyR1 7B 64.81%。81.20%は全タスク平均。,原著確認
-CIM035,IM007,split,Stage 1にReal-IAD 1.4k画像・MMAD 293画像（カテゴリごと1件）、Stage 2に約13k QA、Stage 3に同一MMAD画像から1.4k QA。MMADの種類質問分母・画像IDの完全分離は未確認。,原著確認
-CIM036,IM008,input,実工業画像と質問／選択肢。異常マップ由来情報をモデルに統合。,原著確認
-CIM037,IM008,primary_model,MAU-GPT-4B（Gemma-3系列、Anomaly-aware expertとGeneralist expertの適応）。,原著確認
-CIM038,IM008,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認
-CIM039,IM008,performance,MMAD Table 5 Defect Classification Accuracy 39.31%。Gemma3-4B 37.07%、GPT-4o 65.80%。61.41%は全タスク平均。,原著確認
-CIM040,IM008,split,MAU-Setで各データ元を固定比率分割、MMADで追加ベンチマーク。MMADとの原画像重複の検証は未確認。,原著確認
-CIM041,IM009,input,工業画像、欠陥種類の選択質問。外部正常参照・ツール不要。,原著確認
-CIM042,IM009,primary_model,Anomaly-LR（Qwen2.5-VL 3B／7B）。全体文脈を言語推論し、局所欠陥を視覚潜在空間で反復精緻化。,原著確認
-CIM043,IM009,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認
-CIM044,IM009,performance,Table 1の欠陥種類Accuracy 7B 82.70%、3B 82.49%。Table 1の全タスク平均87.12%/86.00%は別指標。,原著確認
-CIM045,IM009,split,MMAD由来学習約20%、画像単位で排他的な残り80%を評価。OODはReal-IAD学習と別データ評価。,原著確認
-CIM046,IM010,input,クエリ画像、質問と選択肢、検索された正常参照画像1枚・テキスト知識。欠陥マップの専門家は主に検出・位置質問で作動。,原著確認
-CIM047,IM010,primary_model,SiGMA（複数のMLLM、ドメイン知識・正常画像検索、信頼度重み付き統合）。,原著確認
-CIM048,IM010,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認
-CIM049,IM010,performance,Table 1の欠陥種類Accuracy 79.2%。85.2%は7タスク平均。,原著確認
-CIM050,IM010,split,MMAD評価回答でモデル構成／ハイパーパラメータを選定。固定後の信頼度推定はラベルなし評価バッチを用いる。,原著確認
-CIR_IR001_labels,IR001,labels,"青: adhesion, tearing, contamination。白: oil stains, tearing, Cuff Rolling Defect。正常: No Defects",出版社本文の対象・方法・結果節確認
-CIR_IR001_input,IR001,input,工場側面画像と製品別欠陥候補,出版社本文の対象・方法・結果節確認
-CIR_IR001_primary_model,IR001,primary_model,Qwen2.5-VL-3B、SFT＋GRPOによるRFT,出版社本文の対象・方法・結果節確認
-CIR_IR001_performance,IR001,performance,青0.63（YOLO0.62）、混合製品0.61。画像種類分類Accuracyではない,出版社本文の対象・方法・結果節確認
-CIR_IR001_split,IR001,split,held-out testとの記載。比率・個体/ライン単位分割未確認,出版社本文の対象・方法・結果節確認
-CIR_IR001_limitations,IR001,limitations,bboxノイズ、遮蔽、推論遅延。分類報酬があっても分類単独評価は未確認,出版社本文の対象・方法・結果節確認
-CIR_IR002_labels,IR002,labels,"例: broken, glue, bent, metal contamination, cut inner insulation。全製品の全ラベル転記は未実施",出版社本文の方法・評価節確認
-CIR_IR002_input,IR002,input,画像、欠陥名候補,出版社本文の方法・評価節確認
-CIR_IR002_primary_model,IR002,primary_model,YOLO-World v2＋固定CLIP Text Encoder＋RepVL-PAN,出版社本文の方法・評価節確認
-CIR_IR002_performance,IR002,performance,TileでmAP@50 64.9%、学習9instances。種類分類Accuracyではない,出版社本文の方法・評価節確認
-CIR_IR002_split,IR002,split,train:validation=1:9。通常MVTecの正常学習protocolと異なる,出版社本文の方法・評価節確認
-CIR_IR002_limitations,IR002,limitations,重複bbox、近い欠陥語の取り違え。画像分類と同一表の精度比較不可,出版社本文の方法・評価節確認
+﻿claim_id,entity_id,field,claim,status,revision_note
+CIT001,IT001,labels,cracks (Cr); inclusions (In); patches (Pa); pitted surface (PS); rolled-in scale (RS); scratches (Sc),確認済み（記載条件）,
+CIT002,IT001,input,200×200グレースケールの表面像をJET疑似カラー化し224×224にリサイズ,確認済み（記載条件）,
+CIT003,IT001,primary_model,CNN-T：4層畳み込み、パッチ埋込、2層Transformer encoder、MLP分類器,確認済み（記載条件）,
+CIT004,IT001,performance,学習80%：Accuracy 99.17%、precision 99.21%、recall 99.17%、F1 99.17%（10実験平均）,確認済み（記載条件）,
+CIT005,IT001,split,学習70/75/80%、残りテスト。10回反復の平均。専用検証集合未確認,確認済み（記載条件）,
+CIT006,IT002,labels,scratches (0); crazing (1); inclusion (2); patch (3); pitted surface (4); rolled-in (5),確認済み（記載条件）,
+CIT007,IT002,input,鋼表面グレースケール画像。NEU-DET由来だが画像全体を分類し、bboxを出力しない,確認済み（記載条件）,
+CIT008,IT002,primary_model,Keras/TensorFlowで実装したViT分類器（パッチ化＋自己注意＋MLP）,確認済み（記載条件）,
+CIT009,IT002,performance,最良設定のTest accuracy 96.39%（347/360；Table 8とFig.17）,確認済み（記載条件）,
+CIT010,IT002,split,"各クラス240学習・60テスト（計1,440/360）; 独立のハイパーパラメータ検証用分割は未確認",確認済み（記載条件）,
+CIT011,IT003,labels,NEU-DET: Crazing; Inclusion; Patches; Pitted Surface; Rolled-in Scale; Scratches | X-SDD: finishing roll printing; iron sheet ash; oxide scale of plate system; oxide scale of temperature system; red iron; slag inclusion; surface scratch | MTDD: blowhole; crack; fray; break; uneven; non-defective surfaces,確認済み（記載条件）,
+CIT012,IT003,input,NEU-DETグレー画像、X-SDD／MTDD RGB画像を224×224へ変換,確認済み（記載条件）,
+CIT013,IT003,primary_model,Swin Transformer; CoAtNet（新規提案モデルではない）,確認済み（記載条件）,
+CIT014,IT003,performance,Swin：NEU-DET Acc/F1 100/100%；X-SDD 94.9/94.0%；MTDD 88.7/76.9%。CoAtNet Acc/F1 は同順98.6/98.6%、91.9/87.9%、84.3/63.0%,確認済み（記載条件）,
+CIT015,IT003,split,各データセット65%学習/15%検証/20%テスト。ロット分割の有無未確認,確認済み（記載条件）,
+CIT016,IT004,labels,本文・Fig.2–3では欠陥を数値IDで匿名化（1–11）。種類の名称は未公表／未確認。図キャプション内の層別クラス数とID範囲が不整合,確認済み（記載条件）,
+CIT017,IT004,input,実ファブSEM画像、図中注記を除去し340×340へ切出し、224×224へリサイズ。ウェハマップではない,確認済み（記載条件）,
+CIT018,IT004,primary_model,DINOv2の微調整。半教師あり版は疑似ラベルを併用,確認済み（記載条件）,
+CIT019,IT004,performance,教師あり微調整でLayer 1は5画像/種類、Layer 2は15画像/種類でそれぞれ90%超。疑似ラベルの加算効果は著者報告で2–6%（Fig.6）,確認済み（記載条件）,
+CIT020,IT004,split,学習/検証/テスト。学習とテストに同一ウェハ由来画像を混ぜない。件数・層ごとの配分の詳細は抽出テキストで未確認,確認済み（記載条件）,
+CIT021,IT005,labels,Normal; Center; Donut; Edge_Loc; Edge_Ring; LOC; Near_Full; Scratch; Random。複合29種はTable III（例 Center+Edge_Loc; Donut+LOC+Edge_Ring+Scratch）,確認済み（記載条件）,
+CIT022,IT005,input,ウェハのダイ状態グリッド。224×224へ整形、3ch化。実物の光学写真ではない,確認済み（記載条件）,
+CIT023,IT005,primary_model,ViT-Tiny（12層、hidden 192、3 head、5.7Mパラメータ、patch 16）,確認済み（記載条件）,
+CIT024,IT005,performance,Table VのViT-Tiny validation accuracy 98.4%。4複合グループ平均F1 0.9767（§V.B、MSF-Trans 0.9473）。抄録のF1 98.4%とTable V accuracyは別表記,確認済み（記載条件）,
+CIT025,IT005,split,ランダム学習80/テスト20%（§IV.B）。Table Vでは20%側をValidation Accuracyと記すため、別検証・テストとみなさない,確認済み（記載条件）,
+CIT026,IT006,labels,Center; Donut; Edge-Loc; Edge-Ring; Loc; Random; Scratch; Near-Full; Normal。合成対象はScratch/Loc/Donut/Center/Edge-Ring/Edge-Loc,確認済み（記載条件）,
+CIT027,IT006,input,ダイ電気検査の二次元ビンマップを64×64へ最近傍整形。表面写真ではない,確認済み（記載条件）,
+CIT028,IT006,primary_model,ViT-Lite-6/4、CVT-6/4、CCT、Swin-T、LeViT-192でUnionMixup＋MMSTM,確認済み（記載条件）,
+CIT029,IT006,performance,ViT-Lite-6/4の2複合テストでmixupなし比+17.1（原著%表記）。3複合で無mixup比少なくとも+21.8、4複合で+24.7（原著%表記）,確認済み（記載条件）,
+CIT030,IT006,split,単一型ラベルから学習、別途合成した2–4複合で試験。混合元ウェハの学習との重複防止や厳密分割率未確認,確認済み（記載条件）,
+CIT031,IT007,labels,Center; Donut; Edge-Loc; Edge-Ring; Loc; Random; Scratch; Near-Full,確認済み（記載条件）,
+CIT032,IT007,input,0背景、1良品ダイ、2不良ダイの2Dグリッドを224×224にし3ch化。光学画像ではない,確認済み（記載条件）,
+CIT033,IT007,primary_model,Swin-Tiny（patch 4、window 7、線形分類head）；Grad-CAMは別途説明評価,確認済み（記載条件）,
+CIT034,IT007,performance,"3,828のテストでAccuracy 94.83%、macro F1 92.44%、balanced accuracy 92.18%（Table 1）。IoU 0.129は分類ではなくGrad-CAM局在評価",確認済み（記載条件）,
+CIT035,IT007,split,"層別70/15/15%、17,863/3,828/3,828、seed 42",確認済み（記載条件）,
+CIT036,IT008,labels,Blood Spot; Coffee Stain; Detergent Stain; Food Spot; Glue Spot; Ink Stain; Makeup Stain; Marker Spot; Oil Stain; Paint Spot; Rust Stain; Sweat Stain,確認済み（記載条件）,
+CIT037,IT008,input,スマホで撮影した布の416×416 JPG。家庭環境で照明を統制,確認済み（記載条件）,
+CIT038,IT008,primary_model,XCottL-FebViT枠組みのLEViT（CNN前段、階層的自己注意、MLP、平均プーリングによる教師あり分類）,確認済み（記載条件）,
+CIT039,IT008,performance,LEViTのFabricSpotDefect F1 99.95±0.40%（拡張データ10-fold、Table 12）。この表のF1を元画像独立テストAccuracyとみなさない,確認済み（記載条件）,
+CIT040,IT008,split,"元の643学習/219検証/152テストを記述。拡張後はTable 9に4,800/300/900、Table 12の成績は別途、拡張データの層別10-fold CV。原画像単位で拡張系列を分離したか未確認",確認済み（記載条件）,
+CIT041,IT009,labels,Contact_BeltMarks; Contact_Corrosion; Contact_FrontGridInterruption; Contact_NearSolderPad; Crack_Closed; Crack_Isolated; Crack_Resistive; Interconnect_BrightSpot; Interconnect_Disconnected; Interconnect_HighlyResistive; No_Defect; Unknown,確認済み（記載条件）,
+CIT042,IT009,input,セルのEL画像。欠陥の画素マスクは訓練拡張時のみ、推論不要,確認済み（記載条件）,
+CIT043,IT009,primary_model,ViT-S、ViT-L、EfficientNetV2-Lを比較。提案は学習時のみLaMaの塗り直しで欠陥を分離するGDI,確認済み（記載条件）,
+CIT044,IT009,performance,ViT-S＋GDI、学習20%・閾値0.5固定の4 seed：全ラベル一致0.3883±0.0111、macro F1 0.5965±0.0119（GDIなし0.3467±0.0123、0.5710±0.0057）。テスト閾値調整条件のViT-S 0.4286／0.6507とは区別,確認済み（記載条件）,
+CIT045,IT009,split,原画像を先に約80/20に分け、GDI生成は学習のみ。学習の1/5/10/20/50/100%部分集合を比較。主要実験はテスト集合で閾値最適化、補助実験は閾値0.5固定4 seeds,確認済み（記載条件）,
+CIT046,IT010,labels,mildew; bending; black spots; cracking; pointed（序論はslendernessと記載）,確認済み（記載条件）,
+CIT047,IT010,input,コンベア上の産業カメラ画像、1500×60から512×96に異方性リサイズ。1本を6角度撮像,確認済み（記載条件）,
+CIT048,IT010,primary_model,C-ViT：細長い画像向けCNN Feature ExtractorでViTパッチ埋め込みを置換、難例の対照損失HCLで学習,確認済み（記載条件）,
+CIT049,IT010,performance,Table 2 C-ViT＋HCL：mAP 94.3%、OF1 90.2%、CF1 88.5%。ViT-Small：91.6%、85.8%、81.7%。序論の93.8%は本文表と相違するためTable 2/5を採用,確認済み（記載条件）,
+CIT050,IT010,split,学習/検証/テスト70/20/10%。同一箸を別分割に入れない管理は確認できず,確認済み（記載条件）,
+CIT051,IT011,labels,Cell-Interconnection; Electrically Insulated Cell Parts; Finger Defect; Material; Microcrack; Multi-Defect; Normal; Visual,確認済み（記載条件）,
+CIT052,IT011,input,生産ラインのELパネル画像からRLSAと形態処理でセル切出し、256×256×3,確認済み（記載条件）,
+CIT053,IT011,primary_model,PVELNet：多尺度並列畳み込み・残差とTransformer自己注意の分類器,確認済み（記載条件）,
+CIT054,IT011,performance,未拡張テストAccuracy 95.71%（95% CI 95.26–96.16%）。同条件VGG19 94.69%、DarkNet53 94.65%（Table 13）,確認済み（記載条件）,
+CIT055,IT011,split,"Table 5から元画像学習23,607、拡張後30,030、未拡張テスト7,508（各行合算）。先に分割し少数クラスの学習のみ幾何拡張。パネル/ロット単位分割は未確認",確認済み（記載条件）,
+CIT056,IT012,input,PCB外観画像,確認済み（確認範囲内）,
+CIT057,IT012,primary_model,ConvNeXt-Tiny、EfficientNet-V2-S、MaxViT-T、Swin-T、ViT-B/16の同条件比較,確認済み（確認範囲内）,
+CIT058,IT012,performance,抄録ではConvNeXt-Tinyが最高（macro F1 0.99743と記載）、Swin-T/ViT-B/16は約0.5ポイント下。各ViT絶対値未確認,確認済み（確認範囲内）,
+CIT059,IT012,split,GroupShuffleSplitで画像単位の漏洩を抑制と抄録に記載、具体数は未確認,確認済み（確認範囲内）,
+CIT060,IT013,labels,keyholing; desirable; balling; lack-of-fusion (LOF),確認済み（確認範囲内）,Round2で当該項目を再確認。現在値は最新レコードと追加Claimを参照
+CIT061,IT013,input,推論では上面熱動画のみ、訓練時にシミュレーション由来の側面深さを追加,確認済み（確認範囲内）,
+CIT062,IT013,primary_model,ViViT＋タスク別アダプタ。訓練中のみ物理シミュレーションの溶融池深さを補助回帰,確認済み（確認範囲内）,
+CIT063,IT014,input,PVセルのEL画像,確認済み（確認範囲内）,
+CIT064,IT014,primary_model,MetaFormer系PVEL-ViT、埋込多尺度融合と選択的トークン注意,確認済み（確認範囲内）,
+CIT065,IT014,performance,公開プレビューのPVEL-ViT accuracy 0.9584。課題ラベルと分割が照合できず比較から除外,確認済み（確認範囲内）,
+CIT066,IT015,input,実ファブの欠陥SEM画像,確認済み（確認範囲内）,
+CIT067,IT015,primary_model,CNN＋Transformer分類分岐とPyramid Attentionによるセグメンテーション分岐のDeepSEM-Net,確認済み（確認範囲内）,
+CIT068,IT015,performance,元5クラス分類accuracy 97.25%、セグメンテーションIoU 84.40%（別タスク）,確認済み（確認範囲内）,
+CIT069,IT016,primary_model,低ランク適応転移学習と多ラベル分類。LoRAが使用できても元モデルをTransformerと推定しない,確認済み（確認範囲内）,
+CIT070,IT016,performance,元課題93.28%、別のSLSデータセットに転移後99.32%と公開抄録に記載。詳細条件未確認,確認済み（確認範囲内）,
+CIT071,IT017,labels,DeepPCB: open; short; mouse bite; spur; pinhole; spurious copper。他データセット原語の詳細は未照合,確認済み（確認範囲内）,
+CIT072,IT017,input,DeepPCBの欠陥側画像、他PCB画像、HRIPCBの注釈による欠陥パッチ,確認済み（確認範囲内）,
+CIT073,IT017,primary_model,PCBVisionNet（Dual-Domain Attention＋Multi-Scale Feature Extractor、CNN）。ViT-Base/Swin-Tinyは比較器のみ,確認済み（確認範囲内）,
+CIT074,IT017,split,DeepPCB 1050/225/225、PKU 970/208/208、HRIPCB 1470/315/315,確認済み（確認範囲内）,
+CIV001,IV001,labels,"原文Table 7の例：bottle＝broken_large, broken_small, contamination。metal_nut＝bent, color, flip, scratch。transistor＝bent_lead, cut_lead, damaged_case, misplaced。全リストはTable 7。",確認済み,
+CIV002,IV001,input,欠陥画像と既知の欠陥インスタンスマスク、ラベル付きサポート画像・マスク。画像から欠陥を自力発見する性能とは別。,確認済み,
+CIV003,IV001,prompt,主提案は推論時に自然言語プロンプトなし。CLIP-ZeroShot比較条件ではクラス記述をテキスト埋め込み化。,確認済み,
+CIV004,IV001,primary_model,MVREC＋Zip-Adapter(-F)。事前学習済みAlphaCLIPがマスクと周囲文脈の多視点特徴を抽出。Zip-Aは視覚的類似度によるサポート検索、Zip-A-Fは投影・サポート特徴を微調整。推論はサポートのone-hotラベルに基づく。,確認済み,
+CIV005,IV001,dataset,MVTec-FS（MVTec ADの再注釈）、NEU-DET、PCB Defect Dataset、MTD、AITEX,確認済み,
+CIV006,IV001,split,種類ごとに50%/50%に分け、訓練側から各クラス1/3/5枚をサポート抽出、固定のテスト側をクエリ。サポートを5回抽出し平均。,確認済み,
+CIV007,IV001,performance,MVTec-FSのZip-A-Fは1/3/5-shotで73.7%/86.1%/89.4%。同表のテキスト0-shot比較は37.4%。,確認済み,
+CIV008,IV001,class_results,5-shotの製品群別例：Grid 80.8%、Tile 97.6%、Transistor 100.0%。これは欠陥個別ラベルの成績とは別。,確認済み,
+CIV009,IV001,generalization,他の4工業データセットでもデータセット内でサポートを再抽出して評価。サポートなしの工場外移植は未確認。,確認済み,
+CIV010,IV001,limitations,マスク付き欠陥インスタンスが前提。製品群をまたぐ単一46クラス分類のスコアとしては扱えない。,確認済み,
+CIV011,IV002,labels,"MTD＝blowhole, crack, break, fray, uneven。MVTec-FSの例：scratches, dents, dirt, deformation（論文中の説明語。評価ラベルの全原語はMVREC Table 7参照）。",確認済み,
+CIV012,IV002,input,欠陥画像。サポート学習は全体とクロップ双方の特徴を使用し、AlphaCLIPのマスク有無を比較。Fig. 2の評価はクエリ全体画像からの分類。クエリで用いるマスクの詳細は未確認。,確認済み,
+CIV013,IV002,prompt,図2の評価経路は画像エンコーダと学習済みアダプタ。候補テキストを用いない。,確認済み,
+CIV014,IV002,primary_model,HypDFS。AlphaCLIP ViT-L/14で特徴を得て、双曲空間の欠陥プロトタイプと分布モデルで特徴を合成。欠陥残差アダプタと階層対照学習で分類特徴を適応。,確認済み,
+CIV015,IV002,dataset,MVTec-FS、Magnetic Tile Defect（MTD）,確認済み,
+CIV016,IV002,split,MVTec-FS既定の訓練／テスト（引用元MVRECは種類ごと50%/50%）。K=1/3/5。MTDの厳密な分割枚数・再抽出回数は未確認。,確認済み,
+CIV017,IV002,performance,Table 1。1/3/5-shotはMVTec-FS 79.3%/89.3%/91.7%、MTD 59.4%/78.6%/86.4%。Zip-A-FはMVTec-FS 73.7%/86.1%/89.4%、MTD 55.4%/67.6%/78.6%。,確認済み,
+CIV018,IV002,class_results,Tables 2–3にMVTec-FS製品群別結果。個別欠陥種類の分類スコアは未確認。,確認済み,
+CIV019,IV002,generalization,同一手法をMVTec-FSとMTDで個別評価。工場・設備を跨ぐホールドアウト評価は未確認。,確認済み,
+CIV020,IV002,limitations,マスク注釈付き画像で評価。欠陥検出込みの総合性能および未知製品へのゼロショット性能は未確認。,確認済み,
+CIV021,IV003,labels,"good（非欠陥）, bridges, copper residues, holes, infilm defects, particles, scratches（§2.3の原語）。",確認済み,
+CIV022,IV003,input,製造ラインで得たグレースケールSEM画像。クエリ画像と、全クラス共通で事前定義した候補文を比較。学習時に少数画像を使用。,確認済み,
+CIV023,IV003,prompt,欠陥形態の専門知識をstate-level文に入れ、SEMの暗さや焦点ずれを記述するtemplate-level文と合成。固定の候補文で全画像を評価。,確認済み,
+CIV024,IV003,primary_model,SEM-CLIP。ViT-B/16+の複数層の視覚埋め込みとテキストの類似度確率に、各層CLSから学習した分類ヘッドの確率を加重和（後者の重みα=0.8）。,確認済み,
+CIV025,IV003,dataset,製造ライン取得の社内SEM画像,確認済み,
+CIV026,IV003,split,分類比較は10-shot/クラス、各モデル同一テスト。独立テスト枚数・ウェハ単位分割は本文で未確認。,確認済み,
+CIV027,IV003,performance,分類10-shotでAccuracy 83.7%、Precision 87.2%、Recall 86.7%、F1 84.4%。視覚ヘッドのみのアブレーションはAcc 83.6%/F1 84.3%、テキスト類似度のみは25.7%/16.0%。,確認済み,
+CIV028,IV003,class_results,Fig. 7は10-shot混同行列。粒子と膜内欠陥の形態が近く誤認が見られる。,確認済み,
+CIV029,IV003,limitations,単一製造ライン、クラス不均衡。テキスト併用の上積みは同アブレーションでAcc 0.1ポイント。,確認済み,
+CIV030,IV004,labels,"Mousebite, Open, Pinhole, Short, Spur, Spurious Copper（Table 4）",確認済み,
+CIV031,IV004,input,DeepPCBのtested画像から正解bboxをクロップ。CLIP 224²、DINOv2 518²。参照画像・差分画像・テキスト入力は使わない。,確認済み,
+CIV032,IV004,prompt,視覚トークンのVPT。自然言語プロンプトや推論時のテキスト塔を用いる方式ではない。,確認済み,
+CIV033,IV004,primary_model,CLIP-ViT-B/16、DINOv2-S/14にLinear Probe、LoRA、Deep Visual Prompt Tuning（VPT）を比較。VPTでは画像ViT各層に長さ8の学習可能トークン。,確認済み,
+CIV034,IV004,dataset,DeepPCB-derived（欠陥bboxから生成）,確認済み,
+CIV035,IV004,split,欠陥種類層化7:1:2、k=5/10/20はtrainから種類ごと抽出、validation/test固定。試行3回平均の記載。基板や原画像IDでの群分けは未確認。,確認済み,
+CIV036,IV004,performance,全データTable 3のCLIP-VPTテストはAcc 0.990 / macro-F1 0.991 / macro-AUPRC 0.998。CLIP-Linear 0.971 / 0.972 / 0.991、CLIP-LoRA 0.969 / 0.971 / 0.992。DINOv2-VPT 0.988 / 0.988 / 0.998。少数ショットはFig. 3–4。,確認済み,
+CIV037,IV004,class_results,全データCLIP-VPT Table 4、ラベル順のクラス別Accuracy 0.980 / 0.988 / 0.997 / 0.997 / 0.988 / 0.997。,確認済み,
+CIV038,IV004,generalization,他PCBデータセットへの同プロトコル検証は今後の計画。,確認済み,
+CIV039,IV004,limitations,既知の正解bboxによる分類であり、全基板画像からの検出・分類とは条件が異なる。Table 3のCNNはテストAcc 0.993–0.994でCLIP-VPT 0.990を上回る。 DeepPCBの元画像はPCBのCCD実撮像だが、データセット著者が試験画像に人工欠陥も手作業で追加。自然発生欠陥と追加欠陥を分けた評価は未確認。,確認済み,
+CIV040,IV005,labels,"Missing_hole, Mouse_bite, Open_circuit, Short, Spur, Spurious_copper",確認済み,
+CIV041,IV005,input,評価ではDeepPCBの正解bboxを切り出した224×224画像。few-shotは30枚/種の視覚プロトタイプを使用。,確認済み,
+CIV042,IV005,prompt,zero-shot設計では欠陥種と正常領域を記述する自然言語ライブラリ。主要定量表のfew-shotは画像プロトタイプを利用。,確認済み,
+CIV043,IV005,primary_model,VLM-AOIのStage 2はCLIP ViT-B/32。数値比較のfew-shot条件はクラス別の画像プロトタイプとROIの類似度。設計上のzero-shot枝はクラス文とのコサイン類似度。,確認済み,
+CIV044,IV005,dataset,DeepPCB,確認済み,
+CIV045,IV005,split,Seen＝Mouse_bite/Open_circuit/Short/Spur、Unseen＝Missing_hole/Spurious_copper。VLM-AOIは全6種のサポートを受け、ResNet-50は4種×30で学習。群単位分割は未確認。,確認済み,
+CIV046,IV005,performance,Tables I/IIIのVLM-AOI k=30はUnseen Acc 82.9%/F1 0.898、Seen Acc 61.3%/F1 0.643。ResNet-50は0.0%/0.000と78.3%/0.780。時間18.202 msと16.036 ms。,確認済み,
+CIV047,IV005,class_results,Tables II/IVのVLM-AOI F1：Missing_hole 0.990、Mouse_bite 0.683、Open_circuit 0.669、Short 0.776、Spur 0.445、Spurious_copper 0.807。,確認済み,
+CIV048,IV005,generalization,ベースラインに未学習の2種類を比較。提案には各30枚のラベル付き画像を与えており、未知種類を未提示のまま分類する評価ではない。,確認済み,
+CIV049,IV005,limitations,正解bboxが前提。提案6種とベースライン4種でサポート条件が非対称。82.9%はfew-shotであり、テキストzero-shotの定量値はTables I–IVにない。 DeepPCBの元画像はPCBのCCD実撮像だが、データセット著者が試験画像に人工欠陥も手作業で追加。自然発生欠陥と追加欠陥を分けた評価は未確認。,確認済み,
+CIV050,IV006,labels,"Crazing, Inclusion, Patches, Pitted surface, Punching, Rolled in scale, Water spot, Welding line, Oil spot, Crescent gap, Silk spot, Waist folding, Rolled pit, Bright scratch, Crease, Dark scratches, Secondary rust skin, White rust, Iron scale compression, Red iron sheet, Iron sheet ash, Oxide scale of plate system, Oxide scale of temperature system, Finishing roll printing, Slag Inclusion",確認済み,
+CIV051,IV006,input,公開の鋼表面欠陥画像を256×256に統一。分類時はクエリ画像と全ラベル候補文。マスク由来の属性は学習時T3等の監督に使われ、分類時のT0/T1は候補側。,確認済み,
+CIV052,IV006,prompt,T0＝欠陥名、T1＝欠陥名・典型視覚属性・想定原因のクラス記述。学習文T2＝自然文、T3＝構造化属性、T4＝テンプレート文。転移時は欠陥名テンプレートを各外部セットで統一。,確認済み,
+CIV053,IV006,primary_model,CLIP-Adapterによる各CLIP変種の視覚側適応。評価は画像と各ラベル文の埋め込み類似度最大のラベル。中心結果はLong-CLIP ViT-L/14。,確認済み,
+CIV054,IV006,dataset,SteelDefectX（NEU、GC10、X-SDD、S3Dを統合し、FSC-20とESDIs-SODの選別データも利用）,確認済み,
+CIV055,IV006,split,データセット公式train/validation 7:3。独立テスト分割の記載なし。外部転移はMSD-ClsとCGFSDS-9。,確認済み,
+CIV056,IV006,performance,Table 2 Long-CLIP ViT-L/14、T3学習→T0評価はAcc 94.45%／mAcc 93.66%。同T3→T1は93.12%／90.70%。T2→T0は93.63%／92.56%。,確認済み,
+CIV057,IV006,class_results,mAcc 93.66%。Table 2の個別欠陥種の成績は未確認。,確認済み,
+CIV058,IV006,generalization,Table 3 Long-CLIP ViT-L/14のT2適応後、アルミ29.03%・継目無鋼管40.18% Acc（未適応ゼロショット8.60%・25.11%）。ターゲット候補ラベル文は既知。,確認済み,
+CIV059,IV006,limitations,v2の条件を採用。統合集合の検証と外部転移の成績差が大きい。公開データ統合の工場・ロット単位分割は未確認。,確認済み,
+CIV060,IV007,labels,"Center, Donut, Edge_Ring, Edge_Loc, Loc, Random, Scratch, Near_full。元データには正常Noneも存在。論文のFig. 3本文はBackgroundにも言及。",確認済み,
+CIV061,IV007,input,製造現場由来のWM-811Kウェハマップを128×128×3に変換。各欠陥クラスの固定自然言語記述を候補側に付与。,確認済み,
+CIV062,IV007,prompt,クラス別に欠陥の空間分布・形状を自然文で定義し固定プロトタイプ化。標準・詳細・簡潔な文を比較。,確認済み,
+CIV063,IV007,primary_model,YOLO-LA。凍結YOLO画像埋め込みに軽量射影を適用し、凍結MiniLM-L6-v2で作ったクラス文プロトタイプとのコサイン類似度で分類。,確認済み,
+CIV064,IV007,dataset,WM-811K,確認済み,
+CIV065,IV007,split,層化train/test 80:20、seed 42。trainからvalidationを別抽出（比率未確認）。,確認済み,
+CIV066,IV007,performance,Table 2 YOLOv10-N＋言語整合85.75% Acc、同バックボーンのみ83.50%（+2.25ポイント）。YOLOv12-N＋言語整合85.06%、同バックボーン83.48%。,確認済み,
+CIV067,IV007,class_results,Fig. 3の混同行列はYOLOベースライン。提案のクラス別数値は未確認。,確認済み,
+CIV068,IV007,limitations,欠陥マップ形状の分類であり、光学/SEM表面写真における外観欠陥そのものとは別。背景クラスの記述が節間で明確でない。,確認済み,
+CIV069,IV008,labels,"Table 2の評価例：Extra, Stuck, Bent, Hole, Pit, Contamin., Scratch, Damage。対象データセットごとの候補は補足Tables 7–11。",確認済み,
+CIV070,IV008,input,画像、欠陥種・正常を記述する候補テキスト。few-shotには正常参照画像を追加する設定あり。,確認済み,
+CIV071,IV008,prompt,Knowledge Base for Anomaliesの欠陥種・外観記述を製品名や撮像テンプレートと合成。,確認済み,
+CIV072,IV008,primary_model,MultiADS。CLIPのテキスト埋め込みと線形アダプタ付き局所画像特徴を整合し、正常＋K欠陥種の画素別マップを出す。MultiADS-Fは製品別に候補種を制限。,確認済み,
+CIV073,IV008,dataset,MVTec-AD、VisA、MPDD、MAD-real/MAD-sim、Real-IAD,確認済み,
+CIV074,IV008,split,別データセットへのzero-shot転移。例：MVTec-ADで学習、VisAやMPDDでテスト。訓練からcombinedを除外。,確認済み,
+CIV075,IV008,performance,Table 1のMVTec-AD→VisAは画素AUROC/F1/AP 93.6/22.3/24.8%、→MPDD 95.2/42.8/53.0%。画像単位の種類分類精度としては扱わない。,確認済み,
+CIV076,IV008,class_results,Table 2の画素例：未学習PitのAUROC/F1/AP 97.08/6.15/1.01%、既学習Hole 99.55/12.64/25.19%。,確認済み,
+CIV077,IV008,generalization,補助データで未観測の種類に評価例あり（画素単位）。,確認済み,
+CIV078,IV008,limitations,カテゴリ別画素指標と二値画像指標であり、画像単位の欠陥種類選択精度は未確認。,確認済み,
+CIV079,IV009,labels,"Table 5掲載例：broken small, poke, crack, good condition。全クラスの種類分類精度は未確認。",確認済み,
+CIV080,IV009,input,試験時の画像のみ。訓練時に合成異常特徴と製品・欠陥種の記述を利用。,確認済み,
+CIV081,IV009,prompt,学習時に製品と欠陥名の組合せ文。推論はテキストを入力せず分類結果を文章化。,確認済み,
+CIV082,IV009,primary_model,SuperSimpleNet系の分類・分割ヘッド。学習時にCLIPの画像／欠陥文の類似度を利用、推論時にCLIPを無効化し分類インデックスを定型文に戻す。,確認済み,
+CIV083,IV009,dataset,MVTec AD、KSDD2,確認済み,
+CIV084,IV009,performance,Table 5は種類名予測例と推論時間（平均約6.6 ms、A100）。Tables 3–4は二値検出・画素局在の評価。種類Accuracy／F1は未確認。,確認済み,
+CIV085,IV009,limitations,例示をカテゴリ識別精度に換算しない。公開された定量結果は二値検出／画素局在の尺度。,確認済み,
+CIM001,IM001,input,実製品クエリ画像、欠陥質問と選択肢。同一製品カテゴリの正常参照画像を標準1枚添付。,原著確認,
+CIM002,IM001,primary_model,評価ベンチマーク。GPT-4o（2024-05-13）等を測定。,原著確認,
+CIM003,IM001,labels,"製品別欠陥種類の四択。著者のデータ定義の原語キー例はzipper `split_teeth`, `squeezed_teeth`、cable `cable_swap`, `cut_inner_insulation`, `combined`。候補は質問ごとに異なる。",原著確認,
+CIM004,IM001,performance,Table 2標準条件の欠陥種類Accuracy GPT-4o 65.80%、Claude-3.5-Sonnet 60.14%、Gemini-1.5-Pro 60.12%、InternVL2-76B 54.22%、AnomalyGPT-7B 27.49%。GPT-4oの74.92%は7タスク平均。,原著確認,
+CIM005,IM001,split,ベンチマーク評価。標準1-shotは正常画像をランダムに1枚、1-shot+は最近傍検索。単画像制約モデルでは0-shot。,原著確認,
+CIM006,IM002,input,原画像、異常マップに基づく赤輪郭付き画像、正常参照画像。画像448×448、温度0。,原著確認,
+CIM007,IM002,primary_model,VELM（DDAD/PatchCoreとGPT-4o/4o-miniのカスケード）。異常領域を輪郭で強調しMLLMが分類。,原著確認,
+CIM008,IM002,labels,"ボトルのプロンプト例 `Broken Large`, `Broken Small`, `Contamination`（Fig. 4）。MVTec-AC再編で capsule `poke`/`crack`、carpet `cut`/`hole`、screw `thread.side`/`thread.top`、zipper `broken_teeth`/`rough` を対ごとに統合（§3.3）。",原著確認,
+CIM009,IM002,performance,DDAD＋GPT-4o MVTec-AC 84.0% Accuracy、80.3% F1、79.7% κ、VisA-AC 69.6% Accuracy。GTマスクoracleはMVTec-AC 87.8%、VisA-AC 87.6%。Table 1原MVTec-ADでは81.4%だがAbstractは80.4%と記載。,原著確認,
+CIM010,IM002,split,各原データセットを再編し評価。MVTec-ACは重複クラス統合・誤注記見直し・combined削除、VisA-ACは少数クラス除外・4クラス統合。,原著確認,
+CIM011,IM003,input,480×480 SEM実写、質問、画像から取得した文字情報とラベル集合。,原著確認,
+CIM012,IM003,primary_model,FabGPT。PandaGPT（Vicuna-7B＋凍結ImageBind Huge）、CLIP画像／ラベル特徴、画像上文字メタデータ、prompt modulation。,原著確認,
+CIM013,IM003,labels,"`Hole`, `Particle`, `Scratch`, `Pattern`（Table 1表記、§2.1はpattern deformities）、正常画像は `good`。",原著確認,
+CIM014,IM003,performance,Table 2のCategory FabGPT 97.50%、Lisa 92.50%、AnomalyGPT 75.00%、GPT-4 37.50%。全種類Q&A平均は96.86%。,原著確認,
+CIM015,IM003,split,SEM画像train/test 7:3。両群に正常・異常。独立ウエハ・製造ロット単位か未確認。,原著確認,
+CIM016,IM004,input,溶融後・粉末塗布後の実可視画像、科学文献由来の欠陥参照画像・記述。ORNLのIR等は保有されるが当該モデルの評価入力は可視。,原著確認,
+CIM017,IM004,primary_model,RAG＋GPT-4o-mini／Qwen2-VL-2B。ColPali画像検索、text-embedding-ada-002文献検索。,原著確認,
+CIM018,IM004,labels,"§3: Recoater Hopping, Recoater Streaking, Incomplete Spreading, Swelling, Debris, Super-Elevation, Soot, Excessive Melting, Localized Bright Spot, Spatter on Powder, Mounding Powder, Localized Dark Regions, Misprint。付録表ではEdge Swelling、Crashing、Stripe Boundaryの表記も使用。",原著確認,
+CIM019,IM004,performance,GPT-4o-mini＋RAGの平均AccuracyはAddUp Maraging Steel 0.620、EOS 17-4 PH 0.621、EOS DMREF 0.521、EOS Inconel 718 0.738。RAGなしは同順0.610/0.471/0.401/0.523（Table 3）。,原著確認,
+CIM020,IM004,split,54件はテスト専用。異なる2機種・4条件の画像を評価。追加学習なし、文献を検索ソースとして使用。,原著確認,
+CIM021,IM005,input,工業画像、問題文、選択肢。追加画像入力の比較も実施。提案条件の画像参照はTable 2に明確な個別注記なし。,原著確認,
+CIM022,IM005,primary_model,AnomalyR1（Qwen2.5-VL 3B、GRPO＋ROAM）。,原著確認,
+CIM023,IM005,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認,
+CIM024,IM005,performance,Table 2 欠陥種類Accuracy 63.56%。base 41.07%、SFT 41.51%。76.96%は全サブタスク平均。,原著確認,
+CIM025,IM005,split,学習に工業データセット由来600画像、MMAD形式を活用。§4.2のTable 2でMMAD評価、訓練／評価の画像IDレベルの重複排除・種類質問数は未確認。,原著確認,
+CIM026,IM006,input,検査画像・質問・選択肢を入力。モデルは視覚欠陥領域の自己生成表現を使う。正常参照画像は別の1-shot設定も検証。,原著確認,
+CIM027,IM006,primary_model,OmniAD（Qwen2.5-VL 3B/7B、Semantic Anomaly Encodingと視覚誘導テキスト推論）。,原著確認,
+CIM028,IM006,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認,
+CIM029,IM006,performance,Table 1の欠陥種類Accuracy 7B 78.80%、3B 75.90%。7Bの79.9%は全7タスク平均。,原著確認,
+CIM030,IM006,split,MMADの約20%/80%評価系統。学習SFT 1.6k画像／6.4k QA、GRPO 293画像／1.1k QA。種類質問の個別評価nは未確認。,原著確認,
+CIM031,IM007,input,クエリ・同一対象の正常参照画像を比較し、選択肢を含む質問に答える。,原著確認,
+CIM032,IM007,primary_model,JUDO（Qwen2.5-VL-7B、並置比較による異常位置SFT、ドメインQA学習、GRPO）。,原著確認,
+CIM033,IM007,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認,
+CIM034,IM007,performance,Table 1の欠陥種類Accuracy 74.74%。同表Qwen2.5-VL-7B 54.35%、AnomalyR1 7B 64.81%。81.20%は全タスク平均。,原著確認,
+CIM035,IM007,split,Stage 1にReal-IAD 1.4k画像・MMAD 293画像（カテゴリごと1件）、Stage 2に約13k QA、Stage 3に同一MMAD画像から1.4k QA。MMADの種類質問分母・画像IDの完全分離は未確認。,原著確認,
+CIM036,IM008,input,実工業画像と質問／選択肢。異常マップ由来情報をモデルに統合。,原著確認,
+CIM037,IM008,primary_model,MAU-GPT-4B（Gemma-3系列、Anomaly-aware expertとGeneralist expertの適応）。,原著確認,
+CIM038,IM008,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認,
+CIM039,IM008,performance,MMAD Table 5 Defect Classification Accuracy 39.31%。Gemma3-4B 37.07%、GPT-4o 65.80%。61.41%は全タスク平均。,原著確認,
+CIM040,IM008,split,MAU-Setで各データ元を固定比率分割、MMADで追加ベンチマーク。MMADとの原画像重複の検証は未確認。,原著確認,
+CIM041,IM009,input,工業画像、欠陥種類の選択質問。外部正常参照・ツール不要。,原著確認,
+CIM042,IM009,primary_model,Anomaly-LR（Qwen2.5-VL 3B／7B）。全体文脈を言語推論し、局所欠陥を視覚潜在空間で反復精緻化。,原著確認,
+CIM043,IM009,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認,
+CIM044,IM009,performance,Table 1の欠陥種類Accuracy 7B 82.70%、3B 82.49%。Table 1の全タスク平均87.12%/86.00%は別指標。,原著確認,
+CIM045,IM009,split,MMAD由来学習約20%、画像単位で排他的な残り80%を評価。OODはReal-IAD学習と別データ評価。,原著確認,
+CIM046,IM010,input,クエリ画像、質問と選択肢、検索された正常参照画像1枚・テキスト知識。欠陥マップの専門家は主に検出・位置質問で作動。,原著確認,
+CIM047,IM010,primary_model,SiGMA（複数のMLLM、ドメイン知識・正常画像検索、信頼度重み付き統合）。,原著確認,
+CIM048,IM010,labels,"MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。",原著確認,
+CIM049,IM010,performance,Table 1の欠陥種類Accuracy 79.2%。85.2%は7タスク平均。,原著確認,
+CIM050,IM010,split,MMAD評価回答でモデル構成／ハイパーパラメータを選定。固定後の信頼度推定はラベルなし評価バッチを用いる。,原著確認,
+CIR_IR001_labels,IR001,labels,"青: adhesion, tearing, contamination。白: oil stains, tearing, Cuff Rolling Defect。正常: No Defects",出版社本文の対象・方法・結果節確認,
+CIR_IR001_input,IR001,input,工場側面画像と製品別欠陥候補,出版社本文の対象・方法・結果節確認,
+CIR_IR001_primary_model,IR001,primary_model,Qwen2.5-VL-3B、SFT＋GRPOによるRFT,出版社本文の対象・方法・結果節確認,
+CIR_IR001_performance,IR001,performance,青0.63（YOLO0.62）、混合製品0.61。画像種類分類Accuracyではない,出版社本文の対象・方法・結果節確認,
+CIR_IR001_split,IR001,split,held-out testとの記載。比率・個体/ライン単位分割未確認,出版社本文の対象・方法・結果節確認,
+CIR_IR001_limitations,IR001,limitations,bboxノイズ、遮蔽、推論遅延。分類報酬があっても分類単独評価は未確認,出版社本文の対象・方法・結果節確認,
+CIR_IR002_labels,IR002,labels,"例: broken, glue, bent, metal contamination, cut inner insulation。全製品の全ラベル転記は未実施",出版社本文の方法・評価節確認,
+CIR_IR002_input,IR002,input,画像、欠陥名候補,出版社本文の方法・評価節確認,
+CIR_IR002_primary_model,IR002,primary_model,YOLO-World v2＋固定CLIP Text Encoder＋RepVL-PAN,出版社本文の方法・評価節確認,
+CIR_IR002_performance,IR002,performance,TileでmAP@50 64.9%、学習9instances。種類分類Accuracyではない,出版社本文の方法・評価節確認,
+CIR_IR002_split,IR002,split,train:validation=1:9。通常MVTecの正常学習protocolと異なる,出版社本文の方法・評価節確認,
+CIR_IR002_limitations,IR002,limitations,重複bbox、近い欠陥語の取り違え。画像分類と同一表の精度比較不可,出版社本文の方法・評価節確認,
+CRT001,IVT2001,labels,"評価は2種類混合の組み合わせ。基礎型はCenter (C); Donut (D); Edge-Loc (EL); Edge-Ring (ER); Loc (L); Scratch (S); Random; Near-full。Table 3では C+EL, C+ER, C+L, C+S, D+EL, D+ER, D+L, D+S, EL+L, EL+S, ER+L, ER+S, L+S",確認済み（記載条件）,
+CRT002,IVT2001,input,不良ダイ位置を表したwafer map（光学像・SEM画像と異なる）,確認済み（記載条件）,
+CRT003,IVT2001,primary_model,N-pair対照事前学習CNNを持つTransUNet。自己注意層を含む共有encoderに分類・セグメンテーションの多タスク学習を適用,確認済み（記載条件）,
+CRT004,IVT2001,performance,"2種類混合の評価2,600マップでAccuracy 0.995、F1 0.995（Table 2／§4.3）",確認済み（記載条件）,
+CRT005,IVT2001,split,"2種類混合10,400学習、2,600評価。抽出単位・lot/wafer群分けは未確認",確認済み（記載条件）,
+CRT006,IVT2002,labels,No-Anomaly; Cell; Diode; Cracking; Hot-Spot; Shadowing; Vegetation; Soiling,確認済み（記載条件）,
+CRT007,IVT2002,input,太陽電池モジュールのIR熱画像。Swin-Tは224×224 RGBテンソル入力と記載,確認済み（記載条件）,
+CRT008,IVT2002,primary_model,Swin-T（比較中の最高macro F1）。共通の二段階分類とコントラスト保持MixUp,確認済み（記載条件）,
+CRT009,IVT2002,performance,8クラス階層のテストでSwin-T Accuracy 89.48%、macro F1 80.50%、weighted F1 89.43%。同一テストのViT-B/16 77.81%／60.56%、SlantNet 86.15%／73.03%（Accuracy／macro F1）,確認済み（記載条件）,
+CRT010,IVT2002,split,"画像単位の層別ランダム80/10/10、学習15,337／検証1,916／テスト1,920。MixUpは分割後の学習画像のみ",確認済み（記載条件）,
+CRT011,IVT2003,labels,Cracks (Cr); Inclusions (In); Patches (Pa); Pitted Surface (PS); Rolled-in Scale (RS); Scratches (Sc),確認済み（記載条件）,
+CRT012,IVT2003,input,NEU-CLSの200×200鋼板表面画像（原著はRGBと記載）,確認済み（記載条件）,
+CRT013,IVT2003,primary_model,FAX-Net。ConvNeXt＋並列チャネル／空間SDAM＋軽量Transformerを組み込むTF-FPN,確認済み（記載条件）,
+CRT014,IVT2003,performance,"NEU-CLS 6分類 Accuracy 97.78%、クラス平均F1 97.51%（§4.3 Table 1, Fig. 5）",確認済み（記載条件）,
+CRT015,IVT2003,split,学習／テスト8:2（§4.1）。群単位と独立検証の扱いは未確認,確認済み（記載条件）,
+CRT016,IT012,performance,ConvNeXt-Tinyのテストmacro F1 0.99743。Swin-TとViT-B/16は約0.5ポイント下回るという概況まで確認,抄録のみ確認,
+CRT017,IT013,labels,keyholing; desirable; balling; lack-of-fusion (LOF),出版社プレビューのみ確認,
+CRT018,IT013,primary_model,ViViT＋軽量アダプター。推論は上方熱画像の時系列のみ、学習時の補助目的は溶融池深さ,出版社プレビューのみ確認,
+CRT019,IT014,performance,Accuracy 0.9584（PVEL-ViT）、比較EfficientNetV2-m 0.9386、EfficientViT-b2 0.9359。評価の詳細は未確認,抄録のみ確認,
+CRT020,IT015,performance,Accuracy 97.25%（5欠陥クラスのSEM画像分類）。別のセグメンテーションIoUは84.40%,抄録のみ確認,
+CRT021,IT015,data_size,"12-inch、55 nmの実fabから得た工程欠陥SEM画像3,990枚",出版社プレビューのみ確認,
+CRT022,IT016,performance,L-PBFのテスト完全一致率93.28%、SLS転移の完全一致率99.32%。クラス、分割内訳、バックボーンを未確認,抄録のみ確認,
+CRT023,IT009,code_data,再現用分割と生成データ一般配布を著者が別リンクで公開。再現用テストは元画像のみ,確認済み（記載条件）,
+CRT024,IVT2001,class_results,Table 3の事前学習＋多タスクF1。C+EL 0.990、C+ER 0.993、C+L 0.997、C+S 1.000、D+EL 1.000、D+ER 1.000、D+L 0.995、D+S 0.995、EL+L 0.998、EL+S 0.984、ER+L 0.999、ER+S 0.986、L+S 0.999,確認済み（記載条件）,
+CRV001,IVL2001,labels,MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。,確認済み,
+CRV002,IVL2001,input,試験画像、検索した正常参照画像、選択式質問と質問に応じた知識。検索特徴は凍結CLIP ViT-B/16。,確認済み,
+CRV003,IVL2001,prompt,欠陥候補を提示する選択式質問に、検索した正常画像と文脈知識、必要に応じて推論手順を加える。,確認済み,
+CRV004,IVL2001,primary_model,Echo＋Qwen2-VL 7B。類似正常参照の検索、質問に応じた専門知識、段階的推論、最終回答を組み合わせる。,確認済み,
+CRV005,IVL2001,split,MMADのMVTec-AD・VisAを用い、製品分類・製品分析の設問を除いた5タスクで評価。Fig. 6で正常参照0–3枚を比較。,確認済み,
+CRV006,IVL2001,performance,Table 1のDefect Classification AccuracyはMVTec-AD 72.86%、VisA 62.35%。同じQwen2-VL 7Bのベースは68.46%、57.06%。,確認済み,
+CRV007,IVL2001,limitations,MMAD全4データセットとは異なる部分集合。外部知識なしとの比較はTable 2・3の条件を参照。,確認済み,
+CRV008,IVL2002,labels,MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。,確認済み,
+CRV009,IVL2002,input,クエリ画像、MMADの欠陥種類の候補付き質問、検索された欠陥の記述。1-shotは同一ドメイン正常画像を1枚追加。,確認済み,
+CRV010,IVL2002,prompt,工業検査の役割・質問・候補選択肢に検索した種類知識を加える。,確認済み,
+CRV011,IVL2002,primary_model,Reason-IAD。CLIPで関連欠陥カテゴリの知識を検索し、Qwen3-VLの潜在推論トークンと選択画像パッチを推論時に更新。,確認済み,
+CRV012,IVL2002,split,§4.1では同じドメインから正常参照をランダム抽出する1-shot、Table 2は参照なしzero-shot。,確認済み,
+CRV013,IVL2002,performance,v4 Table 1の1-shot種類AccuracyはReason-IAD Qwen3-VL-8B 75.07%、同基盤62.33%。,確認済み,
+CRV014,IVL2002,limitations,表の種類列を採用。本文に記された総合平均と表の総合平均に差があるため総合平均を比較値に使わない。,確認済み,
+CRV015,IVL2003,labels,MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。,確認済み,
+CRV016,IVL2003,input,クエリ画像とMMAD選択式質問、標準1-shotの正常参照。推論時に画像領域拡大や参照検索の操作を呼び出せる。,確認済み,
+CRV017,IVL2003,prompt,MMADの原版選択式質問。必要に応じて画像拡大・検索結果を文脈に追加。,確認済み,
+CRV018,IVL2003,primary_model,AgentIAD（Qwen2.5-VL-3B）。領域拡大、正常参照検索、外部知識取得を選択できる検査エージェント。,確認済み,
+CRV019,IVL2003,split,"§4.1の1,936訓練／6,400評価の分割。Table 1は標準1-shot。",確認済み,
+CRV020,IVL2003,performance,Table 1のDefect Classification AccuracyはAgentIAD 72.73%、Qwen2.5-VL-3B 41.07%、AnomalyR1 63.56%。,確認済み,
+CRV021,IVL2003,limitations,MMAD内部学習を含むため、学習なしで全MMADを評価した結果とは条件が異なる。,確認済み,
+CRV022,IVL2004,labels,MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。,確認済み,
+CRV023,IVL2004,input,クエリ画像・選択式質問、PVLAに収録した仕様、局所クロップ。1-shotでは正常参照画像を利用。,確認済み,
+CRV024,IVL2004,prompt,MMAD-QAの候補選択。構造レポートと局所画像・検索知識を統合。,確認済み,
+CRV025,IVL2004,primary_model,GLLS。部位別の正常情報を検索し、SAM3による全体構造確認と、モンテカルロ木探索による局所クロップの取得を並行。Qwen3-VLが証拠から回答。,確認済み,
+CRV026,IVL2004,split,Table 1のMVTec・VisA別0-shot／1-shot。別データセットは二値評価。,確認済み,
+CRV027,IVL2004,performance,Table 1のCls. Accuracy、Qwen3-VL-8B GLLS 1-shot MVTec 87.7%、VisA 83.5%。0-shot 81.9%、65.2%。同基盤74.2%、61.4%。,確認済み,
+CRV028,IVL2004,limitations,評価はMMAD-QA部分集合。1-shotと0-shotは正常参照に加えて局所化器も異なる。,確認済み,
+CRV029,IVL2005,labels,MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。,確認済み,
+CRV030,IVL2005,input,推論時はクエリ画像とMMAD選択式質問のみ。対応する正常画像・領域注釈は教師の学習時のみ利用。,確認済み,
+CRV031,IVL2005,prompt,原版MMADの画像・問い・選択肢。学習教師に正常クロップを追加。,確認済み,
+CRV032,IVL2005,primary_model,ADOPD。学習中だけ対応／非対応の正常局所参照を与えたQwen3-VL-32B教師から、Qwen3-VL-4B学生へ方策蒸留。,確認済み,
+CRV033,IVL2005,split,§4.1で学習と評価のデータセット非重複を明示。Table 1は推論時の正常参照0枚。,確認済み,
+CRV034,IVL2005,performance,Table 1のzero-shot Defect Classification AccuracyはADOPD 57.03%、同基盤53.90%、同論文で再評価したReason-IAD 73.12%。77.31%は全タスク平均。,確認済み,
+CRV035,IVL2005,generalization,Real-IADからMMADへの異データセット評価（原著による非重複）。,確認済み,
+CRV036,IVL2006,labels,MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。,確認済み,
+CRV037,IVL2006,input,クエリ画像・欠陥種類選択式質問・CLIPによる最類似正常参照1枚・製品領域知識。,確認済み,
+CRV038,IVL2006,prompt,欠陥種類選択とドメイン知識を入力。soft prompt・対照埋め込みは二値判定・局在タスクのみ。,確認済み,
+CRV039,IVL2006,primary_model,EMIT（InternVL3-8B）。難易度に応じて回答再サンプリングと利得重みを調整するGRPO。,確認済み,
+CRV040,IVL2006,split,論文Table 1はMMADの標準1-shot。著者はMMAD元4データセットの直接タスク作成を避けるが、正常画像の説明文を使うと記載。,確認済み,
+CRV041,IVL2006,performance,Table 1の1-shot Defect Classification Accuracy 80.85%。比較Qwen2.5-VL 7B 69.35%、GLM-4.1V-Thinking 9B 72.01%。,確認済み,
+CRV042,IVL2006,limitations,MMAD由来正常例からの説明生成も用いる。完全なドメイン未接触学習ではない。,確認済み,
+CRV043,IVL2007,labels,MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。,確認済み,
+CRV044,IVL2007,input,クエリ画像、欠陥のない比較画像1枚、MMAD選択式質問。正常参照はMMADの候補からランダム抽出。,確認済み,
+CRV045,IVL2007,prompt,クエリと正常画像を比較し、欠陥種類設問の候補を回答。,確認済み,
+CRV046,IVL2007,primary_model,InspectorGPT（Qwen2.5-VL-7B）。比較推論SFTからGRPOと分割枝を別々に学び、両枝のtask vectorを融合。,確認済み,
+CRV047,IVL2007,split,38製品を層化した20%の学習サブセットで正常・異常比1:1、残り80%を評価。,確認済み,
+CRV048,IVL2007,performance,Table 1のDefect Cls. Accuracy 75.32%。同基盤56.15%。全タスク平均82.38%。,確認済み,
+CRV049,IVL2007,limitations,MMADの内部学習あり。実験表中に異なる学習設定の比較器も明記。,確認済み,
+CRV050,IVL2008,labels,工程BEOL・DEP・DPRと欠陥13種類を区別。個別欠陥の全原語ラベルはFigure 5–6参照、今回の取得で未確認。,確認済み,
+CRV051,IVL2008,input,KLA SEM G-series撮像のICウェハ画像。空間事前情報は同一画像から抽出。,確認済み,
+CRV052,IVL2008,primary_model,SNAP-SEM。DINOv3事前学習ViT-Base/14、自己正常プロトタイプから空間事前分布を抽出し、SMG-ViTが未知カテゴリをクラスタリング。,確認済み,
+CRV053,IVL2008,split,BEOLを既知、DEP/DPRを未知とする設定およびBEOLを未知・DPRを既知とする逆設定。,確認済み,
+CRV054,IVL2008,performance,Table 2の種類分類F1（0–1尺度）はBEOL 0.7825、DEP 0.9695、DPR 0.9411。同順のNMI 0.7226／0.8517／0.9249、ARI 0.8046／0.9282／0.9682。,確認済み,
+CRV055,IVL2008,limitations,未知出力はクラスタIDで、評価時に正解クラスへ対応付ける。欠陥名をそのまま生成する方式とは出力が異なる。,確認済み,

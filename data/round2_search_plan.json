@@ -1,0 +1,35 @@
+{
+  "as_of": "2026-11-11",
+  "round": "Round2",
+  "expected_seed_ids": {
+    "工具": [
+      "FT001",
+      "FIA02",
+      "FIA04",
+      "FT002",
+      "MM001"
+    ],
+    "工業ViT": [
+      "IT003",
+      "IT004",
+      "IT005",
+      "IT006",
+      "IT009"
+    ],
+    "工業VLM_MLLM": [
+      "IV001",
+      "IV002",
+      "IV003",
+      "IM001",
+      "IM002",
+      "IM003"
+    ]
+  },
+  "directions": [
+    "backward",
+    "forward"
+  ],
+  "stop_condition": "選定主要16本の両方向を調査し、範囲と保留を記録。新発見論文の再帰的全件追跡は次周回。探索飽和は主張しない",
+  "known_item_recall_test": "独立テスト未実施",
+  "independent_exclusion_review": "独立二重選別・無作為除外監査は未実施"
+}

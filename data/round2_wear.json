@@ -1,0 +1,2826 @@
+{
+  "new_records": [
+    {
+      "existing_id": "追加",
+      "group": "画像のみ",
+      "status": "採用",
+      "classes": 4,
+      "task": "実工具画像の摩耗・損傷種類分類（人が判定を支援）",
+      "mixed": "Flank+BUEとFlank+Faceは独立した複合クラス。",
+      "model_family": "CNN系",
+      "primary_models": "事前学習EfficientNet-b0＋HG-XAI",
+      "baseline_families": "単独のEfficientNet-b0",
+      "language_model": "使用記載なし",
+      "dataset_family": "IN718・IIT Jodhpur/Clemson研究系列（既収録研究との画像レベルの独立性未確認）",
+      "id": "FW2001",
+      "year": 2025,
+      "authors": "Aitha Sudheer Kumar; Ankit Agarwal; Vinita Gangaram Jansari; K. A. Desai; Chiranjoy Chattopadhyay; Laine Mears",
+      "title": "HG-XAI: human-guided tool wear identification approach through augmentation of explainable artificial intelligence with machine vision",
+      "doi": "10.1007/s10845-024-02476-2",
+      "url": "https://link.springer.com/article/10.1007/s10845-024-02476-2",
+      "input": "IN718加工で表面速度を変えて取得した摩耗工具の実写画像。",
+      "tool": "IN718を加工した切削工具（既収録研究の撮像条件や型式を転用しない）。",
+      "labels": "Flank; Flank+BUE; Flank+Face; Chipping",
+      "labels_ja": "逃げ面摩耗／逃げ面摩耗＋構成刃先／逃げ面摩耗＋すくい面摩耗／チッピング",
+      "model": "事前学習EfficientNet-b0と人の知見・説明可能AIを組み合わせたHG-XAI。単独モデルと比較。",
+      "data": "表面速度を変えたIN718加工由来の画像。画像数・分割の単位は確認できた抄録に記載なし。",
+      "split": "異なる切削条件で撮影した画像への適用も評価。93.08%に対応する全件・条件別内訳と独立工具単位の分割は未確認。",
+      "performance": "HG-XAIによる摩耗4種類のAccuracy 93.08%（出版社抄録）。",
+      "metric": "Accuracy（%）",
+      "limitation": "原著抄録の結果。人の介入条件、評価画像数、既存IN718研究との画像重複は未確認。",
+      "locator": "出版社Abstract、誌面書誌、FT002 References [20]、FIA04 Crossref message.reference [19]",
+      "verification": "出版社・所属機関の原著抄録確認。2024-08-14 online、2025年巻。",
+      "source_id": "SRW006; SRW007; SRW004; SRW022",
+      "model_pipeline": "EfficientNet-b0による画像判定＋人の知見とXAI",
+      "model_family_basis": "CRW002"
+    },
+    {
+      "existing_id": "追加",
+      "group": "画像のみ",
+      "status": "採用",
+      "classes": 4,
+      "task": "実工具画像の摩耗・損傷種類分類（人が判定を支援）",
+      "mixed": "Flank+BUEとFlank+Faceは独立した複合クラス。",
+      "model_family": "CNN系",
+      "primary_models": "事前学習EfficientNet-b0＋HG-XAI",
+      "baseline_families": "単独のEfficientNet-b0",
+      "language_model": "使用記載なし",
+      "dataset_family": "IN718・IIT Jodhpur/Clemson研究系列（既収録研究との画像レベルの独立性未確認）",
+      "id": "FW2002",
+      "year": 2025,
+      "authors": "Ankit Agarwal; Aitha Sudheer Kumar; Vineeta Gangaram Jansari; K. A. Desai; Laine Mears",
+      "title": "Improving vision-based tool wear state identification under varying lighting conditions using human guided-explainable AI approach",
+      "doi": "10.1016/j.mfglet.2025.06.083",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213846325001154",
+      "input": "機上顕微鏡で得たIN718加工工具の実写。照明L1/L2の画像。",
+      "tool": "IN718加工で使用した切削工具。",
+      "labels": "Flank; Flank + BUE; Flank + Face; Chipping",
+      "labels_ja": "逃げ面摩耗／逃げ面摩耗＋構成刃先／逃げ面摩耗＋すくい面摩耗／チッピング",
+      "model": "L1で事前学習EfficientNet-b0を微調整し、HG-XAIを組み合わせL2を判定。",
+      "data": "異なる照明2条件を機上撮像。公開取得範囲では画像数は未確認。",
+      "split": "L1の画像で学習、照明が異なるL2の画像で評価。工具ID単位の分離とL2の画像数は未確認。",
+      "performance": "L2評価のAccuracy 96%、MCC 0.96、F1-score 0.97。F1の平均化方式は抄録で未確認。",
+      "metric": "Accuracy（%）、MCC、F1-score（無次元）",
+      "limitation": "照明条件の移行と人の支援を含む。工具・現場を単位とした外部検証かは未確認。",
+      "locator": "出版社Abstract、IIT Jodhpur機関書誌。FIA04への引用はOpenAlex確認",
+      "verification": "出版社抄録および機関原著抄録の索引を確認。",
+      "source_id": "SRW008; SRW009; SRW018",
+      "model_pipeline": "照明L1で学習したEfficientNet-b0＋HG-XAIでL2を判定",
+      "model_family_basis": "CRW007"
+    },
+    {
+      "id": "FW2003",
+      "existing_id": "追加",
+      "group": "画像のみ",
+      "status": "関連（主比較外）",
+      "year": 2026,
+      "authors": "Falko Kähler; Maxim Wille; Ole Schmedemann; Thorsten Schüppstuhl",
+      "title": "Wear Classification of Abrasive Flap Wheels using a Hierarchical Deep Learning Approach",
+      "doi": "10.48550/arXiv.2603.12852",
+      "url": "https://arxiv.org/html/2603.12852",
+      "input": "研削工具フラップホイールの実写真。半径方向と軸方向の画像を階層で使い分け。",
+      "tool": "研削工具（abrasive flap wheel）",
+      "labels": "rectangular; concave; convex; with tear; without tear",
+      "labels_ja": "矩形／凹形／凸形、フラップ裂けあり／なし",
+      "classes": 3,
+      "task": "研削工具の階層型形態分類。3形状の分類と裂け有無の別分類。",
+      "mixed": "形状と裂けを独立に出力。完全／部分の程度と新品／使用品は別段階。",
+      "model": "形状はEfficientNetV2-S、裂けはEfficientNetV2-Lを転移学習。",
+      "data": "形状のテスト3,564画像、裂けのテスト1,153画像。",
+      "split": "工具単位でtrain/validation/test分離。階層全体は各単体モデルに未使用の9本、計360試行で追加評価。",
+      "metric": "Accuracy（%）、F1（無次元）",
+      "performance": "形状 Accuracy 95.4%・F1 0.954（Table 5）。裂け Accuracy 93.8%・F1 0.935（Table 8）。階層全体 Accuracy 87.5%（§5.4、独立9本）。",
+      "limitation": "研削工具の変形・裂け分類を境界事例として収録。切削刃の摩耗分類への転用評価は未確認。",
+      "locator": "§3、§4 Table 3、§5.2 Table 5、§5.3 Table 8、§5.4、Refs [17]",
+      "verification": "著者プレプリント原文確認",
+      "source_id": "SRW017",
+      "dataset_family": "実研削フラップホイールの著者取得写真",
+      "model_family": "CNN系",
+      "model_pipeline": "EfficientNetV2形態分類を階層的に適用",
+      "primary_models": "EfficientNetV2-S、EfficientNetV2-L",
+      "baseline_families": "未確認",
+      "language_model": "使用記載なし",
+      "model_family_basis": "CRW012"
+    }
+  ],
+  "record_updates": [
+    {
+      "id": "FIA06",
+      "fields": {
+        "verification": "出版社記事と号目次で正式掲載・著者順を確認。記事公開日は2026-06-09、Vol. 9 No. 1の号名はMarch 2026。評価は著者原稿の抄録・方法/結果抜粋。",
+        "source_id": "SFI010; SRW011; SRW044; SRW045",
+        "status": "採用",
+        "authors": "Aini Zuhra Abdul Kadir; Chee Wai Yong; Nurul Husna Mohd Yusoff; Shao Wei Koh; Mohd Azlan Suhaimi; Tan Kim Loong",
+        "url": "https://semarakilmu.my/index.php/sijaset/article/view/1136",
+        "limitation": "99.26%は内部validation。主学習/検証の工具単位分割は未確認。軽微チッピング少数。出版社の正式記事の著者順を採用。著者公開稿とは著者順差あり。記事ページにDOIの記載なし。",
+        "locator": "出版社 article 1136 citation_*、号目次、著者原稿p.1 §§2.5/3.1–3.2 Tables 1–2"
+      },
+      "reason": "出版社記事で著者順・2026-06-09公開・正式掲載（Vol.9 No.1 pp.1–12）を確認。型分類・内部検証は著者公開稿に基づき採用。",
+      "source_ids": [
+        "SRW011",
+        "SRW012",
+        "SRW044",
+        "SRW045"
+      ]
+    },
+    {
+      "id": "MM002",
+      "fields": {
+        "verification": "出版社プレビュー、DOI登録、著者所属機関の公開PDF経路を再照合。出版社の先行公開日は未確認。",
+        "source_id": "MMS002; MMS003; MMS004; MMS005; MMS007; SRW013; SRW014; SRW038"
+      },
+      "reason": "著者所属機関のPDF経路とCrossref日付欄を再照合。先行公開日を推測しない。",
+      "source_ids": [
+        "SRW013",
+        "SRW014",
+        "SRW038"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRW001",
+      "title": "Automatic Identification of Tool Wear Based on Convolutional Neural Network in Face Milling Process",
+      "publisher": "MDPI",
+      "year": "2019",
+      "url": "https://www.mdpi.com/1424-8220/19/18/3817",
+      "doi": "10.3390/s19183817",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著本文・引用",
+      "saved_path": "",
+      "locator": "References [1–31]"
+    },
+    {
+      "source_id": "SRW002",
+      "title": "Towards Leveraging End-of-Life Tools as an Asset: Value Co-Creation based on Deep Learning in the Machining Industry",
+      "publisher": "著者／arXiv",
+      "year": "2020",
+      "url": "https://arxiv.org/html/2008.01053",
+      "doi": "10.24251/HICSS.2020.124",
+      "type": "著者版（会議論文）",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著本文・引用",
+      "saved_path": "",
+      "locator": "References [1–46]"
+    },
+    {
+      "source_id": "SRW003",
+      "title": "Realizing on-machine tool wear monitoring through integration of vision-based system with CNC milling machine",
+      "publisher": "Elsevier",
+      "year": "2025",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278612524002978",
+      "doi": "10.1016/j.jmsy.2024.12.004",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "抄録・章抜粋確認",
+      "saved_path": "",
+      "locator": "Abstract、CNN-based tool wear classification model、References"
+    },
+    {
+      "source_id": "SRW004",
+      "title": "Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718",
+      "publisher": "MDPI",
+      "year": "2026",
+      "url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "doi": "10.3390/machines14060589",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著本文・引用",
+      "saved_path": "",
+      "locator": "§2.1 Fig. 2 Table 2、References [1–36]"
+    },
+    {
+      "source_id": "SRW005",
+      "title": "Trustworthy Multimodal Tool-Wear Prediction: Bias Auditing, Lifecycle Mitigation, and the Data-Adequacy Limits of Algorithmic Correction",
+      "publisher": "MDPI",
+      "year": "2026",
+      "url": "https://www.mdpi.com/2673-2688/7/10/400",
+      "doi": "10.3390/ai7100400",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著本文・引用",
+      "saved_path": "",
+      "locator": "§2、§3、§5.4、§6.9、References [1–56]"
+    },
+    {
+      "source_id": "SRW006",
+      "title": "HG-XAI: human-guided tool wear identification approach through augmentation of explainable artificial intelligence with machine vision",
+      "publisher": "Springer Nature",
+      "year": "2025",
+      "url": "https://link.springer.com/article/10.1007/s10845-024-02476-2",
+      "doi": "10.1007/s10845-024-02476-2",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社抄録確認",
+      "saved_path": "",
+      "locator": "Published 14 August 2024、Abstract、Vol. 36 pp.4807–4822"
+    },
+    {
+      "source_id": "SRW007",
+      "title": "HG-XAI: human-guided tool wear identification approach through augmentation of explainable artificial intelligence with machine vision",
+      "publisher": "IIT Jodhpur",
+      "year": "2024",
+      "url": "https://scholar.iitj.ac.in/handle/123456789/37001",
+      "doi": "10.1007/s10845-024-02476-2",
+      "type": "所属機関の書誌・抄録",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "書誌・抄録確認",
+      "saved_path": "",
+      "locator": "Abstract・DOI"
+    },
+    {
+      "source_id": "SRW008",
+      "title": "Improving vision-based tool wear state identification under varying lighting conditions using human guided-explainable AI approach",
+      "publisher": "Elsevier",
+      "year": "2025",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213846325001154",
+      "doi": "10.1016/j.mfglet.2025.06.083",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社抄録確認",
+      "saved_path": "",
+      "locator": "Abstract、Manufacturing Letters 44 suppl. pp.709–717"
+    },
+    {
+      "source_id": "SRW009",
+      "title": "Improving vision-based tool wear state identification under varying lighting conditions using human guided-explainable AI approach",
+      "publisher": "IIT Jodhpur",
+      "year": "2025",
+      "url": "https://scholar.iitj.ac.in/entities/publication/0909f614-bf46-404c-935b-4cd772ed08bc",
+      "doi": "10.1016/j.mfglet.2025.06.083",
+      "type": "所属機関の書誌・抄録",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "書誌・抄録索引確認",
+      "saved_path": "",
+      "locator": "Authors、Abstract"
+    },
+    {
+      "source_id": "SRW010",
+      "title": "Systematic approach for generating diversity-enhanced image dataset for vision-based on-machine tool wear monitoring systems",
+      "publisher": "Springer Nature",
+      "year": "2026",
+      "url": "https://link.springer.com/article/10.1007/s00170-026-17619-3",
+      "doi": "10.1007/s00170-026-17619-3",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社抄録・引用確認",
+      "saved_path": "",
+      "locator": "Abstract、Reference [2]"
+    },
+    {
+      "source_id": "SRW011",
+      "title": "Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling",
+      "publisher": "著者公開原稿／ResearchGate",
+      "year": "2026",
+      "url": "https://www.researchgate.net/publication/406927055_Tool_Wear_Classification_Based_on_Convolutional_Neural_Network_in_Micro_Drilling",
+      "doi": null,
+      "type": "著者原稿",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原稿テキスト抜粋確認",
+      "saved_path": "",
+      "locator": "p.1、§§2.5/3.1–3.2、Tables 1–2"
+    },
+    {
+      "source_id": "SRW012",
+      "title": "Semarak International Journal of Applied Sciences and Engineering Technology – archive",
+      "publisher": "Semarak Ilmu",
+      "year": "2026",
+      "url": "https://semarakilmu.my/index.php/sijaset/issue/archive",
+      "doi": null,
+      "type": "出版社巻号目次",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "巻号の存在確認",
+      "saved_path": "",
+      "locator": "Vol.9 No.1 March 2026"
+    },
+    {
+      "source_id": "SRW013",
+      "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+      "publisher": "Elsevier",
+      "year": "2027",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+      "doi": "10.1016/j.ress.2026.113287",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社プレビュー確認",
+      "saved_path": "",
+      "locator": "巻号情報、Abstract、§3、§4 Tables 2–7"
+    },
+    {
+      "source_id": "SRW014",
+      "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support – author-hosted PDF",
+      "publisher": "上海交通大学 著者ページ",
+      "year": "2027",
+      "url": "https://me.sjtu.edu.cn/upload/ueditor/file/20260820/1787213442741477.pdf",
+      "doi": "10.1016/j.ress.2026.113287",
+      "type": "著者所属機関公開PDF",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "機関公開PDFに到達。既取得版の埋込テキスト未抽出、公開日は継続確認。",
+      "saved_path": "",
+      "locator": "冒頭の出版日注記"
+    },
+    {
+      "source_id": "SRW015",
+      "title": "Generative image augmentation for few-shot tool wear detection using mask latent space enhancement diffusion model",
+      "publisher": "Elsevier",
+      "year": "2026",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1526612526006341",
+      "doi": "10.1016/j.jmapro.2026.06.072",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社Abstract・章抜粋確認",
+      "saved_path": "",
+      "locator": "Abstract、Figs. 1–2/15、Table 3、結論"
+    },
+    {
+      "source_id": "SRW016",
+      "title": "High-accuracy tool wear monitoring for micro-milling method based on improved Pyramid Vision Transformer",
+      "publisher": "Springer Nature",
+      "year": "2025",
+      "url": "https://link.springer.com/article/10.1007/s11227-025-07650-8",
+      "doi": "10.1007/s11227-025-07650-8",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社Abstract・参考文献確認",
+      "saved_path": "",
+      "locator": "Abstract、Author information、Access"
+    },
+    {
+      "source_id": "SRW017",
+      "title": "Wear Classification of Abrasive Flap Wheels using a Hierarchical Deep Learning Approach",
+      "publisher": "著者／arXiv",
+      "year": "2026",
+      "url": "https://arxiv.org/html/2603.12852",
+      "doi": "10.48550/arXiv.2603.12852",
+      "type": "プレプリント",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "本文確認",
+      "saved_path": "",
+      "locator": "§§3.1–3.3、§4–5、Tables 1/3/5/8、References"
+    },
+    {
+      "source_id": "SRW018",
+      "title": "OpenAlex works citing Kumar et al. (10.1016/j.jmsy.2024.12.004) to 2026-11-11",
+      "publisher": "OpenAlex",
+      "year": "2026",
+      "url": "https://api.openalex.org/works?filter=cites%3AW4405463953%2Cto_publication_date%3A2026-11-11&per_page=100",
+      "doi": null,
+      "type": "引用索引",
+      "primary": false,
+      "accessed": "2026-11-11",
+      "verification": "被引用エッジ・全返却52",
+      "saved_path": "evidence/raw/round2_wear/FIA04_openalex_citing_cutoff.json",
+      "locator": "results[].referenced_works"
+    },
+    {
+      "source_id": "SRW019",
+      "title": "OpenAlex works citing Walk et al. (10.24251/HICSS.2020.124) to 2026-11-11",
+      "publisher": "OpenAlex",
+      "year": "2026",
+      "url": "https://api.openalex.org/works?filter=cites%3AW3003268894%2Cto_publication_date%3A2026-11-11&per_page=100",
+      "doi": null,
+      "type": "引用索引",
+      "primary": false,
+      "accessed": "2026-11-11",
+      "verification": "被引用エッジ・全返却4",
+      "saved_path": "evidence/raw/round2_wear/FIA02_openalex_citing_cutoff.json",
+      "locator": "results[].referenced_works"
+    },
+    {
+      "source_id": "SRW020",
+      "title": "OpenAlex works citing Singh et al. (10.3390/machines14060589) to 2026-11-11",
+      "publisher": "OpenAlex",
+      "year": "2026",
+      "url": "https://api.openalex.org/works?filter=cites%3AW7162551044%2Cto_publication_date%3A2026-11-11&per_page=100",
+      "doi": null,
+      "type": "引用索引",
+      "primary": false,
+      "accessed": "2026-11-11",
+      "verification": "被引用エッジ・全返却1",
+      "saved_path": "evidence/raw/round2_wear/FT002_openalex_citing_cutoff.json",
+      "locator": "results[].referenced_works"
+    },
+    {
+      "source_id": "SRW021",
+      "title": "OpenAlex works citing Ahangar et al. (10.3390/ai7100400) to 2026-11-11",
+      "publisher": "OpenAlex",
+      "year": "2026",
+      "url": "https://api.openalex.org/works?filter=cites%3AW7196968282%2Cto_publication_date%3A2026-11-11&per_page=100",
+      "doi": null,
+      "type": "引用索引",
+      "primary": false,
+      "accessed": "2026-11-11",
+      "verification": "被引用APIの返却0",
+      "saved_path": "evidence/raw/round2_wear/MM001_openalex_citing_cutoff.json",
+      "locator": "meta.count"
+    },
+    {
+      "source_id": "SRW022",
+      "title": "Crossref metadata: Realizing on-machine tool wear monitoring through integration of vision-based system with CNC milling machine",
+      "publisher": "Crossref",
+      "year": "2025",
+      "url": "https://api.crossref.org/works/10.1016/j.jmsy.2024.12.004",
+      "doi": "10.1016/j.jmsy.2024.12.004",
+      "type": "DOI参照登録",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "登録参照38",
+      "saved_path": "evidence/raw/round2_wear/FIA04_crossref_work.json",
+      "locator": "message.reference"
+    },
+    {
+      "source_id": "SRW023",
+      "title": "MATWI: A Multimodal Automatic Tool Wear Inspection Dataset and Baseline Algorithms",
+      "publisher": "KU Leuven",
+      "year": "2023",
+      "url": "https://iiw.kuleuven.be/onderzoek/eavise/MATWI/MATWI",
+      "doi": null,
+      "type": "データセット・原著案内",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "公式データ・タスク確認",
+      "saved_path": "",
+      "locator": "Paper、Information、Label structure"
+    },
+    {
+      "source_id": "SRW024",
+      "title": "Automatic Tool Wear Inspection by Cascading Sensor and Image Data",
+      "publisher": "Springer Nature",
+      "year": "2025",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39",
+      "doi": "10.1007/978-3-031-74640-6_39",
+      "type": "会議論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "抄録確認",
+      "saved_path": "",
+      "locator": "Abstract、First Online 01 January 2025"
+    },
+    {
+      "source_id": "SRW025",
+      "title": "A Tool Wear Prediction Network Fusing Visual-Acoustic Cross-Attention and Interval Guidance",
+      "publisher": "MDPI",
+      "year": "2026",
+      "url": "https://www.mdpi.com/2075-1702/14/7/826",
+      "doi": "10.3390/machines14070826",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "本文確認",
+      "saved_path": "",
+      "locator": "Abstract、回帰・評価"
+    },
+    {
+      "source_id": "SRW026",
+      "title": "Multi-source uncertainty guided semi-supervised multimodal tool wear recognition and prediction in extremely label-scarce scenarios",
+      "publisher": "Elsevier",
+      "year": "2026",
+      "url": "https://www.sciencedirect.com/science/article/pii/S095741742600713X",
+      "doi": "10.1016/j.eswa.2026.131800",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "抄録と章抜粋確認",
+      "saved_path": "",
+      "locator": "Abstract、Fig. 2"
+    },
+    {
+      "source_id": "SRW027",
+      "title": "Consistency-assisted dual-level distribution alignment for unsupervised domain adaptive tool wear recognition towards real-world application",
+      "publisher": "Elsevier",
+      "year": "2026",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1526612526002434",
+      "doi": "10.1016/j.jmapro.2026.02.079",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "抄録確認",
+      "saved_path": "",
+      "locator": "Abstract"
+    },
+    {
+      "source_id": "SRW028",
+      "title": "Classification of Cutting Tool Wear Evolution in CNC Turning Using Convolutional Neural Networks",
+      "publisher": "Trans Tech Publications",
+      "year": "2026",
+      "url": "https://www.scientific.net/DDF.450.119.pdf",
+      "doi": "10.4028/p-ni0kla",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "PDF該当節確認",
+      "saved_path": "",
+      "locator": "Abstract、Low/Medium/Critical"
+    },
+    {
+      "source_id": "SRW029",
+      "title": "A machine vision based defect detection method for coated carbide CNC inserts and its industrial automation implementation analysis",
+      "publisher": "Springer Nature",
+      "year": "2026",
+      "url": "https://www.nature.com/articles/s41598-026-52293-1",
+      "doi": "10.1038/s41598-026-52293-1",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著該当節確認",
+      "saved_path": "",
+      "locator": "Abstract、dataset、KUKAセル"
+    },
+    {
+      "source_id": "SRW030",
+      "title": "CNN-based in situ tool wear detection: A study on model training and data augmentation in turning inserts",
+      "publisher": "Elsevier",
+      "year": "2023",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278612523000547",
+      "doi": "10.1016/j.jmsy.2023.03.005",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社プレビュー確認",
+      "saved_path": "",
+      "locator": "Abstract、OK/NOK出力"
+    },
+    {
+      "source_id": "SRW031",
+      "title": "Official program for IMECE2023 and paper IMECE2023-113344",
+      "publisher": "ASME",
+      "year": "2023",
+      "url": "https://event.asme.org/Events/media/library/resources/imece/IMECE-2023-Final-Program.pdf",
+      "doi": "10.1115/IMECE2023-113344",
+      "type": "会議公式プログラム",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "書誌・発表確認",
+      "saved_path": "",
+      "locator": "Technical Paper Publication IMECE2023-113344"
+    },
+    {
+      "source_id": "SRW032",
+      "title": "Vision-Based Tool Wear Classification During End-Milling of Inconel 718 Using a Pre-Trained Convolutional Neural Network – author profile",
+      "publisher": "Clemson University",
+      "year": "2023",
+      "url": "https://clemson.discovery.academicanalytics.com/scholar/907304/VINITA-JANSARI",
+      "doi": "10.1115/IMECE2023-113344",
+      "type": "著者所属機関の抄録",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "機関公開抄録抜粋確認",
+      "saved_path": "",
+      "locator": "Three distinct phenomena、Efficient-Net-b3"
+    },
+    {
+      "source_id": "SRW033",
+      "title": "Using the Machine Vision Method to Develop an On-machine Insert Condition Monitoring System for Computer Numerical Control Turning Machine Tools",
+      "publisher": "MDPI",
+      "year": "2018",
+      "url": "https://www.mdpi.com/1996-1944/11/10/1977",
+      "doi": "10.3390/ma11101977",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "本文確認",
+      "saved_path": "",
+      "locator": "Abstract、種類判定処理"
+    },
+    {
+      "source_id": "SRW034",
+      "title": "Towards Neuro-symbolic Classification of Abrasive Wear in Scanning Electron Microscopy",
+      "publisher": "Springer Nature",
+      "year": "2026",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-032-21540-6_19",
+      "doi": "10.1007/978-3-032-21540-6_19",
+      "type": "会議論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社抄録確認",
+      "saved_path": "",
+      "locator": "Abstract"
+    },
+    {
+      "source_id": "SRW035",
+      "title": "Sensors and Materials 36(11) 4815–4834, DOI 10.18494/SAM5205",
+      "publisher": "MYU K.K.",
+      "year": "2024",
+      "url": "https://sensors.myu-group.co.jp/sm_pdf/SM3833.pdf",
+      "doi": "10.18494/SAM5205",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "原著PDF該当節確認",
+      "saved_path": "",
+      "locator": "Abstract、§§1/3、Figs. 3–4/14–15"
+    },
+    {
+      "source_id": "SRW036",
+      "title": "Automatic Identification of Tool Wear Based on Thermography and a Convolutional Neural Network during the Turning Process",
+      "publisher": "MDPI",
+      "year": "2021",
+      "url": "https://www.mdpi.com/1424-8220/21/5/1917",
+      "doi": "10.3390/s21051917",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "本文確認",
+      "saved_path": "",
+      "locator": "§2.1、Wu原著の引用"
+    },
+    {
+      "source_id": "SRW037",
+      "title": "Detection of tool wear during machining by designing a novel 12-way 2-shot learning model by applying L2-regularization and image augmentation",
+      "publisher": "KFUPM",
+      "year": "2023",
+      "url": "https://pure.kfupm.edu.sa/en/publications/detection-of-tool-wear-during-machining-by-designing-a-novel-12-w/",
+      "doi": null,
+      "type": "著者所属機関書誌",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "抄録索引確認",
+      "saved_path": "",
+      "locator": "12種類の工具、87.83%"
+    },
+    {
+      "source_id": "SRW038",
+      "title": "Crossref metadata for Yan et al. 10.1016/j.ress.2026.113287",
+      "publisher": "Crossref",
+      "year": "2027",
+      "url": "https://api.crossref.org/works/10.1016/j.ress.2026.113287",
+      "doi": "10.1016/j.ress.2026.113287",
+      "type": "DOI登録メタデータ",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "巻号確認",
+      "saved_path": "evidence/raw/focused_multimodal/yan_crossref.json",
+      "locator": "issued/published-print、created、deposited"
+    },
+    {
+      "source_id": "SRW039",
+      "title": "Deep learning and rule-based image processing pipeline for automated metal cutting tool wear detection and measurement",
+      "publisher": "RWTH Aachen",
+      "year": "2022",
+      "url": "https://publications.rwth-aachen.de/record/846759/files/846759.pdf",
+      "doi": "10.1016/j.ifacol.2022.04.249",
+      "type": "著者所属機関公開原著",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "既収録一次資料・引用索引確認",
+      "saved_path": "",
+      "locator": "Abstract、機上摩耗計測"
+    },
+    {
+      "source_id": "SRW040",
+      "title": "A New Flexible High-Resolution Vision Sensor for Tool Condition Monitoring",
+      "publisher": "Università di Pisa",
+      "year": "2001",
+      "url": "https://arpi.unipi.it/handle/11568/177989",
+      "doi": null,
+      "type": "所属機関の書誌・抄録",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "公開抄録索引確認",
+      "saved_path": "",
+      "locator": "Abstract"
+    },
+    {
+      "source_id": "SRW041",
+      "title": "OpenAlex works citing Wu et al. (10.3390/s19183817), newest first, first 20",
+      "publisher": "OpenAlex",
+      "year": "2026",
+      "url": "https://api.openalex.org/works?filter=cites%3AW2972227710&per_page=20&sort=publication_date%3Adesc",
+      "doi": null,
+      "type": "引用索引",
+      "primary": false,
+      "accessed": "2026-11-11",
+      "verification": "上位20件・索引total160",
+      "saved_path": "evidence/raw/round2_wear/FT001_openalex_citing.json",
+      "locator": "results[].referenced_works"
+    },
+    {
+      "source_id": "SRW042",
+      "title": "An Uncertainty-based Human-in-the-loop System for Industrial Tool Wear Analysis",
+      "publisher": "Springer Nature",
+      "year": "2021",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-030-67670-4_6",
+      "doi": "10.1007/978-3-030-67670-4_6",
+      "type": "会議論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "既収録の著者原著と引用索引照合",
+      "saved_path": "",
+      "locator": "Abstract、単一タスクの判定と人への保留"
+    },
+    {
+      "source_id": "SRW043",
+      "title": "MaskLenNet: A Query-Based Instance Segmentation and Length Prediction Network for Quantitative Industrial Tool Wear and Breakage Assessment",
+      "publisher": "MDPI",
+      "year": "2026",
+      "url": "https://www.mdpi.com/2504-4494/10/8/286",
+      "doi": "10.3390/jmmp10080286",
+      "type": "査読論文",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "既収録原著と索引の再照合",
+      "saved_path": "",
+      "locator": "Abstract、出力の長さ予測・領域分割"
+    },
+    {
+      "source_id": "SRW044",
+      "title": "Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling",
+      "publisher": "Semarak Ilmu",
+      "year": "2026",
+      "url": "https://semarakilmu.my/index.php/sijaset/issue/view/285",
+      "doi": null,
+      "type": "出版社の号目次",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社の号目次を直接取得し記事・著者一覧を確認",
+      "saved_path": "evidence/raw/round2_wear/FIA06_publisher_issue_metadata.json",
+      "locator": "Vol. 9 No. 1 March 2026、article-1136、pp. 1–12"
+    },
+    {
+      "source_id": "SRW045",
+      "title": "Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling",
+      "publisher": "Semarak Ilmu",
+      "year": "2026",
+      "url": "https://semarakilmu.my/index.php/sijaset/article/view/1136",
+      "doi": null,
+      "type": "出版社公式記事",
+      "primary": true,
+      "accessed": "2026-11-11",
+      "verification": "出版社HTML直接取得。正式著者順・巻号・記事公開日を確認。DOI掲載なし。",
+      "saved_path": "evidence/raw/round2_wear/FIA06_publisher_article_metadata.json",
+      "locator": "HTML citation_*、article 1136、Published"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CRW001",
+      "entity_id": "FW2001",
+      "field": "labels",
+      "claim": "Flank; Flank+BUE; Flank+Face; Chipping",
+      "status": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW002",
+      "entity_id": "FW2001",
+      "field": "model",
+      "claim": "事前学習EfficientNet-b0と人の知見・説明可能AIを組み合わせたHG-XAI。単独モデルと比較。",
+      "status": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW003",
+      "entity_id": "FW2001",
+      "field": "input",
+      "claim": "IN718加工で表面速度を変えて取得した摩耗工具の実写画像。",
+      "status": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW004",
+      "entity_id": "FW2001",
+      "field": "performance",
+      "claim": "HG-XAIによる摩耗4種類のAccuracy 93.08%（出版社抄録）。",
+      "status": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW005",
+      "entity_id": "FW2001",
+      "field": "split",
+      "claim": "異なる切削条件で撮影した画像への適用も評価。93.08%に対応する全件・条件別内訳と独立工具単位の分割は未確認。",
+      "status": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW006",
+      "entity_id": "FW2002",
+      "field": "labels",
+      "claim": "Flank; Flank + BUE; Flank + Face; Chipping",
+      "status": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW007",
+      "entity_id": "FW2002",
+      "field": "model",
+      "claim": "L1で事前学習EfficientNet-b0を微調整し、HG-XAIを組み合わせL2を判定。",
+      "status": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW008",
+      "entity_id": "FW2002",
+      "field": "input",
+      "claim": "機上顕微鏡で得たIN718加工工具の実写。照明L1/L2の画像。",
+      "status": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW009",
+      "entity_id": "FW2002",
+      "field": "performance",
+      "claim": "L2評価のAccuracy 96%、MCC 0.96、F1-score 0.97。F1の平均化方式は抄録で未確認。",
+      "status": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW010",
+      "entity_id": "FW2002",
+      "field": "split",
+      "claim": "L1の画像で学習、照明が異なるL2の画像で評価。工具ID単位の分離とL2の画像数は未確認。",
+      "status": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW011",
+      "entity_id": "FW2003",
+      "field": "labels",
+      "claim": "rectangular; concave; convex; with tear; without tear",
+      "status": "本文確認"
+    },
+    {
+      "claim_id": "CRW012",
+      "entity_id": "FW2003",
+      "field": "model",
+      "claim": "形状はEfficientNetV2-S、裂けはEfficientNetV2-Lを転移学習。",
+      "status": "本文確認"
+    },
+    {
+      "claim_id": "CRW013",
+      "entity_id": "FW2003",
+      "field": "input",
+      "claim": "研削工具フラップホイールの実写真。半径方向と軸方向の画像を階層で使い分け。",
+      "status": "本文確認"
+    },
+    {
+      "claim_id": "CRW014",
+      "entity_id": "FW2003",
+      "field": "performance",
+      "claim": "形状 Accuracy 95.4%・F1 0.954（Table 5）。裂け Accuracy 93.8%・F1 0.935（Table 8）。階層全体 Accuracy 87.5%（§5.4、独立9本）。",
+      "status": "本文確認"
+    },
+    {
+      "claim_id": "CRW015",
+      "entity_id": "FW2003",
+      "field": "split",
+      "claim": "工具単位でtrain/validation/test分離。階層全体は各単体モデルに未使用の9本、計360試行で追加評価。",
+      "status": "本文確認"
+    },
+    {
+      "claim_id": "CRW016",
+      "entity_id": "FIA06",
+      "field": "verification",
+      "claim": "出版社記事のcitation_dateは2026-06-09、Vol.9 No.1の号名はMarch 2026、pp.1–12。公式記事の著者順を採用。著者原稿にBUE・Chippingと内部Validation Accuracy 99.26%。",
+      "status": "原稿テキスト抜粋確認"
+    },
+    {
+      "claim_id": "CRW017",
+      "entity_id": "MM002",
+      "field": "online_status",
+      "claim": "出版社プレビューで2027年1月巻。DOI登録タイムスタンプと先行公開日は別。",
+      "status": "巻号確認"
+    },
+    {
+      "claim_id": "CRW018",
+      "entity_id": "R0116",
+      "field": "task",
+      "claim": "四つの工具タイプでの領域mIoU。生成条件にchippingはあるが形態のカテゴリ分類性能は確認できない。",
+      "status": "出版社Abstract・章抜粋確認"
+    },
+    {
+      "claim_id": "CRW019",
+      "entity_id": "R0118",
+      "field": "verification",
+      "claim": "画像入力GPVTの原著抄録確認。形態か程度かを判別する原語クラスは購読本文未取得のため未確認。",
+      "status": "出版社Abstract・参考文献確認"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "claim_id": "CRW001",
+      "source_id": "SRW006",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW002",
+      "source_id": "SRW006",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW003",
+      "source_id": "SRW006",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW004",
+      "source_id": "SRW006",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW005",
+      "source_id": "SRW006",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW006",
+      "source_id": "SRW008",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW007",
+      "source_id": "SRW008",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW008",
+      "source_id": "SRW008",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW009",
+      "source_id": "SRW008",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW010",
+      "source_id": "SRW008",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "claim_id": "CRW011",
+      "source_id": "SRW017",
+      "locator": "§3.3 Tables 1–2",
+      "quote": "",
+      "verification": "本文確認"
+    },
+    {
+      "claim_id": "CRW012",
+      "source_id": "SRW017",
+      "locator": "§4",
+      "quote": "",
+      "verification": "本文確認"
+    },
+    {
+      "claim_id": "CRW013",
+      "source_id": "SRW017",
+      "locator": "§3–4",
+      "quote": "",
+      "verification": "本文確認"
+    },
+    {
+      "claim_id": "CRW014",
+      "source_id": "SRW017",
+      "locator": "§5.2/5.3 Tables 5/8、§5.4",
+      "quote": "",
+      "verification": "本文確認"
+    },
+    {
+      "claim_id": "CRW015",
+      "source_id": "SRW017",
+      "locator": "§4 Table 3、§5.4",
+      "quote": "",
+      "verification": "本文確認"
+    },
+    {
+      "claim_id": "CRW016",
+      "source_id": "SRW011",
+      "locator": "Abstract、§§2.5/3.1–3.2、Table 1",
+      "quote": "",
+      "verification": "原稿テキスト抜粋確認"
+    },
+    {
+      "claim_id": "CRW017",
+      "source_id": "SRW038",
+      "locator": "message.issued、message.created、published-online欠落",
+      "quote": "",
+      "verification": "巻号確認"
+    },
+    {
+      "claim_id": "CRW018",
+      "source_id": "SRW015",
+      "locator": "Abstract、Fig. 15、Table 3",
+      "quote": "",
+      "verification": "出版社Abstract・章抜粋確認"
+    },
+    {
+      "claim_id": "CRW019",
+      "source_id": "SRW016",
+      "locator": "Abstract、Access",
+      "quote": "",
+      "verification": "出版社Abstract・参考文献確認"
+    },
+    {
+      "claim_id": "CRW016",
+      "source_id": "SRW044",
+      "locator": "article-1136、著者一覧、pp.1–12",
+      "quote": "",
+      "verification": "出版社号目次を直接確認"
+    },
+    {
+      "claim_id": "CRW016",
+      "source_id": "SRW045",
+      "locator": "HTML citation_author/citation_date/citation_volume/citation_issue/citation_firstpage/citation_lastpage",
+      "quote": "",
+      "verification": "公式記事メタデータ確認"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "WR2C001",
+      "title": "HG-XAI: human-guided tool wear identification approach through augmentation of explainable artificial intelligence with machine vision",
+      "doi": "10.1007/s10845-024-02476-2",
+      "url": "https://link.springer.com/article/10.1007/s10845-024-02476-2",
+      "scope": "工具",
+      "discovered_by": "FIA04のCrossref登録参照[19]、FT002原著[20]",
+      "seed_id": "FIA04",
+      "decision": "採用",
+      "reason": "実工具画像の4種類とHG-XAI評価93.08%を原著抄録で確認。同研究系列として独立性留保。",
+      "record_id": "FW2001",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "candidate_id": "WR2C002",
+      "title": "Improving vision-based tool wear state identification under varying lighting conditions using human guided-explainable AI approach",
+      "doi": "10.1016/j.mfglet.2025.06.083",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213846325001154",
+      "scope": "工具",
+      "discovered_by": "FIA04 OpenAlex前方索引52件の1件、著者所属機関",
+      "seed_id": "FIA04",
+      "decision": "採用",
+      "reason": "実工具4種類、L1→L2照明、Accuracy/MCC/F1を原著抄録で確認。",
+      "record_id": "FW2002",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "candidate_id": "WR2C003",
+      "title": "Systematic approach for generating diversity-enhanced image dataset for vision-based on-machine tool wear monitoring systems",
+      "doi": "10.1007/s00170-026-17619-3",
+      "url": "https://link.springer.com/article/10.1007/s00170-026-17619-3",
+      "scope": "工具",
+      "discovered_by": "FT002 References [21]、FIA04 OpenAlex索引",
+      "seed_id": "FT002",
+      "decision": "保留",
+      "reason": "原著抄録は実画像200枚を4種類、拡張学習28,000画像、Accuracy84.16%、MCC0.772。原著4名称と画像IDの関係未確認。後続FT002のラベルは転記しない。",
+      "record_id": "",
+      "verification": "出版社抄録・引用確認"
+    },
+    {
+      "candidate_id": "WR2C004",
+      "title": "Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling",
+      "doi": null,
+      "url": "https://semarakilmu.my/index.php/sijaset/article/view/1136",
+      "scope": "工具",
+      "discovered_by": "既存保留FIA06、出版社巻号、著者原稿",
+      "seed_id": "FIA06",
+      "decision": "採用（既存更新）",
+      "reason": "出版社記事公開2026-06-09、Vol.9 No.1の号名March 2026、pp.1–12。実写工具画像のBUE／Chipping、ContourOnly内部validation99.26%を著者原稿で確認。",
+      "record_id": "FIA06",
+      "verification": "出版社号目次＋著者原稿抜粋"
+    },
+    {
+      "candidate_id": "WR2C005",
+      "title": "A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support",
+      "doi": "10.1016/j.ress.2026.113287",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+      "scope": "工具",
+      "discovered_by": "既存保留MM002、出版社プレビューと機関PDF",
+      "seed_id": "MM002",
+      "decision": "保留",
+      "reason": "三種類分類と性能を確認。2027-01巻号と基準日前の出版社先行公開日は取得台帳参照。",
+      "record_id": "MM002",
+      "verification": "出版社プレビュー確認"
+    },
+    {
+      "candidate_id": "WR2C006",
+      "title": "Generative image augmentation for few-shot tool wear detection using mask latent space enhancement diffusion model",
+      "doi": "10.1016/j.jmapro.2026.06.072",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1526612526006341",
+      "scope": "工具",
+      "discovered_by": "既存保留R0116、出版社の要旨・章抜粋",
+      "seed_id": "R0116",
+      "decision": "除外",
+      "reason": "出力評価はU-Netの摩耗領域mIoU。chippingは生成の意味条件として確認、Fig.15/Table 3の4種は工具形状の違い。種類のカテゴリ分類を評価していない。",
+      "record_id": "",
+      "verification": "出版社Abstract・章抜粋確認"
+    },
+    {
+      "candidate_id": "WR2C007",
+      "title": "High-accuracy tool wear monitoring for micro-milling method based on improved Pyramid Vision Transformer",
+      "doi": "10.1007/s11227-025-07650-8",
+      "url": "https://link.springer.com/article/10.1007/s11227-025-07650-8",
+      "scope": "工具",
+      "discovered_by": "既存保留R0118、出版社・著者版探索",
+      "seed_id": "R0118",
+      "decision": "保留",
+      "reason": "画像入力とGPVTの技法は出版社抄録で確認。分類ラベル、分割、数値の本文未取得。",
+      "record_id": "",
+      "verification": "出版社Abstract・参考文献確認"
+    },
+    {
+      "candidate_id": "WR2C008",
+      "title": "Wear Classification of Abrasive Flap Wheels using a Hierarchical Deep Learning Approach",
+      "doi": "10.48550/arXiv.2603.12852",
+      "url": "https://arxiv.org/html/2603.12852",
+      "scope": "工具",
+      "discovered_by": "FT001 OpenAlex前方索引／原著References [17]",
+      "seed_id": "FT001",
+      "decision": "関連",
+      "reason": "研削フラップホイールの形態・裂け分類。切削刃が主対象のため関連。",
+      "record_id": "FW2003",
+      "verification": "本文確認"
+    },
+    {
+      "candidate_id": "WR2C009",
+      "title": "Implementation of Vision Transformer Model for Robust Tool Wear Monitoring in Milling of Inconel 718",
+      "doi": "10.3390/machines14060589",
+      "url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "scope": "工具",
+      "discovered_by": "FIA04 OpenAlex前方索引／FT002原著References [31]",
+      "seed_id": "FIA04",
+      "decision": "既収録",
+      "reason": "FT002がFIA04を撮像系として引用し、ViTを評価。",
+      "record_id": "FT002",
+      "verification": "原著本文・引用"
+    },
+    {
+      "candidate_id": "WR2C010",
+      "title": "Using the Machine Vision Method to Develop an On-machine Insert Condition Monitoring System for Computer Numerical Control Turning Machine Tools",
+      "doi": "10.3390/ma11101977",
+      "url": "https://www.mdpi.com/1996-1944/11/10/1977",
+      "scope": "工具",
+      "discovered_by": "Wu関連検索と既存記録",
+      "seed_id": "FT001",
+      "decision": "既収録",
+      "reason": "FIA01が古典画像処理でfracture/BUE/chipping/flankを分類。Wuからの引用関係は原著参照に確認できず、題名検索の関連。",
+      "record_id": "FIA01",
+      "verification": "本文確認"
+    },
+    {
+      "candidate_id": "WR2C011",
+      "title": "Deep learning and rule-based image processing pipeline for automated metal cutting tool wear detection and measurement",
+      "doi": "10.1016/j.ifacol.2022.04.249",
+      "url": "https://publications.rwth-aachen.de/record/846759/files/846759.pdf",
+      "scope": "工具",
+      "discovered_by": "FIA02 OpenAlex前方索引",
+      "seed_id": "FIA02",
+      "decision": "除外",
+      "reason": "画像から摩耗領域を検出し寸法を測定する工程。既存R0125の評価と照合。",
+      "record_id": "R0125",
+      "verification": "既収録一次資料・引用索引確認"
+    },
+    {
+      "candidate_id": "WR2C012",
+      "title": "An Uncertainty-based Human-in-the-loop System for Industrial Tool Wear Analysis",
+      "doi": "10.1007/978-3-030-67670-4_6",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-030-67670-4_6",
+      "scope": "工具",
+      "discovered_by": "FIA02 OpenAlex前方索引",
+      "seed_id": "FIA02",
+      "decision": "既収録",
+      "reason": "FIA08の人支援研究。主比較外の既存扱いを維持。",
+      "record_id": "FIA08",
+      "verification": "既収録の著者原著と引用索引照合"
+    },
+    {
+      "candidate_id": "WR2C013",
+      "title": "MATWI: A Multimodal Automatic Tool Wear Inspection Dataset and Baseline Algorithms",
+      "doi": null,
+      "url": "https://iiw.kuleuven.be/onderzoek/eavise/MATWI/MATWI",
+      "scope": "工具",
+      "discovered_by": "MM001原著References [12,45]",
+      "seed_id": "MM001",
+      "decision": "関連",
+      "reason": "MATWIの資料・種類注記。実画像/センサを含むが、一次データの種類注記と論文のモデル出力を区別。",
+      "record_id": "",
+      "verification": "公式データ・タスク確認"
+    },
+    {
+      "candidate_id": "WR2C014",
+      "title": "Automatic Tool Wear Inspection by Cascading Sensor and Image Data",
+      "doi": "10.1007/978-3-031-74640-6_39",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39",
+      "scope": "工具",
+      "discovered_by": "MM001原著関連文献探索",
+      "seed_id": "MM001",
+      "decision": "保留",
+      "reason": "信号と画像を段階併用。取得した原著Abstractは交換戦略を評価し、出力カテゴリは未確認。",
+      "record_id": "",
+      "verification": "抄録確認"
+    },
+    {
+      "candidate_id": "WR2C015",
+      "title": "A Tool Wear Prediction Network Fusing Visual-Acoustic Cross-Attention and Interval Guidance",
+      "doi": "10.3390/machines14070826",
+      "url": "https://www.mdpi.com/2075-1702/14/7/826",
+      "scope": "工具",
+      "discovered_by": "FT001 OpenAlex前方索引",
+      "seed_id": "FT001",
+      "decision": "除外",
+      "reason": "画像・音響融合はあるが出力は連続VBと区間、評価は回帰。",
+      "record_id": "",
+      "verification": "本文確認"
+    },
+    {
+      "candidate_id": "WR2C016",
+      "title": "Multi-source uncertainty guided semi-supervised multimodal tool wear recognition and prediction in extremely label-scarce scenarios",
+      "doi": "10.1016/j.eswa.2026.131800",
+      "url": "https://www.sciencedirect.com/science/article/pii/S095741742600713X",
+      "scope": "工具",
+      "discovered_by": "FIA04 OpenAlex前方索引",
+      "seed_id": "FIA04",
+      "decision": "除外",
+      "reason": "実画像に対し摩耗領域をセグメント化し、時系列で進展を予測。種類ラベル分類なし。",
+      "record_id": "",
+      "verification": "抄録と章抜粋確認"
+    },
+    {
+      "candidate_id": "WR2C017",
+      "title": "Consistency-assisted dual-level distribution alignment for unsupervised domain adaptive tool wear recognition towards real-world application",
+      "doi": "10.1016/j.jmapro.2026.02.079",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1526612526002434",
+      "scope": "工具",
+      "discovered_by": "FIA04 OpenAlex前方索引",
+      "seed_id": "FIA04",
+      "decision": "除外",
+      "reason": "U-Netで摩耗領域を認識し摩耗量を計測。光学ドメイン適応で、種類分類ではない。",
+      "record_id": "",
+      "verification": "抄録確認"
+    },
+    {
+      "candidate_id": "WR2C018",
+      "title": "Classification of Cutting Tool Wear Evolution in CNC Turning Using Convolutional Neural Networks",
+      "doi": "10.4028/p-ni0kla",
+      "url": "https://www.scientific.net/DDF.450.119.pdf",
+      "scope": "工具",
+      "discovered_by": "FIA04 OpenAlex前方索引",
+      "seed_id": "FIA04",
+      "decision": "除外",
+      "reason": "出力 Low、Medium、Critical は程度クラス。",
+      "record_id": "",
+      "verification": "PDF該当節確認"
+    },
+    {
+      "candidate_id": "WR2C019",
+      "title": "A machine vision based defect detection method for coated carbide CNC inserts and its industrial automation implementation analysis",
+      "doi": "10.1038/s41598-026-52293-1",
+      "url": "https://www.nature.com/articles/s41598-026-52293-1",
+      "scope": "工具",
+      "discovered_by": "FT001 OpenAlex前方索引",
+      "seed_id": "FT001",
+      "decision": "除外",
+      "reason": "新品被覆インサートの製造由来表面欠陥を位置検出。切削使用後の摩耗・損傷分類は対象外。",
+      "record_id": "",
+      "verification": "原著該当節確認"
+    },
+    {
+      "candidate_id": "WR2C020",
+      "title": "CNN-based in situ tool wear detection: A study on model training and data augmentation in turning inserts",
+      "doi": "10.1016/j.jmsy.2023.03.005",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278612523000547",
+      "scope": "工具",
+      "discovered_by": "FIA04 Crossref後方登録[25]、FT002原著Refs [18]",
+      "seed_id": "FIA04",
+      "decision": "除外",
+      "reason": "画像入力で複数の形態を観察するが、学習出力はOK/NOKの二値。",
+      "record_id": "",
+      "verification": "出版社プレビュー確認"
+    },
+    {
+      "candidate_id": "WR2C021",
+      "title": "Vision-Based Tool Wear Classification During End-Milling of Inconel 718 Using a Pre-Trained Convolutional Neural Network",
+      "doi": "10.1115/IMECE2023-113344",
+      "url": "https://event.asme.org/Events/media/library/resources/imece/IMECE-2023-Final-Program.pdf",
+      "scope": "工具",
+      "discovered_by": "FIA04 Crossref後方登録[18]、ASME公式プログラム",
+      "seed_id": "FIA04",
+      "decision": "保留",
+      "reason": "Efficient-Net-b3で3条件の分類。機関公開の記述に摩耗3現象はあるが、出力の原語ラベルと数値の独立確定ができない。",
+      "record_id": "",
+      "verification": "書誌・発表確認"
+    },
+    {
+      "candidate_id": "WR2C022",
+      "title": "Towards Neuro-symbolic Classification of Abrasive Wear in Scanning Electron Microscopy",
+      "doi": "10.1007/978-3-032-21540-6_19",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-032-21540-6_19",
+      "scope": "工具",
+      "discovered_by": "FT001 OpenAlex前方索引",
+      "seed_id": "FT001",
+      "decision": "関連",
+      "reason": "SEMによる摩耗機構解釈の初期研究。工具使用写真の対象と型分類の定量評価を確認できず。",
+      "record_id": "",
+      "verification": "出版社抄録確認"
+    },
+    {
+      "candidate_id": "WR2C023",
+      "title": "Sensors and Materials 36(11) 4815–4834, DOI 10.18494/SAM5205",
+      "doi": "10.18494/SAM5205",
+      "url": "https://sensors.myu-group.co.jp/sm_pdf/SM3833.pdf",
+      "scope": "工具",
+      "discovered_by": "追加語彙検索",
+      "seed_id": "FT001",
+      "decision": "除外",
+      "reason": "corner/minor flank/major flankは撮像方向。CNN/SVM出力は摩耗程度。",
+      "record_id": "",
+      "verification": "原著PDF該当節確認"
+    },
+    {
+      "candidate_id": "WR2C024",
+      "title": "Automatic Identification of Tool Wear Based on Thermography and a Convolutional Neural Network during the Turning Process",
+      "doi": "10.3390/s21051917",
+      "url": "https://www.mdpi.com/1424-8220/21/5/1917",
+      "scope": "工具",
+      "discovered_by": "FT001 題名引用検索、Kuntoğluら関連探索",
+      "seed_id": "FT001",
+      "decision": "除外",
+      "reason": "熱画像を用いnone/low/medium/highに分類。原著がWuの種類分類との差を明示。",
+      "record_id": "",
+      "verification": "本文確認"
+    },
+    {
+      "candidate_id": "WR2C025",
+      "title": "Detection of tool wear during machining by designing a novel 12-way 2-shot learning model by applying L2-regularization and image augmentation",
+      "doi": null,
+      "url": "https://pure.kfupm.edu.sa/en/publications/detection-of-tool-wear-during-machining-by-designing-a-novel-12-w/",
+      "scope": "工具",
+      "discovered_by": "FT002関連Springer推奨リンク",
+      "seed_id": "FT002",
+      "decision": "保留",
+      "reason": "12-wayが12工具を反映する可能性。原著で摩耗形態の出力ラベル未確認。",
+      "record_id": "",
+      "verification": "抄録索引確認"
+    },
+    {
+      "candidate_id": "WR2C026",
+      "title": "A New Flexible High-Resolution Vision Sensor for Tool Condition Monitoring",
+      "doi": null,
+      "url": "https://arpi.unipi.it/handle/11568/177989",
+      "scope": "工具",
+      "discovered_by": "FIA02原著Reference [23]",
+      "seed_id": "FIA02",
+      "decision": "保留",
+      "reason": "切削インサートの欠陥タクソノミーと視覚センサ設計。実測分類ラベル・分割・定量性能を本文で未取得。",
+      "record_id": "",
+      "verification": "公開抄録索引確認"
+    },
+    {
+      "candidate_id": "WR2C027",
+      "title": "Automatic Identification of Tool Wear Based on Convolutional Neural Network in Face Milling Process",
+      "doi": "10.3390/s19183817",
+      "url": "https://www.mdpi.com/1424-8220/19/18/3817",
+      "scope": "工具",
+      "discovered_by": "FIA04 Crossref References [20]、FT002 References [22]",
+      "seed_id": "FIA04",
+      "decision": "既収録",
+      "reason": "FT001、原著の種類分類。",
+      "record_id": "FT001",
+      "verification": "原著本文・引用"
+    },
+    {
+      "candidate_id": "WR2C028",
+      "title": "MaskLenNet: A Query-Based Instance Segmentation and Length Prediction Network for Quantitative Industrial Tool Wear and Breakage Assessment",
+      "doi": "10.3390/jmmp10080286",
+      "url": "https://www.mdpi.com/2504-4494/10/8/286",
+      "scope": "工具",
+      "discovered_by": "FT002 OpenAlex前方索引、FT001前方索引",
+      "seed_id": "FT002",
+      "decision": "既収録",
+      "reason": "既存FA001の位置・長さ評価。種類分類の定量成績とは区別。",
+      "record_id": "FA001",
+      "verification": "既収録原著と索引の再照合"
+    }
+  ],
+  "citation_edges": [
+    {
+      "edge_id": "ERW001",
+      "seed_id": "FT001",
+      "candidate_id": "WR2C008",
+      "direction": "前方",
+      "relation_status": "確認済み（原著）",
+      "evidence_url": "https://arxiv.org/html/2603.12852",
+      "locator": "§2.2・§2.3、References [17]",
+      "notes": "KählerらがWuを引用。"
+    },
+    {
+      "edge_id": "ERW002",
+      "seed_id": "FT001",
+      "candidate_id": "WR2C010",
+      "direction": "後方",
+      "relation_status": "未確認（関連検索）",
+      "evidence_url": "https://www.mdpi.com/1996-1944/11/10/1977",
+      "locator": "題名・主題の探索",
+      "notes": "Wu原著参考文献では関係未確認。"
+    },
+    {
+      "edge_id": "ERW003",
+      "seed_id": "FT001",
+      "candidate_id": "WR2C015",
+      "direction": "前方",
+      "relation_status": "確認済み（引用索引）",
+      "evidence_url": "https://api.openalex.org/works?filter=cites%3AW2972227710&per_page=20&sort=publication_date%3Adesc",
+      "locator": "results 6: referenced_works includes W2972227710",
+      "notes": "2026/7の画像＋音響回帰。"
+    },
+    {
+      "edge_id": "ERW004",
+      "seed_id": "FT001",
+      "candidate_id": "WR2C019",
+      "direction": "前方",
+      "relation_status": "確認済み（引用索引）",
+      "evidence_url": "https://api.openalex.org/works?filter=cites%3AW2972227710&per_page=20&sort=publication_date%3Adesc",
+      "locator": "results 8: referenced_works includes W2972227710",
+      "notes": "製造由来インサート欠陥。"
+    },
+    {
+      "edge_id": "ERW005",
+      "seed_id": "FT001",
+      "candidate_id": "WR2C022",
+      "direction": "前方",
+      "relation_status": "確認済み（引用索引）",
+      "evidence_url": "https://api.openalex.org/works?filter=cites%3AW2972227710&per_page=20&sort=publication_date%3Adesc",
+      "locator": "results 14: referenced_works includes W2972227710",
+      "notes": "SEMによる摩耗分類の研究。"
+    },
+    {
+      "edge_id": "ERW006",
+      "seed_id": "FT001",
+      "candidate_id": "WR2C024",
+      "direction": "前方",
+      "relation_status": "確認済み（原著）",
+      "evidence_url": "https://www.mdpi.com/1424-8220/21/5/1917",
+      "locator": "Introduction、Wu 2019 references [27]",
+      "notes": "実画像の種類分類を引用したが本論は温度像の程度。"
+    },
+    {
+      "edge_id": "ERW007",
+      "seed_id": "FT001",
+      "candidate_id": "WR2C028",
+      "direction": "前方",
+      "relation_status": "確認済み（引用索引）",
+      "evidence_url": "https://api.openalex.org/works?filter=cites%3AW2972227710&per_page=20&sort=publication_date%3Adesc",
+      "locator": "results 4: referenced_works includes W2972227710",
+      "notes": "MaskLenNet。"
+    },
+    {
+      "edge_id": "ERW008",
+      "seed_id": "FIA02",
+      "candidate_id": "WR2C011",
+      "direction": "前方",
+      "relation_status": "確認済み（引用索引）",
+      "evidence_url": "https://api.openalex.org/works?filter=cites%3AW3003268894%2Cto_publication_date%3A2026-11-11&per_page=100",
+      "locator": "results 2: referenced_works includes W3003268894",
+      "notes": "摩耗領域計測。"
+    },
+    {
+      "edge_id": "ERW009",
+      "seed_id": "FIA02",
+      "candidate_id": "WR2C012",
+      "direction": "前方",
+      "relation_status": "確認済み（引用索引）",
+      "evidence_url": "https://api.openalex.org/works?filter=cites%3AW3003268894%2Cto_publication_date%3A2026-11-11&per_page=100",
+      "locator": "results 3: referenced_works includes W3003268894",
+      "notes": "既存FIA08。"
+    },
+    {
+      "edge_id": "ERW010",
+      "seed_id": "FIA02",
+      "candidate_id": "WR2C026",
+      "direction": "後方",
+      "relation_status": "確認済み（原著）",
+      "evidence_url": "https://arxiv.org/html/2008.01053",
+      "locator": "References [23]",
+      "notes": "Lanzetta 2001。"
+    },
+    {
+      "edge_id": "ERW011",
+      "seed_id": "FIA04",
+      "candidate_id": "WR2C001",
+      "direction": "後方",
+      "relation_status": "確認済み（出版社登録参照）",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.jmsy.2024.12.004",
+      "locator": "message.reference 19番（表題）",
+      "notes": "KumarらHG-XAIへの引用。"
+    },
+    {
+      "edge_id": "ERW012",
+      "seed_id": "FIA04",
+      "candidate_id": "WR2C002",
+      "direction": "前方",
+      "relation_status": "確認済み（引用索引）",
+      "evidence_url": "https://api.openalex.org/works?filter=cites%3AW4405463953%2Cto_publication_date%3A2026-11-11&per_page=100",
+      "locator": "results 48: referenced_works includes W4405463953",
+      "notes": "照明L1→L2。"
+    },
+    {
+      "edge_id": "ERW013",
+      "seed_id": "FIA04",
+      "candidate_id": "WR2C003",
+      "direction": "前方",
+      "relation_status": "確認済み（原著）",
+      "evidence_url": "https://link.springer.com/article/10.1007/s00170-026-17619-3",
+      "locator": "References [2]",
+      "notes": "SinghらがKumarの撮像方式論文を引用。"
+    },
+    {
+      "edge_id": "ERW014",
+      "seed_id": "FIA04",
+      "candidate_id": "WR2C009",
+      "direction": "前方",
+      "relation_status": "確認済み（原著）",
+      "evidence_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "locator": "§2.1/References [31]",
+      "notes": "既収録FT002。"
+    },
+    {
+      "edge_id": "ERW015",
+      "seed_id": "FIA04",
+      "candidate_id": "WR2C016",
+      "direction": "前方",
+      "relation_status": "確認済み（引用索引）",
+      "evidence_url": "https://api.openalex.org/works?filter=cites%3AW4405463953%2Cto_publication_date%3A2026-11-11&per_page=100",
+      "locator": "results 24: referenced_works includes W4405463953",
+      "notes": "セグメント化・予測。"
+    },
+    {
+      "edge_id": "ERW016",
+      "seed_id": "FIA04",
+      "candidate_id": "WR2C017",
+      "direction": "前方",
+      "relation_status": "確認済み（引用索引）",
+      "evidence_url": "https://api.openalex.org/works?filter=cites%3AW4405463953%2Cto_publication_date%3A2026-11-11&per_page=100",
+      "locator": "results 22: referenced_works includes W4405463953",
+      "notes": "U-Netドメイン適応。"
+    },
+    {
+      "edge_id": "ERW017",
+      "seed_id": "FIA04",
+      "candidate_id": "WR2C018",
+      "direction": "前方",
+      "relation_status": "確認済み（引用索引）",
+      "evidence_url": "https://api.openalex.org/works?filter=cites%3AW4405463953%2Cto_publication_date%3A2026-11-11&per_page=100",
+      "locator": "results 17: referenced_works includes W4405463953",
+      "notes": "程度クラス。"
+    },
+    {
+      "edge_id": "ERW018",
+      "seed_id": "FIA04",
+      "candidate_id": "WR2C020",
+      "direction": "後方",
+      "relation_status": "確認済み（出版社登録参照）",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.jmsy.2024.12.004",
+      "locator": "message.reference 25番",
+      "notes": "OK/NOK。"
+    },
+    {
+      "edge_id": "ERW019",
+      "seed_id": "FIA04",
+      "candidate_id": "WR2C021",
+      "direction": "後方",
+      "relation_status": "確認済み（出版社登録参照）",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.jmsy.2024.12.004",
+      "locator": "message.reference 18番（表題）",
+      "notes": "ASME2023。"
+    },
+    {
+      "edge_id": "ERW020",
+      "seed_id": "FIA04",
+      "candidate_id": "WR2C027",
+      "direction": "後方",
+      "relation_status": "確認済み（出版社登録参照）",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.jmsy.2024.12.004",
+      "locator": "message.reference 20番",
+      "notes": "Wu 2019。"
+    },
+    {
+      "edge_id": "ERW021",
+      "seed_id": "FT002",
+      "candidate_id": "WR2C001",
+      "direction": "後方",
+      "relation_status": "確認済み（原著）",
+      "evidence_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "locator": "References [20]、Introduction",
+      "notes": "HG-XAI。"
+    },
+    {
+      "edge_id": "ERW022",
+      "seed_id": "FT002",
+      "candidate_id": "WR2C003",
+      "direction": "後方",
+      "relation_status": "確認済み（原著）",
+      "evidence_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "locator": "§2.1、References [21]",
+      "notes": "画像拡張の前報。"
+    },
+    {
+      "edge_id": "ERW023",
+      "seed_id": "FT002",
+      "candidate_id": "WR2C020",
+      "direction": "後方",
+      "relation_status": "確認済み（原著）",
+      "evidence_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "locator": "References [18]",
+      "notes": "OK/NOK。"
+    },
+    {
+      "edge_id": "ERW024",
+      "seed_id": "FT002",
+      "candidate_id": "WR2C027",
+      "direction": "後方",
+      "relation_status": "確認済み（原著）",
+      "evidence_url": "https://www.mdpi.com/2075-1702/14/6/589",
+      "locator": "References [22]",
+      "notes": "Wu 2019。"
+    },
+    {
+      "edge_id": "ERW025",
+      "seed_id": "FT002",
+      "candidate_id": "WR2C028",
+      "direction": "前方",
+      "relation_status": "確認済み（引用索引）",
+      "evidence_url": "https://api.openalex.org/works?filter=cites%3AW7162551044%2Cto_publication_date%3A2026-11-11&per_page=100",
+      "locator": "results 1: referenced_works includes W7162551044",
+      "notes": "MaskLenNet。"
+    },
+    {
+      "edge_id": "ERW026",
+      "seed_id": "MM001",
+      "candidate_id": "WR2C013",
+      "direction": "後方",
+      "relation_status": "確認済み（原著）",
+      "evidence_url": "https://www.mdpi.com/2673-2688/7/10/400",
+      "locator": "References [12] 原著・[45] データ",
+      "notes": "MATWI。"
+    },
+    {
+      "edge_id": "ERW027",
+      "seed_id": "MM001",
+      "candidate_id": "WR2C014",
+      "direction": "後方",
+      "relation_status": "未確認（関連検索）",
+      "evidence_url": "https://link.springer.com/chapter/10.1007/978-3-031-74640-6_39",
+      "locator": "題名・共用データによる検索",
+      "notes": "Ahangarからの引用関係を確認できず。"
+    }
+  ],
+  "retrieval_attempts": [
+    {
+      "attempt_id": "ARW001",
+      "candidate_id": "WR2C001",
+      "record_id": "FW2001",
+      "url": "https://link.springer.com/article/10.1007/s10845-024-02476-2",
+      "route": "出版社",
+      "executed_at": "2026-11-10 23:48:06 UTC",
+      "result": "抄録・書誌取得。本文は購読プレビュー。",
+      "verification": "出版社抄録",
+      "next_action": "評価画像数、分割、介入ルールの原著本文が追加課題。"
+    },
+    {
+      "attempt_id": "ARW002",
+      "candidate_id": "WR2C001",
+      "record_id": "FW2001",
+      "url": "https://scholar.iitj.ac.in/handle/123456789/37001",
+      "route": "著者所属機関",
+      "executed_at": "2026-11-10 23:47:34 UTC",
+      "result": "原著抄録とDOI取得。",
+      "verification": "機関抄録",
+      "next_action": "本文の公開経路は未発見。"
+    },
+    {
+      "attempt_id": "ARW003",
+      "candidate_id": "WR2C002",
+      "record_id": "FW2002",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213846325001154",
+      "route": "出版社",
+      "executed_at": "2026-11-10 23:47:47 UTC",
+      "result": "公式索引で原著Abstractを取得。直開き／DOI経由はWeb取得不可。",
+      "verification": "抄録確認",
+      "next_action": "本文表・工具ID分離が未確認。"
+    },
+    {
+      "attempt_id": "ARW004",
+      "candidate_id": "WR2C002",
+      "record_id": "FW2002",
+      "url": "https://scholar.iitj.ac.in/entities/publication/0909f614-bf46-404c-935b-4cd772ed08bc",
+      "route": "著者所属機関",
+      "executed_at": "2026-11-10 23:46:09 UTC",
+      "result": "索引で書誌・抄録、直開きタイムアウト。",
+      "verification": "索引確認",
+      "next_action": "公開本文が得られればL2の母数とF1平均化を確認。"
+    },
+    {
+      "attempt_id": "ARW005",
+      "candidate_id": "WR2C003",
+      "record_id": "",
+      "url": "https://link.springer.com/article/10.1007/s00170-026-17619-3",
+      "route": "出版社",
+      "executed_at": "2026-11-10 23:48:06 UTC",
+      "result": "抄録・References取得。本文は購読プレビュー。",
+      "verification": "抄録確認",
+      "next_action": "原著の4ラベル、型式、評価画像IDを確認できる公開著者版を探索。"
+    },
+    {
+      "attempt_id": "ARW006",
+      "candidate_id": "WR2C004",
+      "record_id": "FIA06",
+      "url": "https://semarakilmu.my/index.php/sijaset/issue/view/285",
+      "route": "出版社巻号",
+      "executed_at": "2026-11-10 23:48:52 UTC",
+      "result": "直接HTTPS取得で当該号の実記事とpp.1–12、著者一覧を確認。",
+      "verification": "出版社目次・正式掲載確認",
+      "next_action": "記事本文の取得によりDOIの記載と主分割を確認。"
+    },
+    {
+      "attempt_id": "ARW007",
+      "candidate_id": "WR2C004",
+      "record_id": "FIA06",
+      "url": "https://www.researchgate.net/publication/406927055_Tool_Wear_Classification_Based_on_Convolutional_Neural_Network_in_Micro_Drilling",
+      "route": "著者公開原稿",
+      "executed_at": "2026-11-10 23:48:06 UTC",
+      "result": "著者原稿の抄録と表・章の一部取得。",
+      "verification": "原稿抜粋確認",
+      "next_action": "学習・検証の内訳、公開版書誌を確認。"
+    },
+    {
+      "attempt_id": "ARW008",
+      "candidate_id": "WR2C004",
+      "record_id": "FIA06",
+      "url": "https://www.researchgate.net/publication/profile/Nurul-Husna-Mohd-Yusoff/publication/406927055_Tool_Wear_Classification_Based_on_Convolutional_Neural_Network_in_Micro_Drilling/links/6a2a8de3d551e312d71fce70/Tool-Wear-Classification-Based-on-Convolutional-Neural-Network-in-Micro-Drilling.pdf",
+      "route": "著者公開PDFリンク",
+      "executed_at": "2026-11-10 23:52:22 UTC",
+      "result": "Web cache missで本文を取得できず。",
+      "verification": "取得失敗",
+      "next_action": "出版社記事から別の合法経路を確認。"
+    },
+    {
+      "attempt_id": "ARW009",
+      "candidate_id": "WR2C005",
+      "record_id": "MM002",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963",
+      "route": "出版社",
+      "executed_at": "2026-11-10 23:45:46 UTC",
+      "result": "プレビュー索引で2027巻号と技術・性能確認。先行日表示なし。",
+      "verification": "原著プレビュー",
+      "next_action": "著者機関版の初頁出版注記を照合。"
+    },
+    {
+      "attempt_id": "ARW010",
+      "candidate_id": "WR2C005",
+      "record_id": "MM002",
+      "url": "https://me.sjtu.edu.cn/upload/ueditor/file/20260820/1787213442741477.pdf",
+      "route": "著者所属機関PDF",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "result": "公開PDFの冒頭ページ描画を試行。",
+      "verification": "取得・描画状況を別途確認",
+      "next_action": "正確なAvailable online表記が得られるまで保留。"
+    },
+    {
+      "attempt_id": "ARW011",
+      "candidate_id": "WR2C005",
+      "record_id": "MM002",
+      "url": "https://api.crossref.org/works/10.1016/j.ress.2026.113287",
+      "route": "Crossref／既保存の一次メタデータ",
+      "executed_at": "2026-11-10 23:45:46 UTC",
+      "result": "巻号2027-01。created/depositedはあるがpublished-onlineの欄なし。",
+      "verification": "書誌確認",
+      "next_action": "巻号と先行公開日を分ける。"
+    },
+    {
+      "attempt_id": "ARW012",
+      "candidate_id": "WR2C006",
+      "record_id": "R0116",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1526612526006341",
+      "route": "出版社",
+      "executed_at": "2026-11-10 23:45:46 UTC",
+      "result": "Abstract、実験条件抜粋、Fig.15/Table 3と結論を取得。",
+      "verification": "出版社章抜粋",
+      "next_action": "種類分類は当該実験の出力と確認できない。"
+    },
+    {
+      "attempt_id": "ARW013",
+      "candidate_id": "WR2C007",
+      "record_id": "R0118",
+      "url": "https://link.springer.com/article/10.1007/s11227-025-07650-8",
+      "route": "出版社",
+      "executed_at": "2026-11-10 23:46:09 UTC",
+      "result": "抄録と参考文献を取得。本文は購読制限。",
+      "verification": "抄録確認",
+      "next_action": "クラス原語・評価分割・数値を本文で再確認。"
+    },
+    {
+      "attempt_id": "ARW014",
+      "candidate_id": "WR2C007",
+      "record_id": "R0118",
+      "url": "https://link.springer.com/article/10.1007/s11227-025-07650-8/tables/5",
+      "route": "出版社表の公開経路",
+      "executed_at": "2026-11-10 23:51:02 UTC",
+      "result": "Tables 1–6への直接照会はすべて取得不能。",
+      "verification": "取得失敗",
+      "next_action": "著者公開稿未発見。"
+    },
+    {
+      "attempt_id": "ARW015",
+      "candidate_id": "WR2C007",
+      "record_id": "R0118",
+      "url": "https://www.researchgate.net/publication/374356334_On-line_tool_wear_monitoring_under_variable_milling_conditions_based_on_a_condition-adaptive_hidden_semi-Markov_model",
+      "route": "著者版探索（別文献の引用欄）",
+      "executed_at": "2026-11-10 23:50:50 UTC",
+      "result": "別文献ページの引用書誌とGPVT抜粋。R0118の本文・原語クラス未取得。",
+      "verification": "出力ラベル未確認",
+      "next_action": "正式リポジトリの公開著者稿を引き続き探索。"
+    },
+    {
+      "attempt_id": "ARW016",
+      "candidate_id": "WR2C021",
+      "record_id": "",
+      "url": "https://doi.org/10.1115/IMECE2023-113344",
+      "route": "出版社DOI",
+      "executed_at": "2026-11-10 23:50:40 UTC",
+      "result": "DOI先がWebで取得不可。公式プログラムとClemson機関抄録で照合。",
+      "verification": "原著本文未取得",
+      "next_action": "3種類の正式ラベルと数値を本文で確認。"
+    },
+    {
+      "attempt_id": "ARW017",
+      "candidate_id": "WR2C026",
+      "record_id": "",
+      "url": "https://arpi.unipi.it/handle/11568/177989",
+      "route": "著者所属機関",
+      "executed_at": "2026-11-10 23:56:54 UTC",
+      "result": "抄録索引を確認。詳細ページは403。",
+      "verification": "抄録索引確認",
+      "next_action": "原著本文と実験指標を確認。"
+    },
+    {
+      "attempt_id": "ARW018",
+      "candidate_id": "WR2C004",
+      "record_id": "FIA06",
+      "url": "https://semarakilmu.my/index.php/sijaset/article/view/1136",
+      "route": "出版社記事の直接HTTPS",
+      "executed_at": "2026-11-11 00:03:38 UTC",
+      "result": "公式記事HTML取得。公開日2026-06-09・著者順・pp.1–12。DOI表示・citation_doiなし。",
+      "verification": "出版社の正式掲載と書誌確認",
+      "next_action": "正式版PDFの比較でクラス評価・分割・著者順を照合。"
+    }
+  ],
+  "seed_checks": [
+    {
+      "seed_id": "FT001",
+      "scope": "工具",
+      "direction": "後方",
+      "method": "Crossref DOI reference、原著参考文献照合、rootの全件追跡併用",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "available_total": 31,
+      "screened_count": 31,
+      "scope_status": "Crossrefの登録31件を題名一次選別",
+      "candidate_ids": [
+        "WR2C010",
+        "WR2C027"
+      ],
+      "notes": "関連の薄い分野引用も含む。32以降の有無は原著の番号で確認。rootの統合記録が全件前方を担当。"
+    },
+    {
+      "seed_id": "FT001",
+      "scope": "工具",
+      "direction": "前方",
+      "method": "OpenAlex 最新20件および原著引用照合",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "available_total": 160,
+      "screened_count": 20,
+      "scope_status": "この台帳は索引の一部。別途root取得",
+      "candidate_ids": [
+        "WR2C008",
+        "WR2C015",
+        "WR2C019",
+        "WR2C022",
+        "WR2C024",
+        "WR2C028"
+      ],
+      "notes": "APIのcount160、work表示161、Crossref145は異なる取得集合。"
+    },
+    {
+      "seed_id": "FIA02",
+      "scope": "工具",
+      "direction": "後方",
+      "method": "公開著者原著のReferences [1–46]",
+      "executed_at": "2026-11-10 23:52:54 UTC",
+      "available_total": 46,
+      "screened_count": 46,
+      "scope_status": "著者版の参考文献全件を題名一次選別",
+      "candidate_ids": [
+        "WR2C026"
+      ],
+      "notes": "Crossref登録0に対して著者版の番号46。特に [13–23] を確認。"
+    },
+    {
+      "seed_id": "FIA02",
+      "scope": "工具",
+      "direction": "前方",
+      "method": "OpenAlex API、to_publication_date:2026-11-11",
+      "executed_at": "2026-11-10 23:49:23 UTC",
+      "available_total": 4,
+      "screened_count": 4,
+      "scope_status": "当該索引・日付条件内全返却を一次選別",
+      "candidate_ids": [
+        "WR2C011",
+        "WR2C012"
+      ],
+      "notes": "残る2件は車両レンダリングとハイブリッド知能設計知見で、新たな工具種類分類は確認せず。"
+    },
+    {
+      "seed_id": "FIA04",
+      "scope": "工具",
+      "direction": "後方",
+      "method": "Crossref DOI reference、出版社原文プレビュー",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "available_total": 38,
+      "screened_count": 38,
+      "scope_status": "Crossref登録38件の題名一次選別",
+      "candidate_ids": [
+        "WR2C001",
+        "WR2C020",
+        "WR2C021",
+        "WR2C027"
+      ],
+      "notes": "書誌1件の題名が空。HG-XAIとASME2023は表題登録と別一次書誌を照合。登録全集合の全原文確認は未実施。"
+    },
+    {
+      "seed_id": "FIA04",
+      "scope": "工具",
+      "direction": "前方",
+      "method": "OpenAlex API、to_publication_date:2026-11-11、per_page=100",
+      "executed_at": "2026-11-10 23:49:23 UTC",
+      "available_total": 52,
+      "screened_count": 52,
+      "scope_status": "当該索引・日付条件内全返却を一次選別",
+      "candidate_ids": [
+        "WR2C002",
+        "WR2C003",
+        "WR2C009",
+        "WR2C016",
+        "WR2C017",
+        "WR2C018"
+      ],
+      "notes": "題名と取得できた抄録で選別。候補原著へのアクセス状態は取得台帳。登録されていない被引用は未評価。"
+    },
+    {
+      "seed_id": "FT002",
+      "scope": "工具",
+      "direction": "後方",
+      "method": "Crossref DOI reference、MDPI原著参考文献 [1–36]",
+      "executed_at": "2026-11-10 23:46:09 UTC",
+      "available_total": 36,
+      "screened_count": 36,
+      "scope_status": "出版社番号・Crossref登録36件を一次選別",
+      "candidate_ids": [
+        "WR2C001",
+        "WR2C003",
+        "WR2C020",
+        "WR2C027"
+      ],
+      "notes": "OpenAlex referenced_works 32件。背景文献と直接研究を区別。"
+    },
+    {
+      "seed_id": "FT002",
+      "scope": "工具",
+      "direction": "前方",
+      "method": "OpenAlex API、to_publication_date:2026-11-11",
+      "executed_at": "2026-11-10 23:49:23 UTC",
+      "available_total": 1,
+      "screened_count": 1,
+      "scope_status": "当該索引・日付条件内全返却を一次選別",
+      "candidate_ids": [
+        "WR2C028"
+      ],
+      "notes": "既収録MaskLenNet。"
+    },
+    {
+      "seed_id": "MM001",
+      "scope": "工具",
+      "direction": "後方",
+      "method": "MDPI References [1–56]、Crossref DOI reference",
+      "executed_at": "2026-11-10 23:46:09 UTC",
+      "available_total": 56,
+      "screened_count": 56,
+      "scope_status": "原著番号で56件の一次選別",
+      "candidate_ids": [
+        "WR2C013",
+        "WR2C014"
+      ],
+      "notes": "Crossrefでは登録57行（ref.30が2分割）。直接的な関連はMATWI。Verbekeは共通データで確認、引用は未確認。"
+    },
+    {
+      "seed_id": "MM001",
+      "scope": "工具",
+      "direction": "前方",
+      "method": "OpenAlex API、to_publication_date:2026-11-11",
+      "executed_at": "2026-11-10 23:49:23 UTC",
+      "available_total": 0,
+      "screened_count": 0,
+      "scope_status": "当該索引の該当結果0",
+      "candidate_ids": [
+        "WR2C014"
+      ],
+      "notes": "2026-10-03刊。題名検索で関連はあるが被引用エッジは未確認。"
+    }
+  ],
+  "search_log": [
+    {
+      "search_id": "QRW001",
+      "executed_at": "2026-11-10 23:45:46 UTC",
+      "query": "\"Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling\" Yong journal DOI pdf 2026 | \"A unified multimodal large language model for explainable tool wear state assessment and maintenance decision support\" \"Available online\" 113287 August 2026 | \"Generative image augmentation for few-shot tool wear detection using mask latent space enhancement diffusion model\" classification types defect labels MATWI | \"High-accuracy tool wear monitoring for micro-milling method based on improved Pyramid Vision Transformer\" types classes wear chips",
+      "provider": "Web検索・原資料閲覧",
+      "target": "工具の種類分類・保留書誌",
+      "returned_count": 15,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C004",
+        "WR2C005",
+        "WR2C006",
+        "WR2C007"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW002",
+      "executed_at": "2026-11-10 23:45:56 UTC",
+      "query": "\"Semarak International Journal of Applied Sciences and Engineering Technology\" \"9\" \"2026\" Chee Wai Yong Micro Drilling journal semarak ilmu | site:semarakilmu.my \"Tool Wear Classification\" Micro Drilling Yong 2026 journal | \"10.1007/s11227-025-07650-8\" micro-milling authors tool wear levels fulltext pdf | \"Improving vision-based tool wear state identification\" \"Implementation of Vision Transformer Model\" Singh Kumar on machine citations 94.11",
+      "provider": "Web検索・原資料閲覧",
+      "target": "工具の種類分類・保留書誌",
+      "returned_count": 18,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C002",
+        "WR2C004",
+        "WR2C007"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW003",
+      "executed_at": "2026-11-10 23:46:09 UTC",
+      "query": "turn275search0 Vol. 9 No. 1 | turn273search2 Detection Model | turn273search2 Wu et al. | https://www.mdpi.com/2075-1702/14/6/589 Kumar | https://www.mdpi.com/2673-2688/7/10/400 De Pauw | https://link.springer.com/article/10.1007/s11227-025-07650-8 | https://doi.org/10.24251/HICSS.2020.124 | https://doi.org/10.1016/j.jmsy.2024.12.004 | turn272search6",
+      "provider": "Web検索・原資料閲覧",
+      "target": "工具の種類分類・保留書誌",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C004",
+        "WR2C007",
+        "WR2C009",
+        "WR2C013"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW004",
+      "executed_at": "2026-11-10 23:47:21 UTC",
+      "query": "turn284view4 14 | \"10.1038/s41598-026-52293-1\" defect types label tool insert coated carbide CNN damage dataset industrial | \"DBA-YOLOv5s Wear Detection Method for Lathe Tool\" wear types labels chipping cutting insert | \"Systematic approach for generating diversity-enhanced image dataset for vision-based on-machine tool wear monitoring systems\" tool wear states types evaluation Singh | \"tool wear\" \"flank\" \"fracture\" \"built-up edge\" \"chipping\" vision identification tool inspection algorithm 2006",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C010",
+        "WR2C019"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW005",
+      "executed_at": "2026-11-10 23:47:34 UTC",
+      "query": "turn284view4 14 | Vol.9 March issue; Yong DOI; Singh 17619; HG-XAI accuracy",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 16,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C001",
+        "WR2C003",
+        "WR2C004"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW006",
+      "executed_at": "2026-11-10 23:47:47 UTC",
+      "query": "https://link.springer.com/article/10.1007/s10845-024-02476-2 | https://link.springer.com/article/10.1007/s00170-026-17619-3 | https://doi.org/10.1016/j.mfglet.2025.06.083 | \"Improving vision-based tool wear state identification under varying lighting conditions\" accuracy L1 L2 2025 06 083 full text | \"tool wear classification based on convolutional neural network in micro drilling\" Chee Wai Yong \"sijaset\" pdf file | \"Towards Leveraging End-of-Life Tools as an Asset\" Walk Kühl KIT repository full pdf | \"10.1142/s0218001426500527\" lathe tool wear DBA classes",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 18,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C001",
+        "WR2C002",
+        "WR2C003",
+        "WR2C004",
+        "WR2C012"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW007",
+      "executed_at": "2026-11-10 23:48:06 UTC",
+      "query": "turn336view0 37 | turn336view1 37 | turn284view0 37 | turn273search1 Article history | turn336search2 | https://www.mdpi.com/1424-8220/19/18/3817 Sun, W.-H.",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 11,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C001",
+        "WR2C003",
+        "WR2C004",
+        "WR2C007"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW008",
+      "executed_at": "2026-11-10 23:49:43 UTC",
+      "query": "\"Vision-based tool wear classification during end-milling of Inconel 718 using a pre-trained convolutional neural network\" accuracy flanks authors | \"Detection of tool wear during machining by designing a novel 12-way 2-shot learning model\" classes accuracy defects edge | \"10.1016/j.engappai.2026.114797\" \"tool wear\" features input types 2026 | \"10.1016/j.eswa.2026.131800\" multimodal tool wear recognition images labels classification wear types",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 17,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C016",
+        "WR2C021",
+        "WR2C025"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW009",
+      "executed_at": "2026-11-10 23:49:52 UTC",
+      "query": "\"IMECE2023-113344\" \"tool wear\" classification accuracy DOI | \"Classification of Cutting Tool Wear Evolution in CNC Turning Using Convolutional Neural Networks\" classes flank chipping tool | \"Consistency-assisted dual-level distribution alignment\" tool wear recognition wear classes types | \"NJUST-CCTD\" tool wear dataset class label named wear \"chipping\"",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 17,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C017",
+        "WR2C018",
+        "WR2C021"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW010",
+      "executed_at": "2026-11-10 23:50:20 UTC",
+      "query": "\"Systematic approach for generating diversity-enhanced image dataset\" \"Flank\" \"Chipping\" Singh 84.16 28000 2026 dataset | \"Vision-Based Tool Wear Classification During End-Milling of Inconel 718\" \"BUE\" accuracy 113344 Kumar | \"10.1016/j.jmapro.2026.06.072\" \"mAP\" tool wear YOLO mask classes labels test | \"Semarak International Journal of Applied Sciences and Engineering Technology\" \"9\" \"March (2026)\" semarakilmu.my/index.php/sijaset/issue/view",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C003",
+        "WR2C004",
+        "WR2C006",
+        "WR2C021"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW011",
+      "executed_at": "2026-11-10 23:50:40 UTC",
+      "query": "https://doi.org/10.1115/IMECE2023-113344 | turn284view0 40 | https://www.sciencedirect.com/science/article/pii/S0278612524002978 75 | IMECE2023-113344 Flank chipping; R0116 segmentation classes; R0118 GPVT full text",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 14,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C006",
+        "WR2C007",
+        "WR2C021"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW012",
+      "executed_at": "2026-11-10 23:50:50 UTC",
+      "query": "\"High-accuracy tool wear monitoring for micro-milling method based on improved Pyramid Vision Transformer\" \"initial wear\" \"GPVT\" | \"High-accuracy tool wear monitoring for micro-milling method based on improved Pyramid Vision Transformer\" site:researchgate.net/publication Gang Zheng dataset | \"s11227-025-07650-8\" PDF file preprint \"Zheng\" wear stages | \"Semarak\" \"Tool Wear Classification Based\" \"Chee Wai Yong\" sijaset publish article",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 14,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C004",
+        "WR2C007"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW013",
+      "executed_at": "2026-11-10 23:51:02 UTC",
+      "query": "https://link.springer.com/article/10.1007/s11227-025-07650-8/tables/1 | https://link.springer.com/article/10.1007/s11227-025-07650-8/tables/2 | https://link.springer.com/article/10.1007/s11227-025-07650-8/tables/3 | https://link.springer.com/article/10.1007/s11227-025-07650-8/tables/4 | https://link.springer.com/article/10.1007/s11227-025-07650-8/tables/5 | https://link.springer.com/article/10.1007/s11227-025-07650-8/tables/6",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 6,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C007"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW014",
+      "executed_at": "2026-11-10 23:51:25 UTC",
+      "query": "\"Vision-Based Tool Wear Classification During End-Milling of Inconel 718 Using a Pre-Trained\" site:asmedigitalcollection.asme.org | \"HG-XAI\" \"93.08\" \"Accuracy\" \"Flank+BUE\" dataset full text Kumar 2476 | \"Improving vision-based tool wear state identification\" \"Table\" \"96%\" \"images\" L2 Agarwal | \"tool wear classification\" \"flank wear\" \"chipping\" \"crater\" shape classification cutting tool machine vision ISO image tools cut 2000 2010",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 15,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C001",
+        "WR2C002",
+        "WR2C023"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW015",
+      "executed_at": "2026-11-10 23:51:35 UTC",
+      "query": "turn429search12 accuracy | turn429search12 crater wear | turn429search12 classification labels | turn429search12 22 | turn429search12 training",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 6,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C023"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW016",
+      "executed_at": "2026-11-10 23:51:46 UTC",
+      "query": "https://arxiv.org/html/2603.12852 | https://www.worldscientific.com/doi/abs/10.1142/S0218001426500527 | Neuro-symbolic abrasive SEM; Yong PDF; Zheng author manuscript",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 16,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C004",
+        "WR2C008",
+        "WR2C022"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW017",
+      "executed_at": "2026-11-10 23:52:22 UTC",
+      "query": "turn350view3 6 | Walk arXiv HTML/PDF; abrasive neuro-symbolic original; flap wheel morphology",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 7,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C004",
+        "WR2C008",
+        "WR2C022",
+        "WR2C026"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW018",
+      "executed_at": "2026-11-10 23:52:33 UTC",
+      "query": "turn432view0 209 | turn432view0 247 | turn431view0 Table I | turn431view0 classes | turn432view2 taxonomy",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 8,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C008",
+        "WR2C022",
+        "WR2C026"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW019",
+      "executed_at": "2026-11-10 23:52:54 UTC",
+      "query": "turn284view0 Author information | turn432view0 218 | turn432view0 243 | turn273search1 Article history | turn275search0 March (2026)",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 9,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C004",
+        "WR2C007",
+        "WR2C026"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW020",
+      "executed_at": "2026-11-10 23:53:19 UTC",
+      "query": "turn409search0 Three distinct phenomena | turn431view0 160 | turn431view0 188 | https://www.mdpi.com/2673-2688/7/10/400 Verbeke | turn336view1 Singh",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 8,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C003",
+        "WR2C008",
+        "WR2C021"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW021",
+      "executed_at": "2026-11-10 23:53:33 UTC",
+      "query": "https://www.mdpi.com/2075-1702/14/6/589 28,000 | https://www.mdpi.com/2075-1702/14/6/589 200 images | turn336search0 Tool Wear Image Dataset | turn432view0 204",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 6,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C002",
+        "WR2C003",
+        "WR2C009",
+        "WR2C026"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW022",
+      "executed_at": "2026-11-10 23:53:52 UTC",
+      "query": "\"10.1016/j.mfglet.2025.06.083\" \"L2\" \"images\" \"Table\" | \"S2213846325001154\" \"test\" \"L1\" \"L2\" human guided full | \"Improving vision-based tool wear state identification under varying lighting conditions\" \"tool wear\" \"MCC\" \"Table\" 0.96",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 5,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C002"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW023",
+      "executed_at": "2026-11-10 23:56:34 UTC",
+      "query": "turn431view0 42 | turn431view0 172 | turn431view0 203 | turn431view0 217 | turn431view0 Wu",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 6,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C008"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW024",
+      "executed_at": "2026-11-10 23:56:44 UTC",
+      "query": "Alegre 2009 use of contour signatures classification methods optimize tool life classes worn cutting condition flank breakage | Castejon Alegre 2007 On-line tool wear monitoring using geometric descriptors from digital images tool wear classification classes | Lanzetta 2001 new flexible high resolution vision sensor tool condition monitoring wear defects types recognition classification | MATWI De Pauw 2023 baseline algorithms classification flank adhesive combined classification results tool images 255 269 DOI",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 23,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C013",
+        "WR2C026"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW025",
+      "executed_at": "2026-11-10 23:56:54 UTC",
+      "query": "turn477search0 Download | turn477search0 File | turn477search0 DOI | turn477search3 10.1016",
+      "provider": "Web検索・原資料閲覧",
+      "target": "論文候補・出版社・著者機関",
+      "returned_count": 6,
+      "total_hits": "未提供",
+      "result_scope": "返却・参照IDの一意件数。エラー応答を含む。Webの上位・指定範囲のみ。",
+      "candidate_ids": [
+        "WR2C026"
+      ],
+      "notes": "取得範囲と採否は候補・取得台帳。"
+    },
+    {
+      "search_id": "QRW026",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "GET /works/10.3390/s19183817",
+      "provider": "Crossref",
+      "target": "FT001 DOI登録参照",
+      "returned_count": 31,
+      "total_hits": 31,
+      "result_scope": "DOIレコード1件のreference配列。",
+      "candidate_ids": [],
+      "notes": "evidence/raw/round2_wear/FT001_crossref_work.json。FIA02の0は登録欄、MM001の57はref.30を分割。"
+    },
+    {
+      "search_id": "QRW027",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "GET /works/https://doi.org/10.3390/s19183817",
+      "provider": "OpenAlex",
+      "target": "FT001 work・後方参照",
+      "returned_count": 31,
+      "total_hits": 31,
+      "result_scope": "DOIで一致した1レコードのreferenced_works全件。",
+      "candidate_ids": [],
+      "notes": "cited_by_count=161。evidence/raw/round2_wear/FT001_openalex_work.json"
+    },
+    {
+      "search_id": "QRW028",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "filter=cites:W2972227710&per_page=20&sort=publication_date:desc",
+      "provider": "OpenAlex",
+      "target": "FT001 前方引用",
+      "returned_count": 20,
+      "total_hits": 160,
+      "result_scope": "索引の最新順第1ページ。初回は日付フィルタなし。",
+      "candidate_ids": [],
+      "notes": "evidence/raw/round2_wear/FT001_openalex_citing.json"
+    },
+    {
+      "search_id": "QRW029",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "GET /works/10.24251/HICSS.2020.124",
+      "provider": "Crossref",
+      "target": "FIA02 DOI登録参照",
+      "returned_count": 0,
+      "total_hits": 0,
+      "result_scope": "DOIレコード1件のreference配列。",
+      "candidate_ids": [],
+      "notes": "evidence/raw/round2_wear/FIA02_crossref_work.json。FIA02の0は登録欄、MM001の57はref.30を分割。"
+    },
+    {
+      "search_id": "QRW030",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "GET /works/https://doi.org/10.24251/HICSS.2020.124",
+      "provider": "OpenAlex",
+      "target": "FIA02 work・後方参照",
+      "returned_count": 46,
+      "total_hits": 46,
+      "result_scope": "DOIで一致した1レコードのreferenced_works全件。",
+      "candidate_ids": [],
+      "notes": "cited_by_count=4。evidence/raw/round2_wear/FIA02_openalex_work.json"
+    },
+    {
+      "search_id": "QRW031",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "filter=cites:W3003268894&per_page=20&sort=publication_date:desc",
+      "provider": "OpenAlex",
+      "target": "FIA02 前方引用",
+      "returned_count": 4,
+      "total_hits": 4,
+      "result_scope": "索引の最新順第1ページ。初回は日付フィルタなし。",
+      "candidate_ids": [],
+      "notes": "evidence/raw/round2_wear/FIA02_openalex_citing.json"
+    },
+    {
+      "search_id": "QRW032",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "GET /works/10.1016/j.jmsy.2024.12.004",
+      "provider": "Crossref",
+      "target": "FIA04 DOI登録参照",
+      "returned_count": 38,
+      "total_hits": 38,
+      "result_scope": "DOIレコード1件のreference配列。",
+      "candidate_ids": [],
+      "notes": "evidence/raw/round2_wear/FIA04_crossref_work.json。FIA02の0は登録欄、MM001の57はref.30を分割。"
+    },
+    {
+      "search_id": "QRW033",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "GET /works/https://doi.org/10.1016/j.jmsy.2024.12.004",
+      "provider": "OpenAlex",
+      "target": "FIA04 work・後方参照",
+      "returned_count": 38,
+      "total_hits": 38,
+      "result_scope": "DOIで一致した1レコードのreferenced_works全件。",
+      "candidate_ids": [],
+      "notes": "cited_by_count=52。evidence/raw/round2_wear/FIA04_openalex_work.json"
+    },
+    {
+      "search_id": "QRW034",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "filter=cites:W4405463953&per_page=20&sort=publication_date:desc",
+      "provider": "OpenAlex",
+      "target": "FIA04 前方引用",
+      "returned_count": 20,
+      "total_hits": 52,
+      "result_scope": "索引の最新順第1ページ。初回は日付フィルタなし。",
+      "candidate_ids": [],
+      "notes": "evidence/raw/round2_wear/FIA04_openalex_citing.json"
+    },
+    {
+      "search_id": "QRW035",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "GET /works/10.3390/machines14060589",
+      "provider": "Crossref",
+      "target": "FT002 DOI登録参照",
+      "returned_count": 36,
+      "total_hits": 36,
+      "result_scope": "DOIレコード1件のreference配列。",
+      "candidate_ids": [],
+      "notes": "evidence/raw/round2_wear/FT002_crossref_work.json。FIA02の0は登録欄、MM001の57はref.30を分割。"
+    },
+    {
+      "search_id": "QRW036",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "GET /works/https://doi.org/10.3390/machines14060589",
+      "provider": "OpenAlex",
+      "target": "FT002 work・後方参照",
+      "returned_count": 32,
+      "total_hits": 32,
+      "result_scope": "DOIで一致した1レコードのreferenced_works全件。",
+      "candidate_ids": [],
+      "notes": "cited_by_count=1。evidence/raw/round2_wear/FT002_openalex_work.json"
+    },
+    {
+      "search_id": "QRW037",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "filter=cites:W7162551044&per_page=20&sort=publication_date:desc",
+      "provider": "OpenAlex",
+      "target": "FT002 前方引用",
+      "returned_count": 1,
+      "total_hits": 1,
+      "result_scope": "索引の最新順第1ページ。初回は日付フィルタなし。",
+      "candidate_ids": [],
+      "notes": "evidence/raw/round2_wear/FT002_openalex_citing.json"
+    },
+    {
+      "search_id": "QRW038",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "GET /works/10.3390/ai7100400",
+      "provider": "Crossref",
+      "target": "MM001 DOI登録参照",
+      "returned_count": 57,
+      "total_hits": 57,
+      "result_scope": "DOIレコード1件のreference配列。",
+      "candidate_ids": [],
+      "notes": "evidence/raw/round2_wear/MM001_crossref_work.json。FIA02の0は登録欄、MM001の57はref.30を分割。"
+    },
+    {
+      "search_id": "QRW039",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "GET /works/https://doi.org/10.3390/ai7100400",
+      "provider": "OpenAlex",
+      "target": "MM001 work・後方参照",
+      "returned_count": 37,
+      "total_hits": 37,
+      "result_scope": "DOIで一致した1レコードのreferenced_works全件。",
+      "candidate_ids": [],
+      "notes": "cited_by_count=0。evidence/raw/round2_wear/MM001_openalex_work.json"
+    },
+    {
+      "search_id": "QRW040",
+      "executed_at": "2026-11-10 23:46:49 UTC",
+      "query": "filter=cites:W7196968282&per_page=20&sort=publication_date:desc",
+      "provider": "OpenAlex",
+      "target": "MM001 前方引用",
+      "returned_count": 0,
+      "total_hits": 0,
+      "result_scope": "索引の最新順第1ページ。初回は日付フィルタなし。",
+      "candidate_ids": [],
+      "notes": "evidence/raw/round2_wear/MM001_openalex_citing.json"
+    },
+    {
+      "search_id": "QRW041",
+      "executed_at": "2026-11-10 23:49:23 UTC",
+      "query": "filter=cites:W3003268894,to_publication_date:2026-11-11&per_page=100&sort=publication_date:desc",
+      "provider": "OpenAlex",
+      "target": "FIA02 基準日までの前方引用",
+      "returned_count": 4,
+      "total_hits": 4,
+      "result_scope": "指定条件の索引返却全件（題名・取得できた抄録で一次選別）。",
+      "candidate_ids": [
+        "WR2C011",
+        "WR2C012"
+      ],
+      "notes": "evidence/raw/round2_wear/FIA02_openalex_citing_cutoff.json"
+    },
+    {
+      "search_id": "QRW042",
+      "executed_at": "2026-11-10 23:49:23 UTC",
+      "query": "filter=cites:W4405463953,to_publication_date:2026-11-11&per_page=100&sort=publication_date:desc",
+      "provider": "OpenAlex",
+      "target": "FIA04 基準日までの前方引用",
+      "returned_count": 52,
+      "total_hits": 52,
+      "result_scope": "指定条件の索引返却全件（題名・取得できた抄録で一次選別）。",
+      "candidate_ids": [
+        "WR2C002",
+        "WR2C003",
+        "WR2C009",
+        "WR2C016",
+        "WR2C017",
+        "WR2C018"
+      ],
+      "notes": "evidence/raw/round2_wear/FIA04_openalex_citing_cutoff.json"
+    },
+    {
+      "search_id": "QRW043",
+      "executed_at": "2026-11-10 23:49:23 UTC",
+      "query": "filter=cites:W7162551044,to_publication_date:2026-11-11&per_page=100&sort=publication_date:desc",
+      "provider": "OpenAlex",
+      "target": "FT002 基準日までの前方引用",
+      "returned_count": 1,
+      "total_hits": 1,
+      "result_scope": "指定条件の索引返却全件（題名・取得できた抄録で一次選別）。",
+      "candidate_ids": [
+        "WR2C028"
+      ],
+      "notes": "evidence/raw/round2_wear/FT002_openalex_citing_cutoff.json"
+    },
+    {
+      "search_id": "QRW044",
+      "executed_at": "2026-11-10 23:49:23 UTC",
+      "query": "filter=cites:W7196968282,to_publication_date:2026-11-11&per_page=100&sort=publication_date:desc",
+      "provider": "OpenAlex",
+      "target": "MM001 基準日までの前方引用",
+      "returned_count": 0,
+      "total_hits": 0,
+      "result_scope": "指定条件の索引返却全件（題名・取得できた抄録で一次選別）。",
+      "candidate_ids": [
+        "WR2C014"
+      ],
+      "notes": "evidence/raw/round2_wear/MM001_openalex_citing_cutoff.json"
+    },
+    {
+      "search_id": "QRW045",
+      "executed_at": "2026-11-10 23:48:52 UTC",
+      "query": "10.24251/HICSS.2020.124 References [1–46]",
+      "provider": "著者版 arXiv PDF／HTML",
+      "target": "FIA02 後方引用",
+      "returned_count": 46,
+      "total_hits": 46,
+      "result_scope": "本文末の番号順全参照。KITのPDF再取得はIncompleteRead、arXiv公開PDFとHTMLで代替。",
+      "candidate_ids": [
+        "WR2C026"
+      ],
+      "notes": "本文の引用関係の確認と候補原著の取得を分離。"
+    },
+    {
+      "search_id": "QRW046",
+      "executed_at": "2026-11-10 23:48:52 UTC",
+      "query": "GET Semarak SIJASET archive -> issue/view/285, exact title, article-1136, PDF link",
+      "provider": "出版社公式HTTPS",
+      "target": "FIA06 掲載号の照合",
+      "returned_count": 2,
+      "total_hits": 2,
+      "result_scope": "当該号目次の記事2件を確認し、対象1件の書誌を採用。",
+      "candidate_ids": [
+        "WR2C004"
+      ],
+      "notes": "evidence/raw/round2_wear/FIA06_publisher_issue_metadata.json"
+    },
+    {
+      "search_id": "QRW047",
+      "executed_at": "2026-11-11 00:03:38 UTC",
+      "query": "GET Semarak official article/view/1136 and parse citation_* metadata",
+      "provider": "出版社公式HTTPS",
+      "target": "FIA06 正式記事書誌・公開日",
+      "returned_count": 1,
+      "total_hits": 1,
+      "result_scope": "記事HTMLのcitation_*と書誌を取得。",
+      "candidate_ids": [
+        "WR2C004"
+      ],
+      "notes": "evidence/raw/round2_wear/FIA06_publisher_article_metadata.json"
+    }
+  ],
+  "performance_rows": [
+    {
+      "id": "FW2001",
+      "name": "Kumarほか HG-XAI",
+      "metric": "Accuracy",
+      "value": 0.9308,
+      "unit": "%",
+      "result": "確認（抄録）",
+      "note": "4種。表面速度を変えた工具画像、人の判定支援あり。画像数と独立工具split未確認。"
+    },
+    {
+      "id": "FW2002",
+      "name": "Agarwalほか 照明変化",
+      "metric": "Accuracy",
+      "value": 0.96,
+      "unit": "%",
+      "result": "確認（抄録）",
+      "note": "4種、L1学習→L2試験。人の支援を含む。"
+    },
+    {
+      "id": "FW2002",
+      "name": "Agarwalほか 照明変化",
+      "metric": "MCC",
+      "value": 0.96,
+      "unit": "無次元",
+      "result": "確認（抄録）",
+      "note": "L2照明での結果。"
+    },
+    {
+      "id": "FW2002",
+      "name": "Agarwalほか 照明変化",
+      "metric": "F1-score",
+      "value": 0.97,
+      "unit": "無次元",
+      "result": "確認（抄録）",
+      "note": "L2照明での結果。F1平均化方式未確認。"
+    },
+    {
+      "id": "FW2003",
+      "name": "Kählerほか 研削フラップホイール",
+      "metric": "Accuracy",
+      "value": 0.954,
+      "unit": "%",
+      "result": "関連研究",
+      "note": "形状3種、テスト3,564画像、工具単位split。切削刃の主比較外。"
+    },
+    {
+      "id": "FW2003",
+      "name": "Kählerほか 研削フラップホイール",
+      "metric": "Accuracy",
+      "value": 0.938,
+      "unit": "%",
+      "result": "関連研究",
+      "note": "フラップ裂けの有無、テスト1,153画像。"
+    },
+    {
+      "id": "FIA06",
+      "name": "Abdul Kadir・Yongほか 微細ドリル",
+      "metric": "Validation Accuracy",
+      "value": 0.9926,
+      "unit": "%",
+      "result": "確認（内部validation）",
+      "note": "ContourOnly内部検証。BUE/Chipping。出版社号目次で正式掲載確認。主分割、独立工具外部試験は未確認。"
+    },
+    {
+      "id": "MM002",
+      "name": "Yanほか MATWI",
+      "metric": "Accuracy",
+      "value": 0.9312,
+      "unit": "%",
+      "result": "保留",
+      "note": "MATWI工具別テスト247件、3種。正確な先行公開日は未確認。"
+    },
+    {
+      "id": "MM002",
+      "name": "Yanほか MATWI",
+      "metric": "Macro-F1",
+      "value": 0.7709,
+      "unit": "%",
+      "result": "保留",
+      "note": "MATWI工具別テスト247件。画像単独比較は同一研究内。"
+    }
+  ],
+  "notes": [
+    "今回の新規収録は切削4種類分類2件（FW2001/2）と研削関連1件（FW2003）。FW2001/2はFIA04・FT002と同じ研究系列で、取得した情報で原画像単位の独立性は確定できない。",
+    "FW2001代表Accuracy 93.08%（抄録、IN718加工・人の支援）。FW2002代表Accuracy 96%（抄録、L1で学習・L2で評価）、MCC 0.96、F1 0.97。FW2003は工具単位で形状95.4%、裂け93.8%。",
+    "FIA06は出版社記事の2026-06-09公開と正式著者順・巻号を確認し、採用へ更新。著者原稿の内部検証値99.26%を維持し、著者順差を注記。MM002は3種Accuracy 93.12%、Macro-F1 77.09%を保持するが出版社の先行公開日を保留。旧候補R0116を除外、R0118は保留。",
+    "選別はタイトル／取得抄録レベルと本文照合の混合。FIA04前方OpenAlexの指定条件52件、FIA02 4件、FT002 1件、MM001 0件。FT001前方はここでは最新20件、別の統合側で日付指定全件取得。索引外の引用は未確認。",
+    "基準日2026-11-11 JST。executed_atは各バッチ開始直前の実測UTC。着手時の探索1バッチは実測時刻を記録し損ねたため、実測値のある検索ログに含めず。"
+  ]
+}

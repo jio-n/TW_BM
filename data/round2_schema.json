@@ -1,0 +1,10 @@
+{
+  "keys": ["new_records", "record_updates", "sources", "claims", "claim_evidence", "search_log", "candidates", "citation_edges", "retrieval_attempts", "seed_checks"],
+  "record_updates": "Array of {id, fields:{existing schema keys}, reason, source_ids:[...]}；既存成果物は分担側で変更しない",
+  "search_log_fields": ["search_id","executed_at","query","provider","target","returned_count","total_hits","result_scope","candidate_ids","notes"],
+  "candidate_fields": ["candidate_id","title","doi","url","scope","discovered_by","seed_id","decision","reason","record_id","verification"],
+  "citation_edge_fields": ["edge_id","seed_id","candidate_id","direction","relation_status","evidence_url","locator","notes"],
+  "retrieval_fields": ["attempt_id","candidate_id","record_id","url","route","executed_at","result","verification","next_action"],
+  "seed_check_fields": ["seed_id","scope","direction","method","executed_at","available_total","screened_count","scope_status","candidate_ids","notes"],
+  "notes": "source/claim/linkは既存台帳形式を維持。数値は推測しない。未知件数はnullまたは未提供。時刻は実測のみ。引用関係は確認済みと未確認を区別。"
+}

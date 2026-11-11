@@ -29,10 +29,10 @@ function table(name,rows,cols,note){
  sh.freezePanes.freezeRows(4);sh.freezePanes.freezeColumns(2);return sh;
 }
 table('モデル系統',d.model_family_summary,[['family','主モデル系統'],['image_count','画像のみ・採用'],['multimodal_count','画像＋信号・採用'],['held_count','保留'],['related_count','関連・領域系'],['paper_ids','該当論文ID'],['examples','モデル例'],['definition','分類定義']],'主提案の構造・最終判定方式で集計。入力のマルチモーダルとVLM/MLLMは別の軸。');
-table('画像のみ',d.records.filter(r=>r.group==='画像のみ'&&!r.status.includes('保留')),columns,'2026-11-11確認。主モデル系統でフィルタ可。比較用ベースラインは別列。精度を順位付けしない。');
-table('マルチモーダル',d.records.filter(r=>r.group==='マルチモーダル'&&!r.status.includes('保留')),columns,'推論時に工具実写画像を含む。量予測・寿命予測の成績は比較対象外。');
+table('画像のみ',d.records.filter(r=>r.group==='画像のみ'&&r.status.startsWith('採用')),columns,'2026-11-11確認。主モデル系統でフィルタ可。比較用ベースラインは別列。精度を順位付けしない。');
+table('マルチモーダル',d.records.filter(r=>r.group==='マルチモーダル'&&r.status.startsWith('採用')),columns,'推論時に工具実写画像を含む。量予測・寿命予測の成績は比較対象外。');
 table('保留',d.records.filter(r=>r.status.includes('保留')),columns,'内容適合でも書誌・公開日などの確認が残る候補。確定採用数には含めない。');
-table('領域分類の関連研究',d.records.filter(r=>r.status.includes('関連')),columns,'種類付き検出・分割。画像単位の分類Accuracyと直接比較しない。');
+table('関連研究',d.records.filter(r=>r.status.includes('関連')),columns,'種類付き検出・分割と研削工具の境界事例。切削工具の画像分類と別集計。');
 table('既存59本の再選別',d.screening,Object.keys(d.screening[0]).map(k=>[k,k]),'旧ベンチマークの記録を入出力要件で再選別。未確認ラベルは保留。');
 table('出典',d.sources,[['source_id','Source ID'],['title','資料名'],['url','原資料URL'],['doi','DOI'],['primary','一次情報'],['verification','確認範囲'],['locator','該当箇所'],['accessed','取得日'],['saved_path','ローカル保存先']],'論文・メタデータ・除外候補を含む。保存パスは調査環境内の所在。');
 const cMap=new Map(d.claims.map(c=>[c.claim_id,c]));
@@ -44,6 +44,11 @@ await fs.writeFile(path.join(qa,'formula_errors.ndjson'),check.ndjson);
 for(const sh of wb.worksheets.items){
  const pic=await wb.render({sheetName:sh.name,range:sh.name==='モデル系統'?'A1:F10':'A1:F7',scale:1.3,format:'png'});
  await fs.writeFile(path.join(qa,sh.name+'.png'),new Uint8Array(await pic.arrayBuffer()));
+ if(['画像のみ','関連研究'].includes(sh.name)){
+  const count=d.records.filter(r=>sh.name==='画像のみ'?r.group==='画像のみ'&&r.status.startsWith('採用'):r.status.includes('関連')).length;
+  const tail=await wb.render({sheetName:sh.name,range:`A${Math.max(5,count+2)}:G${count+4}`,scale:1.2,format:'png'});
+  await fs.writeFile(path.join(qa,sh.name+'_追加行.png'),new Uint8Array(await tail.arrayBuffer()));
+ }
 }
 const out=await SpreadsheetFile.exportXlsx(wb);await out.save(path.join(root,'outputs/wear_type_classification_benchmark.xlsx'));
 await fs.rename(path.join(root,'outputs/wear_type_classification_benchmark.xlsx.inspect.ndjson'),path.join(root,'evidence/workbook_qa/wear_type_classification_benchmark.xlsx.inspect.ndjson'));

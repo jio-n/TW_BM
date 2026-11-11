@@ -1,0 +1,2607 @@
+{
+  "new_records": [
+    {
+      "id": "IVT2001",
+      "status": "採用",
+      "year": 2023,
+      "authors": "Youngjae Kim; Jee-Hyong Lee; Jongpil Jeong",
+      "title": "Pre-trained CNN-based TransUNet Model for Mixed-Type Defects in Wafer Maps",
+      "venue": "WSEAS Transactions on Information Science and Applications 20, 238–244",
+      "doi": "10.37394/23209.2023.20.27",
+      "url": "https://factory.skku.edu/factory/research.do?articleNo=160425&attachNo=128003&mode=download",
+      "model_family": "CNN–Transformer",
+      "primary_model": "N-pair対照事前学習CNNを持つTransUNet。自己注意層を含む共有encoderに分類・セグメンテーションの多タスク学習を適用",
+      "baseline_models": "同論文のbaseline／multitaskのみ。比較表の引用先は[12]–[15]",
+      "domain": "半導体",
+      "product": "半導体ウェハ",
+      "input_group": "ウェハ欠陥マップ",
+      "input": "不良ダイ位置を表したwafer map（光学像・SEM画像と異なる）",
+      "prompt": "非該当",
+      "task": "複合欠陥の組み合わせ画像分類＋欠陥領域セグメンテーション",
+      "labels": "評価は2種類混合の組み合わせ。基礎型はCenter (C); Donut (D); Edge-Loc (EL); Edge-Ring (ER); Loc (L); Scratch (S); Random; Near-full。Table 3では C+EL, C+ER, C+L, C+S, D+EL, D+ER, D+L, D+S, EL+L, EL+S, ER+L, ER+S, L+S",
+      "class_count": "2種類混合13組（§2.2、Table 3）",
+      "mixed": "組み合わせクラスの単一ラベル分類。評価データは2種類混合のみ",
+      "dataset": "Mixed-WM38",
+      "data_size": "原データ38,015マップ。2種類混合の対象13,000マップ",
+      "split": "2種類混合10,400学習、2,600評価。抽出単位・lot/wafer群分けは未確認",
+      "learning": "N-pair対照損失によるCNN事前学習＋分類／セグメンテーション多タスク。領域教師は連結成分の疑似マスク",
+      "pretraining": "CNN encoderの対照事前学習。汎用画像事前学習の使用は未確認",
+      "metrics": "Accuracy、F1（平均方法は未確認）",
+      "performance": "2種類混合の評価2,600マップでAccuracy 0.995、F1 0.995（Table 2／§4.3）",
+      "class_results": "Table 3の事前学習＋多タスクF1。C+EL 0.990、C+ER 0.993、C+L 0.997、C+S 1.000、D+EL 1.000、D+ER 1.000、D+L 0.995、D+S 0.995、EL+L 0.998、EL+S 0.984、ER+L 0.999、ER+S 0.986、L+S 0.999",
+      "generalization": "未知fab・lotでの外部評価は未確認",
+      "limitations": "重なった欠陥領域では個々の分離に失敗し得る。データ全体には3種類以上の混合例もあるが、代表分類値は2種類混合で評価。Fig. 8キャプションはEL+Lを重複記載するため、原語ラベルはTable 3を採用",
+      "code_data": "既存公開Mixed-WM38。著者コードは未確認",
+      "verification": "機関公開の刊行版PDF該当箇所確認",
+      "locator": "§3; §4.1–4.3 Fig. 6–9, Tables 1–3",
+      "source_ids": [
+        "SRT018",
+        "SRT032"
+      ]
+    },
+    {
+      "id": "IVT2002",
+      "status": "採用",
+      "year": 2026,
+      "authors": "Hrach Ayunts; Sos S. Agaian; Artyom M. Grigoryan",
+      "title": "Solar Photovoltaic System Fault Classification via Hierarchical Deep Learning with Imbalanced Multi-Class Thermal Dataset",
+      "venue": "Energies 19(2), 462",
+      "doi": "10.3390/en19020462",
+      "url": "https://www.mdpi.com/1996-1073/19/2/462",
+      "model_family": "Swin Transformer",
+      "primary_model": "Swin-T（比較中の最高macro F1）。共通の二段階分類とコントラスト保持MixUp",
+      "baseline_models": "SlantNet、ViT-B/16、MobileNetV3、EfficientNetV2、ResNet-50、AlexNet、SqueezeNet、ShuffleNetV2",
+      "domain": "太陽光発電",
+      "product": "太陽電池モジュール",
+      "input_group": "赤外熱画像",
+      "input": "太陽電池モジュールのIR熱画像。Swin-Tは224×224 RGBテンソル入力と記載",
+      "prompt": "非該当",
+      "task": "第1段階の正常／異常と第2段階の異常種類を統合した階層8クラス画像分類",
+      "labels": "No-Anomaly; Cell; Diode; Cracking; Hot-Spot; Shadowing; Vegetation; Soiling",
+      "class_count": "8（正常1、異常種類7）",
+      "mixed": "単一ラベル。原データのMultiは規模違いとして元の型へ統合",
+      "dataset": "Infrared Solar Modules（原著ref [32]）を8分類に再編",
+      "data_size": "再編19,173画像（Table 2内訳の合計）。テスト1,920画像",
+      "split": "画像単位の層別ランダム80/10/10、学習15,337／検証1,916／テスト1,920。MixUpは分割後の学習画像のみ",
+      "learning": "教師あり。正常判定と7種類分類を同系統のbackboneで別学習。訓練内同一クラス画像MixUp＋コントラスト補正",
+      "pretraining": "未確認",
+      "metrics": "Accuracy、macro F1、weighted F1、クラス別P/R/F1",
+      "performance": "8クラス階層のテストでSwin-T Accuracy 89.48%、macro F1 80.50%、weighted F1 89.43%。同一テストのViT-B/16 77.81%／60.56%、SlantNet 86.15%／73.03%（Accuracy／macro F1）",
+      "class_results": "Swin-Tクラス別F1。No-Anomaly 96.42%、Cell 81.94%、Cracking 82.61%、Hot-Spot 74.47%、Shadowing 78.03%、Diode 96.47%、Vegetation 73.62%、Soiling 60.47%",
+      "generalization": "site ID、飛行経路、取得日時がなく、施設・時間単位の分割なし",
+      "limitations": "正常多数で集計方法によりF1が変わる。Shadowing、Vegetation、Soilingはセル内部損傷以外の運用時外乱。赤外熱画像はEL画像の比較へ直接転用不可",
+      "code_data": "元データref [32]、再編データは著者照会。コードの公開は未確認",
+      "verification": "原著全文の該当箇所確認",
+      "locator": "§3.1–3.3; §4.1–4.5; Tables 2, 7, 11–13",
+      "source_ids": [
+        "SRT019"
+      ]
+    },
+    {
+      "id": "IVT2003",
+      "status": "採用",
+      "year": 2025,
+      "authors": "Yan Jiang; Jiaxin Dai; Zhuoru Jiang",
+      "title": "FAX-Net: An Enhanced ConvNeXt Model with Symmetric Attention and Transformer-FPN for Steel Defect Classification",
+      "venue": "Symmetry 17(8), 1313",
+      "doi": "10.3390/sym17081313",
+      "url": "https://www.mdpi.com/2073-8994/17/8/1313",
+      "model_family": "CNN–Transformer",
+      "primary_model": "FAX-Net。ConvNeXt＋並列チャネル／空間SDAM＋軽量Transformerを組み込むTF-FPN",
+      "baseline_models": "ConvNeXt、ResNet50、VGG16、MobileNetV3、Vision Transformer、Swin Transformer、AlexNet、EfficientNet",
+      "domain": "金属表面",
+      "product": "鋼板",
+      "input_group": "光学画像",
+      "input": "NEU-CLSの200×200鋼板表面画像（原著はRGBと記載）",
+      "prompt": "非該当",
+      "task": "6種類の画像単位分類",
+      "labels": "Cracks (Cr); Inclusions (In); Patches (Pa); Pitted Surface (PS); Rolled-in Scale (RS); Scratches (Sc)",
+      "class_count": "6（欠陥種類のみ）",
+      "mixed": "単一ラベル",
+      "dataset": "NEU-CLS",
+      "data_size": "1,800画像、300画像/クラス",
+      "split": "学習／テスト8:2（§4.1）。群単位と独立検証の扱いは未確認",
+      "learning": "教師あり。バックボーンとSDAM／TF-FPNを比較・アブレーション",
+      "pretraining": "未確認",
+      "metrics": "Accuracy、平均F1、クラス別precision／recall／F1",
+      "performance": "NEU-CLS 6分類 Accuracy 97.78%、クラス平均F1 97.51%（§4.3 Table 1, Fig. 5）",
+      "class_results": "Table 1のFAX-Net F1。Cr 98.51%、In 93.83%、Pa 97.56%、PS 97.87%、RS 100.00%、Sc 97.30%",
+      "generalization": "未知鋼材・他生産ラインでの外部評価は未確認。§5では他データによる評価を今後の課題とする",
+      "limitations": "単一データセット。Table 1とアブレーション表の一部クラス別precision/recallは丸めまたは記載差があるため、Table 1のF1を収録",
+      "code_data": "NEU-CLS公開（Data Availability Statement）。著者コードは未確認",
+      "verification": "原著本文と刊行版PDF該当箇所確認",
+      "locator": "§3; §4.1–4.4 Table 1, Fig. 3, 5, 6; Data Availability Statement",
+      "source_ids": [
+        "SRT020"
+      ]
+    }
+  ],
+  "record_updates": [
+    {
+      "id": "IT012",
+      "fields": {
+        "status": "保留",
+        "verification": "KCI著者抄録・書誌、学会の雑誌案内まで確認。DOI先と雑誌サイトから本文を取得できず",
+        "limitations": "原語6ラベル・ベンチマークデータ・分割内訳・Transformer別の正確な値を未確認"
+      },
+      "reason": "抄録から6分類とGroupShuffleSplitは確認。約0.5ポイント差をViT/Swinの厳密な個別性能として扱えない",
+      "source_ids": [
+        "SRT001",
+        "SRT002"
+      ]
+    },
+    {
+      "id": "IT013",
+      "fields": {
+        "status": "保留",
+        "labels": "keyholing; desirable; balling; lack-of-fusion (LOF)",
+        "verification": "出版社索引のAbstract・Problem description・Results and discussionsのプレビュー確認。本文未取得",
+        "limitations": "分類対象は熱画像から予測する造形中の溶融池状態。完成品の欠陥ラベルとの一対一対応と、分類値・分割を確認できず"
+      },
+      "reason": "4クラスの原語とViViT入力を著者記述で再確認。分類値と分割を取得できないため保留",
+      "source_ids": [
+        "SRT003"
+      ]
+    },
+    {
+      "id": "IT014",
+      "fields": {
+        "status": "保留",
+        "verification": "出版社索引の抄録・引用文献抜粋、所属大学業績を確認。本文未取得",
+        "limitations": "95.84%の評価母集団・欠陥原語・正常クラス有無・分割未確認"
+      },
+      "reason": "所属大学の業績は出版社DOIのみ。導入で紹介される別研究の11／12分類はPVEL-ViTのラベル根拠にならない",
+      "source_ids": [
+        "SRT004",
+        "SRT005"
+      ]
+    },
+    {
+      "id": "IT015",
+      "fields": {
+        "status": "保留",
+        "verification": "刊行版の抄録とDataset抜粋、著者版SSRNの書誌・抄録確認。両版PDF未取得",
+        "limitations": "原語の5／6種類の対応、分類分割と追加クラス条件を未確認。IoU 84.40%は別タスクのセグメンテーション値"
+      },
+      "reason": "刊行版とSSRN著者版は同一work。SSRN PDFと出版社直接アクセスで403。抄録の分類値は再確認済み",
+      "source_ids": [
+        "SRT006",
+        "SRT007"
+      ]
+    },
+    {
+      "id": "IT016",
+      "fields": {
+        "status": "保留",
+        "verification": "出版社のHighlightsとAbstractの索引抜粋を確認。出版社本文403、公開著者版未発見",
+        "limitations": "原語クラス一覧、分割、LoRA適用元バックボーンを未確認。LoRA表記からViT搭載を推定しない"
+      },
+      "reason": "L-PBF内とSLS転移の完全一致率を抄録から再確認。モデル系統と比較条件を確定できないため保留",
+      "source_ids": [
+        "SRT008"
+      ]
+    },
+    {
+      "id": "IT004",
+      "fields": {},
+      "reason": "IBM公式でASMC 2025掲載を確認。会議DOI 10.1109/ASMC64512.2025.11010396 は二次書誌と大学公開文献で一致するが、IEEE直ページはbot検証のため、既存のarXiv DOIと匿名欠陥ID採用を維持",
+      "source_ids": [
+        "SRT017",
+        "SRT028"
+      ]
+    },
+    {
+      "id": "IT005",
+      "fields": {},
+      "reason": "Scientific Reports 2026採択稿は著者・モデル・WM-38Kを共有する発展版候補。採択稿抄録の98.4%はAccuracy表記で、旧版抄録98.4%はF1表記。版間の表と分割を照合できず旧行を維持し、独立研究として加算しない",
+      "source_ids": [
+        "SRT011",
+        "SRT016"
+      ]
+    },
+    {
+      "id": "IT009",
+      "fields": {
+        "code_data": "著者GitHubでコード、元データ、論文の正確な学習／テスト分割の公開リンクを確認。論文用テストは実画像のみ。汎用生成データの配布には論文のテスト側由来画像も含む。リンク先ファイル本体は未取得"
+      },
+      "reason": "著者READMEで論文用分割と一般配布版を明示。同一評価を再現するときは論文用分割を参照",
+      "source_ids": [
+        "SRT029"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRT001",
+      "title": "A Comparative Study of Convolutional, Transformer, and Hybrid Architecture for PCB Defect Classification",
+      "publisher": "Korea Citation Index / International Association for Artificial Intelligence",
+      "year": 2026,
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003352160",
+      "doi": "10.7236/IJIBC.2026.18.3.59",
+      "type": "論文書誌・著者抄録",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "抄録のみ",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "著者抄録"
+    },
+    {
+      "source_id": "SRT002",
+      "title": "IJIBC 영문 논문지",
+      "publisher": "International Association for Artificial Intelligence",
+      "year": 2026,
+      "url": "https://www.iaai.or.kr/paper/paper_ijibc.php",
+      "doi": "",
+      "type": "学会公式",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "雑誌案内確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "IJIBC Website"
+    },
+    {
+      "source_id": "SRT003",
+      "title": "Insights beneath the surface: Physics-guided multi-task learning for in situ defect detection in laser powder bed fusion",
+      "publisher": "Elsevier",
+      "year": 2026,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1526612526003907",
+      "doi": "10.1016/j.jmapro.2026.04.032",
+      "type": "Journal of Manufacturing Processes 169, 126–136",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "抄録・出版社プレビューの索引抜粋",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Abstract; Problem description; Results and discussions"
+    },
+    {
+      "source_id": "SRT004",
+      "title": "PVEL-ViT: Adaptive token selective vision transformer for photovoltaic cell defect classification in electroluminescence imaging",
+      "publisher": "Elsevier",
+      "year": 2026,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1568494626009427",
+      "doi": "10.1016/j.asoc.2026.115494",
+      "type": "Applied Soft Computing 201(A), 115494",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "抄録・出版社プレビューの索引抜粋",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Abstract; References"
+    },
+    {
+      "source_id": "SRT005",
+      "title": "Yayınlar",
+      "publisher": "Malatya Turgut Özal Üniversitesi",
+      "year": 2026,
+      "url": "https://elkmuh.ozal.edu.tr/page/549",
+      "doi": "",
+      "type": "所属大学業績",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "掲載確認・本文なし",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "2026年項目11"
+    },
+    {
+      "source_id": "SRT006",
+      "title": "DeepSEM-Net: Enhancing SEM defect analysis in semiconductor manufacturing with a dual-branch CNN-Transformer architecture",
+      "publisher": "Elsevier",
+      "year": 2024,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0360835224004224",
+      "doi": "10.1016/j.cie.2024.110301",
+      "type": "Computers & Industrial Engineering 193, 110301",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "抄録・出版社プレビューの索引抜粋",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Abstract; Dataset; Semi-supervised system architecture"
+    },
+    {
+      "source_id": "SRT007",
+      "title": "Deepsem-Net: Enhancing Sem Defect Analysis in Semiconductor Manufacturing with a Dual-Branch Cnn-Transformer Architecture",
+      "publisher": "SSRN / Qiao et al.",
+      "year": 2024,
+      "url": "https://ssrn.com/abstract=4765199",
+      "doi": "10.2139/ssrn.4765199",
+      "type": "著者プレプリント",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "索引の書誌・抄録のみ、本文403",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Abstract; Suggested Citation"
+    },
+    {
+      "source_id": "SRT008",
+      "title": "Low-rank adaptive transfer learning based for multi-label defect detection in laser powder bed fusion",
+      "publisher": "Elsevier",
+      "year": 2025,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0143816624006614",
+      "doi": "10.1016/j.optlaseng.2024.108683",
+      "type": "Optics and Lasers in Engineering 184(2), 108683",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "出版社索引の抄録のみ、直接取得403",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Highlights; Abstract"
+    },
+    {
+      "source_id": "SRT009",
+      "title": "Cross-Dataset Benchmarking of Deep Learning Models for Surface Defect Classification in Metal Parts",
+      "publisher": "MDPI",
+      "year": 2026,
+      "url": "https://www.mdpi.com/2076-3417/16/6/3022",
+      "doi": "10.3390/app16063022",
+      "type": "Applied Sciences 16(6), 3022",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著の引用箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "§2; References [1], [2], [8]"
+    },
+    {
+      "source_id": "SRT010",
+      "title": "Semiconductor SEM Image Defect Classification Using Supervised and Semi-Supervised Learning with Vision Transformers",
+      "publisher": "arXiv / Huang et al.",
+      "year": 2025,
+      "url": "https://arxiv.org/pdf/2506.03345",
+      "doi": "10.48550/arXiv.2506.03345",
+      "type": "著者プレプリント",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著PDFの該当箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "§III.A; §IV; §VI References [1], [7]"
+    },
+    {
+      "source_id": "SRT011",
+      "title": "Semiconductor Wafer Map Defect Classification with Tiny Vision Transformers",
+      "publisher": "arXiv / Mohammad and Ryu",
+      "year": 2025,
+      "url": "https://arxiv.org/pdf/2504.02494",
+      "doi": "10.48550/arXiv.2504.02494",
+      "type": "著者プレプリント",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著PDFの該当箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "§V Table V; References [17], [20]"
+    },
+    {
+      "source_id": "SRT012",
+      "title": "UnionMixup and max-min-saliency mixup for mixed-type defect recognition of wafer bin maps",
+      "publisher": "IEICE",
+      "year": 2024,
+      "url": "https://globals.ieice.org/en_publications/elex/10.1587/elex.21.20240054/_f",
+      "doi": "10.1587/elex.21.20240054",
+      "type": "IEICE Electronics Express 21(10)",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著の引用箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "References [7], [8]"
+    },
+    {
+      "source_id": "SRT013",
+      "title": "A Generative Approach for Improving Multi-Label Defect Classification in Photovoltaic Modules",
+      "publisher": "arXiv / Mueez et al.",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2608.12725v1",
+      "doi": "10.1016/j.solener.2026.114943",
+      "type": "著者公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著の引用箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "§2.1; References [14], [26]"
+    },
+    {
+      "source_id": "SRT014",
+      "title": "RFAConv-CBM-ViT: enhanced vision transformer for metal surface defect detection",
+      "publisher": "Springer Nature",
+      "year": 2025,
+      "url": "https://link.springer.com/article/10.1007/s11227-024-06662-0",
+      "doi": "10.1007/s11227-024-06662-0",
+      "type": "Journal of Supercomputing 81, 155",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "抄録のみ、PDFは抄録頁に転送",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Abstract; Article metadata"
+    },
+    {
+      "source_id": "SRT015",
+      "title": "RFAConv-CBM-ViT",
+      "publisher": "Vzoooong / Wei et al.",
+      "year": 2025,
+      "url": "https://github.com/Vzoooong/RFAConv-CBM-ViT",
+      "doi": "",
+      "type": "原著者実装",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "公開README確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Dataset"
+    },
+    {
+      "source_id": "SRT016",
+      "title": "Scalable and lightweight vision transformers for mixed-defect classification in semiconductor wafer maps",
+      "publisher": "Springer Nature",
+      "year": 2026,
+      "url": "https://www.nature.com/articles/s41598-026-63752-0",
+      "doi": "10.1038/s41598-026-63752-0",
+      "type": "Scientific Reports 採択稿",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "出版社索引の抄録・書誌・補遺見出し確認、PDF取得制約",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Abstract; Appendix Fig. 9, Table 12; Article metadata"
+    },
+    {
+      "source_id": "SRT017",
+      "title": "Semiconductor SEM Image Defect Classification Using Supervised and Semi-Supervised Learning with Vision Transformers",
+      "publisher": "IBM Research",
+      "year": 2025,
+      "url": "https://research.ibm.com/publications/semiconductor-sem-image-defect-classification-using-supervised-and-semi-supervised-learning-with-vision-transformers",
+      "doi": "",
+      "type": "著者所属機関公式業績",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "書誌・抄録",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "ASMC 2025; Abstract"
+    },
+    {
+      "source_id": "SRT018",
+      "title": "Pre-trained CNN-based TransUNet Model for Mixed-Type Defects in Wafer Maps",
+      "publisher": "WSEAS / Sungkyunkwan University",
+      "year": 2023,
+      "url": "https://factory.skku.edu/factory/research.do?articleNo=160425&attachNo=128003&mode=download",
+      "doi": "10.37394/23209.2023.20.27",
+      "type": "WSEAS Transactions on Information Science and Applications 20, 238–244",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "機関公開の刊行版PDF該当箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "§3; §4.1–4.3 Fig. 6–9, Tables 1–3"
+    },
+    {
+      "source_id": "SRT019",
+      "title": "Solar Photovoltaic System Fault Classification via Hierarchical Deep Learning with Imbalanced Multi-Class Thermal Dataset",
+      "publisher": "MDPI",
+      "year": 2026,
+      "url": "https://www.mdpi.com/1996-1073/19/2/462",
+      "doi": "10.3390/en19020462",
+      "type": "Energies 19(2), 462",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著全文の該当箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "§3.1–3.3; §4.1–4.5; Tables 2, 7, 11–13"
+    },
+    {
+      "source_id": "SRT020",
+      "title": "FAX-Net: An Enhanced ConvNeXt Model with Symmetric Attention and Transformer-FPN for Steel Defect Classification",
+      "publisher": "MDPI",
+      "year": 2025,
+      "url": "https://www.mdpi.com/2073-8994/17/8/1313",
+      "doi": "10.3390/sym17081313",
+      "type": "Symmetry 17(8), 1313",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著本文と刊行版PDF該当箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "§3; §4.1–4.4 Table 1, Fig. 3, 5, 6; Data Availability Statement"
+    },
+    {
+      "source_id": "SRT021",
+      "title": "Classification of Mixed-Type Defects in Wafer Bin Maps Utilizing the Quantum Approximate Optimization Algorithm",
+      "publisher": "IEICE / J-STAGE",
+      "year": 2026,
+      "url": "https://globals.ieice.org/en_transactions/fundamentals/10.1587/transfun.2025EAP1012/_f",
+      "doi": "10.1587/transfun.2025EAP1012",
+      "type": "IEICE Transactions on Fundamentals E109-A(1), 26–34（2025年早期公開）",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著全文の該当箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "§1; §4.2; Table 2; References [15]"
+    },
+    {
+      "source_id": "SRT022",
+      "title": "Online Open-World Wafer Defect Discovery using Hyperdimensional Computing",
+      "publisher": "arXiv / Zhao et al.",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2610.28949v1",
+      "doi": "10.48550/arXiv.2610.28949",
+      "type": "著者プレプリント",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著全文の該当箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "§2; §3; References Mohammad and Ryu (2025)"
+    },
+    {
+      "source_id": "SRT023",
+      "title": "WaferSAGE: Large Language Model-Powered Wafer Defect Analysis via Synthetic Data Generation and Rubric-Guided Reinforcement Learning",
+      "publisher": "arXiv / Xu and Lian",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2604.27629v1",
+      "doi": "10.48550/arXiv.2604.27629",
+      "type": "著者プレプリント",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著全文の該当箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "§2.1; References [8]"
+    },
+    {
+      "source_id": "SRT024",
+      "title": "Deep learning for nanoscience scanning electron microscope image classification",
+      "publisher": "Springer Nature",
+      "year": 2026,
+      "url": "https://www.nature.com/articles/s41598-026-63864-7",
+      "doi": "10.1038/s41598-026-63864-7",
+      "type": "Scientific Reports",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著全文の該当箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Materials and methods; References [20]（DOI/誌名は対象の書誌と不一致）"
+    },
+    {
+      "source_id": "SRT025",
+      "title": "Classification of infrared PV faults via diffusion-based data balancing and improved pooling vision transformer",
+      "publisher": "Elsevier",
+      "year": 2026,
+      "url": "https://www.sciencedirect.com/science/article/pii/S2590123026010492",
+      "doi": "10.1016/j.rineng.2026.110012",
+      "type": "Results in Engineering 30, 110012",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "出版社索引の抄録、本文403",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Abstract; Highlights"
+    },
+    {
+      "source_id": "SRT026",
+      "title": "An innovative transformer neural network for fault detection and classification for photovoltaic modules",
+      "publisher": "Elsevier",
+      "year": 2024,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0196890424006599",
+      "doi": "10.1016/j.enconman.2024.118718",
+      "type": "Energy Conversion and Management 314, 118718",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "出版社索引の抄録・導入断片",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Abstract"
+    },
+    {
+      "source_id": "SRT027",
+      "title": "Mixed-Type Wafer Defect Recognition With Multi-Scale Information Fusion Transformer",
+      "publisher": "EurekaMag / IEEE抄録の書誌転載",
+      "year": 2022,
+      "url": "https://corp.eurekamag.com/research/095/070/095070374.php",
+      "doi": "10.1109/TSM.2022.3156583",
+      "type": "論文抄録転載",
+      "primary": "二次情報",
+      "accessed": "2026-11-11",
+      "verification": "抄録転載のみ",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Summary; Bibliographic metadata"
+    },
+    {
+      "source_id": "SRT028",
+      "title": "Semiconductor SEM Image Defect Classification Using Supervised and Semi-Supervised Learning with Vision Transformers (Topic/category: Defect Inspection and Reduction)",
+      "publisher": "EurekaMag / IEEE抄録の書誌転載",
+      "year": 2025,
+      "url": "https://icloud.eurekamag.com/research/095/865/095865422.php",
+      "doi": "10.1109/ASMC64512.2025.11010396",
+      "type": "会議論文抄録転載",
+      "primary": "二次情報",
+      "accessed": "2026-11-11",
+      "verification": "二次書誌と抄録、IEEE直ページはbot検証",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Bibliographic metadata"
+    },
+    {
+      "source_id": "SRT029",
+      "title": "Generative Defect Isolation (GDI)",
+      "publisher": "Mueez et al.",
+      "year": 2026,
+      "url": "https://github.com/mueez-overflow/generative-defect-isolation",
+      "doi": "",
+      "type": "著者公式リポジトリ",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "READMEを確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Data and reproducibility"
+    },
+    {
+      "source_id": "SRT030",
+      "title": "BWD-DETR: A Robust Framework for Bright-Field Wafer Defect Detection",
+      "publisher": "PubMed Central",
+      "year": 2026,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12900135/",
+      "doi": "",
+      "type": "論文公開本文の索引抜粋",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "原著索引の参照箇所と検出方式を確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Introduction; References [2]"
+    },
+    {
+      "source_id": "SRT031",
+      "title": "Improving Semiconductor Defect Classification in SEM Images via Domain Adaptation",
+      "publisher": "IEEE / ResearchGate掲載の著者受理稿",
+      "year": 2026,
+      "url": "https://www.researchgate.net/publication/400665300_Improving_Semiconductor_Defect_Classification_in_SEM_Images_via_Domain_Adaptation",
+      "doi": "10.1109/OJIES.2026.3663382",
+      "type": "IEEE Open Journal of the Industrial Electronics Society 著者受理稿",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "公開著者稿の該当箇所確認",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "Experimental Setup; References [13]"
+    },
+    {
+      "source_id": "SRT032",
+      "title": "Pre-trained CNN-based TransUNet Model for Mixed-Type Defects in Wafer Maps",
+      "publisher": "WSEAS",
+      "year": 2023,
+      "url": "https://wseas.com/journals/isa/2023/a545109-014%282023%29.pdf",
+      "doi": "10.37394/23209.2023.20.27",
+      "type": "WSEAS Transactions on Information Science and Applications 20, 238–244",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "出版社刊行版PDFのテキスト表示でTable 3とFig. 8キャプションを照合",
+      "saved_path": "未保存（原資料へのURLと参照箇所を記録）",
+      "locator": "§2.2; §4.2–4.3 Table 2–3; Fig. 8"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CRT001",
+      "entity_id": "IVT2001",
+      "field": "labels",
+      "claim": "評価は2種類混合の組み合わせ。基礎型はCenter (C); Donut (D); Edge-Loc (EL); Edge-Ring (ER); Loc (L); Scratch (S); Random; Near-full。Table 3では C+EL, C+ER, C+L, C+S, D+EL, D+ER, D+L, D+S, EL+L, EL+S, ER+L, ER+S, L+S",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT002",
+      "entity_id": "IVT2001",
+      "field": "input",
+      "claim": "不良ダイ位置を表したwafer map（光学像・SEM画像と異なる）",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT003",
+      "entity_id": "IVT2001",
+      "field": "primary_model",
+      "claim": "N-pair対照事前学習CNNを持つTransUNet。自己注意層を含む共有encoderに分類・セグメンテーションの多タスク学習を適用",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT004",
+      "entity_id": "IVT2001",
+      "field": "performance",
+      "claim": "2種類混合の評価2,600マップでAccuracy 0.995、F1 0.995（Table 2／§4.3）",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT005",
+      "entity_id": "IVT2001",
+      "field": "split",
+      "claim": "2種類混合10,400学習、2,600評価。抽出単位・lot/wafer群分けは未確認",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT006",
+      "entity_id": "IVT2002",
+      "field": "labels",
+      "claim": "No-Anomaly; Cell; Diode; Cracking; Hot-Spot; Shadowing; Vegetation; Soiling",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT007",
+      "entity_id": "IVT2002",
+      "field": "input",
+      "claim": "太陽電池モジュールのIR熱画像。Swin-Tは224×224 RGBテンソル入力と記載",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT008",
+      "entity_id": "IVT2002",
+      "field": "primary_model",
+      "claim": "Swin-T（比較中の最高macro F1）。共通の二段階分類とコントラスト保持MixUp",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT009",
+      "entity_id": "IVT2002",
+      "field": "performance",
+      "claim": "8クラス階層のテストでSwin-T Accuracy 89.48%、macro F1 80.50%、weighted F1 89.43%。同一テストのViT-B/16 77.81%／60.56%、SlantNet 86.15%／73.03%（Accuracy／macro F1）",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT010",
+      "entity_id": "IVT2002",
+      "field": "split",
+      "claim": "画像単位の層別ランダム80/10/10、学習15,337／検証1,916／テスト1,920。MixUpは分割後の学習画像のみ",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT011",
+      "entity_id": "IVT2003",
+      "field": "labels",
+      "claim": "Cracks (Cr); Inclusions (In); Patches (Pa); Pitted Surface (PS); Rolled-in Scale (RS); Scratches (Sc)",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT012",
+      "entity_id": "IVT2003",
+      "field": "input",
+      "claim": "NEU-CLSの200×200鋼板表面画像（原著はRGBと記載）",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT013",
+      "entity_id": "IVT2003",
+      "field": "primary_model",
+      "claim": "FAX-Net。ConvNeXt＋並列チャネル／空間SDAM＋軽量Transformerを組み込むTF-FPN",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT014",
+      "entity_id": "IVT2003",
+      "field": "performance",
+      "claim": "NEU-CLS 6分類 Accuracy 97.78%、クラス平均F1 97.51%（§4.3 Table 1, Fig. 5）",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT015",
+      "entity_id": "IVT2003",
+      "field": "split",
+      "claim": "学習／テスト8:2（§4.1）。群単位と独立検証の扱いは未確認",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT016",
+      "entity_id": "IT012",
+      "field": "performance",
+      "claim": "ConvNeXt-Tinyのテストmacro F1 0.99743。Swin-TとViT-B/16は約0.5ポイント下回るという概況まで確認",
+      "status": "抄録のみ確認"
+    },
+    {
+      "claim_id": "CRT017",
+      "entity_id": "IT013",
+      "field": "labels",
+      "claim": "keyholing; desirable; balling; lack-of-fusion (LOF)",
+      "status": "出版社プレビューのみ確認"
+    },
+    {
+      "claim_id": "CRT018",
+      "entity_id": "IT013",
+      "field": "primary_model",
+      "claim": "ViViT＋軽量アダプター。推論は上方熱画像の時系列のみ、学習時の補助目的は溶融池深さ",
+      "status": "出版社プレビューのみ確認"
+    },
+    {
+      "claim_id": "CRT019",
+      "entity_id": "IT014",
+      "field": "performance",
+      "claim": "Accuracy 0.9584（PVEL-ViT）、比較EfficientNetV2-m 0.9386、EfficientViT-b2 0.9359。評価の詳細は未確認",
+      "status": "抄録のみ確認"
+    },
+    {
+      "claim_id": "CRT020",
+      "entity_id": "IT015",
+      "field": "performance",
+      "claim": "Accuracy 97.25%（5欠陥クラスのSEM画像分類）。別のセグメンテーションIoUは84.40%",
+      "status": "抄録のみ確認"
+    },
+    {
+      "claim_id": "CRT021",
+      "entity_id": "IT015",
+      "field": "data_size",
+      "claim": "12-inch、55 nmの実fabから得た工程欠陥SEM画像3,990枚",
+      "status": "出版社プレビューのみ確認"
+    },
+    {
+      "claim_id": "CRT022",
+      "entity_id": "IT016",
+      "field": "performance",
+      "claim": "L-PBFのテスト完全一致率93.28%、SLS転移の完全一致率99.32%。クラス、分割内訳、バックボーンを未確認",
+      "status": "抄録のみ確認"
+    },
+    {
+      "claim_id": "CRT023",
+      "entity_id": "IT009",
+      "field": "code_data",
+      "claim": "再現用分割と生成データ一般配布を著者が別リンクで公開。再現用テストは元画像のみ",
+      "status": "確認済み（記載条件）"
+    },
+    {
+      "claim_id": "CRT024",
+      "entity_id": "IVT2001",
+      "field": "class_results",
+      "claim": "Table 3の事前学習＋多タスクF1。C+EL 0.990、C+ER 0.993、C+L 0.997、C+S 1.000、D+EL 1.000、D+ER 1.000、D+L 0.995、D+S 0.995、EL+L 0.998、EL+S 0.984、ER+L 0.999、ER+S 0.986、L+S 0.999",
+      "status": "確認済み（記載条件）"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "claim_id": "CRT001",
+      "source_id": "SRT018",
+      "locator": "§4.2 Fig. 6–7; §4.3 Table 3 Fig. 8",
+      "quote": "",
+      "verification": "機関公開の刊行版PDF該当箇所確認"
+    },
+    {
+      "claim_id": "CRT002",
+      "source_id": "SRT018",
+      "locator": "§3.2; §4.2 Fig. 6",
+      "quote": "",
+      "verification": "機関公開の刊行版PDF該当箇所確認"
+    },
+    {
+      "claim_id": "CRT003",
+      "source_id": "SRT018",
+      "locator": "§3.1–3.2; §4.3",
+      "quote": "",
+      "verification": "機関公開の刊行版PDF該当箇所確認"
+    },
+    {
+      "claim_id": "CRT004",
+      "source_id": "SRT018",
+      "locator": "§4.3 Table 2, Fig. 8",
+      "quote": "",
+      "verification": "機関公開の刊行版PDF該当箇所確認"
+    },
+    {
+      "claim_id": "CRT005",
+      "source_id": "SRT018",
+      "locator": "§4.2",
+      "quote": "",
+      "verification": "機関公開の刊行版PDF該当箇所確認"
+    },
+    {
+      "claim_id": "CRT006",
+      "source_id": "SRT019",
+      "locator": "§3.1; §3.3; Table 2",
+      "quote": "",
+      "verification": "原著全文の該当箇所確認"
+    },
+    {
+      "claim_id": "CRT007",
+      "source_id": "SRT019",
+      "locator": "§3.1; §4.5",
+      "quote": "",
+      "verification": "原著全文の該当箇所確認"
+    },
+    {
+      "claim_id": "CRT008",
+      "source_id": "SRT019",
+      "locator": "§3.2–3.3; §4.1",
+      "quote": "",
+      "verification": "原著全文の該当箇所確認"
+    },
+    {
+      "claim_id": "CRT009",
+      "source_id": "SRT019",
+      "locator": "§4.3 Tables 7, 11–12",
+      "quote": "",
+      "verification": "原著全文の該当箇所確認"
+    },
+    {
+      "claim_id": "CRT010",
+      "source_id": "SRT019",
+      "locator": "§3.1–3.2 Table 2",
+      "quote": "",
+      "verification": "原著全文の該当箇所確認"
+    },
+    {
+      "claim_id": "CRT011",
+      "source_id": "SRT020",
+      "locator": "§4.1 Fig. 3",
+      "quote": "",
+      "verification": "原著本文と刊行版PDF該当箇所確認"
+    },
+    {
+      "claim_id": "CRT012",
+      "source_id": "SRT020",
+      "locator": "§4.1 Fig. 3",
+      "quote": "",
+      "verification": "原著本文と刊行版PDF該当箇所確認"
+    },
+    {
+      "claim_id": "CRT013",
+      "source_id": "SRT020",
+      "locator": "§3",
+      "quote": "",
+      "verification": "原著本文と刊行版PDF該当箇所確認"
+    },
+    {
+      "claim_id": "CRT014",
+      "source_id": "SRT020",
+      "locator": "§4.3 Table 1 Fig. 5",
+      "quote": "",
+      "verification": "原著本文と刊行版PDF該当箇所確認"
+    },
+    {
+      "claim_id": "CRT015",
+      "source_id": "SRT020",
+      "locator": "§4.1",
+      "quote": "",
+      "verification": "原著本文と刊行版PDF該当箇所確認"
+    },
+    {
+      "claim_id": "CRT016",
+      "source_id": "SRT001",
+      "locator": "著者抄録",
+      "quote": "",
+      "verification": "抄録のみ"
+    },
+    {
+      "claim_id": "CRT017",
+      "source_id": "SRT003",
+      "locator": "Problem description",
+      "quote": "",
+      "verification": "抄録・出版社プレビューの索引抜粋"
+    },
+    {
+      "claim_id": "CRT018",
+      "source_id": "SRT003",
+      "locator": "Abstract; Problem description",
+      "quote": "",
+      "verification": "抄録・出版社プレビューの索引抜粋"
+    },
+    {
+      "claim_id": "CRT019",
+      "source_id": "SRT004",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "抄録・出版社プレビューの索引抜粋"
+    },
+    {
+      "claim_id": "CRT020",
+      "source_id": "SRT006",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "抄録・出版社プレビューの索引抜粋"
+    },
+    {
+      "claim_id": "CRT021",
+      "source_id": "SRT006",
+      "locator": "Dataset",
+      "quote": "",
+      "verification": "抄録・出版社プレビューの索引抜粋"
+    },
+    {
+      "claim_id": "CRT022",
+      "source_id": "SRT008",
+      "locator": "Abstract",
+      "quote": "",
+      "verification": "出版社索引の抄録のみ、直接取得403"
+    },
+    {
+      "claim_id": "CRT023",
+      "source_id": "SRT029",
+      "locator": "Data and reproducibility",
+      "quote": "",
+      "verification": "READMEを確認"
+    },
+    {
+      "claim_id": "CRT001",
+      "source_id": "SRT032",
+      "locator": "§2.2; §4.3 Table 3",
+      "quote": "",
+      "verification": "原著PDFの該当箇所確認"
+    },
+    {
+      "claim_id": "CRT024",
+      "source_id": "SRT032",
+      "locator": "§4.3 Table 3",
+      "quote": "",
+      "verification": "原著PDFの該当箇所確認"
+    }
+  ],
+  "search_log": [
+    {
+      "search_id": "QRT001",
+      "executed_at": "2026-11-11T08:47:12.580+09:00",
+      "query": "\"10.7236/IJIBC.2026.18.3.59\" PDF Hong PCB iibs iibc\n\"Insights beneath the surface\" \"Jafary-Zadeh\" PDF NUS laser powder bed\n\"PVEL-ViT\" Acikgoz Korkmaz pdf repository\n\"DeepSEM-Net\" Qiao full pdf defect types",
+      "provider": "web.run",
+      "target": "4保留の著者版・DOI探索",
+      "returned_count": 18,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT002",
+        "KRT003",
+        "KRT004"
+      ],
+      "notes": "検索結果件数は返却された固有結果IDの数。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT002",
+      "executed_at": "2026-11-11T08:47:21.260+09:00",
+      "query": "\"10.1016/j.optlaseng.2024.108683\" \"Cheng\" pdf author full text LoRA\n\"10.1016/j.jmapro.2026.04.032\" scholarbank OR nus OR a-star OR arxiv\n\"10.1016/j.asoc.2026.115494\" acikgoz dergipark OR avesis OR orcid OR manuscript\n\"A Comparative Study of Convolutional, Transformer, and Hybrid Architecture\" filetype:pdf OR site:iibc.kr OR site:koreascience.kr OR site:bu.ac.kr",
+      "provider": "web.run",
+      "target": "5保留の出版社／機関／公開版探索",
+      "returned_count": 15,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT002",
+        "KRT003",
+        "KRT004",
+        "KRT005"
+      ],
+      "notes": "検索結果件数は返却された固有結果IDの数。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT003",
+      "executed_at": "2026-11-11T08:47:30.355+09:00",
+      "query": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003352160\nhttps://www.sciencedirect.com/science/article/pii/S1526612526003907\nhttps://www.sciencedirect.com/science/article/abs/pii/S1568494626009427\nhttps://papers.ssrn.com/sol3/Delivery.cfm/4765199.pdf?abstractid=4765199\nhttps://www.sciencedirect.com/science/article/pii/S0143816624006614",
+      "provider": "web.run",
+      "target": "5保留のURL取得試行",
+      "returned_count": 5,
+      "total_hits": null,
+      "result_scope": "URL直接取得5件の返却範囲（エラーを含む）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT002",
+        "KRT003",
+        "KRT004",
+        "KRT005"
+      ],
+      "notes": "件数はURL取得・findの返却断片数（取得エラーを含む）。検索総数は非該当。"
+    },
+    {
+      "search_id": "QRT004",
+      "executed_at": "2026-11-11T08:47:37.360+09:00",
+      "query": "\"RFAConv-CBM-ViT\" aluminum X-SDD metal nut Wei DOI\n\"MSF-Trans\" wafer mixed-type defect full pdf\n\"wafer bin map\" \"UnionMixup\" wafer classification transformer defect citation\n\"Vision transformer\" Ramadan infrared thermography photovoltaic solar 96.19 defect classification DOI",
+      "provider": "web.run",
+      "target": "鋼板、ウェハ、PVの引用題名／類似テーマ探索",
+      "returned_count": 20,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT006",
+        "KRT011",
+        "KRT015",
+        "KRT021",
+        "KRT023",
+        "KRT024"
+      ],
+      "notes": "検索結果件数は返却された固有結果IDの数。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT005",
+      "executed_at": "2026-11-11T08:47:48.409+09:00",
+      "query": "https://www.mdpi.com/2076-3417/16/6/3022 / RFAConv\nhttps://arxiv.org/pdf/2506.03345 / Deepsem\nhttps://arxiv.org/pdf/2504.02494 / mixed-type wafer defect recognition with multi-scale\nhttps://arxiv.org/html/2608.12725v1 / Fioresi\nturn332search14 / UnionMixup\nturn332search9 / Swin-T",
+      "provider": "web.run",
+      "target": "seedの原著内検索と候補原著の照合",
+      "returned_count": 2,
+      "total_hits": null,
+      "result_scope": "引用箇所の選択的確認",
+      "candidate_ids": [
+        "KRT004",
+        "KRT006",
+        "KRT011",
+        "KRT012",
+        "KRT015",
+        "KRT019",
+        "KRT021"
+      ],
+      "notes": "検索結果 2件。URL取得・findの返却断片 6件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT006",
+      "executed_at": "2026-11-11T08:47:57.135+09:00",
+      "query": "\"RFAConv-CBM-ViT\" site:link.springer.com\n\"Cross-Dataset Benchmarking of Deep Learning Models for Surface Defect Classification in Metal Parts\" citation defect transformer\n\"Semiconductor SEM Image Defect Classification Using Supervised and Semi-Supervised Learning with Vision Transformers\" cited semiconductor\n\"A Generative Approach for Improving Multi-Label Defect Classification in Photovoltaic Modules\" \"Mueez\" cited",
+      "provider": "web.run",
+      "target": "IT003／IT004／IT009前方候補とIT003後方候補",
+      "returned_count": 16,
+      "total_hits": null,
+      "result_scope": "上位返却断片（題名検索。被引用全件一覧を含まない）",
+      "candidate_ids": [
+        "KRT004",
+        "KRT006"
+      ],
+      "notes": "検索結果件数は返却された固有結果IDの数。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT007",
+      "executed_at": "2026-11-11T08:48:04.387+09:00",
+      "query": "turn332search14 / Abstract\nturn332search14 / training set\nturn332search9 / stratified\nturn332search3 / training set\nturn337view0 / Journal of Supercomputing\nturn323view0 / download\nturn338search6 / DOI",
+      "provider": "web.run",
+      "target": "候補原著の数値／分割・出版社／研究機関の取得試行",
+      "returned_count": 4,
+      "total_hits": null,
+      "result_scope": "候補原著の該当箇所",
+      "candidate_ids": [
+        "KRT001",
+        "KRT006",
+        "KRT015",
+        "KRT021",
+        "KRT023"
+      ],
+      "notes": "検索結果 4件。URL取得・findの返却断片 9件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT008",
+      "executed_at": "2026-11-11T08:48:11.576+09:00",
+      "query": "J-STAGE QAOA PDF p.1・accuracy、IT003本文後部、Energies書誌、IT009 Su検索、SSRN download検索",
+      "provider": "web.run",
+      "target": "候補原著とSSRN本文試行",
+      "returned_count": 3,
+      "total_hits": null,
+      "result_scope": "本文の該当箇所",
+      "candidate_ids": [
+        "KRT004",
+        "KRT006",
+        "KRT015",
+        "KRT020",
+        "KRT021"
+      ],
+      "notes": "検索結果 3件。URL取得・findの返却断片 8件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT009",
+      "executed_at": "2026-11-11T08:48:19.592+09:00",
+      "query": "IT003 enhanced vision transformer、IT009 PVEL-AD、KCI本文経路、SSRN abstract=4765199、DOI 10.7236/IJIBC.2026.18.3.59",
+      "provider": "web.run",
+      "target": "IT003/IT009後方引用、IT012/IT015取得",
+      "returned_count": 8,
+      "total_hits": null,
+      "result_scope": "引用箇所の選択的確認・本文URL試行",
+      "candidate_ids": [
+        "KRT001",
+        "KRT004",
+        "KRT006",
+        "KRT007",
+        "KRT008",
+        "KRT019",
+        "KRT020"
+      ],
+      "notes": "件数はURL取得・findの返却断片数（取得エラーを含む）。検索総数は非該当。"
+    },
+    {
+      "search_id": "QRT010",
+      "executed_at": "2026-11-11T08:48:28.808+09:00",
+      "query": "Pre-trained CNN-based TransUNet Model for Mixed-type Defects in Wafer Maps pdf\nDeepSEM-Net site:zju.edu.cn 陈一宁 半导体 五类\nSemiconductor Wafer Map Defect Classification with Tiny Vision Transformers cited wafer\nA Transformer-Driven Wafer Map Classification Approach OR Architecture-Aware Explanation Auditing wafer semiconductor\nIT003 ref [8] DOI、KCI IT012著者リンクをクリック",
+      "provider": "web.run",
+      "target": "IT005後方と前方、IT015機関、IT003 RFAConv DOI",
+      "returned_count": 18,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT004",
+        "KRT006",
+        "KRT011",
+        "KRT012",
+        "KRT016",
+        "KRT017",
+        "KRT018"
+      ],
+      "notes": "検索結果 18件。URL取得・findの返却断片 4件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT011",
+      "executed_at": "2026-11-11T08:48:39.078+09:00",
+      "query": "10.1007/s11227-024-06662-0 full text github metal defect X-SDD test split\n10.1109/TSM.2022.3156583 Wei Wang open pdf UESTC MSF-Trans\nScalable and lightweight vision transformers for mixed-defect classification in semiconductor wafer maps Mohammad Kakar Nature\nOnline Open-World Wafer Defect Discovery using Hyperdimensional Computing WaferSAGE Mohammad wafer\nSpringer刊行ページ、TransUNet PDF Evaluation",
+      "provider": "web.run",
+      "target": "IT003 RFAConv、IT005後方MSF/TransUNetと発展版候補",
+      "returned_count": 19,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT006",
+        "KRT011",
+        "KRT012",
+        "KRT016",
+        "KRT017",
+        "KRT018"
+      ],
+      "notes": "検索結果 19件。URL取得・findの返却断片 2件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT012",
+      "executed_at": "2026-11-11T08:48:49.857+09:00",
+      "query": "홍진근 PCB 2026 18 59 IJIBC international association artificial intelligence download\nA Comparative Study of Convolutional, Transformer, and Hybrid Architecture for PCB Defect Classification filetype:pdf Hong IJIBC 59 69 ijibc iaai\nNature PDF、TransUNet Table 3、RFAConv出版社・コードを取得",
+      "provider": "web.run",
+      "target": "著者版・刊行PDF・公式コード試行",
+      "returned_count": 14,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT006",
+        "KRT012",
+        "KRT018"
+      ],
+      "notes": "検索結果 14件。URL取得・findの返却断片 5件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT013",
+      "executed_at": "2026-11-11T08:48:59.326+09:00",
+      "query": "Advancing Multi-Label Melt Pool Defect Detection in Laser Powder Bed Fusion with Self-Supervised Learning Zhang pdf arxiv github\nInternational Association for Artificial Intelligence IJIBC home journal papers pdf 2026\nNature 98.4、TransUNet 0.995、RFAConv X-SDD、Energies SlantNet/pre-trainedをfind",
+      "provider": "web.run",
+      "target": "候補原著の性能条件、保留代替経路",
+      "returned_count": 16,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT002",
+        "KRT005",
+        "KRT006",
+        "KRT012",
+        "KRT018",
+        "KRT021"
+      ],
+      "notes": "検索結果 16件。URL取得・findの返却断片 6件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT014",
+      "executed_at": "2026-11-11T08:49:08.275+09:00",
+      "query": "Scalable and lightweight vision transformers for mixed-defect classification 10.1038/s41598-026-63752-0 PMC full pdf\nToward Trustworthy AI-Based PCB Defect Inspection Hong PDF Koreascience\nIAAI IJIBC-AI、KCI巻号、Springer PDF",
+      "provider": "web.run",
+      "target": "保留の公式誌・採択稿・著者版経路",
+      "returned_count": 12,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT006",
+        "KRT018"
+      ],
+      "notes": "検索結果 12件。URL取得・findの返却断片 3件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT015",
+      "executed_at": "2026-11-11T08:49:15.750+09:00",
+      "query": "site:koreascience.kr 18 The International Journal of Internet, Broadcasting and Communication A Comparative Study Hong PCB 2026\nFAX-Net NEU-CLS Transformer classification 10.3390/sym17081313\nIAAIのIJIBCリンクをクリック",
+      "provider": "web.run",
+      "target": "PCB原著経路、金属のテーマ追加検索",
+      "returned_count": 13,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT022"
+      ],
+      "notes": "検索結果 13件。URL取得・findの返却断片 2件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT016",
+      "executed_at": "2026-11-11T08:49:24.115+09:00",
+      "query": "Online Open-World Wafer Defect Discovery using Hyperdimensional Computing pdf arxiv\nWaferSAGE: Large Language Model-Powered Wafer Defect Analysis arxiv DOI\nIAAI 2026、FAX 97.78/Data Availability、Energies ref [32]",
+      "provider": "web.run",
+      "target": "IT005前方候補と追加論文照合",
+      "returned_count": 16,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT016",
+        "KRT017",
+        "KRT021",
+        "KRT022"
+      ],
+      "notes": "検索結果 16件。URL取得・findの返却断片 5件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT017",
+      "executed_at": "2026-11-11T08:49:34.481+09:00",
+      "query": "IAAI公式のIJIBCサイトURL、OpenAlex IT003 DOI、Crossref IT009 DOI、arXiv:2610.28949/2604.27629、FAX-Net 97.78%、IP-ViT DDPM",
+      "provider": "web.run",
+      "target": "前方引用索引試行と候補確認",
+      "returned_count": 2,
+      "total_hits": null,
+      "result_scope": "URL取得・本文部分検索（API直接取得失敗を含む）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT016",
+        "KRT017",
+        "KRT022",
+        "KRT023"
+      ],
+      "notes": "検索結果 2件。URL取得・findの返却断片 8件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT018",
+      "executed_at": "2026-11-11T08:49:42.689+09:00",
+      "query": "10.3390/app16063022 OpenAlex citing work metal parts\n10.1016/j.solener.2026.114943 citations openalex semantic scholar citing\nIJIBC公式サイト、WaferHDC/WaferSAGE References、RFAConv本文、DeepSEM-Net Cited by",
+      "provider": "web.run",
+      "target": "IT003/IT009引用索引とIT005前方引用原著",
+      "returned_count": 14,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT004",
+        "KRT006",
+        "KRT016",
+        "KRT017"
+      ],
+      "notes": "検索結果 14件。URL取得・findの返却断片 8件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT019",
+      "executed_at": "2026-11-11T08:50:16.979+09:00",
+      "query": "\"A Comparative Study of Convolutional, Transformer, and Hybrid Architecture for PCB Defect Classification\" \"ijibc.org\" OR \"koreascience.kr\" OR \"iibc.kr\"\n\"10.1016/j.cie.2024.110301\" \"Dataset\" SEM \"defect\" \"training\" Qiao 3990\n\"PVEL-ViT\" \"95.84\" defect labels dataset training test\n\"Insights beneath the surface\" \"ViViT\" macro F1 train split keyholing balling",
+      "provider": "web.run",
+      "target": "IT012/013/014/015本文・補足、DeepSEM-Net後続",
+      "returned_count": 8,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT001",
+        "KRT002",
+        "KRT003",
+        "KRT004",
+        "KRT025",
+        "KRT026"
+      ],
+      "notes": "検索結果件数は返却された固有結果IDの数。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT020",
+      "executed_at": "2026-11-11T08:50:25.937+09:00",
+      "query": "PVEL-ViT S1568494626009427 ScienceDirect electro data experiments classes\nTransUNet §4.2–4.3、Energies Data Availability、OUCI被引用一覧、SEM domain adaptation ResNet、BWD-DETR DOI、大学公開PDF SEMタイトル",
+      "provider": "web.run",
+      "target": "保留・追加論文全文／引用断片の確認",
+      "returned_count": 0,
+      "total_hits": null,
+      "result_scope": "検索クエリは0件。本文URLの追加確認を併行",
+      "candidate_ids": [
+        "KRT003",
+        "KRT004",
+        "KRT010",
+        "KRT012",
+        "KRT021",
+        "KRT025",
+        "KRT026"
+      ],
+      "notes": "キーワード検索は0件。別途、同呼出しで本文取得・find断片5件（エラーを含む）。"
+    },
+    {
+      "search_id": "QRT021",
+      "executed_at": "2026-11-11T08:50:34.619+09:00",
+      "query": "\"Semiconductor SEM Image Defect Classification Using Supervised and Semi-Supervised Learning with Vision Transformers\" \"10.1109\" ASMC Huang IEEE\n\"Classification of infrared PV faults via diffusion-based data balancing\" 110012 dataset split pdf\n\"10.1016/j.optlaseng.2024.108683\" transformer swin pretrained LPBF powder bed defect classifications labels\n\"PVEL-ViT\" Acikgoz photovoltaic sciencedirect 95.84",
+      "provider": "web.run",
+      "target": "LPBF LoRA／PV原著とIT004会議版、SEM後続候補",
+      "returned_count": 17,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT003",
+        "KRT005",
+        "KRT010",
+        "KRT023"
+      ],
+      "notes": "検索結果件数は返却された固有結果IDの数。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT022",
+      "executed_at": "2026-11-11T08:50:45.420+09:00",
+      "query": "IEEE Xplore IT004（11010396）とDOI、SEM Nanoscience原著タイトル／classes、PVEL-ViT引用、IT006 Kyeong、IT004 Cheon",
+      "provider": "web.run",
+      "target": "IT004出版版・後続文献、IT006後方引用の照合",
+      "returned_count": 3,
+      "total_hits": null,
+      "result_scope": "URL取得・原著参考文献の選択確認",
+      "candidate_ids": [
+        "KRT009",
+        "KRT010",
+        "KRT013",
+        "KRT014"
+      ],
+      "notes": "検索結果 3件。URL取得・findの返却断片 8件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT023",
+      "executed_at": "2026-11-11T08:51:03.026+09:00",
+      "query": "\"Deep learning for nanoscience scanning electron microscope image classification\" nanoscience nature Huang categories\n\"Classification of infrared PV faults via diffusion-based data balancing\" site:cycu.edu.tw OR site:researchgate.net pdf Hong Van\n\"Cross-Dataset Benchmarking of Deep Learning Models for Surface Defect Classification in Metal Parts\" \"da Silva\" References -site:mdpi.com -site:researchgate.net\n\"Semiconductor SEM Image Defect Classification\" Huang \"11010396\" Crossref IEEE",
+      "provider": "web.run",
+      "target": "IT003/IT004前方候補の再探索、IP-ViT著者版",
+      "returned_count": 17,
+      "total_hits": null,
+      "result_scope": "上位返却断片（複数クエリはバッチ集計）",
+      "candidate_ids": [
+        "KRT010",
+        "KRT023"
+      ],
+      "notes": "検索結果件数は返却された固有結果IDの数。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT024",
+      "executed_at": "2026-11-11T08:51:11.805+09:00",
+      "query": "Natureナノ材料 Huang, C.-F.、IT005 References、IT009 References、Energies §3.3、FAX-Net Data Availability、IP-ViT刊行PDF",
+      "provider": "web.run",
+      "target": "候補原著の参照箇所・PDF試行",
+      "returned_count": 3,
+      "total_hits": null,
+      "result_scope": "原著の該当箇所とPDF取得試行",
+      "candidate_ids": [
+        "KRT010",
+        "KRT012",
+        "KRT019",
+        "KRT020",
+        "KRT021",
+        "KRT022",
+        "KRT023"
+      ],
+      "notes": "検索結果 3件。URL取得・findの返却断片 8件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT025",
+      "executed_at": "2026-11-11T08:52:50.606+09:00",
+      "query": "TransUNet §3.1–4.1、Energies §4.1、FAX-Net 8:2、IT003 Feng、IT006末尾引用",
+      "provider": "web.run",
+      "target": "新規採用の条件と原著の選択引用",
+      "returned_count": 4,
+      "total_hits": null,
+      "result_scope": "原著の該当箇所",
+      "candidate_ids": [
+        "KRT007",
+        "KRT008",
+        "KRT012",
+        "KRT013",
+        "KRT014",
+        "KRT021",
+        "KRT022"
+      ],
+      "notes": "検索結果 4件。URL取得・findの返却断片 6件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT026",
+      "executed_at": "2026-11-11T08:56:45.485+09:00",
+      "query": "WSEAS TransUNet Mixed-type testing result、Scientific Reports Table 12、J-STAGE QAOA Article",
+      "provider": "web.run",
+      "target": "刊行版Table 3と他候補の取得再試行",
+      "returned_count": 2,
+      "total_hits": null,
+      "result_scope": "原著表とURL確認（エラーを含む）",
+      "candidate_ids": [
+        "KRT012",
+        "KRT015",
+        "KRT018"
+      ],
+      "notes": "検索結果 2件。URL取得・findの返却断片 3件は別集計。全ヒット数未提供。"
+    },
+    {
+      "search_id": "QRT027",
+      "executed_at": "2026-11-11T08:58:12.786+09:00",
+      "query": "\"10.1109/TSM.2022.3156583\" IEEE Xplore document Mixed-Type Wafer\n\"Automated Defect Detection and Localization in Photovoltaic Cells Using Semantic Segmentation of Electroluminescence Images\" DOI IEEE Fioresi\n\"PVEL-AD: A Large-Scale Open-World Dataset for Photovoltaic Cell Anomaly Detection\" Su DOI IEEE\n\"10.1587/transfun.2025EAP1012\" Yu IEICE issue",
+      "provider": "web.run",
+      "target": "MSF/PV後方引用・QAOA刊行書誌",
+      "returned_count": 16,
+      "total_hits": null,
+      "result_scope": "上位返却断片（バッチ集計）",
+      "candidate_ids": [
+        "KRT011",
+        "KRT015",
+        "KRT019",
+        "KRT020"
+      ],
+      "notes": "返却固有結果数、総件数未提供"
+    },
+    {
+      "search_id": "QRT028",
+      "executed_at": "2026-11-11T08:58:22.908+09:00",
+      "query": "IEEE staging IT004、MSF DOI、KCI landing IT012、IEICE Publication Date、UCF-EL-Defect Bibtex",
+      "provider": "web.run",
+      "target": "出版版の取得・書誌照合",
+      "returned_count": 5,
+      "total_hits": null,
+      "result_scope": "URL取得・原著内参照確認",
+      "candidate_ids": [
+        "KRT001",
+        "KRT011",
+        "KRT015",
+        "KRT019"
+      ],
+      "notes": "返却断片数（エラー含む）"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "KRT001",
+      "title": "A Comparative Study of Convolutional, Transformer, and Hybrid Architecture for PCB Defect Classification",
+      "doi": "10.7236/IJIBC.2026.18.3.59",
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003352160",
+      "scope": "PCB",
+      "discovered_by": "既存保留、タイトル・DOIと公式誌／大学経路",
+      "seed_id": "",
+      "decision": "保留",
+      "reason": "原語ラベル、正確なViT/Swin別性能と分割内訳未確認",
+      "record_id": "IT012",
+      "verification": "抄録のみ"
+    },
+    {
+      "candidate_id": "KRT002",
+      "title": "Insights beneath the surface: Physics-guided multi-task learning for in situ defect detection in laser powder bed fusion",
+      "doi": "10.1016/j.jmapro.2026.04.032",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1526612526003907",
+      "scope": "LPBF溶融池",
+      "discovered_by": "既存保留、タイトル・DOIとNUS/A*STAR経路",
+      "seed_id": "",
+      "decision": "保留",
+      "reason": "4工程状態は確認。分類値・分割と完成品欠陥との関係未確認",
+      "record_id": "IT013",
+      "verification": "抄録・出版社プレビューの索引抜粋"
+    },
+    {
+      "candidate_id": "KRT003",
+      "title": "PVEL-ViT: Adaptive token selective vision transformer for photovoltaic cell defect classification in electroluminescence imaging",
+      "doi": "10.1016/j.asoc.2026.115494",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1568494626009427",
+      "scope": "太陽電池EL",
+      "discovered_by": "既存保留、タイトル・DOIと所属大学経路",
+      "seed_id": "",
+      "decision": "保留",
+      "reason": "原語ラベル・分割・母集団未確認",
+      "record_id": "IT014",
+      "verification": "抄録・出版社プレビューの索引抜粋"
+    },
+    {
+      "candidate_id": "KRT004",
+      "title": "DeepSEM-Net: Enhancing SEM defect analysis in semiconductor manufacturing with a dual-branch CNN-Transformer architecture",
+      "doi": "10.1016/j.cie.2024.110301",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0360835224004224",
+      "scope": "半導体SEM",
+      "discovered_by": "既存保留、seedの引用とSSRN著者版",
+      "seed_id": "IT004",
+      "decision": "保留",
+      "reason": "SSRN著者版は発見、PDF取得403。実fab 5分類の原語ラベル・分割未確認",
+      "record_id": "IT015",
+      "verification": "抄録・出版社プレビューの索引抜粋"
+    },
+    {
+      "candidate_id": "KRT005",
+      "title": "Low-rank adaptive transfer learning based for multi-label defect detection in laser powder bed fusion",
+      "doi": "10.1016/j.optlaseng.2024.108683",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0143816624006614",
+      "scope": "LPBF粉末床",
+      "discovered_by": "既存保留、DOI・題名と公開著者版探索",
+      "seed_id": "",
+      "decision": "保留",
+      "reason": "原語ラベル・分割・LoRA対象のバックボーン未確認",
+      "record_id": "IT016",
+      "verification": "出版社索引の抄録のみ、直接取得403"
+    },
+    {
+      "candidate_id": "KRT006",
+      "title": "RFAConv-CBM-ViT: enhanced vision transformer for metal surface defect detection",
+      "doi": "10.1007/s11227-024-06662-0",
+      "url": "https://link.springer.com/article/10.1007/s11227-024-06662-0",
+      "scope": "金属表面",
+      "discovered_by": "seed原著後方引用、DOI解決、公式コード",
+      "seed_id": "IT003",
+      "decision": "保留",
+      "reason": "学習データ候補は公式コードで確認。出版社本文、原語ラベルと比較表・分割未取得",
+      "record_id": "",
+      "verification": "抄録のみ、PDFは抄録頁に転送"
+    },
+    {
+      "candidate_id": "KRT007",
+      "title": "A ResNet50-Based Method for Classifying Surface Defects in Hot-Rolled Strip Steel",
+      "doi": "10.3390/math9192359",
+      "url": "https://www.mdpi.com/2227-7390/9/19/2359",
+      "scope": "金属表面",
+      "discovered_by": "seed原著後方引用",
+      "seed_id": "IT003",
+      "decision": "関連",
+      "reason": "X-SDDと画像分類の背景研究。提案モデルはResNet50でViT系対象外",
+      "record_id": "",
+      "verification": "引用と題名確認"
+    },
+    {
+      "candidate_id": "KRT008",
+      "title": "Feature optimization-guided high-precision and real-time metal surface defect detection network",
+      "doi": "10.1038/s41598-024-83430-3",
+      "url": "https://www.nature.com/articles/s41598-024-83430-3",
+      "scope": "金属表面",
+      "discovered_by": "seed原著後方引用",
+      "seed_id": "IT003",
+      "decision": "関連",
+      "reason": "型付き物体検出。画像単位の種類分類の独立評価は確認せず",
+      "record_id": "",
+      "verification": "引用と題名確認"
+    },
+    {
+      "candidate_id": "KRT009",
+      "title": "Convolutional Neural Network for Wafer Surface Defect Classification and the Detection of Unknown Defect Class",
+      "doi": "10.1109/TSM.2019.2902657",
+      "url": "https://doi.org/10.1109/TSM.2019.2902657",
+      "scope": "半導体SEM",
+      "discovered_by": "seed原著後方引用",
+      "seed_id": "IT004",
+      "decision": "関連",
+      "reason": "SEM欠陥分類だがCNNで今回のViT系対象外",
+      "record_id": "",
+      "verification": "seed本文と引用を確認"
+    },
+    {
+      "candidate_id": "KRT010",
+      "title": "Deep learning for nanoscience scanning electron microscope image classification",
+      "doi": "10.1038/s41598-026-63864-7",
+      "url": "https://www.nature.com/articles/s41598-026-63864-7",
+      "scope": "ナノ材料SEM",
+      "discovered_by": "seedの題名とDOIの後続検索、候補原著参考文献",
+      "seed_id": "IT004",
+      "decision": "除外",
+      "reason": "Nanowire/Fiber/Tipは形態・材料群の分類。製造欠陥種類評価を行わない",
+      "record_id": "",
+      "verification": "原著全文の該当箇所確認"
+    },
+    {
+      "candidate_id": "KRT011",
+      "title": "Mixed-Type Wafer Defect Recognition With Multi-Scale Information Fusion Transformer",
+      "doi": "10.1109/TSM.2022.3156583",
+      "url": "https://corp.eurekamag.com/research/095/070/095070374.php",
+      "scope": "ウェハ欠陥マップ",
+      "discovered_by": "seed原著後方引用",
+      "seed_id": "IT005",
+      "decision": "保留",
+      "reason": "seedで比較値は確認。MSF-Trans自身の評価・分割の原資料を取得できず",
+      "record_id": "",
+      "verification": "抄録転載のみ"
+    },
+    {
+      "candidate_id": "KRT012",
+      "title": "Pre-trained CNN-based TransUNet Model for Mixed-Type Defects in Wafer Maps",
+      "doi": "10.37394/23209.2023.20.27",
+      "url": "https://factory.skku.edu/factory/research.do?articleNo=160425&attachNo=128003&mode=download",
+      "scope": "ウェハ欠陥マップ",
+      "discovered_by": "seed原著後方引用、所属大学公開刊行PDF",
+      "seed_id": "IT005",
+      "decision": "採用",
+      "reason": "2種類混合の原語ラベル・評価2,600マップ・Accuracy/F1を本文確認",
+      "record_id": "IVT2001",
+      "verification": "機関公開の刊行版PDF該当箇所確認"
+    },
+    {
+      "candidate_id": "KRT013",
+      "title": "Classification of mixed-type defect patterns in wafer bin maps using convolutional neural networks",
+      "doi": "10.1109/TSM.2018.2841416",
+      "url": "https://doi.org/10.1109/TSM.2018.2841416",
+      "scope": "ウェハ欠陥マップ",
+      "discovered_by": "seed原著後方引用",
+      "seed_id": "IT006",
+      "decision": "関連",
+      "reason": "欠陥種類分類だがCNNで今回のViT系対象外",
+      "record_id": "",
+      "verification": "seed本文と引用を確認"
+    },
+    {
+      "candidate_id": "KRT014",
+      "title": "Semi-supervised multi-label learning for classification of wafer bin maps with mixed-type defect patterns",
+      "doi": "10.1109/TSM.2020.3027431",
+      "url": "https://doi.org/10.1109/TSM.2020.3027431",
+      "scope": "ウェハ欠陥マップ",
+      "discovered_by": "seed原著後方引用",
+      "seed_id": "IT006",
+      "decision": "関連",
+      "reason": "先行の混合欠陥分類。著者後続・CNN系の背景研究として記録",
+      "record_id": "",
+      "verification": "seed本文と引用を確認"
+    },
+    {
+      "candidate_id": "KRT015",
+      "title": "Classification of Mixed-Type Defects in Wafer Bin Maps Utilizing the Quantum Approximate Optimization Algorithm",
+      "doi": "10.1587/transfun.2025EAP1012",
+      "url": "https://globals.ieice.org/en_transactions/fundamentals/10.1587/transfun.2025EAP1012/_f",
+      "scope": "ウェハ欠陥マップ",
+      "discovered_by": "種名検索から候補原著References [15]",
+      "seed_id": "IT006",
+      "decision": "関連",
+      "reason": "原著の主要系はInceptionV3＋QAOA-SVM。ViT系外",
+      "record_id": "",
+      "verification": "原著全文の該当箇所確認"
+    },
+    {
+      "candidate_id": "KRT016",
+      "title": "Online Open-World Wafer Defect Discovery using Hyperdimensional Computing",
+      "doi": "10.48550/arXiv.2610.28949",
+      "url": "https://arxiv.org/html/2610.28949v1",
+      "scope": "ウェハ欠陥マップ",
+      "discovered_by": "後続候補検索・候補原著References",
+      "seed_id": "IT005",
+      "decision": "関連",
+      "reason": "超次元計算で未知クラスタ探索。既定欠陥ラベルの画像ViT分類外",
+      "record_id": "",
+      "verification": "原著全文の該当箇所確認"
+    },
+    {
+      "candidate_id": "KRT017",
+      "title": "WaferSAGE: Large Language Model-Powered Wafer Defect Analysis via Synthetic Data Generation and Rubric-Guided Reinforcement Learning",
+      "doi": "10.48550/arXiv.2604.27629",
+      "url": "https://arxiv.org/html/2604.27629v1",
+      "scope": "ウェハ欠陥マップ",
+      "discovered_by": "後続候補検索・候補原著References [8]",
+      "seed_id": "IT005",
+      "decision": "関連",
+      "reason": "Qwen3-VLのVQAで別担当領域。画像のみViTとして集計しない",
+      "record_id": "",
+      "verification": "原著全文の該当箇所確認"
+    },
+    {
+      "candidate_id": "KRT018",
+      "title": "Scalable and lightweight vision transformers for mixed-defect classification in semiconductor wafer maps",
+      "doi": "10.1038/s41598-026-63752-0",
+      "url": "https://www.nature.com/articles/s41598-026-63752-0",
+      "scope": "ウェハ欠陥マップ",
+      "discovered_by": "seed著者＋題名検索",
+      "seed_id": "IT005",
+      "decision": "重複候補",
+      "reason": "同一著者2名、同名ViT-Tiny、WM-38K、98.4%報告を共有。発展版として別行加算を見送り。厳密な版対応・指標対応は未確認",
+      "record_id": "IT005",
+      "verification": "出版社索引の抄録・書誌・補遺見出し確認、PDF取得制約"
+    },
+    {
+      "candidate_id": "KRT019",
+      "title": "Automated defect detection and localization in photovoltaic cells using semantic segmentation of electroluminescence images",
+      "doi": "10.1109/JPHOTOV.2021.3131059",
+      "url": "https://github.com/ucf-photovoltaics/UCF-EL-Defect",
+      "scope": "太陽電池EL",
+      "discovered_by": "seed原著後方引用",
+      "seed_id": "IT009",
+      "decision": "関連",
+      "reason": "UCF-EL-Defectの分類ラベルの起点。元研究はDeepLabv3+によるセグメンテーション",
+      "record_id": "",
+      "verification": "seed参考文献・著者公式実装とDOIを確認"
+    },
+    {
+      "candidate_id": "KRT020",
+      "title": "PVEL-AD: a large-scale open-world dataset for photovoltaic cell anomaly detection",
+      "doi": "10.1109/TII.2022.3162846",
+      "url": "https://xplorestaging.ieee.org/document/9744494",
+      "scope": "太陽電池EL",
+      "discovered_by": "seed原著後方引用",
+      "seed_id": "IT009",
+      "decision": "関連",
+      "reason": "10種類の異常画像、うち8種類にbox注釈、評価は物体検出ベンチマーク",
+      "record_id": "",
+      "verification": "seed参考文献・IEEE公式抄録確認"
+    },
+    {
+      "candidate_id": "KRT021",
+      "title": "Solar Photovoltaic System Fault Classification via Hierarchical Deep Learning with Imbalanced Multi-Class Thermal Dataset",
+      "doi": "10.3390/en19020462",
+      "url": "https://www.mdpi.com/1996-1073/19/2/462",
+      "scope": "太陽電池赤外",
+      "discovered_by": "PV分類＋ViTのテーマ補足検索",
+      "seed_id": "IT009",
+      "decision": "採用",
+      "reason": "8クラス原語、テスト1,920画像、Swin-Tの分類指標・条件を確認。seedとの引用関係は未確認",
+      "record_id": "IVT2002",
+      "verification": "原著全文の該当箇所確認"
+    },
+    {
+      "candidate_id": "KRT022",
+      "title": "FAX-Net: An Enhanced ConvNeXt Model with Symmetric Attention and Transformer-FPN for Steel Defect Classification",
+      "doi": "10.3390/sym17081313",
+      "url": "https://www.mdpi.com/2073-8994/17/8/1313",
+      "scope": "金属表面",
+      "discovered_by": "鋼板6クラス分類＋hybrid Transformerのテーマ補足検索",
+      "seed_id": "IT003",
+      "decision": "採用",
+      "reason": "NEU-CLS原語6種類、8:2分割、分類値を確認。seedとの引用関係は未確認",
+      "record_id": "IVT2003",
+      "verification": "原著本文と刊行版PDF該当箇所確認"
+    },
+    {
+      "candidate_id": "KRT023",
+      "title": "Classification of infrared PV faults via diffusion-based data balancing and improved pooling vision transformer",
+      "doi": "10.1016/j.rineng.2026.110012",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2590123026010492",
+      "scope": "太陽電池赤外",
+      "discovered_by": "PV分類＋ViTのテーマ補足検索",
+      "seed_id": "IT009",
+      "decision": "保留",
+      "reason": "92.78% accuracyと92.75% F1を抄録確認。本文403、12クラスの原語・分割未確認",
+      "record_id": "",
+      "verification": "出版社索引の抄録、本文403"
+    },
+    {
+      "candidate_id": "KRT024",
+      "title": "An innovative transformer neural network for fault detection and classification for photovoltaic modules",
+      "doi": "10.1016/j.enconman.2024.118718",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0196890424006599",
+      "scope": "太陽電池赤外",
+      "discovered_by": "PVEL-ViT周辺のViT＋熱画像題名検索",
+      "seed_id": "IT014",
+      "decision": "保留",
+      "reason": "抄録の11分類96.19%、正常を含む12分類95.55%。本文の分割と実評価ラベルの照合未完了",
+      "record_id": "",
+      "verification": "出版社索引の抄録・導入断片"
+    },
+    {
+      "candidate_id": "KRT025",
+      "title": "Improving Semiconductor Defect Classification in SEM Images via Domain Adaptation",
+      "doi": "10.1109/OJIES.2026.3663382",
+      "url": "https://www.researchgate.net/publication/400665300_Improving_Semiconductor_Defect_Classification_in_SEM_Images_via_Domain_Adaptation",
+      "scope": "半導体SEM",
+      "discovered_by": "DeepSEM-NetのDOIによる後続探索",
+      "seed_id": "IT015",
+      "decision": "関連",
+      "reason": "受理稿の分類backboneはImageNet事前学習ResNet-50。ViT系外",
+      "record_id": "",
+      "verification": "公開著者稿の該当箇所確認"
+    },
+    {
+      "candidate_id": "KRT026",
+      "title": "BWD-DETR: A Robust Framework for Bright-Field Wafer Defect Detection",
+      "doi": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12900135/",
+      "scope": "半導体明視野画像",
+      "discovered_by": "DeepSEM-NetのDOIによる後続探索",
+      "seed_id": "IT015",
+      "decision": "関連",
+      "reason": "Bright-field waferの型付きDETR検出。独立した画像分類値は確認せず",
+      "record_id": "",
+      "verification": "原著索引の参照箇所と検出方式を確認"
+    }
+  ],
+  "citation_edges": [
+    {
+      "edge_id": "ERT001",
+      "seed_id": "IT003",
+      "candidate_id": "KRT006",
+      "direction": "後方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://www.mdpi.com/2076-3417/16/6/3022",
+      "locator": "§2; References [8]",
+      "notes": "著者はHao Wei。2024年オンライン公開、2025年巻号"
+    },
+    {
+      "edge_id": "ERT002",
+      "seed_id": "IT003",
+      "candidate_id": "KRT007",
+      "direction": "後方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://www.mdpi.com/2076-3417/16/6/3022",
+      "locator": "References [1]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT003",
+      "seed_id": "IT003",
+      "candidate_id": "KRT008",
+      "direction": "後方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://www.mdpi.com/2076-3417/16/6/3022",
+      "locator": "References [2]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT004",
+      "seed_id": "IT004",
+      "candidate_id": "KRT004",
+      "direction": "後方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://arxiv.org/pdf/2506.03345",
+      "locator": "§II; §VI References [7]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT005",
+      "seed_id": "IT004",
+      "candidate_id": "KRT009",
+      "direction": "後方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://arxiv.org/pdf/2506.03345",
+      "locator": "§II; §VI References [1]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT006",
+      "seed_id": "IT004",
+      "candidate_id": "KRT010",
+      "direction": "前方",
+      "relation_status": "確認済み（原著の題名・全著者一致、引用DOI／会議名不一致）",
+      "evidence_url": "https://www.nature.com/articles/s41598-026-63864-7",
+      "locator": "References [20]",
+      "notes": "引用元のACM書誌はASMCの書誌と矛盾。題名・全著者が一致する引用のみ記録し、引用元DOIをIT004に採用しない"
+    },
+    {
+      "edge_id": "ERT007",
+      "seed_id": "IT005",
+      "candidate_id": "KRT011",
+      "direction": "後方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://arxiv.org/pdf/2504.02494",
+      "locator": "§V Table V; References [17]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT008",
+      "seed_id": "IT005",
+      "candidate_id": "KRT012",
+      "direction": "後方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://arxiv.org/pdf/2504.02494",
+      "locator": "References [20]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT009",
+      "seed_id": "IT005",
+      "candidate_id": "KRT016",
+      "direction": "前方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://arxiv.org/html/2610.28949v1",
+      "locator": "§2; References Mohammad and Ryu (2025)",
+      "notes": "原著にarXiv:2504.02494記載"
+    },
+    {
+      "edge_id": "ERT010",
+      "seed_id": "IT005",
+      "candidate_id": "KRT017",
+      "direction": "前方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://arxiv.org/html/2604.27629v1",
+      "locator": "§2.1; References [8]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT011",
+      "seed_id": "IT005",
+      "candidate_id": "KRT018",
+      "direction": "関連",
+      "relation_status": "未確認（版関係の推定、引用関係未確認）",
+      "evidence_url": "https://www.nature.com/articles/s41598-026-63752-0",
+      "locator": "Abstract; Article metadata",
+      "notes": "引用件数に含めない"
+    },
+    {
+      "edge_id": "ERT012",
+      "seed_id": "IT006",
+      "candidate_id": "KRT013",
+      "direction": "後方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://globals.ieice.org/en_publications/elex/10.1587/elex.21.20240054/_f",
+      "locator": "References [7]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT013",
+      "seed_id": "IT006",
+      "candidate_id": "KRT014",
+      "direction": "後方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://globals.ieice.org/en_publications/elex/10.1587/elex.21.20240054/_f",
+      "locator": "References [8]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT014",
+      "seed_id": "IT006",
+      "candidate_id": "KRT015",
+      "direction": "前方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://globals.ieice.org/en_transactions/fundamentals/10.1587/transfun.2025EAP1012/_f",
+      "locator": "§1; References [15]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT015",
+      "seed_id": "IT009",
+      "candidate_id": "KRT019",
+      "direction": "後方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://arxiv.org/html/2608.12725v1",
+      "locator": "§2.1; §4.7; References [14]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT016",
+      "seed_id": "IT009",
+      "candidate_id": "KRT020",
+      "direction": "後方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://arxiv.org/html/2608.12725v1",
+      "locator": "§2.1; References [26]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT017",
+      "seed_id": "IT009",
+      "candidate_id": "KRT021",
+      "direction": "関連",
+      "relation_status": "未確認（テーマ検索のみ）",
+      "evidence_url": "https://www.mdpi.com/1996-1073/19/2/462",
+      "locator": "§3–4",
+      "notes": "ELと熱画像で撮像が異なる"
+    },
+    {
+      "edge_id": "ERT018",
+      "seed_id": "IT003",
+      "candidate_id": "KRT022",
+      "direction": "関連",
+      "relation_status": "未確認（テーマ検索のみ）",
+      "evidence_url": "https://www.mdpi.com/2073-8994/17/8/1313",
+      "locator": "§3–4",
+      "notes": "独立の鋼板分類論文"
+    },
+    {
+      "edge_id": "ERT019",
+      "seed_id": "IT009",
+      "candidate_id": "KRT023",
+      "direction": "関連",
+      "relation_status": "未確認（テーマ検索のみ）",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S2590123026010492",
+      "locator": "Abstract",
+      "notes": "熱画像、生成データ補完というテーマ上の関連"
+    },
+    {
+      "edge_id": "ERT020",
+      "seed_id": "IT015",
+      "candidate_id": "KRT025",
+      "direction": "前方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://www.researchgate.net/publication/400665300_Improving_Semiconductor_Defect_Classification_in_SEM_Images_via_Domain_Adaptation",
+      "locator": "References [13]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERT021",
+      "seed_id": "IT015",
+      "candidate_id": "KRT026",
+      "direction": "前方",
+      "relation_status": "確認済み（原著参考文献）",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12900135/",
+      "locator": "References [2]",
+      "notes": "索引上の原著References欄でDOI一致"
+    }
+  ],
+  "retrieval_attempts": [
+    {
+      "attempt_id": "ART001",
+      "candidate_id": "KRT001",
+      "record_id": "IT012",
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003352160",
+      "route": "KCI書誌・著者抄録",
+      "executed_at": "2026-11-11T08:47:30.355+09:00",
+      "result": "200、抄録と学術誌情報。本文PDFリンクを取得できず",
+      "verification": "抄録のみ",
+      "next_action": "6原語ラベル、分割、全モデルの表を取得"
+    },
+    {
+      "attempt_id": "ART002",
+      "candidate_id": "KRT001",
+      "record_id": "IT012",
+      "url": "https://doi.org/10.7236/IJIBC.2026.18.3.59",
+      "route": "DOI→出版社",
+      "executed_at": "2026-11-11T08:48:19.592+09:00",
+      "result": "Cache miss",
+      "verification": "取得失敗",
+      "next_action": "出版社巻号から本文照合"
+    },
+    {
+      "attempt_id": "ART003",
+      "candidate_id": "KRT001",
+      "record_id": "IT012",
+      "url": "https://www.ijibc.org/",
+      "route": "IAAI公式雑誌サイト",
+      "executed_at": "2026-11-11T08:49:42.689+09:00",
+      "result": "502 Bad Gateway",
+      "verification": "取得失敗",
+      "next_action": "公式サイト回復後に18(3), pp.59–69を取得"
+    },
+    {
+      "attempt_id": "ART004",
+      "candidate_id": "KRT001",
+      "record_id": "IT012",
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003352160",
+      "route": "KCI公開書誌別URL",
+      "executed_at": "2026-11-11T08:58:22.908+09:00",
+      "result": "このツールでアクセス不可",
+      "verification": "取得失敗",
+      "next_action": "KCI通常ページの本文提供先を確認"
+    },
+    {
+      "attempt_id": "ART005",
+      "candidate_id": "KRT001",
+      "record_id": "IT012",
+      "url": "https://koreascience.kr/",
+      "route": "公的配信・著者機関のサイト限定探索",
+      "executed_at": "2026-11-11T08:49:15.750+09:00",
+      "result": "同誌別論文あり、当該論文本文の有効URLなし",
+      "verification": "探索範囲で未発見",
+      "next_action": "出版社又は機関所蔵で確認"
+    },
+    {
+      "attempt_id": "ART006",
+      "candidate_id": "KRT002",
+      "record_id": "IT013",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1526612526003907",
+      "route": "出版社刊行ページ",
+      "executed_at": "2026-11-11T08:47:30.355+09:00",
+      "result": "403 Forbidden",
+      "verification": "本文未取得",
+      "next_action": "結果の分類値と分割表を確認"
+    },
+    {
+      "attempt_id": "ART007",
+      "candidate_id": "KRT002",
+      "record_id": "IT013",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1526612526003907",
+      "route": "出版社索引（abs経路）",
+      "executed_at": "2026-11-11T08:50:16.979+09:00",
+      "result": "Problem description・Resultsプレビューと抄録を取得",
+      "verification": "該当箇所のプレビュー",
+      "next_action": "本文入手後に実験評価と工程状態ラベルを照合"
+    },
+    {
+      "attempt_id": "ART008",
+      "candidate_id": "KRT002",
+      "record_id": "IT013",
+      "url": "https://scholarbank.nus.edu.sg/",
+      "route": "DOI・著者名によるNUS ScholarBank／A*STAR／arXiv著者版検索",
+      "executed_at": "2026-11-11T08:47:21.260+09:00",
+      "result": "当該公開著者版の有効URLを得られず",
+      "verification": "探索範囲で未発見",
+      "next_action": "著者機関公開版の新規公開を確認"
+    },
+    {
+      "attempt_id": "ART009",
+      "candidate_id": "KRT003",
+      "record_id": "IT014",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1568494626009427",
+      "route": "出版社刊行ページ",
+      "executed_at": "2026-11-11T08:47:30.355+09:00",
+      "result": "403 Forbidden",
+      "verification": "本文未取得",
+      "next_action": "原語ラベル・分割表を確認"
+    },
+    {
+      "attempt_id": "ART010",
+      "candidate_id": "KRT003",
+      "record_id": "IT014",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1568494626009427",
+      "route": "出版社抄録の索引",
+      "executed_at": "2026-11-11T08:50:34.619+09:00",
+      "result": "モデル、比較値、Accuracyを取得",
+      "verification": "抄録のみ",
+      "next_action": "分類ラベルと分割の原著照合"
+    },
+    {
+      "attempt_id": "ART011",
+      "candidate_id": "KRT003",
+      "record_id": "IT014",
+      "url": "https://elkmuh.ozal.edu.tr/page/549",
+      "route": "著者所属大学の公式業績一覧",
+      "executed_at": "2026-11-11T08:47:21.260+09:00",
+      "result": "題名・DOI掲載、公開PDFリンクなし",
+      "verification": "書誌のみ",
+      "next_action": "所属大学リポジトリの著者版公開を確認"
+    },
+    {
+      "attempt_id": "ART012",
+      "candidate_id": "KRT003",
+      "record_id": "IT014",
+      "url": "https://abs.firat.edu.tr/performance/details-by-email/rcoteli?category=YAYIN&lang=en",
+      "route": "共同著者所属大学業績",
+      "executed_at": "2026-11-11T08:50:34.619+09:00",
+      "result": "題名・DOIの業績記録を取得、本文PDFなし",
+      "verification": "書誌のみ",
+      "next_action": "共同著者の公開版を再確認"
+    },
+    {
+      "attempt_id": "ART013",
+      "candidate_id": "KRT004",
+      "record_id": "IT015",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0360835224004224",
+      "route": "出版社抄録・章プレビュー",
+      "executed_at": "2026-11-11T08:50:16.979+09:00",
+      "result": "Abstract・Datasetの一部を取得、ラベル列・分割表は範囲外",
+      "verification": "抄録／プレビュー",
+      "next_action": "原著PDFで5／6型の実名、分割、拡張条件"
+    },
+    {
+      "attempt_id": "ART014",
+      "candidate_id": "KRT004",
+      "record_id": "IT015",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0360835224004224",
+      "route": "出版社刊行ページ直接取得",
+      "executed_at": "2026-11-11T08:49:42.689+09:00",
+      "result": "403 Forbidden",
+      "verification": "本文未取得",
+      "next_action": "出版社正規経路の本文"
+    },
+    {
+      "attempt_id": "ART015",
+      "candidate_id": "KRT004",
+      "record_id": "IT015",
+      "url": "https://papers.ssrn.com/sol3/Delivery.cfm/b8431280-7cb3-4478-84d2-beab41dcaa23-MECA.pdf?abstractid=4765199&mirid=1",
+      "route": "著者SSRN版 DOI 10.2139/ssrn.4765199",
+      "executed_at": "2026-11-11T08:48:11.576+09:00",
+      "result": "検索索引は書誌と抄録、直PDFは403",
+      "verification": "抄録のみ",
+      "next_action": "SSRN公開PDFの取得経路再確認"
+    },
+    {
+      "attempt_id": "ART016",
+      "candidate_id": "KRT004",
+      "record_id": "IT015",
+      "url": "https://ic.zju.edu.cn/_upload/article/files/a7/49/4cdc34bf4cd1bec82f6c9f280337/2ed0ba14-53bc-4b9a-8421-c2751974a96b.pdf",
+      "route": "浙江大学公式ドメイン",
+      "executed_at": "2026-11-11T08:48:28.808+09:00",
+      "result": "大学推薦資料で題名確認、論文PDFの提供なし",
+      "verification": "機関資料のみ",
+      "next_action": "浙江大学研究室公開物／機関リポジトリの確認"
+    },
+    {
+      "attempt_id": "ART017",
+      "candidate_id": "KRT005",
+      "record_id": "IT016",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0143816624006614",
+      "route": "出版社刊行ページ",
+      "executed_at": "2026-11-11T08:47:30.355+09:00",
+      "result": "403 Forbidden",
+      "verification": "本文未取得",
+      "next_action": "LoRAのbackboneとラベルを本文確認"
+    },
+    {
+      "attempt_id": "ART018",
+      "candidate_id": "KRT005",
+      "record_id": "IT016",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0143816624006614",
+      "route": "出版社抄録の索引",
+      "executed_at": "2026-11-11T08:50:34.619+09:00",
+      "result": "LPBFの完全一致率などの抄録、分割・クラスなし",
+      "verification": "抄録のみ",
+      "next_action": "原著本文を取得"
+    },
+    {
+      "attempt_id": "ART019",
+      "candidate_id": "KRT005",
+      "record_id": "IT016",
+      "url": "",
+      "route": "DOI・著者名による合法な著者公開版／機関版探索",
+      "executed_at": "2026-11-11T08:47:21.260+09:00",
+      "result": "公開著者版の有効URLを得られず",
+      "verification": "探索範囲で未発見",
+      "next_action": "公開リポジトリと著者版を再確認"
+    },
+    {
+      "attempt_id": "ART020",
+      "candidate_id": "KRT006",
+      "record_id": "",
+      "url": "https://link.springer.com/article/10.1007/s11227-024-06662-0",
+      "route": "出版社刊行ページ",
+      "executed_at": "2026-11-11T08:48:39.078+09:00",
+      "result": "抄録と書誌を取得",
+      "verification": "抄録のみ",
+      "next_action": "分類値とラベル・分割表"
+    },
+    {
+      "attempt_id": "ART021",
+      "candidate_id": "KRT006",
+      "record_id": "",
+      "url": "https://link.springer.com/content/pdf/10.1007/s11227-024-06662-0.pdf",
+      "route": "Springer刊行PDF",
+      "executed_at": "2026-11-11T08:49:08.275+09:00",
+      "result": "本文PDFではなく抄録ページへ転送",
+      "verification": "本文未取得",
+      "next_action": "著者版の公開リンクを追う"
+    },
+    {
+      "attempt_id": "ART022",
+      "candidate_id": "KRT006",
+      "record_id": "",
+      "url": "https://github.com/Vzoooong/RFAConv-CBM-ViT",
+      "route": "出版社が指定する著者コード",
+      "executed_at": "2026-11-11T08:48:49.857+09:00",
+      "result": "READMEで鋼材等のデータセットを確認",
+      "verification": "公式コードの資料のみ",
+      "next_action": "使用データ範囲と評価プロトコル照合"
+    },
+    {
+      "attempt_id": "ART023",
+      "candidate_id": "KRT011",
+      "record_id": "",
+      "url": "https://doi.org/10.1109/TSM.2022.3156583",
+      "route": "IEEE刊行DOI",
+      "executed_at": "2026-11-11T08:58:22.908+09:00",
+      "result": "このツールでアクセス不可",
+      "verification": "本文未取得",
+      "next_action": "著者機関公開版とIEEE本文を取得"
+    },
+    {
+      "attempt_id": "ART024",
+      "candidate_id": "KRT011",
+      "record_id": "",
+      "url": "https://corp.eurekamag.com/research/095/070/095070374.php",
+      "route": "題名・DOI／UESTC著者版検索",
+      "executed_at": "2026-11-11T08:48:39.078+09:00",
+      "result": "二次書誌と抄録転載・大学季報、論文本文なし",
+      "verification": "抄録のみ",
+      "next_action": "元論文で各クラス・分割と性能を確認"
+    },
+    {
+      "attempt_id": "ART025",
+      "candidate_id": "KRT012",
+      "record_id": "IVT2001",
+      "url": "https://factory.skku.edu/factory/research.do?articleNo=160425&attachNo=128003&mode=download",
+      "route": "成均館大公開の刊行PDF",
+      "executed_at": "2026-11-11T08:52:50.606+09:00",
+      "result": "本文§3–4・評価分割・分類表を取得",
+      "verification": "本文の該当箇所確認",
+      "next_action": "採用"
+    },
+    {
+      "attempt_id": "ART026",
+      "candidate_id": "KRT012",
+      "record_id": "IVT2001",
+      "url": "https://wseas.com/journals/isa/2023/a545109-014%282023%29.pdf",
+      "route": "出版社刊行版PDFテキスト表示",
+      "executed_at": "2026-11-11T08:56:45.485+09:00",
+      "result": "Table 3の13組とFig. 8キャプションの表記差を確認",
+      "verification": "本文の該当箇所確認",
+      "next_action": "ラベルはTable 3を採用"
+    },
+    {
+      "attempt_id": "ART027",
+      "candidate_id": "KRT018",
+      "record_id": "IT005",
+      "url": "https://www.nature.com/articles/s41598-026-63752-0.pdf",
+      "route": "Scientific Reports採択稿の出版社PDF",
+      "executed_at": "2026-11-11T08:48:49.857+09:00",
+      "result": "IDPリダイレクトで本文取得失敗。出版社検索索引で抄録・書誌・補遺見出し確認",
+      "verification": "抄録のみ",
+      "next_action": "採択稿の数値指標とarXiv表を照合"
+    },
+    {
+      "attempt_id": "ART028",
+      "candidate_id": "KRT021",
+      "record_id": "IVT2002",
+      "url": "https://www.mdpi.com/1996-1073/19/2/462",
+      "route": "出版社本文",
+      "executed_at": "2026-11-11T08:48:04.387+09:00",
+      "result": "分割、原語8ラベル、クラス別・集約性能取得",
+      "verification": "本文の該当箇所確認",
+      "next_action": "採用"
+    },
+    {
+      "attempt_id": "ART029",
+      "candidate_id": "KRT022",
+      "record_id": "IVT2003",
+      "url": "https://mdpi-res.com/d_attachment/symmetry/symmetry-17-01313/article_deploy/symmetry-17-01313.pdf?version=1755075383",
+      "route": "出版社刊行版PDF",
+      "executed_at": "2026-11-11T08:52:50.606+09:00",
+      "result": "6ラベル、分割と分類性能確認",
+      "verification": "本文の該当箇所確認",
+      "next_action": "採用"
+    },
+    {
+      "attempt_id": "ART030",
+      "candidate_id": "KRT023",
+      "record_id": "",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2590123026010492/pdfft",
+      "route": "出版社公開PDF",
+      "executed_at": "2026-11-11T08:51:11.805+09:00",
+      "result": "403。索引で抄録・分類集計値まで取得",
+      "verification": "抄録のみ",
+      "next_action": "12ラベル、分割、平均F1の定義確認"
+    },
+    {
+      "attempt_id": "ART031",
+      "candidate_id": "KRT024",
+      "record_id": "",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0196890424006599",
+      "route": "出版社抄録索引",
+      "executed_at": "2026-11-11T08:47:37.360+09:00",
+      "result": "11種類／12クラスとAccuracyを取得、分割本文未取得",
+      "verification": "抄録のみ",
+      "next_action": "原語と分割・群の重複を本文で確認"
+    }
+  ],
+  "seed_checks": [
+    {
+      "seed_id": "IT003",
+      "scope": "工業ViT",
+      "direction": "後方",
+      "method": "MDPI Referencesと本文の選択項目",
+      "executed_at": "2026-11-11T08:52:50.606+09:00",
+      "available_total": 26,
+      "screened_count": 3,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRT006",
+        "KRT007",
+        "KRT008"
+      ],
+      "notes": "参考文献26件のうち、分類原著と最も近い比較法等3件を個別記録"
+    },
+    {
+      "seed_id": "IT003",
+      "scope": "工業ViT",
+      "direction": "前方",
+      "method": "題名／DOI検索・OpenAlex API・OUCI／Mendeley／大学集計",
+      "executed_at": "2026-11-11T08:49:42.689+09:00",
+      "available_total": null,
+      "screened_count": 0,
+      "scope_status": "取得失敗・検索範囲限定",
+      "candidate_ids": [],
+      "notes": "書誌集計は0〜4件で差があり、引用元本文を確認できる一覧を取得できず。FAX-Netはテーマ補足検索"
+    },
+    {
+      "seed_id": "IT004",
+      "scope": "工業ViT",
+      "direction": "後方",
+      "method": "arXiv PDF §IIとReferences",
+      "executed_at": "2026-11-11T08:50:45.420+09:00",
+      "available_total": 10,
+      "screened_count": 2,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRT004",
+        "KRT009"
+      ],
+      "notes": "モデル系の近いDeepSEM-NetとCNN比較を採否対象として登録"
+    },
+    {
+      "seed_id": "IT004",
+      "scope": "工業ViT",
+      "direction": "前方",
+      "method": "題名・会議DOI検索→候補原著のReferences確認",
+      "executed_at": "2026-11-11T08:51:11.805+09:00",
+      "available_total": null,
+      "screened_count": 1,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRT010"
+      ],
+      "notes": "候補原著References [20]で題名・全著者一致。記載DOIと誌名は別文献のため引用書誌の矛盾を明記。IEEE公式はbot検証"
+    },
+    {
+      "seed_id": "IT005",
+      "scope": "工業ViT",
+      "direction": "後方",
+      "method": "arXiv PDF Referencesと候補原著照合",
+      "executed_at": "2026-11-11T08:47:48.409+09:00",
+      "available_total": 39,
+      "screened_count": 2,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRT011",
+        "KRT012"
+      ],
+      "notes": "近縁のTransformer 2件を優先。MSF-Trans保留、TransUNet採用"
+    },
+    {
+      "seed_id": "IT005",
+      "scope": "工業ViT",
+      "direction": "前方",
+      "method": "題名・索引を手掛かりに候補arXivの参考文献を照合",
+      "executed_at": "2026-11-11T08:49:42.689+09:00",
+      "available_total": null,
+      "screened_count": 2,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRT016",
+        "KRT017"
+      ],
+      "notes": "非公式索引2件の候補は原著引用を確認。OpenAlex著者画面では被引用4件との表示もあり、索引全件の処理は未完了"
+    },
+    {
+      "seed_id": "IT006",
+      "scope": "工業ViT",
+      "direction": "後方",
+      "method": "IEICE原著Referencesの混合欠陥分類",
+      "executed_at": "2026-11-11T08:50:45.420+09:00",
+      "available_total": 33,
+      "screened_count": 2,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRT013",
+        "KRT014"
+      ],
+      "notes": "引用33件中、対象に近い [7] [8]。今回のViT系対象外"
+    },
+    {
+      "seed_id": "IT006",
+      "scope": "工業ViT",
+      "direction": "前方",
+      "method": "UnionMixup題名検索、IEICE/J-STAGEの引用箇所",
+      "executed_at": "2026-11-11T08:47:48.409+09:00",
+      "available_total": null,
+      "screened_count": 1,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRT015"
+      ],
+      "notes": "後続QAOA-SVMの原著引用を確認。ViT系比較行へは追加なし"
+    },
+    {
+      "seed_id": "IT009",
+      "scope": "工業ViT",
+      "direction": "後方",
+      "method": "arXiv著者版§2.1・§4.7とReferences",
+      "executed_at": "2026-11-11T08:48:19.592+09:00",
+      "available_total": 36,
+      "screened_count": 2,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRT019",
+        "KRT020"
+      ],
+      "notes": "ラベル元のUCF-EL-DefectとPVEL-AD。36件全件精査は未実施"
+    },
+    {
+      "seed_id": "IT009",
+      "scope": "工業ViT",
+      "direction": "前方",
+      "method": "DOI・題名検索、Crossref APIと著者コード",
+      "executed_at": "2026-11-11T08:49:42.689+09:00",
+      "available_total": null,
+      "screened_count": 0,
+      "scope_status": "取得失敗・検索範囲限定",
+      "candidate_ids": [],
+      "notes": "独立引用元を確認できず。著者コード・データと刊行版のみ確認。Energies/IP-ViTはテーマ候補"
+    },
+    {
+      "seed_id": "IT015",
+      "scope": "工業ViT",
+      "direction": "前方",
+      "method": "題名・DOI検索でDeepSEM-Netの後続原著を照合",
+      "executed_at": "2026-11-11T08:50:16.979+09:00",
+      "available_total": null,
+      "screened_count": 2,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRT025",
+        "KRT026"
+      ],
+      "notes": "ResNet-50によるドメイン適応と明視野DETR。両候補とも主採用基準外"
+    }
+  ],
+  "notes": [
+    "代表指標 IVT2001｜Accuracy 99.5%、F1 99.5%（原著0.995）。Mixed-WM38のうち2種類混合13組、評価2,600マップ。画像単位の組み合わせ分類の値で、セグメンテーション性能とは区別。",
+    "代表指標 IVT2002｜Swin-T Accuracy 89.48%、macro F1 80.50%。IR熱画像の正常＋7種類、テスト1,920枚。クラス不均衡の影響を読むためweighted F1 89.43%も併記。",
+    "代表指標 IVT2003｜FAX-Net Accuracy 97.78%、クラス平均F1 97.51%。NEU-CLSの6種類、学習／テスト8:2。単一鋼材データセットでの成績。",
+    "既存保留5件の再判定は全件保留。本文取得を試行し、IT013は工程状態4ラベルを確認、IT015は著者SSRN版の所在を確認。IT012 0.99743はConvNeXt-Tinyのmacro F1、IT014 95.84%はPVEL-ViTの抄録Accuracy、IT015 97.25%は5種類のSEM分類Accuracy、IT016 93.28%はL-PBFの完全一致率。これらは採用比較値に加えない。",
+    "seed後方引用は選択的な掘り下げ。全件の独立原著確認、OpenAlex・Crossrefの前方一覧取得、ウェハmap研究のlot単位再評価は未完了。今回の採用3件のうち2件は補足テーマ検索で見つけた研究。",
+    "TransUNetの13クラスは出版社PDFのTable 3で確認。Fig. 8キャプションの重複ラベルは原著記載差として扱った。Webの図取得は未対応、直接ダウンロードは環境DNS解決失敗のため、画像のローカル保存は行っていない。"
+  ],
+  "performance_rows": [
+    {
+      "id": "IVT2001",
+      "name": "TransUNet（Kim et al., 2023）",
+      "metric": "Accuracy",
+      "value": 0.995,
+      "unit": "%",
+      "result": "99.5%",
+      "note": "Mixed-WM38の2種類混合13組。評価2,600マップ。Table 2。F1も0.995。"
+    },
+    {
+      "id": "IVT2002",
+      "name": "Swin-T（Ayunts et al., 2026）",
+      "metric": "macro F1",
+      "value": 0.805,
+      "unit": "%",
+      "result": "80.50%",
+      "note": "赤外熱画像の正常＋7異常種の階層8分類。テスト1,920画像。Tables 7, 12。Accuracy 89.48%。"
+    },
+    {
+      "id": "IVT2003",
+      "name": "FAX-Net（Jiang et al., 2025）",
+      "metric": "Accuracy",
+      "value": 0.9778,
+      "unit": "%",
+      "result": "97.78%",
+      "note": "鋼板NEU-CLS 6欠陥種類。学習／テスト8:2。Fig. 5。クラス平均F1 97.51%。"
+    }
+  ]
+}

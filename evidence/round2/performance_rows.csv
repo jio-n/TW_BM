@@ -1,0 +1,25 @@
+﻿id,name,metric,value,unit,result,note,bundle
+FW2001,Kumarほか HG-XAI,Accuracy,0.9308,%,確認（抄録）,4種。表面速度を変えた工具画像、人の判定支援あり。画像数と独立工具split未確認。,round2_wear.json
+FW2002,Agarwalほか 照明変化,Accuracy,0.96,%,確認（抄録）,4種、L1学習→L2試験。人の支援を含む。,round2_wear.json
+FW2002,Agarwalほか 照明変化,MCC,0.96,無次元,確認（抄録）,L2照明での結果。,round2_wear.json
+FW2002,Agarwalほか 照明変化,F1-score,0.97,無次元,確認（抄録）,L2照明での結果。F1平均化方式未確認。,round2_wear.json
+FW2003,Kählerほか 研削フラップホイール,Accuracy,0.954,%,関連研究,"形状3種、テスト3,564画像、工具単位split。切削刃の主比較外。",round2_wear.json
+FW2003,Kählerほか 研削フラップホイール,Accuracy,0.938,%,関連研究,"フラップ裂けの有無、テスト1,153画像。",round2_wear.json
+FIA06,Abdul Kadir・Yongほか 微細ドリル,Validation Accuracy,0.9926,%,確認（内部validation）,ContourOnly内部検証。BUE/Chipping。出版社号目次で正式掲載確認。主分割、独立工具外部試験は未確認。,round2_wear.json
+MM002,Yanほか MATWI,Accuracy,0.9312,%,保留,MATWI工具別テスト247件、3種。正確な先行公開日は未確認。,round2_wear.json
+MM002,Yanほか MATWI,Macro-F1,0.7709,%,保留,MATWI工具別テスト247件。画像単独比較は同一研究内。,round2_wear.json
+IVT2001,"TransUNet（Kim et al., 2023）",Accuracy,0.995,%,99.5%,"Mixed-WM38の2種類混合13組。評価2,600マップ。Table 2。F1も0.995。",round2_vit.json
+IVT2002,"Swin-T（Ayunts et al., 2026）",macro F1,0.805,%,80.50%,"赤外熱画像の正常＋7異常種の階層8分類。テスト1,920画像。Tables 7, 12。Accuracy 89.48%。",round2_vit.json
+IVT2003,"FAX-Net（Jiang et al., 2025）",Accuracy,0.9778,%,97.78%,鋼板NEU-CLS 6欠陥種類。学習／テスト8:2。Fig. 5。クラス平均F1 97.51%。,round2_vit.json
+IVL2001,Echo（MVTec-AD）,欠陥種類VQA Accuracy,0.7286,%,72.86%,Qwen2-VL 7B＋Echo、Table 1のMVTec-AD。,round2_vlm.json
+IVL2001,Echo（VisA）,欠陥種類VQA Accuracy,0.6235,%,62.35%,Qwen2-VL 7B＋Echo、Table 1のVisA。,round2_vlm.json
+IVL2002,Reason-IAD,欠陥種類VQA Accuracy,0.7507,%,75.07%,MMAD、Qwen3-VL-8B、正常参照1枚。v4 Table 1。,round2_vlm.json
+IVL2003,AgentIAD,欠陥種類VQA Accuracy,0.7273,%,72.73%,"MMAD 1,936学習／6,400評価サンプル、1-shot。v2 Table 1。",round2_vlm.json
+IVL2004,GLLS（MVTec）,欠陥種類VQA Accuracy,0.877,%,87.7%,Qwen3-VL-8B、1-shot、Table 1 MVTecのCls.列。,round2_vlm.json
+IVL2004,GLLS（VisA）,欠陥種類VQA Accuracy,0.835,%,83.5%,Qwen3-VL-8B、1-shot、Table 1 VisAのCls.列。,round2_vlm.json
+IVL2005,ADOPD,欠陥種類VQA Accuracy,0.5703,%,57.03%,Real-IADで学習、MMAD推論時に正常参照なし。Table 1。,round2_vlm.json
+IVL2006,EMIT,欠陥種類VQA Accuracy,0.8085,%,80.85%,InternVL3-8B、MMAD正常参照1枚と領域知識、Table 1。,round2_vlm.json
+IVL2007,InspectorGPT,欠陥種類VQA Accuracy,0.7532,%,75.32%,MMAD内20%学習／80%評価。Table 1。,round2_vlm.json
+IVL2008,SNAP-SEM（BEOL）,種類発見 F1,0.7825,0–1,0.7825,Table 2。Hungarian整合後のクラス発見。,round2_vlm.json
+IVL2008,SNAP-SEM（DEP）,種類発見 F1,0.9695,0–1,0.9695,Table 2。Hungarian整合後のクラス発見。,round2_vlm.json
+IVL2008,SNAP-SEM（DPR）,種類発見 F1,0.9411,0–1,0.9411,Table 2。Hungarian整合後のクラス発見。,round2_vlm.json

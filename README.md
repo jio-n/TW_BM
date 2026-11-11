@@ -1,18 +1,20 @@
 # 工具摩耗判定技術ベンチマーク
 
-基準日: 2026-10-20（日本時間）。国内外の商用ソリューションと原則2015年以降の学術研究を、根拠に追跡可能な形で比較する。既存リポジトリのコード・データは変更しない。
+最終更新: 2026-11-11（日本時間）。国内外の商用ソリューションと学術研究を根拠に追跡可能な形で比較する。広域調査の基準日は2026-10-20、種類分類の追加調査は2026-11-11。既存の研究開発コード・データは変更しない。
 
 ## 成果物と利用方法
 
-**論文ごとの実際の精度を見る場合**は、工具摩耗15本・工業欠陥38本をまとめた [性能値のExcel](outputs/classification_performance_summary.xlsx) / [CSV](outputs/classification_performance_summary.csv) / [数値の読み方と網羅性評価](reports/classification_performance_summary.md) を参照。Accuracy、Precision、Recall、F1等の数値と条件を並べ、保留・関連・数値未確認も残している。主要技術の俯瞰はできるが、論文の完全網羅や探索飽和は未確認。
+**論文ごとの実際の精度を見る場合**は、工具摩耗18本・工業欠陥49本をまとめた [性能値のExcel](outputs/classification_performance_summary.xlsx) / [CSV](outputs/classification_performance_summary.csv) / [数値の読み方](reports/classification_performance_summary.md) を参照。計67本＝主採用50本、保留6本、関連11本。Accuracy、Precision、Recall、F1等の数値と評価条件を併記し、数値未確認は埋めていない。
 
-2026-11-11の拡張調査として、**工業製品・材料の欠陥種類分類を行う視覚Transformer／VLM／MLLM論文**を追加した。主比較28本（視覚Transformer11、VLM系7、MLLM10）、関連5本、保留5本。入力画像、候補ラベル・プロンプト、参照画像を区別し、二値異常検出や種類付き領域検出との違いを記録している。主比較の1本は匿名の欠陥種類IDであり、名称との対応は未確認。
+引用追跡・保留再確認で主比較に新規12本を追加し、保留1本を採用へ移した。[追加調査結果](reports/round2_findings.md) / [探索の監査](reports/search_process_audit.md) / [再利用する探索手順・テンプレート・監査スクリプト](methods/README.md)。主要16本の両方向を追ったが、部分確認と未判定候補が残り、完全網羅・探索飽和は未確認。
+
+**工業製品・材料の欠陥種類分類を行う視覚Transformer／VLM／MLLM論文**は主比較38本（視覚Transformer14、VLM系7、MLLM17）、関連6本、保留5本。入力画像、候補ラベル・プロンプト、参照画像を区別し、二値異常検出や種類付き領域検出との違いを記録している。主比較の1本は匿名の欠陥種類IDであり、名称との対応は未確認。
 
 - [工業欠陥種類分類のExcel](outputs/industrial_defect_classification_benchmark.xlsx) / [CSV](outputs/industrial_defect_classification_benchmark.csv) / [モデル系統集計](outputs/industrial_model_family_summary.csv)
 - [日本語レポート・13章](reports/industrial_defect_classification_benchmark.md) / [網羅性・品質監査](reports/industrial_defect_classification_audit.md) / [調査仕様](reports/industrial_defect_classification_scope.md)
 - [代表12本の詳細](details/industrial_defect_classification/README.md) / [カバレッジ表](outputs/industrial_coverage.csv) / [出典・主張・検索・採否台帳](evidence/industrial_defect_classification/)
 
-2026-11-11の追加調査は、**工具画像から摩耗・損傷の種類名を分類する論文**に対象を絞った。画像のみ8本、画像を含むマルチモーダル1本、書誌等の保留2本、領域検出・分割の関連4本を分けて収録した。摩耗量・寿命予測、程度だけの段階分類は主比較から除外している。
+**工具画像から摩耗・損傷の種類名を分類する論文**は画像のみ11本、画像を含むマルチモーダル1本、先行公開日の保留1本、関連5本を分けて収録した。関連は領域検出・分割4本と研削工具の境界1本。摩耗量・寿命予測、程度だけの段階分類は主比較から除外している。
 
 - [種類分類に絞ったExcel](outputs/wear_type_classification_benchmark.xlsx) / [CSV](outputs/wear_type_classification_benchmark.csv)
 - [モデル系統別の集計](outputs/wear_type_model_family_summary.csv)：CNN、CNN特徴＋従来ML、視覚Transformer、VLM／MLLM等を分類。Excelの「モデル系統」シートと個別論文のフィルタにも反映。

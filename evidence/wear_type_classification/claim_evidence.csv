@@ -103,3 +103,24 @@ CFM_FIA09,SMF001,Abstract,,抄録確認
 CFM_FIA09,SFI016,Deep learning models節（YOLO12sとGhost Convolutionsの説明）,,出版社本文確認
 CFM_MM001,MMS001,§3 Fig. 2、§5.4 Algorithm 2、Appendix A Table A1,,全文確認
 CFM_MM002,MMS002,§3.1–3.4、§4.2 Fig. 5,,出版社プレビュー・検索索引の原文確認
+CRW001,SRW006,Abstract,,出版社抄録確認
+CRW002,SRW006,Abstract,,出版社抄録確認
+CRW003,SRW006,Abstract,,出版社抄録確認
+CRW004,SRW006,Abstract,,出版社抄録確認
+CRW005,SRW006,Abstract,,出版社抄録確認
+CRW006,SRW008,Abstract,,出版社抄録確認
+CRW007,SRW008,Abstract,,出版社抄録確認
+CRW008,SRW008,Abstract,,出版社抄録確認
+CRW009,SRW008,Abstract,,出版社抄録確認
+CRW010,SRW008,Abstract,,出版社抄録確認
+CRW011,SRW017,§3.3 Tables 1–2,,本文確認
+CRW012,SRW017,§4,,本文確認
+CRW013,SRW017,§3–4,,本文確認
+CRW014,SRW017,§5.2/5.3 Tables 5/8、§5.4,,本文確認
+CRW015,SRW017,§4 Table 3、§5.4,,本文確認
+CRW016,SRW011,Abstract、§§2.5/3.1–3.2、Table 1,,原稿テキスト抜粋確認
+CRW017,SRW038,message.issued、message.created、published-online欠落,,巻号確認
+CRW018,SRW015,Abstract、Fig. 15、Table 3,,出版社Abstract・章抜粋確認
+CRW019,SRW016,Abstract、Access,,出版社Abstract・参考文献確認
+CRW016,SRW044,article-1136、著者一覧、pp.1–12,,出版社号目次を直接確認
+CRW016,SRW045,HTML citation_author/citation_date/citation_volume/citation_issue/citation_firstpage/citation_lastpage,,公式記事メタデータ確認

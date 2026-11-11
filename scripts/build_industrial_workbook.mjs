@@ -39,7 +39,13 @@ table('主張と根拠',d.claim_evidence.map(l=>({...claims.get(l.claim_id),...l
 wb.recalculate();
 const check=await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#NUM!|#SPILL!|#CALC!',options:{useRegex:true,maxResults:30},summary:'formula error scan'});
 await fs.writeFile(path.join(qa,'formula_errors.ndjson'),check.ndjson);
-for(const sh of wb.worksheets.items){const pic=await wb.render({sheetName:sh.name,range:sh.name==='モデル系統'?'A1:E8':'A1:F7',scale:1.2,format:'png'});await fs.writeFile(path.join(qa,sh.name+'.png'),new Uint8Array(await pic.arrayBuffer()));}
+for(const sh of wb.worksheets.items){
+ const pic=await wb.render({sheetName:sh.name,range:sh.name==='モデル系統'?'A1:E8':'A1:F7',scale:1.2,format:'png'});await fs.writeFile(path.join(qa,sh.name+'.png'),new Uint8Array(await pic.arrayBuffer()));
+ if(['視覚Transformer','MLLM・LLM'].includes(sh.name)){
+  const count=main.filter(r=>r.family_group===(sh.name==='視覚Transformer'?'視覚Transformer':'MLLM')).length;
+  const tail=await wb.render({sheetName:sh.name,range:`A${count+2}:F${count+4}`,scale:1.2,format:'png'});await fs.writeFile(path.join(qa,sh.name+'_追加行.png'),new Uint8Array(await tail.arrayBuffer()));
+ }
+}
 const file='industrial_defect_classification_benchmark.xlsx';
 await(await SpreadsheetFile.exportXlsx(wb)).save(path.join(root,'outputs',file));
 await fs.rename(path.join(root,'outputs',file+'.inspect.ndjson'),path.join(root,'evidence/workbook_qa',file+'.inspect.ndjson'));

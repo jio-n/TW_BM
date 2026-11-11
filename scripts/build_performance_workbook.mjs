@@ -35,6 +35,8 @@ const scan=await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAM
 await fs.writeFile(path.join(qa,'formula_errors.ndjson'),scan.ndjson);
 for(const sh of wb.worksheets.items){
  const pic=await wb.render({sheetName:sh.name,range:'A1:H8',scale:1.4,format:'png'});await fs.writeFile(path.join(qa,sh.name+'.png'),new Uint8Array(await pic.arrayBuffer()));
+ const count=d.records.filter(r=>r.scope===sh.name).length;
+ const tail=await wb.render({sheetName:sh.name,range:`A${count+2}:H${count+4}`,scale:1.2,format:'png'});await fs.writeFile(path.join(qa,sh.name+'_追加行.png'),new Uint8Array(await tail.arrayBuffer()));
  const inspected=await wb.inspect({kind:'table',range:`${sh.name}!A4:H8`,include:'values,formulas',tableMaxRows:5,tableMaxCols:8,maxChars:3500});await fs.writeFile(path.join(root,'evidence/workbook_qa','performance_'+sh.name+'.inspect.ndjson'),inspected.ndjson);
 }
 const file='classification_performance_summary.xlsx';await(await SpreadsheetFile.exportXlsx(wb)).save(path.join(root,'outputs',file));

@@ -1,0 +1,77 @@
+﻿attempt_id,candidate_id,record_id,url,route,executed_at,result,verification,next_action,bundle
+ARW001,WR2C001,FW2001,https://link.springer.com/article/10.1007/s10845-024-02476-2,出版社,2026-11-10 23:48:06 UTC,抄録・書誌取得。本文は購読プレビュー。,出版社抄録,評価画像数、分割、介入ルールの原著本文が追加課題。,round2_wear.json
+ARW002,WR2C001,FW2001,https://scholar.iitj.ac.in/handle/123456789/37001,著者所属機関,2026-11-10 23:47:34 UTC,原著抄録とDOI取得。,機関抄録,本文の公開経路は未発見。,round2_wear.json
+ARW003,WR2C002,FW2002,https://www.sciencedirect.com/science/article/pii/S2213846325001154,出版社,2026-11-10 23:47:47 UTC,公式索引で原著Abstractを取得。直開き／DOI経由はWeb取得不可。,抄録確認,本文表・工具ID分離が未確認。,round2_wear.json
+ARW004,WR2C002,FW2002,https://scholar.iitj.ac.in/entities/publication/0909f614-bf46-404c-935b-4cd772ed08bc,著者所属機関,2026-11-10 23:46:09 UTC,索引で書誌・抄録、直開きタイムアウト。,索引確認,公開本文が得られればL2の母数とF1平均化を確認。,round2_wear.json
+ARW005,WR2C003,,https://link.springer.com/article/10.1007/s00170-026-17619-3,出版社,2026-11-10 23:48:06 UTC,抄録・References取得。本文は購読プレビュー。,抄録確認,原著の4ラベル、型式、評価画像IDを確認できる公開著者版を探索。,round2_wear.json
+ARW006,WR2C004,FIA06,https://semarakilmu.my/index.php/sijaset/issue/view/285,出版社巻号,2026-11-10 23:48:52 UTC,直接HTTPS取得で当該号の実記事とpp.1–12、著者一覧を確認。,出版社目次・正式掲載確認,記事本文の取得によりDOIの記載と主分割を確認。,round2_wear.json
+ARW007,WR2C004,FIA06,https://www.researchgate.net/publication/406927055_Tool_Wear_Classification_Based_on_Convolutional_Neural_Network_in_Micro_Drilling,著者公開原稿,2026-11-10 23:48:06 UTC,著者原稿の抄録と表・章の一部取得。,原稿抜粋確認,学習・検証の内訳、公開版書誌を確認。,round2_wear.json
+ARW008,WR2C004,FIA06,https://www.researchgate.net/publication/profile/Nurul-Husna-Mohd-Yusoff/publication/406927055_Tool_Wear_Classification_Based_on_Convolutional_Neural_Network_in_Micro_Drilling/links/6a2a8de3d551e312d71fce70/Tool-Wear-Classification-Based-on-Convolutional-Neural-Network-in-Micro-Drilling.pdf,著者公開PDFリンク,2026-11-10 23:52:22 UTC,Web cache missで本文を取得できず。,取得失敗,出版社記事から別の合法経路を確認。,round2_wear.json
+ARW009,WR2C005,MM002,https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963,出版社,2026-11-10 23:45:46 UTC,プレビュー索引で2027巻号と技術・性能確認。先行日表示なし。,原著プレビュー,著者機関版の初頁出版注記を照合。,round2_wear.json
+ARW010,WR2C005,MM002,https://me.sjtu.edu.cn/upload/ueditor/file/20260820/1787213442741477.pdf,著者所属機関PDF,2026-11-10 23:46:49 UTC,公開PDFの冒頭ページ描画を試行。,取得・描画状況を別途確認,正確なAvailable online表記が得られるまで保留。,round2_wear.json
+ARW011,WR2C005,MM002,https://api.crossref.org/works/10.1016/j.ress.2026.113287,Crossref／既保存の一次メタデータ,2026-11-10 23:45:46 UTC,巻号2027-01。created/depositedはあるがpublished-onlineの欄なし。,書誌確認,巻号と先行公開日を分ける。,round2_wear.json
+ARW012,WR2C006,R0116,https://www.sciencedirect.com/science/article/pii/S1526612526006341,出版社,2026-11-10 23:45:46 UTC,Abstract、実験条件抜粋、Fig.15/Table 3と結論を取得。,出版社章抜粋,種類分類は当該実験の出力と確認できない。,round2_wear.json
+ARW013,WR2C007,R0118,https://link.springer.com/article/10.1007/s11227-025-07650-8,出版社,2026-11-10 23:46:09 UTC,抄録と参考文献を取得。本文は購読制限。,抄録確認,クラス原語・評価分割・数値を本文で再確認。,round2_wear.json
+ARW014,WR2C007,R0118,https://link.springer.com/article/10.1007/s11227-025-07650-8/tables/5,出版社表の公開経路,2026-11-10 23:51:02 UTC,Tables 1–6への直接照会はすべて取得不能。,取得失敗,著者公開稿未発見。,round2_wear.json
+ARW015,WR2C007,R0118,https://www.researchgate.net/publication/374356334_On-line_tool_wear_monitoring_under_variable_milling_conditions_based_on_a_condition-adaptive_hidden_semi-Markov_model,著者版探索（別文献の引用欄）,2026-11-10 23:50:50 UTC,別文献ページの引用書誌とGPVT抜粋。R0118の本文・原語クラス未取得。,出力ラベル未確認,正式リポジトリの公開著者稿を引き続き探索。,round2_wear.json
+ARW016,WR2C021,,https://doi.org/10.1115/IMECE2023-113344,出版社DOI,2026-11-10 23:50:40 UTC,DOI先がWebで取得不可。公式プログラムとClemson機関抄録で照合。,原著本文未取得,3種類の正式ラベルと数値を本文で確認。,round2_wear.json
+ARW017,WR2C026,,https://arpi.unipi.it/handle/11568/177989,著者所属機関,2026-11-10 23:56:54 UTC,抄録索引を確認。詳細ページは403。,抄録索引確認,原著本文と実験指標を確認。,round2_wear.json
+ARW018,WR2C004,FIA06,https://semarakilmu.my/index.php/sijaset/article/view/1136,出版社記事の直接HTTPS,2026-11-11 00:03:38 UTC,公式記事HTML取得。公開日2026-06-09・著者順・pp.1–12。DOI表示・citation_doiなし。,出版社の正式掲載と書誌確認,正式版PDFの比較でクラス評価・分割・著者順を照合。,round2_wear.json
+ART001,KRT001,IT012,https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003352160,KCI書誌・著者抄録,2026-11-11T08:47:30.355+09:00,200、抄録と学術誌情報。本文PDFリンクを取得できず,抄録のみ,6原語ラベル、分割、全モデルの表を取得,round2_vit.json
+ART002,KRT001,IT012,https://doi.org/10.7236/IJIBC.2026.18.3.59,DOI→出版社,2026-11-11T08:48:19.592+09:00,Cache miss,取得失敗,出版社巻号から本文照合,round2_vit.json
+ART003,KRT001,IT012,https://www.ijibc.org/,IAAI公式雑誌サイト,2026-11-11T08:49:42.689+09:00,502 Bad Gateway,取得失敗,"公式サイト回復後に18(3), pp.59–69を取得",round2_vit.json
+ART004,KRT001,IT012,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003352160,KCI公開書誌別URL,2026-11-11T08:58:22.908+09:00,このツールでアクセス不可,取得失敗,KCI通常ページの本文提供先を確認,round2_vit.json
+ART005,KRT001,IT012,https://koreascience.kr/,公的配信・著者機関のサイト限定探索,2026-11-11T08:49:15.750+09:00,同誌別論文あり、当該論文本文の有効URLなし,探索範囲で未発見,出版社又は機関所蔵で確認,round2_vit.json
+ART006,KRT002,IT013,https://www.sciencedirect.com/science/article/pii/S1526612526003907,出版社刊行ページ,2026-11-11T08:47:30.355+09:00,403 Forbidden,本文未取得,結果の分類値と分割表を確認,round2_vit.json
+ART007,KRT002,IT013,https://www.sciencedirect.com/science/article/abs/pii/S1526612526003907,出版社索引（abs経路）,2026-11-11T08:50:16.979+09:00,Problem description・Resultsプレビューと抄録を取得,該当箇所のプレビュー,本文入手後に実験評価と工程状態ラベルを照合,round2_vit.json
+ART008,KRT002,IT013,https://scholarbank.nus.edu.sg/,DOI・著者名によるNUS ScholarBank／A*STAR／arXiv著者版検索,2026-11-11T08:47:21.260+09:00,当該公開著者版の有効URLを得られず,探索範囲で未発見,著者機関公開版の新規公開を確認,round2_vit.json
+ART009,KRT003,IT014,https://www.sciencedirect.com/science/article/abs/pii/S1568494626009427,出版社刊行ページ,2026-11-11T08:47:30.355+09:00,403 Forbidden,本文未取得,原語ラベル・分割表を確認,round2_vit.json
+ART010,KRT003,IT014,https://www.sciencedirect.com/science/article/abs/pii/S1568494626009427,出版社抄録の索引,2026-11-11T08:50:34.619+09:00,モデル、比較値、Accuracyを取得,抄録のみ,分類ラベルと分割の原著照合,round2_vit.json
+ART011,KRT003,IT014,https://elkmuh.ozal.edu.tr/page/549,著者所属大学の公式業績一覧,2026-11-11T08:47:21.260+09:00,題名・DOI掲載、公開PDFリンクなし,書誌のみ,所属大学リポジトリの著者版公開を確認,round2_vit.json
+ART012,KRT003,IT014,https://abs.firat.edu.tr/performance/details-by-email/rcoteli?category=YAYIN&lang=en,共同著者所属大学業績,2026-11-11T08:50:34.619+09:00,題名・DOIの業績記録を取得、本文PDFなし,書誌のみ,共同著者の公開版を再確認,round2_vit.json
+ART013,KRT004,IT015,https://www.sciencedirect.com/science/article/pii/S0360835224004224,出版社抄録・章プレビュー,2026-11-11T08:50:16.979+09:00,Abstract・Datasetの一部を取得、ラベル列・分割表は範囲外,抄録／プレビュー,原著PDFで5／6型の実名、分割、拡張条件,round2_vit.json
+ART014,KRT004,IT015,https://www.sciencedirect.com/science/article/pii/S0360835224004224,出版社刊行ページ直接取得,2026-11-11T08:49:42.689+09:00,403 Forbidden,本文未取得,出版社正規経路の本文,round2_vit.json
+ART015,KRT004,IT015,https://papers.ssrn.com/sol3/Delivery.cfm/b8431280-7cb3-4478-84d2-beab41dcaa23-MECA.pdf?abstractid=4765199&mirid=1,著者SSRN版 DOI 10.2139/ssrn.4765199,2026-11-11T08:48:11.576+09:00,検索索引は書誌と抄録、直PDFは403,抄録のみ,SSRN公開PDFの取得経路再確認,round2_vit.json
+ART016,KRT004,IT015,https://ic.zju.edu.cn/_upload/article/files/a7/49/4cdc34bf4cd1bec82f6c9f280337/2ed0ba14-53bc-4b9a-8421-c2751974a96b.pdf,浙江大学公式ドメイン,2026-11-11T08:48:28.808+09:00,大学推薦資料で題名確認、論文PDFの提供なし,機関資料のみ,浙江大学研究室公開物／機関リポジトリの確認,round2_vit.json
+ART017,KRT005,IT016,https://www.sciencedirect.com/science/article/pii/S0143816624006614,出版社刊行ページ,2026-11-11T08:47:30.355+09:00,403 Forbidden,本文未取得,LoRAのbackboneとラベルを本文確認,round2_vit.json
+ART018,KRT005,IT016,https://www.sciencedirect.com/science/article/pii/S0143816624006614,出版社抄録の索引,2026-11-11T08:50:34.619+09:00,LPBFの完全一致率などの抄録、分割・クラスなし,抄録のみ,原著本文を取得,round2_vit.json
+ART019,KRT005,IT016,,DOI・著者名による合法な著者公開版／機関版探索,2026-11-11T08:47:21.260+09:00,公開著者版の有効URLを得られず,探索範囲で未発見,公開リポジトリと著者版を再確認,round2_vit.json
+ART020,KRT006,,https://link.springer.com/article/10.1007/s11227-024-06662-0,出版社刊行ページ,2026-11-11T08:48:39.078+09:00,抄録と書誌を取得,抄録のみ,分類値とラベル・分割表,round2_vit.json
+ART021,KRT006,,https://link.springer.com/content/pdf/10.1007/s11227-024-06662-0.pdf,Springer刊行PDF,2026-11-11T08:49:08.275+09:00,本文PDFではなく抄録ページへ転送,本文未取得,著者版の公開リンクを追う,round2_vit.json
+ART022,KRT006,,https://github.com/Vzoooong/RFAConv-CBM-ViT,出版社が指定する著者コード,2026-11-11T08:48:49.857+09:00,READMEで鋼材等のデータセットを確認,公式コードの資料のみ,使用データ範囲と評価プロトコル照合,round2_vit.json
+ART023,KRT011,,https://doi.org/10.1109/TSM.2022.3156583,IEEE刊行DOI,2026-11-11T08:58:22.908+09:00,このツールでアクセス不可,本文未取得,著者機関公開版とIEEE本文を取得,round2_vit.json
+ART024,KRT011,,https://corp.eurekamag.com/research/095/070/095070374.php,題名・DOI／UESTC著者版検索,2026-11-11T08:48:39.078+09:00,二次書誌と抄録転載・大学季報、論文本文なし,抄録のみ,元論文で各クラス・分割と性能を確認,round2_vit.json
+ART025,KRT012,IVT2001,https://factory.skku.edu/factory/research.do?articleNo=160425&attachNo=128003&mode=download,成均館大公開の刊行PDF,2026-11-11T08:52:50.606+09:00,本文§3–4・評価分割・分類表を取得,本文の該当箇所確認,採用,round2_vit.json
+ART026,KRT012,IVT2001,https://wseas.com/journals/isa/2023/a545109-014%282023%29.pdf,出版社刊行版PDFテキスト表示,2026-11-11T08:56:45.485+09:00,Table 3の13組とFig. 8キャプションの表記差を確認,本文の該当箇所確認,ラベルはTable 3を採用,round2_vit.json
+ART027,KRT018,IT005,https://www.nature.com/articles/s41598-026-63752-0.pdf,Scientific Reports採択稿の出版社PDF,2026-11-11T08:48:49.857+09:00,IDPリダイレクトで本文取得失敗。出版社検索索引で抄録・書誌・補遺見出し確認,抄録のみ,採択稿の数値指標とarXiv表を照合,round2_vit.json
+ART028,KRT021,IVT2002,https://www.mdpi.com/1996-1073/19/2/462,出版社本文,2026-11-11T08:48:04.387+09:00,分割、原語8ラベル、クラス別・集約性能取得,本文の該当箇所確認,採用,round2_vit.json
+ART029,KRT022,IVT2003,https://mdpi-res.com/d_attachment/symmetry/symmetry-17-01313/article_deploy/symmetry-17-01313.pdf?version=1755075383,出版社刊行版PDF,2026-11-11T08:52:50.606+09:00,6ラベル、分割と分類性能確認,本文の該当箇所確認,採用,round2_vit.json
+ART030,KRT023,,https://www.sciencedirect.com/science/article/pii/S2590123026010492/pdfft,出版社公開PDF,2026-11-11T08:51:11.805+09:00,403。索引で抄録・分類集計値まで取得,抄録のみ,12ラベル、分割、平均F1の定義確認,round2_vit.json
+ART031,KRT024,,https://www.sciencedirect.com/science/article/pii/S0196890424006599,出版社抄録索引,2026-11-11T08:47:37.360+09:00,11種類／12クラスとAccuracyを取得、分割本文未取得,抄録のみ,原語と分割・群の重複を本文で確認,round2_vit.json
+ARV001,KRV009,,https://ieeexplore.ieee.org/abstract/document/11676214/,出版社 IEEE Xplore本文照会,2026-11-10T23:47:14.834Z,HTTP 418、本文取得失敗。,取得失敗,OA PDF／所属機関版の確認。,round2_vlm.json
+ARV002,KRV009,,https://yonsei.elsevierpure.com/en/publications/umdc-a-unified-training-free-model-for-multi-category-few-shot-de/,著者所属機関,2026-11-10T23:47:14.834Z,MVTec-FS 5-shot Accuracy 91.15%と比較対象を抄録で確認。,抄録・書誌,原著本文でクラス集合・分割・TPRの評価条件。,round2_vlm.json
+ARV003,KRV009,,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11676214,出版社PDF (stamp),2026-11-10T23:48:18.767Z,取得不能。,取得失敗,所属機関版・合法公開本文。,round2_vlm.json
+ARV004,KRV010,,https://1201jin.github.io/,著者業績ページ,2026-11-10T23:47:14.834Z,SEM-CLIP 2.0の掲載・著者を確認。本文リンクなし。,著者書誌,IEEE誌本文・機関収録版。,round2_vlm.json
+ARV005,KRV010,,https://doi.org/10.1109/TCAD.2026.3663889,DOI／出版社,2026-11-10T23:48:59.444Z,本文取得不可。,取得失敗,公開本文の確認。,round2_vlm.json
+ARV006,KRV010,,https://eurekamag.com/research/103/609/103609334.php,二次書誌・抄録,2026-11-10T23:48:18.767Z,DOI、open-set分類・分割、元SEM-CLIPに基づく記述を確認。,二次収録抄録,分類原語、結果表、版間関係の原著確認。,round2_vlm.json
+ARV007,KRV011,XIV006,https://ieeexplore.ieee.org/document/11566999,出版社 IEEE Xplore,2026-11-10T23:47:14.936Z,本文取得不可。,取得失敗,合法な会議版・著者版。,round2_vlm.json
+ARV008,KRV011,XIV006,https://doi.org/10.1109/EIBDCT69742.2026.11566999,DOI解決,2026-11-10T23:48:18.767Z,本文取得不可。,取得失敗,出版社書誌と本文。,round2_vlm.json
+ARV009,KRV011,XIV006,https://api.crossref.org/works/10.1109/EIBDCT69742.2026.11566999,Crossref API,2026-11-10T23:55:57.106Z,ブラウズ経路で応答本文を取得不可。ローカルcurlも名前解決失敗。,取得失敗,利用可能な書誌API／機関リポジトリ。,round2_vlm.json
+ARV010,KRV011,XIV006,https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602212822461050,J-GLOBAL・著者名・会議名検索,2026-11-10T23:47:37.129Z,題名・著者・会議ページを検索結果で確認。本文未発見。,二次書誌,本文、ラベル、比較指標。,round2_vlm.json
+ARV011,KRV011,XIV006,https://www.researchgate.net/publication/408046871_Open-Set_Fine-Grained_Industrial_Defect_Classification_Based_on_CLIP_Prompt_Tuning_and_Vision-Language_Alignment,著者研究共有ページ,2026-11-10T23:56:17.946Z,公開全文を取得できず。,取得失敗,公開著者版。,round2_vlm.json
+ARV012,KRV012,IMX006,https://link.springer.com/article/10.1007/s44163-026-02008-2,Springer出版社本文 §3.7／§4,2026-11-10T23:51:11.636Z,スコアと局在を出力。PCB 6種はデータセットの説明、独立種類指標なし。,原著該当節確認,対象外として監査に記録。,round2_vlm.json
+ARV013,KRV012,IMX006,https://link.springer.com/content/pdf/10.1007/s44163-026-02008-2.pdf,Springer補足／PDF,2026-11-10T23:56:17.946Z,PDF取得不可。本文側の補足リンクを確認できず。,PDF未取得・HTML取得,追加種類分類表が後日確認できた場合に再判定。,round2_vlm.json
+ARV014,KRV013,IMX007,https://www.sciencedirect.com/science/article/pii/S1526612526007607/pdfft,Elsevier本文PDF,2026-11-10T23:53:59.566Z,本文PDFキャッシュ未取得。,取得失敗,著者機関の全文・補足。,round2_vlm.json
+ARV015,KRV013,IMX007,https://www.sciencedirect.com/science/article/abs/pii/S1526612526007607,Elsevier抄録URL,2026-11-10T23:48:18.767Z,HTTP 403。,取得失敗,機関・収録抄録を照合。,round2_vlm.json
+ARV016,KRV013,IMX007,https://sites.google.com/view/drsenliu/publications,著者研究室業績,2026-11-10T23:47:14.834Z,著者・巻174・pp.1168–1181を確認。リンクは出版社。,著者書誌,公開著者版・12クラス定義。,round2_vlm.json
+ARV017,KRV013,IMX007,https://eurekamag.com/research/109/401/109401158.php,収録抄録・DOI,2026-11-10T23:48:59.444Z,DOI、12クラスのセグメンテーション、10欠陥種、問い合わせ成功率を確認。,二次収録抄録,原著のカテゴリ性能と評価単位。,round2_vlm.json
+ARV018,KRV014,IMX008,https://ojs.aaai.org/index.php/AAAI/article/view/27963,名称表記を変えた横断検索,2026-11-10T23:46:06.388Z,独立原著を確認できず。,検索結果なし,別綴り、著者情報が得られた場合に照合。,round2_vlm.json
+ARV019,KRV014,IMX008,https://arxiv.org/html/2407.10810,別クエリ・基盤研究の照合,2026-11-10T23:46:53.103Z,AnomalyGPTとMiniGPT-4は別書誌。MiniGPT4-ADを同一名称として扱えない。,書誌・FabGPT参照,識別可能な書誌が得られた場合に再調査。,round2_vlm.json
+ARV020,KRV015,,https://arxiv.org/html/2601.19222,著者版全文,2026-11-10T23:48:59.444Z,種類質問・ラベル例あり。タイプ単独の定量結果は未確認。,著者版全文,公式タスク別採点ログ・補足。,round2_vlm.json
+ARV021,KRV016,,https://ieeexplore.ieee.org/abstract/document/11240663,IEEE会議本文,2026-11-10T23:50:49.868Z,出版社本文取得失敗。,取得失敗,著者版・会議補足。,round2_vlm.json
+ARV022,KRV016,,https://7jiangyq.github.io/,筆頭著者の業績,2026-11-10T23:48:18.767Z,FabThink、FabGPT会議／誌版の書誌を確認。,著者書誌,FabThink原著の欠陥種表と引用関係。,round2_vlm.json
+ARV023,KRV017,IM003,https://research.cuhk.edu.hk/en/publications/fabgpt-an-efficient-large-multimodal-model-for-complex-wafer-defe/,所属機関出版記録,2026-11-10T23:48:59.444Z,TCAD誌版DOI 10.1109/TCAD.2026.3664304、同題、巻号確認。,機関収録抄録,会議版と追加実験を比較するため誌版本文。,round2_vlm.json
+ARV024,KRV023,IM003,https://dl.acm.org/doi/pdf/10.1145/3676536.3676750,FabGPT ACM会議PDF,2026-11-10T23:46:32.887Z,ACM PDF取得不可。,取得失敗,著者arXivで代替。,round2_vlm.json
+ARV025,KRV023,IM003,https://arxiv.org/html/2407.10810,FabGPT著者arXiv,2026-11-10T23:48:18.767Z,会議版全文と参照欄を取得。,著者全文,拡張誌版の本文は別途。,round2_vlm.json
+ARV026,KRV008,IVL2008,https://link.springer.com/content/pdf/10.1007/s44443-026-00893-2.pdf,Springer出版社PDF,2026-11-10T23:53:59.566Z,種類F1/NMI/ARIのTable 2を確認。,出版社全文,Figures 5–6の全欠陥原語ラベル。,round2_vlm.json
+ARV027,KRV001,IVL2001,https://www.sciencedirect.com/science/article/pii/S0031320325014153,Echoの候補誌版 Elsevier,2026-11-10T23:50:49.868Z,HTTP 403。関連する誌版との関係は未確認。,取得失敗,プレプリント版を根拠として使用。,round2_vlm.json

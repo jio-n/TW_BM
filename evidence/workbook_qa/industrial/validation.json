@@ -2,34 +2,34 @@
   "as_of": "2026-11-11",
   "sheet_rows": {
     "モデル系統": 4,
-    "視覚Transformer": 11,
+    "視覚Transformer": 14,
     "VLM・対照学習": 7,
-    "MLLM・LLM": 10,
-    "関連・保留": 10,
+    "MLLM・LLM": 17,
+    "関連・保留": 11,
     "除外候補": 25,
-    "出典": 76,
-    "主張と根拠": 230
+    "出典": 114,
+    "主張と根拠": 317
   },
-  "native_hyperlinks": 141,
+  "native_hyperlinks": 192,
   "excel_error_cells": 0,
-  "records": 38,
+  "records": 49,
   "stats": {
-    "accepted": 28,
-    "related": 5,
+    "accepted": 38,
+    "related": 6,
     "held": 5,
-    "detailed_records": 38,
-    "sources": 76,
-    "claims": 221,
-    "claim_links": 230,
-    "search_rows": 51,
+    "detailed_records": 49,
+    "sources": 114,
+    "claims": 300,
+    "claim_links": 317,
+    "search_rows": 129,
     "exclusion_rows": 25,
-    "source_aliases": 0
+    "source_aliases": 12
   },
   "checks": [
     "論文ID・DOI重複と根拠参照は統合時検査",
-    "全38行の系統・主モデル・ラベル・性能・採否・Claim IDをCSV/JSON/XLSXで照合",
+    "全行の系統・主モデル・ラベル・性能・採否・Claim IDをCSV/JSON/XLSXで照合",
     "全8シートの表・フィルタ・固定ペイン・行高を検査",
     "画像プレビューは各シートの主要範囲、全セルの視覚精査ではない"
   ],
-  "visual_review": "別途保存した8枚の主要範囲プレビューを確認"
+  "visual_review": "主要範囲・追加行のプレビューを確認"
 }

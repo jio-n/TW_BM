@@ -61,9 +61,9 @@ for sh in wb:
   assert sh.cell(i,14).hyperlink.target==r['url']
   assert sh.row_dimensions[i].height<=409
   for c in sh[i]: assert c.data_type!='e'
-assert links_added==53
+assert links_added==len(d['records'])
 with (ROOT/'outputs/classification_performance_summary.csv').open(encoding='utf-8-sig',newline='') as f: csvrows=list(csv.DictReader(f))
-assert len(csvrows)==len(d['records'])==53
+assert len(csvrows)==len(d['records'])
 for a,b in zip(csvrows,d['records']):
  assert a['id']==b['id'] and a['result']==b['result']
 for filename,scope in [('focused_integrated.json','工具摩耗'),('industrial_integrated.json','工業欠陥')]:
@@ -73,6 +73,6 @@ for filename,scope in [('focused_integrated.json','工具摩耗'),('industrial_i
  claim_ids={c['claim_id'] for c in original['claims']}
  for r in d['records']:
   if r['scope']==scope: assert all(c in claim_ids for c in r['claim_ids'].split('; '))
-summary={'as_of':d['as_of'],'rows':53,'sheets':{'工具摩耗':15,'工業欠陥':38},'main':37,'held':7,'related':9,'numeric_values':sum(r['value'] is not None for r in d['records']),'native_hyperlinks':links_added,'error_cells':0,'missing_values':'6件の代表値は未報告・未抽出・未確認を区別。ゼロ置換なし','checks':'既存53ID、数値型、百分率/係数、結果文、根拠ID、CSV/XLSX、表・固定ペイン・リンクを照合','visual_check':'2シート主要範囲を描画確認'}
+summary={'as_of':d['as_of'],'rows':len(d['records']),'sheets':{s:sum(r['scope']==s for r in d['records']) for s in ['工具摩耗','工業欠陥']},'main':sum(r['status']=='採用' for r in d['records']),'held':sum(r['status']=='保留' for r in d['records']),'related':sum(r['status']=='関連' for r in d['records']),'numeric_values':sum(r['value'] is not None for r in d['records']),'native_hyperlinks':links_added,'error_cells':0,'missing_values':'未報告・未抽出・未確認を区別。ゼロ置換なし','checks':'全ID、数値型、百分率/係数、結果文、根拠ID、CSV/XLSX、表・固定ペイン・リンクを照合','visual_check':'2シート主要範囲と追加行を描画確認'}
 (ROOT/'evidence/workbook_qa/performance/validation.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(summary,ensure_ascii=False))

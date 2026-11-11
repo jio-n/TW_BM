@@ -1,6 +1,7 @@
 """Assemble the manually verified wear-type classification review and evidence CSVs."""
 import csv, json
 from pathlib import Path
+from round2_support import append_round2
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'outputs'; EV=ROOT/'evidence/wear_type_classification'; EV.mkdir(exist_ok=True)
 def read(name):return json.loads((ROOT/'data'/name).read_text(encoding='utf-8-sig'))
@@ -71,11 +72,15 @@ queries=[
  'Development of ball end-mill wear condition wear classification four','site:mdpi.com/2504-4494/10/8/286 MaskLenNet mIoU Li','MaskLenNet 2026 authors','A Qualitative Tool Condition Monitoring Framework convolutional layers']
 for i,q in enumerate(queries,1):searches.append({'search_id':f'QFR{i:03}','executed_at':'2026-11-11 JST（時分未記録）','target':'Web検索・出版社一次本文','queries':q,'returned_count':'個別未記録','total_hits':'未提供','raw_path':'evidence/raw/focused_root/（一部検索スナップショット保存）'})
 searches.append({'search_id':'QFM001','executed_at':'2026-11-11 02:52 JST','target':'出版社本文・原著arXiv抄録の再確認','queries':'https://link.springer.com/article/10.1007/s10845-026-02944-x ; https://arxiv.org/abs/2502.12524','returned_count':2,'total_hits':'非該当（URL直接参照）','purpose':'YOLO12sとGhost Slim U-Netのモデル系統確認。追加の工具摩耗研究として数えない'})
+append_round2({'records':records,'sources':sources,'claims':claims,'claim_evidence':links,'search_log':searches},['round2_wear.json'],wear=True)
+for s in screening:
+ if s['既存論文ID']=='R0116':
+  s.update({'判定':'対象外','理由':'Round2本文§3.1.3を再確認。U-Netで摩耗領域を分割しmIoU等を評価。種類名の画像分類出力ではない','確認範囲':'Round2原文確認（WR2C017）'})
 source_ids={s['source_id'] for s in sources}; claim_ids={c['claim_id'] for c in claims}
 assert len(source_ids)==len(sources),'duplicate source IDs'
 assert len(claim_ids)==len(claims),'duplicate claim IDs'
 assert all(l['source_id'] in source_ids and l['claim_id'] in claim_ids for l in links),'broken reference'
-assert all(c['entity_id'] in {r['id'] for r in records}|{'MM-DATA'} for c in claims),'unknown entity'
+assert all(c['entity_id'] in {r['id'] for r in records}|{s['既存論文ID'] for s in screening}|{'MM-DATA'} for c in claims),'unknown entity'
 assert len(screening)==59
 family_summary=[]
 for f in taxonomy['families']:
@@ -89,8 +94,8 @@ for key in ['sources','claims','claim_evidence','search_log','exclusions']:
 dumpcsv(EV/'existing_papers_screening.csv',screening)
 dumpcsv(OUT/'wear_type_classification_benchmark.csv',records)
 dumpcsv(OUT/'wear_type_model_family_summary.csv',family_summary)
-image_rows=[r for r in records if r['group']=='画像のみ' and '保留' not in r['status']]
-multi_rows=[r for r in records if r['group']=='マルチモーダル' and '保留' not in r['status']]
+image_rows=[r for r in records if r['group']=='画像のみ' and r['status'].startswith('採用')]
+multi_rows=[r for r in records if r['group']=='マルチモーダル' and r['status'].startswith('採用')]
 held=[r for r in records if '保留' in r['status']]
 adjacent=[r for r in records if '関連' in r['status']]
 def mdtable(rows):
@@ -105,9 +110,9 @@ report=f'''# 工具画像からの摩耗・損傷種類分類ベンチマーク
 
 ## 1. 収集結果
 
-主比較は**画像のみ{len(image_rows)}本、マルチモーダル{len(multi_rows)}本**。さらに技術内容は適合するが書誌または先行公開日の確認を要する{len(held)}本を保留表に置いた。種類を付与する検出・領域分割{len(adjacent)}本は関連表であり、画像単位の分類性能と比較しない。
+主比較は**画像のみ{len(image_rows)}本、マルチモーダル{len(multi_rows)}本**。さらに先行公開日の確認を要する{len(held)}本を保留表に置いた。種類付き検出・領域分割と研削工具の境界事例の計{len(adjacent)}本は関連表として分けた。Round2で新規2本と既存保留1本を主比較に追加。[引用追跡と追加調査](round2_findings.md)／[探索監査](search_process_audit.md)。
 
-既存59本を再選別した結果、明確に再採用したのは **R0102（提示されたWu2019）とR0106（Singh2026）**。R0116/R0118はクラス定義未確定で保留、R0103/R0105/R0117は領域系の関連資料として記録した。旧保留R0027のYan論文は今回のマルチモーダル候補として再調査した。
+既存59本から **R0102（提示されたWu2019）とR0106（Singh2026）**を再採用。Round2本文確認によりR0116は領域分割として主分類から除外、R0118はラベル未確定で保留。R0103/R0105/R0117は領域系の関連資料として記録した。旧保留R0027のYan論文もマルチモーダル候補として再調査した。
 
 [専用Excel](../outputs/wear_type_classification_benchmark.xlsx)／[再利用用CSV](../outputs/wear_type_classification_benchmark.csv)／[既存59本の採否](../evidence/wear_type_classification/existing_papers_screening.csv)。原著者の性能値を条件間でランキングしない。
 
@@ -119,7 +124,7 @@ CNN、ViT、VLM/MLLMはいずれも深層学習を使うため、「深層学習
 |---|---:|---:|---:|---:|---|
 {chr(10).join('| '+str(f['family'])+' | '+str(f['image_count'])+' | '+str(f['multimodal_count'])+' | '+str(f['held_count'])+' | '+str(f['related_count'])+' | '+f['paper_ids']+' |' for f in family_summary)}
 
-- **CNN系**：ToolWearnet、VGG、EfficientNet、AlexNet、U-Net等。主比較は5本。画像特徴だけをCNNから取り出す方式は次の区分へ分けた。
+- **CNN系**：ToolWearnet、VGG、EfficientNet、AlexNet、U-Net等。現在の件数は上表に示す。画像特徴だけをCNNから取り出す方式は次の区分へ分けた。
 - **CNN特徴＋従来ML系**：Walk2020はVGG16＋Gradient Boosting、Ahangar2026はResNet18＋XGBoost。後者は画像＋センサでも言語モデルを含まないためMLLMではない。
 - **視覚Transformer系**：Singh2026のViT-Large。関連表のMaskLenNetはSwin backbone。EfficientNet-B0はSingh論文の比較用CNNとして別列に残した。
 - **VLM／MLLM系**：YanのQwen3-VL-8B。LLMを中核に持つ画像・言語モデルなのでMLLMとして整理する。VLMとMLLMを別論文として二重計上しない。先行公開日未確認の保留区分は維持する。
@@ -144,7 +149,7 @@ MATWI系列は同じデータ出所でも採用tool setとクラス統合が違�
 
 {mdtable(held)}
 
-保留理由：Yongの微細ドリル論文は著者公開原稿の表紙・方法・結果を確認したが、DOI/出版社記事ページと完全本文が未確認。Yanの巻号日とオンライン初出日は同一でないため、出典に示す公開日確認状況を参照する。主比較に確定採用したものと件数を分ける。
+Yanの巻号日とオンライン初出日は同一ではなく、先行公開日は引き続き未確認。微細ドリルのFIA06は出版社記事で正式掲載と著者順・公開日を確認して主採用へ移した。DOIは出版社記事に記載がなく、内部検証99.26%の分割条件には未確認が残る。
 
 ## 5. 複合摩耗と出力形式
 
@@ -158,7 +163,7 @@ MATWI系列は同じデータ出所でも採用tool setとクラス統合が違�
 
 ラベルは原語を保持した。**flank wearは逃げ面摩耗**。BUE（構成刃先）、adhesion/adhesive wear（凝着）、Face/rake face wear、crater wear、chipping、fracture/breakageを根拠なく同一ラベルに統合しない。摩耗位置、形態、機構、損傷状態が混在する分類体系もあるため、クラス数だけで難易度を比べない。
 
-## 6. 種類付き領域検出・分割の関連研究
+## 6. 領域検出・分割と研削工具の関連研究
 
 {mdtable(adjacent)}
 

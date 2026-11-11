@@ -1,0 +1,6 @@
+source_id,title,publisher,year,url,verification,accessed,locator
+MS001,PRISMA-S: an extension to the PRISMA Statement for Reporting Literature Searches in Systematic Reviews,Rethlefsen et al. / Systematic Reviews,2021,https://link.springer.com/article/10.1186/s13643-020-01542-z,原著本文確認,2026-11-11,16項目と報告指針の適用範囲
+MS002,PRISMA-S,PRISMA Statement,2021,https://www.prisma-statement.org/prisma-search,公式解説確認,2026-11-11,Overview
+MS003,Guidelines for Snowballing in Systematic Literature Studies and a Replication in Software Engineering,Claes Wohlin,2014,https://www.wohlin.eu/ease14.pdf,著者公開原著PDF確認,2026-11-11,後方・前方snowballingと反復手順
+MS004,OpenAlex API recipes,OpenAlex,更新年未確認,https://help.openalex.org/how-to/api-recipes/,公式ドキュメント確認,2026-11-11,cites / referenced_works / related_worksの区別
+MS005,Crossref REST API,Crossref,更新年未確認,https://www.crossref.org/documentation/retrieve-metadata/rest-api,公式ドキュメント確認,2026-11-11,登録メタデータ取得

@@ -1,0 +1,3545 @@
+{
+  "new_records": [
+    {
+      "id": "IVL2001",
+      "status": "採用",
+      "year": 2025,
+      "authors": "Zhiling Chen, Hanning Chen, Mohsen Imani, Farhad Imani",
+      "title": "Can Multimodal Large Language Models be Guided to Improve Industrial Anomaly Detection?",
+      "venue": "arXiv:2501.15795 v1",
+      "doi": "10.48550/arXiv.2501.15795",
+      "url": "https://arxiv.org/html/2501.15795v1",
+      "verification": "著者版全文確認",
+      "domain": "工業外観検査・異常理解",
+      "product": "MMADの工業部品・材料・製品画像",
+      "model_family": "MLLM／生成型VLM",
+      "class_count": "MMAD全体で244欠陥種類。各設問は4択。",
+      "mixed": "製品別のcombinedを含む場合あり。評価は選択肢単位。",
+      "class_results": "種類別スコア未確認。",
+      "metrics": "Defect Classification設問のAccuracy（%）",
+      "task": "欠陥種類の選択式VQA",
+      "labels": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "primary_model": "Echo＋Qwen2-VL 7B。類似正常参照の検索、質問に応じた専門知識、段階的推論、最終回答を組み合わせる。",
+      "baseline_models": "Qwen2-VL 7B/2B、InternVL2、MiniCPM-V2.6、LLaVA系。",
+      "input_group": "画像＋正常参照＋プロンプト",
+      "input": "試験画像、検索した正常参照画像、選択式質問と質問に応じた知識。検索特徴は凍結CLIP ViT-B/16。",
+      "prompt": "欠陥候補を提示する選択式質問に、検索した正常画像と文脈知識、必要に応じて推論手順を加える。",
+      "dataset": "MMADのMVTec-AD・VisAのみ",
+      "data_size": "MVTec-AD／VisAに含まれる種類問題の使用数は未確認。",
+      "split": "MMADのMVTec-AD・VisAを用い、製品分類・製品分析の設問を除いた5タスクで評価。Fig. 6で正常参照0–3枚を比較。",
+      "learning": "検索・プロンプトを用いるin-context推論。",
+      "pretraining": "Qwen2-VL 7B、凍結CLIP ViT-B/16（検索）。",
+      "performance": "Table 1のDefect Classification AccuracyはMVTec-AD 72.86%、VisA 62.35%。同じQwen2-VL 7Bのベースは68.46%、57.06%。",
+      "generalization": "MMAD内のMVTec-ADとVisAで別々に評価。",
+      "limitations": "MMAD全4データセットとは異なる部分集合。外部知識なしとの比較はTable 2・3の条件を参照。",
+      "code_data": "https://github.com/Ed1sonChen/Echo",
+      "source_ids": [
+        "SRV003",
+        "SRV001",
+        "SRV002"
+      ],
+      "locator": "§4.1／Fig. 4／著者MMAD付属ラベル／§3.2–3.5／§4.2／§3.5／Fig. 4／Abstract／§3／Fig. 2／§4.1／Fig. 6／§4.2／Table 1／§4.1／Tables 2–3",
+      "family_group": "MLLM",
+      "adoption_group": "採用"
+    },
+    {
+      "id": "IVL2002",
+      "status": "採用",
+      "year": 2026,
+      "authors": "Peng Chen, Wenqiang Wang, Yunkang Cao, Chengliang Liu, Wei Wang, Mingbo Yang, Li Shen, Wenqi Ren, Xiaochun Cao, Chao Huang",
+      "title": "Towards Explainable Industrial Anomaly Detection via Knowledge-Guided Latent Reasoning",
+      "venue": "arXiv:2602.09850 v4",
+      "doi": "10.48550/arXiv.2602.09850",
+      "url": "https://arxiv.org/html/2602.09850v4",
+      "verification": "著者版全文確認",
+      "domain": "工業外観検査・異常理解",
+      "product": "MMADの工業部品・材料・製品画像",
+      "model_family": "MLLM／生成型VLM",
+      "class_count": "MMAD全体で244欠陥種類。各設問は4択。",
+      "mixed": "製品別のcombinedを含む場合あり。評価は選択肢単位。",
+      "class_results": "種類別スコア未確認。",
+      "metrics": "Defect Classification設問のAccuracy（%）",
+      "task": "欠陥種類の選択式VQA",
+      "labels": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "primary_model": "Reason-IAD。CLIPで関連欠陥カテゴリの知識を検索し、Qwen3-VLの潜在推論トークンと選択画像パッチを推論時に更新。",
+      "baseline_models": "Qwen3-VL 8B/4B/2B、Qwen2.5-VL、InternVL、LLaVA、AnomalyR1等。",
+      "input_group": "画像＋候補テキスト／正常参照（1-shot）",
+      "input": "クエリ画像、MMADの欠陥種類の候補付き質問、検索された欠陥の記述。1-shotは同一ドメイン正常画像を1枚追加。",
+      "prompt": "工業検査の役割・質問・候補選択肢に検索した種類知識を加える。",
+      "dataset": "MMADのMVTec-AD、MVTec-LOCO、VisA、GoodsAD",
+      "data_size": "Table 5のMMAD規模は8,366画像・39,672質問。種類設問の採点母数は個別記載未確認。",
+      "split": "§4.1では同じドメインから正常参照をランダム抽出する1-shot、Table 2は参照なしzero-shot。",
+      "learning": "モデル重みの追加学習なし。推論時に潜在トークンと画像パッチを調整。",
+      "pretraining": "Qwen3-VL 8B等、CLIP ViT-L/14-336検索エンコーダ。",
+      "performance": "v4 Table 1の1-shot種類AccuracyはReason-IAD Qwen3-VL-8B 75.07%、同基盤62.33%。",
+      "generalization": "MMAD複数製品。実工場間の独立試験は未確認。",
+      "limitations": "表の種類列を採用。本文に記された総合平均と表の総合平均に差があるため総合平均を比較値に使わない。",
+      "code_data": "著者MMAD公開、提案実装の公開は原著リンク参照。",
+      "source_ids": [
+        "SRV004",
+        "SRV001",
+        "SRV002"
+      ],
+      "locator": "Appendix A／Table 5／著者MMAD付属ラベル／§4.1／Algorithm 1／Appendix C／Appendix C／Prompt Template／§3.2–3.4／Fig. 2／Eq. (9)／§4.1／Tables 1–2／Table 1、1-shot Defect Classification列／§4.2／Table 1",
+      "family_group": "MLLM",
+      "adoption_group": "採用"
+    },
+    {
+      "id": "IVL2003",
+      "status": "採用",
+      "year": 2026,
+      "authors": "Junwen Miao, Penghui Du, Yingying Fan, Yi Liu, Yu Wang, Runze He, Lida Huang, Yan Wang",
+      "title": "AgentIAD: Agentic Industrial Anomaly Detection via Adaptive Memory Augmentation",
+      "venue": "arXiv:2512.13671 v2（初版2025）",
+      "doi": "10.48550/arXiv.2512.13671",
+      "url": "https://arxiv.org/html/2512.13671v2",
+      "verification": "著者版全文確認",
+      "domain": "工業外観検査・異常理解",
+      "product": "MMADの工業部品・材料・製品画像",
+      "model_family": "MLLM／生成型VLM",
+      "class_count": "MMAD全体で244欠陥種類。各設問は4択。",
+      "mixed": "製品別のcombinedを含む場合あり。評価は選択肢単位。",
+      "class_results": "種類別スコア未確認。",
+      "metrics": "Defect Classification設問のAccuracy（%）",
+      "task": "欠陥種類の選択式VQA",
+      "labels": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "primary_model": "AgentIAD（Qwen2.5-VL-3B）。領域拡大、正常参照検索、外部知識取得を選択できる検査エージェント。",
+      "baseline_models": "Qwen2.5-VL-3B、AnomalyR1、GPT-4o、LLaVA系等。",
+      "input_group": "画像＋候補テキスト＋正常参照",
+      "input": "クエリ画像とMMAD選択式質問、標準1-shotの正常参照。推論時に画像領域拡大や参照検索の操作を呼び出せる。",
+      "prompt": "MMADの原版選択式質問。必要に応じて画像拡大・検索結果を文脈に追加。",
+      "dataset": "MMADの4元データセット、指定分割",
+      "data_size": "MMADの訓練1,936サンプル、評価6,400サンプル。種類設問の評価数は未確認。",
+      "split": "§4.1の1,936訓練／6,400評価の分割。Table 1は標準1-shot。",
+      "learning": "Tool-aware SFT＋ツール利用を学ぶ強化学習。",
+      "pretraining": "Qwen2.5-VL-3B。SFTで視覚エンコーダ凍結。",
+      "performance": "Table 1のDefect Classification AccuracyはAgentIAD 72.73%、Qwen2.5-VL-3B 41.07%、AnomalyR1 63.56%。",
+      "generalization": "MMADの内部分割。別工業データで種類列は未確認。",
+      "limitations": "MMAD内部学習を含むため、学習なしで全MMADを評価した結果とは条件が異なる。",
+      "code_data": "著者データ https://huggingface.co/datasets/meksamiao/AgentIAD",
+      "source_ids": [
+        "SRV005",
+        "SRV001",
+        "SRV002"
+      ],
+      "locator": "§4.1／Table 1／著者MMAD付属ラベル／§3.2–3.3／§4.1／§4.1 Evaluation／Table 1／Abstract／§3.2–3.3／Fig. 2／§4.1 Datasets／Table 1／Table 1、1-shot Defect Classification列／§4.1 Datasets",
+      "family_group": "MLLM",
+      "adoption_group": "採用"
+    },
+    {
+      "id": "IVL2004",
+      "status": "採用",
+      "year": 2026,
+      "authors": "Runzhi Deng, Yundi Hu, Yiming Zhong, Zhao Wang, Xixi Liu, Hongsong Wang, Caifeng Shan, Fang Zhao",
+      "title": "Global Logic and Local Search: Dual-Stream Multimodal In-Context Learning for Verifiable Industrial Anomaly Detection",
+      "venue": "arXiv:2607.03817",
+      "doi": "10.48550/arXiv.2607.03817",
+      "url": "https://arxiv.org/html/2607.03817",
+      "verification": "著者版全文確認",
+      "domain": "工業外観検査・異常理解",
+      "product": "MMADの工業部品・材料・製品画像",
+      "model_family": "MLLM／生成型VLM",
+      "class_count": "MMAD全体で244欠陥種類。各設問は4択。",
+      "mixed": "製品別のcombinedを含む場合あり。評価は選択肢単位。",
+      "class_results": "種類別スコア未確認。",
+      "metrics": "Defect Classification設問のAccuracy（%）",
+      "task": "欠陥種類の選択式VQA",
+      "labels": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "primary_model": "GLLS。部位別の正常情報を検索し、SAM3による全体構造確認と、モンテカルロ木探索による局所クロップの取得を並行。Qwen3-VLが証拠から回答。",
+      "baseline_models": "Qwen3-VL-8B/4B、Qwen2.5-VL-7B、GPT-5-mini等。",
+      "input_group": "画像＋候補テキスト＋正常参照（1-shot）",
+      "input": "クエリ画像・選択式質問、PVLAに収録した仕様、局所クロップ。1-shotでは正常参照画像を利用。",
+      "prompt": "MMAD-QAの候補選択。構造レポートと局所画像・検索知識を統合。",
+      "dataset": "MMAD-QAのMVTec-AD・VisA",
+      "data_size": "欠陥種類設問の評価分母は未確認。",
+      "split": "Table 1のMVTec・VisA別0-shot／1-shot。別データセットは二値評価。",
+      "learning": "凍結モデルのin-context推論。GPT-5は事前知識構築にのみ使用。",
+      "pretraining": "Qwen3-VL 8B/4B等、SAM3。AdaptCLIP（0-shot）／ABounD（1-shot）を局所誘導。",
+      "performance": "Table 1のCls. Accuracy、Qwen3-VL-8B GLLS 1-shot MVTec 87.7%、VisA 83.5%。0-shot 81.9%、65.2%。同基盤74.2%、61.4%。",
+      "generalization": "MVTec・VisAで種類列を評価。別データセットの転移は二値精度。",
+      "limitations": "評価はMMAD-QA部分集合。1-shotと0-shotは正常参照に加えて局所化器も異なる。",
+      "code_data": "MMAD公開。GLLS実装公開先は未確認。",
+      "source_ids": [
+        "SRV006",
+        "SRV001",
+        "SRV002"
+      ],
+      "locator": "§4.1／Table 1／著者MMAD付属ラベル／§3／§4.1 Implementation Details／§3.4／§4.1／Fig. 2／§3.1–3.4／§4.1／Tables 1–2／§4.2／Table 1のCls.列／§4.1／Table 2",
+      "family_group": "MLLM",
+      "adoption_group": "採用"
+    },
+    {
+      "id": "IVL2005",
+      "status": "採用",
+      "year": 2026,
+      "authors": "Jingtai He, Shiyuan Meng, Wenchao Meng, Qinmin Yang",
+      "title": "ADOPD: Reference-Privileged On-Policy Distillation for MLLM-Based Industrial Anomaly Detection",
+      "venue": "arXiv:2608.09789 v1",
+      "doi": "10.48550/arXiv.2608.09789",
+      "url": "https://arxiv.org/html/2608.09789v1",
+      "verification": "著者版全文確認",
+      "domain": "工業外観検査・異常理解",
+      "product": "MMADの工業部品・材料・製品画像",
+      "model_family": "MLLM／生成型VLM",
+      "class_count": "MMAD全体で244欠陥種類。各設問は4択。",
+      "mixed": "製品別のcombinedを含む場合あり。評価は選択肢単位。",
+      "class_results": "種類別スコア未確認。",
+      "metrics": "Defect Classification設問のAccuracy（%）",
+      "task": "欠陥種類の選択式VQA",
+      "labels": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "primary_model": "ADOPD。学習中だけ対応／非対応の正常局所参照を与えたQwen3-VL-32B教師から、Qwen3-VL-4B学生へ方策蒸留。",
+      "baseline_models": "Qwen3-VL-4B、Reason-IAD、IAD-R1、AnomalyR1等。",
+      "input_group": "画像＋候補テキスト（参照画像なし）",
+      "input": "推論時はクエリ画像とMMAD選択式質問のみ。対応する正常画像・領域注釈は教師の学習時のみ利用。",
+      "prompt": "原版MMADの画像・問い・選択肢。学習教師に正常クロップを追加。",
+      "dataset": "学習Real-IAD、評価MMAD",
+      "data_size": "Real-IADから6,000訓練レコード、30製品と5視点。種類設問の採点母数は未確認。",
+      "split": "§4.1で学習と評価のデータセット非重複を明示。Table 1は推論時の正常参照0枚。",
+      "learning": "対応／非対応参照を教師に与える学習時の特権情報を用いた方策蒸留。",
+      "pretraining": "学生Qwen3-VL-4B、凍結教師Qwen3-VL-32B。",
+      "performance": "Table 1のzero-shot Defect Classification AccuracyはADOPD 57.03%、同基盤53.90%、同論文で再評価したReason-IAD 73.12%。77.31%は全タスク平均。",
+      "generalization": "Real-IADからMMADへの異データセット評価（原著による非重複）。",
+      "limitations": "著者の全タスク平均の改善は種類分類での首位を意味しない。ゼロショットは正常参照0枚を指し、学習にはReal-IADデータを使用。",
+      "code_data": "https://github.com/withTai/ADOPD",
+      "source_ids": [
+        "SRV007",
+        "SRV001",
+        "SRV002"
+      ],
+      "locator": "§4.1／Table 1／著者MMAD付属ラベル／§3／§4.1 Evaluation Protocol・Training Dataset／§4.1／Appendix B／§3／Fig. 2／§4.1／§4.1 Training Dataset／Table 1／Table 1、zero-shot Defect Classification列／§4.1 Training Dataset",
+      "family_group": "MLLM",
+      "adoption_group": "採用"
+    },
+    {
+      "id": "IVL2006",
+      "status": "採用",
+      "year": 2025,
+      "authors": "Wei Guan, Jun Lan, Jian Cao, Hao Tan, Huijia Zhu, Weiqiang Wang",
+      "title": "EMIT: Enhancing MLLMs for Industrial Anomaly Detection via Difficulty-Aware GRPO",
+      "venue": "arXiv:2507.21619 v1",
+      "doi": "10.48550/arXiv.2507.21619",
+      "url": "https://arxiv.org/html/2507.21619v1",
+      "verification": "著者版全文確認",
+      "domain": "工業外観検査・異常理解",
+      "product": "MMADの工業部品・材料・製品画像",
+      "model_family": "MLLM／生成型VLM",
+      "class_count": "MMAD全体で244欠陥種類。各設問は4択。",
+      "mixed": "製品別のcombinedを含む場合あり。評価は選択肢単位。",
+      "class_results": "種類別スコア未確認。",
+      "metrics": "Defect Classification設問のAccuracy（%）",
+      "task": "欠陥種類の選択式VQA",
+      "labels": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "primary_model": "EMIT（InternVL3-8B）。難易度に応じて回答再サンプリングと利得重みを調整するGRPO。",
+      "baseline_models": "InternVL3-8B、Qwen2.5-VL、GLM-4.1V-Thinking、AnomalyR1等。",
+      "input_group": "画像＋正常参照＋プロンプト",
+      "input": "クエリ画像・欠陥種類選択式質問・CLIPによる最類似正常参照1枚・製品領域知識。",
+      "prompt": "欠陥種類選択とドメイン知識を入力。soft prompt・対照埋め込みは二値判定・局在タスクのみ。",
+      "dataset": "訓練 Vision・Real-IAD・MPDDとMMAD由来正常物体の説明文。評価 MMAD。",
+      "data_size": "種類問題の実測評価数は未確認。",
+      "split": "論文Table 1はMMADの標準1-shot。著者はMMAD元4データセットの直接タスク作成を避けるが、正常画像の説明文を使うと記載。",
+      "learning": "soft prompt／射影を整合するSFT後、難易度依存GRPO。QLoRA利用。",
+      "pretraining": "InternVL3-8BとCLIP ViT-B/32（検索）。",
+      "performance": "Table 1の1-shot Defect Classification Accuracy 80.85%。比較Qwen2.5-VL 7B 69.35%、GLM-4.1V-Thinking 9B 72.01%。",
+      "generalization": "MMADの複数ドメインで評価。工場別分割・工程移行の評価は未確認。",
+      "limitations": "MMAD由来正常例からの説明生成も用いる。完全なドメイン未接触学習ではない。",
+      "code_data": "MMAD公開。EMIT実装公開先は未確認。",
+      "source_ids": [
+        "SRV008",
+        "SRV001",
+        "SRV002"
+      ],
+      "locator": "Experimental Setup Test Datasets／Table 1／著者MMAD付属ラベル／Implementation Details／Implementation Details／Metrics／Difficulty-Aware GRPO for IAD／Fig. 8／Data Collection／Table 1／Implementation Details／Table 1、Defect Classification列／Data Collection",
+      "family_group": "MLLM",
+      "adoption_group": "採用"
+    },
+    {
+      "id": "IVL2007",
+      "status": "採用",
+      "year": 2026,
+      "authors": "Weifei Chen, Honghao Zhang, Zhiyuan You, Xinyi Le",
+      "title": "InspectorGPT: A Comparative Reasoning Enhanced VLM for Comprehensive Industrial Anomaly Detection",
+      "venue": "arXiv:2608.29783 v1",
+      "doi": "10.48550/arXiv.2608.29783",
+      "url": "https://arxiv.org/html/2608.29783v1",
+      "verification": "著者版全文確認",
+      "domain": "工業外観検査・異常理解",
+      "product": "MMADの工業部品・材料・製品画像",
+      "model_family": "MLLM／生成型VLM",
+      "class_count": "MMAD全体で244欠陥種類。各設問は4択。",
+      "mixed": "製品別のcombinedを含む場合あり。評価は選択肢単位。",
+      "class_results": "種類別スコア未確認。",
+      "metrics": "Defect Classification設問のAccuracy（%）",
+      "task": "欠陥種類の選択式VQA",
+      "labels": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "primary_model": "InspectorGPT（Qwen2.5-VL-7B）。比較推論SFTからGRPOと分割枝を別々に学び、両枝のtask vectorを融合。",
+      "baseline_models": "Qwen2.5-VL-7B/72B、EMIT、AD-FM、OmniAD、JUDO等。",
+      "input_group": "画像＋正常参照＋プロンプト",
+      "input": "クエリ画像、欠陥のない比較画像1枚、MMAD選択式質問。正常参照はMMADの候補からランダム抽出。",
+      "prompt": "クエリと正常画像を比較し、欠陥種類設問の候補を回答。",
+      "dataset": "MMAD（内部学習・評価）。外部4データセットは異常有無評価。",
+      "data_size": "MMADの20%学習／80%評価。タイプ設問数は未確認。",
+      "split": "38製品を層化した20%の学習サブセットで正常・異常比1:1、残り80%を評価。",
+      "learning": "比較CoT SFT、GRPO、LoRA併用分割訓練、task-vector fusion。",
+      "pretraining": "Qwen2.5-VL-7B。",
+      "performance": "Table 1のDefect Cls. Accuracy 75.32%。同基盤56.15%。全タスク平均82.38%。",
+      "generalization": "外部4セットの比較は異常有無精度。種類分類の外部評価は未確認。",
+      "limitations": "MMADの内部学習あり。実験表中に異なる学習設定の比較器も明記。",
+      "code_data": "MMAD公開。InspectorGPT実装公開先は未確認。",
+      "source_ids": [
+        "SRV009",
+        "SRV001",
+        "SRV002"
+      ],
+      "locator": "Experimental Setup／Table 1／著者MMAD付属ラベル／Fig. 1／Experimental Setup／Fig. 1／Datasets & Protocols／Method Stages 1–4／Experimental Setup／Datasets & Protocols／Table 1、Defect Cls.列／Datasets & Protocols／Table 1, 3",
+      "family_group": "MLLM",
+      "adoption_group": "採用"
+    },
+    {
+      "id": "IVL2008",
+      "status": "関連",
+      "year": 2026,
+      "authors": "Botong Zhao, Fang Yu, Xubin Wang, Shujing Lyu, Yue Lu",
+      "title": "Open-world scanning electron microscope nano-defect category discovery via self-normal prototypes",
+      "venue": "Journal of King Saud University Computer and Information Sciences 38, 566",
+      "doi": "10.1007/s44443-026-00893-2",
+      "url": "https://link.springer.com/content/pdf/10.1007/s44443-026-00893-2.pdf",
+      "verification": "出版社全文・分類表確認。全原語ラベル未確認。",
+      "domain": "半導体製造外観検査",
+      "product": "BEOL・DEP・DPR各工程のICウェハSEM画像",
+      "model_family": "自己教師あり視覚Transformer（DINOv3）",
+      "class_count": "欠陥13種類。",
+      "mixed": "既知・未知カテゴリ混合評価。欠陥同時発生の多ラベル分類は未確認。",
+      "class_results": "Figure 6に工程別の混同行列。値の個別転記は未確認。",
+      "metrics": "F1、NMI、ARI（Hungarian対応付け）。",
+      "task": "既知・未知欠陥のカテゴリ発見。未知クラスタのIDを評価時に正解とHungarian整合。",
+      "labels": "工程BEOL・DEP・DPRと欠陥13種類を区別。個別欠陥の全原語ラベルはFigure 5–6参照、今回の取得で未確認。",
+      "primary_model": "SNAP-SEM。DINOv3事前学習ViT-Base/14、自己正常プロトタイプから空間事前分布を抽出し、SMG-ViTが未知カテゴリをクラスタリング。",
+      "baseline_models": "IC-DETR、simGCD、promptCAL、GCD、UNO、DCCL、AMEND、AnomalyNCD、MultiADS。",
+      "input_group": "画像のみ",
+      "input": "KLA SEM G-series撮像のICウェハ画像。空間事前情報は同一画像から抽出。",
+      "prompt": "非該当（画像特徴とプロトタイプ）。",
+      "dataset": "IC-SEM",
+      "data_size": "欠陥画像2,990、正常画像8,100。",
+      "split": "BEOLを既知、DEP/DPRを未知とする設定およびBEOLを未知・DPRを既知とする逆設定。",
+      "learning": "既知の教師ラベルと未知カテゴリ画像に対する表現・プロトタイプ学習。",
+      "pretraining": "DINOv3 ViT-Base/14。",
+      "performance": "Table 2の種類分類F1（0–1尺度）はBEOL 0.7825、DEP 0.9695、DPR 0.9411。同順のNMI 0.7226／0.8517／0.9249、ARI 0.8046／0.9282／0.9682。",
+      "generalization": "異なる製造工程にまたがる既知・未知のカテゴリ発見を評価。",
+      "limitations": "未知出力はクラスタIDで、評価時に正解クラスへ対応付ける。欠陥名をそのまま生成する方式とは出力が異なる。",
+      "code_data": "論文はIC-SEM公開予定。公開ファイルの取得は未確認。",
+      "source_ids": [
+        "SRV010"
+      ],
+      "locator": "§5.1／Figures 5–6／§4.1／§5.1／§4／§5.1／§5.1／§5.2／Table 2（PDF p.11）／§4.3–4.4／§5.1–5.2",
+      "family_group": "ViT",
+      "adoption_group": "関連"
+    }
+  ],
+  "record_updates": [
+    {
+      "id": "IM003",
+      "fields": {
+        "limitations": "単一の非公開由来SEMデータ。Q&Aの採点分母と工場／ロットの独立性は未確認。2026年に同題の拡張TCAD誌版（10.1109/TCAD.2026.3664304）が刊行。誌版の種類別評価表は未取得のため、会議版のTable 2のみを採用。"
+      },
+      "reason": "同題の誌版書誌確認。旧版の性能と誌版書誌を混同せず、元IDを維持。",
+      "source_ids": [
+        "SRV016",
+        "SRV018"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRV001",
+      "title": "MMAD official dataset: domain_knowledge.json",
+      "publisher": "GitHub",
+      "year": 2025,
+      "url": "https://github.com/jam-cc/MMAD/blob/main/dataset/MMAD/domain_knowledge.json",
+      "doi": "未確認",
+      "type": "著者データ",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者公開データ確認",
+      "saved_path": "",
+      "locator": "zipper/cableの製品別欠陥キー"
+    },
+    {
+      "source_id": "SRV002",
+      "title": "MMAD: A Comprehensive Benchmark for Multimodal Large Language Models in Industrial Anomaly Detection",
+      "publisher": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2410.09453",
+      "doi": "10.48550/arXiv.2410.09453",
+      "type": "著者プレプリント",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者版全文確認",
+      "saved_path": "",
+      "locator": "§3.1／Table 1／References"
+    },
+    {
+      "source_id": "SRV003",
+      "title": "Can Multimodal Large Language Models be Guided to Improve Industrial Anomaly Detection?",
+      "publisher": "arXiv:2501.15795 v1",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2501.15795v1",
+      "doi": "10.48550/arXiv.2501.15795",
+      "type": "原著・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者版全文確認",
+      "saved_path": "",
+      "locator": "§4.1／Fig. 4／著者MMAD付属ラベル／§3.2–3.5／§4.2／§3.5／Fig. 4／Abstract／§3／Fig. 2／§4.1／Fig. 6／§4.2／Table 1／§4.1／Tables 2–3"
+    },
+    {
+      "source_id": "SRV004",
+      "title": "Towards Explainable Industrial Anomaly Detection via Knowledge-Guided Latent Reasoning",
+      "publisher": "arXiv:2602.09850 v4",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2602.09850v4",
+      "doi": "10.48550/arXiv.2602.09850",
+      "type": "原著・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者版v4全文確認",
+      "saved_path": "",
+      "locator": "Appendix A／Table 5／著者MMAD付属ラベル／§4.1／Algorithm 1／Appendix C／Appendix C／Prompt Template／§3.2–3.4／Fig. 2／Eq. (9)／§4.1／Tables 1–2／Table 1、1-shot Defect Classification列／§4.2／Table 1"
+    },
+    {
+      "source_id": "SRV005",
+      "title": "AgentIAD: Agentic Industrial Anomaly Detection via Adaptive Memory Augmentation",
+      "publisher": "arXiv:2512.13671 v2（初版2025）",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2512.13671v2",
+      "doi": "10.48550/arXiv.2512.13671",
+      "type": "原著・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者版v2全文確認",
+      "saved_path": "",
+      "locator": "§4.1／Table 1／著者MMAD付属ラベル／§3.2–3.3／§4.1／§4.1 Evaluation／Table 1／Abstract／§3.2–3.3／Fig. 2／§4.1 Datasets／Table 1／Table 1、1-shot Defect Classification列／§4.1 Datasets"
+    },
+    {
+      "source_id": "SRV006",
+      "title": "Global Logic and Local Search: Dual-Stream Multimodal In-Context Learning for Verifiable Industrial Anomaly Detection",
+      "publisher": "arXiv:2607.03817",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2607.03817",
+      "doi": "10.48550/arXiv.2607.03817",
+      "type": "原著・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者版全文確認",
+      "saved_path": "",
+      "locator": "§4.1／Table 1／著者MMAD付属ラベル／§3／§4.1 Implementation Details／§3.4／§4.1／Fig. 2／§3.1–3.4／§4.1／Tables 1–2／§4.2／Table 1のCls.列／§4.1／Table 2"
+    },
+    {
+      "source_id": "SRV007",
+      "title": "ADOPD: Reference-Privileged On-Policy Distillation for MLLM-Based Industrial Anomaly Detection",
+      "publisher": "arXiv:2608.09789 v1",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2608.09789v1",
+      "doi": "10.48550/arXiv.2608.09789",
+      "type": "原著・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者版v1全文確認",
+      "saved_path": "",
+      "locator": "§4.1／Table 1／著者MMAD付属ラベル／§3／§4.1 Evaluation Protocol・Training Dataset／§4.1／Appendix B／§3／Fig. 2／§4.1／§4.1 Training Dataset／Table 1／Table 1、zero-shot Defect Classification列／§4.1 Training Dataset"
+    },
+    {
+      "source_id": "SRV008",
+      "title": "EMIT: Enhancing MLLMs for Industrial Anomaly Detection via Difficulty-Aware GRPO",
+      "publisher": "arXiv:2507.21619 v1",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2507.21619v1",
+      "doi": "10.48550/arXiv.2507.21619",
+      "type": "原著・著者公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者版全文確認",
+      "saved_path": "",
+      "locator": "Experimental Setup Test Datasets／Table 1／著者MMAD付属ラベル／Implementation Details／Implementation Details／Metrics／Difficulty-Aware GRPO for IAD／Fig. 8／Data Collection／Table 1／Implementation Details／Table 1、Defect Classification列／Data Collection"
+    },
+    {
+      "source_id": "SRV009",
+      "title": "InspectorGPT: A Comparative Reasoning Enhanced VLM for Comprehensive Industrial Anomaly Detection",
+      "publisher": "arXiv:2608.29783 v1",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2608.29783v1",
+      "doi": "10.48550/arXiv.2608.29783",
+      "type": "原著・著者公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者版全文確認",
+      "saved_path": "",
+      "locator": "Experimental Setup／Table 1／著者MMAD付属ラベル／Fig. 1／Experimental Setup／Fig. 1／Datasets & Protocols／Method Stages 1–4／Experimental Setup／Datasets & Protocols／Table 1、Defect Cls.列／Datasets & Protocols／Table 1, 3"
+    },
+    {
+      "source_id": "SRV010",
+      "title": "Open-world scanning electron microscope nano-defect category discovery via self-normal prototypes",
+      "publisher": "Journal of King Saud University Computer and Information Sciences 38, 566",
+      "year": 2026,
+      "url": "https://link.springer.com/content/pdf/10.1007/s44443-026-00893-2.pdf",
+      "doi": "10.1007/s44443-026-00893-2",
+      "type": "原著・著者公開版",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "出版社全文・分類表確認。全原語ラベル未確認。",
+      "saved_path": "",
+      "locator": "§5.1／Figures 5–6／§4.1／§5.1／§4／§5.1／§5.1／§5.2／Table 2（PDF p.11）／§4.3–4.4／§5.1–5.2"
+    },
+    {
+      "source_id": "SRV011",
+      "title": "UMDC: A Unified, Training-Free Model for Multi-Category Few-Shot Defect Classification in Automated Visual Inspection",
+      "publisher": "Yonsei University institutional research portal",
+      "year": 2026,
+      "url": "https://yonsei.elsevierpure.com/en/publications/umdc-a-unified-training-free-model-for-multi-category-few-shot-de/",
+      "doi": "10.1109/ACCESS.2026.3729942",
+      "type": "原資料・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "機関収録抄録確認",
+      "saved_path": "",
+      "locator": "Abstract／DOI"
+    },
+    {
+      "source_id": "SRV012",
+      "title": "Qian Jin publication list",
+      "publisher": "著者研究者ページ",
+      "year": 2026,
+      "url": "https://1201jin.github.io/",
+      "doi": "未確認",
+      "type": "原資料・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者公開書誌確認",
+      "saved_path": "",
+      "locator": "Publications [J4]・[J3]・[C4]–[C6]"
+    },
+    {
+      "source_id": "SRV013",
+      "title": "Adaptive multimodal large language model with hierarchical cross modal grounding for real time industrial visual anomaly detection on edge devices",
+      "publisher": "Springer Nature",
+      "year": 2026,
+      "url": "https://link.springer.com/article/10.1007/s44163-026-02008-2",
+      "doi": "10.1007/s44163-026-02008-2",
+      "type": "原資料・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "出版社本文該当節確認",
+      "saved_path": "",
+      "locator": "§3.7／§4.1–4.4／Tables 2–3"
+    },
+    {
+      "source_id": "SRV014",
+      "title": "Interactive multimodal quality assessment in laser powder bed fusion using vision-large language models",
+      "publisher": "IM-AIM Lab",
+      "year": 2026,
+      "url": "https://sites.google.com/view/drsenliu/publications",
+      "doi": "10.1016/j.jmapro.2026.08.008",
+      "type": "原資料・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者書誌確認",
+      "saved_path": "",
+      "locator": "Publications [34]"
+    },
+    {
+      "source_id": "SRV015",
+      "title": "Interactive multimodal quality assessment in laser powder bed fusion using vision-large language models",
+      "publisher": "EurekaMag",
+      "year": 2026,
+      "url": "https://eurekamag.com/research/109/401/109401158.php",
+      "doi": "10.1016/j.jmapro.2026.08.008",
+      "type": "原資料・書誌・補足",
+      "primary": "二次情報",
+      "accessed": "2026-11-11",
+      "verification": "二次収録抄録・書誌",
+      "saved_path": "",
+      "locator": "収録抄録・DOI"
+    },
+    {
+      "source_id": "SRV016",
+      "title": "FabGPT: An Efficient Large Multimodal Model for Complex Wafer Defect Knowledge Queries",
+      "publisher": "Chinese University of Hong Kong research portal",
+      "year": 2026,
+      "url": "https://research.cuhk.edu.hk/en/publications/fabgpt-an-efficient-large-multimodal-model-for-complex-wafer-defe/",
+      "doi": "10.1109/TCAD.2026.3664304",
+      "type": "原資料・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "機関収録抄録・書誌確認",
+      "saved_path": "",
+      "locator": "Abstract／DOI／Cite this"
+    },
+    {
+      "source_id": "SRV017",
+      "title": "UniPCB: A Unified Vision-Language Benchmark for Open-Ended PCB Quality Inspection",
+      "publisher": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2601.19222",
+      "doi": "10.48550/arXiv.2601.19222",
+      "type": "原資料・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者全文確認",
+      "saved_path": "",
+      "locator": "§3.2–3.3／Tables 1–2／References"
+    },
+    {
+      "source_id": "SRV018",
+      "title": "FabGPT: An Efficient Large Multimodal Model for Complex Wafer Defect Knowledge Queries（ICCAD版）",
+      "publisher": "arXiv",
+      "year": 2024,
+      "url": "https://arxiv.org/html/2407.10810",
+      "doi": "10.1145/3676536.3676750",
+      "type": "原資料・書誌・補足",
+      "primary": "一次情報",
+      "accessed": "2026-11-11",
+      "verification": "著者全文確認",
+      "saved_path": "",
+      "locator": "著者版ヘッダ／Tables 1–2／References"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CRV001",
+      "entity_id": "IVL2001",
+      "field": "labels",
+      "claim": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV002",
+      "entity_id": "IVL2001",
+      "field": "input",
+      "claim": "試験画像、検索した正常参照画像、選択式質問と質問に応じた知識。検索特徴は凍結CLIP ViT-B/16。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV003",
+      "entity_id": "IVL2001",
+      "field": "prompt",
+      "claim": "欠陥候補を提示する選択式質問に、検索した正常画像と文脈知識、必要に応じて推論手順を加える。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV004",
+      "entity_id": "IVL2001",
+      "field": "primary_model",
+      "claim": "Echo＋Qwen2-VL 7B。類似正常参照の検索、質問に応じた専門知識、段階的推論、最終回答を組み合わせる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV005",
+      "entity_id": "IVL2001",
+      "field": "split",
+      "claim": "MMADのMVTec-AD・VisAを用い、製品分類・製品分析の設問を除いた5タスクで評価。Fig. 6で正常参照0–3枚を比較。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV006",
+      "entity_id": "IVL2001",
+      "field": "performance",
+      "claim": "Table 1のDefect Classification AccuracyはMVTec-AD 72.86%、VisA 62.35%。同じQwen2-VL 7Bのベースは68.46%、57.06%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV007",
+      "entity_id": "IVL2001",
+      "field": "limitations",
+      "claim": "MMAD全4データセットとは異なる部分集合。外部知識なしとの比較はTable 2・3の条件を参照。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV008",
+      "entity_id": "IVL2002",
+      "field": "labels",
+      "claim": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV009",
+      "entity_id": "IVL2002",
+      "field": "input",
+      "claim": "クエリ画像、MMADの欠陥種類の候補付き質問、検索された欠陥の記述。1-shotは同一ドメイン正常画像を1枚追加。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV010",
+      "entity_id": "IVL2002",
+      "field": "prompt",
+      "claim": "工業検査の役割・質問・候補選択肢に検索した種類知識を加える。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV011",
+      "entity_id": "IVL2002",
+      "field": "primary_model",
+      "claim": "Reason-IAD。CLIPで関連欠陥カテゴリの知識を検索し、Qwen3-VLの潜在推論トークンと選択画像パッチを推論時に更新。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV012",
+      "entity_id": "IVL2002",
+      "field": "split",
+      "claim": "§4.1では同じドメインから正常参照をランダム抽出する1-shot、Table 2は参照なしzero-shot。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV013",
+      "entity_id": "IVL2002",
+      "field": "performance",
+      "claim": "v4 Table 1の1-shot種類AccuracyはReason-IAD Qwen3-VL-8B 75.07%、同基盤62.33%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV014",
+      "entity_id": "IVL2002",
+      "field": "limitations",
+      "claim": "表の種類列を採用。本文に記された総合平均と表の総合平均に差があるため総合平均を比較値に使わない。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV015",
+      "entity_id": "IVL2003",
+      "field": "labels",
+      "claim": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV016",
+      "entity_id": "IVL2003",
+      "field": "input",
+      "claim": "クエリ画像とMMAD選択式質問、標準1-shotの正常参照。推論時に画像領域拡大や参照検索の操作を呼び出せる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV017",
+      "entity_id": "IVL2003",
+      "field": "prompt",
+      "claim": "MMADの原版選択式質問。必要に応じて画像拡大・検索結果を文脈に追加。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV018",
+      "entity_id": "IVL2003",
+      "field": "primary_model",
+      "claim": "AgentIAD（Qwen2.5-VL-3B）。領域拡大、正常参照検索、外部知識取得を選択できる検査エージェント。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV019",
+      "entity_id": "IVL2003",
+      "field": "split",
+      "claim": "§4.1の1,936訓練／6,400評価の分割。Table 1は標準1-shot。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV020",
+      "entity_id": "IVL2003",
+      "field": "performance",
+      "claim": "Table 1のDefect Classification AccuracyはAgentIAD 72.73%、Qwen2.5-VL-3B 41.07%、AnomalyR1 63.56%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV021",
+      "entity_id": "IVL2003",
+      "field": "limitations",
+      "claim": "MMAD内部学習を含むため、学習なしで全MMADを評価した結果とは条件が異なる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV022",
+      "entity_id": "IVL2004",
+      "field": "labels",
+      "claim": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV023",
+      "entity_id": "IVL2004",
+      "field": "input",
+      "claim": "クエリ画像・選択式質問、PVLAに収録した仕様、局所クロップ。1-shotでは正常参照画像を利用。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV024",
+      "entity_id": "IVL2004",
+      "field": "prompt",
+      "claim": "MMAD-QAの候補選択。構造レポートと局所画像・検索知識を統合。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV025",
+      "entity_id": "IVL2004",
+      "field": "primary_model",
+      "claim": "GLLS。部位別の正常情報を検索し、SAM3による全体構造確認と、モンテカルロ木探索による局所クロップの取得を並行。Qwen3-VLが証拠から回答。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV026",
+      "entity_id": "IVL2004",
+      "field": "split",
+      "claim": "Table 1のMVTec・VisA別0-shot／1-shot。別データセットは二値評価。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV027",
+      "entity_id": "IVL2004",
+      "field": "performance",
+      "claim": "Table 1のCls. Accuracy、Qwen3-VL-8B GLLS 1-shot MVTec 87.7%、VisA 83.5%。0-shot 81.9%、65.2%。同基盤74.2%、61.4%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV028",
+      "entity_id": "IVL2004",
+      "field": "limitations",
+      "claim": "評価はMMAD-QA部分集合。1-shotと0-shotは正常参照に加えて局所化器も異なる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV029",
+      "entity_id": "IVL2005",
+      "field": "labels",
+      "claim": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV030",
+      "entity_id": "IVL2005",
+      "field": "input",
+      "claim": "推論時はクエリ画像とMMAD選択式質問のみ。対応する正常画像・領域注釈は教師の学習時のみ利用。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV031",
+      "entity_id": "IVL2005",
+      "field": "prompt",
+      "claim": "原版MMADの画像・問い・選択肢。学習教師に正常クロップを追加。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV032",
+      "entity_id": "IVL2005",
+      "field": "primary_model",
+      "claim": "ADOPD。学習中だけ対応／非対応の正常局所参照を与えたQwen3-VL-32B教師から、Qwen3-VL-4B学生へ方策蒸留。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV033",
+      "entity_id": "IVL2005",
+      "field": "split",
+      "claim": "§4.1で学習と評価のデータセット非重複を明示。Table 1は推論時の正常参照0枚。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV034",
+      "entity_id": "IVL2005",
+      "field": "performance",
+      "claim": "Table 1のzero-shot Defect Classification AccuracyはADOPD 57.03%、同基盤53.90%、同論文で再評価したReason-IAD 73.12%。77.31%は全タスク平均。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV035",
+      "entity_id": "IVL2005",
+      "field": "generalization",
+      "claim": "Real-IADからMMADへの異データセット評価（原著による非重複）。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV036",
+      "entity_id": "IVL2006",
+      "field": "labels",
+      "claim": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV037",
+      "entity_id": "IVL2006",
+      "field": "input",
+      "claim": "クエリ画像・欠陥種類選択式質問・CLIPによる最類似正常参照1枚・製品領域知識。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV038",
+      "entity_id": "IVL2006",
+      "field": "prompt",
+      "claim": "欠陥種類選択とドメイン知識を入力。soft prompt・対照埋め込みは二値判定・局在タスクのみ。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV039",
+      "entity_id": "IVL2006",
+      "field": "primary_model",
+      "claim": "EMIT（InternVL3-8B）。難易度に応じて回答再サンプリングと利得重みを調整するGRPO。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV040",
+      "entity_id": "IVL2006",
+      "field": "split",
+      "claim": "論文Table 1はMMADの標準1-shot。著者はMMAD元4データセットの直接タスク作成を避けるが、正常画像の説明文を使うと記載。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV041",
+      "entity_id": "IVL2006",
+      "field": "performance",
+      "claim": "Table 1の1-shot Defect Classification Accuracy 80.85%。比較Qwen2.5-VL 7B 69.35%、GLM-4.1V-Thinking 9B 72.01%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV042",
+      "entity_id": "IVL2006",
+      "field": "limitations",
+      "claim": "MMAD由来正常例からの説明生成も用いる。完全なドメイン未接触学習ではない。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV043",
+      "entity_id": "IVL2007",
+      "field": "labels",
+      "claim": "MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV044",
+      "entity_id": "IVL2007",
+      "field": "input",
+      "claim": "クエリ画像、欠陥のない比較画像1枚、MMAD選択式質問。正常参照はMMADの候補からランダム抽出。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV045",
+      "entity_id": "IVL2007",
+      "field": "prompt",
+      "claim": "クエリと正常画像を比較し、欠陥種類設問の候補を回答。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV046",
+      "entity_id": "IVL2007",
+      "field": "primary_model",
+      "claim": "InspectorGPT（Qwen2.5-VL-7B）。比較推論SFTからGRPOと分割枝を別々に学び、両枝のtask vectorを融合。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV047",
+      "entity_id": "IVL2007",
+      "field": "split",
+      "claim": "38製品を層化した20%の学習サブセットで正常・異常比1:1、残り80%を評価。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV048",
+      "entity_id": "IVL2007",
+      "field": "performance",
+      "claim": "Table 1のDefect Cls. Accuracy 75.32%。同基盤56.15%。全タスク平均82.38%。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV049",
+      "entity_id": "IVL2007",
+      "field": "limitations",
+      "claim": "MMADの内部学習あり。実験表中に異なる学習設定の比較器も明記。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV050",
+      "entity_id": "IVL2008",
+      "field": "labels",
+      "claim": "工程BEOL・DEP・DPRと欠陥13種類を区別。個別欠陥の全原語ラベルはFigure 5–6参照、今回の取得で未確認。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV051",
+      "entity_id": "IVL2008",
+      "field": "input",
+      "claim": "KLA SEM G-series撮像のICウェハ画像。空間事前情報は同一画像から抽出。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV052",
+      "entity_id": "IVL2008",
+      "field": "primary_model",
+      "claim": "SNAP-SEM。DINOv3事前学習ViT-Base/14、自己正常プロトタイプから空間事前分布を抽出し、SMG-ViTが未知カテゴリをクラスタリング。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV053",
+      "entity_id": "IVL2008",
+      "field": "split",
+      "claim": "BEOLを既知、DEP/DPRを未知とする設定およびBEOLを未知・DPRを既知とする逆設定。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV054",
+      "entity_id": "IVL2008",
+      "field": "performance",
+      "claim": "Table 2の種類分類F1（0–1尺度）はBEOL 0.7825、DEP 0.9695、DPR 0.9411。同順のNMI 0.7226／0.8517／0.9249、ARI 0.8046／0.9282／0.9682。",
+      "status": "確認済み"
+    },
+    {
+      "claim_id": "CRV055",
+      "entity_id": "IVL2008",
+      "field": "limitations",
+      "claim": "未知出力はクラスタIDで、評価時に正解クラスへ対応付ける。欠陥名をそのまま生成する方式とは出力が異なる。",
+      "status": "確認済み"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "claim_id": "CRV001",
+      "source_id": "SRV003",
+      "locator": "§4.1／Fig. 4／著者MMAD付属ラベル",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV001",
+      "source_id": "SRV001",
+      "locator": "zipper/cableの原語キー",
+      "quote": "",
+      "verification": "著者公開データ確認"
+    },
+    {
+      "claim_id": "CRV002",
+      "source_id": "SRV003",
+      "locator": "§3.2–3.5／§4.2",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV003",
+      "source_id": "SRV003",
+      "locator": "§3.5／Fig. 4",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV004",
+      "source_id": "SRV003",
+      "locator": "Abstract／§3／Fig. 2",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV005",
+      "source_id": "SRV003",
+      "locator": "§4.1／Fig. 6",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV006",
+      "source_id": "SRV003",
+      "locator": "§4.2／Table 1",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV007",
+      "source_id": "SRV003",
+      "locator": "§4.1／Tables 2–3",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV008",
+      "source_id": "SRV004",
+      "locator": "Appendix A／Table 5／著者MMAD付属ラベル",
+      "quote": "",
+      "verification": "著者版v4全文確認"
+    },
+    {
+      "claim_id": "CRV008",
+      "source_id": "SRV001",
+      "locator": "zipper/cableの原語キー",
+      "quote": "",
+      "verification": "著者公開データ確認"
+    },
+    {
+      "claim_id": "CRV009",
+      "source_id": "SRV004",
+      "locator": "§4.1／Algorithm 1／Appendix C",
+      "quote": "",
+      "verification": "著者版v4全文確認"
+    },
+    {
+      "claim_id": "CRV010",
+      "source_id": "SRV004",
+      "locator": "Appendix C／Prompt Template",
+      "quote": "",
+      "verification": "著者版v4全文確認"
+    },
+    {
+      "claim_id": "CRV011",
+      "source_id": "SRV004",
+      "locator": "§3.2–3.4／Fig. 2／Eq. (9)",
+      "quote": "",
+      "verification": "著者版v4全文確認"
+    },
+    {
+      "claim_id": "CRV012",
+      "source_id": "SRV004",
+      "locator": "§4.1／Tables 1–2",
+      "quote": "",
+      "verification": "著者版v4全文確認"
+    },
+    {
+      "claim_id": "CRV013",
+      "source_id": "SRV004",
+      "locator": "Table 1、1-shot Defect Classification列",
+      "quote": "",
+      "verification": "著者版v4全文確認"
+    },
+    {
+      "claim_id": "CRV014",
+      "source_id": "SRV004",
+      "locator": "§4.2／Table 1",
+      "quote": "",
+      "verification": "著者版v4全文確認"
+    },
+    {
+      "claim_id": "CRV015",
+      "source_id": "SRV005",
+      "locator": "§4.1／Table 1／著者MMAD付属ラベル",
+      "quote": "",
+      "verification": "著者版v2全文確認"
+    },
+    {
+      "claim_id": "CRV015",
+      "source_id": "SRV001",
+      "locator": "zipper/cableの原語キー",
+      "quote": "",
+      "verification": "著者公開データ確認"
+    },
+    {
+      "claim_id": "CRV016",
+      "source_id": "SRV005",
+      "locator": "§3.2–3.3／§4.1",
+      "quote": "",
+      "verification": "著者版v2全文確認"
+    },
+    {
+      "claim_id": "CRV017",
+      "source_id": "SRV005",
+      "locator": "§4.1 Evaluation／Table 1",
+      "quote": "",
+      "verification": "著者版v2全文確認"
+    },
+    {
+      "claim_id": "CRV018",
+      "source_id": "SRV005",
+      "locator": "Abstract／§3.2–3.3／Fig. 2",
+      "quote": "",
+      "verification": "著者版v2全文確認"
+    },
+    {
+      "claim_id": "CRV019",
+      "source_id": "SRV005",
+      "locator": "§4.1 Datasets／Table 1",
+      "quote": "",
+      "verification": "著者版v2全文確認"
+    },
+    {
+      "claim_id": "CRV020",
+      "source_id": "SRV005",
+      "locator": "Table 1、1-shot Defect Classification列",
+      "quote": "",
+      "verification": "著者版v2全文確認"
+    },
+    {
+      "claim_id": "CRV021",
+      "source_id": "SRV005",
+      "locator": "§4.1 Datasets",
+      "quote": "",
+      "verification": "著者版v2全文確認"
+    },
+    {
+      "claim_id": "CRV022",
+      "source_id": "SRV006",
+      "locator": "§4.1／Table 1／著者MMAD付属ラベル",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV022",
+      "source_id": "SRV001",
+      "locator": "zipper/cableの原語キー",
+      "quote": "",
+      "verification": "著者公開データ確認"
+    },
+    {
+      "claim_id": "CRV023",
+      "source_id": "SRV006",
+      "locator": "§3／§4.1 Implementation Details",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV024",
+      "source_id": "SRV006",
+      "locator": "§3.4／§4.1",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV025",
+      "source_id": "SRV006",
+      "locator": "Fig. 2／§3.1–3.4",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV026",
+      "source_id": "SRV006",
+      "locator": "§4.1／Tables 1–2",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV027",
+      "source_id": "SRV006",
+      "locator": "§4.2／Table 1のCls.列",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV028",
+      "source_id": "SRV006",
+      "locator": "§4.1／Table 2",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV029",
+      "source_id": "SRV007",
+      "locator": "§4.1／Table 1／著者MMAD付属ラベル",
+      "quote": "",
+      "verification": "著者版v1全文確認"
+    },
+    {
+      "claim_id": "CRV029",
+      "source_id": "SRV001",
+      "locator": "zipper/cableの原語キー",
+      "quote": "",
+      "verification": "著者公開データ確認"
+    },
+    {
+      "claim_id": "CRV030",
+      "source_id": "SRV007",
+      "locator": "§3／§4.1 Evaluation Protocol・Training Dataset",
+      "quote": "",
+      "verification": "著者版v1全文確認"
+    },
+    {
+      "claim_id": "CRV031",
+      "source_id": "SRV007",
+      "locator": "§4.1／Appendix B",
+      "quote": "",
+      "verification": "著者版v1全文確認"
+    },
+    {
+      "claim_id": "CRV032",
+      "source_id": "SRV007",
+      "locator": "§3／Fig. 2／§4.1",
+      "quote": "",
+      "verification": "著者版v1全文確認"
+    },
+    {
+      "claim_id": "CRV033",
+      "source_id": "SRV007",
+      "locator": "§4.1 Training Dataset／Table 1",
+      "quote": "",
+      "verification": "著者版v1全文確認"
+    },
+    {
+      "claim_id": "CRV034",
+      "source_id": "SRV007",
+      "locator": "Table 1、zero-shot Defect Classification列",
+      "quote": "",
+      "verification": "著者版v1全文確認"
+    },
+    {
+      "claim_id": "CRV035",
+      "source_id": "SRV007",
+      "locator": "§4.1 Training Dataset",
+      "quote": "",
+      "verification": "著者版v1全文確認"
+    },
+    {
+      "claim_id": "CRV036",
+      "source_id": "SRV008",
+      "locator": "Experimental Setup Test Datasets／Table 1／著者MMAD付属ラベル",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV036",
+      "source_id": "SRV001",
+      "locator": "zipper/cableの原語キー",
+      "quote": "",
+      "verification": "著者公開データ確認"
+    },
+    {
+      "claim_id": "CRV037",
+      "source_id": "SRV008",
+      "locator": "Implementation Details",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV038",
+      "source_id": "SRV008",
+      "locator": "Implementation Details／Metrics",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV039",
+      "source_id": "SRV008",
+      "locator": "Difficulty-Aware GRPO for IAD／Fig. 8",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV040",
+      "source_id": "SRV008",
+      "locator": "Data Collection／Table 1／Implementation Details",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV041",
+      "source_id": "SRV008",
+      "locator": "Table 1、Defect Classification列",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV042",
+      "source_id": "SRV008",
+      "locator": "Data Collection",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV043",
+      "source_id": "SRV009",
+      "locator": "Experimental Setup／Table 1／著者MMAD付属ラベル",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV043",
+      "source_id": "SRV001",
+      "locator": "zipper/cableの原語キー",
+      "quote": "",
+      "verification": "著者公開データ確認"
+    },
+    {
+      "claim_id": "CRV044",
+      "source_id": "SRV009",
+      "locator": "Fig. 1／Experimental Setup",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV045",
+      "source_id": "SRV009",
+      "locator": "Fig. 1／Datasets & Protocols",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV046",
+      "source_id": "SRV009",
+      "locator": "Method Stages 1–4／Experimental Setup",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV047",
+      "source_id": "SRV009",
+      "locator": "Datasets & Protocols",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV048",
+      "source_id": "SRV009",
+      "locator": "Table 1、Defect Cls.列",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV049",
+      "source_id": "SRV009",
+      "locator": "Datasets & Protocols／Table 1, 3",
+      "quote": "",
+      "verification": "著者版全文確認"
+    },
+    {
+      "claim_id": "CRV050",
+      "source_id": "SRV010",
+      "locator": "§5.1／Figures 5–6",
+      "quote": "",
+      "verification": "出版社全文・分類表確認。全原語ラベル未確認。"
+    },
+    {
+      "claim_id": "CRV051",
+      "source_id": "SRV010",
+      "locator": "§4.1／§5.1",
+      "quote": "",
+      "verification": "出版社全文・分類表確認。全原語ラベル未確認。"
+    },
+    {
+      "claim_id": "CRV052",
+      "source_id": "SRV010",
+      "locator": "§4／§5.1",
+      "quote": "",
+      "verification": "出版社全文・分類表確認。全原語ラベル未確認。"
+    },
+    {
+      "claim_id": "CRV053",
+      "source_id": "SRV010",
+      "locator": "§5.1",
+      "quote": "",
+      "verification": "出版社全文・分類表確認。全原語ラベル未確認。"
+    },
+    {
+      "claim_id": "CRV054",
+      "source_id": "SRV010",
+      "locator": "§5.2／Table 2（PDF p.11）",
+      "quote": "",
+      "verification": "出版社全文・分類表確認。全原語ラベル未確認。"
+    },
+    {
+      "claim_id": "CRV055",
+      "source_id": "SRV010",
+      "locator": "§4.3–4.4／§5.1–5.2",
+      "quote": "",
+      "verification": "出版社全文・分類表確認。全原語ラベル未確認。"
+    }
+  ],
+  "search_log": [
+    {
+      "search_id": "QRV001",
+      "executed_at": "2026-11-10T23:46:06.381Z",
+      "query": "\"MVREC\" \"defect classification\" few-shot cites MVTec-FS 2025 2026 paper",
+      "provider": "web.run 検索",
+      "target": "IV001／forward",
+      "returned_count": 18,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV009",
+        "KRV020",
+        "KRV021"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV002",
+      "executed_at": "2026-11-10T23:46:06.381Z",
+      "query": "\"Hyperbolic Defect Feature Synthesis\" \"defect\" cites 2026 HypDFS",
+      "provider": "web.run 検索",
+      "target": "IV002／forward",
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV022"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV003",
+      "executed_at": "2026-11-10T23:46:06.381Z",
+      "query": "\"SEM-CLIP\" wafer \"defect classification\" paper 2025 2026 cited",
+      "provider": "web.run 検索",
+      "target": "IV003／forward",
+      "returned_count": 14,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV010"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV004",
+      "executed_at": "2026-11-10T23:46:06.381Z",
+      "query": "\"MMAD\" \"Defect Classification\" \"industrial\" site:arxiv.org/html 2026 anomaly classification industrial model table new",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 0,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "検索出力の表示結果なし。該当研究の不存在は示さない。"
+    },
+    {
+      "search_id": "QRV005",
+      "executed_at": "2026-11-10T23:46:06.381Z",
+      "query": "\"Detect, Classify, Act\" Mokhtar \"categorizing\" \"VeLM\" 2025 2026 anomaly citation classification",
+      "provider": "web.run 検索",
+      "target": "IM002／forward",
+      "returned_count": 15,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV032"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV006",
+      "executed_at": "2026-11-10T23:46:06.382Z",
+      "query": "\"FabGPT\" \"Category\" \"wafer\" \"defect\" multimodal model classification 2025 2026 cite",
+      "provider": "web.run 検索",
+      "target": "IM003／forward",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV008",
+        "KRV023"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV007",
+      "executed_at": "2026-11-10T23:46:06.382Z",
+      "query": "\"Open-Set Fine-Grained Industrial Defect Classification Based on CLIP Prompt Tuning and Vision-Language Alignment\" OR \"11566999\"",
+      "provider": "web.run 検索",
+      "target": "XIV006／retrieval",
+      "returned_count": 0,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "検索出力の表示結果なし。該当研究の不存在は示さない。"
+    },
+    {
+      "search_id": "QRV008",
+      "executed_at": "2026-11-10T23:46:06.388Z",
+      "query": "HCGMLLMAD PCB arxiv paper defect type classification quantitative",
+      "provider": "web.run 検索",
+      "target": "HCGMLLMAD／retrieval",
+      "returned_count": 21,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV012",
+        "KRV015"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV009",
+      "executed_at": "2026-11-10T23:46:06.388Z",
+      "query": "\"Interactive multimodal quality assessment in laser powder bed fusion using vision-large language models\" \"defect\"",
+      "provider": "web.run 検索",
+      "target": "IMX007／retrieval",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV013"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV010",
+      "executed_at": "2026-11-10T23:46:06.388Z",
+      "query": "\"MiniGPT4-AD\" OR \"MiniGPT4AD\" anomaly detection industrial original paper",
+      "provider": "web.run 検索",
+      "target": "IMX008／retrieval",
+      "returned_count": 0,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "検索出力の表示結果なし。該当研究の不存在は示さない。"
+    },
+    {
+      "search_id": "QRV011",
+      "executed_at": "2026-11-10T23:46:53.102Z",
+      "query": "\"UMDC\" \"A Unified, Training-Free Model\" \"defect classification\" AlphaCLIP few-shot Lee DOI PDF",
+      "provider": "web.run 検索",
+      "target": "IV001／forward",
+      "returned_count": 8,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV009"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV012",
+      "executed_at": "2026-11-10T23:46:53.102Z",
+      "query": "\"SEM-CLIP 2.0\" precise nanoscale defect Jin Jiang DOI paper pdf",
+      "provider": "web.run 検索",
+      "target": "IV003／forward",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV010"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV013",
+      "executed_at": "2026-11-10T23:46:53.102Z",
+      "query": "MMAD industrial anomaly \"Defect Classification\" \"Anomaly\" vision-language industrial benchmark 2025 2026",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 22,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV002",
+        "KRV005",
+        "KRV018"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV014",
+      "executed_at": "2026-11-10T23:46:53.102Z",
+      "query": "\"MVTec-AC\" \"VisA-AC\" anomaly type classification benchmark paper",
+      "provider": "web.run 検索",
+      "target": "IM002／forward",
+      "returned_count": 18,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV032"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV015",
+      "executed_at": "2026-11-10T23:46:53.102Z",
+      "query": "\"FabGPT\" \"3676750\" PDF arxiv accepted author Zhejiang",
+      "provider": "web.run 検索",
+      "target": "IM003／backward",
+      "returned_count": 0,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "検索出力の表示結果なし。該当研究の不存在は示さない。"
+    },
+    {
+      "search_id": "QRV016",
+      "executed_at": "2026-11-10T23:46:53.103Z",
+      "query": "\"11566999\" Zhu IEEE EIBDCT2026 Open Set Fine-Grained Crossref PDF",
+      "provider": "web.run 検索",
+      "target": "XIV006／retrieval",
+      "returned_count": 17,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV017",
+      "executed_at": "2026-11-10T23:46:53.103Z",
+      "query": "\"Interactive multimodal quality assessment\" \"Giri\" LPBF pdf DOI journal additive",
+      "provider": "web.run 検索",
+      "target": "IMX007／retrieval",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV013"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV018",
+      "executed_at": "2026-11-10T23:46:53.103Z",
+      "query": "\"10.1007/s44163-026-02008-2\" HCGMLLMAD ground truth PCB actual paper",
+      "provider": "web.run 検索",
+      "target": "HCGMLLMAD／retrieval",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV012"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV019",
+      "executed_at": "2026-11-10T23:46:53.103Z",
+      "query": "\"MMAD\" defect classification multimodal 2026 ICLR AAAI CVPR IAD benchmark \"classification\" GQA industrial",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 15,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV002",
+        "KRV003",
+        "KRV019",
+        "KRV033"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV020",
+      "executed_at": "2026-11-10T23:46:53.103Z",
+      "query": "\"MiniGPT4-AD\" industrial anomaly detection \"AnomalyGPT\"",
+      "provider": "web.run 検索",
+      "target": "IMX008／retrieval",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV021",
+      "executed_at": "2026-11-10T23:47:37.126Z",
+      "query": "\"10.1109/ACCESS.2026.3729942\" OR \"UMDC\" \"139482\" pdf Kyungha Min github",
+      "provider": "web.run 検索",
+      "target": "IV001／forward",
+      "returned_count": 2,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV009"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV022",
+      "executed_at": "2026-11-10T23:47:37.126Z",
+      "query": "\"SEM-CLIP 2.0\" \"10.1109\" Qian Jin classification",
+      "provider": "web.run 検索",
+      "target": "IV003／forward",
+      "returned_count": 9,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV010"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV023",
+      "executed_at": "2026-11-10T23:47:37.126Z",
+      "query": "\"FabThink: A Wafer Analysis Multimodal LLM\" DOI PDF defect category",
+      "provider": "web.run 検索",
+      "target": "IM003／forward",
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV016"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV024",
+      "executed_at": "2026-11-10T23:47:37.128Z",
+      "query": "\"FabGPT\" TCAD \"11395290\" Wafer Jiang 2026 \"FabThink\"",
+      "provider": "web.run 検索",
+      "target": "IM003／forward",
+      "returned_count": 0,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "検索出力の表示結果なし。該当研究の不存在は示さない。"
+    },
+    {
+      "search_id": "QRV025",
+      "executed_at": "2026-11-10T23:47:37.129Z",
+      "query": "\"Mask-Guided Diffusion with Process-Aware Metric Optimization for Long-Tailed Wafer Defect Analysis\" classification PDF",
+      "provider": "web.run 検索",
+      "target": "IM003／forward",
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV026",
+      "executed_at": "2026-11-10T23:47:37.129Z",
+      "query": "\"Reason-IAD\" \"MMAD\" \"EGVLR\" \"defect classification\" paper arxiv",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 6,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV027",
+      "executed_at": "2026-11-10T23:47:37.129Z",
+      "query": "\"MVTec-AC\" \"anomaly classification\" \"VELM\" -Mokhtar MMAD type",
+      "provider": "web.run 検索",
+      "target": "IM002／forward",
+      "returned_count": 15,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV032"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV028",
+      "executed_at": "2026-11-10T23:47:37.129Z",
+      "query": "\"A SelectiveNet-Based Method for Defect Classification in Semiconductor Manufacturing\" DOI Qian Jin",
+      "provider": "web.run 検索",
+      "target": "IV003／backward",
+      "returned_count": 15,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV029",
+      "executed_at": "2026-11-10T23:47:37.129Z",
+      "query": "\"S1526612526007607\" DOI Giri Hosseini Sen Liu arXiv repository",
+      "provider": "web.run 検索",
+      "target": "IMX007／retrieval",
+      "returned_count": 1,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV013"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV030",
+      "executed_at": "2026-11-10T23:47:37.129Z",
+      "query": "\"Open-Set Fine-Grained Industrial Defect Classification\" \"Zian Zhu\" IEEE EIBDCT 613 616",
+      "provider": "web.run 検索",
+      "target": "XIV006／retrieval",
+      "returned_count": 6,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV011"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV031",
+      "executed_at": "2026-11-10T23:48:38.408Z",
+      "query": "\"AgentIAD\" \"MMAD\" defect classification table",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV003",
+        "KRV005",
+        "KRV019",
+        "KRV033"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV032",
+      "executed_at": "2026-11-10T23:48:38.408Z",
+      "query": "\"Echo\" \"MMAD\" anomaly classification Echo industrial model Miao arxiv defect classification",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 14,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV001",
+        "KRV024"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV033",
+      "executed_at": "2026-11-10T23:48:38.408Z",
+      "query": "\"ADOPD: Reference-Privileged On-Policy Distillation\" MMAD arxiv",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV005"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV034",
+      "executed_at": "2026-11-10T23:48:38.408Z",
+      "query": "\"Evidence-Grounded Vision\" \"EGVLR\" \"defect classification\" arxiv authors",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV035",
+      "executed_at": "2026-11-10T23:48:38.408Z",
+      "query": "\"Global Logic and Local Search\" industrial anomaly arxiv classification",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 13,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV004"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV036",
+      "executed_at": "2026-11-10T23:48:38.408Z",
+      "query": "\"FabThink\" \"10.1109\" Jiang wafer ICCAD 2025",
+      "provider": "web.run 検索",
+      "target": "IM003／forward",
+      "returned_count": 10,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV016"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV037",
+      "executed_at": "2026-11-10T23:48:38.409Z",
+      "query": "\"10.1109/TCAD\" \"FabGPT\" Jiang semiconductor knowledge queries",
+      "provider": "web.run 検索",
+      "target": "IM003／forward",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV017",
+        "KRV023"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV038",
+      "executed_at": "2026-11-10T23:48:38.409Z",
+      "query": "\"Giri\" \"1168–1181\" laser \"Interactive\" doi 174",
+      "provider": "web.run 検索",
+      "target": "IMX007／retrieval",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV013"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV039",
+      "executed_at": "2026-11-10T23:48:38.409Z",
+      "query": "\"10.1109/TCAD.2026.3663889\" SEM-CLIP 2.0 PDF",
+      "provider": "web.run 検索",
+      "target": "IV003／forward",
+      "returned_count": 6,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV010"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV040",
+      "executed_at": "2026-11-10T23:48:38.409Z",
+      "query": "\"HypDFS\" \"Lyu\" \"Hyperbolic Defect Feature Synthesis\" 19602 citing",
+      "provider": "web.run 検索",
+      "target": "IV002／forward",
+      "returned_count": 1,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV022"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV041",
+      "executed_at": "2026-11-10T23:53:37.507Z",
+      "query": "\"A novel joint segmentation approach for wafer surface defect classification\" blended network Swin 2025",
+      "provider": "web.run 検索",
+      "target": "IM003／backward",
+      "returned_count": 16,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV042",
+      "executed_at": "2026-11-10T23:53:37.507Z",
+      "query": "\"Mixed-type wafer defect recognition with multi-scale information fusion transformer\" DOI PDF Wei Wang",
+      "provider": "web.run 検索",
+      "target": "IV003／backward",
+      "returned_count": 18,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV026"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV043",
+      "executed_at": "2026-11-10T23:53:37.507Z",
+      "query": "\"Few-shot classification of screen defects with class-agnostic mask and context-based classifier\" architecture Zhou DOI",
+      "provider": "web.run 検索",
+      "target": "IV001／backward",
+      "returned_count": 14,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV021",
+        "KRV027"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV044",
+      "executed_at": "2026-11-10T23:53:37.507Z",
+      "query": "\"Graph embedding and optimal transport for few-shot classification of metal surface defect\" transformer Zhou 2022 DOI",
+      "provider": "web.run 検索",
+      "target": "IV002／backward",
+      "returned_count": 18,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV031"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV045",
+      "executed_at": "2026-11-10T23:53:37.507Z",
+      "query": "\"IAD-R1\" \"Defect Classification\" MMAD \"Qwen\" Li paper",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 8,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV004"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV046",
+      "executed_at": "2026-11-10T23:53:37.507Z",
+      "query": "\"EMIT\" \"Defect Classification\" \"MMAD\" arxiv industrial model",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 14,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV001",
+        "KRV006"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV047",
+      "executed_at": "2026-11-10T23:53:37.507Z",
+      "query": "\"InspectorGPT\" \"Defect Classification\" \"MMAD\" arxiv industrial",
+      "provider": "web.run 検索",
+      "target": "IM001／forward",
+      "returned_count": 5,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV006",
+        "KRV007",
+        "KRV018"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV048",
+      "executed_at": "2026-11-10T23:53:37.507Z",
+      "query": "\"10.1016/j.jmapro.2026.08.008\" Giri pdf classification Peregrine",
+      "provider": "web.run 検索",
+      "target": "IMX007／retrieval",
+      "returned_count": 12,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [
+        "KRV013"
+      ],
+      "notes": "同じ研究の異版・複数URLが含まれる。"
+    },
+    {
+      "search_id": "QRV049",
+      "executed_at": "2026-11-10T23:53:37.507Z",
+      "query": "\"UMDC\" \"11676214\" IEEE PDF classification 10.1109 MVTec-FS GDA",
+      "provider": "web.run 検索",
+      "target": "IV001／forward",
+      "returned_count": 0,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "検索出力の表示結果なし。該当研究の不存在は示さない。"
+    },
+    {
+      "search_id": "QRV050",
+      "executed_at": "2026-11-10T23:53:37.507Z",
+      "query": "\"SEM-CLIP 2.0\" \"3663889\" semantic scholar openalex journal classification Qian",
+      "provider": "web.run 検索",
+      "target": "IV003／forward",
+      "returned_count": 0,
+      "total_hits": "未提供",
+      "result_scope": "Web横断検索の返却上位結果（1クエリ）。表示タイトルとURLを確認。索引全件・被引用全件は対象外。",
+      "candidate_ids": [],
+      "notes": "検索出力の表示結果なし。該当研究の不存在は示さない。"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "KRV001",
+      "title": "Can Multimodal Large Language Models be Guided to Improve Industrial Anomaly Detection?",
+      "doi": "10.48550/arXiv.2501.15795",
+      "url": "https://arxiv.org/html/2501.15795v1",
+      "scope": "工業欠陥種類",
+      "discovered_by": "VELMの後方引用／MMADの後続探索",
+      "seed_id": "IM002／IM001",
+      "decision": "採用",
+      "reason": "原著の種類列、入力、参照・分割条件を確認。",
+      "record_id": "IVL2001",
+      "verification": "著者版全文確認"
+    },
+    {
+      "candidate_id": "KRV002",
+      "title": "Towards Explainable Industrial Anomaly Detection via Knowledge-Guided Latent Reasoning",
+      "doi": "10.48550/arXiv.2602.09850",
+      "url": "https://arxiv.org/html/2602.09850v4",
+      "scope": "工業欠陥種類",
+      "discovered_by": "MMADの後続探索／比較研究からの追跡",
+      "seed_id": "IM001",
+      "decision": "採用",
+      "reason": "原著の種類列、入力、参照・分割条件を確認。",
+      "record_id": "IVL2002",
+      "verification": "著者版全文確認"
+    },
+    {
+      "candidate_id": "KRV003",
+      "title": "AgentIAD: Agentic Industrial Anomaly Detection via Adaptive Memory Augmentation",
+      "doi": "10.48550/arXiv.2512.13671",
+      "url": "https://arxiv.org/html/2512.13671v2",
+      "scope": "工業欠陥種類",
+      "discovered_by": "MMADの後続探索／比較研究からの追跡",
+      "seed_id": "IM001",
+      "decision": "採用",
+      "reason": "原著の種類列、入力、参照・分割条件を確認。",
+      "record_id": "IVL2003",
+      "verification": "著者版全文確認"
+    },
+    {
+      "candidate_id": "KRV004",
+      "title": "Global Logic and Local Search: Dual-Stream Multimodal In-Context Learning for Verifiable Industrial Anomaly Detection",
+      "doi": "10.48550/arXiv.2607.03817",
+      "url": "https://arxiv.org/html/2607.03817",
+      "scope": "工業欠陥種類",
+      "discovered_by": "MMADの後続探索／比較研究からの追跡",
+      "seed_id": "IM001",
+      "decision": "採用",
+      "reason": "原著の種類列、入力、参照・分割条件を確認。",
+      "record_id": "IVL2004",
+      "verification": "著者版全文確認"
+    },
+    {
+      "candidate_id": "KRV005",
+      "title": "ADOPD: Reference-Privileged On-Policy Distillation for MLLM-Based Industrial Anomaly Detection",
+      "doi": "10.48550/arXiv.2608.09789",
+      "url": "https://arxiv.org/html/2608.09789v1",
+      "scope": "工業欠陥種類",
+      "discovered_by": "MMADの後続探索／比較研究からの追跡",
+      "seed_id": "IM001",
+      "decision": "採用",
+      "reason": "原著の種類列、入力、参照・分割条件を確認。",
+      "record_id": "IVL2005",
+      "verification": "著者版全文確認"
+    },
+    {
+      "candidate_id": "KRV006",
+      "title": "EMIT: Enhancing MLLMs for Industrial Anomaly Detection via Difficulty-Aware GRPO",
+      "doi": "10.48550/arXiv.2507.21619",
+      "url": "https://arxiv.org/html/2507.21619v1",
+      "scope": "工業欠陥種類",
+      "discovered_by": "MMADの後続探索／比較研究からの追跡",
+      "seed_id": "IM001",
+      "decision": "採用",
+      "reason": "原著の種類列、入力、参照・分割条件を確認。",
+      "record_id": "IVL2006",
+      "verification": "著者版全文確認"
+    },
+    {
+      "candidate_id": "KRV007",
+      "title": "InspectorGPT: A Comparative Reasoning Enhanced VLM for Comprehensive Industrial Anomaly Detection",
+      "doi": "10.48550/arXiv.2608.29783",
+      "url": "https://arxiv.org/html/2608.29783v1",
+      "scope": "工業欠陥種類",
+      "discovered_by": "MMADの後続探索／比較研究からの追跡",
+      "seed_id": "IM001",
+      "decision": "採用",
+      "reason": "原著の種類列、入力、参照・分割条件を確認。",
+      "record_id": "IVL2007",
+      "verification": "著者版全文確認"
+    },
+    {
+      "candidate_id": "KRV008",
+      "title": "Open-world scanning electron microscope nano-defect category discovery via self-normal prototypes",
+      "doi": "10.1007/s44443-026-00893-2",
+      "url": "https://link.springer.com/content/pdf/10.1007/s44443-026-00893-2.pdf",
+      "scope": "工業欠陥種類",
+      "discovered_by": "SEM-CLIP／FabGPTの後続探索",
+      "seed_id": "IV003／IM003",
+      "decision": "関連",
+      "reason": "SEM実写で種類クラスタをHungarian対応後に評価。欠陥名出力・全原語ラベルに制約。",
+      "record_id": "IVL2008",
+      "verification": "出版社全文・分類表確認。全原語ラベル未確認。"
+    },
+    {
+      "candidate_id": "KRV009",
+      "title": "UMDC: A Unified, Training-Free Model for Multi-Category Few-Shot Defect Classification in Automated Visual Inspection",
+      "doi": "10.1109/ACCESS.2026.3729942",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11676214/",
+      "scope": "工業・AlphaCLIP",
+      "discovered_by": "MVREC／HypDFSの後続探索",
+      "seed_id": "IV001／IV002",
+      "decision": "保留",
+      "reason": "著者所属機関抄録にMVTec-FS 14製品、5-shot種類Accuracy 91.15%、MVREC 89.4%、MTDでHypDFS比較。テスト分割・原語ラベル集合・マスク条件の表は本文未取得。",
+      "record_id": "",
+      "verification": "機関収録抄録・書誌確認"
+    },
+    {
+      "candidate_id": "KRV010",
+      "title": "SEM-CLIP 2.0: Precise Zero-/Few-Shot Learning for Nanoscale Defect Detection in SEM Image",
+      "doi": "10.1109/TCAD.2026.3663889",
+      "url": "https://doi.org/10.1109/TCAD.2026.3663889",
+      "scope": "半導体SEM／CLIP",
+      "discovered_by": "SEM-CLIP後続探索",
+      "seed_id": "IV003",
+      "decision": "保留",
+      "reason": "著者業績・抄録でSEM-CLIPの拡張、open-set分類・分割を確認。全原語ラベル、種類の性能表、元版とのデータ差は本文未取得。",
+      "record_id": "",
+      "verification": "著者業績と書誌抄録"
+    },
+    {
+      "candidate_id": "KRV011",
+      "title": "Open-Set Fine-Grained Industrial Defect Classification Based on CLIP Prompt Tuning and Vision-Language Alignment",
+      "doi": "10.1109/EIBDCT69742.2026.11566999",
+      "url": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602212822461050",
+      "scope": "工業・CLIP",
+      "discovered_by": "旧保留の本文再取得",
+      "seed_id": "",
+      "decision": "保留",
+      "reason": "J-GLOBALで題名と著者を確認。IEEE DOI、出版社、Crossref、著者版検索で本文に到達できず、種類分類精度とopen-set条件が未確認。",
+      "record_id": "XIV006",
+      "verification": "二次書誌"
+    },
+    {
+      "candidate_id": "KRV012",
+      "title": "Adaptive multimodal large language model with hierarchical cross modal grounding for real time industrial visual anomaly detection on edge devices",
+      "doi": "10.1007/s44163-026-02008-2",
+      "url": "https://link.springer.com/article/10.1007/s44163-026-02008-2",
+      "scope": "工業・PCB",
+      "discovered_by": "旧保留の本文再取得",
+      "seed_id": "",
+      "decision": "除外",
+      "reason": "§3.7出力は画素局在と異常スコア、§4.1のPCB 6種はデータセット説明。Tables 2–3は集約異常判定・データセット別AUCで、6種の独立出力・定量評価は確認できない。",
+      "record_id": "IMX006",
+      "verification": "出版社本文該当節"
+    },
+    {
+      "candidate_id": "KRV013",
+      "title": "Interactive multimodal quality assessment in laser powder bed fusion using vision-large language models",
+      "doi": "10.1016/j.jmapro.2026.08.008",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1526612526007607",
+      "scope": "工業・LPBF",
+      "discovered_by": "旧保留の本文再取得",
+      "seed_id": "",
+      "decision": "保留",
+      "reason": "著者業績で書誌を確認。収録抄録は10欠陥カテゴリを含む12クラスのセグメンテーション結果をLlama 3.2-Vision 11Bの照会へ供給し、質問成功率20→95%を記載。独立した種類分類評価は本文未取得。",
+      "record_id": "IMX007",
+      "verification": "著者書誌・二次収録抄録"
+    },
+    {
+      "candidate_id": "KRV014",
+      "title": "MiniGPT4-AD（独立研究名としての照合）",
+      "doi": "未確認",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/27963",
+      "scope": "工業・名称照合",
+      "discovered_by": "旧保留の本文再取得",
+      "seed_id": "",
+      "decision": "保留",
+      "reason": "表記揺れを含め独立した原著を確認できない。FabGPT [4]のMiniGPT-4は基盤研究、AnomalyGPTは別題の原著。実在・不存在とも断定しない。",
+      "record_id": "IMX008",
+      "verification": "タイトル検索／既知原著参照"
+    },
+    {
+      "candidate_id": "KRV015",
+      "title": "UniPCB: A Unified Vision-Language Benchmark for Open-Ended PCB Quality Inspection",
+      "doi": "10.48550/arXiv.2601.19222",
+      "url": "https://arxiv.org/html/2601.19222",
+      "scope": "工業・PCB",
+      "discovered_by": "FabGPTの後続探索／HCG検索",
+      "seed_id": "IM003",
+      "decision": "関連",
+      "reason": "7欠陥上位カテゴリと種類質問を確認。Table 1は指標・ラベル提示条件ごとの集約、Table 2はPCB-Bank二値。種類単独の定量列は未確認。",
+      "record_id": "",
+      "verification": "著者全文確認"
+    },
+    {
+      "candidate_id": "KRV016",
+      "title": "FabThink: A Wafer Analysis Multimodal LLM via Chain-of-Thought-Driven Retrieval Augmentation",
+      "doi": "10.1109/ICCAD66269.2025.11240663",
+      "url": "https://doi.org/10.1109/ICCAD66269.2025.11240663",
+      "scope": "半導体SEM／MLLM",
+      "discovered_by": "FabGPT著者の後続研究",
+      "seed_id": "IM003",
+      "decision": "保留",
+      "reason": "著者業績と会議書誌を確認。出版本文に到達できず、FabGPT参照・欠陥種別評価の可否は未確認。",
+      "record_id": "",
+      "verification": "著者書誌"
+    },
+    {
+      "candidate_id": "KRV017",
+      "title": "FabGPT: An Efficient Large Multimodal Model for Complex Wafer Defect Knowledge Queries（TCAD誌版）",
+      "doi": "10.1109/TCAD.2026.3664304",
+      "url": "https://research.cuhk.edu.hk/en/publications/fabgpt-an-efficient-large-multimodal-model-for-complex-wafer-defe/",
+      "scope": "半導体SEM／MLLM",
+      "discovered_by": "FabGPTの後続探索",
+      "seed_id": "IM003",
+      "decision": "異版",
+      "reason": "同題の拡張誌版。著者・巻号を照合。評価本文未取得のため会議版の97.50%を維持し、別研究として加算しない。",
+      "record_id": "IM003",
+      "verification": "機関収録抄録・著者業績"
+    },
+    {
+      "candidate_id": "KRV018",
+      "title": "MMVIAD: Multi-view Multi-task Video Understanding for Industrial Anomaly Detection",
+      "doi": "10.48550/arXiv.2605.10833",
+      "url": "https://arxiv.org/html/2605.10833",
+      "scope": "工業・合成動画",
+      "discovered_by": "MMAD後続探索",
+      "seed_id": "IM001",
+      "decision": "除外",
+      "reason": "種類設問の定量列は合成多視点動画。実画像へ転移したAppendix E.3は欠陥有無評価。",
+      "record_id": "",
+      "verification": "著者全文確認"
+    },
+    {
+      "candidate_id": "KRV019",
+      "title": "ActiveInspect: GRPO-Optimized Multi-Sensor Evidence Selection for Industrial Defect Detection",
+      "doi": "10.3390/s26154932",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13468834/",
+      "scope": "工業・多視点／多センサ",
+      "discovered_by": "MMAD後続探索",
+      "seed_id": "IM001",
+      "decision": "関連",
+      "reason": "種類を報酬に含むが、主要定量は異常有無AUROC・F1、MMADは平均Accuracy。種類列を原著で未確認。",
+      "record_id": "",
+      "verification": "原著全文該当節"
+    },
+    {
+      "candidate_id": "KRV020",
+      "title": "Attention-guided hybrid learning for accurate defect classification in manufacturing environments",
+      "doi": "10.1038/s41598-025-31654-2",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12808781/",
+      "scope": "工業・CNN／検出",
+      "discovered_by": "MVREC後続探索",
+      "seed_id": "IV001",
+      "decision": "除外",
+      "reason": "MVRECを比較に挙げるが提案分類はEfficientNet系。今回のViT／VLM／MLLM主対象外。",
+      "record_id": "",
+      "verification": "原著書誌・本文確認"
+    },
+    {
+      "candidate_id": "KRV021",
+      "title": "MVREC: A General Few-shot Defect Classification Model Using Multi-View Region-Context",
+      "doi": "10.1609/aaai.v39i6.32634",
+      "url": "https://arxiv.org/html/2412.16897",
+      "scope": "工業・AlphaCLIP",
+      "discovered_by": "HypDFSの後方引用",
+      "seed_id": "IV002",
+      "decision": "既収録",
+      "reason": "HypDFS [29]、Table 1でベースライン。",
+      "record_id": "IV001",
+      "verification": "原著参照確認"
+    },
+    {
+      "candidate_id": "KRV022",
+      "title": "Hyperbolic Defect Feature Synthesis for Few-Shot Defect Classification",
+      "doi": "未確認",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Hyperbolic_Defect_Feature_Synthesis_for_Few-Shot_Defect_Classification_CVPR_2026_paper.pdf",
+      "scope": "工業・AlphaCLIP",
+      "discovered_by": "MVREC後続の原著照合",
+      "seed_id": "IV001",
+      "decision": "既収録",
+      "reason": "HypDFS [29]がMVRECを引用。",
+      "record_id": "IV002",
+      "verification": "原著参照確認"
+    },
+    {
+      "candidate_id": "KRV023",
+      "title": "FabGPT: An Efficient Large Multimodal Model for Complex Wafer Defect Knowledge Queries",
+      "doi": "10.1145/3676536.3676750",
+      "url": "https://arxiv.org/html/2407.10810",
+      "scope": "半導体SEM／MLLM",
+      "discovered_by": "MMADの後方引用",
+      "seed_id": "IM001",
+      "decision": "既収録",
+      "reason": "MMAD ReferencesのJiang et al. (2024b)。",
+      "record_id": "IM003",
+      "verification": "原著参照確認"
+    },
+    {
+      "candidate_id": "KRV024",
+      "title": "MMAD: A Comprehensive Benchmark for Multimodal Large Language Models in Industrial Anomaly Detection",
+      "doi": "10.48550/arXiv.2410.09453",
+      "url": "https://arxiv.org/html/2410.09453",
+      "scope": "工業・VQA",
+      "discovered_by": "VELM後方引用",
+      "seed_id": "IM002",
+      "decision": "既収録",
+      "reason": "VELM References [17]。",
+      "record_id": "IM001",
+      "verification": "原著参照確認"
+    },
+    {
+      "candidate_id": "KRV025",
+      "title": "AnomalyGPT: Detecting Industrial Anomalies Using Large Vision-Language Models",
+      "doi": "10.1609/aaai.v38i3.27963",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/27963",
+      "scope": "工業・MLLM",
+      "discovered_by": "複数seed後方引用",
+      "seed_id": "IV001／IV003／IM001／IM002／IM003",
+      "decision": "除外",
+      "reason": "異常有無と位置を評価。FabGPTやMMADにあるベースライン種類値は各評価論文の成果。",
+      "record_id": "",
+      "verification": "既調査採否を再確認"
+    },
+    {
+      "candidate_id": "KRV026",
+      "title": "Mixed-Type Wafer Defect Recognition With Multi-Scale Information Fusion Transformer",
+      "doi": "10.1109/TSM.2022.3156583",
+      "url": "https://doi.org/10.1109/TSM.2022.3156583",
+      "scope": "工業・ウェハマップ／Transformer",
+      "discovered_by": "SEM-CLIP後方引用",
+      "seed_id": "IV003",
+      "decision": "保留",
+      "reason": "書誌・SEM-CLIP [20]を確認。原著の組合せラベル・分類指標と分割は未取得。",
+      "record_id": "",
+      "verification": "原著の引用欄／二次書誌"
+    },
+    {
+      "candidate_id": "KRV027",
+      "title": "Few-Shot Classification of Screen Defects With Class-Agnostic Mask and Context-Based Classifier",
+      "doi": "未確認",
+      "url": "https://researchr.org/publication/ZhouLZWC23-0",
+      "scope": "工業・画面外観",
+      "discovered_by": "MVREC後方引用",
+      "seed_id": "IV001",
+      "decision": "保留",
+      "reason": "研究の書誌と引用を確認。本文による主モデル系列・種類指標は未確認。",
+      "record_id": "",
+      "verification": "原著の引用欄／二次書誌"
+    },
+    {
+      "candidate_id": "KRV028",
+      "title": "Defect Spectrum: A Granular Look of Large-Scale Defect Datasets with Rich Semantics",
+      "doi": "10.48550/arXiv.2310.17316",
+      "url": "https://arxiv.org/abs/2310.17316",
+      "scope": "工業・ラベルデータ",
+      "discovered_by": "MMAD後方引用",
+      "seed_id": "IM001",
+      "decision": "関連",
+      "reason": "MMADの細粒度注釈源の一つ。今回は種類分類モデルとしての採用対象に含めない。",
+      "record_id": "",
+      "verification": "原著書誌・抄録／MMAD参照"
+    },
+    {
+      "candidate_id": "KRV029",
+      "title": "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models",
+      "doi": "10.48550/arXiv.2304.10592",
+      "url": "https://arxiv.org/abs/2304.10592",
+      "scope": "一般VLM基盤",
+      "discovered_by": "FabGPT後方引用",
+      "seed_id": "IM003",
+      "decision": "除外",
+      "reason": "一般VLM基盤。MiniGPT4-ADの独立原著を指す記載ではない。",
+      "record_id": "",
+      "verification": "FabGPT References [4]／著者書誌"
+    },
+    {
+      "candidate_id": "KRV030",
+      "title": "Automated semiconductor defect inspection in scanning electron microscope images: A systematic review",
+      "doi": "10.48550/arXiv.2308.08376",
+      "url": "https://arxiv.org/abs/2308.08376",
+      "scope": "SEM欠陥レビュー",
+      "discovered_by": "FabGPT後方引用",
+      "seed_id": "IM003",
+      "decision": "関連",
+      "reason": "レビューから原著を追加探索できる。レビュー集約は新規分類性能として計上しない。",
+      "record_id": "",
+      "verification": "FabGPT References [12]／著者書誌"
+    },
+    {
+      "candidate_id": "KRV031",
+      "title": "Graph Embedding and Optimal Transport for Few-Shot Classification of Metal Surface Defect",
+      "doi": "未確認",
+      "url": "https://dblp.uni-trier.de/rec/journals/tim/XiaoSLY22.html",
+      "scope": "金属表面few-shot",
+      "discovered_by": "MVREC／HypDFSの後方引用",
+      "seed_id": "IV001／IV002",
+      "decision": "保留",
+      "reason": "Graph embeddingと最適輸送による種類分類。原著でViT／VLM系列を確認できず、主対象として保留。",
+      "record_id": "",
+      "verification": "原著の引用欄／二次書誌"
+    },
+    {
+      "candidate_id": "KRV032",
+      "title": "Detect, Classify, Act: Categorizing Industrial Anomalies with Multi-Modal Large Language Models",
+      "doi": "10.1109/CVPRW67362.2025.00390",
+      "url": "https://arxiv.org/html/2505.02626",
+      "scope": "工業・MLLM",
+      "discovered_by": "MMAD後続の原著照合",
+      "seed_id": "IM001",
+      "decision": "既収録",
+      "reason": "VELM [17]でMMADを引用・比較。",
+      "record_id": "IM002",
+      "verification": "原著参照確認"
+    },
+    {
+      "candidate_id": "KRV033",
+      "title": "Is In-Domain Training Enough for Fine-Grained Industrial Anomaly Understanding?",
+      "doi": "10.48550/arXiv.2610.12310",
+      "url": "https://arxiv.org/html/2610.12310",
+      "scope": "工業・MLLM",
+      "discovered_by": "MMAD後続の原著照合",
+      "seed_id": "IM001",
+      "decision": "既収録",
+      "reason": "MMAD引用・Table 1評価。",
+      "record_id": "IM010",
+      "verification": "原著該当節確認"
+    },
+    {
+      "candidate_id": "KRV034",
+      "title": "Mask-Guided Diffusion with Process-Aware Metric Optimization for Long-Tailed Wafer Defect Analysis",
+      "doi": "未確認",
+      "url": "https://63dac.conference-program.com/presentation/?id=RESEARCH649&sess=sess160",
+      "scope": "半導体SEM／生成データ",
+      "discovered_by": "FabGPT／SEM-CLIP著者の後続探索",
+      "seed_id": "IM003／IV003",
+      "decision": "保留",
+      "reason": "学会発表と著者データを発見。分類種類のみの独立数値・引用関係は未確認。",
+      "record_id": "",
+      "verification": "学会書誌／著者リポジトリ"
+    }
+  ],
+  "citation_edges": [
+    {
+      "edge_id": "ERV001",
+      "seed_id": "IV001",
+      "candidate_id": "KRV022",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Hyperbolic_Defect_Feature_Synthesis_for_Few-Shot_Defect_Classification_CVPR_2026_paper.pdf",
+      "locator": "§2／References [29]／Table 1",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV002",
+      "seed_id": "IV001",
+      "candidate_id": "KRV009",
+      "direction": "forward",
+      "relation_status": "機関抄録で言及確認（引用欄未取得）",
+      "evidence_url": "https://yonsei.elsevierpure.com/en/publications/umdc-a-unified-training-free-model-for-multi-category-few-shot-de/",
+      "locator": "Abstract",
+      "notes": "MVRECを名指しで比較。"
+    },
+    {
+      "edge_id": "ERV003",
+      "seed_id": "IV001",
+      "candidate_id": "KRV020",
+      "direction": "forward",
+      "relation_status": "検索候補（引用未確認）",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12808781/",
+      "locator": "検索結果／比較節",
+      "notes": "正式な参照番号は抽出未確認。"
+    },
+    {
+      "edge_id": "ERV004",
+      "seed_id": "IV001",
+      "candidate_id": "KRV025",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2412.16897",
+      "locator": "References Gu et al. (2024)",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV005",
+      "seed_id": "IV001",
+      "candidate_id": "KRV027",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2412.16897",
+      "locator": "References Zhou et al. (2023)",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV006",
+      "seed_id": "IV001",
+      "candidate_id": "KRV031",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2412.16897",
+      "locator": "References Xiao et al. (2022)",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV007",
+      "seed_id": "IV002",
+      "candidate_id": "KRV021",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Hyperbolic_Defect_Feature_Synthesis_for_Few-Shot_Defect_Classification_CVPR_2026_paper.pdf",
+      "locator": "References [29]／Table 1",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV008",
+      "seed_id": "IV002",
+      "candidate_id": "KRV009",
+      "direction": "forward",
+      "relation_status": "機関抄録で言及確認（引用欄未取得）",
+      "evidence_url": "https://yonsei.elsevierpure.com/en/publications/umdc-a-unified-training-free-model-for-multi-category-few-shot-de/",
+      "locator": "Abstract",
+      "notes": "MTD比較でHypDFSを名指し。"
+    },
+    {
+      "edge_id": "ERV009",
+      "seed_id": "IV003",
+      "candidate_id": "KRV008",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://link.springer.com/article/10.1007/s44443-026-00893-2",
+      "locator": "References Jin et al. (2024)",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV010",
+      "seed_id": "IV003",
+      "candidate_id": "KRV010",
+      "direction": "forward",
+      "relation_status": "検索候補（引用未確認）",
+      "evidence_url": "https://1201jin.github.io/",
+      "locator": "Publications [J4]／[C5]",
+      "notes": "著者の拡張研究。抄録に原版への言及があるが正式引用欄の一次資料は未取得。"
+    },
+    {
+      "edge_id": "ERV011",
+      "seed_id": "IV003",
+      "candidate_id": "KRV026",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2502.14884",
+      "locator": "References [20]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV012",
+      "seed_id": "IV003",
+      "candidate_id": "KRV025",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2502.14884",
+      "locator": "References [28]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV013",
+      "seed_id": "IV003",
+      "candidate_id": "KRV034",
+      "direction": "forward",
+      "relation_status": "検索候補（引用未確認）",
+      "evidence_url": "https://63dac.conference-program.com/presentation/?id=RESEARCH649&sess=sess160",
+      "locator": "DAC公式発表書誌",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV014",
+      "seed_id": "IM001",
+      "candidate_id": "KRV023",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2410.09453",
+      "locator": "References Jiang et al. (2024b)",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV015",
+      "seed_id": "IM001",
+      "candidate_id": "KRV025",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2410.09453",
+      "locator": "References Gu et al. (2024)",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV016",
+      "seed_id": "IM001",
+      "candidate_id": "KRV028",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2410.09453",
+      "locator": "References Yang et al. (2023)／§3",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV017",
+      "seed_id": "IM001",
+      "candidate_id": "KRV001",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2501.15795v1",
+      "locator": "References [13]／§4.1",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV018",
+      "seed_id": "IM001",
+      "candidate_id": "KRV002",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2602.09850v4",
+      "locator": "§4.1／References Jiang et al. (2024)",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV019",
+      "seed_id": "IM001",
+      "candidate_id": "KRV003",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2512.13671v2",
+      "locator": "References [18]／§4.1",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV020",
+      "seed_id": "IM001",
+      "candidate_id": "KRV004",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2607.03817",
+      "locator": "References [23]／Table 1",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV021",
+      "seed_id": "IM001",
+      "candidate_id": "KRV005",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2608.09789v1",
+      "locator": "References Jiang et al. (2025)／§4.1",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV022",
+      "seed_id": "IM001",
+      "candidate_id": "KRV006",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2507.21619v1",
+      "locator": "References Jiang et al. (2024a)／Test Datasets",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV023",
+      "seed_id": "IM001",
+      "candidate_id": "KRV007",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2608.29783v1",
+      "locator": "References Jiang et al. (2025)／Experimental Setup",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV024",
+      "seed_id": "IM001",
+      "candidate_id": "KRV032",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2505.02626",
+      "locator": "References [17]／§3.3",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV025",
+      "seed_id": "IM001",
+      "candidate_id": "KRV033",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2610.12310",
+      "locator": "References／§4.1／Table 1",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV026",
+      "seed_id": "IM001",
+      "candidate_id": "KRV018",
+      "direction": "forward",
+      "relation_status": "検索候補（引用未確認）",
+      "evidence_url": "https://arxiv.org/html/2605.10833",
+      "locator": "§2／Table 1",
+      "notes": "関連比較は確認。引用書誌の該当番号は未抽出。"
+    },
+    {
+      "edge_id": "ERV027",
+      "seed_id": "IM001",
+      "candidate_id": "KRV019",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13468834/",
+      "locator": "References [10]／§4.1",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV028",
+      "seed_id": "IM002",
+      "candidate_id": "KRV001",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2505.02626",
+      "locator": "References [7]／Table 2",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV029",
+      "seed_id": "IM002",
+      "candidate_id": "KRV024",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2505.02626",
+      "locator": "References [17]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV030",
+      "seed_id": "IM002",
+      "candidate_id": "KRV025",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2505.02626",
+      "locator": "References [13]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV031",
+      "seed_id": "IM003",
+      "candidate_id": "KRV008",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://link.springer.com/article/10.1007/s44443-026-00893-2",
+      "locator": "References Jiang et al. (2024)",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV032",
+      "seed_id": "IM003",
+      "candidate_id": "KRV015",
+      "direction": "forward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2601.19222",
+      "locator": "References Jiang et al. (2024b)／§2.3",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV033",
+      "seed_id": "IM003",
+      "candidate_id": "KRV016",
+      "direction": "forward",
+      "relation_status": "検索候補（引用未確認）",
+      "evidence_url": "https://7jiangyq.github.io/",
+      "locator": "Publications FabThink と FabGPT",
+      "notes": "同著者の後続手法。本文引用未確認。"
+    },
+    {
+      "edge_id": "ERV034",
+      "seed_id": "IM003",
+      "candidate_id": "KRV017",
+      "direction": "version",
+      "relation_status": "異版書誌確認",
+      "evidence_url": "https://research.cuhk.edu.hk/en/publications/fabgpt-an-efficient-large-multimodal-model-for-complex-wafer-defe/",
+      "locator": "Abstract／DOI",
+      "notes": "同題の誌版。被引用件数には含めない。"
+    },
+    {
+      "edge_id": "ERV035",
+      "seed_id": "IM003",
+      "candidate_id": "KRV025",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2407.10810",
+      "locator": "References [14]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV036",
+      "seed_id": "IM003",
+      "candidate_id": "KRV029",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2407.10810",
+      "locator": "References [4]",
+      "notes": ""
+    },
+    {
+      "edge_id": "ERV037",
+      "seed_id": "IM003",
+      "candidate_id": "KRV030",
+      "direction": "backward",
+      "relation_status": "確認済み（原著参照）",
+      "evidence_url": "https://arxiv.org/html/2407.10810",
+      "locator": "References [12]",
+      "notes": ""
+    }
+  ],
+  "retrieval_attempts": [
+    {
+      "attempt_id": "ARV001",
+      "candidate_id": "KRV009",
+      "record_id": "",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11676214/",
+      "route": "出版社 IEEE Xplore本文照会",
+      "executed_at": "2026-11-10T23:47:14.834Z",
+      "result": "HTTP 418、本文取得失敗。",
+      "verification": "取得失敗",
+      "next_action": "OA PDF／所属機関版の確認。"
+    },
+    {
+      "attempt_id": "ARV002",
+      "candidate_id": "KRV009",
+      "record_id": "",
+      "url": "https://yonsei.elsevierpure.com/en/publications/umdc-a-unified-training-free-model-for-multi-category-few-shot-de/",
+      "route": "著者所属機関",
+      "executed_at": "2026-11-10T23:47:14.834Z",
+      "result": "MVTec-FS 5-shot Accuracy 91.15%と比較対象を抄録で確認。",
+      "verification": "抄録・書誌",
+      "next_action": "原著本文でクラス集合・分割・TPRの評価条件。"
+    },
+    {
+      "attempt_id": "ARV003",
+      "candidate_id": "KRV009",
+      "record_id": "",
+      "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11676214",
+      "route": "出版社PDF (stamp)",
+      "executed_at": "2026-11-10T23:48:18.767Z",
+      "result": "取得不能。",
+      "verification": "取得失敗",
+      "next_action": "所属機関版・合法公開本文。"
+    },
+    {
+      "attempt_id": "ARV004",
+      "candidate_id": "KRV010",
+      "record_id": "",
+      "url": "https://1201jin.github.io/",
+      "route": "著者業績ページ",
+      "executed_at": "2026-11-10T23:47:14.834Z",
+      "result": "SEM-CLIP 2.0の掲載・著者を確認。本文リンクなし。",
+      "verification": "著者書誌",
+      "next_action": "IEEE誌本文・機関収録版。"
+    },
+    {
+      "attempt_id": "ARV005",
+      "candidate_id": "KRV010",
+      "record_id": "",
+      "url": "https://doi.org/10.1109/TCAD.2026.3663889",
+      "route": "DOI／出版社",
+      "executed_at": "2026-11-10T23:48:59.444Z",
+      "result": "本文取得不可。",
+      "verification": "取得失敗",
+      "next_action": "公開本文の確認。"
+    },
+    {
+      "attempt_id": "ARV006",
+      "candidate_id": "KRV010",
+      "record_id": "",
+      "url": "https://eurekamag.com/research/103/609/103609334.php",
+      "route": "二次書誌・抄録",
+      "executed_at": "2026-11-10T23:48:18.767Z",
+      "result": "DOI、open-set分類・分割、元SEM-CLIPに基づく記述を確認。",
+      "verification": "二次収録抄録",
+      "next_action": "分類原語、結果表、版間関係の原著確認。"
+    },
+    {
+      "attempt_id": "ARV007",
+      "candidate_id": "KRV011",
+      "record_id": "XIV006",
+      "url": "https://ieeexplore.ieee.org/document/11566999",
+      "route": "出版社 IEEE Xplore",
+      "executed_at": "2026-11-10T23:47:14.936Z",
+      "result": "本文取得不可。",
+      "verification": "取得失敗",
+      "next_action": "合法な会議版・著者版。"
+    },
+    {
+      "attempt_id": "ARV008",
+      "candidate_id": "KRV011",
+      "record_id": "XIV006",
+      "url": "https://doi.org/10.1109/EIBDCT69742.2026.11566999",
+      "route": "DOI解決",
+      "executed_at": "2026-11-10T23:48:18.767Z",
+      "result": "本文取得不可。",
+      "verification": "取得失敗",
+      "next_action": "出版社書誌と本文。"
+    },
+    {
+      "attempt_id": "ARV009",
+      "candidate_id": "KRV011",
+      "record_id": "XIV006",
+      "url": "https://api.crossref.org/works/10.1109/EIBDCT69742.2026.11566999",
+      "route": "Crossref API",
+      "executed_at": "2026-11-10T23:55:57.106Z",
+      "result": "ブラウズ経路で応答本文を取得不可。ローカルcurlも名前解決失敗。",
+      "verification": "取得失敗",
+      "next_action": "利用可能な書誌API／機関リポジトリ。"
+    },
+    {
+      "attempt_id": "ARV010",
+      "candidate_id": "KRV011",
+      "record_id": "XIV006",
+      "url": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602212822461050",
+      "route": "J-GLOBAL・著者名・会議名検索",
+      "executed_at": "2026-11-10T23:47:37.129Z",
+      "result": "題名・著者・会議ページを検索結果で確認。本文未発見。",
+      "verification": "二次書誌",
+      "next_action": "本文、ラベル、比較指標。"
+    },
+    {
+      "attempt_id": "ARV011",
+      "candidate_id": "KRV011",
+      "record_id": "XIV006",
+      "url": "https://www.researchgate.net/publication/408046871_Open-Set_Fine-Grained_Industrial_Defect_Classification_Based_on_CLIP_Prompt_Tuning_and_Vision-Language_Alignment",
+      "route": "著者研究共有ページ",
+      "executed_at": "2026-11-10T23:56:17.946Z",
+      "result": "公開全文を取得できず。",
+      "verification": "取得失敗",
+      "next_action": "公開著者版。"
+    },
+    {
+      "attempt_id": "ARV012",
+      "candidate_id": "KRV012",
+      "record_id": "IMX006",
+      "url": "https://link.springer.com/article/10.1007/s44163-026-02008-2",
+      "route": "Springer出版社本文 §3.7／§4",
+      "executed_at": "2026-11-10T23:51:11.636Z",
+      "result": "スコアと局在を出力。PCB 6種はデータセットの説明、独立種類指標なし。",
+      "verification": "原著該当節確認",
+      "next_action": "対象外として監査に記録。"
+    },
+    {
+      "attempt_id": "ARV013",
+      "candidate_id": "KRV012",
+      "record_id": "IMX006",
+      "url": "https://link.springer.com/content/pdf/10.1007/s44163-026-02008-2.pdf",
+      "route": "Springer補足／PDF",
+      "executed_at": "2026-11-10T23:56:17.946Z",
+      "result": "PDF取得不可。本文側の補足リンクを確認できず。",
+      "verification": "PDF未取得・HTML取得",
+      "next_action": "追加種類分類表が後日確認できた場合に再判定。"
+    },
+    {
+      "attempt_id": "ARV014",
+      "candidate_id": "KRV013",
+      "record_id": "IMX007",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1526612526007607/pdfft",
+      "route": "Elsevier本文PDF",
+      "executed_at": "2026-11-10T23:53:59.566Z",
+      "result": "本文PDFキャッシュ未取得。",
+      "verification": "取得失敗",
+      "next_action": "著者機関の全文・補足。"
+    },
+    {
+      "attempt_id": "ARV015",
+      "candidate_id": "KRV013",
+      "record_id": "IMX007",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1526612526007607",
+      "route": "Elsevier抄録URL",
+      "executed_at": "2026-11-10T23:48:18.767Z",
+      "result": "HTTP 403。",
+      "verification": "取得失敗",
+      "next_action": "機関・収録抄録を照合。"
+    },
+    {
+      "attempt_id": "ARV016",
+      "candidate_id": "KRV013",
+      "record_id": "IMX007",
+      "url": "https://sites.google.com/view/drsenliu/publications",
+      "route": "著者研究室業績",
+      "executed_at": "2026-11-10T23:47:14.834Z",
+      "result": "著者・巻174・pp.1168–1181を確認。リンクは出版社。",
+      "verification": "著者書誌",
+      "next_action": "公開著者版・12クラス定義。"
+    },
+    {
+      "attempt_id": "ARV017",
+      "candidate_id": "KRV013",
+      "record_id": "IMX007",
+      "url": "https://eurekamag.com/research/109/401/109401158.php",
+      "route": "収録抄録・DOI",
+      "executed_at": "2026-11-10T23:48:59.444Z",
+      "result": "DOI、12クラスのセグメンテーション、10欠陥種、問い合わせ成功率を確認。",
+      "verification": "二次収録抄録",
+      "next_action": "原著のカテゴリ性能と評価単位。"
+    },
+    {
+      "attempt_id": "ARV018",
+      "candidate_id": "KRV014",
+      "record_id": "IMX008",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/27963",
+      "route": "名称表記を変えた横断検索",
+      "executed_at": "2026-11-10T23:46:06.388Z",
+      "result": "独立原著を確認できず。",
+      "verification": "検索結果なし",
+      "next_action": "別綴り、著者情報が得られた場合に照合。"
+    },
+    {
+      "attempt_id": "ARV019",
+      "candidate_id": "KRV014",
+      "record_id": "IMX008",
+      "url": "https://arxiv.org/html/2407.10810",
+      "route": "別クエリ・基盤研究の照合",
+      "executed_at": "2026-11-10T23:46:53.103Z",
+      "result": "AnomalyGPTとMiniGPT-4は別書誌。MiniGPT4-ADを同一名称として扱えない。",
+      "verification": "書誌・FabGPT参照",
+      "next_action": "識別可能な書誌が得られた場合に再調査。"
+    },
+    {
+      "attempt_id": "ARV020",
+      "candidate_id": "KRV015",
+      "record_id": "",
+      "url": "https://arxiv.org/html/2601.19222",
+      "route": "著者版全文",
+      "executed_at": "2026-11-10T23:48:59.444Z",
+      "result": "種類質問・ラベル例あり。タイプ単独の定量結果は未確認。",
+      "verification": "著者版全文",
+      "next_action": "公式タスク別採点ログ・補足。"
+    },
+    {
+      "attempt_id": "ARV021",
+      "candidate_id": "KRV016",
+      "record_id": "",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11240663",
+      "route": "IEEE会議本文",
+      "executed_at": "2026-11-10T23:50:49.868Z",
+      "result": "出版社本文取得失敗。",
+      "verification": "取得失敗",
+      "next_action": "著者版・会議補足。"
+    },
+    {
+      "attempt_id": "ARV022",
+      "candidate_id": "KRV016",
+      "record_id": "",
+      "url": "https://7jiangyq.github.io/",
+      "route": "筆頭著者の業績",
+      "executed_at": "2026-11-10T23:48:18.767Z",
+      "result": "FabThink、FabGPT会議／誌版の書誌を確認。",
+      "verification": "著者書誌",
+      "next_action": "FabThink原著の欠陥種表と引用関係。"
+    },
+    {
+      "attempt_id": "ARV023",
+      "candidate_id": "KRV017",
+      "record_id": "IM003",
+      "url": "https://research.cuhk.edu.hk/en/publications/fabgpt-an-efficient-large-multimodal-model-for-complex-wafer-defe/",
+      "route": "所属機関出版記録",
+      "executed_at": "2026-11-10T23:48:59.444Z",
+      "result": "TCAD誌版DOI 10.1109/TCAD.2026.3664304、同題、巻号確認。",
+      "verification": "機関収録抄録",
+      "next_action": "会議版と追加実験を比較するため誌版本文。"
+    },
+    {
+      "attempt_id": "ARV024",
+      "candidate_id": "KRV023",
+      "record_id": "IM003",
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3676536.3676750",
+      "route": "FabGPT ACM会議PDF",
+      "executed_at": "2026-11-10T23:46:32.887Z",
+      "result": "ACM PDF取得不可。",
+      "verification": "取得失敗",
+      "next_action": "著者arXivで代替。"
+    },
+    {
+      "attempt_id": "ARV025",
+      "candidate_id": "KRV023",
+      "record_id": "IM003",
+      "url": "https://arxiv.org/html/2407.10810",
+      "route": "FabGPT著者arXiv",
+      "executed_at": "2026-11-10T23:48:18.767Z",
+      "result": "会議版全文と参照欄を取得。",
+      "verification": "著者全文",
+      "next_action": "拡張誌版の本文は別途。"
+    },
+    {
+      "attempt_id": "ARV026",
+      "candidate_id": "KRV008",
+      "record_id": "IVL2008",
+      "url": "https://link.springer.com/content/pdf/10.1007/s44443-026-00893-2.pdf",
+      "route": "Springer出版社PDF",
+      "executed_at": "2026-11-10T23:53:59.566Z",
+      "result": "種類F1/NMI/ARIのTable 2を確認。",
+      "verification": "出版社全文",
+      "next_action": "Figures 5–6の全欠陥原語ラベル。"
+    },
+    {
+      "attempt_id": "ARV027",
+      "candidate_id": "KRV001",
+      "record_id": "IVL2001",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0031320325014153",
+      "route": "Echoの候補誌版 Elsevier",
+      "executed_at": "2026-11-10T23:50:49.868Z",
+      "result": "HTTP 403。関連する誌版との関係は未確認。",
+      "verification": "取得失敗",
+      "next_action": "プレプリント版を根拠として使用。"
+    }
+  ],
+  "seed_checks": [
+    {
+      "seed_id": "IV001",
+      "scope": "工業VLM／MLLM",
+      "direction": "backward",
+      "method": "原著Referencesの題名を範囲指定で確認。候補の方法と評価を別途照合。",
+      "executed_at": "2026-11-10T23:47:58.739Z",
+      "available_total": 32,
+      "screened_count": 32,
+      "scope_status": "全件確認（参考文献題名の範囲）",
+      "candidate_ids": [
+        "KRV025",
+        "KRV027",
+        "KRV031"
+      ],
+      "notes": "MVREC arXiv References、題名ベースの選別。 全候補の本文を取得したことを示す数ではない。"
+    },
+    {
+      "seed_id": "IV001",
+      "scope": "工業VLM／MLLM",
+      "direction": "forward",
+      "method": "題名・手法名によるWeb上位検索 4回。後続原著／機関収録抄録を確認。",
+      "executed_at": "2026-11-10T23:46:06.381Z",
+      "available_total": "未提供",
+      "screened_count": 3,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRV022",
+        "KRV009",
+        "KRV020"
+      ],
+      "notes": "screened_countは引用台帳の候補ID数。全被引用一覧未取得。 HypDFS [29]で引用確認。UMDC機関抄録はMVRECを名指しで比較、正式参照欄と評価条件の原著は残課題。"
+    },
+    {
+      "seed_id": "IV002",
+      "scope": "工業VLM／MLLM",
+      "direction": "backward",
+      "method": "原著Referencesの題名を範囲指定で確認。候補の方法と評価を別途照合。",
+      "executed_at": "2026-11-10T23:51:11.636Z",
+      "available_total": 58,
+      "screened_count": 58,
+      "scope_status": "全件確認（参考文献題名の範囲）",
+      "candidate_ids": [
+        "KRV021"
+      ],
+      "notes": "CVF HypDFS References [1]–[58]のうち表示を確認した番号を選別。 全候補の本文を取得したことを示す数ではない。"
+    },
+    {
+      "seed_id": "IV002",
+      "scope": "工業VLM／MLLM",
+      "direction": "forward",
+      "method": "題名・手法名によるWeb上位検索 2回。後続原著／機関収録抄録を確認。",
+      "executed_at": "2026-11-10T23:46:06.381Z",
+      "available_total": "未提供",
+      "screened_count": 1,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRV009"
+      ],
+      "notes": "screened_countは引用台帳の候補ID数。全被引用一覧未取得。 UMDC機関抄録でHypDFSとのMTD比較を確認。正式引用欄と追加の被引用文献は残課題。"
+    },
+    {
+      "seed_id": "IV003",
+      "scope": "工業VLM／MLLM",
+      "direction": "backward",
+      "method": "原著Referencesの題名を範囲指定で確認。候補の方法と評価を別途照合。",
+      "executed_at": "2026-11-10T23:47:58.739Z",
+      "available_total": 35,
+      "screened_count": 35,
+      "scope_status": "全件確認（参考文献題名の範囲）",
+      "candidate_ids": [
+        "KRV026",
+        "KRV025"
+      ],
+      "notes": "SEM-CLIP arXiv References [1]–[35]。 全候補の本文を取得したことを示す数ではない。"
+    },
+    {
+      "seed_id": "IV003",
+      "scope": "工業VLM／MLLM",
+      "direction": "forward",
+      "method": "題名・手法名によるWeb上位検索 5回。後続原著／機関収録抄録を確認。",
+      "executed_at": "2026-11-10T23:46:06.381Z",
+      "available_total": "未提供",
+      "screened_count": 3,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRV008",
+        "KRV010",
+        "KRV034"
+      ],
+      "notes": "screened_countは引用台帳の候補ID数。全被引用一覧未取得。 SNAP-SEMの原著参考文献で確認。SEM-CLIP 2.0とDAC後続研究の原著を追加取得。"
+    },
+    {
+      "seed_id": "IM001",
+      "scope": "工業VLM／MLLM",
+      "direction": "backward",
+      "method": "原著Referencesの題名を範囲指定で確認。候補の方法と評価を別途照合。",
+      "executed_at": "2026-11-10T23:47:58.739Z",
+      "available_total": 60,
+      "screened_count": 60,
+      "scope_status": "全件確認（参考文献題名の範囲）",
+      "candidate_ids": [
+        "KRV023",
+        "KRV025",
+        "KRV028"
+      ],
+      "notes": "MMAD arXiv References、欠落する冒頭・末尾は追加表示で補完。 全候補の本文を取得したことを示す数ではない。"
+    },
+    {
+      "seed_id": "IM001",
+      "scope": "工業VLM／MLLM",
+      "direction": "forward",
+      "method": "題名・手法名によるWeb上位検索 12回。後続原著／機関収録抄録を確認。",
+      "executed_at": "2026-11-10T23:46:06.381Z",
+      "available_total": "未提供",
+      "screened_count": 11,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRV001",
+        "KRV002",
+        "KRV003",
+        "KRV004",
+        "KRV005",
+        "KRV006",
+        "KRV007",
+        "KRV032",
+        "KRV033",
+        "KRV018",
+        "KRV019"
+      ],
+      "notes": "screened_countは引用台帳の候補ID数。全被引用一覧未取得。 Echo・Reason-IAD・AgentIAD・GLLS・ADOPD・EMIT・InspectorGPT等で引用／使用確認。関連候補のAD-FM、IAD-R1、EGVLR、AD-Copilotは原著抽出未完了。"
+    },
+    {
+      "seed_id": "IM002",
+      "scope": "工業VLM／MLLM",
+      "direction": "backward",
+      "method": "原著Referencesの題名を範囲指定で確認。候補の方法と評価を別途照合。",
+      "executed_at": "2026-11-10T23:47:58.739Z",
+      "available_total": 28,
+      "screened_count": 28,
+      "scope_status": "全件確認（参考文献題名の範囲）",
+      "candidate_ids": [
+        "KRV001",
+        "KRV024",
+        "KRV025"
+      ],
+      "notes": "VELM arXiv References [1]–[28]。 全候補の本文を取得したことを示す数ではない。"
+    },
+    {
+      "seed_id": "IM002",
+      "scope": "工業VLM／MLLM",
+      "direction": "forward",
+      "method": "題名・手法名によるWeb上位検索 3回。後続原著／機関収録抄録を確認。",
+      "executed_at": "2026-11-10T23:46:06.381Z",
+      "available_total": "未提供",
+      "screened_count": 0,
+      "scope_status": "一部確認",
+      "candidate_ids": [],
+      "notes": "screened_countは引用台帳の候補ID数。全被引用一覧未取得。 同じ著者版・出版版・公式コードが中心。独立後続の引用は今回の上位検索で確認できなかった。引用一覧の取得は残課題。"
+    },
+    {
+      "seed_id": "IM003",
+      "scope": "工業VLM／MLLM",
+      "direction": "backward",
+      "method": "原著Referencesの題名を範囲指定で確認。候補の方法と評価を別途照合。",
+      "executed_at": "2026-11-10T23:49:33.449Z",
+      "available_total": 34,
+      "screened_count": 34,
+      "scope_status": "全件確認（参考文献題名の範囲）",
+      "candidate_ids": [
+        "KRV025",
+        "KRV029",
+        "KRV030"
+      ],
+      "notes": "ACM取得失敗後、FabGPT著者版 References [1]–[34]。 全候補の本文を取得したことを示す数ではない。"
+    },
+    {
+      "seed_id": "IM003",
+      "scope": "工業VLM／MLLM",
+      "direction": "forward",
+      "method": "題名・手法名によるWeb上位検索 6回。後続原著／機関収録抄録を確認。",
+      "executed_at": "2026-11-10T23:46:06.382Z",
+      "available_total": "未提供",
+      "screened_count": 3,
+      "scope_status": "一部確認",
+      "candidate_ids": [
+        "KRV008",
+        "KRV015",
+        "KRV016"
+      ],
+      "notes": "screened_countは引用台帳の候補ID数。全被引用一覧未取得。 SNAP-SEM／UniPCBで引用確認。FabThink・DAC後続は検索候補。拡張TCAD誌版は異版。"
+    }
+  ],
+  "notes": [
+    "代表性能は全て種類設問のAccuracy（%）。IVL2001 Echo MVTec-AD 72.86／VisA 62.35、IVL2002 Reason-IAD v4 1-shot 75.07、IVL2003 AgentIAD v2 1-shot 72.73（評価6,400サンプル）、IVL2004 GLLS 1-shot MVTec 87.7／VisA 83.5、IVL2005 ADOPD zero-shot 57.03。MMADの分割・正常参照・学習条件が異なる。",
+    "追加確認したIVL2006 EMITは1-shot種類Accuracy 80.85%、IVL2007 InspectorGPTは20/80内部学習・1正常参照で75.32%。IVL2008 SNAP-SEMは種類発見F1（0–1）BEOL 0.7825、DEP 0.9695、DPR 0.9411。未知クラスタの対応付け評価であるため関連枠とした。",
+    "旧保留IMX006 HCG-MLLMADは除外へ変更。IMX007 LPBFはDOI 10.1016/j.jmapro.2026.08.008 を特定して保留。XIV006 ZhuとIMX008 MiniGPT4-ADは保留。既存の除外行の判定履歴はcandidatesに旧ID付きで保持。",
+    "検索結果数は個々の検索で返却されたタイトルとURLの表示件数。総件数と同一研究の件数は異なり、被引用件数の全件取得を意味しない。記録時刻の末尾ZはUTC（JSTは+09:00）。",
+    "対象領域の残候補はUMDC・SEM-CLIP 2.0・FabThink本文、Zhuのopen-set種類列、UniPCBのタイプ別採点ログ、SEM-CLIPが引用する混合ウェハマップTransformer。MMAD内比較を独立した製造現場の実証数として加算しない。"
+  ],
+  "performance_rows": [
+    {
+      "id": "IVL2001",
+      "name": "Echo（MVTec-AD）",
+      "metric": "欠陥種類VQA Accuracy",
+      "value": 0.7286,
+      "unit": "%",
+      "result": "72.86%",
+      "note": "Qwen2-VL 7B＋Echo、Table 1のMVTec-AD。"
+    },
+    {
+      "id": "IVL2001",
+      "name": "Echo（VisA）",
+      "metric": "欠陥種類VQA Accuracy",
+      "value": 0.6235,
+      "unit": "%",
+      "result": "62.35%",
+      "note": "Qwen2-VL 7B＋Echo、Table 1のVisA。"
+    },
+    {
+      "id": "IVL2002",
+      "name": "Reason-IAD",
+      "metric": "欠陥種類VQA Accuracy",
+      "value": 0.7507,
+      "unit": "%",
+      "result": "75.07%",
+      "note": "MMAD、Qwen3-VL-8B、正常参照1枚。v4 Table 1。"
+    },
+    {
+      "id": "IVL2003",
+      "name": "AgentIAD",
+      "metric": "欠陥種類VQA Accuracy",
+      "value": 0.7273,
+      "unit": "%",
+      "result": "72.73%",
+      "note": "MMAD 1,936学習／6,400評価サンプル、1-shot。v2 Table 1。"
+    },
+    {
+      "id": "IVL2004",
+      "name": "GLLS（MVTec）",
+      "metric": "欠陥種類VQA Accuracy",
+      "value": 0.877,
+      "unit": "%",
+      "result": "87.7%",
+      "note": "Qwen3-VL-8B、1-shot、Table 1 MVTecのCls.列。"
+    },
+    {
+      "id": "IVL2004",
+      "name": "GLLS（VisA）",
+      "metric": "欠陥種類VQA Accuracy",
+      "value": 0.835,
+      "unit": "%",
+      "result": "83.5%",
+      "note": "Qwen3-VL-8B、1-shot、Table 1 VisAのCls.列。"
+    },
+    {
+      "id": "IVL2005",
+      "name": "ADOPD",
+      "metric": "欠陥種類VQA Accuracy",
+      "value": 0.5703,
+      "unit": "%",
+      "result": "57.03%",
+      "note": "Real-IADで学習、MMAD推論時に正常参照なし。Table 1。"
+    },
+    {
+      "id": "IVL2006",
+      "name": "EMIT",
+      "metric": "欠陥種類VQA Accuracy",
+      "value": 0.8085,
+      "unit": "%",
+      "result": "80.85%",
+      "note": "InternVL3-8B、MMAD正常参照1枚と領域知識、Table 1。"
+    },
+    {
+      "id": "IVL2007",
+      "name": "InspectorGPT",
+      "metric": "欠陥種類VQA Accuracy",
+      "value": 0.7532,
+      "unit": "%",
+      "result": "75.32%",
+      "note": "MMAD内20%学習／80%評価。Table 1。"
+    },
+    {
+      "id": "IVL2008",
+      "name": "SNAP-SEM（BEOL）",
+      "metric": "種類発見 F1",
+      "value": 0.7825,
+      "unit": "0–1",
+      "result": "0.7825",
+      "note": "Table 2。Hungarian整合後のクラス発見。"
+    },
+    {
+      "id": "IVL2008",
+      "name": "SNAP-SEM（DEP）",
+      "metric": "種類発見 F1",
+      "value": 0.9695,
+      "unit": "0–1",
+      "result": "0.9695",
+      "note": "Table 2。Hungarian整合後のクラス発見。"
+    },
+    {
+      "id": "IVL2008",
+      "name": "SNAP-SEM（DPR）",
+      "metric": "種類発見 F1",
+      "value": 0.9411,
+      "unit": "0–1",
+      "result": "0.9411",
+      "note": "Table 2。Hungarian整合後のクラス発見。"
+    }
+  ]
+}

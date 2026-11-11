@@ -1,6 +1,6 @@
 # 種類分類の性能値まとめと調査範囲の評価
 
-基準日：2026-11-11。工具摩耗15本と工業欠陥38本、計53本の比較表掲載論文について、指標名だけでなく報告値とその読み方を抽出した。主比較は工具9本・工業28本の計37本。保留7本、関連9本を別区分で残す。元の広域工具研究59本のうち、量・寿命・程度だけを扱う対象外研究はこのまとめに戻していない。
+基準日：2026-11-11。工具摩耗18本と工業欠陥49本、計67本について、指標名だけでなく報告値と条件を抽出した。主比較50本、保留6本、関連11本。Round2の引用追跡、新規12本の主採用、微細ドリル論文の保留解除を反映した。[追加調査結果](round2_findings.md)／[探索方法と監査](search_process_audit.md)。元の広域工具研究59本のうち、量・寿命・程度だけを扱う対象外研究は戻していない。
 
 [精度一覧Excel](../outputs/classification_performance_summary.xlsx)／[CSV](../outputs/classification_performance_summary.csv)。Excelは数値を読みやすい左側に配置し、原語クラス・評価分割・出典と根拠IDを右側に保持した。代表値は対応する指標・条件の値で、論文の最高値を一律に選んだものではない。表全体の平均やランキングは作成しない。
 
@@ -12,7 +12,7 @@
 
 Accuracy＝全体正答率、Precision＝陽性とした予測の的中率、Recall＝該当種類を拾う率。F1はPrecisionとRecallの調和平均で、macro-F1は種類別F1を平均する。MCC、ROC-AUC、Dice、分類mAP、検出mAPも定義が違う。0.99という共通の数字でも置換できない。本文が平均方式を明記していない場合は推測しない。
 
-## 工具摩耗：全15本
+## 工具摩耗：採用・保留・関連
 
 | 論文・モデル | 採否 | 指標と実際の成績 | 評価上の注意 |
 |---|---|---|---|
@@ -25,14 +25,17 @@ Accuracy＝全体正答率、Precision＝陽性とした予測の的中率、Rec
 | **FIA04** [Kumar 2025 / EfficientNet-B0](https://www.sciencedirect.com/science/article/pii/S0278612524002978) | 採用 | 4種類の未見テストAccuracy 94.11%。 | 抄録確認。テスト枚数・工具分割未確認。Singhとデータ非独立の可能性。 |
 | **FIA05** [Lakshmaiya 2025 / VGG16・19](https://www.sciencedirect.com/science/article/pii/S2590123025018134) | 採用 | VGG16 Accuracy/F1 98.86%。VGG19 Accuracy 92.3%、F1 92.30%。 | 拡張前の分割未確認。360枚の単純正解数比と98.86%が整合せず集計要確認。 |
 | **MM001** [Ahangar 2026 / ResNet18＋XGBoost](https://www.mdpi.com/2673-2688/7/10/400) | 採用 | 2群：Recall65.5%、Precision96.2%、誤警報1.1%、AUC0.928。元3種類：Accuracy70.5%。 | 3種類では凝着20件・複合96件を全件見逃し。2群では両者を一群に統合。 |
-| **FIA06** [Yong 2026 / AlexNet系](https://www.researchgate.net/publication/406927055_Tool_Wear_Classification_Based_on_Convolutional_Neural_Network_in_Micro_Drilling) | 保留 | 内部validation99.26%。BUE Recall0.99、Chipping1.00。別例のチッピング4/5。 | 保留：書誌・完全本文未確認。99.26%は外部試験の値ではない。 |
-| **MM002** [Yan / Qwen3-VL-8B](https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963) | 保留 | Accuracy93.12%、macro-F1 77.09%。画像単独ResNet18は90.98%／61.79%。 | 保留：2027年巻の先行公開日未確認。モデル構成も異なる比較。 |
+| **FIA06** [Abdul Kadir・Yongほか 微細ドリル](https://semarakilmu.my/index.php/sijaset/article/view/1136) | 採用 | ContourOnly内部validation accuracy 99.26%、recall BUE 0.99、Chipping 1.00（原稿Table 1）。別データ例ではRGB_EnhancedとContourOnlyがチッピング5枚中4枚を判定（著者抜粋）。 | ContourOnly内部検証。BUE/Chipping。出版社号目次で正式掲載確認。主分割、独立工具外部試験は未確認。 |
+| **MM002** [Yanほか MATWI](https://www.sciencedirect.com/science/article/abs/pii/S0951832026010963) | 保留 | Accuracy 93.12%、Macro-F1 77.09%。同論文の画像単独ResNet18エッジ帯はAccuracy 90.98%、Macro-F1 61.79%（Table 3）。 | MATWI工具別テスト247件、3種。正確な先行公開日は未確認。 |
 | **FA001** [Pan 2026 / MaskLenNet](https://www.mdpi.com/2504-4494/10/8/286) | 関連 | 対応付け済み前景インスタンスのAccuracy96.52%。 | 関連：見逃し・未対応・重複予測を分母に含めない条件付き成績。 |
 | **FIA07** [Walk 2023 / U-Net](https://arxiv.org/pdf/2303.13540) | 関連 | Dice平均0.631。逃げ面0.695、チッピング0.244、BUE0.596。pixel accuracy0.977。 | 関連：画素分割。背景の高成績がpixel accuracyに影響。FIA08と同系列。 |
 | **FIA08** [Treiss 2021 / U-Net](https://publikationen.bibliothek.kit.edu/1000124315/89528219) | 関連 | Dice平均0.631、チッピング0.244。pixel accuracy0.977。 | 関連：画素分割。FIA07と同じ213画像系列・基準成績。独立実証でない。 |
 | **FIA09** [Marciniak 2026 / YOLO12s＋U-Net](https://link.springer.com/article/10.1007/s10845-026-02944-x) | 関連 | 分割F1 0.886±0.004。画像単位の種類分類Accuracyは未確認。 | 関連：検出・分割の方式。摩耗量MAEは対象外として要約から除いた。 |
+| **FW2001** [Kumarほか HG-XAI](https://link.springer.com/article/10.1007/s10845-024-02476-2) | 採用 | HG-XAIによる摩耗4種類のAccuracy 93.08%（出版社抄録）。 | 4種。表面速度を変えた工具画像、人の判定支援あり。画像数と独立工具split未確認。 |
+| **FW2002** [Agarwalほか 照明変化](https://www.sciencedirect.com/science/article/pii/S2213846325001154) | 採用 | L2評価のAccuracy 96%、MCC 0.96、F1-score 0.97。F1の平均化方式は抄録で未確認。 | 4種、L1学習→L2試験。人の支援を含む。 |
+| **FW2003** [Kählerほか 研削フラップホイール](https://arxiv.org/html/2603.12852) | 関連 | 形状 Accuracy 95.4%・F1 0.954（Table 5）。裂け Accuracy 93.8%・F1 0.935（Table 8）。階層全体 Accuracy 87.5%（§5.4、独立9本）。 | 形状3種、テスト3,564画像、工具単位split。切削刃の主比較外。 |
 
-## 工業欠陥：主比較28本
+## 工業欠陥：主比較
 
 | 論文・モデル | 採否 | 指標と実際の成績 | 評価上の注意 |
 |---|---|---|---|
@@ -64,8 +67,18 @@ Accuracy＝全体正答率、Precision＝陽性とした予測の的中率、Rec
 | **IM008** [MAUGPT / Gemma3](https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850) | 採用 | 39.31%。Gemma3-4B37.07%、GPT-4o65.80%。 | 61.41%は全VQA平均。専用モデルというだけで高精度とは限らない。 |
 | **IM009** [AnomalyLR / Qwen2.5-VL](https://arxiv.org/html/2609.29457) | 採用 | 7B82.70%、3B82.49%。 | 87.12%／86.00%は全VQA平均。MMAD20/80学習・評価条件。 |
 | **IM010** [SiGMA / MLLM組合せ](https://arxiv.org/html/2610.12310) | 採用 | 種類分類79.2%。 | 85.2%は全VQA平均。評価回答による構成選択を含み独立testとは扱えない。 |
+| **IVT2001** [TransUNet（Kim et al., 2023）](https://factory.skku.edu/factory/research.do?articleNo=160425&attachNo=128003&mode=download) | 採用 | 2種類混合の評価2,600マップでAccuracy 0.995、F1 0.995（Table 2／§4.3） | Mixed-WM38の2種類混合13組。評価2,600マップ。Table 2。F1も0.995。 |
+| **IVT2002** [Swin-T（Ayunts et al., 2026）](https://www.mdpi.com/1996-1073/19/2/462) | 採用 | 8クラス階層のテストでSwin-T Accuracy 89.48%、macro F1 80.50%、weighted F1 89.43%。同一テストのViT-B/16 77.81%／60.56%、SlantNet 86.15%／73.03%（Accuracy／macro F1） | 赤外熱画像の正常＋7異常種の階層8分類。テスト1,920画像。Tables 7, 12。Accuracy 89.48%。 |
+| **IVT2003** [FAX-Net（Jiang et al., 2025）](https://www.mdpi.com/2073-8994/17/8/1313) | 採用 | NEU-CLS 6分類 Accuracy 97.78%、クラス平均F1 97.51%（§4.3 Table 1, Fig. 5） | 鋼板NEU-CLS 6欠陥種類。学習／テスト8:2。Fig. 5。クラス平均F1 97.51%。 |
+| **IVL2001** [Echo（MVTec-AD）](https://arxiv.org/html/2501.15795v1) | 採用 | Table 1のDefect Classification AccuracyはMVTec-AD 72.86%、VisA 62.35%。同じQwen2-VL 7Bのベースは68.46%、57.06%。 | Qwen2-VL 7B＋Echo、Table 1のMVTec-AD。 |
+| **IVL2002** [Reason-IAD](https://arxiv.org/html/2602.09850v4) | 採用 | v4 Table 1の1-shot種類AccuracyはReason-IAD Qwen3-VL-8B 75.07%、同基盤62.33%。 | MMAD、Qwen3-VL-8B、正常参照1枚。v4 Table 1。 |
+| **IVL2003** [AgentIAD](https://arxiv.org/html/2512.13671v2) | 採用 | Table 1のDefect Classification AccuracyはAgentIAD 72.73%、Qwen2.5-VL-3B 41.07%、AnomalyR1 63.56%。 | MMAD 1,936学習／6,400評価サンプル、1-shot。v2 Table 1。 |
+| **IVL2004** [GLLS（MVTec）](https://arxiv.org/html/2607.03817) | 採用 | Table 1のCls. Accuracy、Qwen3-VL-8B GLLS 1-shot MVTec 87.7%、VisA 83.5%。0-shot 81.9%、65.2%。同基盤74.2%、61.4%。 | Qwen3-VL-8B、1-shot、Table 1 MVTecのCls.列。 |
+| **IVL2005** [ADOPD](https://arxiv.org/html/2608.09789v1) | 採用 | Table 1のzero-shot Defect Classification AccuracyはADOPD 57.03%、同基盤53.90%、同論文で再評価したReason-IAD 73.12%。77.31%は全タスク平均。 | Real-IADで学習、MMAD推論時に正常参照なし。Table 1。 |
+| **IVL2006** [EMIT](https://arxiv.org/html/2507.21619v1) | 採用 | Table 1の1-shot Defect Classification Accuracy 80.85%。比較Qwen2.5-VL 7B 69.35%、GLM-4.1V-Thinking 9B 72.01%。 | InternVL3-8B、MMAD正常参照1枚と領域知識、Table 1。 |
+| **IVL2007** [InspectorGPT](https://arxiv.org/html/2608.29783v1) | 採用 | Table 1のDefect Cls. Accuracy 75.32%。同基盤56.15%。全タスク平均82.38%。 | MMAD内20%学習／80%評価。Table 1。 |
 
-## 工業欠陥：保留・関連10本
+## 工業欠陥：保留・関連
 
 | 論文・モデル | 採否 | 指標と実際の成績 | 評価上の注意 |
 |---|---|---|---|
@@ -79,8 +92,11 @@ Accuracy＝全体正答率、Precision＝陽性とした予測の的中率、Rec
 | **IV009** [CLIP-MDC](https://link.springer.com/article/10.1007/s10845-025-02773-4) | 関連 | 種類分類の定量Accuracy/F1は未確認。種類名予測例のみ。 | 関連：二値検出AUROCや約6.6msという速度を分類精度の代用にしない。 |
 | **IR001** [手袋 / Qwen2.5-VL](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0339867) | 関連 | 青手袋mAP0.63、混合製品0.61。YOLOの青手袋0.62。 | 関連：種類付きbbox検出。画像分類Accuracyは未確認。 |
 | **IR002** [YOLO-World / few-shot検出](https://www.mdpi.com/1999-4893/19/4/259) | 関連 | Tile mAP@50 64.9%（学習9インスタンス）。 | 関連：種類付きbbox検出。画像分類Accuracyは未確認。 |
+| **IVL2008** [SNAP-SEM（BEOL）](https://link.springer.com/content/pdf/10.1007/s44443-026-00893-2.pdf) | 関連 | Table 2の種類分類F1（0–1尺度）はBEOL 0.7825、DEP 0.9695、DPR 0.9411。同順のNMI 0.7226／0.8517／0.9249、ARI 0.8046／0.9282／0.9682。 | Table 2。Hungarian整合後のクラス発見。 |
 
 ## 論文はだいたい調べられているか
+
+Round2で主要16本を起点に前方・後方を追跡し、本文取得経路を追加した。下表は**初回調査の不足を記録したもの**であり、現在の件数・実行範囲・残件は[探索監査](search_process_audit.md)に示す。引用索引の全件取得ができた集合と、上位検索・選択文献の確認にとどまる集合を分けた。発見論文の再帰的追跡は未完了である。
 
 **技術系統と代表事例を広く把握するための重点調査にはなっているが、「該当論文をほぼ網羅した」と言える段階ではない。** 全対象論文数という分母を確定できておらず、「80%・90%を収集済み」といった網羅率は算出できない。論文数の多さと探索の完了は別である。
 
@@ -94,12 +110,12 @@ Accuracy＝全体正答率、Precision＝陽性とした予測の的中率、Rec
 | 探索方法 | 工具フォーカス55行、工業51行の検索・確認ログを保持 | バッチ・直接取得が混在。一部の採否数や時刻が未記録。データベース別の完全な取得母集団なし |
 | 探索終了の根拠 | 未発見・保留・対象外を台帳化 | 追加検索で新候補が出なくなる「探索飽和」は未確認 |
 
-つまり、方式の比較と精読対象の選定には使えるが、新規性を主張する先行研究調査や「他に同種論文がない」という判断には追加調査が必要である。今回の性能要約作成では新たな網羅検索をしておらず、既存の採否件数は変更していない。
+方式の比較と精読対象の選定には使えるが、新規性を主張する先行研究調査や「他に同種論文がない」という判断には追加調査が必要である。Round2では新規の文献探索と採否更新を行った。追加研究が見つかっているため探索飽和は確認していない。
 
-## 網羅性を高める次の作業
+## 継続して行う作業
 
 1. 出力を「種類分類」と定義した共通検索式を、Crossref/OpenAlex/IEEE/出版社/J-STAGE/CiNii等の経路別に実行し、取得集合・重複・採否を記録する。一般異常検知や劣化段階分類を混ぜない。
-2. 工具の主9本、工業の主28本の前方・後方引用を系統的に追跡する。新規適合候補が出るかを周回ごとに記録する。
+2. 今回の追加採用論文を次のseedにして追跡し、既存seedの未取得ページ・未確認引用を調べる。新規適合候補が出るかを周回ごとに記録する。
 3. 保留論文を全文・補足・著者版で再確認し、クラスラベル、種類分類の数値、公開日を確定する。
 4. 少数クラスRecall/macro-F1、独立工具・ロット・工場のsplit、同一データの再使用、正解ROIなしの性能を優先して補完する。
 
@@ -110,4 +126,4 @@ Accuracy＝全体正答率、Precision＝陽性とした予測の的中率、Rec
 - 工具：[種類分類レポート](wear_type_classification_benchmark.md)、[出典・主張・根拠](../evidence/wear_type_classification/)、[元59本の選別](../evidence/wear_type_classification/existing_papers_screening.csv)
 - 工業：[種類分類レポート](industrial_defect_classification_benchmark.md)、[監査](industrial_defect_classification_audit.md)、[出典・主張・根拠](../evidence/industrial_defect_classification/)、[カバレッジ](../outputs/industrial_coverage.csv)
 
-今回の要約は既存の根拠付き報告値を再配置し、無次元小数と百分率の表示を明記したもの。原著の実験再現や全論文の再精読を行ったという意味ではない。数値未報告、未抽出、未確認、評価対象外を区別して保持した。
+要約は根拠付き報告値を再配置し、Round2の確認結果を加えたもの。原著の実験再現や全論文の再精読を行ったという意味ではない。数値未報告、未抽出、未確認、評価対象外を区別して保持した。

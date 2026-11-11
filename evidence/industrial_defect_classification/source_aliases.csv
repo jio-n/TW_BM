@@ -1,1 +1,13 @@
 ﻿alias_source_id,canonical_source_id,url
+SRT001,SIT012,https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003352160
+SRT004,SIT014,https://www.sciencedirect.com/science/article/abs/pii/S1568494626009427
+SRT009,SIT003,https://www.mdpi.com/2076-3417/16/6/3022
+SRT010,SIT004,https://arxiv.org/pdf/2506.03345
+SRT011,SIT005,https://arxiv.org/pdf/2504.02494
+SRT012,SIT006,https://globals.ieice.org/en_publications/elex/10.1587/elex.21.20240054/_f
+SRT013,SIT009,https://arxiv.org/html/2608.12725v1
+SRT029,SIT022,https://github.com/mueez-overflow/generative-defect-isolation
+SRV001,SIM024,https://github.com/jam-cc/MMAD/blob/main/dataset/MMAD/domain_knowledge.json
+SRV002,SIM002,https://arxiv.org/html/2410.09453
+SRV013,SIM019,https://link.springer.com/article/10.1007/s44163-026-02008-2
+SRV018,SIM004,https://arxiv.org/html/2407.10810

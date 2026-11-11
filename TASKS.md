@@ -1,5 +1,7 @@
 # フェーズ別タスク
 
+引用追跡・保留本文・再利用監査の追加ラウンドR0–R4完了、R5は成果物検証済みの公開対象版。[仕様・完了条件](reports/round2_protocol.md)、[追加結果](reports/round2_findings.md)、[監査](reports/search_process_audit.md)を参照。既存の種類分類基準とIDを維持した。完全網羅や保留全件解消を完了条件へ読み替えない。
+
 性能値の再整理S1–S3（完了）：既存の種類分類53本から指標・実数・評価条件を抽出し（S1）、網羅性の根拠と不足を監査（S2）、専用2シートExcel・CSV・レポートを検証して公開（S3）。入力はfocused/industrial統合JSONと原資料、出力はclassification_performance_summary一式。完了条件は53IDの保持、数値・単位・根拠の対応、欠測の区別、全体精度ランキングを作らないこと。S2はS1、S3はS1–S2に依存。新規の網羅探索や未取得本文の全取得はこの再整理に含めない。
 
 工業欠陥種類分類の追加調査I0–I5は [専用仕様・タスク表](reports/industrial_defect_classification_scope.md) を参照。工具摩耗表とは独立して管理する。

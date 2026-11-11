@@ -2,6 +2,7 @@
 import csv, json, re
 from collections import Counter
 from pathlib import Path
+from round2_support import append_round2
 
 ROOT=Path(__file__).resolve().parents[1]
 EV=ROOT/'evidence/industrial_defect_classification'
@@ -20,15 +21,16 @@ for name in ['industrial_vit.json','industrial_vlm.json','industrial_mllm.json',
  bundle=read(name)
  for k in keys: d[k].extend(bundle.get(k,[]))
 annotations=read('industrial_annotations.json') if (ROOT/'data/industrial_annotations.json').exists() else {}
+for r in d['records']: r.update(annotations.get(r['id'],{}))
+append_round2(d,['round2_vit.json','round2_vlm.json'])
 fields=read('industrial_schema.json')['record_fields']
 for r in d['records']:
- r.update(annotations.get(r['id'],{}))
  for f in fields: r.setdefault(f,'未確認')
  for f in fields:
   if f!='source_ids' and not isinstance(r[f],(int,float,bool)): r[f]=text(r[f])
  if isinstance(r['source_ids'],str): r['source_ids']=[x for x in re.split(r'[;；／/,|\s]+',r['source_ids']) if x]
  family=r['model_family']
- r['family_group']='MLLM' if 'MLLM' in family else 'LLM（テキスト中心）' if 'LLM' in family and 'VLM' not in family else 'VLM／VLM由来特徴' if 'VLM' in family or 'CLIP' in family or r['id'].startswith('IV') else '視覚Transformer'
+ r['family_group']='MLLM' if 'MLLM' in family else 'LLM（テキスト中心）' if 'LLM' in family and 'VLM' not in family else 'VLM／VLM由来特徴' if 'VLM' in family or 'CLIP' in family else '視覚Transformer'
  r['adoption_group']='保留' if '保留' in r['status'] or '未確定' in r['status'] else '関連' if '関連' in r['status'] else '対象外' if '除外' in r['status'] or '対象外' in r['status'] else '採用'
  r['claim_ids']='; '.join(c['claim_id'] for c in d['claims'] if c['entity_id']==r['id'])
 

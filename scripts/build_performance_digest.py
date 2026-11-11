@@ -61,8 +61,20 @@ curated=[
  ['IR001','手袋 / Qwen2.5-VL','青手袋の検出mAP',.63,'0～1','青手袋mAP0.63、混合製品0.61。YOLOの青手袋0.62。','関連：種類付きbbox検出。画像分類Accuracyは未確認。'],
  ['IR002','YOLO-World / few-shot検出','Tileの検出mAP@50',.649,'%','Tile mAP@50 64.9%（学習9インスタンス）。','関連：種類付きbbox検出。画像分類Accuracyは未確認。'],
 ]
-assert len(curated)==53 and len({x[0] for x in curated})==53
 all_original={r['id']:(kind,r,bundle) for kind,bundle in [('工具摩耗',wear),('工業欠陥',industrial)] for r in bundle['records']}
+current={row[0]:row for row in curated}
+for name in ['round2_wear.json','round2_vit.json','round2_vlm.json']:
+ path=ROOT/'data'/name
+ if not path.exists(): continue
+ additions=json.loads(path.read_text(encoding='utf-8-sig')); seen=set()
+ for p in additions.get('performance_rows',[]):
+  i=p['id']
+  if i in seen: continue
+  seen.add(i)
+  r=all_original[i][1]
+  current[i]=[i,p['name'],p['metric'],p['value'],p['unit'],r['performance'],p['note']]
+curated=list(current.values())
+assert len({x[0] for x in curated})==len(curated)
 assert set(all_original)=={x[0] for x in curated}
 rows=[]
 for i,short,metric,value,unit,result,note in curated:
@@ -73,7 +85,7 @@ for i,short,metric,value,unit,result,note in curated:
  if isinstance(source_ids,list):source_ids='; '.join(source_ids)
  status=r['status'];adoption='保留' if '保留' in status else '関連' if '関連' in status else '採用'
  rows.append({'id':i,'name':short,'status':adoption,'metric':metric,'value':value,'unit':unit,'result':result,'note':note,'split':r['split'],'model_family':r['model_family'],'input':r.get('input_group',r.get('group','')),'labels':r['labels'],'title':r['title'],'url':r['url'],'locator':r['locator'],'source_ids':source_ids,'claim_ids':'; '.join(cids),'verification':r['verification'],'scope':kind,'original_performance':r['performance']})
-out={'as_of':'2026-11-11','scope':'既存の種類分類比較表53本。新たな網羅探索は実施していない。','records':rows}
+out={'as_of':'2026-11-11','scope':'工具摩耗と工業欠陥の種類分類。Round2の引用追跡・保留再確認を反映。探索範囲と残件はreports/search_process_audit.md参照。','records':rows}
 (ROOT/'data/performance_digest.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf-8')
 with (ROOT/'outputs/classification_performance_summary.csv').open('w',encoding='utf-8-sig',newline='') as f:
  w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
@@ -81,9 +93,9 @@ def md_table(items):
  s='| 論文・モデル | 採否 | 指標と実際の成績 | 評価上の注意 |\n|---|---|---|---|\n'
  for r in items:s+=f"| **{r['id']}** [{r['name']}]({r['url']}) | {r['status']} | {r['result']} | {r['note']} |\n"
  return s
-report='''# 種類分類の性能値まとめと調査範囲の評価
+report=f'''# 種類分類の性能値まとめと調査範囲の評価
 
-基準日：2026-11-11。工具摩耗15本と工業欠陥38本、計53本の比較表掲載論文について、指標名だけでなく報告値とその読み方を抽出した。主比較は工具9本・工業28本の計37本。保留7本、関連9本を別区分で残す。元の広域工具研究59本のうち、量・寿命・程度だけを扱う対象外研究はこのまとめに戻していない。
+基準日：2026-11-11。工具摩耗{len(wear['records'])}本と工業欠陥{len(industrial['records'])}本、計{len(rows)}本について、指標名だけでなく報告値と条件を抽出した。主比較{sum(r['status']=='採用' for r in rows)}本、保留{sum(r['status']=='保留' for r in rows)}本、関連{sum(r['status']=='関連' for r in rows)}本。Round2の引用追跡、新規12本の主採用、微細ドリル論文の保留解除を反映した。[追加調査結果](round2_findings.md)／[探索方法と監査](search_process_audit.md)。元の広域工具研究59本のうち、量・寿命・程度だけを扱う対象外研究は戻していない。
 
 [精度一覧Excel](../outputs/classification_performance_summary.xlsx)／[CSV](../outputs/classification_performance_summary.csv)。Excelは数値を読みやすい左側に配置し、原語クラス・評価分割・出典と根拠IDを右側に保持した。代表値は対応する指標・条件の値で、論文の最高値を一律に選んだものではない。表全体の平均やランキングは作成しない。
 
@@ -95,16 +107,18 @@ report='''# 種類分類の性能値まとめと調査範囲の評価
 
 Accuracy＝全体正答率、Precision＝陽性とした予測の的中率、Recall＝該当種類を拾う率。F1はPrecisionとRecallの調和平均で、macro-F1は種類別F1を平均する。MCC、ROC-AUC、Dice、分類mAP、検出mAPも定義が違う。0.99という共通の数字でも置換できない。本文が平均方式を明記していない場合は推測しない。
 
-## 工具摩耗：全15本
+## 工具摩耗：採用・保留・関連
 
 '''+md_table([r for r in rows if r['scope']=='工具摩耗'])+'''
-## 工業欠陥：主比較28本
+## 工業欠陥：主比較
 
 '''+md_table([r for r in rows if r['scope']=='工業欠陥' and r['status']=='採用'])+'''
-## 工業欠陥：保留・関連10本
+## 工業欠陥：保留・関連
 
 '''+md_table([r for r in rows if r['scope']=='工業欠陥' and r['status']!='採用'])+'''
 ## 論文はだいたい調べられているか
+
+Round2で主要16本を起点に前方・後方を追跡し、本文取得経路を追加した。下表は**初回調査の不足を記録したもの**であり、現在の件数・実行範囲・残件は[探索監査](search_process_audit.md)に示す。引用索引の全件取得ができた集合と、上位検索・選択文献の確認にとどまる集合を分けた。発見論文の再帰的追跡は未完了である。
 
 **技術系統と代表事例を広く把握するための重点調査にはなっているが、「該当論文をほぼ網羅した」と言える段階ではない。** 全対象論文数という分母を確定できておらず、「80%・90%を収集済み」といった網羅率は算出できない。論文数の多さと探索の完了は別である。
 
@@ -118,12 +132,12 @@ Accuracy＝全体正答率、Precision＝陽性とした予測の的中率、Rec
 | 探索方法 | 工具フォーカス55行、工業51行の検索・確認ログを保持 | バッチ・直接取得が混在。一部の採否数や時刻が未記録。データベース別の完全な取得母集団なし |
 | 探索終了の根拠 | 未発見・保留・対象外を台帳化 | 追加検索で新候補が出なくなる「探索飽和」は未確認 |
 
-つまり、方式の比較と精読対象の選定には使えるが、新規性を主張する先行研究調査や「他に同種論文がない」という判断には追加調査が必要である。今回の性能要約作成では新たな網羅検索をしておらず、既存の採否件数は変更していない。
+方式の比較と精読対象の選定には使えるが、新規性を主張する先行研究調査や「他に同種論文がない」という判断には追加調査が必要である。Round2では新規の文献探索と採否更新を行った。追加研究が見つかっているため探索飽和は確認していない。
 
-## 網羅性を高める次の作業
+## 継続して行う作業
 
 1. 出力を「種類分類」と定義した共通検索式を、Crossref/OpenAlex/IEEE/出版社/J-STAGE/CiNii等の経路別に実行し、取得集合・重複・採否を記録する。一般異常検知や劣化段階分類を混ぜない。
-2. 工具の主9本、工業の主28本の前方・後方引用を系統的に追跡する。新規適合候補が出るかを周回ごとに記録する。
+2. 今回の追加採用論文を次のseedにして追跡し、既存seedの未取得ページ・未確認引用を調べる。新規適合候補が出るかを周回ごとに記録する。
 3. 保留論文を全文・補足・著者版で再確認し、クラスラベル、種類分類の数値、公開日を確定する。
 4. 少数クラスRecall/macro-F1、独立工具・ロット・工場のsplit、同一データの再使用、正解ROIなしの性能を優先して補完する。
 
@@ -134,7 +148,7 @@ Accuracy＝全体正答率、Precision＝陽性とした予測の的中率、Rec
 - 工具：[種類分類レポート](wear_type_classification_benchmark.md)、[出典・主張・根拠](../evidence/wear_type_classification/)、[元59本の選別](../evidence/wear_type_classification/existing_papers_screening.csv)
 - 工業：[種類分類レポート](industrial_defect_classification_benchmark.md)、[監査](industrial_defect_classification_audit.md)、[出典・主張・根拠](../evidence/industrial_defect_classification/)、[カバレッジ](../outputs/industrial_coverage.csv)
 
-今回の要約は既存の根拠付き報告値を再配置し、無次元小数と百分率の表示を明記したもの。原著の実験再現や全論文の再精読を行ったという意味ではない。数値未報告、未抽出、未確認、評価対象外を区別して保持した。
+要約は根拠付き報告値を再配置し、Round2の確認結果を加えたもの。原著の実験再現や全論文の再精読を行ったという意味ではない。数値未報告、未抽出、未確認、評価対象外を区別して保持した。
 '''
 (ROOT/'reports/classification_performance_summary.md').write_text(report,encoding='utf-8')
 print(json.dumps({'records':len(rows),'wear':sum(r['scope']=='工具摩耗' for r in rows),'industrial':sum(r['scope']=='工業欠陥' for r in rows),'adopted':sum(r['status']=='採用' for r in rows),'numeric_representative_values':sum(r['value'] is not None for r in rows)},ensure_ascii=False))

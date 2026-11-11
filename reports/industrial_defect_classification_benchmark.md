@@ -4,7 +4,7 @@
 
 ## 1. エグゼクティブサマリー
 
-**欠陥の種類をカテゴリとして答える28本を主比較対象とした。** 視覚Transformer11本、VLM／VLM由来特徴7本、MLLM10本。関連5本・保留5本を別に収録し、Excelは計38行。主比較のうちIT004は欠陥種類を匿名IDで表すため、名称の共通語彙比較には使えない。その他にも原語ラベルの全量一覧が未抽出の部分集合があり、各行に明記した。
+**欠陥の種類をカテゴリとして答える38本を主比較対象とした。** 系統別内訳は{'視覚Transformer': 14, 'VLM／VLM由来特徴': 7, 'MLLM': 17}。関連6本・保留5本を別に収録し、Excelは計49行。主比較のうちIT004は欠陥種類を匿名IDで表すため、名称の共通語彙比較には使えない。その他にも原語ラベルの全量一覧が未抽出の部分集合があり、各行に明記した。Round2の追加探索・残件は[更新報告](round2_findings.md)と[探索監査](search_process_audit.md)を参照。
 
 [Excel](../outputs/industrial_defect_classification_benchmark.xlsx)／[CSV](../outputs/industrial_defect_classification_benchmark.csv)／[系統集計](../outputs/industrial_model_family_summary.csv)／[品質監査](industrial_defect_classification_audit.md)／[代表論文の詳細](../details/industrial_defect_classification/README.md)。
 
@@ -20,9 +20,9 @@
 
 | 主モデル系統 | 主比較 | 関連 | 保留 |
 |---|---|---|---|
-| 視覚Transformer | 11 | 1 | 5 |
+| 視覚Transformer | 14 | 2 | 5 |
 | VLM／VLM由来特徴 | 7 | 3 | 0 |
-| MLLM | 10 | 1 | 0 |
+| MLLM | 17 | 1 | 0 |
 | LLM（テキスト中心） | 0 | 0 | 0 |
 
 モデルの名称と入力のモダリティを別軸で管理した。画像に正常参照画像を追加すること、画像にテキストを付けること、画像と物理センサを融合することは異なる。今回採用した研究で、画像と同時取得の非画像物理センサを融合して種類を分類する適合例は確認できなかった。LPBFのRAG論文も、評価入力は可視画像と文献の画像・文章であり、赤外線等の同時計測融合を実証した結果ではない（IM004）。
@@ -56,6 +56,9 @@ flowchart LR
 | [IT009: A generative approach for improving multi-label defect classification in photovoltaic modules](https://arxiv.org/html/2608.12725v1) | 2026 | ViT-S、ViT-L、EfficientNetV2-Lを比較。提案は学習時のみLaMaの塗り直しで欠陥を分離するGDI | Contact_BeltMarks; Contact_Corrosion; Contact_FrontGridInterruption; Contact_NearSolderPad; Crack_Closed; Crack_Isolated; Crack_Resistive; Interconnect_BrightSpot; Interconnect_Disconnected; Interconnect_HighlyResistive; No_Defect; Unknown | ViT-S＋GDI、学習20%・閾値0.5固定の4 seed：全ラベル一致0.3883±0.0111、macro F1 0.5965±0.0119（GDIなし0.3467±0.0123、0.5710±0.0057）。テスト閾値調整条件のViT-S 0.4286／0.6507とは区別 |
 | [IT010: C-ViT: An Improved ViT Model for Multi-Label Classification of Bamboo Chopstick Defects](https://www.mdpi.com/1424-8220/26/3/812/pdf) | 2026 | C-ViT：細長い画像向けCNN Feature ExtractorでViTパッチ埋め込みを置換、難例の対照損失HCLで学習 | mildew; bending; black spots; cracking; pointed（序論はslendernessと記載） | Table 2 C-ViT＋HCL：mAP 94.3%、OF1 90.2%、CF1 88.5%。ViT-Small：91.6%、85.8%、81.7%。序論の93.8%は本文表と相違するためTable 2/5を採用 |
 | [IT011: A Hybrid CNN–Transformer Approach for Photovoltaic Cell Defect Classification Using Electroluminescence Imaging](https://www.mdpi.com/1424-8220/26/8/2450) | 2026 | PVELNet：多尺度並列畳み込み・残差とTransformer自己注意の分類器 | Cell-Interconnection; Electrically Insulated Cell Parts; Finger Defect; Material; Microcrack; Multi-Defect; Normal; Visual | 未拡張テストAccuracy 95.71%（95% CI 95.26–96.16%）。同条件VGG19 94.69%、DarkNet53 94.65%（Table 13） |
+| [IVT2001: Pre-trained CNN-based TransUNet Model for Mixed-Type Defects in Wafer Maps](https://factory.skku.edu/factory/research.do?articleNo=160425&attachNo=128003&mode=download) | 2023 | N-pair対照事前学習CNNを持つTransUNet。自己注意層を含む共有encoderに分類・セグメンテーションの多タスク学習を適用 | 評価は2種類混合の組み合わせ。基礎型はCenter (C); Donut (D); Edge-Loc (EL); Edge-Ring (ER); Loc (L); Scratch (S); Random; Near-full。Table 3では C+EL, C+ER, C+L, C+S, D+EL, D+ER, D+L, D+S, EL+L, EL+S, ER+L, ER+S, L+S | 2種類混合の評価2,600マップでAccuracy 0.995、F1 0.995（Table 2／§4.3） |
+| [IVT2002: Solar Photovoltaic System Fault Classification via Hierarchical Deep Learning with Imbalanced Multi-Class Thermal Dataset](https://www.mdpi.com/1996-1073/19/2/462) | 2026 | Swin-T（比較中の最高macro F1）。共通の二段階分類とコントラスト保持MixUp | No-Anomaly; Cell; Diode; Cracking; Hot-Spot; Shadowing; Vegetation; Soiling | 8クラス階層のテストでSwin-T Accuracy 89.48%、macro F1 80.50%、weighted F1 89.43%。同一テストのViT-B/16 77.81%／60.56%、SlantNet 86.15%／73.03%（Accuracy／macro F1） |
+| [IVT2003: FAX-Net: An Enhanced ConvNeXt Model with Symmetric Attention and Transformer-FPN for Steel Defect Classification](https://www.mdpi.com/2073-8994/17/8/1313) | 2025 | FAX-Net。ConvNeXt＋並列チャネル／空間SDAM＋軽量Transformerを組み込むTF-FPN | Cracks (Cr); Inclusions (In); Patches (Pa); Pitted Surface (PS); Rolled-in Scale (RS); Scratches (Sc) | NEU-CLS 6分類 Accuracy 97.78%、クラス平均F1 97.51%（§4.3 Table 1, Fig. 5） |
 
 ウェハビンマップは電気検査結果の空間パターンであり、表面の光学写真やSEM像とは区別する。布汚れ研究IT008も工業ライン上の実証ではなく、家庭環境で撮影した布のデータを含む。タイトルにCross-Datasetを含むIT003はデータセットごとの個別学習比較であり、その結果を未知データセットへ移す性能とは読めない。
 
@@ -89,8 +92,15 @@ SEM-CLIPでは視覚分類ヘッドだけのAccuracy83.6%に対し、テキス�
 | [IM008: MAU-GPT: Enhancing Multi-type Industrial Anomaly Understanding via Anomaly-aware and Generalist Experts Adaptation](https://ojs.aaai.org/index.php/AAAI/article/download/39889/43850) | 2026 | MAU-GPT-4B（Gemma-3系列、Anomaly-aware expertとGeneralist expertの適応）。 | MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。 | MMAD Table 5 Defect Classification Accuracy 39.31%。Gemma3-4B 37.07%、GPT-4o 65.80%。61.41%は全タスク平均。 |
 | [IM009: Industrial Anomaly Detection via Defect-Grounded Reasoning in Visual Latent Space](https://arxiv.org/html/2609.29457) | 2026 | Anomaly-LR（Qwen2.5-VL 3B／7B）。全体文脈を言語推論し、局所欠陥を視覚潜在空間で反復精緻化。 | MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。 | Table 1の欠陥種類Accuracy 7B 82.70%、3B 82.49%。Table 1の全タスク平均87.12%/86.00%は別指標。 |
 | [IM010: Is In-Domain Training Enough for Fine-Grained Industrial Anomaly Understanding?](https://arxiv.org/html/2610.12310) | 2026 | SiGMA（複数のMLLM、ドメイン知識・正常画像検索、信頼度重み付き統合）。 | MMADの製品別欠陥種（例 `split_teeth`, `cut_inner_insulation`、原語キーはIM001）。設問ごとに選択肢が異なる。実験部分集合の全ラベル一覧は未確認。 | Table 1の欠陥種類Accuracy 79.2%。85.2%は7タスク平均。 |
+| [IVL2001: Can Multimodal Large Language Models be Guided to Improve Industrial Anomaly Detection?](https://arxiv.org/html/2501.15795v1) | 2025 | Echo＋Qwen2-VL 7B。類似正常参照の検索、質問に応じた専門知識、段階的推論、最終回答を組み合わせる。 | MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。 | Table 1のDefect Classification AccuracyはMVTec-AD 72.86%、VisA 62.35%。同じQwen2-VL 7Bのベースは68.46%、57.06%。 |
+| [IVL2002: Towards Explainable Industrial Anomaly Detection via Knowledge-Guided Latent Reasoning](https://arxiv.org/html/2602.09850v4) | 2026 | Reason-IAD。CLIPで関連欠陥カテゴリの知識を検索し、Qwen3-VLの潜在推論トークンと選択画像パッチを推論時に更新。 | MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。 | v4 Table 1の1-shot種類AccuracyはReason-IAD Qwen3-VL-8B 75.07%、同基盤62.33%。 |
+| [IVL2003: AgentIAD: Agentic Industrial Anomaly Detection via Adaptive Memory Augmentation](https://arxiv.org/html/2512.13671v2) | 2026 | AgentIAD（Qwen2.5-VL-3B）。領域拡大、正常参照検索、外部知識取得を選択できる検査エージェント。 | MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。 | Table 1のDefect Classification AccuracyはAgentIAD 72.73%、Qwen2.5-VL-3B 41.07%、AnomalyR1 63.56%。 |
+| [IVL2004: Global Logic and Local Search: Dual-Stream Multimodal In-Context Learning for Verifiable Industrial Anomaly Detection](https://arxiv.org/html/2607.03817) | 2026 | GLLS。部位別の正常情報を検索し、SAM3による全体構造確認と、モンテカルロ木探索による局所クロップの取得を並行。Qwen3-VLが証拠から回答。 | MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。 | Table 1のCls. Accuracy、Qwen3-VL-8B GLLS 1-shot MVTec 87.7%、VisA 83.5%。0-shot 81.9%、65.2%。同基盤74.2%、61.4%。 |
+| [IVL2005: ADOPD: Reference-Privileged On-Policy Distillation for MLLM-Based Industrial Anomaly Detection](https://arxiv.org/html/2608.09789v1) | 2026 | ADOPD。学習中だけ対応／非対応の正常局所参照を与えたQwen3-VL-32B教師から、Qwen3-VL-4B学生へ方策蒸留。 | MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。 | Table 1のzero-shot Defect Classification AccuracyはADOPD 57.03%、同基盤53.90%、同論文で再評価したReason-IAD 73.12%。77.31%は全タスク平均。 |
+| [IVL2006: EMIT: Enhancing MLLMs for Industrial Anomaly Detection via Difficulty-Aware GRPO](https://arxiv.org/html/2507.21619v1) | 2025 | EMIT（InternVL3-8B）。難易度に応じて回答再サンプリングと利得重みを調整するGRPO。 | MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。 | Table 1の1-shot Defect Classification Accuracy 80.85%。比較Qwen2.5-VL 7B 69.35%、GLM-4.1V-Thinking 9B 72.01%。 |
+| [IVL2007: InspectorGPT: A Comparative Reasoning Enhanced VLM for Comprehensive Industrial Anomaly Detection](https://arxiv.org/html/2608.29783v1) | 2026 | InspectorGPT（Qwen2.5-VL-7B）。比較推論SFTからGRPOと分割枝を別々に学び、両枝のtask vectorを融合。 | MMADの製品別原語欠陥ラベル（例 split_teeth、cut_inner_insulation）。問いごとに候補が異なる。 | Table 1のDefect Cls. Accuracy 75.32%。同基盤56.15%。全タスク平均82.38%。 |
 
-MMAD系7本（IM001、IM005–IM010）は同じベンチマークへの集中を含み、独立した7種類の工場データ検証ではない。MMADの244欠陥カテゴリと、各設問の4択は異なる単位である。標準1-shotは正常参照画像1枚であり、各欠陥のラベル付き学習例1枚を与えるfew-shotと同義ではない。[IM001: MMAD: A Comprehensive Benchmark for Multimodal Large Language Models in Industrial Anomaly Detection](https://proceedings.iclr.cc/paper_files/paper/2025/hash/d91ffbe9c126765755ff52d36b715683-Abstract-Conference.html)。
+初回収録のMMAD系7本（IM001、IM005–IM010）に加えてRound2でも同じベンチマークを利用する研究が増えた。論文数を独立した工場データ検証数として扱わない。MMADの244欠陥カテゴリと、各設問の4択は異なる単位である。標準1-shotは正常参照画像1枚であり、各欠陥のラベル付き学習例1枚を与えるfew-shotと同義ではない。[IM001: MMAD: A Comprehensive Benchmark for Multimodal Large Language Models in Industrial Anomaly Detection](https://proceedings.iclr.cc/paper_files/paper/2025/hash/d91ffbe9c126765755ff52d36b715683-Abstract-Conference.html)。
 
 純粋なテキストLLMだけで画像から欠陥種類を分類する主採用例は0本だった。画像を受け取るGPT-4o、Qwen-VL、Gemma等はこの調査ではMLLMに集計する。0本は文献の不存在を証明するものではない。
 
@@ -112,9 +122,10 @@ MMAD系7本（IM001、IM005–IM010）は同じベンチマークへの集中を
 | 採用論文の年 | 本数 |
 |---|---|
 | 2022 | 1 |
+| 2023 | 1 |
 | 2024 | 4 |
-| 2025 | 9 |
-| 2026 | 14 |
+| 2025 | 12 |
+| 2026 | 20 |
 
 2022年のCNN–Transformer鋼板分類から、2024年のSEM向けCLIPやFabGPT、2025年の少数ショット適応・MMAD・RAG、2026年の細粒度VQA学習や多ラベル分類までを確認した。この収集分布は発表総数の年次統計ではない。2026年には査読前原稿も含み、媒体欄で区別する。IV003は会議2024年と著者版2025年、IV007はオンライン2025年末と巻号2026年を混同しない。視覚分類と対話型分類は併存しており、一方向の置換とは解釈しない。
 
@@ -151,7 +162,7 @@ IV005の「unseen」は比較用ResNetの学習に含まれない種類であり
 
 ## 12. 網羅性・制約
 
-38本の詳細表に加え、除外・保留・関連・重複候補25行を管理した。後者には同一論文の異版や同定できない名称も含み、合計63本の実在する独立論文を確認したという意味ではない。76出典、221主張、230根拠対応を登録した。主採用28本は一次資料に対応するが、全体を完全精読した割合とは異なる。
+49本の詳細表と、初回の除外・保留・関連・重複候補25行、Round2の発見台帳を管理した。候補には同一論文の異版や同定できない名称も含み、行数の合計を独立論文数としない。114出典、300主張、317根拠対応を登録した。主採用38本は一次資料に対応するが、全文を完全精読した割合とは異なる。
 
 鋼材、SEM、ウェハパターン、PCB、太陽電池、繊維、竹製品、積層造形をカバーする。日本語・国内機関の網羅検索、包装・食品・自動車部品など個別産業、画像＋物理センサの種類分類、独立工場評価は不足する。追加探索でも新しい候補が出ており、探索飽和は証明していない。詳細は[カバレッジCSV](../outputs/industrial_coverage.csv)と監査報告を参照。
 
