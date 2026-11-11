@@ -1,0 +1,4495 @@
+{
+  "searches": [
+    {
+      "search_id": "ARXQ01",
+      "scope": "工具実写・モデル指定なし",
+      "executed_at": "2026-11-11T00:45:47+00:00",
+      "query": "((ti:\"tool wear\" OR ab:\"tool wear\" OR ab:\"cutting insert\") AND (ab:image OR ab:images OR ab:vision OR ab:microscope OR ab:thermography) AND (ti:classification OR ab:classification OR ab:\"wear type\" OR ab:chipping)) AND submittedDate:[201501010000 TO 202611111459]",
+      "url": "https://export.arxiv.org/api/query?search_query=%28%28ti%3A%22tool+wear%22+OR+ab%3A%22tool+wear%22+OR+ab%3A%22cutting+insert%22%29+AND+%28ab%3Aimage+OR+ab%3Aimages+OR+ab%3Avision+OR+ab%3Amicroscope+OR+ab%3Athermography%29+AND+%28ti%3Aclassification+OR+ab%3Aclassification+OR+ab%3A%22wear+type%22+OR+ab%3Achipping%29%29+AND+submittedDate%3A%5B201501010000+TO+202611111459%5D&start=0&max_results=15&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 15,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 0,
+      "returned_count": 0,
+      "pages_fetched": 1,
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ01.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 15,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工具実写・モデル指定なし",
+      "candidate_ids": [],
+      "screened_count": 0,
+      "seed_ids_found": [],
+      "dispositions": {},
+      "applied_cutoff": "API submittedDate（UTC）",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "複合構文の診断用。別分野のab/ABSなどが大量に返り、複合式の解釈未確定。総数は関連母集団の推定に不使用。"
+    },
+    {
+      "search_id": "ARXQ02",
+      "scope": "工具実写・モデル名あり",
+      "executed_at": "2026-11-11T00:45:51+00:00",
+      "query": "((ti:\"tool wear\" OR ab:\"tool wear\" OR ab:\"cutting insert\") AND (ab:image OR ab:images OR ab:vision OR ab:microscope OR ab:thermography) AND (ab:transformer OR ab:CNN OR ab:\"convolutional neural network\" OR ab:\"machine learning\") AND (ab:\"wear type\" OR ab:classification OR ab:chipping OR ab:adhesion)) AND submittedDate:[201501010000 TO 202611111459]",
+      "url": "https://export.arxiv.org/api/query?search_query=%28%28ti%3A%22tool+wear%22+OR+ab%3A%22tool+wear%22+OR+ab%3A%22cutting+insert%22%29+AND+%28ab%3Aimage+OR+ab%3Aimages+OR+ab%3Avision+OR+ab%3Amicroscope+OR+ab%3Athermography%29+AND+%28ab%3Atransformer+OR+ab%3ACNN+OR+ab%3A%22convolutional+neural+network%22+OR+ab%3A%22machine+learning%22%29+AND+%28ab%3A%22wear+type%22+OR+ab%3Aclassification+OR+ab%3Achipping+OR+ab%3Aadhesion%29%29+AND+submittedDate%3A%5B201501010000+TO+202611111459%5D&start=0&max_results=13&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 13,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 0,
+      "returned_count": 0,
+      "pages_fetched": 1,
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ02.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 13,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工具実写・モデル名あり",
+      "candidate_ids": [],
+      "screened_count": 0,
+      "seed_ids_found": [],
+      "dispositions": {},
+      "applied_cutoff": "API submittedDate（UTC）",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "複合構文の診断用。別分野のab/ABSなどが大量に返り、複合式の解釈未確定。総数は関連母集団の推定に不使用。"
+    },
+    {
+      "search_id": "ARXQ03",
+      "scope": "工具画像＋別モダリティ・融合",
+      "executed_at": "2026-11-11T00:45:56+00:00",
+      "query": "((ti:\"tool wear\" OR ab:\"tool wear\" OR ab:\"cutting insert\") AND (ab:image OR ab:images OR ab:vision OR ab:microscope OR ab:thermography) AND (ab:multimodal OR ab:\"sensor fusion\" OR ab:\"vision-language\" OR ab:vibration OR ab:acoustic) AND (ti:classification OR ab:classification OR ab:\"wear type\" OR ab:chipping)) AND submittedDate:[201501010000 TO 202611111459]",
+      "url": "https://export.arxiv.org/api/query?search_query=%28%28ti%3A%22tool+wear%22+OR+ab%3A%22tool+wear%22+OR+ab%3A%22cutting+insert%22%29+AND+%28ab%3Aimage+OR+ab%3Aimages+OR+ab%3Avision+OR+ab%3Amicroscope+OR+ab%3Athermography%29+AND+%28ab%3Amultimodal+OR+ab%3A%22sensor+fusion%22+OR+ab%3A%22vision-language%22+OR+ab%3Avibration+OR+ab%3Aacoustic%29+AND+%28ti%3Aclassification+OR+ab%3Aclassification+OR+ab%3A%22wear+type%22+OR+ab%3Achipping%29%29+AND+submittedDate%3A%5B201501010000+TO+202611111459%5D&start=0&max_results=11&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 11,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 0,
+      "returned_count": 0,
+      "pages_fetched": 1,
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ03.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 11,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工具画像＋別モダリティ・融合",
+      "candidate_ids": [],
+      "screened_count": 0,
+      "seed_ids_found": [],
+      "dispositions": {},
+      "applied_cutoff": "API submittedDate（UTC）",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "複合構文の診断用。別分野のab/ABSなどが大量に返り、複合式の解釈未確定。総数は関連母集団の推定に不使用。"
+    },
+    {
+      "search_id": "ARXQ04",
+      "scope": "工具画像＋別モダリティ・固有の摩耗形態",
+      "executed_at": "2026-11-11T00:46:00+00:00",
+      "query": "((ti:\"tool wear\" OR ab:\"tool wear\" OR ab:\"cutting insert\") AND (ab:multimodal OR ab:\"sensor fusion\" OR ab:\"vision-language\" OR ab:\"large language model\") AND (ab:adhesion OR ab:\"flank wear\" OR ab:chipping OR ab:\"wear type\" OR ab:classification)) AND submittedDate:[201501010000 TO 202611111459]",
+      "url": "https://export.arxiv.org/api/query?search_query=%28%28ti%3A%22tool+wear%22+OR+ab%3A%22tool+wear%22+OR+ab%3A%22cutting+insert%22%29+AND+%28ab%3Amultimodal+OR+ab%3A%22sensor+fusion%22+OR+ab%3A%22vision-language%22+OR+ab%3A%22large+language+model%22%29+AND+%28ab%3Aadhesion+OR+ab%3A%22flank+wear%22+OR+ab%3Achipping+OR+ab%3A%22wear+type%22+OR+ab%3Aclassification%29%29+AND+submittedDate%3A%5B201501010000+TO+202611111459%5D&start=0&max_results=10&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 10,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 15833,
+      "returned_count": 10,
+      "pages_fetched": 1,
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ04.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 10,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工具画像＋別モダリティ・固有の摩耗形態",
+      "candidate_ids": [
+        "ARXC001",
+        "ARXC002",
+        "ARXC003",
+        "ARXC004",
+        "ARXC005",
+        "ARXC006",
+        "ARXC007",
+        "ARXC008",
+        "ARXC009",
+        "ARXC010"
+      ],
+      "screened_count": 10,
+      "seed_ids_found": [],
+      "dispositions": {
+        "除外": 10
+      },
+      "applied_cutoff": "API submittedDate（UTC）",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "複合構文の診断用。別分野のab/ABSなどが大量に返り、複合式の解釈未確定。総数は関連母集団の推定に不使用。"
+    },
+    {
+      "search_id": "ARXQ05",
+      "scope": "工業欠陥・モデル指定なし",
+      "executed_at": "2026-11-11T00:46:04+00:00",
+      "query": "((ti:\"industrial defect\" OR ab:\"industrial defect\" OR ti:\"industrial anomaly\" OR ab:\"industrial anomaly\" OR ab:\"surface defect\" OR ab:\"wafer map\") AND (ti:classification OR ab:classification OR ab:\"defect type\" OR ab:\"anomaly type\" OR ab:\"anomaly understanding\" OR ab:\"defect understanding\")) AND submittedDate:[201501010000 TO 202611111459]",
+      "url": "https://export.arxiv.org/api/query?search_query=%28%28ti%3A%22industrial+defect%22+OR+ab%3A%22industrial+defect%22+OR+ti%3A%22industrial+anomaly%22+OR+ab%3A%22industrial+anomaly%22+OR+ab%3A%22surface+defect%22+OR+ab%3A%22wafer+map%22%29+AND+%28ti%3Aclassification+OR+ab%3Aclassification+OR+ab%3A%22defect+type%22+OR+ab%3A%22anomaly+type%22+OR+ab%3A%22anomaly+understanding%22+OR+ab%3A%22defect+understanding%22%29%29+AND+submittedDate%3A%5B201501010000+TO+202611111459%5D&start=0&max_results=17&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 17,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 15909,
+      "returned_count": 17,
+      "pages_fetched": 1,
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ05.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 17,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工業欠陥・モデル指定なし",
+      "candidate_ids": [
+        "ARXC001",
+        "ARXC002",
+        "ARXC003",
+        "ARXC004",
+        "ARXC005",
+        "ARXC006",
+        "ARXC007",
+        "ARXC008",
+        "ARXC009",
+        "ARXC010",
+        "ARXC011",
+        "ARXC012",
+        "ARXC013",
+        "ARXC014",
+        "ARXC015",
+        "ARXC016",
+        "ARXC017"
+      ],
+      "screened_count": 17,
+      "seed_ids_found": [],
+      "dispositions": {
+        "除外": 17
+      },
+      "applied_cutoff": "API submittedDate（UTC）",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "複合構文の診断用。別分野のab/ABSなどが大量に返り、複合式の解釈未確定。総数は関連母集団の推定に不使用。"
+    },
+    {
+      "search_id": "ARXQ06",
+      "scope": "工業欠陥・視覚Transformer",
+      "executed_at": "2026-11-11T00:46:13+00:00",
+      "query": "((ti:\"industrial defect\" OR ab:\"industrial defect\" OR ti:\"industrial anomaly\" OR ab:\"industrial anomaly\" OR ab:\"surface defect\" OR ab:\"wafer map\") AND (ti:classification OR ab:classification OR ab:\"defect type\" OR ab:\"anomaly type\" OR ab:\"anomaly understanding\" OR ab:\"defect understanding\") AND (ti:transformer OR ab:transformer OR ab:ViT OR ab:Swin OR ab:DINO)) AND submittedDate:[201501010000 TO 202611111459]",
+      "url": "https://export.arxiv.org/api/query?search_query=%28%28ti%3A%22industrial+defect%22+OR+ab%3A%22industrial+defect%22+OR+ti%3A%22industrial+anomaly%22+OR+ab%3A%22industrial+anomaly%22+OR+ab%3A%22surface+defect%22+OR+ab%3A%22wafer+map%22%29+AND+%28ti%3Aclassification+OR+ab%3Aclassification+OR+ab%3A%22defect+type%22+OR+ab%3A%22anomaly+type%22+OR+ab%3A%22anomaly+understanding%22+OR+ab%3A%22defect+understanding%22%29+AND+%28ti%3Atransformer+OR+ab%3Atransformer+OR+ab%3AViT+OR+ab%3ASwin+OR+ab%3ADINO%29%29+AND+submittedDate%3A%5B201501010000+TO+202611111459%5D&start=0&max_results=16&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 16,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 87,
+      "returned_count": 16,
+      "pages_fetched": 1,
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ06.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 16,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工業欠陥・視覚Transformer",
+      "candidate_ids": [
+        "ARXC018",
+        "ARXC019",
+        "ARXC020",
+        "ARXC021",
+        "ARXC022",
+        "ARXC023",
+        "ARXC024",
+        "ARXC025",
+        "ARXC026",
+        "ARXC027",
+        "ARXC028",
+        "ARXC029",
+        "ARXC030",
+        "ARXC031",
+        "ARXC032",
+        "ARXC033"
+      ],
+      "screened_count": 16,
+      "seed_ids_found": [
+        "IT005"
+      ],
+      "dispositions": {
+        "除外": 15,
+        "既収録再発見": 1
+      },
+      "applied_cutoff": "API submittedDate（UTC）",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "複合構文の診断用。別分野のab/ABSなどが大量に返り、複合式の解釈未確定。総数は関連母集団の推定に不使用。"
+    },
+    {
+      "search_id": "ARXQ07",
+      "scope": "工業欠陥・VLM/MLLM",
+      "executed_at": "2026-11-11T00:46:17+00:00",
+      "query": "((ti:\"industrial defect\" OR ab:\"industrial defect\" OR ti:\"industrial anomaly\" OR ab:\"industrial anomaly\" OR ab:\"surface defect\" OR ab:\"wafer map\") AND (ti:classification OR ab:classification OR ab:\"defect type\" OR ab:\"anomaly type\" OR ab:\"anomaly understanding\" OR ab:\"defect understanding\") AND (ab:\"vision-language\" OR ab:\"large language model\" OR ab:\"visual question answering\" OR ab:MLLM OR ab:CLIP OR ab:VLM)) AND submittedDate:[201501010000 TO 202611111459]",
+      "url": "https://export.arxiv.org/api/query?search_query=%28%28ti%3A%22industrial+defect%22+OR+ab%3A%22industrial+defect%22+OR+ti%3A%22industrial+anomaly%22+OR+ab%3A%22industrial+anomaly%22+OR+ab%3A%22surface+defect%22+OR+ab%3A%22wafer+map%22%29+AND+%28ti%3Aclassification+OR+ab%3Aclassification+OR+ab%3A%22defect+type%22+OR+ab%3A%22anomaly+type%22+OR+ab%3A%22anomaly+understanding%22+OR+ab%3A%22defect+understanding%22%29+AND+%28ab%3A%22vision-language%22+OR+ab%3A%22large+language+model%22+OR+ab%3A%22visual+question+answering%22+OR+ab%3AMLLM+OR+ab%3ACLIP+OR+ab%3AVLM%29%29+AND+submittedDate%3A%5B201501010000+TO+202611111459%5D&start=0&max_results=18&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 18,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 15843,
+      "returned_count": 18,
+      "pages_fetched": 1,
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ07.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 18,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工業欠陥・VLM/MLLM",
+      "candidate_ids": [
+        "ARXC001",
+        "ARXC002",
+        "ARXC003",
+        "ARXC004",
+        "ARXC005",
+        "ARXC006",
+        "ARXC007",
+        "ARXC008",
+        "ARXC009",
+        "ARXC010",
+        "ARXC011",
+        "ARXC012",
+        "ARXC013",
+        "ARXC014",
+        "ARXC015",
+        "ARXC016",
+        "ARXC017",
+        "ARXC034"
+      ],
+      "screened_count": 18,
+      "seed_ids_found": [],
+      "dispositions": {
+        "除外": 18
+      },
+      "applied_cutoff": "API submittedDate（UTC）",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "複合構文の診断用。別分野のab/ABSなどが大量に返り、複合式の解釈未確定。総数は関連母集団の推定に不使用。"
+    },
+    {
+      "search_id": "ARXQ08",
+      "scope": "工具実写・工具摩耗分類",
+      "executed_at": "2026-11-11T00:47:37+00:00",
+      "query": "all:\"tool wear\" AND all:classification",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22tool+wear%22+AND+all%3Aclassification&start=0&max_results=10&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 10,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 8,
+      "returned_count": 8,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ08.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 10,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工具実写・工具摩耗分類",
+      "candidate_ids": [
+        "ARXC035",
+        "ARXC036",
+        "ARXC037",
+        "ARXC038",
+        "ARXC039",
+        "ARXC040",
+        "ARXC041",
+        "ARXC042"
+      ],
+      "screened_count": 8,
+      "seed_ids_found": [],
+      "dispositions": {
+        "除外": 7,
+        "関連候補": 1
+      },
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "単純式。範囲内でも題名・抄録から対象ラベルを別途選別。"
+    },
+    {
+      "search_id": "ARXQ09",
+      "scope": "工具実写・モデル指定なし",
+      "executed_at": "2026-11-11T00:47:41+00:00",
+      "query": "all:\"tool wear\" AND all:\"machine vision\"",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22tool+wear%22+AND+all%3A%22machine+vision%22&start=0&max_results=9&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 9,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 0,
+      "returned_count": 0,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ09.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 9,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工具実写・モデル指定なし",
+      "candidate_ids": [],
+      "screened_count": 0,
+      "seed_ids_found": [],
+      "dispositions": {},
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "単純式。範囲内でも題名・抄録から対象ラベルを別途選別。"
+    },
+    {
+      "search_id": "ARXQ10",
+      "scope": "工具画像＋別モダリティ・モデル指定なし",
+      "executed_at": "2026-11-11T00:47:45+00:00",
+      "query": "all:\"tool wear\" AND all:multimodal",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22tool+wear%22+AND+all%3Amultimodal&start=0&max_results=10&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 10,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 0,
+      "returned_count": 0,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ10.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 10,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工具画像＋別モダリティ・モデル指定なし",
+      "candidate_ids": [],
+      "screened_count": 0,
+      "seed_ids_found": [],
+      "dispositions": {},
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "単純式。範囲内でも題名・抄録から対象ラベルを別途選別。"
+    },
+    {
+      "search_id": "ARXQ11",
+      "scope": "工具画像＋別モダリティ・VLM",
+      "executed_at": "2026-11-11T00:47:48+00:00",
+      "query": "all:\"tool wear\" AND all:\"language model\"",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22tool+wear%22+AND+all%3A%22language+model%22&start=0&max_results=8&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 8,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 0,
+      "returned_count": 0,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ11.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 8,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工具画像＋別モダリティ・VLM",
+      "candidate_ids": [],
+      "screened_count": 0,
+      "seed_ids_found": [],
+      "dispositions": {},
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "単純式。範囲内でも題名・抄録から対象ラベルを別途選別。"
+    },
+    {
+      "search_id": "ARXQ12",
+      "scope": "工業欠陥・モデル指定なし",
+      "executed_at": "2026-11-11T00:47:52+00:00",
+      "query": "all:\"defect classification\"",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22defect+classification%22&start=0&max_results=11&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 11,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 111,
+      "returned_count": 11,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ12.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 11,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工業欠陥・モデル指定なし",
+      "candidate_ids": [
+        "ARXC032",
+        "ARXC043",
+        "ARXC044",
+        "ARXC045",
+        "ARXC046",
+        "ARXC047",
+        "ARXC048",
+        "ARXC049",
+        "ARXC050",
+        "ARXC051",
+        "ARXC052"
+      ],
+      "screened_count": 11,
+      "seed_ids_found": [
+        "IT005",
+        "IV001"
+      ],
+      "dispositions": {
+        "既収録再発見": 2,
+        "除外": 5,
+        "新規有望候補": 1,
+        "関連候補": 3
+      },
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "単純式。範囲内でも題名・抄録から対象ラベルを別途選別。"
+    },
+    {
+      "search_id": "ARXQ13",
+      "scope": "工業欠陥・視覚Transformer",
+      "executed_at": "2026-11-11T00:47:57+00:00",
+      "query": "all:\"defect classification\" AND all:transformer",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22defect+classification%22+AND+all%3Atransformer&start=0&max_results=10&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 10,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 11,
+      "returned_count": 10,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ13.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 10,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工業欠陥・視覚Transformer",
+      "candidate_ids": [
+        "ARXC032",
+        "ARXC046",
+        "ARXC051",
+        "ARXC053",
+        "ARXC054",
+        "ARXC055",
+        "ARXC056",
+        "ARXC057",
+        "ARXC058",
+        "ARXC059"
+      ],
+      "screened_count": 10,
+      "seed_ids_found": [
+        "IT004",
+        "IT005",
+        "IT009"
+      ],
+      "dispositions": {
+        "既収録再発見": 3,
+        "関連候補": 2,
+        "除外": 4,
+        "新規有望候補": 1
+      },
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "単純式。範囲内でも題名・抄録から対象ラベルを別途選別。"
+    },
+    {
+      "search_id": "ARXQ14",
+      "scope": "工業欠陥・VLM/MLLM",
+      "executed_at": "2026-11-11T00:48:01+00:00",
+      "query": "all:\"industrial anomaly\" AND all:\"multimodal\"",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22industrial+anomaly%22+AND+all%3A%22multimodal%22&start=0&max_results=13&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 13,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 54,
+      "returned_count": 13,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ14.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 13,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工業欠陥・VLM/MLLM",
+      "candidate_ids": [
+        "ARXC060",
+        "ARXC061",
+        "ARXC062",
+        "ARXC063",
+        "ARXC064",
+        "ARXC065",
+        "ARXC066",
+        "ARXC067",
+        "ARXC068",
+        "ARXC069",
+        "ARXC070",
+        "ARXC071",
+        "ARXC072"
+      ],
+      "screened_count": 13,
+      "seed_ids_found": [
+        "IM001",
+        "IM007",
+        "IVL2001",
+        "IVL2004"
+      ],
+      "dispositions": {
+        "除外": 5,
+        "保留": 2,
+        "関連候補": 2,
+        "既収録再発見": 4
+      },
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "単純式。範囲内でも題名・抄録から対象ラベルを別途選別。"
+    },
+    {
+      "search_id": "ARXQ15",
+      "scope": "工業欠陥・クラス付きMLLM",
+      "executed_at": "2026-11-11T00:48:05+00:00",
+      "query": "all:\"industrial anomaly\" AND all:\"classification\" AND all:\"language model\"",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22industrial+anomaly%22+AND+all%3A%22classification%22+AND+all%3A%22language+model%22&start=0&max_results=10&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 10,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 3,
+      "returned_count": 3,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ15.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 10,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工業欠陥・クラス付きMLLM",
+      "candidate_ids": [
+        "ARXC073",
+        "ARXC074",
+        "ARXC075"
+      ],
+      "screened_count": 3,
+      "seed_ids_found": [
+        "IM002",
+        "IVL2003"
+      ],
+      "dispositions": {
+        "既収録再発見": 2,
+        "関連候補": 1
+      },
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "単純式。範囲内でも題名・抄録から対象ラベルを別途選別。"
+    },
+    {
+      "search_id": "ARXQ16",
+      "scope": "工具実写・tool condition monitoring同義語",
+      "executed_at": "2026-11-11T00:49:09+00:00",
+      "query": "all:\"tool condition monitoring\" AND all:image",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22tool+condition+monitoring%22+AND+all%3Aimage&start=0&max_results=8&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 8,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 0,
+      "returned_count": 0,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ16.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 8,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工具実写・tool condition monitoring同義語",
+      "candidate_ids": [],
+      "screened_count": 0,
+      "seed_ids_found": [],
+      "dispositions": {},
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "単純式。範囲内でも題名・抄録から対象ラベルを別途選別。"
+    },
+    {
+      "search_id": "ARXQ17",
+      "scope": "工具実写・画像のみを語彙指定",
+      "executed_at": "2026-11-11T00:49:13+00:00",
+      "query": "all:\"tool wear\" AND all:image",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22tool+wear%22+AND+all%3Aimage&start=0&max_results=9&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 9,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 7,
+      "returned_count": 7,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ17.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 9,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工具実写・画像のみを語彙指定",
+      "candidate_ids": [
+        "ARXC036",
+        "ARXC038",
+        "ARXC076",
+        "ARXC077",
+        "ARXC078",
+        "ARXC079",
+        "ARXC080"
+      ],
+      "screened_count": 7,
+      "seed_ids_found": [],
+      "dispositions": {
+        "除外": 4,
+        "関連候補": 2,
+        "既収録関連の再発見": 1
+      },
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "単純式。範囲内でも題名・抄録から対象ラベルを別途選別。"
+    },
+    {
+      "search_id": "ARXQ18",
+      "scope": "工具画像＋別モダリティ・加工の語彙",
+      "executed_at": "2026-11-11T00:49:19+00:00",
+      "query": "all:machining AND all:\"vision-language\"",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3Amachining+AND+all%3A%22vision-language%22&start=0&max_results=6&sortBy=relevance&sortOrder=descending",
+      "start": 0,
+      "max_results": 6,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 476,
+      "returned_count": 6,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ18.xml",
+      "reported_start_index": 0,
+      "reported_items_per_page": 6,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工具画像＋別モダリティ・加工の語彙",
+      "candidate_ids": [
+        "ARXC081",
+        "ARXC082",
+        "ARXC083",
+        "ARXC084",
+        "ARXC085",
+        "ARXC086"
+      ],
+      "screened_count": 6,
+      "seed_ids_found": [],
+      "dispositions": {
+        "除外": 6
+      },
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "加工の同義語を広げたが上位は一般VLM。476件はAPI総数、先頭6件のみ。"
+    },
+    {
+      "search_id": "ARXQ13P2",
+      "scope": "工業欠陥・視覚Transformer第2取得",
+      "executed_at": "2026-11-11T00:49:23+00:00",
+      "query": "all:\"defect classification\" AND all:transformer",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22defect+classification%22+AND+all%3Atransformer&start=10&max_results=1&sortBy=relevance&sortOrder=descending",
+      "start": 10,
+      "max_results": 1,
+      "sort_by": "relevance",
+      "sort_order": "descending",
+      "total_hits": 11,
+      "returned_count": 1,
+      "pages_fetched": 1,
+      "cutoff_filter": "2015–2026-11-11 JSTを取得後に適用",
+      "http_status": 200,
+      "content_type": "application/atom+xml; charset=utf-8",
+      "raw_path": "evidence/raw/database_pilot_arxiv/ARXQ13P2.xml",
+      "reported_start_index": 10,
+      "reported_items_per_page": 1,
+      "status": "成功",
+      "platform": "arXiv",
+      "provider": "arXiv legacy API (official Atom)",
+      "target": "工業欠陥・視覚Transformer第2取得",
+      "candidate_ids": [
+        "ARXC087"
+      ],
+      "screened_count": 1,
+      "seed_ids_found": [],
+      "dispositions": {
+        "関連候補": 1
+      },
+      "applied_cutoff": "取得後に初回公開日のJST基準を確認。totalResultsには反映されない。",
+      "result_scope": "APIの指定ページ。returned_countはAtom entry実数。",
+      "quality": "単純式。範囲内でも題名・抄録から対象ラベルを別途選別。"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "ARXC001",
+      "platform": "arXiv",
+      "scope": "工具摩耗／工業欠陥",
+      "title": "Towards ab initio calculations with the dynamical vertex approximation",
+      "arxiv_id": "1709.02663",
+      "version_url": "https://arxiv.org/abs/1709.02663v1",
+      "url": "https://arxiv.org/abs/1709.02663",
+      "doi": "10.7566/JPSJ.87.041004",
+      "year": 2017,
+      "first_submitted": "2017-09-08T11:53:54Z",
+      "updated": "2017-09-08T11:53:54Z",
+      "authors": [
+        "A. Galler",
+        "J. Kaufmann",
+        "P. Gunacker",
+        "P. Thunström",
+        "J. M. Tomczak",
+        "K. Held"
+      ],
+      "primary_category": "cond-mat.str-el",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ04",
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ04",
+          "rank": 1
+        },
+        {
+          "search_id": "ARXQ05",
+          "rank": 1
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 1
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC002",
+      "platform": "arXiv",
+      "scope": "工具摩耗／工業欠陥",
+      "title": "On the asymptotic density of the ordered pairs $(a,b)$ of positive integers such that $\\gcd(ab,a+b)=\\gcd(a,b)$",
+      "arxiv_id": "2606.20057",
+      "version_url": "https://arxiv.org/abs/2606.20057v3",
+      "url": "https://arxiv.org/abs/2606.20057",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-06-18T10:31:05Z",
+      "updated": "2026-08-25T08:08:36Z",
+      "authors": [
+        "Steve Fan",
+        "László Tóth"
+      ],
+      "primary_category": "math.NT",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ04",
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ04",
+          "rank": 2
+        },
+        {
+          "search_id": "ARXQ05",
+          "rank": 2
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 2
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC003",
+      "platform": "arXiv",
+      "scope": "工具摩耗／工業欠陥",
+      "title": "Relevance of $4f$-$3d$ exchange to finite-temperature magnetism of rare-earth permanent magnets: an ab-initio-based spin model approach for NdFe$_{12}$N",
+      "arxiv_id": "1504.06697",
+      "version_url": "https://arxiv.org/abs/1504.06697v2",
+      "url": "https://arxiv.org/abs/1504.06697",
+      "doi": "10.1063/1.4952989",
+      "year": 2015,
+      "first_submitted": "2015-04-25T07:59:18Z",
+      "updated": "2016-05-18T04:21:53Z",
+      "authors": [
+        "Munehisa Matsumoto",
+        "Hisazumi Akai",
+        "Yosuke Harashima",
+        "Shotaro Doi",
+        "Takashi Miyake"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ04",
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ04",
+          "rank": 3
+        },
+        {
+          "search_id": "ARXQ05",
+          "rank": 3
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 3
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC004",
+      "platform": "arXiv",
+      "scope": "工具摩耗／工業欠陥",
+      "title": "Ab initio informed electronic stopping models for light ion propagation in metals",
+      "arxiv_id": "2603.10838",
+      "version_url": "https://arxiv.org/abs/2603.10838v2",
+      "url": "https://arxiv.org/abs/2603.10838",
+      "doi": "10.1016/j.jnucmat.2026.156906",
+      "year": 2026,
+      "first_submitted": "2026-03-11T14:45:35Z",
+      "updated": "2026-07-29T07:11:39Z",
+      "authors": [
+        "Evgeniia Ponomareva",
+        "Artur Tamm",
+        "Andrea E. Sand"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ04",
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ04",
+          "rank": 4
+        },
+        {
+          "search_id": "ARXQ05",
+          "rank": 4
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 4
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC005",
+      "platform": "arXiv",
+      "scope": "工具摩耗／工業欠陥",
+      "title": "Ab initio electronic conductivity of Fe-bearing post-perovskite",
+      "arxiv_id": "2602.23634",
+      "version_url": "https://arxiv.org/abs/2602.23634v1",
+      "url": "https://arxiv.org/abs/2602.23634",
+      "doi": "10.1103/zm8r-2bww",
+      "year": 2026,
+      "first_submitted": "2026-02-27T03:12:41Z",
+      "updated": "2026-02-27T03:12:41Z",
+      "authors": [
+        "Yihang Peng",
+        "Yupei Zhang",
+        "Shuai Zhang",
+        "Chenxing Luo",
+        "Donghao Zheng",
+        "Nelson Naveas",
+        "Xifan Wu",
+        "Jie Deng"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ04",
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ04",
+          "rank": 5
+        },
+        {
+          "search_id": "ARXQ05",
+          "rank": 5
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 5
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC006",
+      "platform": "arXiv",
+      "scope": "工具摩耗／工業欠陥",
+      "title": "Two-phase protein folding optimization on a three-dimensional AB off-lattice model",
+      "arxiv_id": "1903.01456",
+      "version_url": "https://arxiv.org/abs/1903.01456v2",
+      "url": "https://arxiv.org/abs/1903.01456",
+      "doi": "10.1016/j.swevo.2020.100708",
+      "year": 2019,
+      "first_submitted": "2019-03-04T11:15:53Z",
+      "updated": "2020-06-28T08:37:27Z",
+      "authors": [
+        "Borko Bošković",
+        "Janez Brest"
+      ],
+      "primary_category": "cs.NE",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ04",
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ04",
+          "rank": 6
+        },
+        {
+          "search_id": "ARXQ05",
+          "rank": 6
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 6
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC007",
+      "platform": "arXiv",
+      "scope": "工具摩耗／工業欠陥",
+      "title": "Note: Bridging Information Science: AB Initio Calculation Vortex of 2D Materials of Bismuthene(Bismuth Molecule) Graphene-Shaped through Kohn-Sham Equations",
+      "arxiv_id": "2404.01312",
+      "version_url": "https://arxiv.org/abs/2404.01312v2",
+      "url": "https://arxiv.org/abs/2404.01312",
+      "doi": null,
+      "year": 2024,
+      "first_submitted": "2024-03-10T15:50:03Z",
+      "updated": "2024-04-19T15:54:06Z",
+      "authors": [
+        "Yasuko Kawahata"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ04",
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ04",
+          "rank": 7
+        },
+        {
+          "search_id": "ARXQ05",
+          "rank": 7
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 7
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC008",
+      "platform": "arXiv",
+      "scope": "工具摩耗／工業欠陥",
+      "title": "The mass of Albireo Aa and the nature of Albireo AB: New aspects from Gaia DR2",
+      "arxiv_id": "1811.01665",
+      "version_url": "https://arxiv.org/abs/1811.01665v1",
+      "url": "https://arxiv.org/abs/1811.01665",
+      "doi": "10.1051/0004-6361/201834351",
+      "year": 2018,
+      "first_submitted": "2018-11-05T13:25:23Z",
+      "updated": "2018-11-05T13:25:23Z",
+      "authors": [
+        "U. Bastian",
+        "R. Anton"
+      ],
+      "primary_category": "astro-ph.SR",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ04",
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ04",
+          "rank": 8
+        },
+        {
+          "search_id": "ARXQ05",
+          "rank": 8
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 8
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC009",
+      "platform": "arXiv",
+      "scope": "工具摩耗／工業欠陥",
+      "title": "On the Characteristic polynomial of ABS Matrix and ABS-Energy of Some Graphs",
+      "arxiv_id": "2509.02155",
+      "version_url": "https://arxiv.org/abs/2509.02155v1",
+      "url": "https://arxiv.org/abs/2509.02155",
+      "doi": null,
+      "year": 2025,
+      "first_submitted": "2025-09-02T10:03:33Z",
+      "updated": "2025-09-02T10:03:33Z",
+      "authors": [
+        "Sharad Barde",
+        "Ganesh Mundhe",
+        "Mayur Kshirsagar",
+        "A. N. Bhavale"
+      ],
+      "primary_category": "math.CO",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ04",
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ04",
+          "rank": 9
+        },
+        {
+          "search_id": "ARXQ05",
+          "rank": 9
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 9
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC010",
+      "platform": "arXiv",
+      "scope": "工具摩耗／工業欠陥",
+      "title": "Stellar origin of 15N-rich presolar SiC grains of type AB: supernovae with explosive hydrogen burning",
+      "arxiv_id": "1705.08222",
+      "version_url": "https://arxiv.org/abs/1705.08222v1",
+      "url": "https://arxiv.org/abs/1705.08222",
+      "doi": "10.3847/2041-8213/aa74e5",
+      "year": 2017,
+      "first_submitted": "2017-05-23T12:58:43Z",
+      "updated": "2017-05-23T12:58:43Z",
+      "authors": [
+        "Nan Liu",
+        "Larry R. Nittler",
+        "Marco Pignatari",
+        "Conel M. O'D. Alexander",
+        "Jianhua Wang"
+      ],
+      "primary_category": "astro-ph.SR",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ04",
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ04",
+          "rank": 10
+        },
+        {
+          "search_id": "ARXQ05",
+          "rank": 10
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 10
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC011",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Extending the ab-index",
+      "arxiv_id": "2510.00951",
+      "version_url": "https://arxiv.org/abs/2510.00951v1",
+      "url": "https://arxiv.org/abs/2510.00951",
+      "doi": null,
+      "year": 2025,
+      "first_submitted": "2025-10-01T14:26:59Z",
+      "updated": "2025-10-01T14:26:59Z",
+      "authors": [
+        "Elena Hoster",
+        "Christian Stump",
+        "Lorenzo Vecchi"
+      ],
+      "primary_category": "math.CO",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ05",
+          "rank": 11
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 11
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC012",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Ab initio functional-independent calculations of the clamped Pockels tensor of tetragonal barium titanate",
+      "arxiv_id": "2506.13209",
+      "version_url": "https://arxiv.org/abs/2506.13209v1",
+      "url": "https://arxiv.org/abs/2506.13209",
+      "doi": "10.1103/PhysRevB.111.184306",
+      "year": 2025,
+      "first_submitted": "2025-06-16T08:12:20Z",
+      "updated": "2025-06-16T08:12:20Z",
+      "authors": [
+        "Virginie de Mestral",
+        "Lorenzo Bastonero",
+        "Michele Kotiuga",
+        "Marko Mladenovic",
+        "Nicola Marzari",
+        "Mathieu Luisier"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ05",
+          "rank": 12
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 12
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC013",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "On the equation $ab(ab-1)-na=Δ^2$",
+      "arxiv_id": "2001.00475",
+      "version_url": "https://arxiv.org/abs/2001.00475v1",
+      "url": "https://arxiv.org/abs/2001.00475",
+      "doi": null,
+      "year": 2019,
+      "first_submitted": "2019-12-29T15:24:43Z",
+      "updated": "2019-12-29T15:24:43Z",
+      "authors": [
+        "Sadegh Nazardonyavi"
+      ],
+      "primary_category": "math.NT",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ05",
+          "rank": 13
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 13
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC014",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "On the $\\mathcal{ABS}$ spectrum and energy of graphs",
+      "arxiv_id": "2409.03287",
+      "version_url": "https://arxiv.org/abs/2409.03287v1",
+      "url": "https://arxiv.org/abs/2409.03287",
+      "doi": null,
+      "year": 2024,
+      "first_submitted": "2024-09-05T06:50:52Z",
+      "updated": "2024-09-05T06:50:52Z",
+      "authors": [
+        "Swathi Shetty",
+        "B. R. Rakshith",
+        "Sayinath Udupa N."
+      ],
+      "primary_category": "math.CO",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ05",
+          "rank": 14
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 14
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC015",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Transitivity of implicative aBE algebras",
+      "arxiv_id": "2306.12427",
+      "version_url": "https://arxiv.org/abs/2306.12427v1",
+      "url": "https://arxiv.org/abs/2306.12427",
+      "doi": "10.17951/a.2022.76.2.55-58",
+      "year": 2023,
+      "first_submitted": "2023-03-22T14:52:35Z",
+      "updated": "2023-03-22T14:52:35Z",
+      "authors": [
+        "Denis Zelent"
+      ],
+      "primary_category": "math.RA",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ05",
+          "rank": 15
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 15
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC016",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "A counterexample to the localization problem for AB rings",
+      "arxiv_id": "2609.00754",
+      "version_url": "https://arxiv.org/abs/2609.00754v1",
+      "url": "https://arxiv.org/abs/2609.00754",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-09-01T05:36:45Z",
+      "updated": "2026-09-01T05:36:45Z",
+      "authors": [
+        "Justin Lyle",
+        "Saeed Nasseh"
+      ],
+      "primary_category": "math.AC",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ05",
+          "rank": 16
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 16
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC017",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "What is ab initio?",
+      "arxiv_id": "2307.06416",
+      "version_url": "https://arxiv.org/abs/2307.06416v2",
+      "url": "https://arxiv.org/abs/2307.06416",
+      "doi": "10.1007/s00601-023-01857-2",
+      "year": 2023,
+      "first_submitted": "2023-07-12T19:13:55Z",
+      "updated": "2023-10-25T23:00:15Z",
+      "authors": [
+        "R. Machleidt"
+      ],
+      "primary_category": "nucl-th",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ05",
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ05",
+          "rank": 17
+        },
+        {
+          "search_id": "ARXQ07",
+          "rank": 17
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC018",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "ABS+ Polar Codes: Exploiting More Linear Transforms on Adjacent Bits",
+      "arxiv_id": "2209.02461",
+      "version_url": "https://arxiv.org/abs/2209.02461v2",
+      "url": "https://arxiv.org/abs/2209.02461",
+      "doi": "10.1109/TIT.2023.3331522",
+      "year": 2022,
+      "first_submitted": "2022-09-06T13:01:02Z",
+      "updated": "2023-11-10T05:22:31Z",
+      "authors": [
+        "Guodong Li",
+        "Min Ye",
+        "Sihuang Hu"
+      ],
+      "primary_category": "cs.IT",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 1
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC019",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "On decomposition of the ABS lattice equations and related Bäcklund transformations",
+      "arxiv_id": "1705.00843",
+      "version_url": "https://arxiv.org/abs/1705.00843v1",
+      "url": "https://arxiv.org/abs/1705.00843",
+      "doi": null,
+      "year": 2017,
+      "first_submitted": "2017-05-02T08:04:22Z",
+      "updated": "2017-05-02T08:04:22Z",
+      "authors": [
+        "Danda Zhang",
+        "Da-jun Zhang"
+      ],
+      "primary_category": "nlin.SI",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 2
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC020",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "From auto-Bäcklund transformations to auto-Bäcklund transformations, and torqued ABS equations",
+      "arxiv_id": "2102.11668",
+      "version_url": "https://arxiv.org/abs/2102.11668v2",
+      "url": "https://arxiv.org/abs/2102.11668",
+      "doi": null,
+      "year": 2021,
+      "first_submitted": "2021-02-23T12:50:01Z",
+      "updated": "2021-09-08T02:22:05Z",
+      "authors": [
+        "Dan-da Zhang",
+        "Da-jun Zhang",
+        "Peter H. van der Kamp"
+      ],
+      "primary_category": "nlin.SI",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 3
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC021",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "AB-Attention: Accurate Block Attention for Accelerating Video Diffusion Transformers",
+      "arxiv_id": "2610.39663",
+      "version_url": "https://arxiv.org/abs/2610.39663v1",
+      "url": "https://arxiv.org/abs/2610.39663",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-10-29T09:15:39Z",
+      "updated": "2026-10-29T09:15:39Z",
+      "authors": [
+        "Bin Xu",
+        "Mo Zhang",
+        "Zhengfeiyang Zhang",
+        "Xinfeng Yang",
+        "Yixing Ma",
+        "Wei Wang",
+        "HeXin Wang",
+        "Pengfei Zhou",
+        "Wangbo Zhao"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 4
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC022",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Exact $P_s T_d$ Invariant and $P_s T_d$ Symmetric Breaking solutions, Symmetry Reductions and Bäcklund Transformations For An AB-KdV System",
+      "arxiv_id": "1612.00546",
+      "version_url": "https://arxiv.org/abs/1612.00546v2",
+      "url": "https://arxiv.org/abs/1612.00546",
+      "doi": "10.1016/j.physleta.2018.02.036",
+      "year": 2016,
+      "first_submitted": "2016-12-02T02:30:42Z",
+      "updated": "2022-02-22T12:03:06Z",
+      "authors": [
+        "M Jia",
+        "S Y Lou"
+      ],
+      "primary_category": "nlin.SI",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 5
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC023",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Efficient Ab-Initio Molecular Dynamic Simulations by Offloading Fast Fourier Transformations to FPGAs",
+      "arxiv_id": "2006.08435",
+      "version_url": "https://arxiv.org/abs/2006.08435v1",
+      "url": "https://arxiv.org/abs/2006.08435",
+      "doi": "10.1109/FPL50879.2020.00065",
+      "year": 2020,
+      "first_submitted": "2020-06-15T14:32:56Z",
+      "updated": "2020-06-15T14:32:56Z",
+      "authors": [
+        "Arjun Ramaswami",
+        "Tobias Kenter",
+        "Thomas D. Kühne",
+        "Christian Plessl"
+      ],
+      "primary_category": "cs.DC",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 6
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC024",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "AB-UPT: Scaling Neural CFD Surrogates for High-Fidelity Automotive Aerodynamics Simulations via Anchored-Branched Universal Physics Transformers",
+      "arxiv_id": "2502.09692",
+      "version_url": "https://arxiv.org/abs/2502.09692v4",
+      "url": "https://arxiv.org/abs/2502.09692",
+      "doi": null,
+      "year": 2025,
+      "first_submitted": "2025-02-13T17:58:07Z",
+      "updated": "2025-10-13T08:45:57Z",
+      "authors": [
+        "Benedikt Alkin",
+        "Maurits Bleeker",
+        "Richard Kurle",
+        "Tobias Kronlachner",
+        "Reinhard Sonnleitner",
+        "Matthias Dorfer",
+        "Johannes Brandstetter"
+      ],
+      "primary_category": "cs.LG",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 7
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC025",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Towards the ab initio based theory of the phase transformations in iron and steel",
+      "arxiv_id": "1707.04287",
+      "version_url": "https://arxiv.org/abs/1707.04287v1",
+      "url": "https://arxiv.org/abs/1707.04287",
+      "doi": "10.1134/S0031918X16130032",
+      "year": 2017,
+      "first_submitted": "2017-07-13T19:38:23Z",
+      "updated": "2017-07-13T19:38:23Z",
+      "authors": [
+        "I. K. Razumov",
+        "Yu. N. Gornostyrev",
+        "M. I. Katsnelson"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 8
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC026",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Facile ab initio approach for self-localized polarons from canonical transformations",
+      "arxiv_id": "2011.03620",
+      "version_url": "https://arxiv.org/abs/2011.03620v1",
+      "url": "https://arxiv.org/abs/2011.03620",
+      "doi": "10.1103/PhysRevMaterials.5.063805",
+      "year": 2020,
+      "first_submitted": "2020-11-06T22:33:43Z",
+      "updated": "2020-11-06T22:33:43Z",
+      "authors": [
+        "Nien-En Lee",
+        "Hsiao-Yi Chen",
+        "Jin-Jian Zhou",
+        "Marco Bernardi"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 9
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC027",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "NNQS-Transformer: an Efficient and Scalable Neural Network Quantum States Approach for Ab initio Quantum Chemistry",
+      "arxiv_id": "2306.16705",
+      "version_url": "https://arxiv.org/abs/2306.16705v3",
+      "url": "https://arxiv.org/abs/2306.16705",
+      "doi": null,
+      "year": 2023,
+      "first_submitted": "2023-06-29T06:04:43Z",
+      "updated": "2023-11-01T16:01:20Z",
+      "authors": [
+        "Yangjun Wu",
+        "Chu Guo",
+        "Yi Fan",
+        "Pengyu Zhou",
+        "Honghui Shang"
+      ],
+      "primary_category": "quant-ph",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 10
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC028",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Ab-initio Theory of Fourier-transformed Quasiparticle Interference Maps and Application to the Topological Insulator Bi$_2$Te$_3$",
+      "arxiv_id": "2001.06189",
+      "version_url": "https://arxiv.org/abs/2001.06189v1",
+      "url": "https://arxiv.org/abs/2001.06189",
+      "doi": "10.1002/pssb.202000031",
+      "year": 2020,
+      "first_submitted": "2020-01-17T08:33:43Z",
+      "updated": "2020-01-17T08:33:43Z",
+      "authors": [
+        "Philipp Rüßmann",
+        "Phivos Mavropoulos",
+        "Stefan Blügel"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 11
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC029",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Comparison of the canonical transformation and energy functional formalisms for ab initio calculations of self-localized polarons",
+      "arxiv_id": "2203.00794",
+      "version_url": "https://arxiv.org/abs/2203.00794v1",
+      "url": "https://arxiv.org/abs/2203.00794",
+      "doi": "10.1103/PhysRevB.105.155132",
+      "year": 2022,
+      "first_submitted": "2022-03-01T23:44:08Z",
+      "updated": "2022-03-01T23:44:08Z",
+      "authors": [
+        "Yao Luo",
+        "Benjamin K. Chang",
+        "Marco Bernardi"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 12
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC030",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Anchored-Branched Steady-state WInd Flow Transformer (AB-SWIFT): a metamodel for 3D atmospheric flow in urban environments",
+      "arxiv_id": "2603.25635",
+      "version_url": "https://arxiv.org/abs/2603.25635v1",
+      "url": "https://arxiv.org/abs/2603.25635",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-03-26T16:46:54Z",
+      "updated": "2026-03-26T16:46:54Z",
+      "authors": [
+        "Armand de Villeroché",
+        "Rem-Sophia Mouradi",
+        "Vincent Le Guen",
+        "Sibo Cheng",
+        "Marc Bocquet",
+        "Alban Farchi",
+        "Patrick Armand",
+        "Patrick Massin"
+      ],
+      "primary_category": "cs.LG",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 13
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC031",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Determination of the vibrational contribution to the entropy change at the martensitic transformation in Ni-Mn-Sn metamagnetic shape memory alloys: A combined approach of time-of-flight neutron spectroscopy and ab-initio calculations",
+      "arxiv_id": "1506.04100",
+      "version_url": "https://arxiv.org/abs/1506.04100v2",
+      "url": "https://arxiv.org/abs/1506.04100",
+      "doi": "10.1088/0953-8984/28/20/205402",
+      "year": 2015,
+      "first_submitted": "2015-06-12T18:25:29Z",
+      "updated": "2016-04-27T21:38:49Z",
+      "authors": [
+        "Vicente Recarte",
+        "Mohamed Zbiri",
+        "Monica Jiménez-Ruiz",
+        "Vicente Sánchez-Alarcos",
+        "Iñaki Pérez-Landazábal"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 14
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC032",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Semiconductor Wafer Map Defect Classification with Tiny Vision Transformers",
+      "arxiv_id": "2504.02494",
+      "version_url": "https://arxiv.org/abs/2504.02494v1",
+      "url": "https://arxiv.org/abs/2504.02494",
+      "doi": null,
+      "year": 2025,
+      "first_submitted": "2025-04-03T11:18:00Z",
+      "updated": "2025-04-03T11:18:00Z",
+      "authors": [
+        "Faisal Mohammad",
+        "Duksan Ryu"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "既収録再発見",
+      "reason": "arXiv ID・DOIまたは正規化題名を既存比較表と照合。既存の採否を引き継ぐ。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06",
+        "ARXQ12",
+        "ARXQ13"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 15
+        },
+        {
+          "search_id": "ARXQ12",
+          "rank": 1
+        },
+        {
+          "search_id": "ARXQ13",
+          "rank": 1
+        }
+      ],
+      "existing_record_ids": [
+        "IT005"
+      ],
+      "existing_match_details": [
+        {
+          "id": "IT005",
+          "collection": "records",
+          "status": "採用",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": [
+        "IT005"
+      ]
+    },
+    {
+      "candidate_id": "ARXC033",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Constraints on BMS Transformations via Energy Conditions and implications on black hole geometry",
+      "arxiv_id": "2603.06323",
+      "version_url": "https://arxiv.org/abs/2603.06323v1",
+      "url": "https://arxiv.org/abs/2603.06323",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-03-06T14:25:51Z",
+      "updated": "2026-03-06T14:25:51Z",
+      "authors": [
+        "Nihar Ranjan Ghosh",
+        "Malay K. Nandy"
+      ],
+      "primary_category": "gr-qc",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ06"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ06",
+          "rank": 16
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC034",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "The Poincaré-extended ab-index",
+      "arxiv_id": "2301.05904",
+      "version_url": "https://arxiv.org/abs/2301.05904v5",
+      "url": "https://arxiv.org/abs/2301.05904",
+      "doi": null,
+      "year": 2023,
+      "first_submitted": "2023-01-14T12:13:16Z",
+      "updated": "2024-12-09T18:00:56Z",
+      "authors": [
+        "Galen Dorpalen-Barry",
+        "Joshua Maglione",
+        "Christian Stump"
+      ],
+      "primary_category": "math.CO",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複合式の診断返却に混入した別分野の文献。工具摩耗・工業欠陥分類の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ07"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ07",
+          "rank": 18
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC035",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Explainable AI for tool wear prediction in turning",
+      "arxiv_id": "2308.08765",
+      "version_url": "https://arxiv.org/abs/2308.08765v1",
+      "url": "https://arxiv.org/abs/2308.08765",
+      "doi": null,
+      "year": 2023,
+      "first_submitted": "2023-08-17T03:36:13Z",
+      "updated": "2023-08-17T03:36:13Z",
+      "authors": [
+        "Saleh Valizadeh Sotubadi",
+        "Rui Liu",
+        "Vinh Neguyen"
+      ],
+      "primary_category": "cs.LG",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "加速度・音響・温度・回転数を用いる二値分類。実工具画像と種類分類の両条件を満たさない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ08"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ08",
+          "rank": 1
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC036",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Workpiece Image-based Tool Wear Classification in Blanking Processes Using Deep Convolutional Neural Networks",
+      "arxiv_id": "2107.12034",
+      "version_url": "https://arxiv.org/abs/2107.12034v1",
+      "url": "https://arxiv.org/abs/2107.12034",
+      "doi": "10.1007/s11740-022-01113-2",
+      "year": 2021,
+      "first_submitted": "2021-07-26T08:49:08Z",
+      "updated": "2021-07-26T08:49:08Z",
+      "authors": [
+        "Dirk Alexander Molitor",
+        "Christian Kubik",
+        "Ruben Helmut Hetfleisch",
+        "Peter Groche"
+      ],
+      "primary_category": "cs.LG",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "打抜き後のワーク画像を使用し、工具刃先半径の程度を分類。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ08",
+        "ARXQ17"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ08",
+          "rank": 2
+        },
+        {
+          "search_id": "ARXQ17",
+          "rank": 3
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [
+        {
+          "id": "RWU072",
+          "collection": "candidates",
+          "status": "除外",
+          "match_basis": [
+            "doi",
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC037",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Combining shape and contour features to improve tool wear monitoring in milling processes",
+      "arxiv_id": "2402.05978",
+      "version_url": "https://arxiv.org/abs/2402.05978v1",
+      "url": "https://arxiv.org/abs/2402.05978",
+      "doi": null,
+      "year": 2024,
+      "first_submitted": "2024-02-07T22:27:16Z",
+      "updated": "2024-02-07T22:27:16Z",
+      "authors": [
+        "M. T. García-Ordás",
+        "E. Alegre-Gutiérrez",
+        "V. González-Castro",
+        "R. Alaiz-Rodríguez"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "実インサート画像を使うが出力は high／medium／low の程度。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ08"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ08",
+          "rank": 3
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC038",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Evaluation of Data Augmentation and Loss Functions in Semantic Image Segmentation for Drilling Tool Wear Detection",
+      "arxiv_id": "2302.05262",
+      "version_url": "https://arxiv.org/abs/2302.05262v2",
+      "url": "https://arxiv.org/abs/2302.05262",
+      "doi": "10.1007/s10845-023-02313-y",
+      "year": 2023,
+      "first_submitted": "2023-02-10T14:21:41Z",
+      "updated": "2024-02-09T13:40:22Z",
+      "authors": [
+        "Elke Schlager",
+        "Andreas Windisch",
+        "Lukas Hanna",
+        "Thomas Klünsner",
+        "Elias Jan Hagendorfer",
+        "Tamara Teppernegg"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "関連候補",
+      "reason": "顕微鏡インサート画像のU-Net画素セグメンテーション。摩耗領域を2種に区分するが、画像単位の種類分類成績は未確認。DOI 10.1007/s10845-023-02313-y。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ08",
+        "ARXQ17"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ08",
+          "rank": 4
+        },
+        {
+          "search_id": "ARXQ17",
+          "rank": 4
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC039",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Artificial Intelligence based tool wear and defect prediction for special purpose milling machinery using low-cost acceleration sensor retrofits",
+      "arxiv_id": "2202.03068",
+      "version_url": "https://arxiv.org/abs/2202.03068v1",
+      "url": "https://arxiv.org/abs/2202.03068",
+      "doi": null,
+      "year": 2022,
+      "first_submitted": "2022-02-07T11:02:48Z",
+      "updated": "2022-02-07T11:02:48Z",
+      "authors": [
+        "Mahmoud Kheir-Eddine",
+        "Michael Banf",
+        "Gregor Steinhagen"
+      ],
+      "primary_category": "cs.LG",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "特殊フライス機の加速度を入力。工具実写の推論入力は確認できない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ08"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ08",
+          "rank": 5
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC040",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Making informed decisions in cutting tool maintenance in milling: A KNN-based model agnostic approach",
+      "arxiv_id": "2310.14629",
+      "version_url": "https://arxiv.org/abs/2310.14629v3",
+      "url": "https://arxiv.org/abs/2310.14629",
+      "doi": "10.17531/ein/217438",
+      "year": 2023,
+      "first_submitted": "2023-10-23T07:02:30Z",
+      "updated": "2026-03-03T03:14:12Z",
+      "authors": [
+        "Revati M. Wahul",
+        "Aditya M. Rahalkar",
+        "Om M. Khare",
+        "Abhishek D. Patange",
+        "Rohan N. Soman"
+      ],
+      "primary_category": "cs.LG",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "切削力時系列の統計特徴をKNN分類。工具実写を入力しない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ08"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ08",
+          "rank": 6
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC041",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Cross-Domain Joint-Embedding Pretraining For Heterogeneous Industrial Time Series",
+      "arxiv_id": "2611.02489",
+      "version_url": "https://arxiv.org/abs/2611.02489v1",
+      "url": "https://arxiv.org/abs/2611.02489",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-11-02T04:05:47Z",
+      "updated": "2026-11-02T04:05:47Z",
+      "authors": [
+        "Jonathan Adam Rico",
+        "Nagarajan Raghavan",
+        "Senthilnath Jayavelu"
+      ],
+      "primary_category": "cs.LG",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "複数工業ドメインの時系列自己教師学習。工具実写・種類分類の直接実験が確認できない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ08"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ08",
+          "rank": 7
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC042",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Adaptive Unknown Fault Detection and Few-Shot Continual Learning for Condition Monitoring in Ultrasonic Metal Welding",
+      "arxiv_id": "2604.13465",
+      "version_url": "https://arxiv.org/abs/2604.13465v1",
+      "url": "https://arxiv.org/abs/2604.13465",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-04-15T04:37:11Z",
+      "updated": "2026-04-15T04:37:11Z",
+      "authors": [
+        "Ahmadreza Eslaminia",
+        "Kuan-Chieh Lu",
+        "Klara Nahrstedt",
+        "Chenhui Shao"
+      ],
+      "primary_category": "cs.LG",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "超音波金属溶接の工程故障を扱う。工具実写画像による摩耗種類分類は確認できない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ08"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ08",
+          "rank": 8
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC043",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Feasibility of Genetic Algorithm for Textile Defect Classification Using Neural Network",
+      "arxiv_id": "1208.6025",
+      "version_url": "https://arxiv.org/abs/1208.6025v1",
+      "url": "https://arxiv.org/abs/1208.6025",
+      "doi": null,
+      "year": 2012,
+      "first_submitted": "2012-08-11T21:45:46Z",
+      "updated": "2012-08-11T21:45:46Z",
+      "authors": [
+        "Md. Tarek Habib",
+        "Rahat Hossain Faisal",
+        "M. Rokonuzzaman"
+      ],
+      "primary_category": "cs.NE",
+      "in_period": false,
+      "decision": "除外",
+      "reason": "対象期間より前の繊維検査。遺伝的アルゴリズム／ニューラルネットの研究。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ12"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ12",
+          "rank": 2
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC044",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Progressive Alignment with VLM-LLM Feature to Augment Defect Classification for the ASE Dataset",
+      "arxiv_id": "2404.05183",
+      "version_url": "https://arxiv.org/abs/2404.05183v1",
+      "url": "https://arxiv.org/abs/2404.05183",
+      "doi": null,
+      "year": 2024,
+      "first_submitted": "2024-04-08T04:17:27Z",
+      "updated": "2024-04-08T04:17:27Z",
+      "authors": [
+        "Chih-Chung Hsu",
+        "Chia-Ming Lee",
+        "Chun-Hung Sun",
+        "Kuang-Ming Wu"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "新規有望候補",
+      "reason": "ASEの工業欠陥画像をVLM・LLMで拡張し、progressive feature alignmentとcross-modality attention fusionで欠陥を分類。原語ラベル・分割・分類指標の本文確認へ。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ12"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ12",
+          "rank": 3
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC045",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Sewer-ML: A Multi-Label Sewer Defect Classification Dataset and Benchmark",
+      "arxiv_id": "2103.10895",
+      "version_url": "https://arxiv.org/abs/2103.10895v1",
+      "url": "https://arxiv.org/abs/2103.10895",
+      "doi": null,
+      "year": 2021,
+      "first_submitted": "2021-03-19T16:32:37Z",
+      "updated": "2021-03-19T16:32:37Z",
+      "authors": [
+        "Joakim Bruslund Haurum",
+        "Thomas B. Moeslund"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "下水管インフラの欠陥分類。工業製品・材料・部品の対象外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ12"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ12",
+          "rank": 4
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC046",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Context-Aware Deep Learning for Defect Classification in Atomic-Resolution STEM",
+      "arxiv_id": "2606.09419",
+      "version_url": "https://arxiv.org/abs/2606.09419v1",
+      "url": "https://arxiv.org/abs/2606.09419",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-06-08T12:36:09Z",
+      "updated": "2026-06-08T12:36:09Z",
+      "authors": [
+        "Jiadong Dan",
+        "Cheng Zhang",
+        "Leyi Loh",
+        "Ivan Verzhbitskiy",
+        "Yuan Chen",
+        "Goki Eda",
+        "Michel Bosman",
+        "N. Duane Loh"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "in_period": true,
+      "decision": "関連候補",
+      "reason": "原子分解能STEM像と撮像・組成メタデータによる欠陥種類分類。模擬パッチ主体で実験画像比較もある。主モデル系統と製品検査としての適合は要確認。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ12",
+        "ARXQ13"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ12",
+          "rank": 5
+        },
+        {
+          "search_id": "ARXQ13",
+          "rank": 4
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC047",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "MVREC: A General Few-shot Defect Classification Model Using Multi-View Region-Context",
+      "arxiv_id": "2412.16897",
+      "version_url": "https://arxiv.org/abs/2412.16897v2",
+      "url": "https://arxiv.org/abs/2412.16897",
+      "doi": null,
+      "year": 2024,
+      "first_submitted": "2024-12-22T07:14:45Z",
+      "updated": "2025-03-30T09:19:53Z",
+      "authors": [
+        "Shuai Lyu",
+        "Rongchen Zhang",
+        "Zeqi Ma",
+        "Fangjian Liao",
+        "Dongmei Mo",
+        "Waikeung Wong"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "既収録再発見",
+      "reason": "arXiv ID・DOIまたは正規化題名を既存比較表と照合。既存の採否を引き継ぐ。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ12"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ12",
+          "rank": 6
+        }
+      ],
+      "existing_record_ids": [
+        "IV001"
+      ],
+      "existing_match_details": [
+        {
+          "id": "IV001",
+          "collection": "records",
+          "status": "主採用",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        },
+        {
+          "id": "KRV021",
+          "collection": "candidates",
+          "status": "既収録",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": [
+        "IV001"
+      ]
+    },
+    {
+      "candidate_id": "ARXC048",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "A Continual Learning Framework for Adaptive Defect Classification and Inspection",
+      "arxiv_id": "2203.08796",
+      "version_url": "https://arxiv.org/abs/2203.08796v1",
+      "url": "https://arxiv.org/abs/2203.08796",
+      "doi": "10.1080/00224065.2023.2224974",
+      "year": 2022,
+      "first_submitted": "2022-03-16T17:57:41Z",
+      "updated": "2022-03-16T17:57:41Z",
+      "authors": [
+        "Wenbo Sun",
+        "Raed Al Kontar",
+        "Judy Jin",
+        "Tzyy-Shuh Chang"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "関連候補",
+      "reason": "継続学習の画像分類は模擬評価、実証は3D点群表面欠陥検出。対象のモデル系統と実画像での種類分類を本文で要確認。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ12"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ12",
+          "rank": 7
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC049",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Enhancing Apple's Defect Classification: Insights from Visible Spectrum and Narrow Spectral Band Imaging",
+      "arxiv_id": "2410.19784",
+      "version_url": "https://arxiv.org/abs/2410.19784v1",
+      "url": "https://arxiv.org/abs/2410.19784",
+      "doi": "10.1109/ICPRS62101.2024.10677803",
+      "year": 2024,
+      "first_submitted": "2024-10-14T21:37:26Z",
+      "updated": "2024-10-14T21:37:26Z",
+      "authors": [
+        "Omar Coello",
+        "Moisés Coronel",
+        "Darío Carpio",
+        "Boris Vintimilla",
+        "Luis Chuquimarca"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "リンゴ外観の欠陥分類。主手法はCNNで、対象のモデル系列外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ12"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ12",
+          "rank": 8
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC050",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "NL-MambaXCT: Self-Supervised Nested-Learning Mamba for Nomex Honeycomb X-ray CT Defect Classification",
+      "arxiv_id": "2605.27454",
+      "version_url": "https://arxiv.org/abs/2605.27454v2",
+      "url": "https://arxiv.org/abs/2605.27454",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-05-25T15:39:11Z",
+      "updated": "2026-06-02T13:43:33Z",
+      "authors": [
+        "Ghaleb Aldoboni",
+        "Lobna Nassar",
+        "Fakhri Karray",
+        "Reem Alshamsi"
+      ],
+      "primary_category": "eess.IV",
+      "in_period": true,
+      "decision": "関連候補",
+      "reason": "航空宇宙向けNomexハニカムの実生産X線CTで欠陥分類。提案モデルはRegNet＋Mamba。ViT／VLM／MLLMの主比較外。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ12"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ12",
+          "rank": 9
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC051",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Dual-Stream Attention Transformers for Sewer Defect Classification",
+      "arxiv_id": "2311.16145",
+      "version_url": "https://arxiv.org/abs/2311.16145v1",
+      "url": "https://arxiv.org/abs/2311.16145",
+      "doi": null,
+      "year": 2023,
+      "first_submitted": "2023-11-07T02:31:51Z",
+      "updated": "2023-11-07T02:31:51Z",
+      "authors": [
+        "Abdullah Al Redwan Newaz",
+        "Mahdi Abdeldguerfi",
+        "Kendall N. Niles",
+        "Joe Tom"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "下水管インフラの欠陥分類。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ12",
+        "ARXQ13"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ12",
+          "rank": 10
+        },
+        {
+          "search_id": "ARXQ13",
+          "rank": 2
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC052",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Towards Trustworthy Multi-label Sewer Defect Classification via Evidential Deep Learning",
+      "arxiv_id": "2210.13782",
+      "version_url": "https://arxiv.org/abs/2210.13782v1",
+      "url": "https://arxiv.org/abs/2210.13782",
+      "doi": null,
+      "year": 2022,
+      "first_submitted": "2022-10-25T06:02:22Z",
+      "updated": "2022-10-25T06:02:22Z",
+      "authors": [
+        "Chenyang Zhao",
+        "Chuanfei Hu",
+        "Hang Shao",
+        "Zhe Wang",
+        "Yongxiong Wang"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "下水管インフラの欠陥分類。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ12"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ12",
+          "rank": 11
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC053",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Semiconductor SEM Image Defect Classification Using Supervised and Semi-Supervised Learning with Vision Transformers",
+      "arxiv_id": "2506.03345",
+      "version_url": "https://arxiv.org/abs/2506.03345v1",
+      "url": "https://arxiv.org/abs/2506.03345",
+      "doi": "10.1109/ASMC64512.2025.11010396",
+      "year": 2025,
+      "first_submitted": "2025-06-03T19:34:54Z",
+      "updated": "2025-06-03T19:34:54Z",
+      "authors": [
+        "Chien-Fu",
+        "Huang",
+        "Katherine Sieg",
+        "Leonid Karlinksy",
+        "Nash Flores",
+        "Rebekah Sheraw",
+        "Xin Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "既収録再発見",
+      "reason": "arXiv ID・DOIまたは正規化題名を既存比較表と照合。既存の採否を引き継ぐ。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ13"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ13",
+          "rank": 3
+        }
+      ],
+      "existing_record_ids": [
+        "IT004"
+      ],
+      "existing_match_details": [
+        {
+          "id": "IT004",
+          "collection": "records",
+          "status": "採用（欠陥種類ID匿名・語彙対応未確認）",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": [
+        "IT004"
+      ]
+    },
+    {
+      "candidate_id": "ARXC054",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "A Generative Approach for Improving Multi-Label Defect Classification in Photovoltaic Modules",
+      "arxiv_id": "2608.12725",
+      "version_url": "https://arxiv.org/abs/2608.12725v1",
+      "url": "https://arxiv.org/abs/2608.12725",
+      "doi": "10.1016/j.solener.2026.114943",
+      "year": 2026,
+      "first_submitted": "2026-08-13T02:12:57Z",
+      "updated": "2026-08-13T02:12:57Z",
+      "authors": [
+        "Abdul Mueez",
+        "Yogesh S. Rawat",
+        "Shruti Vyas"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "既収録再発見",
+      "reason": "arXiv ID・DOIまたは正規化題名を既存比較表と照合。既存の採否を引き継ぐ。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ13"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ13",
+          "rank": 5
+        }
+      ],
+      "existing_record_ids": [
+        "IT009"
+      ],
+      "existing_match_details": [
+        {
+          "id": "IT009",
+          "collection": "records",
+          "status": "採用",
+          "match_basis": [
+            "arxiv_id",
+            "doi",
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": [
+        "IT009"
+      ]
+    },
+    {
+      "candidate_id": "ARXC055",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Vision Transformer-Based Multi-Level Feature Fusion for Multi-Label Sewer Defect Classification",
+      "arxiv_id": "2609.11375",
+      "version_url": "https://arxiv.org/abs/2609.11375v1",
+      "url": "https://arxiv.org/abs/2609.11375",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-09-10T11:11:03Z",
+      "updated": "2026-09-10T11:11:03Z",
+      "authors": [
+        "Xu Fang",
+        "Zhuoran Wang",
+        "Qing Li",
+        "Shengyu Zhang",
+        "Guanzhi Deng",
+        "Jianbiao He",
+        "Qingquan Li"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "下水管インフラの欠陥分類。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ13"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ13",
+          "rank": 6
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC056",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Joint Architecture-Token-Bitwidth Multi-Axis Optimization of Vision Transformers for Semiconductor IC Packaging",
+      "arxiv_id": "2605.01742",
+      "version_url": "https://arxiv.org/abs/2605.01742v3",
+      "url": "https://arxiv.org/abs/2605.01742",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-05-03T06:45:24Z",
+      "updated": "2026-10-08T03:35:24Z",
+      "authors": [
+        "Phat Nguyen",
+        "Xue Geng",
+        "Kaixin Xu",
+        "Wang Zhe",
+        "Xulei Yang",
+        "Ngai-Man Cheung"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "新規有望候補",
+      "reason": "AutoFormer＋ToMe＋fp16のViT最適化。実生産に由来する半導体パッケージの社内3D X線欠陥分類を評価。欠陥ラベル・分類の測定条件を本文で要確認。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ13"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ13",
+          "rank": 7
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC057",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Pseudo vs. True Defect Classification in Printed Circuits Boards using Wavelet Features",
+      "arxiv_id": "1310.6654",
+      "version_url": "https://arxiv.org/abs/1310.6654v1",
+      "url": "https://arxiv.org/abs/1310.6654",
+      "doi": null,
+      "year": 2013,
+      "first_submitted": "2013-10-24T16:11:28Z",
+      "updated": "2013-10-24T16:11:28Z",
+      "authors": [
+        "Sahil Sikka",
+        "Karan Sikka",
+        "M. K. Bhuyan",
+        "Yuji Iwahori"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": false,
+      "decision": "除外",
+      "reason": "2015年より前のPCB真欠陥／擬似欠陥の二値。ウェーブレット特徴。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ13"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ13",
+          "rank": 8
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC058",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Semiconductor Defect Pattern Classification by Self-Proliferation-and-Attention Neural Network",
+      "arxiv_id": "2212.00345",
+      "version_url": "https://arxiv.org/abs/2212.00345v1",
+      "url": "https://arxiv.org/abs/2212.00345",
+      "doi": "10.1109/TSM.2021.3131597",
+      "year": 2022,
+      "first_submitted": "2022-12-01T08:17:21Z",
+      "updated": "2022-12-01T08:17:21Z",
+      "authors": [
+        "YuanFu Yang",
+        "Min Sun"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "関連候補",
+      "reason": "半導体欠陥パターン分類。SP&A-Netのチャネル・空間アテンションがViT系かは抄録で確認できず。DOIは2021でarXiv公開は2022。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ13"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ13",
+          "rank": 9
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC059",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Generative Model-Driven Synthetic Training Image Generation: An Approach to Cognition in Rail Defect Detection",
+      "arxiv_id": "2401.00393",
+      "version_url": "https://arxiv.org/abs/2401.00393v1",
+      "url": "https://arxiv.org/abs/2401.00393",
+      "doi": null,
+      "year": 2023,
+      "first_submitted": "2023-12-31T04:34:58Z",
+      "updated": "2023-12-31T04:34:58Z",
+      "authors": [
+        "Rahatara Ferdousi",
+        "Chunsheng Yang",
+        "M. Anwar Hossain",
+        "Fedwa Laamarti",
+        "M. Shamim Hossain",
+        "Abdulmotaleb El Saddik"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "鉄道インフラのレール欠陥検出。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ13"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ13",
+          "rank": 10
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC060",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Incomplete Multimodal Industrial Anomaly Detection via Cross-Modal Distillation",
+      "arxiv_id": "2405.13571",
+      "version_url": "https://arxiv.org/abs/2405.13571v4",
+      "url": "https://arxiv.org/abs/2405.13571",
+      "doi": "10.1016/j.inffus.2025.103572",
+      "year": 2024,
+      "first_submitted": "2024-05-22T12:08:56Z",
+      "updated": "2025-10-16T09:52:27Z",
+      "authors": [
+        "Wenbo Sui",
+        "Daniel Lichau",
+        "Josselin Lefèvre",
+        "Harold Phelippeau"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "RGB・3D点群の異常検知／領域セグメンテーション。欠陥種類の出力は抄録で確認できない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 1
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC061",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Multimodal Industrial Anomaly Detection via Hybrid Fusion",
+      "arxiv_id": "2303.00601",
+      "version_url": "https://arxiv.org/abs/2303.00601v2",
+      "url": "https://arxiv.org/abs/2303.00601",
+      "doi": null,
+      "year": 2023,
+      "first_submitted": "2023-03-01T15:48:27Z",
+      "updated": "2023-09-07T08:28:39Z",
+      "authors": [
+        "Yue Wang",
+        "Jinlong Peng",
+        "Jiangning Zhang",
+        "Ran Yi",
+        "Yabiao Wang",
+        "Chengjie Wang"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "RGB・3D点群による異常有無・局在。種類分類の出力は抄録で確認できない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 2
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC062",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Text-Guided Multimodal Unified Industrial Anomaly Detection",
+      "arxiv_id": "2604.22899",
+      "version_url": "https://arxiv.org/abs/2604.22899v1",
+      "url": "https://arxiv.org/abs/2604.22899",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-04-24T13:21:22Z",
+      "updated": "2026-04-24T13:21:22Z",
+      "authors": [
+        "Zewen Li",
+        "Shuo Ye",
+        "Zitong Yu",
+        "Weicheng Xie",
+        "Linlin Shen"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "テキスト誘導RGB-3D異常検知。欠陥種類のカテゴリ出力・評価は抄録で確認できない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 3
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC063",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Multimodal Industrial Anomaly Detection via Geometric Prior",
+      "arxiv_id": "2603.22757",
+      "version_url": "https://arxiv.org/abs/2603.22757v1",
+      "url": "https://arxiv.org/abs/2603.22757",
+      "doi": "10.1109/TCSVT.2025.3613708",
+      "year": 2026,
+      "first_submitted": "2026-03-24T03:34:08Z",
+      "updated": "2026-03-24T03:34:08Z",
+      "authors": [
+        "Min Li",
+        "Jinghui He",
+        "Gang Li",
+        "Jiachen Li",
+        "Jin Wan",
+        "Delong Han"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "形状事前分布を使う異常検知。名前付き種類のカテゴリ成績を確認できない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 4
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC064",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Parameter Efficient Multi-Class Intelligent Scheduling for Multimodal Online Distributed Industrial Anomaly Detection",
+      "arxiv_id": "2605.23984",
+      "version_url": "https://arxiv.org/abs/2605.23984v1",
+      "url": "https://arxiv.org/abs/2605.23984",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-05-15T08:25:40Z",
+      "updated": "2026-05-15T08:25:40Z",
+      "authors": [
+        "Heqiang Wang",
+        "Weihong Yang",
+        "Zheyuan Yang",
+        "Jia Zhou",
+        "Xiaoxiong Zhong",
+        "Fangming Liu",
+        "Weizhe Zhang"
+      ],
+      "primary_category": "cs.LG",
+      "in_period": true,
+      "decision": "保留",
+      "reason": "工業オンライン分散異常検知。タイトルのMulti-Classが製品やデータ源か欠陥形態かは抄録から未確定。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 5
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC065",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "ZSG-IAD: A Multimodal Framework for Zero-Shot Grounded Industrial Anomaly Detection",
+      "arxiv_id": "2604.17949",
+      "version_url": "https://arxiv.org/abs/2604.17949v1",
+      "url": "https://arxiv.org/abs/2604.17949",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-04-20T08:30:09Z",
+      "updated": "2026-04-20T08:30:09Z",
+      "authors": [
+        "Qiuhui Chen",
+        "Jiaxiang Song",
+        "Shuai Tan",
+        "Weimin Zhong"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "関連候補",
+      "reason": "RGB、センサ画像、3D点群から構造化レポートとマスクを出力。種類単独の分類・VQA評価は抄録から未確定。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 6
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC066",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Myriad: Large Multimodal Model by Applying Vision Experts for Industrial Anomaly Detection",
+      "arxiv_id": "2310.19070",
+      "version_url": "https://arxiv.org/abs/2310.19070v3",
+      "url": "https://arxiv.org/abs/2310.19070",
+      "doi": null,
+      "year": 2023,
+      "first_submitted": "2023-10-29T16:49:45Z",
+      "updated": "2025-01-17T06:13:20Z",
+      "authors": [
+        "Yuanze Li",
+        "Haolin Wang",
+        "Shihao Yuan",
+        "Ming Liu",
+        "Debin Zhao",
+        "Yiwen Guo",
+        "Chen Xu",
+        "Guangming Shi",
+        "Wangmeng Zuo"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "関連候補",
+      "reason": "異常マップ誘導MLLM。複数データセットの検知と説明を報告するが、種類単独の定量評価は抄録で未確認。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 7
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC067",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "MMAD: A Comprehensive Benchmark for Multimodal Large Language Models in Industrial Anomaly Detection",
+      "arxiv_id": "2410.09453",
+      "version_url": "https://arxiv.org/abs/2410.09453v3",
+      "url": "https://arxiv.org/abs/2410.09453",
+      "doi": null,
+      "year": 2024,
+      "first_submitted": "2024-10-12T09:16:09Z",
+      "updated": "2025-02-21T04:50:45Z",
+      "authors": [
+        "Xi Jiang",
+        "Jian Li",
+        "Hanqiu Deng",
+        "Yong Liu",
+        "Bin-Bin Gao",
+        "Yifeng Zhou",
+        "Jialin Li",
+        "Chengjie Wang",
+        "Feng Zheng"
+      ],
+      "primary_category": "cs.AI",
+      "in_period": true,
+      "decision": "既収録再発見",
+      "reason": "arXiv ID・DOIまたは正規化題名を既存比較表と照合。既存の採否を引き継ぐ。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 8
+        }
+      ],
+      "existing_record_ids": [
+        "IM001"
+      ],
+      "existing_match_details": [
+        {
+          "id": "IM001",
+          "collection": "records",
+          "status": "採用",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        },
+        {
+          "id": "KRV024",
+          "collection": "candidates",
+          "status": "既収録",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": [
+        "IM001"
+      ]
+    },
+    {
+      "candidate_id": "ARXC068",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "PB-IAD: Utilizing multimodal foundation models for semantic industrial anomaly detection in dynamic manufacturing environments",
+      "arxiv_id": "2508.14504",
+      "version_url": "https://arxiv.org/abs/2508.14504v1",
+      "url": "https://arxiv.org/abs/2508.14504",
+      "doi": null,
+      "year": 2025,
+      "first_submitted": "2025-08-20T07:53:13Z",
+      "updated": "2025-08-20T07:53:13Z",
+      "authors": [
+        "Bernd Hofmann",
+        "Albert Scheck",
+        "Joerg Franke",
+        "Patrick Bruendl"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "保留",
+      "reason": "GPT-4.1と領域知識プロンプトによる工業異常判定。実験で種類ラベル別の評価があるか未確認。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 9
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC069",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "JUDO: A Juxtaposed Domain-Oriented Multimodal Reasoner for Industrial Anomaly QA",
+      "arxiv_id": "2605.20284",
+      "version_url": "https://arxiv.org/abs/2605.20284v1",
+      "url": "https://arxiv.org/abs/2605.20284",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-05-19T05:57:01Z",
+      "updated": "2026-05-19T05:57:01Z",
+      "authors": [
+        "Hyunju Kang",
+        "Woohyun Lee",
+        "Jaewon Kim",
+        "Hogun Park"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "既収録再発見",
+      "reason": "arXiv ID・DOIまたは正規化題名を既存比較表と照合。既存の採否を引き継ぐ。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 10
+        }
+      ],
+      "existing_record_ids": [
+        "IM007"
+      ],
+      "existing_match_details": [
+        {
+          "id": "IM007",
+          "collection": "records",
+          "status": "採用",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": [
+        "IM007"
+      ]
+    },
+    {
+      "candidate_id": "ARXC070",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Can Multimodal Large Language Models be Guided to Improve Industrial Anomaly Detection?",
+      "arxiv_id": "2501.15795",
+      "version_url": "https://arxiv.org/abs/2501.15795v1",
+      "url": "https://arxiv.org/abs/2501.15795",
+      "doi": null,
+      "year": 2025,
+      "first_submitted": "2025-01-27T05:41:10Z",
+      "updated": "2025-01-27T05:41:10Z",
+      "authors": [
+        "Zhiling Chen",
+        "Hanning Chen",
+        "Mohsen Imani",
+        "Farhad Imani"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "既収録再発見",
+      "reason": "arXiv ID・DOIまたは正規化題名を既存比較表と照合。既存の採否を引き継ぐ。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 11
+        }
+      ],
+      "existing_record_ids": [
+        "IVL2001"
+      ],
+      "existing_match_details": [
+        {
+          "id": "IVL2001",
+          "collection": "records",
+          "status": "採用",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        },
+        {
+          "id": "KRV001",
+          "collection": "candidates",
+          "status": "採用",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": [
+        "IVL2001"
+      ]
+    },
+    {
+      "candidate_id": "ARXC071",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Global Logic and Local Search: Dual-Stream Multimodal In-Context Learning for Verifiable Industrial Anomaly Detection",
+      "arxiv_id": "2607.03817",
+      "version_url": "https://arxiv.org/abs/2607.03817v1",
+      "url": "https://arxiv.org/abs/2607.03817",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-07-04T11:05:57Z",
+      "updated": "2026-07-04T11:05:57Z",
+      "authors": [
+        "Runzhi Deng",
+        "Yundi Hu",
+        "Yiming Zhong",
+        "Zhao Wang",
+        "Xixi Liu",
+        "Hongsong Wang",
+        "Caifeng Shan",
+        "Fang Zhao"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "既収録再発見",
+      "reason": "arXiv ID・DOIまたは正規化題名を既存比較表と照合。既存の採否を引き継ぐ。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 12
+        }
+      ],
+      "existing_record_ids": [
+        "IVL2004"
+      ],
+      "existing_match_details": [
+        {
+          "id": "IVL2004",
+          "collection": "records",
+          "status": "採用",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        },
+        {
+          "id": "KRV004",
+          "collection": "candidates",
+          "status": "採用",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": [
+        "IVL2004"
+      ]
+    },
+    {
+      "candidate_id": "ARXC072",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "BridgeNet: A Unified Multimodal Framework for Bridging 2D and 3D Industrial Anomaly Detection",
+      "arxiv_id": "2507.19253",
+      "version_url": "https://arxiv.org/abs/2507.19253v1",
+      "url": "https://arxiv.org/abs/2507.19253",
+      "doi": null,
+      "year": 2025,
+      "first_submitted": "2025-07-25T13:27:25Z",
+      "updated": "2025-07-25T13:27:25Z",
+      "authors": [
+        "An Xiang",
+        "Zixuan Huang",
+        "Xitong Gao",
+        "Kejiang Ye",
+        "Cheng-zhong Xu"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "2Dと3Dを統合する異常検知。名前付き種類の分類成績を抄録で確認できない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ14"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ14",
+          "rank": 13
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC073",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "AgentIAD: Agentic Industrial Anomaly Detection via Adaptive Memory Augmentation",
+      "arxiv_id": "2512.13671",
+      "version_url": "https://arxiv.org/abs/2512.13671v2",
+      "url": "https://arxiv.org/abs/2512.13671",
+      "doi": null,
+      "year": 2025,
+      "first_submitted": "2025-12-15T18:57:04Z",
+      "updated": "2026-04-14T17:48:11Z",
+      "authors": [
+        "Junwen Miao",
+        "Penghui Du",
+        "Yingying Fan",
+        "Yi Liu",
+        "Yu Wang",
+        "Runze He",
+        "Lida Huang",
+        "Yan Wang"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "既収録再発見",
+      "reason": "arXiv ID・DOIまたは正規化題名を既存比較表と照合。既存の採否を引き継ぐ。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ15"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ15",
+          "rank": 1
+        }
+      ],
+      "existing_record_ids": [
+        "IVL2003"
+      ],
+      "existing_match_details": [
+        {
+          "id": "IVL2003",
+          "collection": "records",
+          "status": "採用",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        },
+        {
+          "id": "KRV003",
+          "collection": "candidates",
+          "status": "採用",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": [
+        "IVL2003"
+      ]
+    },
+    {
+      "candidate_id": "ARXC074",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "Detect, Classify, Act: Categorizing Industrial Anomalies with Multi-Modal Large Language Models",
+      "arxiv_id": "2505.02626",
+      "version_url": "https://arxiv.org/abs/2505.02626v1",
+      "url": "https://arxiv.org/abs/2505.02626",
+      "doi": null,
+      "year": 2025,
+      "first_submitted": "2025-05-05T13:08:25Z",
+      "updated": "2025-05-05T13:08:25Z",
+      "authors": [
+        "Sassan Mokhtar",
+        "Arian Mousakhan",
+        "Silvio Galesso",
+        "Jawad Tayyub",
+        "Thomas Brox"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "既収録再発見",
+      "reason": "arXiv ID・DOIまたは正規化題名を既存比較表と照合。既存の採否を引き継ぐ。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ15"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ15",
+          "rank": 2
+        }
+      ],
+      "existing_record_ids": [
+        "IM002"
+      ],
+      "existing_match_details": [
+        {
+          "id": "IM002",
+          "collection": "records",
+          "status": "採用",
+          "match_basis": [
+            "title"
+          ]
+        },
+        {
+          "id": "KRV032",
+          "collection": "candidates",
+          "status": "既収録",
+          "match_basis": [
+            "arxiv_id",
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": [
+        "IM002"
+      ]
+    },
+    {
+      "candidate_id": "ARXC075",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "LogiCode: an LLM-Driven Framework for Logical Anomaly Detection",
+      "arxiv_id": "2406.04687",
+      "version_url": "https://arxiv.org/abs/2406.04687v1",
+      "url": "https://arxiv.org/abs/2406.04687",
+      "doi": null,
+      "year": 2024,
+      "first_submitted": "2024-06-07T07:01:06Z",
+      "updated": "2024-06-07T07:01:06Z",
+      "authors": [
+        "Yiheng Zhang",
+        "Yunkang Cao",
+        "Xiaohao Xu",
+        "Weiming Shen"
+      ],
+      "primary_category": "cs.LG",
+      "in_period": true,
+      "decision": "関連候補",
+      "reason": "工業の論理異常をLLMとコード生成で判定。抄録の分類成績は二値で、種類単独は未確認。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ15"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ15",
+          "rank": 3
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC076",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Tool Wear Segmentation in Blanking Processes with Fully Convolutional Networks based Digital Image Processing",
+      "arxiv_id": "2311.12841",
+      "version_url": "https://arxiv.org/abs/2311.12841v1",
+      "url": "https://arxiv.org/abs/2311.12841",
+      "doi": null,
+      "year": 2023,
+      "first_submitted": "2023-10-06T11:40:16Z",
+      "updated": "2023-10-06T11:40:16Z",
+      "authors": [
+        "Clemens Schlegel",
+        "Dirk Alexander Molitor",
+        "Christian Kubik",
+        "Daniel Michael Martin",
+        "Peter Groche"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "関連候補",
+      "reason": "打抜き工具の実画像を画素分類。摩耗形態と量に言及するが、対象が境界で、種類単独の画像レベル評価も未確認。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ17"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ17",
+          "rank": 1
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC077",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Efficient Cutting Tool Wear Segmentation Based on Segment Anything Model",
+      "arxiv_id": "2407.01211",
+      "version_url": "https://arxiv.org/abs/2407.01211v1",
+      "url": "https://arxiv.org/abs/2407.01211",
+      "doi": "10.1115/MSEC2024-124455",
+      "year": 2024,
+      "first_submitted": "2024-07-01T11:57:53Z",
+      "updated": "2024-07-01T11:57:53Z",
+      "authors": [
+        "Zongshuo Li",
+        "Ding Huo",
+        "Markus Meurer",
+        "Thomas Bergs"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "SAMとU-Netで摩耗領域をセグメント化。種類カテゴリの出力は抄録で確認できない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ17"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ17",
+          "rank": 2
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC078",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Effects of Tool Wear on the Surface Texture in Turning: A Feature Characterization Approach Based on ISO 21920-2",
+      "arxiv_id": "2608.12163",
+      "version_url": "https://arxiv.org/abs/2608.12163v1",
+      "url": "https://arxiv.org/abs/2608.12163",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-08-12T15:25:40Z",
+      "updated": "2026-08-12T15:25:40Z",
+      "authors": [
+        "Alexander Müller",
+        "Maximilian Berndt",
+        "Hagen Schmidt",
+        "Lars Müller",
+        "Matthias Eifler",
+        "Eberhard Kerscher",
+        "Benjamin Kirsch",
+        "Jörg Seewig"
+      ],
+      "primary_category": "eess.SP",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "旋削後のワーク表面形状から工具状態の影響を解析する研究。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ17"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ17",
+          "rank": 5
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC079",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "An Uncertainty-based Human-in-the-loop System for Industrial Tool Wear Analysis",
+      "arxiv_id": "2007.07129",
+      "version_url": "https://arxiv.org/abs/2007.07129v2",
+      "url": "https://arxiv.org/abs/2007.07129",
+      "doi": null,
+      "year": 2020,
+      "first_submitted": "2020-07-14T15:47:37Z",
+      "updated": "2020-07-16T09:46:42Z",
+      "authors": [
+        "Alexander Treiss",
+        "Jannis Walk",
+        "Niklas Kühl"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "既収録関連の再発見",
+      "reason": "FIA08の人・AI協調。既存主比較外の扱いを維持。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ17"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ17",
+          "rank": 6
+        }
+      ],
+      "existing_record_ids": [
+        "FIA08"
+      ],
+      "existing_match_details": [
+        {
+          "id": "FIA08",
+          "collection": "records",
+          "status": "関連（主比較外）",
+          "match_basis": [
+            "title"
+          ]
+        },
+        {
+          "id": "WR2C012",
+          "collection": "candidates",
+          "status": "既収録",
+          "match_basis": [
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC080",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Tool wear monitoring using an online, automatic and low cost system based on local texture",
+      "arxiv_id": "2402.05977",
+      "version_url": "https://arxiv.org/abs/2402.05977v1",
+      "url": "https://arxiv.org/abs/2402.05977",
+      "doi": null,
+      "year": 2024,
+      "first_submitted": "2024-02-07T22:25:54Z",
+      "updated": "2024-02-07T22:25:54Z",
+      "authors": [
+        "M. T. García-Ordás",
+        "E. Alegre-Gutiérrez",
+        "R. Alaiz-Rodríguez",
+        "V. González-Castro"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "刃先画像を用いるが、出力は使用継続可能／廃棄の二値。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ17"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ17",
+          "rank": 7
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [
+        {
+          "id": "RWU022",
+          "collection": "candidates",
+          "status": "保留",
+          "match_basis": [
+            "title"
+          ]
+        }
+      ],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC081",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Training Vision-Language Models with Less Bimodal Supervision",
+      "arxiv_id": "2211.00262",
+      "version_url": "https://arxiv.org/abs/2211.00262v1",
+      "url": "https://arxiv.org/abs/2211.00262",
+      "doi": null,
+      "year": 2022,
+      "first_submitted": "2022-11-01T04:07:11Z",
+      "updated": "2022-11-01T04:07:11Z",
+      "authors": [
+        "Elad Segal",
+        "Ben Bogin",
+        "Jonathan Berant"
+      ],
+      "primary_category": "cs.CL",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "一般の視覚言語モデル・ベンチマーク。対象の切削工具や摩耗分類を扱わない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ18"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ18",
+          "rank": 1
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC082",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "On the Robustness of Machine Unlearning for Vision-Language Models",
+      "arxiv_id": "2605.26992",
+      "version_url": "https://arxiv.org/abs/2605.26992v1",
+      "url": "https://arxiv.org/abs/2605.26992",
+      "doi": null,
+      "year": 2026,
+      "first_submitted": "2026-05-26T13:14:12Z",
+      "updated": "2026-05-26T13:14:12Z",
+      "authors": [
+        "Yujie Lin",
+        "Kaidi Jia",
+        "Jiayao Ma",
+        "Chengyi Yang",
+        "Jinsong Su"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "一般の視覚言語モデル・ベンチマーク。対象の切削工具や摩耗分類を扱わない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ18"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ18",
+          "rank": 2
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC083",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "SugarCrepe: Fixing Hackable Benchmarks for Vision-Language Compositionality",
+      "arxiv_id": "2306.14610",
+      "version_url": "https://arxiv.org/abs/2306.14610v1",
+      "url": "https://arxiv.org/abs/2306.14610",
+      "doi": null,
+      "year": 2023,
+      "first_submitted": "2023-06-26T11:35:22Z",
+      "updated": "2023-06-26T11:35:22Z",
+      "authors": [
+        "Cheng-Yu Hsieh",
+        "Jieyu Zhang",
+        "Zixian Ma",
+        "Aniruddha Kembhavi",
+        "Ranjay Krishna"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "一般の視覚言語モデル・ベンチマーク。対象の切削工具や摩耗分類を扱わない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ18"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ18",
+          "rank": 3
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC084",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Understanding Image and Text Simultaneously: a Dual Vision-Language Machine Comprehension Task",
+      "arxiv_id": "1612.07833",
+      "version_url": "https://arxiv.org/abs/1612.07833v1",
+      "url": "https://arxiv.org/abs/1612.07833",
+      "doi": null,
+      "year": 2016,
+      "first_submitted": "2016-12-22T22:44:17Z",
+      "updated": "2016-12-22T22:44:17Z",
+      "authors": [
+        "Nan Ding",
+        "Sebastian Goodman",
+        "Fei Sha",
+        "Radu Soricut"
+      ],
+      "primary_category": "cs.CL",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "一般の視覚言語モデル・ベンチマーク。対象の切削工具や摩耗分類を扱わない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ18"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ18",
+          "rank": 4
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC085",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Write and Paint: Generative Vision-Language Models are Unified Modal Learners",
+      "arxiv_id": "2206.07699",
+      "version_url": "https://arxiv.org/abs/2206.07699v3",
+      "url": "https://arxiv.org/abs/2206.07699",
+      "doi": null,
+      "year": 2022,
+      "first_submitted": "2022-06-15T17:49:38Z",
+      "updated": "2023-02-17T02:58:03Z",
+      "authors": [
+        "Shizhe Diao",
+        "Wangchunshu Zhou",
+        "Xinsong Zhang",
+        "Jiawei Wang"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "一般の視覚言語モデル・ベンチマーク。対象の切削工具や摩耗分類を扱わない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ18"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ18",
+          "rank": 5
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC086",
+      "platform": "arXiv",
+      "scope": "工具摩耗",
+      "title": "Learning to Scale Multilingual Representations for Vision-Language Tasks",
+      "arxiv_id": "2004.04312",
+      "version_url": "https://arxiv.org/abs/2004.04312v2",
+      "url": "https://arxiv.org/abs/2004.04312",
+      "doi": null,
+      "year": 2020,
+      "first_submitted": "2020-04-09T01:03:44Z",
+      "updated": "2020-08-27T19:01:28Z",
+      "authors": [
+        "Andrea Burns",
+        "Donghyun Kim",
+        "Derry Wijaya",
+        "Kate Saenko",
+        "Bryan A. Plummer"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "除外",
+      "reason": "一般の視覚言語モデル・ベンチマーク。対象の切削工具や摩耗分類を扱わない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ18"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ18",
+          "rank": 6
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    },
+    {
+      "candidate_id": "ARXC087",
+      "platform": "arXiv",
+      "scope": "工業欠陥",
+      "title": "TL-SDD: A Transfer Learning-Based Method for Surface Defect Detection with Few Samples",
+      "arxiv_id": "2108.06939",
+      "version_url": "https://arxiv.org/abs/2108.06939v1",
+      "url": "https://arxiv.org/abs/2108.06939",
+      "doi": null,
+      "year": 2021,
+      "first_submitted": "2021-08-16T07:24:00Z",
+      "updated": "2021-08-16T07:24:00Z",
+      "authors": [
+        "Jiahui Cheng",
+        "Bin Guo",
+        "Jiaqi Liu",
+        "Sicong Liu",
+        "Guangzhi Wu",
+        "Yueqi Sun",
+        "Zhiwen Yu"
+      ],
+      "primary_category": "cs.CV",
+      "in_period": true,
+      "decision": "関連候補",
+      "reason": "少数標本の表面欠陥検出。出力単位とViT／VLM／MLLMの主モデル適合性を抄録で確認できない。",
+      "verification": "arXiv公式Atomの題名・抄録を確認",
+      "query_ids": [
+        "ARXQ13P2"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "ARXQ13P2",
+          "rank": 11
+        }
+      ],
+      "existing_record_ids": [],
+      "existing_match_details": [],
+      "seed_ids": []
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "arXiv",
+      "platform_id": "arxiv",
+      "status": "公式キーワード検索実施",
+      "access_route": "arXiv legacy API (official public Atom)",
+      "endpoint": "https://export.arxiv.org/api/query",
+      "manual_url": "https://info.arxiv.org/help/api/user-manual.html",
+      "terms_url": "https://info.arxiv.org/help/api/tou.html",
+      "rate_limit": "1接続、3秒につき最大1リクエスト。実行は各取得後3.2秒以上の待機を挟み順次送信。",
+      "as_of": "2026-11-11 JST",
+      "search_calls": 19,
+      "successful_calls": 19,
+      "ranked_results_total": 120,
+      "unique_screened": 87,
+      "summary_counts": {
+        "除外": 62,
+        "既収録再発見": 10,
+        "関連候補": 10,
+        "新規有望候補": 2,
+        "保留": 2,
+        "既収録関連の再発見": 1
+      },
+      "seed_ids_rediscovered": [
+        "IM001",
+        "IM002",
+        "IM007",
+        "IT004",
+        "IT005",
+        "IT009",
+        "IV001",
+        "IVL2001",
+        "IVL2003",
+        "IVL2004"
+      ],
+      "seed_results": [
+        {
+          "record_id": "FT001",
+          "rediscovered": false,
+          "search_ids": []
+        },
+        {
+          "record_id": "FT002",
+          "rediscovered": false,
+          "search_ids": []
+        },
+        {
+          "record_id": "FIA02",
+          "rediscovered": false,
+          "search_ids": []
+        },
+        {
+          "record_id": "FIA04",
+          "rediscovered": false,
+          "search_ids": []
+        },
+        {
+          "record_id": "MM001",
+          "rediscovered": false,
+          "search_ids": []
+        },
+        {
+          "record_id": "MM002",
+          "rediscovered": false,
+          "search_ids": []
+        },
+        {
+          "record_id": "FW2003",
+          "rediscovered": false,
+          "search_ids": []
+        },
+        {
+          "record_id": "IT004",
+          "rediscovered": true,
+          "search_ids": [
+            "ARXQ13"
+          ]
+        },
+        {
+          "record_id": "IT005",
+          "rediscovered": true,
+          "search_ids": [
+            "ARXQ06",
+            "ARXQ12",
+            "ARXQ13"
+          ]
+        },
+        {
+          "record_id": "IT009",
+          "rediscovered": true,
+          "search_ids": [
+            "ARXQ13"
+          ]
+        },
+        {
+          "record_id": "IV001",
+          "rediscovered": true,
+          "search_ids": [
+            "ARXQ12"
+          ]
+        },
+        {
+          "record_id": "IM001",
+          "rediscovered": true,
+          "search_ids": [
+            "ARXQ14"
+          ]
+        },
+        {
+          "record_id": "IM002",
+          "rediscovered": true,
+          "search_ids": [
+            "ARXQ15"
+          ]
+        },
+        {
+          "record_id": "IM007",
+          "rediscovered": true,
+          "search_ids": [
+            "ARXQ14"
+          ]
+        },
+        {
+          "record_id": "IVL2001",
+          "rediscovered": true,
+          "search_ids": [
+            "ARXQ14"
+          ]
+        },
+        {
+          "record_id": "IVL2003",
+          "rediscovered": true,
+          "search_ids": [
+            "ARXQ15"
+          ]
+        },
+        {
+          "record_id": "IVL2004",
+          "rediscovered": true,
+          "search_ids": [
+            "ARXQ14"
+          ]
+        }
+      ],
+      "reuse": "query / start / max_results / sortBy / sortOrder をUTF-8でURLエンコードし、公開エンドポイントへGET。AtomとOpenSearch名前空間を読み、totalResults、startIndex、itemsPerPage、entry数を別々に保存。重複はarXiv IDから版番号を除いて判定。rawはGit対象外。",
+      "limits": "arXiv収録範囲・検索索引・関連度順位と実取得上限の影響を受ける。今回の再発見ゼロは、arXivの全論文や他データベースに研究が存在しないことを示さない。"
+    }
+  ],
+  "notes": [
+    "モデル指定あり／なしを併用。工具実写と工具画像＋別モダリティを別の検索群とし、工業はモデル無指定・ViT・VLM/MLLMを探索した。既知題名やarXiv IDを検索条件に使わず、取得後に既存台帳と照合した。",
+    "初回7式はHTTP 200でも複雑なAND/OR構文で異分野の混入が目立った。構文の原因は未特定。単純なall:検索式を併用し、複合式の総数を実質の候補母集団に用いなかった。",
+    "工具実写の単純分類式は8件全取得、工具画像式は7件全取得。確認範囲で新規の画像単位種類分類候補は見つからず。工具の種類付き画素セグメンテーションは関連候補として記録。",
+    "工業の単純欠陥分類は111件中上位11件、ViT式は11件を2回で全取得、工業マルチモーダル式は54件中上位13件、分類＋LLM式は3件全取得。全取得は当該式・取得時点のAPI集合を指す。",
+    "公開台帳には元のタイトル・書誌・判断理由を載せ、原文抄録と生XMLは非公開raw配下に限定。今回の採否は探索段階であり、既存比較表へ新規候補を自動採用していない。"
+  ]
+}

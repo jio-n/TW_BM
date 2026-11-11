@@ -1,0 +1,2208 @@
+{
+  "searches": [
+    {
+      "search_id": "DBJST01",
+      "platform": "J-STAGE",
+      "database": "J-STAGE",
+      "scope": "工具・実写",
+      "query": "工具摩耗 画像",
+      "query_variant": "日本語・広い",
+      "route": "公式記事WebAPI GET",
+      "url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "requested_page": 1,
+      "requested_count": 10,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:51.098+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": 277,
+      "retrieved_count": 10,
+      "returned_count": 10,
+      "results": [
+        {
+          "rank": 1,
+          "title": "機械学習を用いた切削工具の状態検知",
+          "title_ja": "機械学習を用いた切削工具の状態検知",
+          "title_en": "State Detection of Cutting Tool Using Machine Learning",
+          "doi": "10.18914/tribologist.67.12_851",
+          "year": "2022",
+          "url": "https://www.jstage.jst.go.jp/article/tribologist/67/12/67_67.12_851/_article/-char/ja/"
+        },
+        {
+          "rank": 2,
+          "title": "鋼のダイヤモンド切削における工具摩耗の抑制（浸炭した鋼の組織が及ぼす影響）",
+          "title_ja": "鋼のダイヤモンド切削における工具摩耗の抑制（浸炭した鋼の組織が及ぼす影響）",
+          "title_en": "Suppression of tool wear in diamond turning of steel (Effect of microstructure of carburized steel)",
+          "doi": "10.1299/transjsme.17-00161",
+          "year": "2017",
+          "url": "https://www.jstage.jst.go.jp/article/transjsme/83/856/83_17-00161/_article/-char/ja/"
+        },
+        {
+          "rank": 3,
+          "title": "AE法による旋削加工のインプロセス計測に関する基礎研究",
+          "title_ja": "AE法による旋削加工のインプロセス計測に関する基礎研究",
+          "title_en": "Study on In-process Measurement of Turning by Acoustic Emission Method",
+          "doi": "10.1299/jsmemecj.2019.S13302",
+          "year": "2019",
+          "url": "https://www.jstage.jst.go.jp/article/jsmemecj/2019/0/2019_S13302/_article/-char/ja/"
+        },
+        {
+          "rank": 4,
+          "title": "CNC旋盤の加工状況モニタリング",
+          "title_ja": "CNC旋盤の加工状況モニタリング",
+          "title_en": "Monitoring of lathe turning conditions",
+          "doi": "10.1299/jsmemecj.2025.J132-09",
+          "year": "2025",
+          "url": "https://www.jstage.jst.go.jp/article/jsmemecj/2025/0/2025_J132-09/_article/-char/ja/"
+        },
+        {
+          "rank": 5,
+          "title": "切りくず裏面温度分布画像のAI分析による５種の工具摩耗量の同時推定",
+          "title_ja": "切りくず裏面温度分布画像のAI分析による５種の工具摩耗量の同時推定",
+          "title_en": "",
+          "doi": "10.11522/pscjspe.2024A.0_239",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2024A/0/2024A_239/_article/-char/ja/"
+        },
+        {
+          "rank": 6,
+          "title": "ダイヤモンド切削における工具摩耗の抑制",
+          "title_ja": "ダイヤモンド切削における工具摩耗の抑制",
+          "title_en": "",
+          "doi": "10.11522/pscjspe.2017A.0_77",
+          "year": "2017",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2017A/0/2017A_77/_article/-char/ja/"
+        },
+        {
+          "rank": 7,
+          "title": "窒化された鋼の超精密切削においてミクロ組織が被削性に及ぼす影響(第2報)",
+          "title_ja": "窒化された鋼の超精密切削においてミクロ組織が被削性に及ぼす影響(第2報)",
+          "title_en": "",
+          "doi": "10.11522/pscjspe.2026S.0_285",
+          "year": "2026",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2026S/0/2026S_285/_article/-char/ja/"
+        },
+        {
+          "rank": 8,
+          "title": "鋼のダイヤモンド切削における工具摩耗の抑制",
+          "title_ja": "鋼のダイヤモンド切削における工具摩耗の抑制",
+          "title_en": "Suppression of Tool Wear in Diamond Turning of Steel",
+          "doi": "10.1299/jsmemmt.2016.11.C03",
+          "year": "2016",
+          "url": "https://www.jstage.jst.go.jp/article/jsmemmt/2016.11/0/2016.11_C03/_article/-char/ja/"
+        },
+        {
+          "rank": 9,
+          "title": "窒化された鋼の超精密切削において窒化前の表面処理が及ぼす影響",
+          "title_ja": "窒化された鋼の超精密切削において窒化前の表面処理が及ぼす影響",
+          "title_en": "",
+          "doi": "10.11522/pscjspe.2022S.0_459",
+          "year": "2022",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2022S/0/2022S_459/_article/-char/ja/"
+        },
+        {
+          "rank": 10,
+          "title": "ギヤスカイビング工具の寿命判定用画像式摩耗検出システムの開発（第4報）",
+          "title_ja": "ギヤスカイビング工具の寿命判定用画像式摩耗検出システムの開発（第4報）",
+          "title_en": "Development of a Visual Wear Detection System for Determining the Life of Gear Skiving Cutters (4th report)",
+          "doi": "10.11522/pscjspe.2025S.0_756",
+          "year": "2025",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2025S/0/2025S_756/_article/-char/ja/"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBJST01.xml",
+      "http_status": 200,
+      "response_type": "application/xml",
+      "effective_url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "response_bytes": 20144,
+      "status": "取得済み",
+      "result_scope": "先頭から1–10件目の書誌",
+      "server_time": "2026-11-11T09:49+09:00",
+      "response_status": {
+        "status": "0",
+        "message": ""
+      },
+      "comparison_counted": true,
+      "result_rows": 10
+    },
+    {
+      "search_id": "DBCNI01",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工具・実写",
+      "query": "工具摩耗 画像",
+      "query_variant": "日本語・広い",
+      "route": "公式論文検索画面 GET",
+      "url": "https://cir.nii.ac.jp/articles?q=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F&from=2015&until=2026&count=20&sortorder=4",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:51.113+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": null,
+      "retrieved_count": null,
+      "returned_count": null,
+      "results": [],
+      "raw_path": null,
+      "http_status": 202,
+      "response_type": "text/html; charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/articles?q=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F&from=2015&until=2026&count=20&sortorder=4",
+      "response_bytes": 0,
+      "status": "取得不可",
+      "result_scope": "HTTP応答のみ。検索結果本文0バイト。総件数は不明",
+      "comparison_counted": false,
+      "result_rows": 0
+    },
+    {
+      "search_id": "DBJST02",
+      "platform": "J-STAGE",
+      "database": "J-STAGE",
+      "scope": "工具・実写",
+      "query": "tool wear image classification",
+      "query_variant": "英語・分類",
+      "route": "公式記事WebAPI GET",
+      "url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=tool+wear+image+classification&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "requested_page": 1,
+      "requested_count": 10,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:51.123+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": 191,
+      "retrieved_count": 10,
+      "returned_count": 10,
+      "results": [
+        {
+          "rank": 1,
+          "title": "Image-based classification of ball end-mill wear states using time-series visualization and Lab color space analysis",
+          "title_ja": "",
+          "title_en": "Image-based classification of ball end-mill wear states using time-series visualization and Lab color space analysis",
+          "doi": "10.1299/jamdsm.2026jamdsm0060",
+          "year": "2026",
+          "url": "https://www.jstage.jst.go.jp/article/jamdsm/20/7/20_2026jamdsm0060/_article/-char/ja/"
+        },
+        {
+          "rank": 2,
+          "title": "Development of tool-life time determination system using current value data imaged using recurrence plotting method",
+          "title_ja": "",
+          "title_en": "Development of tool-life time determination system using current value data imaged using recurrence plotting method",
+          "doi": "10.1299/jsmelem.2025.11.OS04-3",
+          "year": "2025",
+          "url": "https://www.jstage.jst.go.jp/article/jsmelem/2025.11/0/2025.11_OS04-3/_article/-char/ja/"
+        },
+        {
+          "rank": 3,
+          "title": "Tool condition monitoring method by anomaly segmentation of time-frequency images using acoustic emission in small hole drilling",
+          "title_ja": "",
+          "title_en": "Tool condition monitoring method by anomaly segmentation of time-frequency images using acoustic emission in small hole drilling",
+          "doi": "10.1299/jamdsm.2023jamdsm0034",
+          "year": "2023",
+          "url": "https://www.jstage.jst.go.jp/article/jamdsm/17/3/17_2023jamdsm0034/_article/-char/ja/"
+        },
+        {
+          "rank": 4,
+          "title": "Study on Factors of Tool Wear in Diamond Turning of Carburized Steel using Decision Trees",
+          "title_ja": "",
+          "title_en": "Study on Factors of Tool Wear in Diamond Turning of Carburized Steel using Decision Trees",
+          "doi": "10.1299/jsmelem.2017.9.092",
+          "year": "2017",
+          "url": "https://www.jstage.jst.go.jp/article/jsmelem/2017.9/0/2017.9_092/_article/-char/ja/"
+        },
+        {
+          "rank": 5,
+          "title": "Wear Debris Classification of Steel Production Equipment using Feature Fusion and Case-based Reasoning",
+          "title_ja": "",
+          "title_en": "Wear Debris Classification of Steel Production Equipment using Feature Fusion and Case-based Reasoning",
+          "doi": "10.2355/isijinternational.ISIJINT-2018-076",
+          "year": "2018",
+          "url": "https://www.jstage.jst.go.jp/article/isijinternational/58/7/58_ISIJINT-2018-076/_article/-char/ja/"
+        },
+        {
+          "rank": 6,
+          "title": "Surface Roughness Estimation and Chatter Vibration Identification Using Vision-Based Deep Learning",
+          "title_ja": "",
+          "title_en": "Surface Roughness Estimation and Chatter Vibration Identification Using Vision-Based Deep Learning",
+          "doi": "10.2493/jjspe.85.658",
+          "year": "2019",
+          "url": "https://www.jstage.jst.go.jp/article/jjspe/85/7/85_658/_article/-char/ja/"
+        },
+        {
+          "rank": 7,
+          "title": "0528 Development of method of reducing groove bottom roughness in the microgroove processing of polysulfone materials",
+          "title_ja": "0528 Development of method of reducing groove bottom roughness in the microgroove processing of polysulfone materials",
+          "title_en": "0528 Development of method of reducing groove bottom roughness in the microgroove processing of polysulfone materials",
+          "doi": "10.1299/jsmelem.2015.8._0528-1_",
+          "year": "2015",
+          "url": "https://www.jstage.jst.go.jp/article/jsmelem/2015.8/0/2015.8__0528-1_/_article/-char/ja/"
+        },
+        {
+          "rank": 8,
+          "title": "Estimation the wear state of milling tools using a combined ensemble empirical mode decomposition and support vector machine method",
+          "title_ja": "",
+          "title_en": "Estimation the wear state of milling tools using a combined ensemble empirical mode decomposition and support vector machine method",
+          "doi": "10.1299/jamdsm.2018jamdsm0059",
+          "year": "2018",
+          "url": "https://www.jstage.jst.go.jp/article/jamdsm/12/2/12_2018jamdsm0059/_article/-char/ja/"
+        },
+        {
+          "rank": 9,
+          "title": "異常検知と画像分類を併用したボールエンドミル摩耗状態判定システムの開発",
+          "title_ja": "異常検知と画像分類を併用したボールエンドミル摩耗状態判定システムの開発",
+          "title_en": "Development of ball end-mill wear condition judgment system aided by abnormality detection and image classification",
+          "doi": "10.1299/transjsme.24-00127",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/transjsme/90/937/90_24-00127/_article/-char/ja/"
+        },
+        {
+          "rank": 10,
+          "title": "Advanced Sensing and Machine Learning Technologies for Intelligent Measurement in Smart and Precision Manufacturing",
+          "title_ja": "",
+          "title_en": "Advanced Sensing and Machine Learning Technologies for Intelligent Measurement in Smart and Precision Manufacturing",
+          "doi": "10.20965/ijat.2024.p0545",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/ijat/18/4/18_545/_article/-char/ja/"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBJST02.xml",
+      "http_status": 200,
+      "response_type": "application/xml",
+      "effective_url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=tool+wear+image+classification&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "response_bytes": 18947,
+      "status": "取得済み",
+      "result_scope": "先頭から1–10件目の書誌",
+      "server_time": "2026-11-11T09:49+09:00",
+      "response_status": {
+        "status": "0",
+        "message": ""
+      },
+      "comparison_counted": true,
+      "result_rows": 10
+    },
+    {
+      "search_id": "DBCNI02",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工具・実写",
+      "query": "tool wear image classification",
+      "query_variant": "英語・分類",
+      "route": "公式論文検索画面 GET",
+      "url": "https://cir.nii.ac.jp/articles?q=tool+wear+image+classification&from=2015&until=2026&count=20&sortorder=4",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:51.655+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": null,
+      "retrieved_count": null,
+      "returned_count": null,
+      "results": [],
+      "raw_path": null,
+      "http_status": 202,
+      "response_type": "text/html; charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/articles?q=tool+wear+image+classification&from=2015&until=2026&count=20&sortorder=4",
+      "response_bytes": 0,
+      "status": "取得不可",
+      "result_scope": "HTTP応答のみ。検索結果本文0バイト。総件数は不明",
+      "comparison_counted": false,
+      "result_rows": 0
+    },
+    {
+      "search_id": "DBJST03",
+      "platform": "J-STAGE",
+      "database": "J-STAGE",
+      "scope": "工具・画像＋センサ",
+      "query": "工具摩耗 画像 センサ",
+      "query_variant": "日本語・融合候補",
+      "route": "公式記事WebAPI GET",
+      "url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F+%E3%82%BB%E3%83%B3%E3%82%B5&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "requested_page": 1,
+      "requested_count": 10,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:51.792+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": 93,
+      "retrieved_count": 10,
+      "returned_count": 10,
+      "results": [
+        {
+          "rank": 1,
+          "title": "AE法による旋削加工のインプロセス計測に関する基礎研究",
+          "title_ja": "AE法による旋削加工のインプロセス計測に関する基礎研究",
+          "title_en": "Study on In-process Measurement of Turning by Acoustic Emission Method",
+          "doi": "10.1299/jsmemecj.2019.S13302",
+          "year": "2019",
+          "url": "https://www.jstage.jst.go.jp/article/jsmemecj/2019/0/2019_S13302/_article/-char/ja/"
+        },
+        {
+          "rank": 2,
+          "title": "AEと機械学習を利用したエンドミル工具の状態観察に関する研究",
+          "title_ja": "AEと機械学習を利用したエンドミル工具の状態観察に関する研究",
+          "title_en": "",
+          "doi": "10.11522/pscjspe.2020S.0_42",
+          "year": "2020",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2020S/0/2020S_42/_article/-char/ja/"
+        },
+        {
+          "rank": 3,
+          "title": "機械学習を用いた切削工具の状態検知",
+          "title_ja": "機械学習を用いた切削工具の状態検知",
+          "title_en": "State Detection of Cutting Tool Using Machine Learning",
+          "doi": "10.18914/tribologist.67.12_851",
+          "year": "2022",
+          "url": "https://www.jstage.jst.go.jp/article/tribologist/67/12/67_67.12_851/_article/-char/ja/"
+        },
+        {
+          "rank": 4,
+          "title": "アコースティックエミッション法を用いた切削状態の監視に関する実験的検討",
+          "title_ja": "アコースティックエミッション法を用いた切削状態の監視に関する実験的検討",
+          "title_en": "Experimental Study on Monitoring of Cutting Process by Acoustic Emission Method",
+          "doi": "10.18914/tribologist.17-00028",
+          "year": "2018",
+          "url": "https://www.jstage.jst.go.jp/article/tribologist/63/7/63_17-00028/_article/-char/ja/"
+        },
+        {
+          "rank": 5,
+          "title": "センサ搭載ツールホルダを用いたエンドミル加工時の工具刃先状態監視の試み",
+          "title_ja": "センサ搭載ツールホルダを用いたエンドミル加工時の工具刃先状態監視の試み",
+          "title_en": "Monitoring status of cutting edges during an end milling process using a sensor-equipped tool holder",
+          "doi": "10.11522/pscjspe.2024A.0_241",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2024A/0/2024A_241/_article/-char/ja/"
+        },
+        {
+          "rank": 6,
+          "title": "赤外線サーモグラフィーカメラによる生成中の切りくず裏面温度分布の計測",
+          "title_ja": "赤外線サーモグラフィーカメラによる生成中の切りくず裏面温度分布の計測",
+          "title_en": "Measurement of temperature distribution of the chip back surface during being formed by means of an infrared thermography camera",
+          "doi": "10.11522/pscjspe.2019A.0_36",
+          "year": "2019",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2019A/0/2019A_36/_article/-char/ja/"
+        },
+        {
+          "rank": 7,
+          "title": "窒化された鋼の超精密切削において窒化前の熱処理が及ぼす影響（第3報）",
+          "title_ja": "窒化された鋼の超精密切削において窒化前の熱処理が及ぼす影響（第3報）",
+          "title_en": "",
+          "doi": "10.11522/pscjspe.2021S.0_279",
+          "year": "2021",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2021S/0/2021S_279/_article/-char/ja/"
+        },
+        {
+          "rank": 8,
+          "title": "AE を利用した機械学習によるエンドミル工具の摩耗観測手法の検討",
+          "title_ja": "AE を利用した機械学習によるエンドミル工具の摩耗観測手法の検討",
+          "title_en": "Wear observation for end-mill tool by machine learning through Acoustic Emission",
+          "doi": "10.1299/jsmemmt.2019.13.D22",
+          "year": "2019",
+          "url": "https://www.jstage.jst.go.jp/article/jsmemmt/2019.13/0/2019.13_D22/_article/-char/ja/"
+        },
+        {
+          "rank": 9,
+          "title": "機械学習を用いたミリング加工時の加速度データ解析による工具摩耗の推定",
+          "title_ja": "機械学習を用いたミリング加工時の加速度データ解析による工具摩耗の推定",
+          "title_en": "Estimation of Tool Wear by Analyzing Acceleration Data in Milling Process Using Machine Learning",
+          "doi": "10.11522/pscjspe.2021A.0_413",
+          "year": "2021",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2021A/0/2021A_413/_article/-char/ja/"
+        },
+        {
+          "rank": 10,
+          "title": "エンドミル工具摩耗のインプロセス検出に関する研究",
+          "title_ja": "エンドミル工具摩耗のインプロセス検出に関する研究",
+          "title_en": "In-process Detection of End mill Tool Wear",
+          "doi": "10.1299/jsmekyushu.2017.70.902",
+          "year": "2017",
+          "url": "https://www.jstage.jst.go.jp/article/jsmekyushu/2017.70/0/2017.70_902/_article/-char/ja/"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBJST03.xml",
+      "http_status": 200,
+      "response_type": "application/xml",
+      "effective_url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F+%E3%82%BB%E3%83%B3%E3%82%B5&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "response_bytes": 20058,
+      "status": "取得済み",
+      "result_scope": "先頭から1–10件目の書誌",
+      "server_time": "2026-11-11T09:49+09:00",
+      "response_status": {
+        "status": "0",
+        "message": ""
+      },
+      "comparison_counted": true,
+      "result_rows": 10
+    },
+    {
+      "search_id": "DBCNI03",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工具・画像＋センサ",
+      "query": "工具摩耗 画像 センサ",
+      "query_variant": "日本語・融合候補",
+      "route": "公式論文検索画面 GET",
+      "url": "https://cir.nii.ac.jp/articles?q=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F+%E3%82%BB%E3%83%B3%E3%82%B5&from=2015&until=2026&count=20&sortorder=4",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:53.810+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": null,
+      "retrieved_count": null,
+      "returned_count": null,
+      "results": [],
+      "raw_path": null,
+      "http_status": 202,
+      "response_type": "text/html; charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/articles?q=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F+%E3%82%BB%E3%83%B3%E3%82%B5&from=2015&until=2026&count=20&sortorder=4",
+      "response_bytes": 0,
+      "status": "取得不可",
+      "result_scope": "HTTP応答のみ。検索結果本文0バイト。総件数は不明",
+      "comparison_counted": false,
+      "result_rows": 0
+    },
+    {
+      "search_id": "DBJST04",
+      "platform": "J-STAGE",
+      "database": "J-STAGE",
+      "scope": "工業欠陥・ViT",
+      "query": "defect classification transformer",
+      "query_variant": "英語・広い",
+      "route": "公式記事WebAPI GET",
+      "url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=defect+classification+transformer&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "requested_page": 1,
+      "requested_count": 10,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:53.900+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": 79,
+      "retrieved_count": 10,
+      "returned_count": 10,
+      "results": [
+        {
+          "rank": 1,
+          "title": "Preliminary investigation of image-based techniques for rust condition assessment in weathering steel bridge",
+          "title_ja": "",
+          "title_en": "Preliminary investigation of image-based techniques for rust condition assessment in weathering steel bridge",
+          "doi": "10.11532/jsceiiai.7.1_120",
+          "year": "2026",
+          "url": "https://www.jstage.jst.go.jp/article/jsceiiai/7/1/7_120/_article/-char/ja/"
+        },
+        {
+          "rank": 2,
+          "title": "Multiscale Attention-Based Model for Image Enhancement and Classification",
+          "title_ja": "",
+          "title_en": "Multiscale Attention-Based Model for Image Enhancement and Classification",
+          "doi": "10.20965/jaciii.2025.p1484",
+          "year": "2025",
+          "url": "https://www.jstage.jst.go.jp/article/jaciii/29/6/29_1484/_article/-char/ja/"
+        },
+        {
+          "rank": 3,
+          "title": "UnionMixup and max-min-saliency mixup for mixed-type defect recognition of wafer bin maps",
+          "title_ja": "",
+          "title_en": "UnionMixup and max-min-saliency mixup for mixed-type defect recognition of wafer bin maps",
+          "doi": "10.1587/elex.21.20240054",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/elex/21/10/21_21.20240054/_article/-char/ja/"
+        },
+        {
+          "rank": 4,
+          "title": "Dual-Branch Residual Network for Enhanced Steel Plate Fault Detection",
+          "title_ja": "",
+          "title_en": "Dual-Branch Residual Network for Enhanced Steel Plate Fault Detection",
+          "doi": "10.20965/jaciii.2025.p1311",
+          "year": "2025",
+          "url": "https://www.jstage.jst.go.jp/article/jaciii/29/6/29_1311/_article/-char/ja/"
+        },
+        {
+          "rank": 5,
+          "title": "Resformer-Unet: A U-shaped Framework Combining ResNet and Transformer for Segmentation of Strip Steel Surface Defects",
+          "title_ja": "",
+          "title_en": "Resformer-Unet: A U-shaped Framework Combining ResNet and Transformer for Segmentation of Strip Steel Surface Defects",
+          "doi": "10.2355/isijinternational.ISIJINT-2023-222",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/isijinternational/64/1/64_ISIJINT-2023-222/_article/-char/ja/"
+        },
+        {
+          "rank": 6,
+          "title": "RCT-YOLOv8: A Tuna Detection Model for Distant-Water Fisheries Based on Improved YOLOv8",
+          "title_ja": "",
+          "title_en": "RCT-YOLOv8: A Tuna Detection Model for Distant-Water Fisheries Based on Improved YOLOv8",
+          "doi": "10.20965/jaciii.2024.p1273",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/jaciii/28/6/28_1273/_article/-char/ja/"
+        },
+        {
+          "rank": 7,
+          "title": "TE-YOLO: A Defect Detection Model for Ceramic Substrate Printed Circuit Board",
+          "title_ja": "",
+          "title_en": "TE-YOLO: A Defect Detection Model for Ceramic Substrate Printed Circuit Board",
+          "doi": "10.1587/transinf.2026EDP7037",
+          "year": "2026",
+          "url": "https://www.jstage.jst.go.jp/article/transinf/advpub/0/advpub_2026EDP7037/_article/-char/ja/"
+        },
+        {
+          "rank": 8,
+          "title": "YOLO-CF: An Object Detection Model that Improves Feature Expression at Both Coarse-Grained and Fine-Grained Levels for Industrial Surface Image Defect Detection",
+          "title_ja": "",
+          "title_en": "YOLO-CF: An Object Detection Model that Improves Feature Expression at Both Coarse-Grained and Fine-Grained Levels for Industrial Surface Image Defect Detection",
+          "doi": "10.20965/jaciii.2026.p0825",
+          "year": "2026",
+          "url": "https://www.jstage.jst.go.jp/article/jaciii/30/3/30_825/_article/-char/ja/"
+        },
+        {
+          "rank": 9,
+          "title": "CCTSS: The Combination of CNN and Transformer with Shared Sublayer for Detection and Classification",
+          "title_ja": "",
+          "title_en": "CCTSS: The Combination of CNN and Transformer with Shared Sublayer for Detection and Classification",
+          "doi": "10.1587/transfun.2022EAP1157",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/transfun/E107.A/1/E107.A_2022EAP1157/_article/-char/ja/"
+        },
+        {
+          "rank": 10,
+          "title": "DFAM-DETR: Deformable Feature Based Attention Mechanism DETR on Slender Object Detection",
+          "title_ja": "",
+          "title_en": "DFAM-DETR: Deformable Feature Based Attention Mechanism DETR on Slender Object Detection",
+          "doi": "10.1587/transinf.2022EDP7111",
+          "year": "2023",
+          "url": "https://www.jstage.jst.go.jp/article/transinf/E106.D/3/E106.D_2022EDP7111/_article/-char/ja/"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBJST04.xml",
+      "http_status": 200,
+      "response_type": "application/xml",
+      "effective_url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=defect+classification+transformer&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "response_bytes": 17561,
+      "status": "取得済み",
+      "result_scope": "先頭から1–10件目の書誌",
+      "server_time": "2026-11-11T09:49+09:00",
+      "response_status": {
+        "status": "0",
+        "message": ""
+      },
+      "comparison_counted": true,
+      "result_rows": 10
+    },
+    {
+      "search_id": "DBCNI04",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工業欠陥・ViT",
+      "query": "defect classification transformer",
+      "query_variant": "英語・広い",
+      "route": "公式論文検索画面 GET",
+      "url": "https://cir.nii.ac.jp/articles?q=defect+classification+transformer&from=2015&until=2026&count=20&sortorder=4",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:57.078+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": null,
+      "retrieved_count": null,
+      "returned_count": null,
+      "results": [],
+      "raw_path": null,
+      "http_status": 202,
+      "response_type": "text/html; charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/articles?q=defect+classification+transformer&from=2015&until=2026&count=20&sortorder=4",
+      "response_bytes": 0,
+      "status": "取得不可",
+      "result_scope": "HTTP応答のみ。検索結果本文0バイト。総件数は不明",
+      "comparison_counted": false,
+      "result_rows": 0
+    },
+    {
+      "search_id": "DBJST05",
+      "platform": "J-STAGE",
+      "database": "J-STAGE",
+      "scope": "工業欠陥・ViT",
+      "query": "外観検査 欠陥 分類 Transformer",
+      "query_variant": "日本語・絞込",
+      "route": "公式記事WebAPI GET",
+      "url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=%E5%A4%96%E8%A6%B3%E6%A4%9C%E6%9F%BB+%E6%AC%A0%E9%99%A5+%E5%88%86%E9%A1%9E+Transformer&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "requested_page": 1,
+      "requested_count": 10,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:57.611+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": 6,
+      "retrieved_count": 6,
+      "returned_count": 6,
+      "results": [
+        {
+          "rank": 1,
+          "title": "In-Context Learningを使用した大規模視覚言語モデルによる少数の例示画像付き外観検査",
+          "title_ja": "In-Context Learningを使用した大規模視覚言語モデルによる少数の例示画像付き外観検査",
+          "title_en": "Large Vision-Language Model Can Few-Shot Anomaly Detection by In-Context Learning",
+          "doi": "10.2493/jjspe.91.418",
+          "year": "2025",
+          "url": "https://www.jstage.jst.go.jp/article/jjspe/91/3/91_418/_article/-char/ja/"
+        },
+        {
+          "rank": 2,
+          "title": "大域文脈情報を導入した深層学習とファジー推論を用いた洋ナシ等級判定手法の研究",
+          "title_ja": "大域文脈情報を導入した深層学習とファジー推論を用いた洋ナシ等級判定手法の研究",
+          "title_en": "Pear Grading Using Deep Learning with Global Context Information and Fuzzy Inference",
+          "doi": "10.3173/air.35.69",
+          "year": "2026",
+          "url": "https://www.jstage.jst.go.jp/article/air/35/2/35_69/_article/-char/ja/"
+        },
+        {
+          "rank": 3,
+          "title": "深層学習を用いた人・もの工場内センシング技術の開発",
+          "title_ja": "深層学習を用いた人・もの工場内センシング技術の開発",
+          "title_en": "Development of Sensing Technology for Human and Object Recognition Using Deep Learning in Plant",
+          "doi": "10.11509/isciesci.67.2_66",
+          "year": "2023",
+          "url": "https://www.jstage.jst.go.jp/article/isciesci/67/2/67_66/_article/-char/ja/"
+        },
+        {
+          "rank": 4,
+          "title": "深層学習による材料分野の画像解析の発展",
+          "title_ja": "深層学習による材料分野の画像解析の発展",
+          "title_en": "Advances in Image Analysis for Materials Using Deep Learning",
+          "doi": "10.2320/materia.63.371",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/materia/63/6/63_371/_article/-char/ja/"
+        },
+        {
+          "rank": 5,
+          "title": "工業製品のわずかな表面変化を区別するための擬似欠陥を構成するパラメータの推定に基づく事前学習と異常検知",
+          "title_ja": "工業製品のわずかな表面変化を区別するための擬似欠陥を構成するパラメータの推定に基づく事前学習と異常検知",
+          "title_en": "Anomaly Detection by Pre-Training Based on Estimation of Parameters Constituting Pseudo Defects to Distinguish Subtle Surface Variations in Industrial Products",
+          "doi": "10.2493/jjspe.91.1017",
+          "year": "2025",
+          "url": "https://www.jstage.jst.go.jp/article/jjspe/91/10/91_1017/_article/-char/ja/"
+        },
+        {
+          "rank": 6,
+          "title": "論文集-6",
+          "title_ja": "論文集-6",
+          "title_en": "Articles-6",
+          "doi": "10.5057/jskeproceedings.2.2.0_1180",
+          "year": "2025",
+          "url": "https://www.jstage.jst.go.jp/article/jskeproceedings/2.2/0/2.2_1180/_article/-char/ja/"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBJST05.xml",
+      "http_status": 200,
+      "response_type": "application/xml",
+      "effective_url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=%E5%A4%96%E8%A6%B3%E6%A4%9C%E6%9F%BB+%E6%AC%A0%E9%99%A5+%E5%88%86%E9%A1%9E+Transformer&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "response_bytes": 11503,
+      "status": "取得済み",
+      "result_scope": "先頭から1–6件目の書誌",
+      "server_time": "2026-11-11T09:49+09:00",
+      "response_status": {
+        "status": "0",
+        "message": ""
+      },
+      "comparison_counted": true,
+      "result_rows": 6
+    },
+    {
+      "search_id": "DBCNI05",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工業欠陥・ViT",
+      "query": "外観検査 欠陥 分類 Transformer",
+      "query_variant": "日本語・絞込",
+      "route": "公式論文検索画面 GET",
+      "url": "https://cir.nii.ac.jp/articles?q=%E5%A4%96%E8%A6%B3%E6%A4%9C%E6%9F%BB+%E6%AC%A0%E9%99%A5+%E5%88%86%E9%A1%9E+Transformer&from=2015&until=2026&count=20&sortorder=4",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:57.986+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": null,
+      "retrieved_count": null,
+      "returned_count": null,
+      "results": [],
+      "raw_path": null,
+      "http_status": 202,
+      "response_type": "text/html; charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/articles?q=%E5%A4%96%E8%A6%B3%E6%A4%9C%E6%9F%BB+%E6%AC%A0%E9%99%A5+%E5%88%86%E9%A1%9E+Transformer&from=2015&until=2026&count=20&sortorder=4",
+      "response_bytes": 0,
+      "status": "取得不可",
+      "result_scope": "HTTP応答のみ。検索結果本文0バイト。総件数は不明",
+      "comparison_counted": false,
+      "result_rows": 0
+    },
+    {
+      "search_id": "DBJST06",
+      "platform": "J-STAGE",
+      "database": "J-STAGE",
+      "scope": "工業欠陥・VLM/MLLM",
+      "query": "defect classification vision language model",
+      "query_variant": "英語・VLM/MLLM",
+      "route": "公式記事WebAPI GET",
+      "url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=defect+classification+vision+language+model&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "requested_page": 1,
+      "requested_count": 10,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:58.859+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": 104,
+      "retrieved_count": 10,
+      "returned_count": 10,
+      "results": [
+        {
+          "rank": 1,
+          "title": "Defect detection of bearing side face based on sample data augmentation and convolutional neural network",
+          "title_ja": "",
+          "title_en": "Defect detection of bearing side face based on sample data augmentation and convolutional neural network",
+          "doi": "10.1299/jamdsm.2023jamdsm0071",
+          "year": "2023",
+          "url": "https://www.jstage.jst.go.jp/article/jamdsm/17/6/17_2023jamdsm0071/_article/-char/ja/"
+        },
+        {
+          "rank": 2,
+          "title": "A high-effective multitask surface defect detection method based on CBAM and atrous convolution",
+          "title_ja": "",
+          "title_en": "A high-effective multitask surface defect detection method based on CBAM and atrous convolution",
+          "doi": "10.1299/jamdsm.2022jamdsm0063",
+          "year": "2022",
+          "url": "https://www.jstage.jst.go.jp/article/jamdsm/16/6/16_2022jamdsm0063/_article/-char/ja/"
+        },
+        {
+          "rank": 3,
+          "title": "Toward Reusable Engineering Knowledge:",
+          "title_ja": "",
+          "title_en": "Toward Reusable Engineering Knowledge:",
+          "doi": "10.1299/jsmelem.2025.11.OS04-11",
+          "year": "2025",
+          "url": "https://www.jstage.jst.go.jp/article/jsmelem/2025.11/0/2025.11_OS04-11/_article/-char/ja/"
+        },
+        {
+          "rank": 4,
+          "title": "Artificial intelligence in infrastructure management",
+          "title_ja": "",
+          "title_en": "Artificial intelligence in infrastructure management",
+          "doi": "10.11532/jsceiiai.5.2_95",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/jsceiiai/5/2/5_95/_article/-char/ja/"
+        },
+        {
+          "rank": 5,
+          "title": "Research on detection of loosening and missing defects in petrochemical equipment bolt fasteners based on improved YOLOv5s",
+          "title_ja": "",
+          "title_en": "Research on detection of loosening and missing defects in petrochemical equipment bolt fasteners based on improved YOLOv5s",
+          "doi": "10.1299/jamdsm.2026jamdsm0013",
+          "year": "2026",
+          "url": "https://www.jstage.jst.go.jp/article/jamdsm/20/2/20_2026jamdsm0013/_article/-char/ja/"
+        },
+        {
+          "rank": 6,
+          "title": "Pilot Study on Tree Hazard Risk Assessment with Limited Data",
+          "title_ja": "",
+          "title_en": "Pilot Study on Tree Hazard Risk Assessment with Limited Data",
+          "doi": "10.11532/jsceim.2.1_279",
+          "year": "2023",
+          "url": "https://www.jstage.jst.go.jp/article/jsceim/2/1/2_279/_article/-char/ja/"
+        },
+        {
+          "rank": 7,
+          "title": "Using image captioning for automatic post-disaster damage detection and identification",
+          "title_ja": "",
+          "title_en": "Using image captioning for automatic post-disaster damage detection and identification",
+          "doi": "10.11532/jsceiiai.4.2_66",
+          "year": "2023",
+          "url": "https://www.jstage.jst.go.jp/article/jsceiiai/4/2/4_66/_article/-char/ja/"
+        },
+        {
+          "rank": 8,
+          "title": "FA-YOLO: A High-Precision and Efficient Method for Fabric Defect Detection in Textile Industry",
+          "title_ja": "",
+          "title_en": "FA-YOLO: A High-Precision and Efficient Method for Fabric Defect Detection in Textile Industry",
+          "doi": "10.1587/transfun.2023EAP1030",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/transfun/E107.A/6/E107.A_2023EAP1030/_article/-char/ja/"
+        },
+        {
+          "rank": 9,
+          "title": "Bayesian deep learning: A model-based interpretable approach",
+          "title_ja": "",
+          "title_en": "Bayesian deep learning: A model-based interpretable approach",
+          "doi": "10.1587/nolta.11.16",
+          "year": "2020",
+          "url": "https://www.jstage.jst.go.jp/article/nolta/11/1/11_16/_article/-char/ja/"
+        },
+        {
+          "rank": 10,
+          "title": "Resformer-Unet: A U-shaped Framework Combining ResNet and Transformer for Segmentation of Strip Steel Surface Defects",
+          "title_ja": "",
+          "title_en": "Resformer-Unet: A U-shaped Framework Combining ResNet and Transformer for Segmentation of Strip Steel Surface Defects",
+          "doi": "10.2355/isijinternational.ISIJINT-2023-222",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/isijinternational/64/1/64_ISIJINT-2023-222/_article/-char/ja/"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBJST06.xml",
+      "http_status": 200,
+      "response_type": "application/xml",
+      "effective_url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=defect+classification+vision+language+model&sortflg=1&start=1&count=10&pubyearfrom=2015&pubyearto=2026",
+      "response_bytes": 17676,
+      "status": "取得済み",
+      "result_scope": "先頭から1–10件目の書誌",
+      "server_time": "2026-11-11T09:49+09:00",
+      "response_status": {
+        "status": "0",
+        "message": ""
+      },
+      "comparison_counted": true,
+      "result_rows": 10
+    },
+    {
+      "search_id": "DBCNI06",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工業欠陥・VLM/MLLM",
+      "query": "defect classification vision language model",
+      "query_variant": "英語・VLM/MLLM",
+      "route": "公式論文検索画面 GET",
+      "url": "https://cir.nii.ac.jp/articles?q=defect+classification+vision+language+model&from=2015&until=2026&count=20&sortorder=4",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:59.239+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": null,
+      "retrieved_count": null,
+      "returned_count": null,
+      "results": [],
+      "raw_path": null,
+      "http_status": 202,
+      "response_type": "text/html; charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/articles?q=defect+classification+vision+language+model&from=2015&until=2026&count=20&sortorder=4",
+      "response_bytes": 0,
+      "status": "取得不可",
+      "result_scope": "HTTP応答のみ。検索結果本文0バイト。総件数は不明",
+      "comparison_counted": false,
+      "result_rows": 0
+    },
+    {
+      "search_id": "DBJST07",
+      "platform": "J-STAGE",
+      "database": "J-STAGE",
+      "scope": "工具・実写",
+      "query": "工具摩耗 画像",
+      "query_variant": "ページ取得検証",
+      "route": "公式記事WebAPI GET",
+      "url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F&sortflg=1&start=11&count=10&pubyearfrom=2015&pubyearto=2026",
+      "requested_page": 2,
+      "requested_count": 10,
+      "page": 2,
+      "executed_at": "2026-11-11T09:49:59.349+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": 277,
+      "retrieved_count": 10,
+      "returned_count": 10,
+      "results": [
+        {
+          "rank": 11,
+          "title": "プラズマ窒化されたステンレス鋼の超精密切削において窒化前の表面処理が及ぼす影響（第2報）",
+          "title_ja": "プラズマ窒化されたステンレス鋼の超精密切削において窒化前の表面処理が及ぼす影響（第2報）",
+          "title_en": "",
+          "doi": "10.11522/pscjspe.2026S.0_287",
+          "year": "2026",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2026S/0/2026S_287/_article/-char/ja/"
+        },
+        {
+          "rank": 12,
+          "title": "エンドミル工具摩耗のインプロセス検出に関する研究",
+          "title_ja": "エンドミル工具摩耗のインプロセス検出に関する研究",
+          "title_en": "In-process Detection of End mill Tool Wear",
+          "doi": "10.1299/jsmekyushu.2017.70.902",
+          "year": "2017",
+          "url": "https://www.jstage.jst.go.jp/article/jsmekyushu/2017.70/0/2017.70_902/_article/-char/ja/"
+        },
+        {
+          "rank": 13,
+          "title": "窒化された鋼の超精密切削において窒化前の熱処理が及ぼす影響（第3報）",
+          "title_ja": "窒化された鋼の超精密切削において窒化前の熱処理が及ぼす影響（第3報）",
+          "title_en": "",
+          "doi": "10.11522/pscjspe.2021S.0_279",
+          "year": "2021",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2021S/0/2021S_279/_article/-char/ja/"
+        },
+        {
+          "rank": 14,
+          "title": "プラズマ窒化されたステンレス鋼の超精密切削において窒化前の表面処理が及ぼす影響",
+          "title_ja": "プラズマ窒化されたステンレス鋼の超精密切削において窒化前の表面処理が及ぼす影響",
+          "title_en": "",
+          "doi": "10.11522/pscjspe.2022A.0_359",
+          "year": "2022",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2022A/0/2022A_359/_article/-char/ja/"
+        },
+        {
+          "rank": 15,
+          "title": "浸炭した鋼のダイヤモンド切削においてミクロ組織が工具摩耗に及ぼす影響",
+          "title_ja": "浸炭した鋼のダイヤモンド切削においてミクロ組織が工具摩耗に及ぼす影響",
+          "title_en": "",
+          "doi": "10.11522/pscjspe.2017S.0_645",
+          "year": "2017",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2017S/0/2017S_645/_article/-char/ja/"
+        },
+        {
+          "rank": 16,
+          "title": "アコースティックエミッション法を用いた切削状態の監視に関する実験的検討",
+          "title_ja": "アコースティックエミッション法を用いた切削状態の監視に関する実験的検討",
+          "title_en": "Experimental Study on Monitoring of Cutting Process by Acoustic Emission Method",
+          "doi": "10.18914/tribologist.17-00028",
+          "year": "2018",
+          "url": "https://www.jstage.jst.go.jp/article/tribologist/63/7/63_17-00028/_article/-char/ja/"
+        },
+        {
+          "rank": 17,
+          "title": "画像処理によるスローアウェイチップ摩耗における自動検査法の開発",
+          "title_ja": "画像処理によるスローアウェイチップ摩耗における自動検査法の開発",
+          "title_en": "Development of an Image Processing Method for Automatic Inspection of Wear of Throw-away Tips",
+          "doi": "10.1541/ieejeiss.137.1488",
+          "year": "2017",
+          "url": "https://www.jstage.jst.go.jp/article/ieejeiss/137/11/137_1488/_article/-char/ja/"
+        },
+        {
+          "rank": 18,
+          "title": "無電解Ni-Pの超精密旋削における単結晶ダイヤモンド工具の摩耗",
+          "title_ja": "無電解Ni-Pの超精密旋削における単結晶ダイヤモンド工具の摩耗",
+          "title_en": "",
+          "doi": "10.11522/pscjspe.2024S.0_735",
+          "year": "2024",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2024S/0/2024S_735/_article/-char/ja/"
+        },
+        {
+          "rank": 19,
+          "title": "機械学習を用いたミリング加工時の加速度データ解析による工具摩耗の推定",
+          "title_ja": "機械学習を用いたミリング加工時の加速度データ解析による工具摩耗の推定",
+          "title_en": "Estimation of Tool Wear by Analyzing Acceleration Data in Milling Process Using Machine Learning",
+          "doi": "10.11522/pscjspe.2021A.0_413",
+          "year": "2021",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2021A/0/2021A_413/_article/-char/ja/"
+        },
+        {
+          "rank": 20,
+          "title": "極短時間切削によるインコネル718の高速切削における工具摩耗抑止",
+          "title_ja": "極短時間切削によるインコネル718の高速切削における工具摩耗抑止",
+          "title_en": "Suppression of tool wear in high speed cutting of Inconel 718 by extremely short time intermittent-cutting",
+          "doi": "10.11522/pscjspe.2016A.0_603",
+          "year": "2016",
+          "url": "https://www.jstage.jst.go.jp/article/pscjspe/2016A/0/2016A_603/_article/-char/ja/"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBJST07.xml",
+      "http_status": 200,
+      "response_type": "application/xml",
+      "effective_url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F&sortflg=1&start=11&count=10&pubyearfrom=2015&pubyearto=2026",
+      "response_bytes": 20866,
+      "status": "取得済み",
+      "result_scope": "先頭から11–20件目の書誌",
+      "server_time": "2026-11-11T09:49+09:00",
+      "response_status": {
+        "status": "0",
+        "message": ""
+      },
+      "comparison_counted": true,
+      "result_rows": 10
+    },
+    {
+      "search_id": "DBCNI07",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工具・実写",
+      "query": "工具摩耗 画像",
+      "query_variant": "日本語・広い",
+      "route": "公式OpenSearch v1 GET（appidなしの公開可否確認）",
+      "url": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F&from=2015&until=2026&count=20&start=1&format=json",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:59.357+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": 10,
+      "retrieved_count": 10,
+      "returned_count": 10,
+      "results": [
+        {
+          "rank": 1,
+          "title": "画像認識とAI活用による工具摩耗判定",
+          "doi": "",
+          "year": "2020-05",
+          "url": "https://cir.nii.ac.jp/crid/1520854804747176320"
+        },
+        {
+          "rank": 2,
+          "title": "AI画像認識による旋削中の工具摩耗量の推定",
+          "doi": "10.11522/pscjspe.2022a.0_175",
+          "year": "2022-08-25",
+          "url": "https://cir.nii.ac.jp/crid/1390013784258664064"
+        },
+        {
+          "rank": 3,
+          "title": "切りくず裏面温度分布画像のAI分析による５種の工具摩耗量の同時推定",
+          "doi": "10.11522/pscjspe.2024a.0_239",
+          "year": "2024-08-22",
+          "url": "https://cir.nii.ac.jp/crid/1390021846534178944"
+        },
+        {
+          "rank": 4,
+          "title": "浸炭した鋼のダイヤモンド切削において炭化物が工具摩耗抑制に及ぼす影響",
+          "doi": "10.11522/pscjspe.2015s.0_301",
+          "year": "2015",
+          "url": "https://cir.nii.ac.jp/crid/1390282680636836736"
+        },
+        {
+          "rank": 5,
+          "title": "画像処理によるスローアウェイチップ摩耗における自動検査法の開発",
+          "doi": "10.1541/ieejeiss.137.1488",
+          "year": "2017",
+          "url": "https://cir.nii.ac.jp/crid/1390001204611313280"
+        },
+        {
+          "rank": 6,
+          "title": "ギヤスカイビング工具の寿命判定用画像式摩耗検出システムの開発（第4報）",
+          "doi": "10.11522/pscjspe.2025s.0_756",
+          "year": "2025-03-05",
+          "url": "https://cir.nii.ac.jp/crid/1390305433583339776"
+        },
+        {
+          "rank": 7,
+          "title": "NC旋盤を対象とした加工最適化システムの開発",
+          "doi": "10.11522/pscjspe.2024s.0_20",
+          "year": "2024-02-28",
+          "url": "https://cir.nii.ac.jp/crid/1390019833533525248"
+        },
+        {
+          "rank": 8,
+          "title": "ギヤスカイビング工具の寿命判定用画像式摩耗検出システムの開発",
+          "doi": "10.11522/pscjspe.2023a.0_98",
+          "year": "2023-08-31",
+          "url": "https://cir.nii.ac.jp/crid/1390017843875514368"
+        },
+        {
+          "rank": 9,
+          "title": "湿式環境下における画像処理を用いた前逃げ面摩耗幅測定の検討",
+          "doi": "10.11522/pscjspe.2025a.0_440",
+          "year": "2025-09-04",
+          "url": "https://cir.nii.ac.jp/crid/1390870385391654784"
+        },
+        {
+          "rank": 10,
+          "title": "NC旋盤を対象とした加工最適化システムの開発",
+          "doi": "10.11522/pscjspe.2023s.0_96",
+          "year": "2023-03-01",
+          "url": "https://cir.nii.ac.jp/crid/1390015830353147904"
+        }
+      ],
+      "raw_path": null,
+      "http_status": 200,
+      "response_type": "application/json;charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F&from=2015&until=2026&count=20&start=1&format=json",
+      "response_bytes": 15567,
+      "status": "取得済み",
+      "result_scope": "接続確認。同じ検索式・同ページを再取得して原応答を保存したため、延べ取得集計外",
+      "comparison_counted": false,
+      "result_rows": 10
+    },
+    {
+      "search_id": "DBCNI08",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工業欠陥・ViT",
+      "query": "defect classification transformer",
+      "query_variant": "英語・広い",
+      "route": "公式OpenSearch v2 GET（appidなしの公開可否確認）",
+      "url": "https://cir.nii.ac.jp/opensearch/v2/articles?q=defect+classification+transformer&from=2015&until=2026&count=20&start=1&format=json",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:49:59.386+09:00",
+      "filters": "発行年2015–2026。J-STAGEスコア順、CiNii画面関連度順",
+      "total_hits": 51,
+      "retrieved_count": 20,
+      "returned_count": 20,
+      "results": [
+        {
+          "rank": 1,
+          "title": "Hybrid Architecture Based on CNN and Transformer for Strip Steel Surface Defect Classification",
+          "doi": "10.3390/electronics11081200",
+          "year": "2022-04-09",
+          "url": "https://cir.nii.ac.jp/crid/1360580235271367424"
+        },
+        {
+          "rank": 2,
+          "title": "Wood defect classification based on lightweight convolutional neural networks",
+          "doi": "10.15376/biores.18.4.7663-7680",
+          "year": "2023-09-27",
+          "url": "https://cir.nii.ac.jp/crid/1360306913835409024"
+        },
+        {
+          "rank": 3,
+          "title": "Weft-knitted fabric defect classification based on a Swin transformer deformable convolutional network",
+          "doi": "10.1177/00405175221137010",
+          "year": "2022-11-23",
+          "url": "https://cir.nii.ac.jp/crid/1360590690676609920"
+        },
+        {
+          "rank": 4,
+          "title": "UnionMixup and max-min-saliency mixup for mixed-type defect recognition of wafer bin maps",
+          "doi": "10.1587/elex.21.20240054",
+          "year": "2024-05-25",
+          "url": "https://cir.nii.ac.jp/crid/1390581766253720832"
+        },
+        {
+          "rank": 5,
+          "title": "An Effective Surface Defect Classification Method Based on RepVGG with CBAM Attention Mechanism (RepVGG-CBAM) for Aluminum Profiles",
+          "doi": "10.3390/met12111809",
+          "year": "2022-10-25",
+          "url": "https://cir.nii.ac.jp/crid/1873961342853799296"
+        },
+        {
+          "rank": 6,
+          "title": "Online Surface Defect Identification of Cold Rolled Strips Based on Local Binary Pattern and Extreme Learning Machine",
+          "doi": "10.3390/met8030197",
+          "year": "2018-03-20",
+          "url": "https://cir.nii.ac.jp/crid/1360855571121463552"
+        },
+        {
+          "rank": 7,
+          "title": "Application of Shearlet transform to classification of surface defects for metals",
+          "doi": "10.1016/j.imavis.2015.01.001",
+          "year": "2015-03",
+          "url": "https://cir.nii.ac.jp/crid/1363670318953778048"
+        },
+        {
+          "rank": 8,
+          "title": "Photovoltaic cell defect classification using convolutional neural network and support vector machine",
+          "doi": "10.1049/iet-rpg.2019.1342",
+          "year": "2020-10",
+          "url": "https://cir.nii.ac.jp/crid/1360588389269736960"
+        },
+        {
+          "rank": 9,
+          "title": "An Effective Surface Defect Classification Method Based on RepVGG with CBAM Attention Mechanism (RepVGG-CBAM) for Aluminum Profiles",
+          "doi": "",
+          "year": "2022-10-25",
+          "url": "https://cir.nii.ac.jp/crid/1050585658871865344"
+        },
+        {
+          "rank": 10,
+          "title": "Wood Defect Detection Based on Depth Extreme Learning Machine",
+          "doi": "10.3390/app10217488",
+          "year": "2020-10-24",
+          "url": "https://cir.nii.ac.jp/crid/1360869860204952192"
+        },
+        {
+          "rank": 11,
+          "title": "Feature Extraction with Discrete Non-Separable Shearlet Transform and Its Application to Surface Inspection of Continuous Casting Slabs",
+          "doi": "10.3390/app9214668",
+          "year": "2019-11-01",
+          "url": "https://cir.nii.ac.jp/crid/1360023721182289280"
+        },
+        {
+          "rank": 12,
+          "title": "An improved Vision Transformer-based method for classifying surface defects in hot-rolled strip steel",
+          "doi": "10.1088/1742-6596/2082/1/012016",
+          "year": "2021-11-01",
+          "url": "https://cir.nii.ac.jp/crid/1360016866461279232"
+        },
+        {
+          "rank": 13,
+          "title": "Enhancing Furcation Involvement Classification on Panoramic Radiographs with Vision Transformers",
+          "doi": "10.2139/ssrn.4939032",
+          "year": "2024-01-01",
+          "url": "https://cir.nii.ac.jp/crid/1870587969841392896"
+        },
+        {
+          "rank": 14,
+          "title": "Study on the Influence of Measuring AE Sensor Type on the Effectiveness of OLTC Defect Classification",
+          "doi": "10.3390/s20113095",
+          "year": "2020-05-30",
+          "url": "https://cir.nii.ac.jp/crid/1360580237153457536"
+        },
+        {
+          "rank": 15,
+          "title": "2025A-IS-2 Development of a Real-Time Defect Detection and Classification Technique for DC-GMAW Using CNN",
+          "doi": "10.14856/conf.41.0_5",
+          "year": "2025-11-17",
+          "url": "https://cir.nii.ac.jp/crid/1390871635046325248"
+        },
+        {
+          "rank": 16,
+          "title": "Critically Compressed Quantized Convolution Neural Network based High Frame Rate and Ultra-Low Delay Fruit External Defects Detection",
+          "doi": "10.23919/mva51890.2021.9511388",
+          "year": "2021-07-25",
+          "url": "https://cir.nii.ac.jp/crid/1360302869448976640"
+        },
+        {
+          "rank": 17,
+          "title": "Resformer-Unet: A U-shaped Framework Combining ResNet and Transformer for Segmentation of Strip Steel Surface Defects",
+          "doi": "10.2355/isijinternational.isijint-2023-222",
+          "year": "2024-01-15",
+          "url": "https://cir.nii.ac.jp/crid/1390298820574492928"
+        },
+        {
+          "rank": 18,
+          "title": "A Vision Transformer-Based Approach to Bearing Fault Classification via Vibration Signals",
+          "doi": "10.23919/apsipaasc55919.2022.9980013",
+          "year": "2022-11-07",
+          "url": "https://cir.nii.ac.jp/crid/1360306914404950784"
+        },
+        {
+          "rank": 19,
+          "title": "Surface defect detection and classification of steel using an efficient Swin Transformer",
+          "doi": "10.1016/j.aei.2023.102061",
+          "year": "2023-08",
+          "url": "https://cir.nii.ac.jp/crid/1360027093863329408"
+        },
+        {
+          "rank": 20,
+          "title": "Deep Anomaly Detection for Automotive Components by Oversampling",
+          "doi": "10.17929/tqs.9.18",
+          "year": "2023-10-10",
+          "url": "https://cir.nii.ac.jp/crid/1390579222505737856"
+        }
+      ],
+      "raw_path": null,
+      "http_status": 200,
+      "response_type": "application/json;charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/opensearch/v2/articles?q=defect+classification+transformer&from=2015&until=2026&count=20&start=1&format=json",
+      "response_bytes": 47764,
+      "status": "取得済み",
+      "result_scope": "接続確認。同じ検索式・同ページを再取得して原応答を保存したため、延べ取得集計外",
+      "comparison_counted": false,
+      "result_rows": 20
+    },
+    {
+      "search_id": "DBCNI09",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工具・実写",
+      "query": "工具摩耗 画像",
+      "query_variant": "日本語・広い",
+      "route": "公式OpenSearch v1 GET（appid無指定）",
+      "url": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:51:04.167+09:00",
+      "filters": "発行年2015–2026、関連度順（sortorder=4）",
+      "total_hits": 10,
+      "retrieved_count": 10,
+      "returned_count": 10,
+      "results": [
+        {
+          "rank": 1,
+          "title": "画像認識とAI活用による工具摩耗判定",
+          "doi": "",
+          "year": "2020-05",
+          "url": "https://cir.nii.ac.jp/crid/1520854804747176320"
+        },
+        {
+          "rank": 2,
+          "title": "AI画像認識による旋削中の工具摩耗量の推定",
+          "doi": "10.11522/pscjspe.2022a.0_175",
+          "year": "2022-08-25",
+          "url": "https://cir.nii.ac.jp/crid/1390013784258664064"
+        },
+        {
+          "rank": 3,
+          "title": "切りくず裏面温度分布画像のAI分析による５種の工具摩耗量の同時推定",
+          "doi": "10.11522/pscjspe.2024a.0_239",
+          "year": "2024-08-22",
+          "url": "https://cir.nii.ac.jp/crid/1390021846534178944"
+        },
+        {
+          "rank": 4,
+          "title": "浸炭した鋼のダイヤモンド切削において炭化物が工具摩耗抑制に及ぼす影響",
+          "doi": "10.11522/pscjspe.2015s.0_301",
+          "year": "2015",
+          "url": "https://cir.nii.ac.jp/crid/1390282680636836736"
+        },
+        {
+          "rank": 5,
+          "title": "画像処理によるスローアウェイチップ摩耗における自動検査法の開発",
+          "doi": "10.1541/ieejeiss.137.1488",
+          "year": "2017",
+          "url": "https://cir.nii.ac.jp/crid/1390001204611313280"
+        },
+        {
+          "rank": 6,
+          "title": "ギヤスカイビング工具の寿命判定用画像式摩耗検出システムの開発（第4報）",
+          "doi": "10.11522/pscjspe.2025s.0_756",
+          "year": "2025-03-05",
+          "url": "https://cir.nii.ac.jp/crid/1390305433583339776"
+        },
+        {
+          "rank": 7,
+          "title": "NC旋盤を対象とした加工最適化システムの開発",
+          "doi": "10.11522/pscjspe.2024s.0_20",
+          "year": "2024-02-28",
+          "url": "https://cir.nii.ac.jp/crid/1390019833533525248"
+        },
+        {
+          "rank": 8,
+          "title": "ギヤスカイビング工具の寿命判定用画像式摩耗検出システムの開発",
+          "doi": "10.11522/pscjspe.2023a.0_98",
+          "year": "2023-08-31",
+          "url": "https://cir.nii.ac.jp/crid/1390017843875514368"
+        },
+        {
+          "rank": 9,
+          "title": "湿式環境下における画像処理を用いた前逃げ面摩耗幅測定の検討",
+          "doi": "10.11522/pscjspe.2025a.0_440",
+          "year": "2025-09-04",
+          "url": "https://cir.nii.ac.jp/crid/1390870385391654784"
+        },
+        {
+          "rank": 10,
+          "title": "NC旋盤を対象とした加工最適化システムの開発",
+          "doi": "10.11522/pscjspe.2023s.0_96",
+          "year": "2023-03-01",
+          "url": "https://cir.nii.ac.jp/crid/1390015830353147904"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBCNI09.json",
+      "http_status": 200,
+      "response_type": "application/json;charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "response_bytes": 15595,
+      "result_scope": "1–10件目の書誌",
+      "start_index": 1,
+      "items_per_page": 10,
+      "status": "取得済み",
+      "comparison_counted": true,
+      "result_rows": 10
+    },
+    {
+      "search_id": "DBCNI10",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工具・実写",
+      "query": "tool wear image classification",
+      "query_variant": "英語・分類",
+      "route": "公式OpenSearch v1 GET（appid無指定）",
+      "url": "https://cir.nii.ac.jp/opensearch/articles?q=tool+wear+image+classification&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:51:04.200+09:00",
+      "filters": "発行年2015–2026、関連度順（sortorder=4）",
+      "total_hits": 9,
+      "retrieved_count": 9,
+      "returned_count": 9,
+      "results": [
+        {
+          "rank": 1,
+          "title": "Image-based classification of ball end-mill wear states using time-series visualization and Lab color space analysis",
+          "doi": "10.1299/jamdsm.2026jamdsm0060",
+          "year": "2026",
+          "url": "https://cir.nii.ac.jp/crid/1390872851658470144"
+        },
+        {
+          "rank": 2,
+          "title": "Development of tool-life time determination system using current value data imaged using recurrence plotting method",
+          "doi": "10.1299/jsmelem.2025.11.os04-3",
+          "year": "2025",
+          "url": "https://cir.nii.ac.jp/crid/1390590160069251968"
+        },
+        {
+          "rank": 3,
+          "title": "異常検知と画像分類を併用したボールエンドミル摩耗状態判定システムの開発",
+          "doi": "10.1299/transjsme.24-00127",
+          "year": "2024",
+          "url": "https://cir.nii.ac.jp/crid/1390020143178663040"
+        },
+        {
+          "rank": 4,
+          "title": "Tool Condition Monitoring with Convolutional Neural Network for Milling Tools and Turning Inserts",
+          "doi": "10.9744/jti.25.1.1-16",
+          "year": "2023-04-12",
+          "url": "https://cir.nii.ac.jp/crid/1871150918600703744"
+        },
+        {
+          "rank": 5,
+          "title": "Enhancing Tool Replacement Decisions in Milling of Ti-6Al-4V Using Convolutional Neural Networks and Time-series-to-image Encoding",
+          "doi": "10.2139/ssrn.4657889",
+          "year": "2023",
+          "url": "https://cir.nii.ac.jp/crid/1360300465356490368"
+        },
+        {
+          "rank": 6,
+          "title": "Tool wear classification using time series imaging and deep learning",
+          "doi": "10.1007/s00170-019-04090-6",
+          "year": "2019-07-17",
+          "url": "https://cir.nii.ac.jp/crid/1363670318854810496"
+        },
+        {
+          "rank": 7,
+          "title": "Prediction of Machining Condition Using Time Series Imaging and Deep Learning in Slot Milling of Titanium Alloy",
+          "doi": "10.3390/jmmp6060145",
+          "year": "2022-11-16",
+          "url": "https://cir.nii.ac.jp/crid/1360587984093551104"
+        },
+        {
+          "rank": 8,
+          "title": "画像分類技術を援用したボールエンドミル摩耗状態判定システム",
+          "doi": "",
+          "year": "2026-06",
+          "url": "https://cir.nii.ac.jp/crid/1520027210070737792"
+        },
+        {
+          "rank": 9,
+          "title": "The difference and clinical application of modified thoracolumbar fracture classification scoring system in guiding clinical treatment",
+          "doi": "10.1186/s13018-023-03958-4",
+          "year": "2023-07-11",
+          "url": "https://cir.nii.ac.jp/crid/1360025030626625792"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBCNI10.json",
+      "http_status": 200,
+      "response_type": "application/json;charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/opensearch/articles?q=tool+wear+image+classification&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "response_bytes": 22616,
+      "result_scope": "1–9件目の書誌",
+      "start_index": 1,
+      "items_per_page": 9,
+      "status": "取得済み",
+      "comparison_counted": true,
+      "result_rows": 9
+    },
+    {
+      "search_id": "DBCNI11",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工具・画像＋センサ",
+      "query": "工具摩耗 画像 センサ",
+      "query_variant": "日本語・融合候補",
+      "route": "公式OpenSearch v1 GET（appid無指定）",
+      "url": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F+%E3%82%BB%E3%83%B3%E3%82%B5&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:51:04.224+09:00",
+      "filters": "発行年2015–2026、関連度順（sortorder=4）",
+      "total_hits": 0,
+      "retrieved_count": 0,
+      "returned_count": 0,
+      "results": [],
+      "raw_path": "evidence/raw/database_pilot_japan/DBCNI11.json",
+      "http_status": 200,
+      "response_type": "application/json;charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%B7%A5%E5%85%B7%E6%91%A9%E8%80%97+%E7%94%BB%E5%83%8F+%E3%82%BB%E3%83%B3%E3%82%B5&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "response_bytes": 1142,
+      "result_scope": "DBの明示的0件",
+      "start_index": 1,
+      "items_per_page": 0,
+      "status": "取得済み",
+      "comparison_counted": true,
+      "result_rows": 0
+    },
+    {
+      "search_id": "DBCNI12",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工業欠陥・ViT",
+      "query": "defect classification transformer",
+      "query_variant": "英語・広い",
+      "route": "公式OpenSearch v2 GET（appid無指定）",
+      "url": "https://cir.nii.ac.jp/opensearch/v2/articles?q=defect+classification+transformer&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:51:05.062+09:00",
+      "filters": "発行年2015–2026、関連度順（sortorder=4）",
+      "total_hits": 51,
+      "retrieved_count": 20,
+      "returned_count": 20,
+      "results": [
+        {
+          "rank": 1,
+          "title": "Hybrid Architecture Based on CNN and Transformer for Strip Steel Surface Defect Classification",
+          "doi": "10.3390/electronics11081200",
+          "year": "2022-04-09",
+          "url": "https://cir.nii.ac.jp/crid/1360580235271367424"
+        },
+        {
+          "rank": 2,
+          "title": "Wood defect classification based on lightweight convolutional neural networks",
+          "doi": "10.15376/biores.18.4.7663-7680",
+          "year": "2023-09-27",
+          "url": "https://cir.nii.ac.jp/crid/1360306913835409024"
+        },
+        {
+          "rank": 3,
+          "title": "Weft-knitted fabric defect classification based on a Swin transformer deformable convolutional network",
+          "doi": "10.1177/00405175221137010",
+          "year": "2022-11-23",
+          "url": "https://cir.nii.ac.jp/crid/1360590690676609920"
+        },
+        {
+          "rank": 4,
+          "title": "UnionMixup and max-min-saliency mixup for mixed-type defect recognition of wafer bin maps",
+          "doi": "10.1587/elex.21.20240054",
+          "year": "2024-05-25",
+          "url": "https://cir.nii.ac.jp/crid/1390581766253720832"
+        },
+        {
+          "rank": 5,
+          "title": "An Effective Surface Defect Classification Method Based on RepVGG with CBAM Attention Mechanism (RepVGG-CBAM) for Aluminum Profiles",
+          "doi": "10.3390/met12111809",
+          "year": "2022-10-25",
+          "url": "https://cir.nii.ac.jp/crid/1873961342853799296"
+        },
+        {
+          "rank": 6,
+          "title": "Online Surface Defect Identification of Cold Rolled Strips Based on Local Binary Pattern and Extreme Learning Machine",
+          "doi": "10.3390/met8030197",
+          "year": "2018-03-20",
+          "url": "https://cir.nii.ac.jp/crid/1360855571121463552"
+        },
+        {
+          "rank": 7,
+          "title": "Application of Shearlet transform to classification of surface defects for metals",
+          "doi": "10.1016/j.imavis.2015.01.001",
+          "year": "2015-03",
+          "url": "https://cir.nii.ac.jp/crid/1363670318953778048"
+        },
+        {
+          "rank": 8,
+          "title": "Photovoltaic cell defect classification using convolutional neural network and support vector machine",
+          "doi": "10.1049/iet-rpg.2019.1342",
+          "year": "2020-10",
+          "url": "https://cir.nii.ac.jp/crid/1360588389269736960"
+        },
+        {
+          "rank": 9,
+          "title": "An Effective Surface Defect Classification Method Based on RepVGG with CBAM Attention Mechanism (RepVGG-CBAM) for Aluminum Profiles",
+          "doi": "",
+          "year": "2022-10-25",
+          "url": "https://cir.nii.ac.jp/crid/1050585658871865344"
+        },
+        {
+          "rank": 10,
+          "title": "Wood Defect Detection Based on Depth Extreme Learning Machine",
+          "doi": "10.3390/app10217488",
+          "year": "2020-10-24",
+          "url": "https://cir.nii.ac.jp/crid/1360869860204952192"
+        },
+        {
+          "rank": 11,
+          "title": "Feature Extraction with Discrete Non-Separable Shearlet Transform and Its Application to Surface Inspection of Continuous Casting Slabs",
+          "doi": "10.3390/app9214668",
+          "year": "2019-11-01",
+          "url": "https://cir.nii.ac.jp/crid/1360023721182289280"
+        },
+        {
+          "rank": 12,
+          "title": "An improved Vision Transformer-based method for classifying surface defects in hot-rolled strip steel",
+          "doi": "10.1088/1742-6596/2082/1/012016",
+          "year": "2021-11-01",
+          "url": "https://cir.nii.ac.jp/crid/1360016866461279232"
+        },
+        {
+          "rank": 13,
+          "title": "Enhancing Furcation Involvement Classification on Panoramic Radiographs with Vision Transformers",
+          "doi": "10.2139/ssrn.4939032",
+          "year": "2024-01-01",
+          "url": "https://cir.nii.ac.jp/crid/1870587969841392896"
+        },
+        {
+          "rank": 14,
+          "title": "Study on the Influence of Measuring AE Sensor Type on the Effectiveness of OLTC Defect Classification",
+          "doi": "10.3390/s20113095",
+          "year": "2020-05-30",
+          "url": "https://cir.nii.ac.jp/crid/1360580237153457536"
+        },
+        {
+          "rank": 15,
+          "title": "2025A-IS-2 Development of a Real-Time Defect Detection and Classification Technique for DC-GMAW Using CNN",
+          "doi": "10.14856/conf.41.0_5",
+          "year": "2025-11-17",
+          "url": "https://cir.nii.ac.jp/crid/1390871635046325248"
+        },
+        {
+          "rank": 16,
+          "title": "Critically Compressed Quantized Convolution Neural Network based High Frame Rate and Ultra-Low Delay Fruit External Defects Detection",
+          "doi": "10.23919/mva51890.2021.9511388",
+          "year": "2021-07-25",
+          "url": "https://cir.nii.ac.jp/crid/1360302869448976640"
+        },
+        {
+          "rank": 17,
+          "title": "Resformer-Unet: A U-shaped Framework Combining ResNet and Transformer for Segmentation of Strip Steel Surface Defects",
+          "doi": "10.2355/isijinternational.isijint-2023-222",
+          "year": "2024-01-15",
+          "url": "https://cir.nii.ac.jp/crid/1390298820574492928"
+        },
+        {
+          "rank": 18,
+          "title": "A Vision Transformer-Based Approach to Bearing Fault Classification via Vibration Signals",
+          "doi": "10.23919/apsipaasc55919.2022.9980013",
+          "year": "2022-11-07",
+          "url": "https://cir.nii.ac.jp/crid/1360306914404950784"
+        },
+        {
+          "rank": 19,
+          "title": "Surface defect detection and classification of steel using an efficient Swin Transformer",
+          "doi": "10.1016/j.aei.2023.102061",
+          "year": "2023-08",
+          "url": "https://cir.nii.ac.jp/crid/1360027093863329408"
+        },
+        {
+          "rank": 20,
+          "title": "Deep Anomaly Detection for Automotive Components by Oversampling",
+          "doi": "10.17929/tqs.9.18",
+          "year": "2023-10-10",
+          "url": "https://cir.nii.ac.jp/crid/1390579222505737856"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBCNI12.json",
+      "http_status": 200,
+      "response_type": "application/json;charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/opensearch/v2/articles?q=defect+classification+transformer&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "response_bytes": 47792,
+      "result_scope": "1–20件目の書誌",
+      "start_index": 1,
+      "items_per_page": 20,
+      "status": "取得済み",
+      "comparison_counted": true,
+      "result_rows": 20
+    },
+    {
+      "search_id": "DBCNI13",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工業欠陥・ViT",
+      "query": "外観検査 欠陥 分類 Transformer",
+      "query_variant": "日本語・絞込",
+      "route": "公式OpenSearch v2 GET（appid無指定）",
+      "url": "https://cir.nii.ac.jp/opensearch/v2/articles?q=%E5%A4%96%E8%A6%B3%E6%A4%9C%E6%9F%BB+%E6%AC%A0%E9%99%A5+%E5%88%86%E9%A1%9E+Transformer&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:51:05.090+09:00",
+      "filters": "発行年2015–2026、関連度順（sortorder=4）",
+      "total_hits": 0,
+      "retrieved_count": 0,
+      "returned_count": 0,
+      "results": [],
+      "raw_path": "evidence/raw/database_pilot_japan/DBCNI13.json",
+      "http_status": 200,
+      "response_type": "application/json;charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/opensearch/v2/articles?q=%E5%A4%96%E8%A6%B3%E6%A4%9C%E6%9F%BB+%E6%AC%A0%E9%99%A5+%E5%88%86%E9%A1%9E+Transformer&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "response_bytes": 1176,
+      "result_scope": "DBの明示的0件",
+      "start_index": 1,
+      "items_per_page": 0,
+      "status": "取得済み",
+      "comparison_counted": true,
+      "result_rows": 0
+    },
+    {
+      "search_id": "DBCNI14",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工業欠陥・VLM/MLLM",
+      "query": "defect classification vision language model",
+      "query_variant": "英語・VLM/MLLM",
+      "route": "公式OpenSearch v2 GET（appid無指定）",
+      "url": "https://cir.nii.ac.jp/opensearch/v2/articles?q=defect+classification+vision+language+model&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "requested_page": 1,
+      "requested_count": 20,
+      "page": 1,
+      "executed_at": "2026-11-11T09:51:05.263+09:00",
+      "filters": "発行年2015–2026、関連度順（sortorder=4）",
+      "total_hits": 1,
+      "retrieved_count": 1,
+      "returned_count": 1,
+      "results": [
+        {
+          "rank": 1,
+          "title": "In-Context Learningを使用した大規模視覚言語モデルによる少数の例示画像付き外観検査",
+          "doi": "10.2493/jjspe.91.418",
+          "year": "2025-03-05",
+          "url": "https://cir.nii.ac.jp/crid/1390303465368735104"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBCNI14.json",
+      "http_status": 200,
+      "response_type": "application/json;charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/opensearch/v2/articles?q=defect+classification+vision+language+model&from=2015&until=2026&count=20&start=1&sortorder=4&format=json",
+      "response_bytes": 3293,
+      "result_scope": "1–1件目の書誌",
+      "start_index": 1,
+      "items_per_page": 1,
+      "status": "取得済み",
+      "comparison_counted": true,
+      "result_rows": 1
+    },
+    {
+      "search_id": "DBCNI15",
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "scope": "工業欠陥・ViT",
+      "query": "defect classification transformer",
+      "query_variant": "英語・広い",
+      "route": "公式OpenSearch v2 GET（appid無指定）",
+      "url": "https://cir.nii.ac.jp/opensearch/v2/articles?q=defect+classification+transformer&from=2015&until=2026&count=20&start=21&sortorder=4&format=json",
+      "requested_page": 2,
+      "requested_count": 20,
+      "page": 2,
+      "executed_at": "2026-11-11T09:51:05.268+09:00",
+      "filters": "発行年2015–2026、関連度順（sortorder=4）",
+      "total_hits": 51,
+      "retrieved_count": 20,
+      "returned_count": 20,
+      "results": [
+        {
+          "rank": 21,
+          "title": "Dislocation classification of a large-area β-Ga2O3 single crystal via contrast analysis of affine-transformed X-ray topographs",
+          "doi": "10.1016/j.jcrysgro.2020.125825",
+          "year": "2020-10",
+          "url": "https://cir.nii.ac.jp/crid/1360572092555576576"
+        },
+        {
+          "rank": 22,
+          "title": "Condition Monitoring of Chain Sprocket Drive System Based on IoT Device and Convolutional Neural Network",
+          "doi": "10.1155/2020/8826507",
+          "year": "2020-07-25",
+          "url": "https://cir.nii.ac.jp/crid/1362262944610782336"
+        },
+        {
+          "rank": 23,
+          "title": "Terahertz defect detection method based on significant spectral feature fusion and spiking neural network",
+          "doi": "10.1587/elex.20.20230211",
+          "year": "2023-10-10",
+          "url": "https://cir.nii.ac.jp/crid/1390016262469619968"
+        },
+        {
+          "rank": 24,
+          "title": "Intrinsic color centers in 4H-silicon carbide formed by heavy ion implantation and annealing",
+          "doi": "10.1088/1361-6463/ac3a49",
+          "year": "2021-12-01",
+          "url": "https://cir.nii.ac.jp/crid/1872835442401619712"
+        },
+        {
+          "rank": 25,
+          "title": "Partial Discharge Source Classification for Switchgears with Transient Earth Voltage Sensor Using Convolutional Neural Network",
+          "doi": "10.1109/cmd.2018.8535913",
+          "year": "2018-09-01",
+          "url": "https://cir.nii.ac.jp/crid/1871428067782579712"
+        },
+        {
+          "rank": 26,
+          "title": "Balancing the trade-off between accuracy and interpretability in software defect prediction",
+          "doi": "10.1007/s10664-018-9638-1",
+          "year": "2018-07-25",
+          "url": "https://cir.nii.ac.jp/crid/1363107368968553344"
+        },
+        {
+          "rank": 27,
+          "title": "How I treat higher-risk MDS",
+          "doi": "10.1182/blood.2024025271",
+          "year": "2025-05-01",
+          "url": "https://cir.nii.ac.jp/crid/1360868145899311104"
+        },
+        {
+          "rank": 28,
+          "title": "Superposed Naive Bayes for Accurate and Interpretable Prediction",
+          "doi": "10.1109/icmla.2015.147",
+          "year": "2015-12-01",
+          "url": "https://cir.nii.ac.jp/crid/1873961342291369600"
+        },
+        {
+          "rank": 29,
+          "title": "Design Tool of Deep Convolutional Neural Network for Visual Inspection",
+          "doi": "10.1007/978-3-319-93803-5_57",
+          "year": "2018-01-01",
+          "url": "https://cir.nii.ac.jp/crid/1872272492549398912"
+        },
+        {
+          "rank": 30,
+          "title": "Image-based classification of ball end-mill wear states using time-series visualization and Lab color space analysis",
+          "doi": "10.1299/jamdsm.2026jamdsm0060",
+          "year": "2026",
+          "url": "https://cir.nii.ac.jp/crid/1390872851658470144"
+        },
+        {
+          "rank": 31,
+          "title": "SmartPapyrusが実現する製紙工程DX化のトータルソリューション",
+          "doi": "",
+          "year": "2026-03",
+          "url": "https://cir.nii.ac.jp/crid/1520026271596884096"
+        },
+        {
+          "rank": 32,
+          "title": "Design Tool of Deep Convolutional Neural Network for Intelligent Visual Inspection",
+          "doi": "10.1088/1757-899x/423/1/012073",
+          "year": "2018-11-07",
+          "url": "https://cir.nii.ac.jp/crid/1871432393505861632"
+        },
+        {
+          "rank": 33,
+          "title": "Too many numbers and complexity: time to update the classifications of neurogenetic disorders?",
+          "doi": "10.1136/jmedgenet-2015-103477",
+          "year": "2015-10-30",
+          "url": "https://cir.nii.ac.jp/crid/1873116917435095296"
+        },
+        {
+          "rank": 34,
+          "title": "Improving Phased Array Ultrasonic Test Applicability Using Semi-Supervised Learning and P-DWT Feature Extraction",
+          "doi": "10.11532/jsceiiai.7.2_1",
+          "year": "2026",
+          "url": "https://cir.nii.ac.jp/crid/1390027575486060416"
+        },
+        {
+          "rank": 35,
+          "title": "A Magnetic Resonance Imaging–Based Staging System for Osteochondritis Dissecans of the Elbow: A Validation Study Against the International Cartilage Repair Society Classification",
+          "doi": "10.1177/2325967118794620",
+          "year": "2018-09",
+          "url": "https://cir.nii.ac.jp/crid/1050282677640745088"
+        },
+        {
+          "rank": 36,
+          "title": "Classification of Partial Discharge Sources using Waveform Parameters and Phase-Resolved Partial Discharge Pattern as Input for the Artificial Neural Network",
+          "doi": "10.1109/cmd.2018.8535675",
+          "year": "2018-09",
+          "url": "https://cir.nii.ac.jp/crid/1360016866544413312"
+        },
+        {
+          "rank": 37,
+          "title": "Harmonic flow-field representations of quantum bits and gates",
+          "doi": "10.1103/physrevresearch.6.043039",
+          "year": "2024-10-16",
+          "url": "https://cir.nii.ac.jp/crid/1870025018770720768"
+        },
+        {
+          "rank": 38,
+          "title": "Large Anhysteretic Deformation of Shape Memory Alloys at Postcritical Temperatures and Stresses",
+          "doi": "10.1002/pssb.201700273",
+          "year": "2017-08-18",
+          "url": "https://cir.nii.ac.jp/crid/1360848655210336896"
+        },
+        {
+          "rank": 39,
+          "title": "State of the Art in Directed Energy Deposition: From Additive Manufacturing to Materials Design",
+          "doi": "10.3390/coatings9070418",
+          "year": "2019-06-29",
+          "url": "https://cir.nii.ac.jp/crid/1360857597903161344"
+        },
+        {
+          "rank": 40,
+          "title": "On actions for (entangling) surfaces and DCFTs",
+          "doi": "10.1007/jhep04(2018)100",
+          "year": "2018-04",
+          "url": "https://cir.nii.ac.jp/crid/1360574095061993472"
+        }
+      ],
+      "raw_path": "evidence/raw/database_pilot_japan/DBCNI15.json",
+      "http_status": 200,
+      "response_type": "application/json;charset=UTF-8",
+      "effective_url": "https://cir.nii.ac.jp/opensearch/v2/articles?q=defect+classification+transformer&from=2015&until=2026&count=20&start=21&sortorder=4&format=json",
+      "response_bytes": 50361,
+      "result_scope": "21–40件目の書誌",
+      "start_index": 21,
+      "items_per_page": 20,
+      "status": "取得済み",
+      "comparison_counted": true,
+      "result_rows": 20
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "DBJP001",
+      "search_id": "DBCNI12",
+      "search_ids": [
+        "DBCNI12"
+      ],
+      "rank": 3,
+      "platform": "CiNii Research",
+      "scope": "工業欠陥・ViT",
+      "title": "Weft-knitted fabric defect classification based on a Swin transformer deformable convolutional network",
+      "doi": "10.1177/00405175221137010",
+      "year": "2022-11-23",
+      "url": "https://cir.nii.ac.jp/crid/1360590690676609920",
+      "source_url": "https://journals.sagepub.com/doi/10.1177/00405175221137010",
+      "status": "未確認候補",
+      "decision": "未確認候補",
+      "reason": "緯編地の画像欠陥分類にSwin transformerと変形畳み込みを使用。欠陥種類の原語、性能指標と分割は本文で要確認。出版年はオンライン2022、巻号2023。",
+      "verification": "CiNii書誌・SAGE抄録と巻号"
+    },
+    {
+      "candidate_id": "DBJP002",
+      "search_id": "DBCNI12",
+      "search_ids": [
+        "DBCNI12"
+      ],
+      "rank": 12,
+      "platform": "CiNii Research",
+      "scope": "工業欠陥・ViT",
+      "title": "An improved Vision Transformer-based method for classifying surface defects in hot-rolled strip steel",
+      "doi": "10.1088/1742-6596/2082/1/012016",
+      "year": "2021-11-01",
+      "url": "https://cir.nii.ac.jp/crid/1360016866461279232",
+      "source_url": "https://doi.org/10.1088/1742-6596/2082/1/012016",
+      "status": "未確認候補",
+      "decision": "未確認候補",
+      "reason": "X-SDD鋼板にVGG型全結合層を追加したViTで欠陥分類を実施。実測値、原語ラベル、分割を本文で要照合。",
+      "verification": "CiNii書誌・IOP抄録"
+    },
+    {
+      "candidate_id": "DBJP003",
+      "search_id": "DBCNI12",
+      "search_ids": [
+        "DBCNI12"
+      ],
+      "rank": 19,
+      "platform": "CiNii Research",
+      "scope": "工業欠陥・ViT",
+      "title": "Surface defect detection and classification of steel using an efficient Swin Transformer",
+      "doi": "10.1016/j.aei.2023.102061",
+      "year": "2023-08",
+      "url": "https://cir.nii.ac.jp/crid/1360027093863329408",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1474034623001891",
+      "status": "関連",
+      "decision": "関連",
+      "reason": "LSwin鋼板欠陥検出。確認できた81.2%は物体検出のmAP。独立した画像単位の種類分類評価は未確認。",
+      "verification": "CiNii書誌・Elsevier抄録"
+    },
+    {
+      "candidate_id": "DBJP004",
+      "search_id": "DBJST05",
+      "search_ids": [
+        "DBJST05",
+        "DBCNI14"
+      ],
+      "rank": 1,
+      "platform": "J-STAGE",
+      "scope": "工業欠陥・VLM/MLLM",
+      "title": "In-Context Learningを使用した大規模視覚言語モデルによる少数の例示画像付き外観検査",
+      "doi": "10.2493/jjspe.91.418",
+      "year": "2025",
+      "url": "https://www.jstage.jst.go.jp/article/jjspe/91/3/91_418/_article/-char/ja/",
+      "source_url": "https://www.jstage.jst.go.jp/article/jjspe/91/3/91_418/_article/-char/ja/",
+      "status": "関連・要確認",
+      "decision": "関連・要確認",
+      "reason": "LVLMで正常と不良の例示画像、判定基準テキストを用いる。抄録の記載は品質判定で、欠陥種類分類の定量評価の有無を未確認。",
+      "verification": "J-STAGE/CiNii書誌・J-STAGE抄録"
+    },
+    {
+      "candidate_id": "DBJP005",
+      "search_id": "DBJST02",
+      "search_ids": [
+        "DBJST02",
+        "DBCNI10",
+        "DBCNI15"
+      ],
+      "rank": 1,
+      "platform": "J-STAGE",
+      "scope": "工具・センサ時系列画像",
+      "title": "Image-based classification of ball end-mill wear states using time-series visualization and Lab color space analysis",
+      "doi": "10.1299/jamdsm.2026jamdsm0060",
+      "year": "2026",
+      "url": "https://www.jstage.jst.go.jp/article/jamdsm/20/7/20_2026jamdsm0060/_article/-char/ja/",
+      "source_url": "https://www.jstage.jst.go.jp/article/jamdsm/20/7/20_2026jamdsm0060/_article/-char/en",
+      "status": "関連",
+      "decision": "関連",
+      "reason": "ボールエンドミル。実写ではなく各種センサ時系列を画像化し、未使用・初期摩耗・進行摩耗・寿命末期の4段階を分類。摩耗種類分類の適合対象から外れる。",
+      "verification": "J-STAGE/CiNii書誌・J-STAGE英語抄録"
+    },
+    {
+      "candidate_id": "DBJP006",
+      "search_id": "DBJST07",
+      "search_ids": [
+        "DBJST07",
+        "DBCNI09"
+      ],
+      "rank": 17,
+      "platform": "J-STAGE",
+      "scope": "工具・実写",
+      "title": "画像処理によるスローアウェイチップ摩耗における自動検査法の開発",
+      "doi": "10.1541/ieejeiss.137.1488",
+      "year": "2017",
+      "url": "https://www.jstage.jst.go.jp/article/ieejeiss/137/11/137_1488/_article/-char/ja/",
+      "source_url": "https://www.jstage.jst.go.jp/article/ieejeiss/137/11/137_1488/_article/-char/ja/",
+      "status": "関連",
+      "decision": "関連",
+      "reason": "旋削用スローアウェイチップ画像でOtsu閾値による摩耗領域抽出と領域面積の定量。欠陥種類分類の報告は確認できず。",
+      "verification": "J-STAGE/CiNii書誌・J-STAGE抄録"
+    },
+    {
+      "candidate_id": "DBJP007",
+      "search_id": "DBCNI09",
+      "search_ids": [
+        "DBCNI09"
+      ],
+      "rank": 1,
+      "platform": "CiNii Research",
+      "scope": "工具・実写",
+      "title": "画像認識とAI活用による工具摩耗判定",
+      "doi": "",
+      "year": "2020-05",
+      "url": "https://cir.nii.ac.jp/crid/1520854804747176320",
+      "source_url": "https://ndlsearch.ndl.go.jp/books/R000000004-I030430273",
+      "status": "未確認候補",
+      "decision": "未確認候補",
+      "reason": "『機械と工具』掲載の林孝之による技術記事。データ種別、対象工具、実写入力、種類ラベルの記載を本文で要確認。",
+      "verification": "CiNii書誌のみ・NDL書誌IDあり"
+    },
+    {
+      "candidate_id": "DBJP008",
+      "search_id": "DBCNI10",
+      "search_ids": [
+        "DBCNI10"
+      ],
+      "rank": 8,
+      "platform": "CiNii Research",
+      "scope": "工具・センサ時系列画像候補",
+      "title": "画像分類技術を援用したボールエンドミル摩耗状態判定システム",
+      "doi": "",
+      "year": "2026-06",
+      "url": "https://cir.nii.ac.jp/crid/1520027210070737792",
+      "source_url": "https://ndlsearch.ndl.go.jp/books/R000000004-I034778062",
+      "status": "関連・要確認",
+      "decision": "関連・要確認",
+      "reason": "児玉紘幸による学会誌記事。CiNii件名にservo motor current valueがあるためセンサ時系列画像化の可能性を記録。既採用論文との重複・入力・分類ラベルは未確認。",
+      "verification": "CiNii書誌と件名のみ"
+    },
+    {
+      "candidate_id": "DBJP009",
+      "search_id": "DBJST03",
+      "search_ids": [
+        "DBJST03"
+      ],
+      "rank": 5,
+      "platform": "J-STAGE",
+      "scope": "工具・画像＋センサ探索",
+      "title": "センサ搭載ツールホルダを用いたエンドミル加工時の工具刃先状態監視の試み",
+      "doi": "10.11522/pscjspe.2024A.0_241",
+      "year": "2024",
+      "url": "https://www.jstage.jst.go.jp/article/pscjspe/2024A/0/2024A_241/_article/-char/ja/",
+      "source_url": "https://www.jstage.jst.go.jp/article/pscjspe/2024A/0/2024A_241/_article/-char/ja/",
+      "status": "関連・要確認",
+      "decision": "関連・要確認",
+      "reason": "ひずみセンサを組み込んだホルダの荷重と切削力モデルを扱う。実写との融合・摩耗種類分類は確認できず。",
+      "verification": "J-STAGE書誌・抄録のメタデータ抜粋"
+    },
+    {
+      "candidate_id": "DBJP010",
+      "search_id": "DBJST02",
+      "search_ids": [
+        "DBJST02",
+        "DBCNI10"
+      ],
+      "rank": 9,
+      "platform": "J-STAGE",
+      "scope": "工具・実写",
+      "title": "異常検知と画像分類を併用したボールエンドミル摩耗状態判定システムの開発",
+      "doi": "10.1299/transjsme.24-00127",
+      "year": "2024",
+      "url": "https://www.jstage.jst.go.jp/article/transjsme/90/937/90_24-00127/_article/-char/ja/",
+      "source_url": "https://doi.org/10.1299/transjsme.24-00127",
+      "status": "既収録",
+      "decision": "既収録",
+      "reason": "既収録 DOI。検索で再現できた正例。",
+      "verification": "J-STAGE/CiNii書誌・既存台帳のDOI照合"
+    },
+    {
+      "candidate_id": "DBJP011",
+      "search_id": "DBCNI12",
+      "search_ids": [
+        "DBCNI12"
+      ],
+      "rank": 1,
+      "platform": "CiNii Research",
+      "scope": "工業欠陥・ViT",
+      "title": "Hybrid Architecture Based on CNN and Transformer for Strip Steel Surface Defect Classification",
+      "doi": "10.3390/electronics11081200",
+      "year": "2022-04-09",
+      "url": "https://cir.nii.ac.jp/crid/1360580235271367424",
+      "source_url": "https://doi.org/10.3390/electronics11081200",
+      "status": "既収録",
+      "decision": "既収録",
+      "reason": "既収録の工業ViT研究 IT001。",
+      "verification": "CiNii書誌・既存台帳のDOI照合"
+    },
+    {
+      "candidate_id": "DBJP012",
+      "search_id": "DBJST04",
+      "search_ids": [
+        "DBJST04",
+        "DBCNI12"
+      ],
+      "rank": 3,
+      "platform": "J-STAGE",
+      "scope": "工業欠陥・ViT",
+      "title": "UnionMixup and max-min-saliency mixup for mixed-type defect recognition of wafer bin maps",
+      "doi": "10.1587/elex.21.20240054",
+      "year": "2024",
+      "url": "https://www.jstage.jst.go.jp/article/elex/21/10/21_21.20240054/_article/-char/ja/",
+      "source_url": "https://doi.org/10.1587/elex.21.20240054",
+      "status": "既収録",
+      "decision": "既収録",
+      "reason": "既収録の工業ViT研究 IT006。両DBが返却。",
+      "verification": "J-STAGE/CiNii書誌・既存台帳のDOI照合"
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "J-STAGE",
+      "database": "J-STAGE",
+      "status": "公式API取得済み",
+      "provider": "JST",
+      "method": "J-STAGE記事WebAPI service=3 GET",
+      "endpoint": "https://api.jstage.jst.go.jp/searchapi/do",
+      "documentation_url": "https://www.jstage.jst.go.jp/static/files/ja/manual_api.pdf",
+      "documentation_urls": [
+        "https://www.jstage.jst.go.jp/static/pages/JstageServices/TAB3/-char/ja",
+        "https://www.jstage.jst.go.jp/static/files/ja/manual_api.pdf"
+      ],
+      "search_fields": "text=全文、半角スペースAND、pubyearfrom/pubyearto=発行年、sortflg=1=スコア順、start=開始順位、count=取得件数",
+      "response_fields": "Atom XMLのopensearch:totalResults/startIndex、entryのarticle_titleとprism:doi",
+      "formula_count": 6,
+      "search_ids": [
+        "DBJST01",
+        "DBJST02",
+        "DBJST03",
+        "DBJST04",
+        "DBJST05",
+        "DBJST06",
+        "DBJST07"
+      ],
+      "retrieved_count": 66,
+      "note": "先頭10件／式。工具和文の第2ページ10件を追加。"
+    },
+    {
+      "platform": "CiNii Research",
+      "database": "CiNii Research",
+      "status": "公式OpenSearch取得済み・通常画面は結果取得不可",
+      "provider": "NII",
+      "method": "CiNii Research OpenSearch v1/v2 論文JSON GET",
+      "endpoint": "https://cir.nii.ac.jp/opensearch/v2/articles",
+      "documentation_url": "https://support.nii.ac.jp/ja/cir/r_opensearch",
+      "documentation_urls": [
+        "https://support.nii.ac.jp/ja/cir/r_opensearch",
+        "https://support.nii.ac.jp/en/cir/manual_articles_result"
+      ],
+      "search_fields": "articles、q=フリーワード、半角スペースAND、from/until=出版年、sortorder=4=関連度順、start=開始順位、count=取得件数、format=json",
+      "response_fields": "opensearch:totalResults/startIndex、itemsのtitle/@id/dc:identifier DOI",
+      "formula_count": 6,
+      "search_ids": [
+        "DBCNI09",
+        "DBCNI10",
+        "DBCNI11",
+        "DBCNI12",
+        "DBCNI13",
+        "DBCNI14",
+        "DBCNI15"
+      ],
+      "retrieved_count": 60,
+      "note": "NII公式仕様はappidを必須と記載。今回は無指定の公開GETで全API検索にHTTP 200と書誌が返った。継続利用時は仕様に従い登録済みIDを使用する。論文検索通常画面は6式ともHTTP 202、本文0バイト。"
+    }
+  ],
+  "notes": [
+    "同じ6式をJ-STAGEの全文 text とCiNii Researchの書誌フリーワード q に送った。対象フィールドと収録範囲が異なるため、総ヒット数の大小はDBの網羅性を比較する指標にならない。",
+    "集計対象はJ-STAGE DBJST01–07の66書誌とCiNii DBCNI09–15の60書誌で延べ126件。CiNii DBCNI07–08の接続確認30件は、同式・同ページの再取得なので集計外。取得後の重複・ノイズは各行に残る。",
+    "J-STAGEの全ヒット数は工具277、191、93件、工業79、6、104件。CiNiiは工具10、9、0件、工業51、0、1件。CiNiiの0件2式は公式APIの明示応答。HTTP 202空本文の6式は総数不明。",
+    "第2ページはJ-STAGE工具和文11–20件目とCiNii工業ViT英語21–40件目を取得。J-STAGE上限以降の残ページ、CiNii工業ViTの残り11件は未取得。",
+    "最初に公式URLをWebツールで開いたところ取得できず、既定シェルではDNS解決不可。既存Windows Edgeの選択は無関係なセッション状態を読み得るため自動レビューが拒否。Firefoxのアクセシビリティ取得と本分担のIABも利用できず、承認された外部GETで公開APIを使用した。既存ブラウザーの状態は変更していない。",
+    "一部候補のみ抄録・書誌と既存DOIを照合した。残りは検索応答の全タイトル／DOI欄に保持。本文未確認候補を採用件数に加えていない。",
+    "工具実写、センサ信号の画像化、実写＋センサは別区分。今回のJ-STAGE融合探索の上位結果やCiNiiの同式0件から、実写＋センサの直接研究が存在しないとは判断できない。"
+  ]
+}

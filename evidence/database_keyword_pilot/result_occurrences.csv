@@ -1,0 +1,367 @@
+﻿search_id,rank,title,url,doi,candidate_id,screening_depth
+DBS001,1,Digital image processing with deep learning for automated cutting tool wear detection,https://www.sciencedirect.com/science/article/pii/S2351978920315869,,DBR001,重点候補の判断あり
+DBS001,2,Automatic identification of tool wear based on convolutional neural network in face milling process,https://www.mdpi.com/1424-8220/19/18/3817,,DBR002,重点候補の判断あり
+DBS001,3,A computer vision approach to analyze and classify tool wear level in milling processes using shape descriptors and machine learning techniques,https://link.springer.com/article/10.1007/s00170-016-9541-0,,DBR003,重点候補の判断あり
+DBS001,4,Realizing on-machine tool wear monitoring through integration of vision-based system with CNC milling machine,https://www.sciencedirect.com/science/article/pii/S0278612524002978,,DBR004,重点候補の判断あり
+DBS001,5,Classification of tool wear state based on dual attention mechanism network,https://www.sciencedirect.com/science/article/pii/S0736584523000510,,DBR005,重点候補の判断あり
+DBS001,6,On-line tool wear monitoring using geometric descriptors from digital images,https://www.sciencedirect.com/science/article/pii/S0890695507000892,,DBR006,重点候補の判断あり
+DBS001,7,Workpiece image-based tool wear classification in blanking processes using deep convolutional neural networks,https://link.springer.com/article/10.1007/s11740-022-01113-2,,DBR007,重点候補の判断あり
+DBS001,8,Tool wear classification based on machined surface images using convolution neural networks,https://link.springer.com/article/10.1007/s12046-021-01654-9,,DBR008,重点候補の判断あり
+DBS001,9,Indirect cutting tool wear classification using deep learning and chip colour analysis,https://link.springer.com/article/10.1007/s00170-020-06055-6,,DBR009,重点候補の判断あり
+DBS001,10,NJUST-CCTD: an image database for milling tool wear classification with deep learning,https://link.springer.com/article/10.1007/s00170-023-11418-w,,DBR010,重点候補の判断あり
+DBS002,1,Realizing on-machine tool wear monitoring through integration of vision-based system with CNC milling machine,https://www.sciencedirect.com/science/article/pii/S0278612524002978,,DBR011,重点候補の判断あり
+DBS002,2,TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining,https://www.sciencedirect.com/science/article/pii/S0043164825007537,,DBR012,重点候補の判断あり
+DBS002,3,Cutting tool wear prediction based on chip features extracted from image processing and AutoML,https://link.springer.com/article/10.1007/s00170-025-15416-y,,DBR013,重点候補の判断あり
+DBS002,4,Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling,https://www.researchgate.net/publication/406927055,,DBR014,重点候補の判断あり
+DBS002,5,Automatic identification of tool wear based on convolutional neural network in face milling process,https://www.mdpi.com/1424-8220/19/18/3817,,DBR015,重点候補の判断あり
+DBS002,6,Tool wear analysis in the machining of hardened steels,https://link.springer.com/article/10.1007/s00170-017-0455-2,,DBR016,重点候補の判断あり
+DBS002,7,"A review of tool wear monitoring in milling: perception, edge processing and cloud decision",https://link.springer.com/article/10.1007/s00170-026-18763-6,,DBR017,重点候補の判断あり
+DBS002,8,Machine vision and convolutional neural networks for tool wear identification and classification,https://link.springer.com/chapter/10.1007/978-981-33-4597-3_66,,DBR018,重点候補の判断あり
+DBS002,9,Tool wear monitoring in milling based on fine-grained image classification of machined surface images,https://www.mdpi.com/1424-8220/22/21/8416,,DBR019,重点候補の判断あり
+DBS002,10,Comparative analysis of different machine vision algorithms for tool wear measurement during machining,https://link.springer.com/article/10.1007/s10845-024-02467-3,,DBR020,重点候補の判断あり
+DBS003,1,Hybrid-DC: A hybrid framework using ResNet-50 and vision transformer for steel surface defect classification in the rolling process,https://www.mdpi.com/2079-9292/13/22/4467,,DBR021,重点候補の判断あり
+DBS003,2,Hybrid vision transformer model for defect classification in photovoltaic modules using thermographic imaging: Leveraging self-attention mechanisms for enhanced …,https://www.sciencedirect.com/science/article/pii/S0960148125018026,,DBR022,重点候補の判断あり
+DBS003,3,LPViT: A transformer based model for PCB image classification and defect detection,https://ieeexplore.ieee.org/abstract/document/9760408/,,DBR023,重点候補の判断あり
+DBS003,4,Tuna defect classification and grading using Twins transformer,https://www.sciencedirect.com/science/article/pii/S0260877425000706,,DBR024,重点候補の判断あり
+DBS003,5,Multiple defect classification method for green plum surfaces based on vision transformer,https://www.mdpi.com/1999-4907/14/7/1323,,DBR025,重点候補の判断あり
+DBS003,6,Surface defect classification: leveraging transformer and transfer learning models for enhanced precision in industrial applications,https://link.springer.com/article/10.1007/s00170-025-16156-9,,DBR026,重点候補の判断あり
+DBS003,7,Semiconductor wafer map defect classification with tiny vision transformers,https://arxiv.org/abs/2504.02494,,DBR027,重点候補の判断あり
+DBS003,8,ViTR-Net: An unsupervised lightweight transformer network for cable surface defect detection and adaptive classification,https://www.sciencedirect.com/science/article/pii/S0141029624008022,,DBR028,重点候補の判断あり
+DBS003,9,A lightweight vision transformer with embedded hybrid attention for quick response code defect classification,https://www.sciencedirect.com/science/article/pii/S0952197625005755,,DBR029,重点候補の判断あり
+DBS003,10,Rail defect classification with deep learning method,https://trid.trb.org/View/2569706,,DBR030,重点候補の判断あり
+DBS004,1,Prompt engineering for zero-shot and few-shot defect detection and classification using a visual-language pretrained model,https://onlinelibrary.wiley.com/doi/abs/10.1111/mice.12954,,DBR031,重点候補の判断あり
+DBS004,2,"Vision-language artificial intelligence for robotic-based monitoring: Concrete defect detection, classification, and localization in two-dimensional maps",https://ascelibrary.org/doi/abs/10.1061/JCCEE5.CPENG-7001,,DBR032,重点候補の判断あり
+DBS004,3,Towards label-free defect detection in additive manufacturing via dual-classifier semi-supervised learning for vision-language models,https://link.springer.com/article/10.1007/s10845-025-02589-2,,DBR033,重点候補の判断あり
+DBS004,4,SewerMan: A vision-language collaborative framework with domain prior for robust multi-label sewer defect classification,https://www.sciencedirect.com/science/article/pii/S1568494626000311,,DBR034,重点候補の判断あり
+DBS004,5,SteelDefectX: A Multi-Form Vision-Language Dataset and Benchmark for Steel Surface Defect Analysis,https://arxiv.org/abs/2603.21824,,DBR035,重点候補の判断あり
+DBS004,6,PipeCLIP: Defect-Conditioned and Cross-Focus-Driven Vision-Language Model for Video-Based Sewer Defect Inspection,https://ieeexplore.ieee.org/abstract/document/11421421/,,DBR036,重点候補の判断あり
+DBS004,7,"Integrating Vision Language, and Actions in Optical Inspections to Enable Closed-Loop Defect Identification and Remediation",https://ieeexplore.ieee.org/abstract/document/11416115/,,DBR037,重点候補の判断あり
+DBS004,8,GenAI applications of vision-language models for semiconductor defect classification,https://doi.org/10.1117/12.3064772,,DBR038,重点候補の判断あり
+DBS004,9,DefectVICL: Data-Efficient Wafer Defect Classification with Vision In Context Learning,https://ieeexplore.ieee.org/abstract/document/11563341/,,DBR039,重点候補の判断あり
+DBS004,10,A Self-Distilled Vision-Language Model for Industrial Defect Classification,https://ieeexplore.ieee.org/abstract/document/11386279/,,DBR040,重点候補の判断あり
+DBI002,1,Surface Defect Classification with Vision Transformer,https://ieeexplore.ieee.org/document/9969746,,DBR041,重点候補の判断あり
+DBI002,2,Mobile Vision Transformer for Surface Defect Classification from A Tiny Dataset,https://ieeexplore.ieee.org/document/10330837,,DBR042,重点候補の判断あり
+DBI002,3,Vision Transformer-Based Framework for Reliable Semiconductor Wafer Defect Classification,https://ieeexplore.ieee.org/document/11491308,,DBR043,重点候補の判断あり
+DBI002,4,Explainable Vision Transformer with ResNet18 Feature Extraction for Automated Welding Defect Classification using LIME,https://ieeexplore.ieee.org/document/11656610,,DBR044,重点候補の判断あり
+DBI002,5,Vision Transformer Model for Metal Surface Defect Classification,https://ieeexplore.ieee.org/document/11278921,,DBR045,重点候補の判断あり
+DBI002,6,"A Comparative Study of WeldVGG, CBAM-WeldVGG, and Vision Transformer Hybrid Architectures for Radiographic Weld Defect Classification and Cross-Domain Generalization",https://ieeexplore.ieee.org/document/11721663,,DBR046,重点候補の判断あり
+DBI002,7,Vision Transformer-based Welding Defect Classification using ResNet-50 Feature Embeddings,https://ieeexplore.ieee.org/document/11376131,,DBR047,重点候補の判断あり
+DBI002,8,Mixed-Type Wafer Map Defect Classification Using Regional-to-Local Attention,https://ieeexplore.ieee.org/document/11367500,,DBR048,重点候補の判断あり
+DBI002,9,Fabric Defect Classification Based on Lightweight CNN Under Class Imbalance,https://ieeexplore.ieee.org/document/11637583,,DBR049,重点候補の判断あり
+DBI002,10,Classification of Sewer Defects Using Point Clouds Based on a Novel Sewer Vision Transformer With Cross-Modal In-Domain Knowledge,https://ieeexplore.ieee.org/document/11174080,,DBR050,重点候補の判断あり
+DBI002,11,Few-Shot Power Equipment Defect Classification Based on Image Augmentation and Reconstruction,https://ieeexplore.ieee.org/document/11216605,,DBR051,重点候補の判断あり
+DBI002,12,Comparative Analysis of ResNet50 and MobileNetV2 for Multiclass Railway Track Defect Classification,https://ieeexplore.ieee.org/document/11651230,,DBR052,重点候補の判断あり
+DBI002,13,Wafer Defect Classification Algorithm With Label Embedding Using Contrastive Learning,https://ieeexplore.ieee.org/document/10835094,,DBR053,重点候補の判断あり
+DBI002,14,Data-Centric Approach for Leather Quality Control Using Advanced Vision Transformer Models,https://ieeexplore.ieee.org/document/11019741,,DBR054,重点候補の判断あり
+DBI002,15,Vision Transformer based knowledge distillation for fasteners defect detection,https://ieeexplore.ieee.org/document/9872566,,DBR055,重点候補の判断あり
+DBI002,16,Foundation Vision Transformer Framework for Automated Printed Circuit Board Defect Detection and Classification,https://ieeexplore.ieee.org/document/11748826,,DBR056,重点候補の判断あり
+DBI002,17,Retinal Malady Classification Using AI: A novel ViT-SVM combination architecture,https://ieeexplore.ieee.org/document/9753876,,DBR057,重点候補の判断あり
+DBI002,18,Steel Surface Defect Classification using MobileViT,https://ieeexplore.ieee.org/document/10690544,,DBR058,重点候補の判断あり
+DBI002,19,Semiconductor SEM Image Defect Classification Using Supervised and Semi-Supervised Learning with Vision Transformers : Topic/category: Defect Inspection and Reduction,https://ieeexplore.ieee.org/document/11010396,,DBR059,重点候補の判断あり
+DBI002,20,Vision Transformer-Assisted Defect Classification and YOLOv8-Based Localization in Industrial Quality Control,https://ieeexplore.ieee.org/document/11473987,,DBR060,重点候補の判断あり
+DBI002,21,Improving Defect Classification in Photovoltaic Modules Using CNN with Attention-Based Processing,https://ieeexplore.ieee.org/document/11100501,,DBR061,重点候補の判断あり
+DBI002,22,CPT-Diag: A Lightweight CNN-Patch Transformer Hybrid Framework with STFT Time-Frequency Representation for Vibration-Based Motor Fault Diagnosis,https://ieeexplore.ieee.org/document/11567219,,DBR062,重点候補の判断あり
+DBI002,23,CNN-Transformer based Automated Neural Architecture Search for Ultrasonic Railway Track Defect Classification,https://ieeexplore.ieee.org/document/11085992,,DBR063,重点候補の判断あり
+DBI002,24,A Comparative Analysis of CNN and Vision Transformer Architectures for Visual Defect Classification Under Data Augmentation,https://ieeexplore.ieee.org/document/11519710,,DBR064,重点候補の判断あり
+DBI002,25,An Approach Based on Knowledge Distillation for Lightweight Defect Classification of Green Plums,https://ieeexplore.ieee.org/document/10826582,,DBR065,重点候補の判断あり
+DBI003,1,Multi-Sensor Fusion-Based Tool Wear Monitoring: A Novel Approach Using AE-1DCNN Model,https://ieeexplore.ieee.org/document/11512494,,DBR066,重点候補の判断あり
+DBI003,2,Automation of Offline Tool Wear Measurement on the Example of Inserts for Super-Alloy Machining,https://ieeexplore.ieee.org/document/9921628,,DBR067,重点候補の判断あり
+DBI003,3,Deep Learning-Based Classification of Cutting Tool Wear in Dry Turning of Ti-6Al-4V Using Thermography,https://ieeexplore.ieee.org/document/11459111,,DBR068,重点候補の判断あり
+DBI003,4,Chip Analysis for Tool Wear Monitoring in Machining: A Deep Learning Approach,https://ieeexplore.ieee.org/document/10636165,,DBR069,重点候補の判断あり
+DBI003,5,Wear-Stage-Aware Multitask Learning and Optimization With a Causal Transformer for Milling Tool Wear Prediction Using Multisensor Data,https://ieeexplore.ieee.org/document/11625750,,DBR070,重点候補の判断あり
+DBI003,6,Research of Tool Wear Predictive Technique Based on Support Vector Machine,https://ieeexplore.ieee.org/document/5304234,,DBR071,重点候補の判断あり
+DBI003,7,Evaluation of Deep Learning for Semantic Image Segmentation in Tool Condition Monitoring,https://ieeexplore.ieee.org/document/8999320,,DBR072,重点候補の判断あり
+DBI003,8,Notice of Violation of IEEE Publication Principles: Automated intelligent machine vision system for monitoring the image,https://ieeexplore.ieee.org/document/5697518,,DBR073,重点候補の判断あり
+DBI003,9,Research on Classification and Recognition of Micro Milling Tool Wear Based on Improved DenseNet,https://ieeexplore.ieee.org/document/10947764,,DBR074,重点候補の判断あり
+DBI003,10,Attention Mechanism Based CNC Milling Cutter Wear Detection Using Machine Vision,https://ieeexplore.ieee.org/document/10413371,,DBR075,重点候補の判断あり
+DBI003,11,Lightweight AI Model for Rice Grain Classification in Resource-ConstrainedSystems,https://ieeexplore.ieee.org/document/11679271,,DBR076,重点候補の判断あり
+DBI003,12,Machine Vision-based Tool Location and Wear Monitoring in Micro turning: Optical Setup and Image Processing Approaches,https://ieeexplore.ieee.org/document/10808405,,DBR077,重点候補の判断あり
+DBI003,13,Visual inspection system for CNC turning tool wear based on transfer learning,https://ieeexplore.ieee.org/document/10041057,,DBR078,重点候補の判断あり
+DBI003,14,Image-Based Classification of Cutting Tool Degradation Using Deep Learning: A Comparative Study,https://ieeexplore.ieee.org/document/11742401,,DBR079,重点候補の判断あり
+DBI003,15,Hybrid Data Augmentation Combining Screening-Based MCGAN and Manual Transformation for Few-Shot Tool Wear State Recognition,https://ieeexplore.ieee.org/document/10462905,,DBR080,重点候補の判断あり
+DBI003,16,Image-Based Remaining Useful Life Prediction in PHM Systems: A Review,https://ieeexplore.ieee.org/document/11322710,,DBR081,重点候補の判断あり
+DBI003,17,Disassembler: Cloud-Based Solution for Optimized Cutting Tool Quality Control,https://ieeexplore.ieee.org/document/11106662,,DBR082,重点候補の判断あり
+DBI003,18,Composite Multiscale Amplitude-Weighted Fuzzy Dispersion Entropy of Acoustic Signals for Tool Wear Condition Monitoring,https://ieeexplore.ieee.org/document/11711349,,DBR083,重点候補の判断あり
+DBI003,19,Applications of fuzzy K-NN in weld recognition and tool failure monitoring,https://ieeexplore.ieee.org/document/493503,,DBR084,重点候補の判断あり
+DBI003,20,Evaluating Mobile Phone Microphone Recordings for Metal Processing Sound Analysis,https://ieeexplore.ieee.org/document/11273446,,DBR085,重点候補の判断あり
+DBI003,21,Stable Diffusion Based Image Generation for Vision-Based Tool Condition Monitoring,https://ieeexplore.ieee.org/document/11491315,,DBR086,重点候補の判断あり
+DBI003,22,Step Wear Analysis Based on Improved Computer Vision and Mathematical Modeling for Infrastructure Condition Assessment,https://ieeexplore.ieee.org/document/11637507,,DBR087,重点候補の判断あり
+DBI003,23,CatBoost-Based Predictive Maintenance for Industrial Milling Tool Life and Failure Detection,https://ieeexplore.ieee.org/document/11539117,,DBR088,重点候補の判断あり
+DBI003,24,Comparison of Analysis Using Acquired Machine Data for Machine and Tool Life Optimization,https://ieeexplore.ieee.org/document/11506975,,DBR089,重点候補の判断あり
+DBI003,25,Learning Burr-Related Temporal Patterns From Cutting Force Sensor Signals for Burr Severity Classification,https://ieeexplore.ieee.org/document/11686197,,DBR090,重点候補の判断あり
+DBJST01,1,機械学習を用いた切削工具の状態検知,https://www.jstage.jst.go.jp/article/tribologist/67/12/67_67.12_851/_article/-char/ja/,10.18914/tribologist.67.12_851,,書誌取得のみ・詳細選別未完了
+DBJST01,2,鋼のダイヤモンド切削における工具摩耗の抑制（浸炭した鋼の組織が及ぼす影響）,https://www.jstage.jst.go.jp/article/transjsme/83/856/83_17-00161/_article/-char/ja/,10.1299/transjsme.17-00161,,書誌取得のみ・詳細選別未完了
+DBJST01,3,AE法による旋削加工のインプロセス計測に関する基礎研究,https://www.jstage.jst.go.jp/article/jsmemecj/2019/0/2019_S13302/_article/-char/ja/,10.1299/jsmemecj.2019.S13302,,書誌取得のみ・詳細選別未完了
+DBJST01,4,CNC旋盤の加工状況モニタリング,https://www.jstage.jst.go.jp/article/jsmemecj/2025/0/2025_J132-09/_article/-char/ja/,10.1299/jsmemecj.2025.J132-09,,書誌取得のみ・詳細選別未完了
+DBJST01,5,切りくず裏面温度分布画像のAI分析による５種の工具摩耗量の同時推定,https://www.jstage.jst.go.jp/article/pscjspe/2024A/0/2024A_239/_article/-char/ja/,10.11522/pscjspe.2024A.0_239,,書誌取得のみ・詳細選別未完了
+DBJST01,6,ダイヤモンド切削における工具摩耗の抑制,https://www.jstage.jst.go.jp/article/pscjspe/2017A/0/2017A_77/_article/-char/ja/,10.11522/pscjspe.2017A.0_77,,書誌取得のみ・詳細選別未完了
+DBJST01,7,窒化された鋼の超精密切削においてミクロ組織が被削性に及ぼす影響(第2報),https://www.jstage.jst.go.jp/article/pscjspe/2026S/0/2026S_285/_article/-char/ja/,10.11522/pscjspe.2026S.0_285,,書誌取得のみ・詳細選別未完了
+DBJST01,8,鋼のダイヤモンド切削における工具摩耗の抑制,https://www.jstage.jst.go.jp/article/jsmemmt/2016.11/0/2016.11_C03/_article/-char/ja/,10.1299/jsmemmt.2016.11.C03,,書誌取得のみ・詳細選別未完了
+DBJST01,9,窒化された鋼の超精密切削において窒化前の表面処理が及ぼす影響,https://www.jstage.jst.go.jp/article/pscjspe/2022S/0/2022S_459/_article/-char/ja/,10.11522/pscjspe.2022S.0_459,,書誌取得のみ・詳細選別未完了
+DBJST01,10,ギヤスカイビング工具の寿命判定用画像式摩耗検出システムの開発（第4報）,https://www.jstage.jst.go.jp/article/pscjspe/2025S/0/2025S_756/_article/-char/ja/,10.11522/pscjspe.2025S.0_756,,書誌取得のみ・詳細選別未完了
+DBJST02,1,Image-based classification of ball end-mill wear states using time-series visualization and Lab color space analysis,https://www.jstage.jst.go.jp/article/jamdsm/20/7/20_2026jamdsm0060/_article/-char/ja/,10.1299/jamdsm.2026jamdsm0060,DBJP005,重点候補の判断あり
+DBJST02,2,Development of tool-life time determination system using current value data imaged using recurrence plotting method,https://www.jstage.jst.go.jp/article/jsmelem/2025.11/0/2025.11_OS04-3/_article/-char/ja/,10.1299/jsmelem.2025.11.OS04-3,,書誌取得のみ・詳細選別未完了
+DBJST02,3,Tool condition monitoring method by anomaly segmentation of time-frequency images using acoustic emission in small hole drilling,https://www.jstage.jst.go.jp/article/jamdsm/17/3/17_2023jamdsm0034/_article/-char/ja/,10.1299/jamdsm.2023jamdsm0034,,書誌取得のみ・詳細選別未完了
+DBJST02,4,Study on Factors of Tool Wear in Diamond Turning of Carburized Steel using Decision Trees,https://www.jstage.jst.go.jp/article/jsmelem/2017.9/0/2017.9_092/_article/-char/ja/,10.1299/jsmelem.2017.9.092,,書誌取得のみ・詳細選別未完了
+DBJST02,5,Wear Debris Classification of Steel Production Equipment using Feature Fusion and Case-based Reasoning,https://www.jstage.jst.go.jp/article/isijinternational/58/7/58_ISIJINT-2018-076/_article/-char/ja/,10.2355/isijinternational.ISIJINT-2018-076,,書誌取得のみ・詳細選別未完了
+DBJST02,6,Surface Roughness Estimation and Chatter Vibration Identification Using Vision-Based Deep Learning,https://www.jstage.jst.go.jp/article/jjspe/85/7/85_658/_article/-char/ja/,10.2493/jjspe.85.658,,書誌取得のみ・詳細選別未完了
+DBJST02,7,0528 Development of method of reducing groove bottom roughness in the microgroove processing of polysulfone materials,https://www.jstage.jst.go.jp/article/jsmelem/2015.8/0/2015.8__0528-1_/_article/-char/ja/,10.1299/jsmelem.2015.8._0528-1_,,書誌取得のみ・詳細選別未完了
+DBJST02,8,Estimation the wear state of milling tools using a combined ensemble empirical mode decomposition and support vector machine method,https://www.jstage.jst.go.jp/article/jamdsm/12/2/12_2018jamdsm0059/_article/-char/ja/,10.1299/jamdsm.2018jamdsm0059,,書誌取得のみ・詳細選別未完了
+DBJST02,9,異常検知と画像分類を併用したボールエンドミル摩耗状態判定システムの開発,https://www.jstage.jst.go.jp/article/transjsme/90/937/90_24-00127/_article/-char/ja/,10.1299/transjsme.24-00127,DBJP010,重点候補の判断あり
+DBJST02,10,Advanced Sensing and Machine Learning Technologies for Intelligent Measurement in Smart and Precision Manufacturing,https://www.jstage.jst.go.jp/article/ijat/18/4/18_545/_article/-char/ja/,10.20965/ijat.2024.p0545,,書誌取得のみ・詳細選別未完了
+DBJST03,1,AE法による旋削加工のインプロセス計測に関する基礎研究,https://www.jstage.jst.go.jp/article/jsmemecj/2019/0/2019_S13302/_article/-char/ja/,10.1299/jsmemecj.2019.S13302,,書誌取得のみ・詳細選別未完了
+DBJST03,2,AEと機械学習を利用したエンドミル工具の状態観察に関する研究,https://www.jstage.jst.go.jp/article/pscjspe/2020S/0/2020S_42/_article/-char/ja/,10.11522/pscjspe.2020S.0_42,,書誌取得のみ・詳細選別未完了
+DBJST03,3,機械学習を用いた切削工具の状態検知,https://www.jstage.jst.go.jp/article/tribologist/67/12/67_67.12_851/_article/-char/ja/,10.18914/tribologist.67.12_851,,書誌取得のみ・詳細選別未完了
+DBJST03,4,アコースティックエミッション法を用いた切削状態の監視に関する実験的検討,https://www.jstage.jst.go.jp/article/tribologist/63/7/63_17-00028/_article/-char/ja/,10.18914/tribologist.17-00028,,書誌取得のみ・詳細選別未完了
+DBJST03,5,センサ搭載ツールホルダを用いたエンドミル加工時の工具刃先状態監視の試み,https://www.jstage.jst.go.jp/article/pscjspe/2024A/0/2024A_241/_article/-char/ja/,10.11522/pscjspe.2024A.0_241,DBJP009,重点候補の判断あり
+DBJST03,6,赤外線サーモグラフィーカメラによる生成中の切りくず裏面温度分布の計測,https://www.jstage.jst.go.jp/article/pscjspe/2019A/0/2019A_36/_article/-char/ja/,10.11522/pscjspe.2019A.0_36,,書誌取得のみ・詳細選別未完了
+DBJST03,7,窒化された鋼の超精密切削において窒化前の熱処理が及ぼす影響（第3報）,https://www.jstage.jst.go.jp/article/pscjspe/2021S/0/2021S_279/_article/-char/ja/,10.11522/pscjspe.2021S.0_279,,書誌取得のみ・詳細選別未完了
+DBJST03,8,AE を利用した機械学習によるエンドミル工具の摩耗観測手法の検討,https://www.jstage.jst.go.jp/article/jsmemmt/2019.13/0/2019.13_D22/_article/-char/ja/,10.1299/jsmemmt.2019.13.D22,,書誌取得のみ・詳細選別未完了
+DBJST03,9,機械学習を用いたミリング加工時の加速度データ解析による工具摩耗の推定,https://www.jstage.jst.go.jp/article/pscjspe/2021A/0/2021A_413/_article/-char/ja/,10.11522/pscjspe.2021A.0_413,,書誌取得のみ・詳細選別未完了
+DBJST03,10,エンドミル工具摩耗のインプロセス検出に関する研究,https://www.jstage.jst.go.jp/article/jsmekyushu/2017.70/0/2017.70_902/_article/-char/ja/,10.1299/jsmekyushu.2017.70.902,,書誌取得のみ・詳細選別未完了
+DBJST04,1,Preliminary investigation of image-based techniques for rust condition assessment in weathering steel bridge,https://www.jstage.jst.go.jp/article/jsceiiai/7/1/7_120/_article/-char/ja/,10.11532/jsceiiai.7.1_120,,書誌取得のみ・詳細選別未完了
+DBJST04,2,Multiscale Attention-Based Model for Image Enhancement and Classification,https://www.jstage.jst.go.jp/article/jaciii/29/6/29_1484/_article/-char/ja/,10.20965/jaciii.2025.p1484,,書誌取得のみ・詳細選別未完了
+DBJST04,3,UnionMixup and max-min-saliency mixup for mixed-type defect recognition of wafer bin maps,https://www.jstage.jst.go.jp/article/elex/21/10/21_21.20240054/_article/-char/ja/,10.1587/elex.21.20240054,DBJP012,重点候補の判断あり
+DBJST04,4,Dual-Branch Residual Network for Enhanced Steel Plate Fault Detection,https://www.jstage.jst.go.jp/article/jaciii/29/6/29_1311/_article/-char/ja/,10.20965/jaciii.2025.p1311,,書誌取得のみ・詳細選別未完了
+DBJST04,5,Resformer-Unet: A U-shaped Framework Combining ResNet and Transformer for Segmentation of Strip Steel Surface Defects,https://www.jstage.jst.go.jp/article/isijinternational/64/1/64_ISIJINT-2023-222/_article/-char/ja/,10.2355/isijinternational.ISIJINT-2023-222,,書誌取得のみ・詳細選別未完了
+DBJST04,6,RCT-YOLOv8: A Tuna Detection Model for Distant-Water Fisheries Based on Improved YOLOv8,https://www.jstage.jst.go.jp/article/jaciii/28/6/28_1273/_article/-char/ja/,10.20965/jaciii.2024.p1273,,書誌取得のみ・詳細選別未完了
+DBJST04,7,TE-YOLO: A Defect Detection Model for Ceramic Substrate Printed Circuit Board,https://www.jstage.jst.go.jp/article/transinf/advpub/0/advpub_2026EDP7037/_article/-char/ja/,10.1587/transinf.2026EDP7037,,書誌取得のみ・詳細選別未完了
+DBJST04,8,YOLO-CF: An Object Detection Model that Improves Feature Expression at Both Coarse-Grained and Fine-Grained Levels for Industrial Surface Image Defect Detection,https://www.jstage.jst.go.jp/article/jaciii/30/3/30_825/_article/-char/ja/,10.20965/jaciii.2026.p0825,,書誌取得のみ・詳細選別未完了
+DBJST04,9,CCTSS: The Combination of CNN and Transformer with Shared Sublayer for Detection and Classification,https://www.jstage.jst.go.jp/article/transfun/E107.A/1/E107.A_2022EAP1157/_article/-char/ja/,10.1587/transfun.2022EAP1157,,書誌取得のみ・詳細選別未完了
+DBJST04,10,DFAM-DETR: Deformable Feature Based Attention Mechanism DETR on Slender Object Detection,https://www.jstage.jst.go.jp/article/transinf/E106.D/3/E106.D_2022EDP7111/_article/-char/ja/,10.1587/transinf.2022EDP7111,,書誌取得のみ・詳細選別未完了
+DBJST05,1,In-Context Learningを使用した大規模視覚言語モデルによる少数の例示画像付き外観検査,https://www.jstage.jst.go.jp/article/jjspe/91/3/91_418/_article/-char/ja/,10.2493/jjspe.91.418,DBJP004,重点候補の判断あり
+DBJST05,2,大域文脈情報を導入した深層学習とファジー推論を用いた洋ナシ等級判定手法の研究,https://www.jstage.jst.go.jp/article/air/35/2/35_69/_article/-char/ja/,10.3173/air.35.69,,書誌取得のみ・詳細選別未完了
+DBJST05,3,深層学習を用いた人・もの工場内センシング技術の開発,https://www.jstage.jst.go.jp/article/isciesci/67/2/67_66/_article/-char/ja/,10.11509/isciesci.67.2_66,,書誌取得のみ・詳細選別未完了
+DBJST05,4,深層学習による材料分野の画像解析の発展,https://www.jstage.jst.go.jp/article/materia/63/6/63_371/_article/-char/ja/,10.2320/materia.63.371,,書誌取得のみ・詳細選別未完了
+DBJST05,5,工業製品のわずかな表面変化を区別するための擬似欠陥を構成するパラメータの推定に基づく事前学習と異常検知,https://www.jstage.jst.go.jp/article/jjspe/91/10/91_1017/_article/-char/ja/,10.2493/jjspe.91.1017,,書誌取得のみ・詳細選別未完了
+DBJST05,6,論文集-6,https://www.jstage.jst.go.jp/article/jskeproceedings/2.2/0/2.2_1180/_article/-char/ja/,10.5057/jskeproceedings.2.2.0_1180,,書誌取得のみ・詳細選別未完了
+DBJST06,1,Defect detection of bearing side face based on sample data augmentation and convolutional neural network,https://www.jstage.jst.go.jp/article/jamdsm/17/6/17_2023jamdsm0071/_article/-char/ja/,10.1299/jamdsm.2023jamdsm0071,,書誌取得のみ・詳細選別未完了
+DBJST06,2,A high-effective multitask surface defect detection method based on CBAM and atrous convolution,https://www.jstage.jst.go.jp/article/jamdsm/16/6/16_2022jamdsm0063/_article/-char/ja/,10.1299/jamdsm.2022jamdsm0063,,書誌取得のみ・詳細選別未完了
+DBJST06,3,Toward Reusable Engineering Knowledge:,https://www.jstage.jst.go.jp/article/jsmelem/2025.11/0/2025.11_OS04-11/_article/-char/ja/,10.1299/jsmelem.2025.11.OS04-11,,書誌取得のみ・詳細選別未完了
+DBJST06,4,Artificial intelligence in infrastructure management,https://www.jstage.jst.go.jp/article/jsceiiai/5/2/5_95/_article/-char/ja/,10.11532/jsceiiai.5.2_95,,書誌取得のみ・詳細選別未完了
+DBJST06,5,Research on detection of loosening and missing defects in petrochemical equipment bolt fasteners based on improved YOLOv5s,https://www.jstage.jst.go.jp/article/jamdsm/20/2/20_2026jamdsm0013/_article/-char/ja/,10.1299/jamdsm.2026jamdsm0013,,書誌取得のみ・詳細選別未完了
+DBJST06,6,Pilot Study on Tree Hazard Risk Assessment with Limited Data,https://www.jstage.jst.go.jp/article/jsceim/2/1/2_279/_article/-char/ja/,10.11532/jsceim.2.1_279,,書誌取得のみ・詳細選別未完了
+DBJST06,7,Using image captioning for automatic post-disaster damage detection and identification,https://www.jstage.jst.go.jp/article/jsceiiai/4/2/4_66/_article/-char/ja/,10.11532/jsceiiai.4.2_66,,書誌取得のみ・詳細選別未完了
+DBJST06,8,FA-YOLO: A High-Precision and Efficient Method for Fabric Defect Detection in Textile Industry,https://www.jstage.jst.go.jp/article/transfun/E107.A/6/E107.A_2023EAP1030/_article/-char/ja/,10.1587/transfun.2023EAP1030,,書誌取得のみ・詳細選別未完了
+DBJST06,9,Bayesian deep learning: A model-based interpretable approach,https://www.jstage.jst.go.jp/article/nolta/11/1/11_16/_article/-char/ja/,10.1587/nolta.11.16,,書誌取得のみ・詳細選別未完了
+DBJST06,10,Resformer-Unet: A U-shaped Framework Combining ResNet and Transformer for Segmentation of Strip Steel Surface Defects,https://www.jstage.jst.go.jp/article/isijinternational/64/1/64_ISIJINT-2023-222/_article/-char/ja/,10.2355/isijinternational.ISIJINT-2023-222,,書誌取得のみ・詳細選別未完了
+DBJST07,11,プラズマ窒化されたステンレス鋼の超精密切削において窒化前の表面処理が及ぼす影響（第2報）,https://www.jstage.jst.go.jp/article/pscjspe/2026S/0/2026S_287/_article/-char/ja/,10.11522/pscjspe.2026S.0_287,,書誌取得のみ・詳細選別未完了
+DBJST07,12,エンドミル工具摩耗のインプロセス検出に関する研究,https://www.jstage.jst.go.jp/article/jsmekyushu/2017.70/0/2017.70_902/_article/-char/ja/,10.1299/jsmekyushu.2017.70.902,,書誌取得のみ・詳細選別未完了
+DBJST07,13,窒化された鋼の超精密切削において窒化前の熱処理が及ぼす影響（第3報）,https://www.jstage.jst.go.jp/article/pscjspe/2021S/0/2021S_279/_article/-char/ja/,10.11522/pscjspe.2021S.0_279,,書誌取得のみ・詳細選別未完了
+DBJST07,14,プラズマ窒化されたステンレス鋼の超精密切削において窒化前の表面処理が及ぼす影響,https://www.jstage.jst.go.jp/article/pscjspe/2022A/0/2022A_359/_article/-char/ja/,10.11522/pscjspe.2022A.0_359,,書誌取得のみ・詳細選別未完了
+DBJST07,15,浸炭した鋼のダイヤモンド切削においてミクロ組織が工具摩耗に及ぼす影響,https://www.jstage.jst.go.jp/article/pscjspe/2017S/0/2017S_645/_article/-char/ja/,10.11522/pscjspe.2017S.0_645,,書誌取得のみ・詳細選別未完了
+DBJST07,16,アコースティックエミッション法を用いた切削状態の監視に関する実験的検討,https://www.jstage.jst.go.jp/article/tribologist/63/7/63_17-00028/_article/-char/ja/,10.18914/tribologist.17-00028,,書誌取得のみ・詳細選別未完了
+DBJST07,17,画像処理によるスローアウェイチップ摩耗における自動検査法の開発,https://www.jstage.jst.go.jp/article/ieejeiss/137/11/137_1488/_article/-char/ja/,10.1541/ieejeiss.137.1488,DBJP006,重点候補の判断あり
+DBJST07,18,無電解Ni-Pの超精密旋削における単結晶ダイヤモンド工具の摩耗,https://www.jstage.jst.go.jp/article/pscjspe/2024S/0/2024S_735/_article/-char/ja/,10.11522/pscjspe.2024S.0_735,,書誌取得のみ・詳細選別未完了
+DBJST07,19,機械学習を用いたミリング加工時の加速度データ解析による工具摩耗の推定,https://www.jstage.jst.go.jp/article/pscjspe/2021A/0/2021A_413/_article/-char/ja/,10.11522/pscjspe.2021A.0_413,,書誌取得のみ・詳細選別未完了
+DBJST07,20,極短時間切削によるインコネル718の高速切削における工具摩耗抑止,https://www.jstage.jst.go.jp/article/pscjspe/2016A/0/2016A_603/_article/-char/ja/,10.11522/pscjspe.2016A.0_603,,書誌取得のみ・詳細選別未完了
+DBCNI07,1,画像認識とAI活用による工具摩耗判定,https://cir.nii.ac.jp/crid/1520854804747176320,,,書誌取得のみ・詳細選別未完了
+DBCNI07,2,AI画像認識による旋削中の工具摩耗量の推定,https://cir.nii.ac.jp/crid/1390013784258664064,10.11522/pscjspe.2022a.0_175,,書誌取得のみ・詳細選別未完了
+DBCNI07,3,切りくず裏面温度分布画像のAI分析による５種の工具摩耗量の同時推定,https://cir.nii.ac.jp/crid/1390021846534178944,10.11522/pscjspe.2024a.0_239,,書誌取得のみ・詳細選別未完了
+DBCNI07,4,浸炭した鋼のダイヤモンド切削において炭化物が工具摩耗抑制に及ぼす影響,https://cir.nii.ac.jp/crid/1390282680636836736,10.11522/pscjspe.2015s.0_301,,書誌取得のみ・詳細選別未完了
+DBCNI07,5,画像処理によるスローアウェイチップ摩耗における自動検査法の開発,https://cir.nii.ac.jp/crid/1390001204611313280,10.1541/ieejeiss.137.1488,,書誌取得のみ・詳細選別未完了
+DBCNI07,6,ギヤスカイビング工具の寿命判定用画像式摩耗検出システムの開発（第4報）,https://cir.nii.ac.jp/crid/1390305433583339776,10.11522/pscjspe.2025s.0_756,,書誌取得のみ・詳細選別未完了
+DBCNI07,7,NC旋盤を対象とした加工最適化システムの開発,https://cir.nii.ac.jp/crid/1390019833533525248,10.11522/pscjspe.2024s.0_20,,書誌取得のみ・詳細選別未完了
+DBCNI07,8,ギヤスカイビング工具の寿命判定用画像式摩耗検出システムの開発,https://cir.nii.ac.jp/crid/1390017843875514368,10.11522/pscjspe.2023a.0_98,,書誌取得のみ・詳細選別未完了
+DBCNI07,9,湿式環境下における画像処理を用いた前逃げ面摩耗幅測定の検討,https://cir.nii.ac.jp/crid/1390870385391654784,10.11522/pscjspe.2025a.0_440,,書誌取得のみ・詳細選別未完了
+DBCNI07,10,NC旋盤を対象とした加工最適化システムの開発,https://cir.nii.ac.jp/crid/1390015830353147904,10.11522/pscjspe.2023s.0_96,,書誌取得のみ・詳細選別未完了
+DBCNI08,1,Hybrid Architecture Based on CNN and Transformer for Strip Steel Surface Defect Classification,https://cir.nii.ac.jp/crid/1360580235271367424,10.3390/electronics11081200,,書誌取得のみ・詳細選別未完了
+DBCNI08,2,Wood defect classification based on lightweight convolutional neural networks,https://cir.nii.ac.jp/crid/1360306913835409024,10.15376/biores.18.4.7663-7680,,書誌取得のみ・詳細選別未完了
+DBCNI08,3,Weft-knitted fabric defect classification based on a Swin transformer deformable convolutional network,https://cir.nii.ac.jp/crid/1360590690676609920,10.1177/00405175221137010,,書誌取得のみ・詳細選別未完了
+DBCNI08,4,UnionMixup and max-min-saliency mixup for mixed-type defect recognition of wafer bin maps,https://cir.nii.ac.jp/crid/1390581766253720832,10.1587/elex.21.20240054,,書誌取得のみ・詳細選別未完了
+DBCNI08,5,An Effective Surface Defect Classification Method Based on RepVGG with CBAM Attention Mechanism (RepVGG-CBAM) for Aluminum Profiles,https://cir.nii.ac.jp/crid/1873961342853799296,10.3390/met12111809,,書誌取得のみ・詳細選別未完了
+DBCNI08,6,Online Surface Defect Identification of Cold Rolled Strips Based on Local Binary Pattern and Extreme Learning Machine,https://cir.nii.ac.jp/crid/1360855571121463552,10.3390/met8030197,,書誌取得のみ・詳細選別未完了
+DBCNI08,7,Application of Shearlet transform to classification of surface defects for metals,https://cir.nii.ac.jp/crid/1363670318953778048,10.1016/j.imavis.2015.01.001,,書誌取得のみ・詳細選別未完了
+DBCNI08,8,Photovoltaic cell defect classification using convolutional neural network and support vector machine,https://cir.nii.ac.jp/crid/1360588389269736960,10.1049/iet-rpg.2019.1342,,書誌取得のみ・詳細選別未完了
+DBCNI08,9,An Effective Surface Defect Classification Method Based on RepVGG with CBAM Attention Mechanism (RepVGG-CBAM) for Aluminum Profiles,https://cir.nii.ac.jp/crid/1050585658871865344,,,書誌取得のみ・詳細選別未完了
+DBCNI08,10,Wood Defect Detection Based on Depth Extreme Learning Machine,https://cir.nii.ac.jp/crid/1360869860204952192,10.3390/app10217488,,書誌取得のみ・詳細選別未完了
+DBCNI08,11,Feature Extraction with Discrete Non-Separable Shearlet Transform and Its Application to Surface Inspection of Continuous Casting Slabs,https://cir.nii.ac.jp/crid/1360023721182289280,10.3390/app9214668,,書誌取得のみ・詳細選別未完了
+DBCNI08,12,An improved Vision Transformer-based method for classifying surface defects in hot-rolled strip steel,https://cir.nii.ac.jp/crid/1360016866461279232,10.1088/1742-6596/2082/1/012016,,書誌取得のみ・詳細選別未完了
+DBCNI08,13,Enhancing Furcation Involvement Classification on Panoramic Radiographs with Vision Transformers,https://cir.nii.ac.jp/crid/1870587969841392896,10.2139/ssrn.4939032,,書誌取得のみ・詳細選別未完了
+DBCNI08,14,Study on the Influence of Measuring AE Sensor Type on the Effectiveness of OLTC Defect Classification,https://cir.nii.ac.jp/crid/1360580237153457536,10.3390/s20113095,,書誌取得のみ・詳細選別未完了
+DBCNI08,15,2025A-IS-2 Development of a Real-Time Defect Detection and Classification Technique for DC-GMAW Using CNN,https://cir.nii.ac.jp/crid/1390871635046325248,10.14856/conf.41.0_5,,書誌取得のみ・詳細選別未完了
+DBCNI08,16,Critically Compressed Quantized Convolution Neural Network based High Frame Rate and Ultra-Low Delay Fruit External Defects Detection,https://cir.nii.ac.jp/crid/1360302869448976640,10.23919/mva51890.2021.9511388,,書誌取得のみ・詳細選別未完了
+DBCNI08,17,Resformer-Unet: A U-shaped Framework Combining ResNet and Transformer for Segmentation of Strip Steel Surface Defects,https://cir.nii.ac.jp/crid/1390298820574492928,10.2355/isijinternational.isijint-2023-222,,書誌取得のみ・詳細選別未完了
+DBCNI08,18,A Vision Transformer-Based Approach to Bearing Fault Classification via Vibration Signals,https://cir.nii.ac.jp/crid/1360306914404950784,10.23919/apsipaasc55919.2022.9980013,,書誌取得のみ・詳細選別未完了
+DBCNI08,19,Surface defect detection and classification of steel using an efficient Swin Transformer,https://cir.nii.ac.jp/crid/1360027093863329408,10.1016/j.aei.2023.102061,,書誌取得のみ・詳細選別未完了
+DBCNI08,20,Deep Anomaly Detection for Automotive Components by Oversampling,https://cir.nii.ac.jp/crid/1390579222505737856,10.17929/tqs.9.18,,書誌取得のみ・詳細選別未完了
+DBCNI09,1,画像認識とAI活用による工具摩耗判定,https://cir.nii.ac.jp/crid/1520854804747176320,,DBJP007,重点候補の判断あり
+DBCNI09,2,AI画像認識による旋削中の工具摩耗量の推定,https://cir.nii.ac.jp/crid/1390013784258664064,10.11522/pscjspe.2022a.0_175,,書誌取得のみ・詳細選別未完了
+DBCNI09,3,切りくず裏面温度分布画像のAI分析による５種の工具摩耗量の同時推定,https://cir.nii.ac.jp/crid/1390021846534178944,10.11522/pscjspe.2024a.0_239,,書誌取得のみ・詳細選別未完了
+DBCNI09,4,浸炭した鋼のダイヤモンド切削において炭化物が工具摩耗抑制に及ぼす影響,https://cir.nii.ac.jp/crid/1390282680636836736,10.11522/pscjspe.2015s.0_301,,書誌取得のみ・詳細選別未完了
+DBCNI09,5,画像処理によるスローアウェイチップ摩耗における自動検査法の開発,https://cir.nii.ac.jp/crid/1390001204611313280,10.1541/ieejeiss.137.1488,DBJP006,重点候補の判断あり
+DBCNI09,6,ギヤスカイビング工具の寿命判定用画像式摩耗検出システムの開発（第4報）,https://cir.nii.ac.jp/crid/1390305433583339776,10.11522/pscjspe.2025s.0_756,,書誌取得のみ・詳細選別未完了
+DBCNI09,7,NC旋盤を対象とした加工最適化システムの開発,https://cir.nii.ac.jp/crid/1390019833533525248,10.11522/pscjspe.2024s.0_20,,書誌取得のみ・詳細選別未完了
+DBCNI09,8,ギヤスカイビング工具の寿命判定用画像式摩耗検出システムの開発,https://cir.nii.ac.jp/crid/1390017843875514368,10.11522/pscjspe.2023a.0_98,,書誌取得のみ・詳細選別未完了
+DBCNI09,9,湿式環境下における画像処理を用いた前逃げ面摩耗幅測定の検討,https://cir.nii.ac.jp/crid/1390870385391654784,10.11522/pscjspe.2025a.0_440,,書誌取得のみ・詳細選別未完了
+DBCNI09,10,NC旋盤を対象とした加工最適化システムの開発,https://cir.nii.ac.jp/crid/1390015830353147904,10.11522/pscjspe.2023s.0_96,,書誌取得のみ・詳細選別未完了
+DBCNI10,1,Image-based classification of ball end-mill wear states using time-series visualization and Lab color space analysis,https://cir.nii.ac.jp/crid/1390872851658470144,10.1299/jamdsm.2026jamdsm0060,DBJP005,重点候補の判断あり
+DBCNI10,2,Development of tool-life time determination system using current value data imaged using recurrence plotting method,https://cir.nii.ac.jp/crid/1390590160069251968,10.1299/jsmelem.2025.11.os04-3,,書誌取得のみ・詳細選別未完了
+DBCNI10,3,異常検知と画像分類を併用したボールエンドミル摩耗状態判定システムの開発,https://cir.nii.ac.jp/crid/1390020143178663040,10.1299/transjsme.24-00127,DBJP010,重点候補の判断あり
+DBCNI10,4,Tool Condition Monitoring with Convolutional Neural Network for Milling Tools and Turning Inserts,https://cir.nii.ac.jp/crid/1871150918600703744,10.9744/jti.25.1.1-16,,書誌取得のみ・詳細選別未完了
+DBCNI10,5,Enhancing Tool Replacement Decisions in Milling of Ti-6Al-4V Using Convolutional Neural Networks and Time-series-to-image Encoding,https://cir.nii.ac.jp/crid/1360300465356490368,10.2139/ssrn.4657889,,書誌取得のみ・詳細選別未完了
+DBCNI10,6,Tool wear classification using time series imaging and deep learning,https://cir.nii.ac.jp/crid/1363670318854810496,10.1007/s00170-019-04090-6,,書誌取得のみ・詳細選別未完了
+DBCNI10,7,Prediction of Machining Condition Using Time Series Imaging and Deep Learning in Slot Milling of Titanium Alloy,https://cir.nii.ac.jp/crid/1360587984093551104,10.3390/jmmp6060145,,書誌取得のみ・詳細選別未完了
+DBCNI10,8,画像分類技術を援用したボールエンドミル摩耗状態判定システム,https://cir.nii.ac.jp/crid/1520027210070737792,,DBJP008,重点候補の判断あり
+DBCNI10,9,The difference and clinical application of modified thoracolumbar fracture classification scoring system in guiding clinical treatment,https://cir.nii.ac.jp/crid/1360025030626625792,10.1186/s13018-023-03958-4,,書誌取得のみ・詳細選別未完了
+DBCNI12,1,Hybrid Architecture Based on CNN and Transformer for Strip Steel Surface Defect Classification,https://cir.nii.ac.jp/crid/1360580235271367424,10.3390/electronics11081200,DBJP011,重点候補の判断あり
+DBCNI12,2,Wood defect classification based on lightweight convolutional neural networks,https://cir.nii.ac.jp/crid/1360306913835409024,10.15376/biores.18.4.7663-7680,,書誌取得のみ・詳細選別未完了
+DBCNI12,3,Weft-knitted fabric defect classification based on a Swin transformer deformable convolutional network,https://cir.nii.ac.jp/crid/1360590690676609920,10.1177/00405175221137010,DBJP001,重点候補の判断あり
+DBCNI12,4,UnionMixup and max-min-saliency mixup for mixed-type defect recognition of wafer bin maps,https://cir.nii.ac.jp/crid/1390581766253720832,10.1587/elex.21.20240054,DBJP012,重点候補の判断あり
+DBCNI12,5,An Effective Surface Defect Classification Method Based on RepVGG with CBAM Attention Mechanism (RepVGG-CBAM) for Aluminum Profiles,https://cir.nii.ac.jp/crid/1873961342853799296,10.3390/met12111809,,書誌取得のみ・詳細選別未完了
+DBCNI12,6,Online Surface Defect Identification of Cold Rolled Strips Based on Local Binary Pattern and Extreme Learning Machine,https://cir.nii.ac.jp/crid/1360855571121463552,10.3390/met8030197,,書誌取得のみ・詳細選別未完了
+DBCNI12,7,Application of Shearlet transform to classification of surface defects for metals,https://cir.nii.ac.jp/crid/1363670318953778048,10.1016/j.imavis.2015.01.001,,書誌取得のみ・詳細選別未完了
+DBCNI12,8,Photovoltaic cell defect classification using convolutional neural network and support vector machine,https://cir.nii.ac.jp/crid/1360588389269736960,10.1049/iet-rpg.2019.1342,,書誌取得のみ・詳細選別未完了
+DBCNI12,9,An Effective Surface Defect Classification Method Based on RepVGG with CBAM Attention Mechanism (RepVGG-CBAM) for Aluminum Profiles,https://cir.nii.ac.jp/crid/1050585658871865344,,,書誌取得のみ・詳細選別未完了
+DBCNI12,10,Wood Defect Detection Based on Depth Extreme Learning Machine,https://cir.nii.ac.jp/crid/1360869860204952192,10.3390/app10217488,,書誌取得のみ・詳細選別未完了
+DBCNI12,11,Feature Extraction with Discrete Non-Separable Shearlet Transform and Its Application to Surface Inspection of Continuous Casting Slabs,https://cir.nii.ac.jp/crid/1360023721182289280,10.3390/app9214668,,書誌取得のみ・詳細選別未完了
+DBCNI12,12,An improved Vision Transformer-based method for classifying surface defects in hot-rolled strip steel,https://cir.nii.ac.jp/crid/1360016866461279232,10.1088/1742-6596/2082/1/012016,DBJP002,重点候補の判断あり
+DBCNI12,13,Enhancing Furcation Involvement Classification on Panoramic Radiographs with Vision Transformers,https://cir.nii.ac.jp/crid/1870587969841392896,10.2139/ssrn.4939032,,書誌取得のみ・詳細選別未完了
+DBCNI12,14,Study on the Influence of Measuring AE Sensor Type on the Effectiveness of OLTC Defect Classification,https://cir.nii.ac.jp/crid/1360580237153457536,10.3390/s20113095,,書誌取得のみ・詳細選別未完了
+DBCNI12,15,2025A-IS-2 Development of a Real-Time Defect Detection and Classification Technique for DC-GMAW Using CNN,https://cir.nii.ac.jp/crid/1390871635046325248,10.14856/conf.41.0_5,,書誌取得のみ・詳細選別未完了
+DBCNI12,16,Critically Compressed Quantized Convolution Neural Network based High Frame Rate and Ultra-Low Delay Fruit External Defects Detection,https://cir.nii.ac.jp/crid/1360302869448976640,10.23919/mva51890.2021.9511388,,書誌取得のみ・詳細選別未完了
+DBCNI12,17,Resformer-Unet: A U-shaped Framework Combining ResNet and Transformer for Segmentation of Strip Steel Surface Defects,https://cir.nii.ac.jp/crid/1390298820574492928,10.2355/isijinternational.isijint-2023-222,,書誌取得のみ・詳細選別未完了
+DBCNI12,18,A Vision Transformer-Based Approach to Bearing Fault Classification via Vibration Signals,https://cir.nii.ac.jp/crid/1360306914404950784,10.23919/apsipaasc55919.2022.9980013,,書誌取得のみ・詳細選別未完了
+DBCNI12,19,Surface defect detection and classification of steel using an efficient Swin Transformer,https://cir.nii.ac.jp/crid/1360027093863329408,10.1016/j.aei.2023.102061,DBJP003,重点候補の判断あり
+DBCNI12,20,Deep Anomaly Detection for Automotive Components by Oversampling,https://cir.nii.ac.jp/crid/1390579222505737856,10.17929/tqs.9.18,,書誌取得のみ・詳細選別未完了
+DBCNI14,1,In-Context Learningを使用した大規模視覚言語モデルによる少数の例示画像付き外観検査,https://cir.nii.ac.jp/crid/1390303465368735104,10.2493/jjspe.91.418,DBJP004,重点候補の判断あり
+DBCNI15,21,Dislocation classification of a large-area β-Ga2O3 single crystal via contrast analysis of affine-transformed X-ray topographs,https://cir.nii.ac.jp/crid/1360572092555576576,10.1016/j.jcrysgro.2020.125825,,書誌取得のみ・詳細選別未完了
+DBCNI15,22,Condition Monitoring of Chain Sprocket Drive System Based on IoT Device and Convolutional Neural Network,https://cir.nii.ac.jp/crid/1362262944610782336,10.1155/2020/8826507,,書誌取得のみ・詳細選別未完了
+DBCNI15,23,Terahertz defect detection method based on significant spectral feature fusion and spiking neural network,https://cir.nii.ac.jp/crid/1390016262469619968,10.1587/elex.20.20230211,,書誌取得のみ・詳細選別未完了
+DBCNI15,24,Intrinsic color centers in 4H-silicon carbide formed by heavy ion implantation and annealing,https://cir.nii.ac.jp/crid/1872835442401619712,10.1088/1361-6463/ac3a49,,書誌取得のみ・詳細選別未完了
+DBCNI15,25,Partial Discharge Source Classification for Switchgears with Transient Earth Voltage Sensor Using Convolutional Neural Network,https://cir.nii.ac.jp/crid/1871428067782579712,10.1109/cmd.2018.8535913,,書誌取得のみ・詳細選別未完了
+DBCNI15,26,Balancing the trade-off between accuracy and interpretability in software defect prediction,https://cir.nii.ac.jp/crid/1363107368968553344,10.1007/s10664-018-9638-1,,書誌取得のみ・詳細選別未完了
+DBCNI15,27,How I treat higher-risk MDS,https://cir.nii.ac.jp/crid/1360868145899311104,10.1182/blood.2024025271,,書誌取得のみ・詳細選別未完了
+DBCNI15,28,Superposed Naive Bayes for Accurate and Interpretable Prediction,https://cir.nii.ac.jp/crid/1873961342291369600,10.1109/icmla.2015.147,,書誌取得のみ・詳細選別未完了
+DBCNI15,29,Design Tool of Deep Convolutional Neural Network for Visual Inspection,https://cir.nii.ac.jp/crid/1872272492549398912,10.1007/978-3-319-93803-5_57,,書誌取得のみ・詳細選別未完了
+DBCNI15,30,Image-based classification of ball end-mill wear states using time-series visualization and Lab color space analysis,https://cir.nii.ac.jp/crid/1390872851658470144,10.1299/jamdsm.2026jamdsm0060,DBJP005,重点候補の判断あり
+DBCNI15,31,SmartPapyrusが実現する製紙工程DX化のトータルソリューション,https://cir.nii.ac.jp/crid/1520026271596884096,,,書誌取得のみ・詳細選別未完了
+DBCNI15,32,Design Tool of Deep Convolutional Neural Network for Intelligent Visual Inspection,https://cir.nii.ac.jp/crid/1871432393505861632,10.1088/1757-899x/423/1/012073,,書誌取得のみ・詳細選別未完了
+DBCNI15,33,Too many numbers and complexity: time to update the classifications of neurogenetic disorders?,https://cir.nii.ac.jp/crid/1873116917435095296,10.1136/jmedgenet-2015-103477,,書誌取得のみ・詳細選別未完了
+DBCNI15,34,Improving Phased Array Ultrasonic Test Applicability Using Semi-Supervised Learning and P-DWT Feature Extraction,https://cir.nii.ac.jp/crid/1390027575486060416,10.11532/jsceiiai.7.2_1,,書誌取得のみ・詳細選別未完了
+DBCNI15,35,A Magnetic Resonance Imaging–Based Staging System for Osteochondritis Dissecans of the Elbow: A Validation Study Against the International Cartilage Repair Society Classification,https://cir.nii.ac.jp/crid/1050282677640745088,10.1177/2325967118794620,,書誌取得のみ・詳細選別未完了
+DBCNI15,36,Classification of Partial Discharge Sources using Waveform Parameters and Phase-Resolved Partial Discharge Pattern as Input for the Artificial Neural Network,https://cir.nii.ac.jp/crid/1360016866544413312,10.1109/cmd.2018.8535675,,書誌取得のみ・詳細選別未完了
+DBCNI15,37,Harmonic flow-field representations of quantum bits and gates,https://cir.nii.ac.jp/crid/1870025018770720768,10.1103/physrevresearch.6.043039,,書誌取得のみ・詳細選別未完了
+DBCNI15,38,Large Anhysteretic Deformation of Shape Memory Alloys at Postcritical Temperatures and Stresses,https://cir.nii.ac.jp/crid/1360848655210336896,10.1002/pssb.201700273,,書誌取得のみ・詳細選別未完了
+DBCNI15,39,State of the Art in Directed Energy Deposition: From Additive Manufacturing to Materials Design,https://cir.nii.ac.jp/crid/1360857597903161344,10.3390/coatings9070418,,書誌取得のみ・詳細選別未完了
+DBCNI15,40,On actions for (entangling) surfaces and DCFTs,https://cir.nii.ac.jp/crid/1360574095061993472,10.1007/jhep04(2018)100,,書誌取得のみ・詳細選別未完了
+ARXQ04,1,Towards ab initio calculations with the dynamical vertex approximation,https://arxiv.org/abs/1709.02663,10.7566/JPSJ.87.041004,ARXC001,重点候補の判断あり
+ARXQ05,1,Towards ab initio calculations with the dynamical vertex approximation,https://arxiv.org/abs/1709.02663,10.7566/JPSJ.87.041004,ARXC001,重点候補の判断あり
+ARXQ07,1,Towards ab initio calculations with the dynamical vertex approximation,https://arxiv.org/abs/1709.02663,10.7566/JPSJ.87.041004,ARXC001,重点候補の判断あり
+ARXQ04,2,"On the asymptotic density of the ordered pairs $(a,b)$ of positive integers such that $\gcd(ab,a+b)=\gcd(a,b)$",https://arxiv.org/abs/2606.20057,,ARXC002,重点候補の判断あり
+ARXQ05,2,"On the asymptotic density of the ordered pairs $(a,b)$ of positive integers such that $\gcd(ab,a+b)=\gcd(a,b)$",https://arxiv.org/abs/2606.20057,,ARXC002,重点候補の判断あり
+ARXQ07,2,"On the asymptotic density of the ordered pairs $(a,b)$ of positive integers such that $\gcd(ab,a+b)=\gcd(a,b)$",https://arxiv.org/abs/2606.20057,,ARXC002,重点候補の判断あり
+ARXQ04,3,Relevance of $4f$-$3d$ exchange to finite-temperature magnetism of rare-earth permanent magnets: an ab-initio-based spin model approach for NdFe$_{12}$N,https://arxiv.org/abs/1504.06697,10.1063/1.4952989,ARXC003,重点候補の判断あり
+ARXQ05,3,Relevance of $4f$-$3d$ exchange to finite-temperature magnetism of rare-earth permanent magnets: an ab-initio-based spin model approach for NdFe$_{12}$N,https://arxiv.org/abs/1504.06697,10.1063/1.4952989,ARXC003,重点候補の判断あり
+ARXQ07,3,Relevance of $4f$-$3d$ exchange to finite-temperature magnetism of rare-earth permanent magnets: an ab-initio-based spin model approach for NdFe$_{12}$N,https://arxiv.org/abs/1504.06697,10.1063/1.4952989,ARXC003,重点候補の判断あり
+ARXQ04,4,Ab initio informed electronic stopping models for light ion propagation in metals,https://arxiv.org/abs/2603.10838,10.1016/j.jnucmat.2026.156906,ARXC004,重点候補の判断あり
+ARXQ05,4,Ab initio informed electronic stopping models for light ion propagation in metals,https://arxiv.org/abs/2603.10838,10.1016/j.jnucmat.2026.156906,ARXC004,重点候補の判断あり
+ARXQ07,4,Ab initio informed electronic stopping models for light ion propagation in metals,https://arxiv.org/abs/2603.10838,10.1016/j.jnucmat.2026.156906,ARXC004,重点候補の判断あり
+ARXQ04,5,Ab initio electronic conductivity of Fe-bearing post-perovskite,https://arxiv.org/abs/2602.23634,10.1103/zm8r-2bww,ARXC005,重点候補の判断あり
+ARXQ05,5,Ab initio electronic conductivity of Fe-bearing post-perovskite,https://arxiv.org/abs/2602.23634,10.1103/zm8r-2bww,ARXC005,重点候補の判断あり
+ARXQ07,5,Ab initio electronic conductivity of Fe-bearing post-perovskite,https://arxiv.org/abs/2602.23634,10.1103/zm8r-2bww,ARXC005,重点候補の判断あり
+ARXQ04,6,Two-phase protein folding optimization on a three-dimensional AB off-lattice model,https://arxiv.org/abs/1903.01456,10.1016/j.swevo.2020.100708,ARXC006,重点候補の判断あり
+ARXQ05,6,Two-phase protein folding optimization on a three-dimensional AB off-lattice model,https://arxiv.org/abs/1903.01456,10.1016/j.swevo.2020.100708,ARXC006,重点候補の判断あり
+ARXQ07,6,Two-phase protein folding optimization on a three-dimensional AB off-lattice model,https://arxiv.org/abs/1903.01456,10.1016/j.swevo.2020.100708,ARXC006,重点候補の判断あり
+ARXQ04,7,Note: Bridging Information Science: AB Initio Calculation Vortex of 2D Materials of Bismuthene(Bismuth Molecule) Graphene-Shaped through Kohn-Sham Equations,https://arxiv.org/abs/2404.01312,,ARXC007,重点候補の判断あり
+ARXQ05,7,Note: Bridging Information Science: AB Initio Calculation Vortex of 2D Materials of Bismuthene(Bismuth Molecule) Graphene-Shaped through Kohn-Sham Equations,https://arxiv.org/abs/2404.01312,,ARXC007,重点候補の判断あり
+ARXQ07,7,Note: Bridging Information Science: AB Initio Calculation Vortex of 2D Materials of Bismuthene(Bismuth Molecule) Graphene-Shaped through Kohn-Sham Equations,https://arxiv.org/abs/2404.01312,,ARXC007,重点候補の判断あり
+ARXQ04,8,The mass of Albireo Aa and the nature of Albireo AB: New aspects from Gaia DR2,https://arxiv.org/abs/1811.01665,10.1051/0004-6361/201834351,ARXC008,重点候補の判断あり
+ARXQ05,8,The mass of Albireo Aa and the nature of Albireo AB: New aspects from Gaia DR2,https://arxiv.org/abs/1811.01665,10.1051/0004-6361/201834351,ARXC008,重点候補の判断あり
+ARXQ07,8,The mass of Albireo Aa and the nature of Albireo AB: New aspects from Gaia DR2,https://arxiv.org/abs/1811.01665,10.1051/0004-6361/201834351,ARXC008,重点候補の判断あり
+ARXQ04,9,On the Characteristic polynomial of ABS Matrix and ABS-Energy of Some Graphs,https://arxiv.org/abs/2509.02155,,ARXC009,重点候補の判断あり
+ARXQ05,9,On the Characteristic polynomial of ABS Matrix and ABS-Energy of Some Graphs,https://arxiv.org/abs/2509.02155,,ARXC009,重点候補の判断あり
+ARXQ07,9,On the Characteristic polynomial of ABS Matrix and ABS-Energy of Some Graphs,https://arxiv.org/abs/2509.02155,,ARXC009,重点候補の判断あり
+ARXQ04,10,Stellar origin of 15N-rich presolar SiC grains of type AB: supernovae with explosive hydrogen burning,https://arxiv.org/abs/1705.08222,10.3847/2041-8213/aa74e5,ARXC010,重点候補の判断あり
+ARXQ05,10,Stellar origin of 15N-rich presolar SiC grains of type AB: supernovae with explosive hydrogen burning,https://arxiv.org/abs/1705.08222,10.3847/2041-8213/aa74e5,ARXC010,重点候補の判断あり
+ARXQ07,10,Stellar origin of 15N-rich presolar SiC grains of type AB: supernovae with explosive hydrogen burning,https://arxiv.org/abs/1705.08222,10.3847/2041-8213/aa74e5,ARXC010,重点候補の判断あり
+ARXQ05,11,Extending the ab-index,https://arxiv.org/abs/2510.00951,,ARXC011,重点候補の判断あり
+ARXQ07,11,Extending the ab-index,https://arxiv.org/abs/2510.00951,,ARXC011,重点候補の判断あり
+ARXQ05,12,Ab initio functional-independent calculations of the clamped Pockels tensor of tetragonal barium titanate,https://arxiv.org/abs/2506.13209,10.1103/PhysRevB.111.184306,ARXC012,重点候補の判断あり
+ARXQ07,12,Ab initio functional-independent calculations of the clamped Pockels tensor of tetragonal barium titanate,https://arxiv.org/abs/2506.13209,10.1103/PhysRevB.111.184306,ARXC012,重点候補の判断あり
+ARXQ05,13,On the equation $ab(ab-1)-na=Δ^2$,https://arxiv.org/abs/2001.00475,,ARXC013,重点候補の判断あり
+ARXQ07,13,On the equation $ab(ab-1)-na=Δ^2$,https://arxiv.org/abs/2001.00475,,ARXC013,重点候補の判断あり
+ARXQ05,14,On the $\mathcal{ABS}$ spectrum and energy of graphs,https://arxiv.org/abs/2409.03287,,ARXC014,重点候補の判断あり
+ARXQ07,14,On the $\mathcal{ABS}$ spectrum and energy of graphs,https://arxiv.org/abs/2409.03287,,ARXC014,重点候補の判断あり
+ARXQ05,15,Transitivity of implicative aBE algebras,https://arxiv.org/abs/2306.12427,10.17951/a.2022.76.2.55-58,ARXC015,重点候補の判断あり
+ARXQ07,15,Transitivity of implicative aBE algebras,https://arxiv.org/abs/2306.12427,10.17951/a.2022.76.2.55-58,ARXC015,重点候補の判断あり
+ARXQ05,16,A counterexample to the localization problem for AB rings,https://arxiv.org/abs/2609.00754,,ARXC016,重点候補の判断あり
+ARXQ07,16,A counterexample to the localization problem for AB rings,https://arxiv.org/abs/2609.00754,,ARXC016,重点候補の判断あり
+ARXQ05,17,What is ab initio?,https://arxiv.org/abs/2307.06416,10.1007/s00601-023-01857-2,ARXC017,重点候補の判断あり
+ARXQ07,17,What is ab initio?,https://arxiv.org/abs/2307.06416,10.1007/s00601-023-01857-2,ARXC017,重点候補の判断あり
+ARXQ06,1,ABS+ Polar Codes: Exploiting More Linear Transforms on Adjacent Bits,https://arxiv.org/abs/2209.02461,10.1109/TIT.2023.3331522,ARXC018,重点候補の判断あり
+ARXQ06,2,On decomposition of the ABS lattice equations and related Bäcklund transformations,https://arxiv.org/abs/1705.00843,,ARXC019,重点候補の判断あり
+ARXQ06,3,"From auto-Bäcklund transformations to auto-Bäcklund transformations, and torqued ABS equations",https://arxiv.org/abs/2102.11668,,ARXC020,重点候補の判断あり
+ARXQ06,4,AB-Attention: Accurate Block Attention for Accelerating Video Diffusion Transformers,https://arxiv.org/abs/2610.39663,,ARXC021,重点候補の判断あり
+ARXQ06,5,"Exact $P_s T_d$ Invariant and $P_s T_d$ Symmetric Breaking solutions, Symmetry Reductions and Bäcklund Transformations For An AB-KdV System",https://arxiv.org/abs/1612.00546,10.1016/j.physleta.2018.02.036,ARXC022,重点候補の判断あり
+ARXQ06,6,Efficient Ab-Initio Molecular Dynamic Simulations by Offloading Fast Fourier Transformations to FPGAs,https://arxiv.org/abs/2006.08435,10.1109/FPL50879.2020.00065,ARXC023,重点候補の判断あり
+ARXQ06,7,AB-UPT: Scaling Neural CFD Surrogates for High-Fidelity Automotive Aerodynamics Simulations via Anchored-Branched Universal Physics Transformers,https://arxiv.org/abs/2502.09692,,ARXC024,重点候補の判断あり
+ARXQ06,8,Towards the ab initio based theory of the phase transformations in iron and steel,https://arxiv.org/abs/1707.04287,10.1134/S0031918X16130032,ARXC025,重点候補の判断あり
+ARXQ06,9,Facile ab initio approach for self-localized polarons from canonical transformations,https://arxiv.org/abs/2011.03620,10.1103/PhysRevMaterials.5.063805,ARXC026,重点候補の判断あり
+ARXQ06,10,NNQS-Transformer: an Efficient and Scalable Neural Network Quantum States Approach for Ab initio Quantum Chemistry,https://arxiv.org/abs/2306.16705,,ARXC027,重点候補の判断あり
+ARXQ06,11,Ab-initio Theory of Fourier-transformed Quasiparticle Interference Maps and Application to the Topological Insulator Bi$_2$Te$_3$,https://arxiv.org/abs/2001.06189,10.1002/pssb.202000031,ARXC028,重点候補の判断あり
+ARXQ06,12,Comparison of the canonical transformation and energy functional formalisms for ab initio calculations of self-localized polarons,https://arxiv.org/abs/2203.00794,10.1103/PhysRevB.105.155132,ARXC029,重点候補の判断あり
+ARXQ06,13,Anchored-Branched Steady-state WInd Flow Transformer (AB-SWIFT): a metamodel for 3D atmospheric flow in urban environments,https://arxiv.org/abs/2603.25635,,ARXC030,重点候補の判断あり
+ARXQ06,14,Determination of the vibrational contribution to the entropy change at the martensitic transformation in Ni-Mn-Sn metamagnetic shape memory alloys: A combined approach of time-of-flight neutron spectroscopy and ab-initio calculations,https://arxiv.org/abs/1506.04100,10.1088/0953-8984/28/20/205402,ARXC031,重点候補の判断あり
+ARXQ06,15,Semiconductor Wafer Map Defect Classification with Tiny Vision Transformers,https://arxiv.org/abs/2504.02494,,ARXC032,重点候補の判断あり
+ARXQ12,1,Semiconductor Wafer Map Defect Classification with Tiny Vision Transformers,https://arxiv.org/abs/2504.02494,,ARXC032,重点候補の判断あり
+ARXQ13,1,Semiconductor Wafer Map Defect Classification with Tiny Vision Transformers,https://arxiv.org/abs/2504.02494,,ARXC032,重点候補の判断あり
+ARXQ06,16,Constraints on BMS Transformations via Energy Conditions and implications on black hole geometry,https://arxiv.org/abs/2603.06323,,ARXC033,重点候補の判断あり
+ARXQ07,18,The Poincaré-extended ab-index,https://arxiv.org/abs/2301.05904,,ARXC034,重点候補の判断あり
+ARXQ08,1,Explainable AI for tool wear prediction in turning,https://arxiv.org/abs/2308.08765,,ARXC035,重点候補の判断あり
+ARXQ08,2,Workpiece Image-based Tool Wear Classification in Blanking Processes Using Deep Convolutional Neural Networks,https://arxiv.org/abs/2107.12034,10.1007/s11740-022-01113-2,ARXC036,重点候補の判断あり
+ARXQ17,3,Workpiece Image-based Tool Wear Classification in Blanking Processes Using Deep Convolutional Neural Networks,https://arxiv.org/abs/2107.12034,10.1007/s11740-022-01113-2,ARXC036,重点候補の判断あり
+ARXQ08,3,Combining shape and contour features to improve tool wear monitoring in milling processes,https://arxiv.org/abs/2402.05978,,ARXC037,重点候補の判断あり
+ARXQ08,4,Evaluation of Data Augmentation and Loss Functions in Semantic Image Segmentation for Drilling Tool Wear Detection,https://arxiv.org/abs/2302.05262,10.1007/s10845-023-02313-y,ARXC038,重点候補の判断あり
+ARXQ17,4,Evaluation of Data Augmentation and Loss Functions in Semantic Image Segmentation for Drilling Tool Wear Detection,https://arxiv.org/abs/2302.05262,10.1007/s10845-023-02313-y,ARXC038,重点候補の判断あり
+ARXQ08,5,Artificial Intelligence based tool wear and defect prediction for special purpose milling machinery using low-cost acceleration sensor retrofits,https://arxiv.org/abs/2202.03068,,ARXC039,重点候補の判断あり
+ARXQ08,6,Making informed decisions in cutting tool maintenance in milling: A KNN-based model agnostic approach,https://arxiv.org/abs/2310.14629,10.17531/ein/217438,ARXC040,重点候補の判断あり
+ARXQ08,7,Cross-Domain Joint-Embedding Pretraining For Heterogeneous Industrial Time Series,https://arxiv.org/abs/2611.02489,,ARXC041,重点候補の判断あり
+ARXQ08,8,Adaptive Unknown Fault Detection and Few-Shot Continual Learning for Condition Monitoring in Ultrasonic Metal Welding,https://arxiv.org/abs/2604.13465,,ARXC042,重点候補の判断あり
+ARXQ12,2,Feasibility of Genetic Algorithm for Textile Defect Classification Using Neural Network,https://arxiv.org/abs/1208.6025,,ARXC043,重点候補の判断あり
+ARXQ12,3,Progressive Alignment with VLM-LLM Feature to Augment Defect Classification for the ASE Dataset,https://arxiv.org/abs/2404.05183,,ARXC044,重点候補の判断あり
+ARXQ12,4,Sewer-ML: A Multi-Label Sewer Defect Classification Dataset and Benchmark,https://arxiv.org/abs/2103.10895,,ARXC045,重点候補の判断あり
+ARXQ12,5,Context-Aware Deep Learning for Defect Classification in Atomic-Resolution STEM,https://arxiv.org/abs/2606.09419,,ARXC046,重点候補の判断あり
+ARXQ13,4,Context-Aware Deep Learning for Defect Classification in Atomic-Resolution STEM,https://arxiv.org/abs/2606.09419,,ARXC046,重点候補の判断あり
+ARXQ12,6,MVREC: A General Few-shot Defect Classification Model Using Multi-View Region-Context,https://arxiv.org/abs/2412.16897,,ARXC047,重点候補の判断あり
+ARXQ12,7,A Continual Learning Framework for Adaptive Defect Classification and Inspection,https://arxiv.org/abs/2203.08796,10.1080/00224065.2023.2224974,ARXC048,重点候補の判断あり
+ARXQ12,8,Enhancing Apple's Defect Classification: Insights from Visible Spectrum and Narrow Spectral Band Imaging,https://arxiv.org/abs/2410.19784,10.1109/ICPRS62101.2024.10677803,ARXC049,重点候補の判断あり
+ARXQ12,9,NL-MambaXCT: Self-Supervised Nested-Learning Mamba for Nomex Honeycomb X-ray CT Defect Classification,https://arxiv.org/abs/2605.27454,,ARXC050,重点候補の判断あり
+ARXQ12,10,Dual-Stream Attention Transformers for Sewer Defect Classification,https://arxiv.org/abs/2311.16145,,ARXC051,重点候補の判断あり
+ARXQ13,2,Dual-Stream Attention Transformers for Sewer Defect Classification,https://arxiv.org/abs/2311.16145,,ARXC051,重点候補の判断あり
+ARXQ12,11,Towards Trustworthy Multi-label Sewer Defect Classification via Evidential Deep Learning,https://arxiv.org/abs/2210.13782,,ARXC052,重点候補の判断あり
+ARXQ13,3,Semiconductor SEM Image Defect Classification Using Supervised and Semi-Supervised Learning with Vision Transformers,https://arxiv.org/abs/2506.03345,10.1109/ASMC64512.2025.11010396,ARXC053,重点候補の判断あり
+ARXQ13,5,A Generative Approach for Improving Multi-Label Defect Classification in Photovoltaic Modules,https://arxiv.org/abs/2608.12725,10.1016/j.solener.2026.114943,ARXC054,重点候補の判断あり
+ARXQ13,6,Vision Transformer-Based Multi-Level Feature Fusion for Multi-Label Sewer Defect Classification,https://arxiv.org/abs/2609.11375,,ARXC055,重点候補の判断あり
+ARXQ13,7,Joint Architecture-Token-Bitwidth Multi-Axis Optimization of Vision Transformers for Semiconductor IC Packaging,https://arxiv.org/abs/2605.01742,,ARXC056,重点候補の判断あり
+ARXQ13,8,Pseudo vs. True Defect Classification in Printed Circuits Boards using Wavelet Features,https://arxiv.org/abs/1310.6654,,ARXC057,重点候補の判断あり
+ARXQ13,9,Semiconductor Defect Pattern Classification by Self-Proliferation-and-Attention Neural Network,https://arxiv.org/abs/2212.00345,10.1109/TSM.2021.3131597,ARXC058,重点候補の判断あり
+ARXQ13,10,Generative Model-Driven Synthetic Training Image Generation: An Approach to Cognition in Rail Defect Detection,https://arxiv.org/abs/2401.00393,,ARXC059,重点候補の判断あり
+ARXQ14,1,Incomplete Multimodal Industrial Anomaly Detection via Cross-Modal Distillation,https://arxiv.org/abs/2405.13571,10.1016/j.inffus.2025.103572,ARXC060,重点候補の判断あり
+ARXQ14,2,Multimodal Industrial Anomaly Detection via Hybrid Fusion,https://arxiv.org/abs/2303.00601,,ARXC061,重点候補の判断あり
+ARXQ14,3,Text-Guided Multimodal Unified Industrial Anomaly Detection,https://arxiv.org/abs/2604.22899,,ARXC062,重点候補の判断あり
+ARXQ14,4,Multimodal Industrial Anomaly Detection via Geometric Prior,https://arxiv.org/abs/2603.22757,10.1109/TCSVT.2025.3613708,ARXC063,重点候補の判断あり
+ARXQ14,5,Parameter Efficient Multi-Class Intelligent Scheduling for Multimodal Online Distributed Industrial Anomaly Detection,https://arxiv.org/abs/2605.23984,,ARXC064,重点候補の判断あり
+ARXQ14,6,ZSG-IAD: A Multimodal Framework for Zero-Shot Grounded Industrial Anomaly Detection,https://arxiv.org/abs/2604.17949,,ARXC065,重点候補の判断あり
+ARXQ14,7,Myriad: Large Multimodal Model by Applying Vision Experts for Industrial Anomaly Detection,https://arxiv.org/abs/2310.19070,,ARXC066,重点候補の判断あり
+ARXQ14,8,MMAD: A Comprehensive Benchmark for Multimodal Large Language Models in Industrial Anomaly Detection,https://arxiv.org/abs/2410.09453,,ARXC067,重点候補の判断あり
+ARXQ14,9,PB-IAD: Utilizing multimodal foundation models for semantic industrial anomaly detection in dynamic manufacturing environments,https://arxiv.org/abs/2508.14504,,ARXC068,重点候補の判断あり
+ARXQ14,10,JUDO: A Juxtaposed Domain-Oriented Multimodal Reasoner for Industrial Anomaly QA,https://arxiv.org/abs/2605.20284,,ARXC069,重点候補の判断あり
+ARXQ14,11,Can Multimodal Large Language Models be Guided to Improve Industrial Anomaly Detection?,https://arxiv.org/abs/2501.15795,,ARXC070,重点候補の判断あり
+ARXQ14,12,Global Logic and Local Search: Dual-Stream Multimodal In-Context Learning for Verifiable Industrial Anomaly Detection,https://arxiv.org/abs/2607.03817,,ARXC071,重点候補の判断あり
+ARXQ14,13,BridgeNet: A Unified Multimodal Framework for Bridging 2D and 3D Industrial Anomaly Detection,https://arxiv.org/abs/2507.19253,,ARXC072,重点候補の判断あり
+ARXQ15,1,AgentIAD: Agentic Industrial Anomaly Detection via Adaptive Memory Augmentation,https://arxiv.org/abs/2512.13671,,ARXC073,重点候補の判断あり
+ARXQ15,2,"Detect, Classify, Act: Categorizing Industrial Anomalies with Multi-Modal Large Language Models",https://arxiv.org/abs/2505.02626,,ARXC074,重点候補の判断あり
+ARXQ15,3,LogiCode: an LLM-Driven Framework for Logical Anomaly Detection,https://arxiv.org/abs/2406.04687,,ARXC075,重点候補の判断あり
+ARXQ17,1,Tool Wear Segmentation in Blanking Processes with Fully Convolutional Networks based Digital Image Processing,https://arxiv.org/abs/2311.12841,,ARXC076,重点候補の判断あり
+ARXQ17,2,Efficient Cutting Tool Wear Segmentation Based on Segment Anything Model,https://arxiv.org/abs/2407.01211,10.1115/MSEC2024-124455,ARXC077,重点候補の判断あり
+ARXQ17,5,Effects of Tool Wear on the Surface Texture in Turning: A Feature Characterization Approach Based on ISO 21920-2,https://arxiv.org/abs/2608.12163,,ARXC078,重点候補の判断あり
+ARXQ17,6,An Uncertainty-based Human-in-the-loop System for Industrial Tool Wear Analysis,https://arxiv.org/abs/2007.07129,,ARXC079,重点候補の判断あり
+ARXQ17,7,"Tool wear monitoring using an online, automatic and low cost system based on local texture",https://arxiv.org/abs/2402.05977,,ARXC080,重点候補の判断あり
+ARXQ18,1,Training Vision-Language Models with Less Bimodal Supervision,https://arxiv.org/abs/2211.00262,,ARXC081,重点候補の判断あり
+ARXQ18,2,On the Robustness of Machine Unlearning for Vision-Language Models,https://arxiv.org/abs/2605.26992,,ARXC082,重点候補の判断あり
+ARXQ18,3,SugarCrepe: Fixing Hackable Benchmarks for Vision-Language Compositionality,https://arxiv.org/abs/2306.14610,,ARXC083,重点候補の判断あり
+ARXQ18,4,Understanding Image and Text Simultaneously: a Dual Vision-Language Machine Comprehension Task,https://arxiv.org/abs/1612.07833,,ARXC084,重点候補の判断あり
+ARXQ18,5,Write and Paint: Generative Vision-Language Models are Unified Modal Learners,https://arxiv.org/abs/2206.07699,,ARXC085,重点候補の判断あり
+ARXQ18,6,Learning to Scale Multilingual Representations for Vision-Language Tasks,https://arxiv.org/abs/2004.04312,,ARXC086,重点候補の判断あり
+ARXQ13P2,11,TL-SDD: A Transfer Learning-Based Method for Surface Defect Detection with Few Samples,https://arxiv.org/abs/2108.06939,,ARXC087,重点候補の判断あり

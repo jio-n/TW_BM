@@ -1,0 +1,27 @@
+{
+  "as_of": "2026-11-11",
+  "status": "PASS",
+  "errors": [],
+  "search_calls": 48,
+  "focused_candidate_rows": 189,
+  "result_occurrences": 366,
+  "execution_states": {
+    "retrieved": 32,
+    "failed": 7,
+    "duplicate_probe": 2,
+    "diagnostic": 7
+  },
+  "coverage_cells": 20,
+  "unexecuted_cells": [
+    "DBM02",
+    "DBM06",
+    "DBM08"
+  ],
+  "unique_exact_title_keys": 185,
+  "limitations": [
+    "PASS is structural only; no estimate of global recall.",
+    "Candidate rows are mixed screening depth and not independent papers.",
+    "Date-only timestamps remain explicitly missing time-of-day.",
+    "No new candidate has been admitted to the performance benchmark."
+  ]
+}

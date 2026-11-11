@@ -1,0 +1,1856 @@
+{
+  "searches": [
+    {
+      "search_id": "DBS001",
+      "platform": "Google Scholar",
+      "scope": "工具",
+      "query": "\"tool wear\" classification image",
+      "url": "https://scholar.google.com/scholar?hl=en&q=%22tool+wear%22+classification+image",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "total_hits": 25000,
+      "returned_count": 10,
+      "status": "取得済み",
+      "route": "公式サイト検索画面（IAB）",
+      "filters": "年指定なし・関連度順",
+      "page": 1,
+      "result_scope": "先頭1–10件のみ",
+      "total_kind": "概数",
+      "query_semantics": "未検証：画面の検索条件と上位題名を確認。検索語のAND解釈は独立検証していない。"
+    },
+    {
+      "search_id": "DBS002",
+      "platform": "Google Scholar",
+      "scope": "工具",
+      "query": "\"tool wear\" \"chipping\" classification image",
+      "url": "https://scholar.google.com/scholar?hl=en&q=%22tool+wear%22+%22chipping%22+classification+image",
+      "executed_at": "2026-11-11 JST（時分未記録）",
+      "total_hits": 4530,
+      "returned_count": 10,
+      "status": "取得済み",
+      "route": "公式サイト検索画面（IAB）",
+      "filters": "年指定なし・関連度順",
+      "page": 1,
+      "result_scope": "先頭1–10件のみ",
+      "total_kind": "概数",
+      "query_semantics": "未検証：画面の検索条件と上位題名を確認。検索語のAND解釈は独立検証していない。"
+    },
+    {
+      "search_id": "DBS003",
+      "platform": "Google Scholar",
+      "scope": "工業",
+      "query": "\"defect classification\" \"vision transformer\"",
+      "url": "https://scholar.google.com/scholar?hl=en&q=%22defect+classification%22+%22vision+transformer%22",
+      "executed_at": "2026-11-11T00:49:11.194Z",
+      "total_hits": 2590,
+      "returned_count": 10,
+      "status": "取得済み",
+      "route": "公式サイト検索画面（IAB）",
+      "filters": "年指定なし・関連度順",
+      "page": 1,
+      "result_scope": "先頭1–10件のみ",
+      "total_kind": "概数",
+      "query_semantics": "未検証：画面の検索条件と上位題名を確認。検索語のAND解釈は独立検証していない。"
+    },
+    {
+      "search_id": "DBS004",
+      "platform": "Google Scholar",
+      "scope": "工業",
+      "query": "\"defect classification\" \"vision-language\"",
+      "url": "https://scholar.google.com/scholar?hl=en&q=%22defect+classification%22+%22vision-language%22",
+      "executed_at": "2026-11-11T00:49:34.768Z",
+      "total_hits": 634,
+      "returned_count": 10,
+      "status": "取得済み",
+      "route": "公式サイト検索画面（IAB）",
+      "filters": "年指定なし・関連度順",
+      "page": 1,
+      "result_scope": "先頭1–10件のみ",
+      "total_kind": "概数",
+      "query_semantics": "未検証：画面の検索条件と上位題名を確認。検索語のAND解釈は独立検証していない。"
+    },
+    {
+      "search_id": "DBI001",
+      "platform": "IEEE Xplore",
+      "scope": "工具",
+      "query": "\"tool wear\" classification image",
+      "url": "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=%22tool+wear%22+classification+image",
+      "executed_at": "2026-11-11T00:49:59.786Z",
+      "total_hits": null,
+      "returned_count": null,
+      "status": "取得不可",
+      "route": "公式サイト検索画面（IAB）",
+      "filters": "年指定なし・関連度順",
+      "page": 1,
+      "result_scope": "エラー・結果集合未取得",
+      "total_kind": "未取得",
+      "query_semantics": "未検証：画面の検索条件と上位題名を確認。検索語のAND解釈は独立検証していない。"
+    },
+    {
+      "search_id": "DBI002",
+      "platform": "IEEE Xplore",
+      "scope": "工業",
+      "query": "\"defect classification\" \"vision transformer\"",
+      "url": "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=%22defect+classification%22+%22vision+transformer%22",
+      "executed_at": "2026-11-11T00:50:34.540Z",
+      "total_hits": 77,
+      "returned_count": 25,
+      "status": "取得済み",
+      "route": "公式サイト検索画面（IAB）",
+      "filters": "年指定なし・関連度順",
+      "page": 1,
+      "result_scope": "先頭1–25件のみ",
+      "total_kind": "画面表示値",
+      "query_semantics": "未検証：画面の検索条件と上位題名を確認。検索語のAND解釈は独立検証していない。"
+    },
+    {
+      "search_id": "DBI003",
+      "platform": "IEEE Xplore",
+      "scope": "工具",
+      "query": "\"tool wear\" classification image",
+      "url": "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=%22tool+wear%22+classification+image",
+      "executed_at": "2026-11-11T00:54:13.691Z",
+      "total_hits": 30,
+      "returned_count": 25,
+      "status": "取得済み",
+      "route": "公式サイト検索画面（IAB）",
+      "filters": "年指定なし・関連度順",
+      "page": 1,
+      "result_scope": "先頭1–25件のみ",
+      "total_kind": "画面表示値",
+      "query_semantics": "未検証：画面の検索条件と上位題名を確認。検索語のAND解釈は独立検証していない。"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "DBR001",
+      "query_ids": [
+        "DBS001"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS001",
+          "rank": 1
+        }
+      ],
+      "title": "Digital image processing with deep learning for automated cutting tool wear detection",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2351978920315869",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR002",
+      "query_ids": [
+        "DBS001"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS001",
+          "rank": 2
+        }
+      ],
+      "title": "Automatic identification of tool wear based on convolutional neural network in face milling process",
+      "url": "https://www.mdpi.com/1424-8220/19/18/3817",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR003",
+      "query_ids": [
+        "DBS001"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS001",
+          "rank": 3
+        }
+      ],
+      "title": "A computer vision approach to analyze and classify tool wear level in milling processes using shape descriptors and machine learning techniques",
+      "url": "https://link.springer.com/article/10.1007/s00170-016-9541-0",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR004",
+      "query_ids": [
+        "DBS001"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS001",
+          "rank": 4
+        }
+      ],
+      "title": "Realizing on-machine tool wear monitoring through integration of vision-based system with CNC milling machine",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278612524002978",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR005",
+      "query_ids": [
+        "DBS001"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS001",
+          "rank": 5
+        }
+      ],
+      "title": "Classification of tool wear state based on dual attention mechanism network",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0736584523000510",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR006",
+      "query_ids": [
+        "DBS001"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS001",
+          "rank": 6
+        }
+      ],
+      "title": "On-line tool wear monitoring using geometric descriptors from digital images",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0890695507000892",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR007",
+      "query_ids": [
+        "DBS001"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS001",
+          "rank": 7
+        }
+      ],
+      "title": "Workpiece image-based tool wear classification in blanking processes using deep convolutional neural networks",
+      "url": "https://link.springer.com/article/10.1007/s11740-022-01113-2",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "一次選別除外",
+      "reason": "工具実写ではなく加工物・切りくず画像（題名判断）",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR008",
+      "query_ids": [
+        "DBS001"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS001",
+          "rank": 8
+        }
+      ],
+      "title": "Tool wear classification based on machined surface images using convolution neural networks",
+      "url": "https://link.springer.com/article/10.1007/s12046-021-01654-9",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "一次選別除外",
+      "reason": "工具実写ではなく加工物・切りくず画像（題名判断）",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR009",
+      "query_ids": [
+        "DBS001"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS001",
+          "rank": 9
+        }
+      ],
+      "title": "Indirect cutting tool wear classification using deep learning and chip colour analysis",
+      "url": "https://link.springer.com/article/10.1007/s00170-020-06055-6",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "一次選別除外",
+      "reason": "工具実写ではなく加工物・切りくず画像（題名判断）",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR010",
+      "query_ids": [
+        "DBS001"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS001",
+          "rank": 10
+        }
+      ],
+      "title": "NJUST-CCTD: an image database for milling tool wear classification with deep learning",
+      "url": "https://link.springer.com/article/10.1007/s00170-023-11418-w",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR011",
+      "query_ids": [
+        "DBS002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS002",
+          "rank": 1
+        }
+      ],
+      "title": "Realizing on-machine tool wear monitoring through integration of vision-based system with CNC milling machine",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278612524002978",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR012",
+      "query_ids": [
+        "DBS002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS002",
+          "rank": 2
+        }
+      ],
+      "title": "TEA-net: A multimodal deep learning framework for tool wear classification in biomedical machining",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0043164825007537",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR013",
+      "query_ids": [
+        "DBS002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS002",
+          "rank": 3
+        }
+      ],
+      "title": "Cutting tool wear prediction based on chip features extracted from image processing and AutoML",
+      "url": "https://link.springer.com/article/10.1007/s00170-025-15416-y",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "一次選別除外",
+      "reason": "工具実写ではなく加工物・切りくず画像（題名判断）",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR014",
+      "query_ids": [
+        "DBS002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS002",
+          "rank": 4
+        }
+      ],
+      "title": "Tool Wear Classification Based on Convolutional Neural Network in Micro Drilling",
+      "url": "https://www.researchgate.net/publication/406927055",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR015",
+      "query_ids": [
+        "DBS002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS002",
+          "rank": 5
+        }
+      ],
+      "title": "Automatic identification of tool wear based on convolutional neural network in face milling process",
+      "url": "https://www.mdpi.com/1424-8220/19/18/3817",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR016",
+      "query_ids": [
+        "DBS002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS002",
+          "rank": 6
+        }
+      ],
+      "title": "Tool wear analysis in the machining of hardened steels",
+      "url": "https://link.springer.com/article/10.1007/s00170-017-0455-2",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR017",
+      "query_ids": [
+        "DBS002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS002",
+          "rank": 7
+        }
+      ],
+      "title": "A review of tool wear monitoring in milling: perception, edge processing and cloud decision",
+      "url": "https://link.springer.com/article/10.1007/s00170-026-18763-6",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR018",
+      "query_ids": [
+        "DBS002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS002",
+          "rank": 8
+        }
+      ],
+      "title": "Machine vision and convolutional neural networks for tool wear identification and classification",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-33-4597-3_66",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR019",
+      "query_ids": [
+        "DBS002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS002",
+          "rank": 9
+        }
+      ],
+      "title": "Tool wear monitoring in milling based on fine-grained image classification of machined surface images",
+      "url": "https://www.mdpi.com/1424-8220/22/21/8416",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "一次選別除外",
+      "reason": "工具実写ではなく加工物・切りくず画像（題名判断）",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR020",
+      "query_ids": [
+        "DBS002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS002",
+          "rank": 10
+        }
+      ],
+      "title": "Comparative analysis of different machine vision algorithms for tool wear measurement during machining",
+      "url": "https://link.springer.com/article/10.1007/s10845-024-02467-3",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR021",
+      "query_ids": [
+        "DBS003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS003",
+          "rank": 1
+        }
+      ],
+      "title": "Hybrid-DC: A hybrid framework using ResNet-50 and vision transformer for steel surface defect classification in the rolling process",
+      "url": "https://www.mdpi.com/2079-9292/13/22/4467",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR022",
+      "query_ids": [
+        "DBS003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS003",
+          "rank": 2
+        }
+      ],
+      "title": "Hybrid vision transformer model for defect classification in photovoltaic modules using thermographic imaging: Leveraging self-attention mechanisms for enhanced …",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0960148125018026",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": true
+    },
+    {
+      "candidate_id": "DBR023",
+      "query_ids": [
+        "DBS003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS003",
+          "rank": 3
+        }
+      ],
+      "title": "LPViT: A transformer based model for PCB image classification and defect detection",
+      "url": "https://ieeexplore.ieee.org/abstract/document/9760408/",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR024",
+      "query_ids": [
+        "DBS003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS003",
+          "rank": 4
+        }
+      ],
+      "title": "Tuna defect classification and grading using Twins transformer",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0260877425000706",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR025",
+      "query_ids": [
+        "DBS003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS003",
+          "rank": 5
+        }
+      ],
+      "title": "Multiple defect classification method for green plum surfaces based on vision transformer",
+      "url": "https://www.mdpi.com/1999-4907/14/7/1323",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR026",
+      "query_ids": [
+        "DBS003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS003",
+          "rank": 6
+        }
+      ],
+      "title": "Surface defect classification: leveraging transformer and transfer learning models for enhanced precision in industrial applications",
+      "url": "https://link.springer.com/article/10.1007/s00170-025-16156-9",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR027",
+      "query_ids": [
+        "DBS003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS003",
+          "rank": 7
+        }
+      ],
+      "title": "Semiconductor wafer map defect classification with tiny vision transformers",
+      "url": "https://arxiv.org/abs/2504.02494",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR028",
+      "query_ids": [
+        "DBS003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS003",
+          "rank": 8
+        }
+      ],
+      "title": "ViTR-Net: An unsupervised lightweight transformer network for cable surface defect detection and adaptive classification",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0141029624008022",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR029",
+      "query_ids": [
+        "DBS003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS003",
+          "rank": 9
+        }
+      ],
+      "title": "A lightweight vision transformer with embedded hybrid attention for quick response code defect classification",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0952197625005755",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR030",
+      "query_ids": [
+        "DBS003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS003",
+          "rank": 10
+        }
+      ],
+      "title": "Rail defect classification with deep learning method",
+      "url": "https://trid.trb.org/View/2569706",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR031",
+      "query_ids": [
+        "DBS004"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS004",
+          "rank": 1
+        }
+      ],
+      "title": "Prompt engineering for zero-shot and few-shot defect detection and classification using a visual-language pretrained model",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/mice.12954",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR032",
+      "query_ids": [
+        "DBS004"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS004",
+          "rank": 2
+        }
+      ],
+      "title": "Vision-language artificial intelligence for robotic-based monitoring: Concrete defect detection, classification, and localization in two-dimensional maps",
+      "url": "https://ascelibrary.org/doi/abs/10.1061/JCCEE5.CPENG-7001",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR033",
+      "query_ids": [
+        "DBS004"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS004",
+          "rank": 3
+        }
+      ],
+      "title": "Towards label-free defect detection in additive manufacturing via dual-classifier semi-supervised learning for vision-language models",
+      "url": "https://link.springer.com/article/10.1007/s10845-025-02589-2",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR034",
+      "query_ids": [
+        "DBS004"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS004",
+          "rank": 4
+        }
+      ],
+      "title": "SewerMan: A vision-language collaborative framework with domain prior for robust multi-label sewer defect classification",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1568494626000311",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR035",
+      "query_ids": [
+        "DBS004"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS004",
+          "rank": 5
+        }
+      ],
+      "title": "SteelDefectX: A Multi-Form Vision-Language Dataset and Benchmark for Steel Surface Defect Analysis",
+      "url": "https://arxiv.org/abs/2603.21824",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR036",
+      "query_ids": [
+        "DBS004"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS004",
+          "rank": 6
+        }
+      ],
+      "title": "PipeCLIP: Defect-Conditioned and Cross-Focus-Driven Vision-Language Model for Video-Based Sewer Defect Inspection",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11421421/",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR037",
+      "query_ids": [
+        "DBS004"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS004",
+          "rank": 7
+        }
+      ],
+      "title": "Integrating Vision Language, and Actions in Optical Inspections to Enable Closed-Loop Defect Identification and Remediation",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11416115/",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR038",
+      "query_ids": [
+        "DBS004"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS004",
+          "rank": 8
+        }
+      ],
+      "title": "GenAI applications of vision-language models for semiconductor defect classification",
+      "url": "https://doi.org/10.1117/12.3064772",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR039",
+      "query_ids": [
+        "DBS004"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS004",
+          "rank": 9
+        }
+      ],
+      "title": "DefectVICL: Data-Efficient Wafer Defect Classification with Vision In Context Learning",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11563341/",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR040",
+      "query_ids": [
+        "DBS004"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBS004",
+          "rank": 10
+        }
+      ],
+      "title": "A Self-Distilled Vision-Language Model for Industrial Defect Classification",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11386279/",
+      "platform": "Google Scholar",
+      "verification": "検索結果題名・リンクのみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認",
+      "title_truncated": false
+    },
+    {
+      "candidate_id": "DBR041",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 1
+        }
+      ],
+      "title": "Surface Defect Classification with Vision Transformer",
+      "url": "https://ieeexplore.ieee.org/document/9969746",
+      "year": 2022,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR042",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 2
+        }
+      ],
+      "title": "Mobile Vision Transformer for Surface Defect Classification from A Tiny Dataset",
+      "url": "https://ieeexplore.ieee.org/document/10330837",
+      "year": 2023,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR043",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 3
+        }
+      ],
+      "title": "Vision Transformer-Based Framework for Reliable Semiconductor Wafer Defect Classification",
+      "url": "https://ieeexplore.ieee.org/document/11491308",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR044",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 4
+        }
+      ],
+      "title": "Explainable Vision Transformer with ResNet18 Feature Extraction for Automated Welding Defect Classification using LIME",
+      "url": "https://ieeexplore.ieee.org/document/11656610",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR045",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 5
+        }
+      ],
+      "title": "Vision Transformer Model for Metal Surface Defect Classification",
+      "url": "https://ieeexplore.ieee.org/document/11278921",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR046",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 6
+        }
+      ],
+      "title": "A Comparative Study of WeldVGG, CBAM-WeldVGG, and Vision Transformer Hybrid Architectures for Radiographic Weld Defect Classification and Cross-Domain Generalization",
+      "url": "https://ieeexplore.ieee.org/document/11721663",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR047",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 7
+        }
+      ],
+      "title": "Vision Transformer-based Welding Defect Classification using ResNet-50 Feature Embeddings",
+      "url": "https://ieeexplore.ieee.org/document/11376131",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR048",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 8
+        }
+      ],
+      "title": "Mixed-Type Wafer Map Defect Classification Using Regional-to-Local Attention",
+      "url": "https://ieeexplore.ieee.org/document/11367500",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR049",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 9
+        }
+      ],
+      "title": "Fabric Defect Classification Based on Lightweight CNN Under Class Imbalance",
+      "url": "https://ieeexplore.ieee.org/document/11637583",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR050",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 10
+        }
+      ],
+      "title": "Classification of Sewer Defects Using Point Clouds Based on a Novel Sewer Vision Transformer With Cross-Modal In-Domain Knowledge",
+      "url": "https://ieeexplore.ieee.org/document/11174080",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR051",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 11
+        }
+      ],
+      "title": "Few-Shot Power Equipment Defect Classification Based on Image Augmentation and Reconstruction",
+      "url": "https://ieeexplore.ieee.org/document/11216605",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR052",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 12
+        }
+      ],
+      "title": "Comparative Analysis of ResNet50 and MobileNetV2 for Multiclass Railway Track Defect Classification",
+      "url": "https://ieeexplore.ieee.org/document/11651230",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR053",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 13
+        }
+      ],
+      "title": "Wafer Defect Classification Algorithm With Label Embedding Using Contrastive Learning",
+      "url": "https://ieeexplore.ieee.org/document/10835094",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR054",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 14
+        }
+      ],
+      "title": "Data-Centric Approach for Leather Quality Control Using Advanced Vision Transformer Models",
+      "url": "https://ieeexplore.ieee.org/document/11019741",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR055",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 15
+        }
+      ],
+      "title": "Vision Transformer based knowledge distillation for fasteners defect detection",
+      "url": "https://ieeexplore.ieee.org/document/9872566",
+      "year": 2022,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR056",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 16
+        }
+      ],
+      "title": "Foundation Vision Transformer Framework for Automated Printed Circuit Board Defect Detection and Classification",
+      "url": "https://ieeexplore.ieee.org/document/11748826",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR057",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 17
+        }
+      ],
+      "title": "Retinal Malady Classification Using AI: A novel ViT-SVM combination architecture",
+      "url": "https://ieeexplore.ieee.org/document/9753876",
+      "year": 2022,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "一次選別除外",
+      "reason": "対象ドメイン外（題名判断）"
+    },
+    {
+      "candidate_id": "DBR058",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 18
+        }
+      ],
+      "title": "Steel Surface Defect Classification using MobileViT",
+      "url": "https://ieeexplore.ieee.org/document/10690544",
+      "year": 2024,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR059",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 19
+        }
+      ],
+      "title": "Semiconductor SEM Image Defect Classification Using Supervised and Semi-Supervised Learning with Vision Transformers : Topic/category: Defect Inspection and Reduction",
+      "url": "https://ieeexplore.ieee.org/document/11010396",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR060",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 20
+        }
+      ],
+      "title": "Vision Transformer-Assisted Defect Classification and YOLOv8-Based Localization in Industrial Quality Control",
+      "url": "https://ieeexplore.ieee.org/document/11473987",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR061",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 21
+        }
+      ],
+      "title": "Improving Defect Classification in Photovoltaic Modules Using CNN with Attention-Based Processing",
+      "url": "https://ieeexplore.ieee.org/document/11100501",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR062",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 22
+        }
+      ],
+      "title": "CPT-Diag: A Lightweight CNN-Patch Transformer Hybrid Framework with STFT Time-Frequency Representation for Vibration-Based Motor Fault Diagnosis",
+      "url": "https://ieeexplore.ieee.org/document/11567219",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR063",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 23
+        }
+      ],
+      "title": "CNN-Transformer based Automated Neural Architecture Search for Ultrasonic Railway Track Defect Classification",
+      "url": "https://ieeexplore.ieee.org/document/11085992",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR064",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 24
+        }
+      ],
+      "title": "A Comparative Analysis of CNN and Vision Transformer Architectures for Visual Defect Classification Under Data Augmentation",
+      "url": "https://ieeexplore.ieee.org/document/11519710",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR065",
+      "query_ids": [
+        "DBI002"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI002",
+          "rank": 25
+        }
+      ],
+      "title": "An Approach Based on Knowledge Distillation for Lightweight Defect Classification of Green Plums",
+      "url": "https://ieeexplore.ieee.org/document/10826582",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR066",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 1
+        }
+      ],
+      "title": "Multi-Sensor Fusion-Based Tool Wear Monitoring: A Novel Approach Using AE-1DCNN Model",
+      "url": "https://ieeexplore.ieee.org/document/11512494",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR067",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 2
+        }
+      ],
+      "title": "Automation of Offline Tool Wear Measurement on the Example of Inserts for Super-Alloy Machining",
+      "url": "https://ieeexplore.ieee.org/document/9921628",
+      "year": 2022,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR068",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 3
+        }
+      ],
+      "title": "Deep Learning-Based Classification of Cutting Tool Wear in Dry Turning of Ti-6Al-4V Using Thermography",
+      "url": "https://ieeexplore.ieee.org/document/11459111",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR069",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 4
+        }
+      ],
+      "title": "Chip Analysis for Tool Wear Monitoring in Machining: A Deep Learning Approach",
+      "url": "https://ieeexplore.ieee.org/document/10636165",
+      "year": 2024,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR070",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 5
+        }
+      ],
+      "title": "Wear-Stage-Aware Multitask Learning and Optimization With a Causal Transformer for Milling Tool Wear Prediction Using Multisensor Data",
+      "url": "https://ieeexplore.ieee.org/document/11625750",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR071",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 6
+        }
+      ],
+      "title": "Research of Tool Wear Predictive Technique Based on Support Vector Machine",
+      "url": "https://ieeexplore.ieee.org/document/5304234",
+      "year": 2009,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "期間外・関連確認待ち",
+      "reason": "2015年以前。基礎研究として追跡する必要性は未判定"
+    },
+    {
+      "candidate_id": "DBR072",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 7
+        }
+      ],
+      "title": "Evaluation of Deep Learning for Semantic Image Segmentation in Tool Condition Monitoring",
+      "url": "https://ieeexplore.ieee.org/document/8999320",
+      "year": 2019,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR073",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 8
+        }
+      ],
+      "title": "Notice of Violation of IEEE Publication Principles: Automated intelligent machine vision system for monitoring the image",
+      "url": "https://ieeexplore.ieee.org/document/5697518",
+      "year": 2010,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "期間外・関連確認待ち",
+      "reason": "2015年以前。基礎研究として追跡する必要性は未判定"
+    },
+    {
+      "candidate_id": "DBR074",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 9
+        }
+      ],
+      "title": "Research on Classification and Recognition of Micro Milling Tool Wear Based on Improved DenseNet",
+      "url": "https://ieeexplore.ieee.org/document/10947764",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR075",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 10
+        }
+      ],
+      "title": "Attention Mechanism Based CNC Milling Cutter Wear Detection Using Machine Vision",
+      "url": "https://ieeexplore.ieee.org/document/10413371",
+      "year": 2023,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR076",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 11
+        }
+      ],
+      "title": "Lightweight AI Model for Rice Grain Classification in Resource-ConstrainedSystems",
+      "url": "https://ieeexplore.ieee.org/document/11679271",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "一次選別除外",
+      "reason": "対象ドメイン外（題名判断）"
+    },
+    {
+      "candidate_id": "DBR077",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 12
+        }
+      ],
+      "title": "Machine Vision-based Tool Location and Wear Monitoring in Micro turning: Optical Setup and Image Processing Approaches",
+      "url": "https://ieeexplore.ieee.org/document/10808405",
+      "year": 2024,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR078",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 13
+        }
+      ],
+      "title": "Visual inspection system for CNC turning tool wear based on transfer learning",
+      "url": "https://ieeexplore.ieee.org/document/10041057",
+      "year": 2022,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR079",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 14
+        }
+      ],
+      "title": "Image-Based Classification of Cutting Tool Degradation Using Deep Learning: A Comparative Study",
+      "url": "https://ieeexplore.ieee.org/document/11742401",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR080",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 15
+        }
+      ],
+      "title": "Hybrid Data Augmentation Combining Screening-Based MCGAN and Manual Transformation for Few-Shot Tool Wear State Recognition",
+      "url": "https://ieeexplore.ieee.org/document/10462905",
+      "year": 2024,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR081",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 16
+        }
+      ],
+      "title": "Image-Based Remaining Useful Life Prediction in PHM Systems: A Review",
+      "url": "https://ieeexplore.ieee.org/document/11322710",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR082",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 17
+        }
+      ],
+      "title": "Disassembler: Cloud-Based Solution for Optimized Cutting Tool Quality Control",
+      "url": "https://ieeexplore.ieee.org/document/11106662",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR083",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 18
+        }
+      ],
+      "title": "Composite Multiscale Amplitude-Weighted Fuzzy Dispersion Entropy of Acoustic Signals for Tool Wear Condition Monitoring",
+      "url": "https://ieeexplore.ieee.org/document/11711349",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR084",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 19
+        }
+      ],
+      "title": "Applications of fuzzy K-NN in weld recognition and tool failure monitoring",
+      "url": "https://ieeexplore.ieee.org/document/493503",
+      "year": 1996,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "期間外・関連確認待ち",
+      "reason": "2015年以前。基礎研究として追跡する必要性は未判定"
+    },
+    {
+      "candidate_id": "DBR085",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 20
+        }
+      ],
+      "title": "Evaluating Mobile Phone Microphone Recordings for Metal Processing Sound Analysis",
+      "url": "https://ieeexplore.ieee.org/document/11273446",
+      "year": 2025,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR086",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 21
+        }
+      ],
+      "title": "Stable Diffusion Based Image Generation for Vision-Based Tool Condition Monitoring",
+      "url": "https://ieeexplore.ieee.org/document/11491315",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR087",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 22
+        }
+      ],
+      "title": "Step Wear Analysis Based on Improved Computer Vision and Mathematical Modeling for Infrastructure Condition Assessment",
+      "url": "https://ieeexplore.ieee.org/document/11637507",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "一次選別除外",
+      "reason": "対象ドメイン外（題名判断）"
+    },
+    {
+      "candidate_id": "DBR088",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 23
+        }
+      ],
+      "title": "CatBoost-Based Predictive Maintenance for Industrial Milling Tool Life and Failure Detection",
+      "url": "https://ieeexplore.ieee.org/document/11539117",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR089",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 24
+        }
+      ],
+      "title": "Comparison of Analysis Using Acquired Machine Data for Machine and Tool Life Optimization",
+      "url": "https://ieeexplore.ieee.org/document/11506975",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    },
+    {
+      "candidate_id": "DBR090",
+      "query_ids": [
+        "DBI003"
+      ],
+      "retrieval_ranks": [
+        {
+          "search_id": "DBI003",
+          "rank": 25
+        }
+      ],
+      "title": "Learning Burr-Related Temporal Patterns From Cutting Force Sensor Signals for Burr Severity Classification",
+      "url": "https://ieeexplore.ieee.org/document/11686197",
+      "year": 2026,
+      "platform": "IEEE Xplore",
+      "verification": "検索結果題名・掲載年のみ",
+      "decision": "本文・採否要確認",
+      "reason": "種類ラベル・推論入力・モデル・基準日前公開日を原資料で要確認"
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "Google Scholar",
+      "status": "公式検索画面で4式実行",
+      "manual_url": "https://scholar.google.com/intl/en/scholar/help.html",
+      "limits": "関連度上位10件のみ。総数は概数。bulk取得は実施しない。"
+    },
+    {
+      "platform": "IEEE Xplore",
+      "status": "公式検索画面で2式成功・初回エラー1",
+      "manual_url": "https://developer.ieee.org/docs/read/Metadata_API_details",
+      "limits": "検索結果25件を確認。全文アクセス権は別。"
+    }
+  ],
+  "notes": [
+    "ブラウザのサイト内キーワード検索。検索結果の題名・リンクを転記。全文未確認の新候補を主比較表へ自動採用しない。",
+    "Google Scholarの総数は画面の概数。4式とも関連度順の先頭10件だけ。IEEEはAll Results関連度順の先頭25件。いずれも年フィルタ未設定で2015年以前を含む。",
+    "DBI001はNo results表示とSomething went wrongが併記された検索エラーであり有効0件ではない。DBI003で同じ式を再実行して30件を確認。",
+    "DBS001/2は検索した日付のみ記録。時分は推測して補わない。",
+    "今回の一般語検索で再発見を確認したが、root担当の既知論文集合は検索前に固定した独立テストではない。"
+  ]
+}

@@ -25,3 +25,7 @@ python scripts/write_round2_reports.py
 `data/round2_search_plan.json` が今回のseed計画。別テーマでは計画と入力束を変更してから使う。監査は記録構造の検証であり、自動文献選別器ではない。OpenAlexの列挙だけを再実行する場合は `scripts/fetch_openalex_citations.py --help` を参照する。通信が必要で、索引更新により同じ件数になるとは限らない。
 
 比較表の再生成順は、`build_focused_review.py` と `build_industrial_review.py` → `write_industrial_reports.py` → `build_performance_digest.py` → 各 `build_*_workbook.mjs` → 各 `finalize_*_workbook.py`。Excel生成にはartifact-tool、読取検証にはopenpyxlを用いる。最後に上記の台帳・監査・Round2レポートを更新する。
+
+## DB別キーワード検索
+
+[DB検索プロトコル](database_search_protocol.md) と [今回の試行結果](../reports/database_keyword_search_pilot.md) を追加。`evidence/database_keyword_pilot/` に5サイトの検索・順位・候補・残件を保存した。再生成と監査は `python scripts/build_database_pilot.py --self-test`。このスクリプトは保存済みデータの整形であり、ネット検索の自動実行ではない。

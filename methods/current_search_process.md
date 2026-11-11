@@ -38,3 +38,9 @@
 検索・確認128行、候補発見279行、引用・関連・異版276行、取得試行76行を追記し、DOI・正規化題名による候補対応表を作成した。これらの行数は独立論文数ではない。現在の範囲は[方向別台帳](../evidence/round2/seed_coverage.csv)と[監査](../reports/search_process_audit.md)、追加結果は[Round2報告](../reports/round2_findings.md)に示す。
 
 全件引用追跡を全論文へ再帰適用したわけではなく、Google Scholar／IEEE／J-STAGE／CiNiiの各DB内で全検索集合を独立取得したわけでもない。これらは次回の残件として明記している。
+
+## 2026-11-11 DB内キーワード検索の試行
+
+上記の不足を受け、Google ScholarとIEEE Xploreの公式検索画面、J-STAGE・CiNii Research・arXivの公式APIを使う独立検索を追加した。48実行を記録し、正常取得32・失敗7・重複接続確認2・構文診断7に分けた。式ごとの上位ページを中心に取得したため、5DBで検索を試せたことと網羅探索の完了は別である。
+
+[実施範囲と新候補](../reports/database_keyword_search_pilot.md)、[未実施セル・残ページ](../evidence/database_keyword_pilot/coverage_matrix.csv)、[再利用手順](database_search_protocol.md)を参照。比較表への追加採用は0本。原著ラベル・成績の検証前に候補を採用数へ加えていない。
